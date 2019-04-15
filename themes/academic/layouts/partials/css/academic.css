@@ -16,7 +16,7 @@ html {
 }
 @media screen and (min-width: 58em) {
   html {
-    font-size: {{ .Get "font_size" }}px;
+    font-size: {{ .Get "font_size_s" }}px;
   }
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .max-width-640 {
-  max-width: 640px;
+  max-width: 640;
 }
 
 .margin-auto {
@@ -534,7 +534,7 @@ a[data-fancybox] img {
 }
 
 .home-section:first-of-type {
-  padding-top: 50px;
+  padding-top: 800px;
 }
 
 .home-section:nth-of-type(even) {
@@ -593,14 +593,16 @@ a[data-fancybox] img {
 }
 
 .hero-title {
-  font-size: 2.7rem;
+  font-size:4.5rem;
   margin-top: 0;
   line-height: 1;
+  text-shadow: 10px 10px 5px rgba(0,0,0,0.7);
 }
 
 .hero-lead {
   max-width: 768px;
-  font-size: 1.35rem;
+  font-size: 2.8rem;
+  text-shadow: 10px 10px 5px rgba(0,0,0,0.7);
 }
 
 .wg-hero.dark .hero-title,
@@ -608,7 +610,7 @@ a[data-fancybox] img {
 .wg-hero.dark .hero-cta-alt,
 .wg-hero.dark .hero-note > * {
   color: #fff;
-  /*text-shadow: 1px 1px 4px rgba(0,0,0,0.5);*/ /* Uncomment to standout on complicated backgrounds. */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);*/ /* Uncomment to standout on complicated backgrounds. */
 }
 
 .wg-hero.dark a:not(.wg-hero .btn) {
@@ -1375,7 +1377,7 @@ article .article-metadata {
 /*************************************************
  *  Accomplishments
  **************************************************/
- 
+
 .card.course {
   margin-bottom: 1rem; /* More compact spacing than Experience widget as typically more items here. */
 }
@@ -1733,7 +1735,7 @@ a.badge:hover {
  **************************************************/
 
 .navbar {
-  min-height: 70px !important;
+  min-height: 80px !important;
 }
 
 .navbar-light {
@@ -1756,7 +1758,7 @@ a.badge:hover {
 
 .dropdown-menu,
 nav#navbar-main li.nav-item {
-  font-size: {{ .Get "font_size_small" }}px;
+  font-size: {{ .Get "font_size_s" }}px;
 }
 
 .navbar-light .navbar-nav>.nav-item>.nav-link,
@@ -1766,7 +1768,7 @@ nav#navbar-main li.nav-item {
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   color: {{ .Get "menu_text" }};
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .navbar-light .navbar-nav>.nav-item>.nav-link:focus {
@@ -1791,12 +1793,13 @@ nav#navbar-main li.nav-item {
 .navbar-nav li.nav-item a.nav-link {
   height: inherit;
   line-height: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
 }
 
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 70px;
 }
 
 .navbar-light .navbar-toggler .icon-bar {

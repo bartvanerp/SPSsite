@@ -11,6 +11,7 @@
   {{- $scr.Set "nav_font" $font.nav_font -}}
   {{- $scr.Set "mono_font" $font.mono_font -}}
   {{- $scr.Set "font_size" $font.font_size -}}
+  {{- $scr.Set "font_size_s" $font.font_size_s -}}
   {{- $scr.Set "font_size_small" $font.font_size_small -}}
 {{ end }}
 
