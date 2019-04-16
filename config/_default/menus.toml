@@ -10,13 +10,79 @@
 
 [[main]]
   name = "Curriculum"
-  url = "#curriculum"
+  url = "/curriculum/"
   weight = 20
 
 [[main]]
+  name = "Basic math"
+  url = "/curriculum"
+  parent = "Curriculum"
+  weight = 1
+
+[[main]]
+  name = "Fourier transform"
+  url = "/curriculum/fourier"
+  parent = "Curriculum"
+  weight = 2
+
+[[main]]
+  name = "Sampling and aliasing"
+  url = "/curriculum/sampling"
+  parent = "Curriculum"
+  weight = 3
+
+[[main]]
+  name = "Spectral estimation"
+  url = "/curriculum/spectralestimation"
+  parent = "Curriculum"
+  weight = 4
+
+[[main]]
+  name = "Adaptive processing"
+  url = "/curriculum/adaptive"
+  parent = "Curriculum"
+  weight = 5
+
+[[main]]
+  name = "Spatial filtering"
+  url = "/curriculum/spatial"
+  parent = "Curriculum"
+  weight = 6
+
+[[main]]
   name = "Courses"
-  url = "#courses"
   weight = 30
+
+[[main]]
+  name = "Signal processing basics"
+  url = "/courses/Signals1"
+  parent = "Courses"
+  weight = 1
+
+[[main]]
+  name = "DSP fundamentals"
+  url = "/courses/Signals2"
+  parent = "Courses"
+  weight = 2
+
+[[main]]
+  name = "Signal analysis and estimation"
+  url = "/courses/Signals3"
+  parent = "Courses"
+  weight = 3
+
+[[main]]
+  name = "Adaptive array signal processing"
+  url = "/courses/AASP"
+  parent = "Courses"
+  weight = 4
+
+[[main]]
+  name = "Adaptive information processing"
+  url = "/courses/AIP"
+  parent = "Courses"
+  weight = 5
+
 
 [[main]]
   name = "Projects"
