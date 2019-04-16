@@ -10,7 +10,7 @@
 
 [[main]]
   name = "Curriculum"
-  url = "/curriculum/"
+  url = "/curriculum/overview"
   weight = 20
 
 [[main]]
