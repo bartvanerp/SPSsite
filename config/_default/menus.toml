@@ -14,115 +14,90 @@
   weight = 20
 
 [[main]]
-  name = "Introduction"
-  url = "/curriculum/introduction/"
+  name = "Basic math"
+  url = "/curriculum"
   parent = "Curriculum"
-  weight = 21
+  weight = 1
 
 [[main]]
-  name = "Complex numbers and phasors"
-  url = "/curriculum/complex"
+  name = "Fourier transform"
+  url = "/curriculum/fourier"
   parent = "Curriculum"
-  weight = 22
-
-[[main]]
-  name = "Spectrum and Fourier series"
-  url = "/curriculum/spectrum/"
-  parent = "Curriculum"
-  weight = 23
+  weight = 2
 
 [[main]]
   name = "Sampling and aliasing"
-  url = "/curriculum/sampling/"
+  url = "/curriculum/sampling"
   parent = "Curriculum"
-  weight = 24
-
-[[main]]
-  name = "FIR filters"
-  url = "/curriculum/fir/"
-  parent = "Curriculum"
-  weight = 25
-
-[[main]]
-  name = "Frequency response"
-  url = "/curriculum/frequency/"
-  parent = "Curriculum"
-  weight = 26
+  weight = 3
 
 [[main]]
   name = "Spectral estimation"
-  url = "/curriculum/spectralestimation/"
+  url = "/curriculum/spectralestimation"
   parent = "Curriculum"
-  weight = 27
+  weight = 4
 
 [[main]]
-  name = "Adaptive filtering"
-  url = "/curriculum/adaptive/"
+  name = "Adaptive processing"
+  url = "/curriculum/adaptive"
   parent = "Curriculum"
-  weight = 28
+  weight = 5
 
 [[main]]
   name = "Spatial filtering"
-  url = "/curriculum/spatial/"
+  url = "/curriculum/spatial"
   parent = "Curriculum"
-  weight = 29
-
+  weight = 6
 
 [[main]]
   name = "Courses"
-  weight = 40
+  weight = 30
 
 [[main]]
   name = "Signal processing basics"
   url = "/courses/Signals1"
   parent = "Courses"
-  weight = 41
+  weight = 1
 
 [[main]]
   name = "DSP fundamentals"
   url = "/courses/Signals2"
   parent = "Courses"
-  weight = 42
+  weight = 2
 
 [[main]]
   name = "Signal analysis and estimation"
   url = "/courses/Signals3"
   parent = "Courses"
-  weight = 43
+  weight = 3
 
 [[main]]
   name = "Adaptive array signal processing"
   url = "/courses/AASP"
   parent = "Courses"
-  weight = 44
+  weight = 4
 
 [[main]]
   name = "Adaptive information processing"
   url = "/courses/AIP"
   parent = "Courses"
-  weight = 45
-
-[[main]]
-  name = "Applied signal processing"
-  url = "/courses/applied"
-  parent = "Courses"
-  weight = 46
+  weight = 5
 
 
 [[main]]
   name = "Projects"
   url = "#projects"
-  weight = 60
+  weight = 40
 
 [[main]]
   name = "Tutorials"
   url = "/tutorial/"
-  weight = 70
+  weight = 50
 
 [[main]]
   name = "Contact"
   url = "#contact"
-  weight = 80
+  weight = 60
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
