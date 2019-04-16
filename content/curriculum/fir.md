@@ -1,5 +1,5 @@
 +++
-title = "introduction2"
+title = "FIR filters"
 
 # date = {{ .Date }}
 lastmod = 2019-04-16
@@ -9,8 +9,34 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
-#linktitle = "Introduction"
 [menu.curriculum]
-  parent = "Spectrum and Fourier series"
-  weight = 1
+  name = "FIR filters"
+  weight = 6
 +++
+
+## Introduction
+
+
+### Conceptual videos
+
+
+## Information
+
+
+### Reader
+
+
+### Slides
+
+
+### Screencast videos
+
+
+
+## Exercises
+
+
+### Exercise bundle
+
+
+### Pencast videos

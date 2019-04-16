@@ -2269,7 +2269,7 @@ ul.toc-top {
 }
 
 #TableOfContents ul ul {
-  display: none;
+  display: block;
 }
 
 #TableOfContents li {
@@ -2282,6 +2282,14 @@ ul.toc-top {
   padding: .125rem 1.5rem;
   color: #99979c;
   font-size: 0.7rem;
+}
+
+#TableOfContents ul,
+.toc-top ul {
+  display: block;
+  padding: .125rem 0.5rem;
+  color: #99979c;
+  font-size: 2rem;
 }
 
 #TableOfContents li a:hover,

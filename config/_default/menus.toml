@@ -50,24 +50,6 @@
   weight = 26
 
 [[main]]
-  name = "Spectral estimation"
-  url = "/curriculum/spectralestimation"
-  parent = "Curriculum"
-  weight = 27
-
-[[main]]
-  name = "Adaptive filtering"
-  url = "/curriculum/adaptive"
-  parent = "Curriculum"
-  weight = 28
-
-[[main]]
-  name = "Spatial filtering"
-  url = "/curriculum/spatial"
-  parent = "Curriculum"
-  weight = 29
-
-[[main]]
   name = "Courses"
   weight = 40
 

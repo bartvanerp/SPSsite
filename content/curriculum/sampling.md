@@ -1,5 +1,5 @@
 +++
-title = "Introduction"
+title = "Sampling and aliasing"
 
 # date = {{ .Date }}
 lastmod = 2019-04-16
@@ -10,8 +10,8 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.curriculum]
-  name = "Introduction"
-  weight = 2
+  name = "Sampling and aliasing"
+  weight = 5
 +++
 
 ## Introduction
