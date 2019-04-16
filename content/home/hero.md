@@ -8,7 +8,7 @@ weight = 10  # Order that this section will appear.
 title = "Signal Processing Systems"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
-hero_media = "sps-big-pic.jpg"
+# hero_media = "sps-big-pic.jpg"
 
 [design.background]
   # Apply a background color, gradient, or image.
