@@ -16,4 +16,4 @@ subtitle = "Where does this come from?"
 
 In the past couple of years, the Signal Processing Systems (SPS) group of the Electrical Engineering department at the Eindhoven University of Technology (TU/e) has been developing new methods of education in order to fulfill the needs of the increasing influx of new students.
 The *Blended Learning* approach that was implemented in 2017 was appreciated by the students and therefore more material is made available for self-study.
-With the limitations of the TU/e wide educational environment Canvas, an alternative way of distributing the data is being developed, which allows for easy access to course material from multiple courses, ***all bundled at one single place***.
+With the limitations of the TU/e wide educational environment Canvas, an alternative way of distributing the data is being developed, which allows for easy access to course material from multiple courses, ***all bundled in one single place***.
