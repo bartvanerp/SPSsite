@@ -2,7 +2,7 @@
 title = "Complex numbers and phasors"
 
 # date = {{ .Date }}
-lastmod = 2019-04-17
+lastmod = 2019-04-18
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -65,37 +65,39 @@ In this section several exercises are available, including their answers. The ex
  <input type="radio" value="3" name="video-list" id="video-3" /><label for="video-3">Exercise 6c</label>
  <input type="radio" value="4" name="video-list" id="video-4" /><label for="video-4">Exercise 8b</label>
  <input type="radio" value="5" name="video-list" id="video-5" /><label for="video-5">Exercise 11</label>
+
+ 
  <!-- videos -->
  <div class="video video-1">
- <video width="320" height="240" controls>
+ <video width="500" height="240" controls>
    <source src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%202a/CNAP%20-%202a.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
 
  <div class="video video-2">
- <video width="320" height="240" controls>
+ <video width="500" height="240" controls>
    <source src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%205c/CNAP%20-%205c.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
 
  <div class="video video-3">
- <video width="320" height="240" controls>
+ <video width="500" height="240" controls>
    <source src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%206c/CNAP%20-%206c.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
 
  <div class="video video-4">
- <video width="320" height="240" controls>
+ <video width="500" height="240" controls>
    <source src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%208b/CNAP%20-%208b.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
 
  <div class="video video-5">
- <video width="320" height="240" controls>
+ <video width="500" height="240" controls>
    <source src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%2011/CNAP%20-%2011.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
