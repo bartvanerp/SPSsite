@@ -66,13 +66,10 @@ In this section several exercises are available, including their answers. The ex
  <input type="radio" value="4" name="video-list" id="video-4" /><label for="video-4">Exercise 8b</label>
  <input type="radio" value="5" name="video-list" id="video-5" /><label for="video-5">Exercise 11</label>
 
- 
+
  <!-- videos -->
  <div class="video video-1">
- <video width="500" height="240" controls>
-   <source src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%202a/CNAP%20-%202a.mp4" type="video/mp4">
- Your browser does not support the video tag.
- </video>
+<iframe width="500" height="240" src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%202a/CNAP%20-%202a.mp4" frameborder="0" allowfullscreen></iframe>
  </div>
 
  <div class="video video-2">
