@@ -54,11 +54,11 @@ In this section several exercises are available, including their answers. The ex
     </embed>
 </object>
 
+### Answers
+Download the answers <a href="https://github.com/bartvanerp/SPScontent/raw/master/3.%20Exercises/Answers/1.%20CNaP%20-%20Student%20Answers.pdf">here</a>.
 
 ### Pencast videos
-
 <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
-
 <div class="grid-row reverse video-gallery">
  <input type="radio" value="1" name="video-list" id="video-1" checked="checked" /><label for="video-1">Exercise 2a</label>
  <input type="radio" value="2" name="video-list" id="video-2" /><label for="video-2">Exercise 5c</label>
