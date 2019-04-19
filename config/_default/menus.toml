@@ -13,11 +13,11 @@
   url = "/curriculum/overview"
   weight = 20
 
-[[main]]
-  name = "Introduction"
-  url = "/curriculum/introduction"
-  parent = "Curriculum"
-  weight = 21
+# [[main]]
+#   name = "Introduction"
+#   url = "/curriculum/introduction"
+#   parent = "Curriculum"
+#   weight = 21
 
 [[main]]
   name = "Complex numbers and phasors"

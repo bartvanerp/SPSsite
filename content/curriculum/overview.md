@@ -16,7 +16,6 @@ type = "docs"  # Do not modify.
 
 Welcome to the *curriculum* page of the Signal Processing Systems educational website. On this page various important concepts from the signal processing curriculum are covered with multiple educational resources. For now, these topics include:
 
-* Introduction
 * Complex numbers and phasors
 * Spectrum and Fourier series
 * Sampling and aliasing
