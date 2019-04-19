@@ -25,8 +25,8 @@ The following conceptual video gives a brief overview of the complex numbers and
 <configuration>
 
 <div>
-<video controls preload="auto">
-  <source src="/../files/Introduction-ComplexNumbers.mp4" type="video/mp4">
+<video controls preload>
+  <source src="./curriculum/Introduction-ComplexNumbers.mp4" type="video/mp4;codecs="avc1.42E01E, mp4a.40.2"">
 Your browser does not support the video tag.
 </video>
 </div>
