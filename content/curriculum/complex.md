@@ -26,7 +26,7 @@ The following conceptual video gives a brief overview of the complex numbers and
 
 <div>
 <video controls preload="auto">
-  <source src="files/Introduction-ComplexNumbers.mp4" type="video/mp4">
+  <source src="/../files/Introduction-ComplexNumbers.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 </div>
