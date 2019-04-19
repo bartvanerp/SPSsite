@@ -2,7 +2,7 @@
 title = "Complex numbers and phasors"
 
 # date = {{ .Date }}
-lastmod = 2019-04-18
+lastmod = 2019-04-19
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -26,14 +26,7 @@ The following conceptual video gives a brief overview of the complex numbers and
 
 <div>
 <video controls preload>
-  <source src="./curriculum/Introduction-ComplexNumbers.mp4" type="video/mp4;codecs="avc1.42E01E, mp4a.40.2"">
-Your browser does not support the video tag.
-</video>
-</div>
-
-<div>
-<video controls preload src="https://github.com/bartvanerp/SPScontent/raw/master/5.%20Introduction%20videos/Introduction%20-%20Complex%20Numbers.mp4">
-  <source src="https://github.com/bartvanerp/SPScontent/raw/master/5.%20Introduction%20videos/Introduction%20-%20Complex%20Numbers.mp4" type="video/mp4">
+  <source src="/../files/introduction/Introduction-ComplexNumbers.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 </div>
@@ -44,12 +37,12 @@ Your browser does not support the video tag.
 The theoretical background of this module will be covered by means of a slide deck, which includes the most important aspects of this module, and the reader, which covers the material in more detail.
 
 ### Slides
-<!---
-<object data="https://github.com/bartvanerp/SPScontent/raw/master/1.%20Lecture%20Slides/1.%20CNAP%20-%20Slides.pdf" type="application/pdf" width="100%" height="400px">
-    <embed src="https://github.com/bartvanerp/SPScontent/raw/master/1.%20Lecture%20Slides/1.%20CNAP%20-%20Slides.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/bartvanerp/SPScontent/raw/master/1.%20Lecture%20Slides/1.%20CNAP%20-%20Slides.pdf">Download PDF</a>.</p>
+
+<object data="/../files/slides/CNAP-Slides.pdf" type="application/pdf" width="100%" height="400px">
+    <embed src="/../files/slides/CNAP-Slides.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/slides/CNAP-Slides.pdf">Download PDF</a>.</p>
     </embed>
-</object> -->
+</object>
 
 
 
@@ -102,35 +95,35 @@ Download the answers <a href="https://github.com/bartvanerp/SPScontent/raw/maste
  <!-- videos -->
  <div class="video video-1">
  <video width="500" height="240" controls>
-   <source src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%202a/CNAP%20-%202a.mp4" type="video/mp4">
+   <source src="/../files/pencast/CNAP-2a.mp4" type="video/mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
 
  <div class="video video-2">
  <video width="500" height="240" controls>
-   <source src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%205c/CNAP%20-%205c.mp4" type="video/mp4">
+   <source src="/../files/pencast/CNAP-5c.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
 
  <div class="video video-3">
  <video width="500" height="240" controls>
-   <source src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%206c/CNAP%20-%206c.mp4" type="video/mp4">
+   <source src="/../files/pencast/CNAP-6c.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
 
  <div class="video video-4">
  <video width="500" height="240" controls>
-   <source src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%208b/CNAP%20-%208b.mp4" type="video/mp4">
+   <source src="/../files/pencast/CNAP-8b.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
 
  <div class="video video-5">
  <video width="500" height="240" controls>
-   <source src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%2011/CNAP%20-%2011.mp4" type="video/mp4">
+   <source src="/../files/pencast/CNAP-11.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
