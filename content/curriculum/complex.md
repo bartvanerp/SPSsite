@@ -36,27 +36,31 @@ Your browser does not support the video tag.
 The theoretical background of this module will be covered by means of a slide deck, which includes the most important aspects of this module, and the reader, which covers the material in more detail.
 
 ### Slides
+<!---
 <object data="https://github.com/bartvanerp/SPScontent/raw/master/1.%20Lecture%20Slides/1.%20CNAP%20-%20Slides.pdf" type="application/pdf" width="100%" height="400px">
     <embed src="https://github.com/bartvanerp/SPScontent/raw/master/1.%20Lecture%20Slides/1.%20CNAP%20-%20Slides.pdf" type="application/pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/bartvanerp/SPScontent/raw/master/1.%20Lecture%20Slides/1.%20CNAP%20-%20Slides.pdf">Download PDF</a>.</p>
     </embed>
-</object>
+</object> -->
+
+
+
 
 <embed src="https://drive.google.com/viewerng/
-viewer?embedded=true&url=https://github.com/bartvanerp/SPScontent/raw/master/1.%20Lecture%20Slides/1.%20CNAP%20-%20Slides.pdf" width="500" height="375">
+viewer?embedded=true&url=https://github.com/bartvanerp/SPScontent/raw/master/1.%20Lecture%20Slides/1.%20CNAP%20-%20Slides.pdf" width="100%" height="400px">
+
 
 ### Reader
+<!--
 <object data="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf" type="application/pdf" width="100%" height="400px">
     <embed src="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf" type="application/pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf">Download PDF</a>.</p>
     </embed>
-</object>
+</object> -->
 
-<object data="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf" type="application/pdf" width="750px" height="750px">
-    <embed src="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+<embed src="https://drive.google.com/viewerng/
+viewer?embedded=true&url=https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf" width="100%" height="400px">
+
 
 \
 \
@@ -65,11 +69,14 @@ In this section several exercises are available, including their answers. The ex
 
 
 ### Exercise bundle
-<object data="https://github.com/bartvanerp/SPScontent/raw/master/3.%20Exercises/1.%20CNAP%20-%20Student%20Exercises.pdf" type="application/pdf" width="100%" height="400px">
+<!-- <object data="https://github.com/bartvanerp/SPScontent/raw/master/3.%20Exercises/1.%20CNAP%20-%20Student%20Exercises.pdf" type="application/pdf" width="100%" height="400px">
     <embed src="https://github.com/bartvanerp/SPScontent/raw/master/3.%20Exercises/1.%20CNAP%20-%20Student%20Exercises.pdf" type="application/pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/bartvanerp/SPScontent/raw/master/3.%20Exercises/1.%20CNAP%20-%20Student%20Exercises.pdf">Download PDF</a>.</p>
     </embed>
-</object>
+</object> -->
+
+<embed src="https://drive.google.com/viewerng/
+viewer?embedded=true&url=https://github.com/bartvanerp/SPScontent/raw/master/3.%20Exercises/1.%20CNAP%20-%20Student%20Exercises.pdf" width="100%" height="400px">
 
 ### Answers
 Download the answers <a href="https://github.com/bartvanerp/SPScontent/raw/master/3.%20Exercises/Answers/1.%20CNaP%20-%20Student%20Answers.pdf">here</a>.
