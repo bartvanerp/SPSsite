@@ -24,7 +24,7 @@ In this section two important concepts will be covered: complex numbers and phas
 The following conceptual video gives a brief overview of the complex numbers and phasors. This video should give a general understanding of these concepts and should prepare you for the slides and the reader.
 
 <div>
-<video controls type='video/mp4; codecs=" H.264/MPEG-4" '>
+<video controls preload>
   <source src="https://github.com/bartvanerp/SPScontent/raw/master/5.%20Introduction%20videos/Introduction%20-%20Complex%20Numbers.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
