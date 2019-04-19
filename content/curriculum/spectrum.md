@@ -21,7 +21,7 @@ In this section two important concepts will be covered: the spectrum of a signal
 
 
 ### Conceptual videos
-The following conceptual video gives a brief overview of the spectrum and the Fourier series. This video should give a general understanding of these concepts and should prepare you for the slides and the reader.
+The following conceptual videos give a brief overview of the spectrum and the Fourier series. These videos should give a general understanding of these concepts and should prepare you for the slides and the reader.
 
 <div id="spgrid">
 <div>
