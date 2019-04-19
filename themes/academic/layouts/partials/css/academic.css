@@ -2473,6 +2473,7 @@ body.dark,
 
 
 .video {
+  display: none;
   position: relative;
   padding-top: 4.1%;
   padding-bottom: 51.95%;
@@ -2533,7 +2534,7 @@ body.dark,
 .video-gallery input[type="radio"]:checked + label:before {
   content: "▶";
   left: 0;
-  top: 12px;
+  top: 17px;
   position: absolute;
 }
 
@@ -2561,11 +2562,14 @@ body.dark,
 }
 
 #video-1:checked ~ .video-1, #video-2:checked ~ .video-2, #video-3:checked ~ .video-3, #video-4:checked ~ .video-4, #video-5:checked ~ .video-5, #video-6:checked ~ .video-6 {
+  display: block;
   animation: 1200ms fadeIn ease;
   animation-fill-mode: both;
   opacity: 1;
   width: 50%;
 }
+
+
 
 @keyframes fadeOut {
   0% {

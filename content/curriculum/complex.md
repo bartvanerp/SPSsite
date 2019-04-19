@@ -57,8 +57,8 @@ In this section several exercises are available, including their answers. The ex
 
 ### Pencast videos
 
-
 <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
+
 <div class="grid-row reverse video-gallery">
  <input type="radio" value="1" name="video-list" id="video-1" checked="checked" /><label for="video-1">Exercise 2a</label>
  <input type="radio" value="2" name="video-list" id="video-2" /><label for="video-2">Exercise 5c</label>
@@ -69,7 +69,10 @@ In this section several exercises are available, including their answers. The ex
 
  <!-- videos -->
  <div class="video video-1">
-<iframe width="500" height="240" src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%202a/CNAP%20-%202a.mp4" frameborder="0" allowfullscreen></iframe>
+ <video width="500" height="240" controls>
+   <source src="https://github.com/bartvanerp/SPScontent/raw/master/6.%20Screencasts/CNAP%20-%202a/CNAP%20-%202a.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+ </video>
  </div>
 
  <div class="video video-2">
