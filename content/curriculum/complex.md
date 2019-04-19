@@ -30,23 +30,12 @@ Your browser does not support the video tag.
 </video>
 </div>
 
-<video controls="controls" width="640" height="360">
-    <!-- .mp4 file for native playback in IE9+, Firefox, Chrome, Safari and most mobile browsers -->
-    <source src="https://github.com/bartvanerp/SPScontent/raw/master/5.%20Introduction%20videos/Introduction%20-%20Complex%20Numbers.mp4" type="video/mp4" />
-    <!-- flash fallback for IE6, IE7, IE8 and Opera -->
-    <object type="application/x-shockwave-flash"
-            data="swf/flowplayer-3.2.18.swf" width="640" height="360">
-        <param name="movie" value="swf/flowplayer-3.2.18.swf" />
-        <param name="allowFullScreen" value="true" />
-        <param name="wmode" value="transparent" />
-        <!-- note the encoded path to the image and video files, relative to the .swf! -->
-        <!-- more on that here: http://en.wikipedia.org/wiki/Percent-encoding -->
-        <param name="flashVars"
-               value="config={'playlist':['..%2Fimg%2Fdemo.jpg',{'url':'..%2Fvid%2Fdemo.mp4','autoPlay':false}]}" />
-        <!-- fallback image if flash fails -->
-        <img src="img/demo.jpg" width="640" height="360" title="No Flash found" />
-    </object>
+<div>
+<video controls preload src="https://github.com/bartvanerp/SPScontent/raw/master/5.%20Introduction%20videos/Introduction%20-%20Complex%20Numbers.mp4">
+  <source src="https://github.com/bartvanerp/SPScontent/raw/master/5.%20Introduction%20videos/Introduction%20-%20Complex%20Numbers.mp4" type="video/mp4">
+Your browser does not support the video tag.
 </video>
+</div>
 
 \
 \
