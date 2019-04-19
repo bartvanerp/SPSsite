@@ -42,9 +42,17 @@ The theoretical background of this module will be covered by means of a slide de
     </embed>
 </object>
 
+<embed src="https://drive.google.com/viewerng/
+viewer?embedded=true&url=https://github.com/bartvanerp/SPScontent/raw/master/1.%20Lecture%20Slides/1.%20CNAP%20-%20Slides.pdf" width="500" height="375">
 
 ### Reader
 <object data="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf" type="application/pdf" width="100%" height="400px">
+    <embed src="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
+<object data="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf" type="application/pdf" width="750px" height="750px">
     <embed src="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf" type="application/pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf">Download PDF</a>.</p>
     </embed>
