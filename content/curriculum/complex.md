@@ -26,7 +26,7 @@ The following conceptual video gives a brief overview of the complex numbers and
 
 <div>
 <video controls preload>
-  <source src="/../files/introduction/Introduction-ComplexNumbers.mp4" type="video/mp4">
+  <source src="/../files/5.Introduction/Introduction-ComplexNumbers.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 </div>
@@ -38,30 +38,20 @@ The theoretical background of this module will be covered by means of a slide de
 
 ### Slides
 
-<object data="/../files/slides/CNAP-Slides.pdf" type="application/pdf" width="100%" height="400px">
-    <embed src="/../files/slides/CNAP-Slides.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/slides/CNAP-Slides.pdf">Download PDF</a>.</p>
+<object data="/../files/1.Slides/1.CNAP-Slides.pdf" type="application/pdf" width="100%" height="400px">
+    <embed src="/../files/1.Slides/1.CNAP-Slides.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/1.Slides/1.CNAP-Slides.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
 
-
-
-<embed src="https://drive.google.com/viewerng/
-viewer?embedded=true&url=https://github.com/bartvanerp/SPScontent/raw/master/1.%20Lecture%20Slides/1.%20CNAP%20-%20Slides.pdf" width="100%" height="400px">
-
-
 ### Reader
-<!--
-<object data="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf" type="application/pdf" width="100%" height="400px">
-    <embed src="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf">Download PDF</a>.</p>
+
+<object data="/../files/2.Reader/1.CNAP-Reader.pdf" type="application/pdf" width="100%" height="400px">
+    <embed src="/../files/2.Reader/1.CNAP-Reader.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/2.Reader/1.CNAP-Reader.pdf">Download PDF</a>.</p>
     </embed>
-</object> -->
-
-<embed src="https://drive.google.com/viewerng/
-viewer?embedded=true&url=https://github.com/bartvanerp/SPScontent/raw/master/2.%20Readers/1.%20CNaP%20-%20Reader.pdf" width="100%" height="400px">
-
+</object>
 
 \
 \
@@ -70,17 +60,15 @@ In this section several exercises are available, including their answers. The ex
 
 
 ### Exercise bundle
-<!-- <object data="https://github.com/bartvanerp/SPScontent/raw/master/3.%20Exercises/1.%20CNAP%20-%20Student%20Exercises.pdf" type="application/pdf" width="100%" height="400px">
-    <embed src="https://github.com/bartvanerp/SPScontent/raw/master/3.%20Exercises/1.%20CNAP%20-%20Student%20Exercises.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/bartvanerp/SPScontent/raw/master/3.%20Exercises/1.%20CNAP%20-%20Student%20Exercises.pdf">Download PDF</a>.</p>
-    </embed>
-</object> -->
 
-<embed src="https://drive.google.com/viewerng/
-viewer?embedded=true&url=https://github.com/bartvanerp/SPScontent/raw/master/3.%20Exercises/1.%20CNAP%20-%20Student%20Exercises.pdf" width="100%" height="400px">
+<object data="/../files/3.Exercises/1.CNAP-StudentExercises.pdf" type="application/pdf" width="100%" height="400px">
+    <embed src="/../files/3.Exercises/1.CNAP-StudentExercises.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/3.Exercises/1.CNAP-StudentExercises.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
 ### Answers
-Download the answers <a href="https://github.com/bartvanerp/SPScontent/raw/master/3.%20Exercises/Answers/1.%20CNaP%20-%20Student%20Answers.pdf">here</a>.
+Download the answers <a href="/../files/3.Exercises/Answers/1.CNAP-StudentAnswers.pdf">here</a>.
 
 ### Pencast videos
 <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
@@ -95,35 +83,35 @@ Download the answers <a href="https://github.com/bartvanerp/SPScontent/raw/maste
  <!-- videos -->
  <div class="video video-1">
  <video width="500" height="240" controls>
-   <source src="/../files/pencast/CNAP-2a.mp4" type="video/mp4" type="video/mp4">
+   <source src="/../files/6.Pencast/CNAP-2a.mp4" type="video/mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
 
  <div class="video video-2">
  <video width="500" height="240" controls>
-   <source src="/../files/pencast/CNAP-5c.mp4" type="video/mp4">
+   <source src="/../files/6.Pencast/CNAP-5c.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
 
  <div class="video video-3">
  <video width="500" height="240" controls>
-   <source src="/../files/pencast/CNAP-6c.mp4" type="video/mp4">
+   <source src="/../files/6.Pencast/CNAP-6c.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
 
  <div class="video video-4">
  <video width="500" height="240" controls>
-   <source src="/../files/pencast/CNAP-8b.mp4" type="video/mp4">
+   <source src="/../files/6.Pencast/CNAP-8b.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
 
  <div class="video video-5">
  <video width="500" height="240" controls>
-   <source src="/../files/pencast/CNAP-11.mp4" type="video/mp4">
+   <source src="/../files/6.Pencast/CNAP-11.mp4" type="video/mp4">
  Your browser does not support the video tag.
  </video>
  </div>
