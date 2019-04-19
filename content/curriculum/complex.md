@@ -22,10 +22,11 @@ In this section two important concepts will be covered: complex numbers and phas
 
 ### Conceptual videos
 The following conceptual video gives a brief overview of the complex numbers and phasors. This video should give a general understanding of these concepts and should prepare you for the slides and the reader.
+<configuration>
 
 <div>
-<video controls preload>
-  <source src="https://github.com/bartvanerp/SPScontent/raw/master/5.%20Introduction%20videos/Introduction%20-%20Complex%20Numbers.mp4" type="video/mp4">
+<video controls preload="auto">
+  <source src="files/Introduction-ComplexNumbers.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 </div>
