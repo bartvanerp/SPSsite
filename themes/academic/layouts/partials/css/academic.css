@@ -148,9 +148,7 @@ figcaption {
 }
 
 figcaption.numbered:before {
-  font-weight: 700;
-  text-transform: uppercase;
-  content: attr(data-pre) counter(captions) attr(data-post);
+  content: "Figure " counter(captions) " - ";
 }
 
 figcaption.numbered {
@@ -2053,7 +2051,7 @@ div.alert a {
  **************************************************/
 
 .docs-article-container {
-  max-width: 760px;
+  max-width: 900px;
 }
 
 /* Documentation: article footer. */
