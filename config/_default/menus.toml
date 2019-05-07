@@ -50,6 +50,21 @@
   weight = 26
 
 [[main]]
+  name = "Machine learning"
+  url = "/curriculum/machinelearning_main"
+  parent = "Curriculum"
+  weight = 27
+
+[[main]]
+  name = "Clustering"
+  url = "/curriculum/machinelearning_clustering"
+  parent = "Machine learning"
+  weight = 27.1
+
+
+
+
+[[main]]
   name = "Courses"
   weight = 40
 
