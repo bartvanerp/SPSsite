@@ -51,18 +51,40 @@ When returning to the previous example with the different types of fruit, lets n
   </figure>
 </div>
 
-The goal of clustering is to discover hidden groups in the data. Two common algorithms used are the K-means algorithm and the expected maximization algorithm. The most important difference between the algorithms is the way in which the algorithms assigns data points to clusters.
+The goal of clustering is to discover hidden groups in the data. Two common algorithms used are the K-means algorithm and the expected maximization algorithm. The most important difference between the algorithms is the way in which the algorithms assign data points to clusters.
 
-Both cases suffer from 2 drawbacks:
+Both algorithms suffer from 2 drawbacks:
 
-1. **The amount of clusters is unknown** - _Before both algorithms can start, they require an user-defined number of clusters. Therefore a critical assumption has to be made in order to be able to detect clusters at all. This number of clusters is not guaranteed to give the best representation of the hidden structure in the data. Algorithms exist to find an optimal number of clusters with respect to some metric, however, these still do not guarantee to provide the correct amount of clusters describing the underlying structure of the data._
+1. **The correct number of clusters is unknown** - _Before both algorithms can start, they require an user-defined number of clusters. Therefore a critical assumption has to be made in order to be able to detect clusters at all. This number of clusters is not guaranteed to give the best representation of the hidden structure in the data. Algorithms exist to find an optimal number of clusters with respect to some metric, however, these still do not guarantee to provide the correct amount of clusters describing the underlying structure of the data._
 2. **Convergence depends on initialization** - _The convergence of the algorithm (i.e. the final assignment of data points to clusters) depends on the initialization of the clusters. In practice usually both algorithms are run several times with different initial conditions, after which the best result, with respect to some metric, is chosen as the optimal solution._
 
 
 
 ## K-means clustering
 
+### Intuition
+
+
+### Mathematical derivation
+
+
+### The algorithm
+
+
+### Visualization
+
+
+
 
 ## Expected maximization algorithm
 
+### Intuition
+
+
+### Mathematical derivation
 $$ \textbf{EM}:\, \theta^{(m+1)} := \underbrace{\arg \max\_\theta}\_\text{M-step}\underbrace{\sum\_{z} \overbrace{p(z|x,\theta^{(m)})}^{q^{(m+1)}(z)}\log p(x,z|\theta)}\_\text{E-step}$$
+
+### The algorithm
+
+
+### Visualization
