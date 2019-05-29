@@ -50,7 +50,7 @@ time_format = "15:04"
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "sps@tue.nl"
+email = ""
 phone = ""
 address = "Eindhoven University of Technology, Flux, Floor 5 & 7"
 
@@ -118,7 +118,7 @@ reading_time = false
 comment_count = true
 
 # Display next/previous section pager? (true/false)
-section_pager = false
+section_pager = true
 
 # Enable in-built social sharing buttons? (true/false)
 sharing = false

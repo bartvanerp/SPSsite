@@ -9,9 +9,9 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
-[menu.curriculum]
+[menu.machinelearning]
   name = "Clustering"
-  parent = "Machine learning"
+  parent = "Unsupervised learning"
   weight = 1
 
 +++
