@@ -12,7 +12,7 @@ type = "docs"       # Do not modify.
 [menu.mathematicalbackground]
   name = "Notation of complex numbers"
   parent = "Complex numbers and phasors"
-  weight = 2
+  weight = 3
 
 +++
 

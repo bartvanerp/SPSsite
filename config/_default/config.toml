@@ -19,7 +19,7 @@ copyright = "&copy; Signal Processing Systems group, {year}"
 googleAnalytics = ""
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = ""
+disqusShortname = "test"
 
 ############################
 ## Advanced options below ##

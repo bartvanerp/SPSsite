@@ -2,7 +2,7 @@
 title = "Number sets"
 
 # date = {{ .Date }}
-lastmod = 2019-05-28
+lastmod = 2019-05-29
 
 draft = false       # Is this a draft? true/false
 toc = true          # Show table of contents? true/false
@@ -54,11 +54,13 @@ This set can be described in easy words as: the set of fractions, $a$ divided by
 With the set of rational numbers, almost all commonly used numbers can be described.
 However, it still offers some limitations, since some numbers can not be written as a fraction.
 Examples of these numbers are $\sqrt{2}$, $\pi$ and $e$.
-In order to include the set of real numbers $\mathbb{R}$ is defined as the set of all numbers between $-∞$ and $∞$.
+In order to include these numbers, the set of real numbers $\mathbb{R}$ is defined as the set of all numbers between $-∞$ and $∞$.
 
 ## Complex numbers
+
+### Derivation 1
 One important property of the set of real numbers is that the square of an arbitrary number in that set is larger or equal than 0, i.e. $x^2 \geq 0 \quad \forall \quad x\in \mathbb{R}$.
-This allows for solving most quadratic equations ($ax^2 + bx + c = 0$) easily using the quadratic formula, where the solution to this equation is given by
+This allows for solving most quadratic equations ($ax^2 + bx + c = 0$) easily using the quadratic formula, where the solution to these equations is given by
 $$ x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.$$
 Using this equation many quadratic equations can be solved very easily, however, sometimes the solution is not present in the set of real numbers.
 To demonstrate this, let us focus on the following example, where we are trying to solve $x^2 + x + 1 = 0$.
@@ -72,3 +74,18 @@ In order to still obtain a solution the imaginary unit $j$ (or $i$, but in the E
 Now, the solution to _any_ quadratic equation can be found as $x=a+j\cdot b$.
 This expanded set of numbers is called the set of complex numbers $\mathbb{C}$ and is mathematically denoted as
 $$ \mathbb{C} = \\{ a+j\cdot b: a,b \in \mathbb{R}\\}.$$
+
+### Derivation 2
+Besides the previous example describing the necessity of the complex numbers, another example is described.
+In engineering it is quite common to describe a practical problem by a mathematical model.
+For example a mathematical model that describes the movement $f(\theta)$, as a function of the position $\theta$, of a harmonic oscillator is given by the following (simplified) second order differential equation:
+$$\frac{d^2}{d\theta^2}\\{ f(\theta)\\} + f(\theta) = 0$$
+A general solution of this equation is given by the function $f(\theta)= e^{c\theta}$, in which $\theta \in \mathbb{R}$ is the function argument and $c \in \mathbb{R}$ is some unknown constant.
+Substituting this solution in the differential equation results in the following:
+$$c^2(e^{c\theta}) + e^{c\theta} = 0 $$
+where the constant c is given by the solutions to the equation $c^2 +1 = 0$.
+These solutions are given by $c = \pm \sqrt{-1}$.
+Again we can see the necessity of introducing the imaginary unit $j$.
+
+## Visualisation of the number sets
+TODO: add image from reader
