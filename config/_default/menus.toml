@@ -19,95 +19,130 @@
 #   parent = "Curriculum"
 #   weight = 21
 
+###################### MATHEMATICAL BACKGROUND #################################
 [[main]]
-  name = "Complex numbers and phasors"
-  url = "/curriculum/complex"
+  name = "Mathematical background"
+  url = "/curriculum/mathematicalbackground/mathematicalbackground_main"
   parent = "Curriculum"
   weight = 22
 
 [[main]]
-  name = "Spectrum and Fourier series"
-  url = "/curriculum/spectrum"
+  name = "Complex numbers and phasors"
+  url = "/curriculum/mathematicalbackground/mathematicalbackground_complex"
+  parent = "Mathematical background"
+  weight = 22.1
+
+    
+
+######################## SIGNAL PROCESSING BASICS ##############################
+[[main]]
+  name = "Signal processing basics"
+  url = "/curriculum/basics/signalprocessingbasics_main"
   parent = "Curriculum"
   weight = 23
 
 [[main]]
-  name = "Sampling and aliasing"
-  url = "/curriculum/sampling"
+  name = "Signal processing basics test"
+  url = "/curriculum/basics/signalprocessingbasics_test"
+  parent = "Signal processing basics"
+  weight = 23.0001
+
+
+######################## STATISTICAL SIGNAL PROCESSING ##############################
+[[main]]
+  name = "Statistical signal processing"
+  url = "/curriculum/statistical/statisticalsignalprocessing_main"
   parent = "Curriculum"
   weight = 24
 
 [[main]]
-  name = "FIR filters"
-  url = "/curriculum/fir"
+  name = "Statistical signal processing test"
+  url = "/curriculum/statistical/statisticalsignalprocessing_test"
+  parent = "Statistical signal processing"
+  weight = 24.001
+
+
+######################## MULTIDIMENSIONAL SIGNAL PROCESSING ##############################
+[[main]]
+  name = "Multidimensional signal processing"
+  url = "/curriculum/multidimensional/multidimensionalsignalprocessing_main"
   parent = "Curriculum"
   weight = 25
 
 [[main]]
-  name = "Frequency response"
-  url = "/curriculum/frequency"
+  name = "Multidimensional signal processing test"
+  url = "/curriculum/multidimensional/multidimensionalsignalprocessing_test"
+  parent = "Multidimensional signal processing"
+  weight = 25.001
+
+######################## OPTIMIZATION METHODS FOR SIGNAL PROCESSING ##############################
+[[main]]
+  name = "Optimization methods for signal processing"
+  url = "/curriculum/optimizationmethods/optimizationmethodsforsignalprocessing_main"
   parent = "Curriculum"
   weight = 26
 
 [[main]]
-  name = "Machine learning"
-  url = "/curriculum/machinelearning_main"
+  name = "Optimization methods for signal processing test"
+  url = "/curriculum/optimizationmethods/optimizationmethodsforsignalprocessing_test"
+  parent = "Optimization methods for signal processing"
+  weight = 26.001
+
+######################## OPTIMAL AND ADAPTIVE SIGNAL PROCESSING ##############################
+[[main]]
+  name = "Optimal and adaptive signal processing"
+  url = "/curriculum/optimalandadaptive/optimalandadaptivesignalprocessing_main"
   parent = "Curriculum"
   weight = 27
 
 [[main]]
+  name = "Optimal and adaptive signal processing test"
+  url = "/curriculum/optimalandadaptive/optimalandadaptivesignalprocessing_test"
+  parent = "Optimal and adaptive signal processing"
+  weight = 27.001
+
+
+######################## SENSOR ARRAY AND MULTICHANNEL SIGNAL PROCESSING ##############################
+[[main]]
+  name = "Sensor array and multichannel signal processing"
+  url = "/curriculum/sensorarrayandmultichannel/sensorarrayandmultichannelsignalprocessing_main"
+  parent = "Curriculum"
+  weight = 28
+
+[[main]]
+  name = "Sensor array and multichannel signal processing test"
+  url = "/curriculum/sensorarrayandmultichannel/sensorarrayandmultichannelsignalprocessing_test"
+  parent = "Sensor array and multichannel signal processing"
+  weight = 28.001
+
+
+######################## MACHINE LEARNING ##############################
+[[main]]
+  name = "Machine learning"
+  url = "/curriculum/machinelearning/machinelearning_main"
+  parent = "Curriculum"
+  weight = 29
+
+[[main]]
   name = "Clustering"
-  url = "/curriculum/machinelearning_clustering"
+  url = "/curriculum/machinelearning/machinelearning_clustering"
   parent = "Machine learning"
-  weight = 27.1
+  weight = 29.1
 
 
-
+######################## NONLINEAR SIGNAL PROCESSING ##############################
+[[main]]
+  name = "Nonlinear signal processing"
+  url = "/curriculum/nonlinear/nonlinearsignalprocessing_main"
+  parent = "Curriculum"
+  weight = 30
 
 [[main]]
-  name = "Courses"
-  weight = 40
+  name = "Nonlinear signal processing test"
+  url = "/curriculum/nonlinear/nonlinearsignalprocessing_test"
+  parent = "Nonlinear signal processing"
+  weight = 30.001
 
-[[main]]
-  name = "Signal processing basics"
-  url = "/courses/Signals1"
-  parent = "Courses"
-  weight = 41
-
-[[main]]
-  name = "DSP fundamentals"
-  url = "/courses/Signals2"
-  parent = "Courses"
-  weight = 42
-
-[[main]]
-  name = "Signal analysis and estimation"
-  url = "/courses/Signals3"
-  parent = "Courses"
-  weight = 43
-
-[[main]]
-  name = "Adaptive array signal processing"
-  url = "/courses/AASP"
-  parent = "Courses"
-  weight = 44
-
-[[main]]
-  name = "Adaptive information processing"
-  url = "/courses/AIP"
-  parent = "Courses"
-  weight = 45
-
-
-[[main]]
-  name = "Projects"
-  url = "#projects"
-  weight = 60
-
-[[main]]
-  name = "Tutorials"
-  url = "/tutorial/"
-  weight = 70
 
 [[main]]
   name = "Contact"
