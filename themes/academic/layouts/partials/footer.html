@@ -4,6 +4,7 @@
     {{ if or .Params.math .Site.Params.math }}
     {{ $mathjax_config := resources.Get "js/mathjax-config.js" }}
     <script src="{{ $mathjax_config.RelPermalink }}"></script>
+
     {{ end }}
 
     {{/* Attempt to load local vendor JS, otherwise load from CDN. */}}
@@ -149,6 +150,15 @@
 
     <script type="text/x-mathjax-config">
  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<script type="text/javascript">
+ $(document).ready(function() {
+    $('label').click(function() {
+        $('label').removeClass('worngans');
+        $(this).addClass('worngans');
+    });
+});
 </script>
 
 <script type="text/javascript" async
