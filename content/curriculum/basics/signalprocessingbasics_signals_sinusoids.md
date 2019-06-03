@@ -1,5 +1,5 @@
 +++
-title = "Sinusoids and notation"
+title = "Sinusoids"
 
 # date = {{ .Date }}
 lastmod = 2019-06-02
@@ -10,12 +10,11 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.basics]
-  name = "Sinusoids and notation"
+  name = "Sinusoids"
   parent = "Basic signals"
   weight = 2.1
 
 +++
 
-## Continuous- and discrete- time representation
 
 ## Sinusoidal symmetry
