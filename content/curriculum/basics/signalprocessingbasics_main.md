@@ -21,19 +21,19 @@ This module covers the most basic concepts in the signal processing field, which
 
 The concepts covered in this module are:
 
-1. **Basic signals** (to be added) -
+1. **Basic signals** - This section should provide you with general information on what notation to use for signals. Furthermore several elementary functions are introduced that are commonly used in examples. Finally several important properties and characteristics of signals are explained.
 
-2. **Continuous-time transforms** (to be added) -
+2. **Continuous-time transforms** (to be added)
 
-3. **Systems** (to be added) -
+3. **Systems** (to be added)
 
-4. **Sampling and reconstruction** (to be added) -
+4. **Sampling and reconstruction** (to be added)
 
-5. **Discrete-time transforms** (to be added) -
+5. **Discrete-time transforms** (to be added)
 
-6. **Filters** (to be added) -
+6. **Filters** (to be added)
 
-7. **Multirate signal processing** (to be added) -
+7. **Multirate signal processing** (to be added)
 
 
 
@@ -58,7 +58,7 @@ main()
 }</pre>
 <br/>
     <input type="radio" id="Fastlearning" name="question1">
-       <label for="Fastlearning">1. Fastlearning</label><br/>
+       <label for="Fastlearning">$\sum_{k-1} \\ y=x$</label><br/>
     <input type="radio"  name="question1">
        <label>2. learning</label><br/>
     <input type="radio" name="question1">

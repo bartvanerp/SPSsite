@@ -70,3 +70,16 @@ $$ \bbox[5px,border:1px solid black]{\cos(\theta) = \frac{e^{j\theta}+e^{-j\thet
 
 As is the case with differential equations, all linear combinations of the complex exponential are also valid solutions of the second order differential equation of the harmonic oscillator.
 As a result it follows from the alternative representations of the sine and cosine function that the sinusoidal functions are the real solutions of the second order differential equation and we can generalize these real solutions to a complex exponential solution.
+
+<div class="example">
+<h2> Example </h2>
+<hr>
+
+Prove the following identity: $e^{j\pi} + 1 = 0$
+
+<button class="collapsible">Show solution</button>
+<div class="content">
+  By using Euler's equation for $\theta=\pi$, the identity results in:
+  $$ e^{j\pi} + 1 = \cos(\pi) + j\cdot\sin(\pi) + 1 = -1 + 0 + 1 = 0$$
+</div>
+</div>
