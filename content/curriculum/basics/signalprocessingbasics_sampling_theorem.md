@@ -1,5 +1,5 @@
 +++
-title = "Signal properties"
+title = "Sampling theorem"
 
 # date = {{ .Date }}
 lastmod = 2019-06-02
@@ -10,15 +10,11 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.basics]
-  name = "Signal properties"
-  parent = "Basic signals"
-  weight = 2.2
+  name = "Sampling theorem"
+  parent = "Sampling and reconstruction"
+  weight = 2.1
 
 +++
 
-## Even/odd signals
 
-
-## Periodic/aperiodic signals
-
-## Signal energy and power
+## Sampling theorem
