@@ -36,7 +36,7 @@ Computers are unable to process continuous signals, because of the discrete memo
 The process where a continuous-time signal is converted to a discrete-time signal and back is described <a href="../signalprocessingbasics_sampling_theorem">here</a>.
 
 ## Unit step
-A unit step function is a signal which is $0$ until a certain moment in time and from then on equals $1$.
+An unit step function is a signal which is $0$ until a certain moment in time and from then on equals $1$.
 The unit step function is denoted by $u[n]$ and is defined as
 
 $$u[n] = \begin{cases} 1, &\text{for } n\geq 0 \\\ 0. &\text{elsewhere}\end{cases}$$
