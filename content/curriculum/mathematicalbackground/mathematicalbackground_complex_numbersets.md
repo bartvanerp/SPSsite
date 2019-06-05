@@ -2,7 +2,7 @@
 title = "Number sets"
 
 # date = {{ .Date }}
-lastmod = 2019-05-29
+lastmod = 2019-06-04
 
 draft = false       # Is this a draft? true/false
 toc = true          # Show table of contents? true/false
@@ -54,7 +54,8 @@ This set can be described in easy words as: the set of fractions, $a$ divided by
 With the set of rational numbers, almost all commonly used numbers can be described.
 However, it still offers some limitations, since some numbers can not be written as a fraction.
 Examples of these numbers are $\sqrt{2}$, $\pi$ and $e$.
-In order to include these numbers, the set of real numbers $\mathbb{R}$ is defined as the set of all numbers between $-∞$ and $∞$.
+These numbers are part of the set of irrational numbers $\mathbb{P}$.
+In order to include this set of numbers, the set of real numbers $\mathbb{R}$ is defined as the set of all numbers between $-∞$ and $∞$.
 
 ## Complex numbers
 
@@ -84,8 +85,65 @@ A general solution of this equation is given by the function $f(\theta)= e^{c\th
 Substituting this solution in the differential equation results in the following:
 $$c^2(e^{c\theta}) + e^{c\theta} = 0 $$
 where the constant c is given by the solutions to the equation $c^2 +1 = 0$.
-These solutions are given by $c = \pm \sqrt{-1}$.
+These solutions are given by $c = \pm \sqrt{-1} = \pm j$.
 Again we can see the necessity of introducing the imaginary unit $j$.
+Not only the function $e^{\pm j\theta}$ is a solution, but any linear combination of this function is a solution.
+
+<a href="../mathematicalbackground_complex_notation">This section</a> makes the link between both derivations and allows us to use different types of notation for complex number by using the <a href="../mathematicalbackground_complex_euler">Euler equations</a>.
 
 ## Visualisation of the number sets
-TODO: add image from reader
+<div style="max-width: 600px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/math/number_sets.svg"
+      alt="Visualisation of the number sets."
+    />
+    <figcaption class="numbered">
+      A visualisation of the number sets. The red accent indicates that the set of real numbers $\mathbb{R}$ consists out of the set of rational numbers $\mathbb{Q}$ and irrational numbers $\mathbb{P}$.
+    </figcaption>
+  </figure>
+</div>
+
+Fig. 1 shows a visual representation of the different number sets.
+The main message from this figure is that the newer number sets are an extension of previous number sets and therefore fully contain these number sets.
+
+<div class="example">
+<h4> Example </h4>
+<hr>
+
+Find the roots of the following equation: $x^{2}-2x +4=0$
+
+<button class="collapsible">Show solution</button>
+<div class="content">
+We can use the standard quadratic rule for determining the two root(s) $x_1$ and $x_2$ of this quadratic equation:
+$$
+x_{1,2} = \frac{2 \pm \sqrt{4 - 16}}{2} = 1 \pm \sqrt{-3}
+$$
+Now by using the definition of the imaginary unit j=$\sqrt{-1}$ we can write
+$\sqrt{-3} = \sqrt{-1}\cdot\sqrt{3} = \mbox{j} \cdot \sqrt{3}$ which results in the following two roots:
+$$
+x_{1,2} = 1 \pm \mbox{j} \cdot \sqrt{3}
+$$
+
+<i>Check:</i>
+
+We can verify that $x_1=1 + \mbox{j} \cdot \sqrt{3}$ and $x_2=1 - \mbox{j} \cdot \sqrt{3}$ are indeed the roots of the original equation by filling in these values into the original
+equation. By doing so and using the fact that j$^2 = (\sqrt{-1})^2=-1$, this results into the following:
+\begin{eqnarray*}
+x^2-2x+4|_{x=x_1} &=& (1 + \mbox{j} \cdot \sqrt{3})^2-2(1 + \mbox{j} \cdot \sqrt{3})+4 \\
+&=& 1 + 2 \mbox{j} \sqrt{3} + 3 \mbox{j}^2 -2 -2 \mbox{j} \sqrt{3} + 4 \\
+&=& 1 + 2 \mbox{j} \sqrt{3} -3 -2 -2 \mbox{j} \sqrt{3} + 4 =0 \\
+\mbox{and} & & \\
+x^2-2x+4|_{x=x_2} &=& (1 - \mbox{j} \cdot \sqrt{3})^2-2(1 - \mbox{j} \cdot \sqrt{3})+4 \\
+&=& 1 - 2 \mbox{j} \sqrt{3} + 3 \mbox{j}^2 -2 +2 \mbox{j} \sqrt{3} + 4 \\
+&=& 1 - 2 \mbox{j} \sqrt{3} -3 -2 +2 \mbox{j} \sqrt{3} + 4 =0
+\end{eqnarray*}
+Thus we can conclude that we can split the original equation into the following product:
+$$
+x^{2} -2x + 4 = (x - x_1) \cdot (x - x_2) =
+\left ( x - (1 + \mbox{j} \cdot \sqrt{3}) \right ) \cdot \left ( x - (1 - \mbox{j} \cdot \sqrt{3}) \right )
+$$
+
+
+</div>
+</div>
