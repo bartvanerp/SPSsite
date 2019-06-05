@@ -21,7 +21,7 @@ This module concerns several elementary but vital mathematical concepts, which a
 
 The concepts covered in this module are:
 
-1. **Complex numbers and phasors** - In addition to the set of real numbers that everyone is used to working with, a whole new dimension is introduced by complex numbers. These complex numbers can be used to describe sinusoidal signals through phasors, which has proven to be useful in many applications.
+1. <a href="../mathematicalbackground_complex_main">Complex numbers and phasors</a> - In addition to the set of real numbers that everyone is used to working with, a whole new dimension is introduced by complex numbers. These complex numbers can be used to describe sinusoidal signals through phasors, which has proven to be useful in many applications.
 
 2. **Linear algebra** (to be added) - Mathematical operations involving multiple variables can often be sped up significantly using the parallel computational power of graphics processing units (better known as GPU's). These GPU's rely on the underlying principles of linear algebra, which allows us to perform many mathematical operations very efficiently.
 

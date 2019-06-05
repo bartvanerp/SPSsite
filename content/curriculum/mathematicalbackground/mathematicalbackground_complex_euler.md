@@ -72,7 +72,7 @@ As is the case with differential equations, all linear combinations of the compl
 As a result it follows from the alternative representations of the sine and cosine function that the sinusoidal functions are the real solutions of the second order differential equation and we can generalize these real solutions to a complex exponential solution.
 
 <div class="example">
-<h2> Example </h2>
+<h4> Example </h4>
 <hr>
 
 Prove the following identity: $e^{j\pi} + 1 = 0$
