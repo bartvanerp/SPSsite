@@ -38,7 +38,17 @@ $$ \cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots$$
 and
 $$ \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots.$$
 
-
+<div style="max-width: 800px; margin: auto">
+  <figure>
+    <img
+      src="/../files/9.Animations/Taylor.gif"
+      alt="Visualisation of the Taylor expansion."
+    />
+    <figcaption class="numbered">
+      Visualisation of the Taylor expansion for different functions and changing orders. In the case of the sin and cosine function, the even and odd components equal 0, therefore the Taylor expansion does not seem to update every other step.
+    </figcaption>
+  </figure>
+</div>
 
 ## Euler equations
 When returning to the example of the harmonic oscillator we found that the solution was given as $f(\theta) = e^{j\theta}$.
