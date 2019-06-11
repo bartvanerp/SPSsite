@@ -33,27 +33,6 @@ Your browser does not support the video tag.
 
 
 
-## Information
-The theoretical background of this module will be covered by means of a slide deck, which includes the most important aspects of this module, and the reader, which covers the material in more detail.
-
-### Slides
-
-<object data="/../files/1.Slides/1.CNAP-Slides.pdf" type="application/pdf" width="100%" height="400px">
-    <embed src="/../files/1.Slides/1.CNAP-Slides.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/1.Slides/1.CNAP-Slides.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
-
-
-### Reader
-
-<object data="/../files/2.Reader/1.CNAP-Reader.pdf" type="application/pdf" width="100%" height="400px">
-    <embed src="/../files/2.Reader/1.CNAP-Reader.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/2.Reader/1.CNAP-Reader.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
-
-\
 \
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
