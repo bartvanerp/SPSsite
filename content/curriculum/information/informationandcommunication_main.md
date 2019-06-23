@@ -1,5 +1,5 @@
 +++
-title = "Nonlinear signal processing"         # name of webpage
+title = "Information and communication theory"         # name of webpage
 
 # date = {{ .Date }}
 lastmod = 2019-05-28
@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.curriculum]                       # name of menu section (main module)
-  name = "Nonlinear signal processing"        # name of this item in that menu
+  name = "Information and communication theory"        # name of this item in that menu
   weight = 10                           # location in that menu
 
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Nonlinear signal processing test"         # name of webpage
+title = "Information and communication theory test"         # name of webpage
 
 # date = {{ .Date }}
 lastmod = 2019-05-28
@@ -9,8 +9,8 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
-[menu.nonlinear]                       # name of menu section (main module)
-  name = "Nonlinear signal processing test"        # name of this item in that menu
+[menu.information]                       # name of menu section (main module)
+  name = "Information and communication theory test"        # name of this item in that menu
   weight = 10                           # location in that menu
 
 +++
