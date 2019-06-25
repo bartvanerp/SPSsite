@@ -97,6 +97,24 @@ Download the answers <a href="/../files/3.Exercises/Answers/1.CNAP-StudentAnswer
 
 </div>
 
+## MATLAB lab
+Accompanied to this modules are some exercises in MATLAB, which will test your knowledge of the module and will help improve your MATLAB skills.
+
+### Lab assignment
+<object data="/../files/10.Matlab/Lab 2 - Complex Numbers.pdf" type="application/pdf" width="100%" height="400px">
+    <embed src="/../files/10.Matlab/Lab 2 - Complex Numbers.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/10.Matlab/Lab 2 - Complex Numbers.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
+### MATLAB demo
+<div>
+<video controls preload>
+  <source src="/../files/10.Matlab/screencasts/CNAP - MATLAB.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
 ## Summary
 
 <ul>
