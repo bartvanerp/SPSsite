@@ -16,3 +16,38 @@ type = "docs"  # Do not modify.
 
 
 +++
+
+
+## Screencast videos
+
+### From continuous- to discrete-time transform
+<div>
+<video controls preload>
+  <source src="/../files/8.Screencast/Fourier/Discrete/DFT/1DFTFromFTCtoDFT.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+### How does the DFT work
+<div>
+<video controls preload>
+  <source src="/../files/8.Screencast/Fourier/Discrete/DFT/2DFTHowworks.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+### The DFT of length N
+<div>
+<video controls preload>
+  <source src="/../files/8.Screencast/Fourier/Discrete/DFT/3DFTlengthN.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+### The DFT properties
+<div>
+<video controls preload>
+  <source src="/../files/8.Screencast/Fourier/Discrete/DFT/4DFTProperties.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>

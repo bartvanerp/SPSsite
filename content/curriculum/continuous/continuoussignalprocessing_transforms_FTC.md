@@ -15,3 +15,29 @@ type = "docs"  # Do not modify.
   parent = "Continuous-time transforms"
 
 +++
+
+## Screencast videos
+
+### Conceptual video
+<div>
+<video controls preload>
+  <source src="/../files/8.Screencast/Fourier/Continuous/FTC/1FTCConcept.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+### Examples
+<div>
+<video controls preload>
+  <source src="/../files/8.Screencast/Fourier/Continuous/FTC/2FTCExamples.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+### Properties
+<div>
+<video controls preload>
+  <source src="/../files/8.Screencast/Fourier/Continuous/FTC/3FTCProperties.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
