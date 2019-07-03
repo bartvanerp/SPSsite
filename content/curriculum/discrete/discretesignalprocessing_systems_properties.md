@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "System properties"
-  weight = 4.1
+  weight = 41
   parent = "Discrete-time systems"
 
 

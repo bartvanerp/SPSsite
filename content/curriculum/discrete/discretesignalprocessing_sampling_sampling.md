@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Sampling theorem"
-  weight = 2.4
+  weight = 24
   parent = "Sampling and reconstruction"
 
 +++

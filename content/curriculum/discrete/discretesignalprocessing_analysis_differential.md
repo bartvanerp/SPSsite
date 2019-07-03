@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Solving differential equations using the Z-transform"
-  weight = 6.2
+  weight = 62
   parent = "Transform analysis of systems"
 
 +++

@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Frequency response"
-  weight = 6.1
+  weight = 61
   parent = "Transform analysis of systems"
 
 +++

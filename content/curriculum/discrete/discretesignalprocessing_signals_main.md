@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Discrete-time signals"
-  weight = 3
+  weight = 30
 
 
 +++

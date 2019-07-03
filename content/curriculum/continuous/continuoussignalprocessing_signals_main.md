@@ -11,6 +11,6 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.continuous]
   name = "Continuous signals"
-  weight = 2
+  weight = 20
 
 +++

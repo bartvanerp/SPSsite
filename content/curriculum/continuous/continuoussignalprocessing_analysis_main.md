@@ -11,6 +11,6 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.continuous]
   name = "Transform analysis of systems"
-  weight = 5
+  weight = 50
 
 +++

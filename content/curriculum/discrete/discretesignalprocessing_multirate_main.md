@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Multirate signal processing"
-  weight = 8
+  weight = 80
 
 
 +++

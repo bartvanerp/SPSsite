@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Overview"
-  weight = 1
+  weight = 10
 
 +++
 

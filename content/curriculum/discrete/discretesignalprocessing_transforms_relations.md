@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Relation between different transforms"
-  weight = 5.5
+  weight = 55
   parent = "Discrete-time transforms"
 
 

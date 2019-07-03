@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.continuous]
   name = "System properties"
-  weight = 3.1
+  weight = 31
   parent = "Continuous systems"
 
 +++

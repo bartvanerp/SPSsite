@@ -11,6 +11,6 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Sampling and reconstruction"
-  weight = 2
+  weight = 20
 
 +++

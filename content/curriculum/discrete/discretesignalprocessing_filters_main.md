@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Filter structures"
-  weight = 7
+  weight = 70
 
 
 +++

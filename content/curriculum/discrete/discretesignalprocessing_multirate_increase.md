@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Sample rate increase and interpolator"
-  weight = 8.2
+  weight = 82
   parent = "Multirate signal processing"
 
 

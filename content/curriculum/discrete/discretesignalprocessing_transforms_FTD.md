@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Fourier transform for discrete-time signals"
-  weight = 5.1
+  weight = 51
   parent = "Discrete-time transforms"
 
 

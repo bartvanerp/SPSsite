@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.continuous]
   name = "Differential equations"
-  weight = 3.4
+  weight = 34
   parent = "Continuous systems"
 
 +++

@@ -11,6 +11,6 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.continuous]
   name = "Continuous systems"
-  weight = 3
+  weight = 30
 
 +++

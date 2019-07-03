@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Elementary signals"
-  weight = 3.2
+  weight = 32
   parent = "Discrete-time signals"
 
 

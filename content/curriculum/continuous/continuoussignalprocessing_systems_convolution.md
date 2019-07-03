@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.continuous]
   name = "Convolution"
-  weight = 3.2
+  weight = 32
   parent = "Continuous systems"
 
 +++

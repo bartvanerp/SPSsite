@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Poles and zeros"
-  weight = 6.4
+  weight = 64
   parent = "Transform analysis of systems"
 
 +++
