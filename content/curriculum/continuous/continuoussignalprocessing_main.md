@@ -1,5 +1,5 @@
 +++
-title = "Continuous signal processing"
+title = "Continuous signal processing basics"
 
 # date = {{ .Date }}
 lastmod = 2019-06-23

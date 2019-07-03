@@ -16,3 +16,29 @@ type = "docs"  # Do not modify.
 
 
 +++
+
+## Screencast videos
+
+### Conceptual video
+<div>
+<video controls preload>
+  <source src="/../files/8.Screencast/Fourier/Discrete/FTD/1FTDConcept.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+### Examples
+<div>
+<video controls preload>
+  <source src="/../files/8.Screencast/Fourier/Discrete/FTD/2FTDExamples.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+### Properties
+<div>
+<video controls preload>
+  <source src="/../files/8.Screencast/Fourier/Discrete/FTD/3FTDProperties.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>

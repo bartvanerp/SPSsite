@@ -1,5 +1,5 @@
 +++
-title = "Discrete-time signal processing"
+title = "Discrete-time signal processing basics"
 
 # date = {{ .Date }}
 lastmod = 2019-06-23

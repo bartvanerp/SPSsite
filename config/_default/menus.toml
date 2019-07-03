@@ -30,7 +30,7 @@
 
 ######################## CONTINUOUS SIGNAL PROCESSING ##############################
 [[main]]
-  name = "Continuous signal processing"
+  name = "Continuous signal processing basics"
   url = "/curriculum/continuous/continuoussignalprocessing_main"
   parent = "Curriculum"
   weight = 23
@@ -38,7 +38,7 @@
 
   ######################## DISCRETE SIGNAL PROCESSING ##############################
   [[main]]
-    name = "Discrete-time signal processing"
+    name = "Discrete-time signal processing basics"
     url = "/curriculum/discrete/discretesignalprocessing_main"
     parent = "Curriculum"
     weight = 24
