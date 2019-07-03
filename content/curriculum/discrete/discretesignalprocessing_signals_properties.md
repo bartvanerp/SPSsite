@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Signal properties"
-  weight = 3.1
+  weight = 31
   parent = "Discrete-time signals"
 
 

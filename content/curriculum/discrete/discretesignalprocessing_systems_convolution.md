@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Convolution"
-  weight = 4.2
+  weight = 42
   parent = "Discrete-time systems"
 
 

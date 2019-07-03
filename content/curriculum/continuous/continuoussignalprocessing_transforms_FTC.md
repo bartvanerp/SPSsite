@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.continuous]
   name = "Fourier transform for continuous-time signals"
-  weight = 4.2
+  weight = 42
   parent = "Continuous-time transforms"
 
 +++

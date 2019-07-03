@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Absolute and relative frequency"
-  weight = 2.2
+  weight = 22
   parent = "Sampling and reconstruction"
 
 +++

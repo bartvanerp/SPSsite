@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Mathematical description"
-  weight = 8.1
+  weight = 81
   parent = "Multirate signal processing"
 
 

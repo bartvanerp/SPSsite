@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.continuous]
   name = "Laplace transform"
-  weight = 4.3  
+  weight = 43  
   parent = "Continuous-time transforms"
 
 +++

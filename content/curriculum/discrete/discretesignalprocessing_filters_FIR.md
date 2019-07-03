@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Finite impulse response filters"
-  weight = 7.1
+  weight = 71
   parent = "Filter structures"
 
 +++

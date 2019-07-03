@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Discrete-time transforms"
-  weight = 5
+  weight = 50
 
 
 +++

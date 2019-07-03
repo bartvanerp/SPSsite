@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Difference equation"
-  weight = 4.4
+  weight = 44
   parent = "Discrete-time systems"
 
 

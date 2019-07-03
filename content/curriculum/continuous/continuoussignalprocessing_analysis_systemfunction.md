@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.continuous]
   name = "System function"
-  weight = 5.3
+  weight = 53
   parent = "Transform analysis of systems"
 
 +++

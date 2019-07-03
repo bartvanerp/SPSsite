@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Ideal C/D and D/C converter"
-  weight = 2.1
+  weight = 21
   parent = "Sampling and reconstruction"
 
 +++

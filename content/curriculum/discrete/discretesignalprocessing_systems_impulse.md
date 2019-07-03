@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Impulse response"
-  weight = 4.3
+  weight = 43
   parent = "Discrete-time systems"
 
 

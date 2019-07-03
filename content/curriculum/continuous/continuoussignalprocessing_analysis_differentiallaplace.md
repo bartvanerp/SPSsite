@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.continuous]
   name = "Solving differential equations using Laplace"
-  weight = 5.2
+  weight = 52
   parent = "Transform analysis of systems"
 
 +++

@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.continuous]
   name = "Signal properties"
-  weight = 2.1
+  weight = 21
   parent = "Continuous signals"
 
 +++

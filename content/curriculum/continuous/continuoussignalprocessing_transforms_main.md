@@ -11,6 +11,6 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.continuous]
   name = "Continuous-time transforms"
-  weight = 4
+  weight = 40
 
 +++
