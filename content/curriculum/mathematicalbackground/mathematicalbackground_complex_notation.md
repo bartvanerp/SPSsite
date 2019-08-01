@@ -15,7 +15,7 @@ type = "docs"       # Do not modify.
 
 +++
 
-From the discussion <a href="../mathematicalbackground_complex_numbersets">here</a> it follows that in practice there is need to extend the set of real numbers to a set of complex numbers.
+From the discussion <a href="../mathematicalbackground_complex_numbersets">here</a> it follows that in practice there is a need to extend the set of real numbers to a set of complex numbers.
 In this section we will first introduce the set of complex numbers in two different ways and we will show how complex numbers can be visualized by vectors.
 Then we will introduce the concept of complex conjugation, which is important to obtain the definition of the length of a complex vector.
 Furthermore we will introduce calculation rules for complex numbers, which are defined in such a way that these rules are generalizations of the calculation rules for real numbers.
