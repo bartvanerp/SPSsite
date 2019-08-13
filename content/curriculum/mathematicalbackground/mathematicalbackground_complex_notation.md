@@ -155,12 +155,7 @@ Because of the fact that we can represent a complex number in Cartesian or in po
 
 ___It is easiest to use Cartesian notation when adding or subtraction complex numbers, while polar notation works easiest for multiplication and division.___
 
-<div>
-<video controls preload>
-  <source src="/../files/8.Screencast/1bCalculationrules.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/ey_fcdVNiMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Complex conjugation
 In this subsection we will show that we can obtain the length of a complex vector by using the so called complex conjugated vector, denoted by $z^{\*}$, which is constructed by inverting the sign the imaginary part, so by changing j to -j and -j to j, thus:

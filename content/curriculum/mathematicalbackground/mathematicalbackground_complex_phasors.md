@@ -17,12 +17,7 @@ type = "docs"       # Do not modify.
 +++
 
 ## Introduction to phasors
-<div>
-<video controls preload>
-  <source src="/../files/8.Screencast/1cComplexPhasors.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/7267XqjSyRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Many real world signals can be described by a time depending sinusoidal signals such as:
 $$ x(t) = A \cos (\omega_o t +\phi) $$
