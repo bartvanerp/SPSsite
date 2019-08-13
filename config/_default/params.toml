@@ -50,7 +50,7 @@ time_format = "15:04"
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = ""
+email = "sps.education@tue.nl"
 phone = ""
 address = "Eindhoven University of Technology, Flux, Floor 5 & 7"
 

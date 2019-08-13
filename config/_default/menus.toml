@@ -30,7 +30,7 @@
 
 ######################## CONTINUOUS SIGNAL PROCESSING ##############################
 [[main]]
-  name = "Continuous signal processing basics"
+  name = "Continuous signal processing basics (in progress)"
   url = "/curriculum/continuous/continuoussignalprocessing_main"
   parent = "Curriculum"
   weight = 23
@@ -38,7 +38,7 @@
 
   ######################## DISCRETE SIGNAL PROCESSING ##############################
   [[main]]
-    name = "Discrete-time signal processing basics"
+    name = "Discrete-time signal processing basics (in progress)"
     url = "/curriculum/discrete/discretesignalprocessing_main"
     parent = "Curriculum"
     weight = 24
@@ -46,7 +46,7 @@
 
 ######################## STATISTICAL SIGNAL PROCESSING ##############################
 [[main]]
-  name = "Statistical signal processing"
+  name = "Statistical signal processing (to be added)"
   url = "/curriculum/statistical/statisticalsignalprocessing_main"
   parent = "Curriculum"
   weight = 25
@@ -55,7 +55,7 @@
 
 ######################## MULTIDIMENSIONAL SIGNAL PROCESSING ##############################
 [[main]]
-  name = "Multidimensional signal processing"
+  name = "Multidimensional signal processing (to be added)"
   url = "/curriculum/multidimensional/multidimensionalsignalprocessing_main"
   parent = "Curriculum"
   weight = 26
@@ -64,7 +64,7 @@
 
 ######################## OPTIMAL AND ADAPTIVE SIGNAL PROCESSING ##############################
 [[main]]
-  name = "Optimal and adaptive signal processing"
+  name = "Optimal and adaptive signal processing (to be added)"
   url = "/curriculum/optimalandadaptive/optimalandadaptivesignalprocessing_main"
   parent = "Curriculum"
   weight = 27
@@ -73,7 +73,7 @@
 
 ######################## SENSOR ARRAY AND MULTICHANNEL SIGNAL PROCESSING ##############################
 [[main]]
-  name = "Sensor array and multichannel signal processing"
+  name = "Sensor array and multichannel signal processing (to be added)"
   url = "/curriculum/sensorarrayandmultichannel/sensorarrayandmultichannelsignalprocessing_main"
   parent = "Curriculum"
   weight = 28
@@ -81,8 +81,8 @@
 
 ######################## MACHINE LEARNING ##############################
 [[main]]
-  name = "Machine learning"
-  url = "/curriculum/machinelearning/machinelearning_main"
+  name = "Machine learning (to be added)"
+  url = "/curriculum/machinelearning/machinelearning_main (to be added)"
   parent = "Curriculum"
   weight = 29
 
@@ -90,10 +90,24 @@
 
 ######################## INFORMATION AND COMMUNICATION THEORY ##############################
 [[main]]
-  name = "Information and communication theory"
+  name = "Information and communication theory (to be added)"
   url = "/curriculum/information/informationandcommunication_main"
   parent = "Curriculum"
   weight = 30
+
+
+
+############################### Courses #################################
+[[main]]
+  name = "Courses"
+  url = "/courses/overview"
+  weight = 40
+
+[[main]]
+  name = "5ESE0 - Signal processing basics"
+  url = "/courses/5ESE0"
+  parent = "Courses"
+  weight = 41
 
 
 

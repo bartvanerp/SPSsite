@@ -9,8 +9,8 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
-[menu.curriculum]                       # name of menu section (main module)
-  name = "Information and communication theory"        # name of this item in that menu
+[menu.information]                       # name of menu section (main module)
+  name = "Overview"        # name of this item in that menu
   weight = 10                           # location in that menu
 
 +++

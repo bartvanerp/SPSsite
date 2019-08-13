@@ -16,18 +16,16 @@ type = "docs"  # Do not modify.
 
 +++
 ## Overview
-This submodule will cover one of the most fundamental transforms in signal processing, namely the Fourier series. In order to cover this topic first the spectrum of a signal is introduced. This submodule will finally conclude with some (MATLAB) exercises and a summary. Before you get into more detail on the subject matter, familiarize yourself with the topic by watching the introductory screencast video.
+This submodule will cover one of the most fundamental transforms in signal processing, namely the Fourier series. In order to cover this topic first the spectrum of a signal is introduced. This submodule will finally conclude with some (MATLAB) exercises and a summary. Before you get into more detail on the subject matter, familiarize yourself with the topic by watching the introductory screencast videos at both the sections on the spectrum and on the Fourier series.
 
-### Introductory video
-<div>
-<video controls preload>
-  <source src="/../files/8.Screencast/Fourier/Continuous/FS/1FourierSeriesConcept.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
+
+
 
 ## Spectrum
 Many practical signals can be described as a set of sinusoidal signals. In this section we will first show how such a set can be rewritten as a set of weighted phasor components. From this description it follows that these weights represent the spectral information of the signal.
+
+### Introductory video
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/lC1-SNdO8Lo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Real signal as sum of phasors
 Let us start with a general description of a signal $x(t)$, which consists of a DC component, with value $A_0$, and a sum of $N$ sinusoidal components, each with a different frequency $f_k$, amplitude $A_k$ and phase $\phi_k$, as
@@ -215,10 +213,14 @@ From the previous example we may conclude that
 
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>When a message signal $m(t)$ is modulated by a carrier signal $c(t)$ with frequency $f_c$, the whole spectral content of the message is moved to both the positive and negative frequency component of the carrier signal.</i></div>
 
-
+### Special cases
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/3XA-zK1XpQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Fourier series
 In the previous section we studied the spectral behavior of the sum of sinusoidal signals. In this section we will study signals which are composed of a sum of harmonic related sine waves.
+
+### Introductory video
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/8XKqEFoVY1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Periodic signals
 In this subsection we will show that any periodic signal with a, so called, Fundamental period $T_0$ can be composed as the sum of sinusoidal signals from which each of these frequencies is related to the, so called, Fundamental frequency $F_0 = 1/T_0$ as an integer multiple. In order to show this Fig. 4 depicts a signal $y_2(t)$ which is composed of the sum of two sinusoidal signals $x_1(t)$ of frequency $f_1 = 6$ [Hz] and $x_2(t)$ of frequency $f_2 = 2$ [Hz]. From this figure it follows that $y_2(t)$ is periodic and we can measure that the period equals $T_0 = 1/F_0 = 0.5$ [sec]. The reason for this periodicity of signal $y_2(t)$ is that exactly three periods of $x_1(t)$ and one period of $x_2(t)$ fit into one period $T_0$ of signal $y_2(t)$. Thus after each $T_0 = 0.5$ [sec] the same composition of the signals $x_1(t)$ and $x_2(t)$ appears in the signal $y_2(t)$.
@@ -443,58 +445,26 @@ The figure below gives the approximation of the block wave for an increased numb
 ### Fourier series examples
 The above example should give you some intuition on how the Fourier series works. For a better clarification of the subject matter the following screencast video will give some more examples
 
-<div>
-<video controls preload>
-  <source src="/../files/8.Screencast/Fourier/Continuous/FS/2FourierSeriesExamples.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/DETTPI_R0SY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
 
 ### Exercise bundle
-<object data="/../files/3.Exercises/2.SPAFS-StudentExercises.pdf" type="application/pdf" width="100%" height="400px">
-    <embed src="/../files/3.Exercises/2.SPAFS-StudentExercises.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/3.Exercises/2.SPAFS-StudentExercises.pdf">Download PDF</a>.</p>
+<object data="/../files/3.Exercises/2.SPAFS-exercises.pdf" type="application/pdf" width="100%" height="400px">
+    <embed src="/../files/3.Exercises/2.SPAFS-exercises.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/3.Exercises/2.SPAFS-exercises.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
 
 ### Answers
-Download the answers <a href="/../files/3.Exercises/Answers/2.SPAFS-StudentAnswers.pdf">here</a>.
+Download the answers <a href="/../files/3.Exercises/Answers/2.SPAFS-answers.pdf">here</a>.
 
 ### Pencast videos
-<script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
-<div class="grid-row reverse video-gallery">
- <input type="radio" value="1" name="video-list" id="video-1" checked="checked" /><label for="video-1">Exercise 4</label>
- <input type="radio" value="2" name="video-list" id="video-2" /><label for="video-2">Exercise 6</label>
- <input type="radio" value="3" name="video-list" id="video-3" /><label for="video-3">Exercise 12</label>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPGn3EuYqCpSPZ8TL5HRFNXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
- <!-- videos -->
- <div class="video video-1">
- <video width="500" height="240" controls>
-   <source src="/../files/6.Pencast/SPAFS-4.mp4" type="video/mp4" type="video/mp4">
- Your browser does not support the video tag.
- </video>
- </div>
-
- <div class="video video-2">
- <video width="500" height="240" controls>
-   <source src="/../files/6.Pencast/SPAFS-6.mp4" type="video/mp4">
- Your browser does not support the video tag.
- </video>
- </div>
-
- <div class="video video-3">
- <video width="500" height="240" controls>
-   <source src="/../files/6.Pencast/SPAFS-12.mp4" type="video/mp4">
- Your browser does not support the video tag.
- </video>
- </div>
-
-</div>
+_The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
 
 ## MATLAB lab
 Accompanied to this modules are some exercises in MATLAB, which will test your knowledge of the module and will help improve your MATLAB skills.
@@ -507,12 +477,7 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
 </object>
 
 ### MATLAB demo
-<div>
-<video controls preload>
-  <source src="/../files/10.Matlab/screencasts/SPAFS - MATLAB.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/UiN1Wom_F5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
 <ul>

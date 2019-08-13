@@ -24,78 +24,30 @@ This module concerns the following topics:
 4. <a href="../mathematicalbackground_complex_phasors">Phasors</a> - This section introduces sinusoidal signals in terms of time varying complex exponentials.
 
 ### Introductory video
-<div>
-<video controls preload>
-  <source src="/../files/8.Screencast/1aComplexConcept.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/7OQOAQPDOhQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
-\
+
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
 
 
 ### Exercise bundle
 
-<object data="/../files/3.Exercises/1.CNAP-StudentExercises.pdf" type="application/pdf" width="100%" height="400px">
-    <embed src="/../files/3.Exercises/1.CNAP-StudentExercises.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/3.Exercises/1.CNAP-StudentExercises.pdf">Download PDF</a>.</p>
+<object data="/../files/3.Exercises/1.CNAP-exercises.pdf" type="application/pdf" width="100%" height="400px">
+    <embed src="/../files/3.Exercises/1.CNAP-exercises.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/3.Exercises/1.CNAP-exercises.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
 ### Answers
-Download the answers <a href="/../files/3.Exercises/Answers/1.CNAP-StudentAnswers.pdf">here</a>.
+Download the answers <a href="/../files/3.Exercises/Answers/1.CNAP-answers.pdf">here</a>.
 
 ### Pencast videos
-<script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
-<div class="grid-row reverse video-gallery">
- <input type="radio" value="1" name="video-list" id="video-1" checked="checked" /><label for="video-1">Exercise 2a</label>
- <input type="radio" value="2" name="video-list" id="video-2" /><label for="video-2">Exercise 5c</label>
- <input type="radio" value="3" name="video-list" id="video-3" /><label for="video-3">Exercise 6c</label>
- <input type="radio" value="4" name="video-list" id="video-4" /><label for="video-4">Exercise 8b</label>
- <input type="radio" value="5" name="video-list" id="video-5" /><label for="video-5">Exercise 11</label>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPGbXXJZZ2DtsIvvg1X2xqhB" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
- <!-- videos -->
- <div class="video video-1">
- <video width="500" height="240" controls>
-   <source src="/../files/6.Pencast/CNAP-2a.mp4" type="video/mp4" type="video/mp4">
- Your browser does not support the video tag.
- </video>
- </div>
-
- <div class="video video-2">
- <video width="500" height="240" controls>
-   <source src="/../files/6.Pencast/CNAP-5c.mp4" type="video/mp4">
- Your browser does not support the video tag.
- </video>
- </div>
-
- <div class="video video-3">
- <video width="500" height="240" controls>
-   <source src="/../files/6.Pencast/CNAP-6c.mp4" type="video/mp4">
- Your browser does not support the video tag.
- </video>
- </div>
-
- <div class="video video-4">
- <video width="500" height="240" controls>
-   <source src="/../files/6.Pencast/CNAP-8b.mp4" type="video/mp4">
- Your browser does not support the video tag.
- </video>
- </div>
-
- <div class="video video-5">
- <video width="500" height="240" controls>
-   <source src="/../files/6.Pencast/CNAP-11.mp4" type="video/mp4">
- Your browser does not support the video tag.
- </video>
- </div>
-
-</div>
+_The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
 
 ## MATLAB lab
 Accompanied to this modules are some exercises in MATLAB, which will test your knowledge of the module and will help improve your MATLAB skills.
@@ -108,12 +60,7 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
 </object>
 
 ### MATLAB demo
-<div>
-<video controls preload>
-  <source src="/../files/10.Matlab/screencasts/CNAP - MATLAB.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/4lThore8Lp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
 

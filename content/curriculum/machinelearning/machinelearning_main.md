@@ -9,8 +9,8 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
-[menu.curriculum]
-  name = "Machine learning"
+[menu.machinelearning]
+  name = "Overview"
   weight = 10
 
 +++
