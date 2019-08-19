@@ -15,37 +15,65 @@ type = "docs"  # Do not modify.
 
 +++
 
+<div class="example">
+<button class="collapsible">Test your knowledge</button>
+<div class="content">
 
 
+<button class="collapsible">Question 1</button>
+<div class="content">
 
-
-
-
-
-## Test quiz
-<div class="scp-quizzes-main">
 <div class="scp-quizzes-data quiz">
-  <h3>1. What is the output of the below c code?</h3>
-    <pre>#include&lt;stdio.h>
-main()
-{
-   int x = 5;
-
-   if(x=5)
-   {
-      if(x=5) printf("Fast");
-   }
-   printf("learning");
-}</pre>
+   Finish the following sentence: <br><br>
+   <i>The imaginary part of a complex number is ...</i><br>
 <br/>
-    <input type="radio" id="Fastlearning" name="question1">
-       <label for="Fastlearning">$\sum_{k-1} \\ y=x$  
-       </label><br/>
+    <input type="radio" id="answer1" name="question1">
+       <label for="answer1">real</label><br/>
     <input type="radio"  name="question1">
-       <label>2. learning</label><br/>
-    <input type="radio" name="question1">
-       <label>3. learningFast</label> <br/>
-    <input type="radio" name="question1">
-     <label>4. Fast</label>
+        <label>imaginary</label><br/>
+    <input type="radio"  name="question1">
+       <label>complex</label><br/>
  </div>
  </div>
+ <br>
+
+
+<button class="collapsible">Question 2</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+   Finish the following sentence: <br><br>
+   <i>The roots of $f(x)=x^2 + \frac{1}{4}$ are ...</i> <br>
+<br/>
+    <input type="radio" name="question2">
+       <label>real</label><br/>
+    <input type="radio"  name="question2">
+        <label>complex, but not complex conjugated</label><br/>
+    <input type="radio" id="answer2"  name="question2">
+       <label for="answer2">complex conjugated</label><br/>
+ </div>
+</div>
+<br>
+
+
+<button class="collapsible">Question 3</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+   What is the value of $e^\pi$?<br>
+<br/>
+    <input type="radio" name="question3">
+       <label>1</label><br/>
+    <input type="radio"  name="question3">
+        <label>-1</label><br/>
+    <input type="radio"  name="question3">
+       <label>j</label><br/>
+   <input type="radio" id="answer3" name="question3">
+      <label for="answer3">none of the above</label><br/>
+ </div>
+</div>
+<br>
+
+
+</div>
+</div>
