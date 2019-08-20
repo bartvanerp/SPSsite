@@ -9,8 +9,8 @@
   weight = 10
 
 [[main]]
-  name = "Curriculum"
-  url = "/curriculum/overview"
+  name = "Disciplines"
+  url = "/disciplines/overview"
   weight = 20
 
 # [[main]]
@@ -22,33 +22,33 @@
 ###################### MATHEMATICAL BACKGROUND #################################
 [[main]]
   name = "Mathematical background"
-  url = "/curriculum/mathematicalbackground/mathematicalbackground_main"
-  parent = "Curriculum"
+  url = "/disciplines/mathematicalbackground/mathematicalbackground_main"
+  parent = "Disciplines"
   weight = 22
 
 
 
 ######################## CONTINUOUS SIGNAL PROCESSING ##############################
 [[main]]
-  name = "Continuous signal processing basics (in progress)"
-  url = "/curriculum/continuous/continuoussignalprocessing_main"
-  parent = "Curriculum"
+  name = "Basics continuous signal processing (in progress)"
+  url = "/disciplines/continuous/continuoussignalprocessing_main"
+  parent = "Disciplines"
   weight = 23
 
 
   ######################## DISCRETE SIGNAL PROCESSING ##############################
   [[main]]
-    name = "Discrete-time signal processing basics (in progress)"
-    url = "/curriculum/discrete/discretesignalprocessing_main"
-    parent = "Curriculum"
+    name = "Basics discrete-time signal processing (in progress)"
+    url = "/disciplines/discrete/discretesignalprocessing_main"
+    parent = "Disciplines"
     weight = 24
 
 
 ######################## STATISTICAL SIGNAL PROCESSING ##############################
 [[main]]
   name = "Statistical signal processing (to be added)"
-  url = "/curriculum/statistical/statisticalsignalprocessing_main"
-  parent = "Curriculum"
+  url = "/disciplines/statistical/statisticalsignalprocessing_main"
+  parent = "Disciplines"
   weight = 25
 
 
@@ -56,8 +56,8 @@
 ######################## MULTIDIMENSIONAL SIGNAL PROCESSING ##############################
 [[main]]
   name = "Multidimensional signal processing (to be added)"
-  url = "/curriculum/multidimensional/multidimensionalsignalprocessing_main"
-  parent = "Curriculum"
+  url = "/disciplines/multidimensional/multidimensionalsignalprocessing_main"
+  parent = "Disciplines"
   weight = 26
 
 
@@ -65,8 +65,8 @@
 ######################## OPTIMAL AND ADAPTIVE SIGNAL PROCESSING ##############################
 [[main]]
   name = "Optimal and adaptive signal processing (to be added)"
-  url = "/curriculum/optimalandadaptive/optimalandadaptivesignalprocessing_main"
-  parent = "Curriculum"
+  url = "/disciplines/optimalandadaptive/optimalandadaptivesignalprocessing_main"
+  parent = "Disciplines"
   weight = 27
 
 
@@ -74,16 +74,16 @@
 ######################## SENSOR ARRAY AND MULTICHANNEL SIGNAL PROCESSING ##############################
 [[main]]
   name = "Sensor array and multichannel signal processing (to be added)"
-  url = "/curriculum/sensorarrayandmultichannel/sensorarrayandmultichannelsignalprocessing_main"
-  parent = "Curriculum"
+  url = "/disciplines/sensorarrayandmultichannel/sensorarrayandmultichannelsignalprocessing_main"
+  parent = "Disciplines"
   weight = 28
 
 
 ######################## MACHINE LEARNING ##############################
 [[main]]
   name = "Machine learning (to be added)"
-  url = "/curriculum/machinelearning/machinelearning_main (to be added)"
-  parent = "Curriculum"
+  url = "/disciplines/machinelearning/machinelearning_main (to be added)"
+  parent = "Disciplines"
   weight = 29
 
 
@@ -91,8 +91,8 @@
 ######################## INFORMATION AND COMMUNICATION THEORY ##############################
 [[main]]
   name = "Information and communication theory (to be added)"
-  url = "/curriculum/information/informationandcommunication_main"
-  parent = "Curriculum"
+  url = "/disciplines/information/informationandcommunication_main"
+  parent = "Disciplines"
   weight = 30
 
 
