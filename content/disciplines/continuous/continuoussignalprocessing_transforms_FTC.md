@@ -41,3 +41,11 @@ Your browser does not support the video tag.
 Your browser does not support the video tag.
 </video>
 </div>
+
+
+## Reader
+<object data="/../files/2.Reader/FTCReader.pdf" type="application/pdf" width="100%" height="400px">
+    <embed src="/../files/2.Reader/FTCReader.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/2.Reader/FTCReader.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
