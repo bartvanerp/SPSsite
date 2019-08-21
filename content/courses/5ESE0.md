@@ -35,12 +35,12 @@ Chapter 6 (Frequency Response of FIR Filters): The concept of frequency response
 The corresponding sections on this website are:
 
 <ul>
-  <li>  <a href="../../curriculum/mathematicalbackground/mathematicalbackground_complex_main">Complex numbers and phasors</a> </li>
+  <li>  <a href="../../disciplines/mathematicalbackground/mathematicalbackground_complex_main">Complex numbers and phasors</a> </li>
   <ul>  
-    <li>  <a href="../../curriculum/mathematicalbackground/mathematicalbackground_complex_numbersets">Number sets</a> </li>
-    <li>  <a href="../../curriculum/mathematicalbackground/mathematicalbackground_complex_euler">Euler equations</a> </li>
-    <li>  <a href="../../curriculum/mathematicalbackground/mathematicalbackground_complex_notation">Complex numbers</a> </li>
-    <li>  <a href="../../curriculum/mathematicalbackground/mathematicalbackground_complex_phasors">Phasors</a>  </li>
+    <li>  <a href="../../disciplines/mathematicalbackground/mathematicalbackground_complex_numbersets">Number sets</a> </li>
+    <li>  <a href="../../disciplines/mathematicalbackground/mathematicalbackground_complex_euler">Euler equations</a> </li>
+    <li>  <a href="../../disciplines/mathematicalbackground/mathematicalbackground_complex_notation">Complex numbers</a> </li>
+    <li>  <a href="../../disciplines/mathematicalbackground/mathematicalbackground_complex_phasors">Phasors</a>  </li>
   </ul>
-  <li>  <a href="../../curriculum/continuous/continuoussignalprocessing_transforms_fs">Spectrum and Fourier series</a> </li>
+  <li>  <a href="../../disciplines/continuous/continuoussignalprocessing_transforms_fs">Spectrum and Fourier series</a> </li>
 </ul>
