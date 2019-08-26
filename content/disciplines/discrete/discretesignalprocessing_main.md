@@ -23,7 +23,7 @@ Understanding the basics that are related to the signal and system behavior in t
 
 The concepts covered in this module are:
 
-1. <a href="../discretesignalprocessing_sampling_main">Sampling and reconstruction</a> (in progress) - Continuous-time signals are impractical to work with on computers. Therefore the conversion to the discrete-time domain is required in order to perform calculations on them. The conversion between the continuous- and discrete-time domain can have implications for the reconstructed signal.
+1. <a href="../discretesignalprocessing_sampling_main">Sampling and reconstruction</a> - Continuous-time signals are impractical to work with on computers. Therefore the conversion to the discrete-time domain is required in order to perform calculations on them. The conversion between the continuous- and discrete-time domain can have implications for the reconstructed signal.
 
 2. **Discrete-time signals** (to be added) - There exist infinitely many signals. These signals can be characterized by certain properties that tell us something about the signal. Within the set of all possible signals, some elementary signals are used very often due to their simplicity and their descriptive power.
 
