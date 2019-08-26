@@ -5,7 +5,7 @@ title = "Overview"
 lastmod = 2019-04-16
 
 draft = false  # Is this a draft? true/false
-toc = true  # Show table of contents? true/false
+toc = false  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
@@ -14,11 +14,11 @@ type = "docs"  # Do not modify.
   weight = 1
 +++
 
-Welcome to the *curriculum* page of the Signal Processing Systems educational website. On this page various important concepts from the signal processing curriculum are covered with multiple educational resources. For now, these topics include:
+Welcome to the *disciplines* page of the Signal Processing Systems educational website. On this page various important concepts from the signal processing curriculum are covered with multiple educational resources. For now, these topics include:
 
 * Mathematical background
-* Continuous signal processing basics
-* Discrete signal processing basics
+* Basics of continuous-time signals and systems
+* Basics of discrete-time signal processing
 * Statistical signal processing
 * Multidimensional signal processing
 * Optimal and adaptive signal processing

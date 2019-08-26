@@ -1,11 +1,11 @@
 +++
-title = "Continuous signal processing basics"
+title = "Basics of continuous-time signals and systems"
 
 # date = {{ .Date }}
-lastmod = 2019-06-23
+lastmod = 2019-08-22
 
 draft = false  # Is this a draft? true/false
-toc = true  # Show table of contents? true/false
+toc = false  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
@@ -15,65 +15,16 @@ type = "docs"  # Do not modify.
 
 +++
 
-<div class="example">
-<button class="collapsible">Test your knowledge</button>
-<div class="content">
+The signal processing field deals with the analysis and manipulation of signals.
+Signals that are observed in everyday life are continuous-time signals, which are not yet converted to the digital domain.
+Understanding the basics that are related to the signal and system behavior in the continuous-time domain allows for a better understanding on how to process these signals in the digital domain. This module therefore covers the basics of signals and systems in the continuous-time domain.
 
+The concepts covered in this module are:
 
-<button class="collapsible">Question 1</button>
-<div class="content">
+1. **Continuous-time signals** (to be added) - There exist infinitely many signals. These signals can be characterized by certain properties that tell us something about the signal. Within the set of all possible signals, some elementary signals are used very often due to their simplicity and their descriptive power.
 
-<div class="scp-quizzes-data quiz">
-   Finish the following sentence: <br><br>
-   <i>The imaginary part of a complex number is ...</i><br>
-<br/>
-    <input type="radio" id="answer1" name="question1">
-       <label for="answer1">real</label><br/>
-    <input type="radio"  name="question1">
-        <label>imaginary</label><br/>
-    <input type="radio"  name="question1">
-       <label>complex</label><br/>
- </div>
- </div>
- <br>
+2. **Continuous-time systems** (to be added) - When a continuous-time signal passes through a system it is interesting to know what the expected output signal will be. In order to make these predictions, it is desired to characterize a system and determine its properties.
 
+3. <a href="../continuoussignalprocessing_transforms_main">Continuous-time transforms</a> (in progress) - Continuous-time signals are usually represented in the time-domain. However, for many applications it is usually more convenient to transform this signal first to another domain, such as the frequency domain, in order to perform calculations.
 
-<button class="collapsible">Question 2</button>
-<div class="content">
-
-<div class="scp-quizzes-data quiz">
-   Finish the following sentence: <br><br>
-   <i>The roots of $f(x)=x^2 + \frac{1}{4}$ are ...</i> <br>
-<br/>
-    <input type="radio" name="question2">
-       <label>real</label><br/>
-    <input type="radio"  name="question2">
-        <label>complex, but not complex conjugated</label><br/>
-    <input type="radio" id="answer2"  name="question2">
-       <label for="answer2">complex conjugated</label><br/>
- </div>
-</div>
-<br>
-
-
-<button class="collapsible">Question 3</button>
-<div class="content">
-
-<div class="scp-quizzes-data quiz">
-   What is the value of $e^\pi$?<br>
-<br/>
-    <input type="radio" name="question3">
-       <label>1</label><br/>
-    <input type="radio"  name="question3">
-        <label>-1</label><br/>
-    <input type="radio"  name="question3">
-       <label>j</label><br/>
-   <input type="radio" id="answer3" name="question3">
-      <label for="answer3">none of the above</label><br/>
- </div>
-</div>
-<br>
-
-
-</div>
-</div>
+4. **Transform analysis of continuous-time systems** (to be added) - Similarly to continuous-time signals, also systems can be characterized in different domains. Usually this allows for better insight in the system and simplified calculations.
