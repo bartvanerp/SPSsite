@@ -43,4 +43,15 @@ The corresponding sections on this website are:
     <li>  <a href="../../disciplines/mathematicalbackground/mathematicalbackground_complex_phasors">Phasors</a>  </li>
   </ul>
   <li>  <a href="../../disciplines/continuous/continuoussignalprocessing_transforms_fs">Spectrum and Fourier series</a> </li>
+  <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_main">Sampling and reconstruction</a> </li>
+  <ul>  
+    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_samplingprocess">Sampling process of C-to-D converter
+</a> </li>
+    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_frequency">Absolute and relative frequency
+</a> </li>
+    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_uniqueness">Uniqueness issue
+</a> </li>
+    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_reconstruction">Reconstruction of D-to-C converter</a>  </li>
+    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_samplingtheorem">Sampling theorem</a>  </li>
+  </ul>
 </ul>
