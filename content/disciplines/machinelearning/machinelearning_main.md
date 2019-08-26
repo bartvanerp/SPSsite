@@ -14,5 +14,3 @@ type = "docs"  # Do not modify.
   weight = 10
 
 +++
-
-test machine learning main

@@ -14,5 +14,3 @@ type = "docs"  # Do not modify.
   weight = 10                           # location in that menu
 
 +++
-
-test statistical signal processing main
