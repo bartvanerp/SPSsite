@@ -110,12 +110,12 @@ The relative frequency representation is periodic with period $2\pi$.</i></div>
   <tr>
     <td>Absolute frequency</td>
     <td>$f$</td>
-    <td>$\frac{f_s}{2} < f \leq \frac{f_s}{2}$</td>
+    <td>$-\frac{f_s}{2} < f \leq \frac{f_s}{2}$</td>
   </tr>
   <tr>
     <td>Absolute radial frequency</td>
     <td>$\omega$</td>
-    <td>$-\pi f_s < f \leq \pi f_s$</td>
+    <td>$-\pi f_s < \omega \leq \pi f_s$</td>
   </tr>
 </table>
 </div>
