@@ -45,13 +45,17 @@ The corresponding sections on this website are:
   <li>  <a href="../../disciplines/continuous/continuoussignalprocessing_transforms_fs">Spectrum and Fourier series</a> </li>
   <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_main">Sampling and reconstruction</a> </li>
   <ul>  
-    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_samplingprocess">Sampling process of C-to-D converter
-</a> </li>
-    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_frequency">Absolute and relative frequency
-</a> </li>
-    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_uniqueness">Uniqueness issue
-</a> </li>
+    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_samplingprocess">Sampling process of C-to-D converter</a> </li>
+    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_frequency">Absolute and relative frequency</a> </li>
+    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_uniqueness">Uniqueness issue</a> </li>
     <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_reconstruction">Reconstruction of D-to-C converter</a>  </li>
     <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_samplingtheorem">Sampling theorem</a>  </li>
+  </ul>
+  <li>  <a href="../../disciplines/discrete/discretesignalprocessing_signals_main">Discrete-time signals</a> </li>
+  <ul>
+    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_signals_basics">Elementary signals</a> </li>
+  </ul>  <li>  <a href="../../disciplines/discrete/discretesignalprocessing_systems_main">Discrete-time systems</a> </li>
+  <ul>
+    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_systems_fir">Finite impulse response filters</a> </li>
   </ul>
 </ul>
