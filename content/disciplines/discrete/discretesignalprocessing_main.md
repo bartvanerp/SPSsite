@@ -31,7 +31,7 @@ The concepts covered in this module are:
 
 4. <a href="../discretesignalprocessing_transforms_main">Discrete-time transforms</a> (in progress) - Discrete-time signals are usually represented in the time-domain. However, for many applications it is usually more convenient to transform this signal first to another domain, such as the frequency domain, in order to perform calculations.
 
-5. **Transform analysis of discrete-time systems** (to be added) - Similarly to discrete-time signals, also systems can be characterized in different domains. Usually this allows for better insight in the system and simplified calculations.
+5. <a href="../discretesignalprocessing_analysis_main">Transform analysis of discrete-time systems</a> (in progress) - Similarly to discrete-time signals, also systems can be characterized in different domains. Usually this allows for better insight in the system and simplified calculations.
 
 6. **Special filter structures** (to be added) - Some filter structures behave in a very distinct way. Because of their characteristics and consequences it is worth discussing them.
 

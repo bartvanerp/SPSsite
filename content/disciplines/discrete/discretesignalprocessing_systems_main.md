@@ -19,8 +19,8 @@ type = "docs"  # Do not modify.
 This module will introduce basic filter structures for filtering discrete-time signals.
 
 1. <a href="../discretesignalprocessing_systems_fir/">Finite impulse response filters</a> - The most basic filter is defined as a finite impulse response filter. This section also introduces the commonly used convolution operator.
-2. *Infinite impulse response filters* (to be added) - Besides filters with a finite impulse response, there also exist filters whose output depends on their previous outputs. This recursive operations leads to infinite impulse response filters, which posses different characteristics in comparison to finite impulse response filters.
-3. *Special convolution methods* (to be added) - When performing filter calculations with a limited amount of memory, convolutions might not be possible to calculate if the signal length is very long. In order to circumvent this problem new procedures have been developed in order to split the convolution operation in multiple smaller ones.
+2. **Infinite impulse response filters** (to be added) - Besides filters with a finite impulse response, there also exist filters whose output depends on their previous outputs. This recursive operations leads to infinite impulse response filters, which posses different characteristics in comparison to finite impulse response filters.
+3. **Special convolution methods** (to be added) - When performing filter calculations with a limited amount of memory, convolutions might not be possible to calculate if the signal length is very long. In order to circumvent this problem new procedures have been developed in order to split the convolution operation in multiple smaller ones.
 
 
 ## Exercises
