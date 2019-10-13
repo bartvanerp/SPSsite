@@ -54,8 +54,13 @@ The corresponding sections on this website are:
   <li>  <a href="../../disciplines/discrete/discretesignalprocessing_signals_main">Discrete-time signals</a> </li>
   <ul>
     <li>  <a href="../../disciplines/discrete/discretesignalprocessing_signals_basics">Elementary signals</a> </li>
-  </ul>  <li>  <a href="../../disciplines/discrete/discretesignalprocessing_systems_main">Discrete-time systems</a> </li>
+  </ul>  
+  <li>  <a href="../../disciplines/discrete/discretesignalprocessing_systems_main">Discrete-time systems</a> </li>
   <ul>
     <li>  <a href="../../disciplines/discrete/discretesignalprocessing_systems_fir">Finite impulse response filters</a> </li>
+  </ul>
+  <li>  <a href="../../disciplines/discrete/discretesignalprocessing_analysis_main">Transform analysis of discrete-time systems</a> </li>
+  <ul>
+    <li>  <a href="../../disciplines/discrete/discretesignalprocessing_analysis_frequency">Frequency response of finite impulse response filters</a> </li>
   </ul>
 </ul>
