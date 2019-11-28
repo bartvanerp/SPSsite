@@ -2869,11 +2869,25 @@ transition: all 0.2s ease-in-out;}
   display: table;
 }
 
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.rowimg4 {
+  float: top;
+  height: 25%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.columnimg4::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .image-wrapper {
   box-sizing:border-box;
   float: left;
   margin-bottom:5px;
-  width: 50%;
 }
 
 .image-wrapper:nth-child(even)
