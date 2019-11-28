@@ -21,12 +21,7 @@ type = "docs"  # Do not modify.
 
 
 ### Conceptual video
-<div>
-<video controls preload>
-  <source src="/../files/8.Screencast/Fourier/Discrete/FTD/1FTDConcept.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/Av5_OuNjB4o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 In <a href="../../continuous/continuoussignalprocessing_transforms_ftc">a previous module</a> we have seen how we can describe a continuous-time signal in frequency domain with the <a href="../../continuous/continuoussignalprocessing_transforms_ftc">Fourier Transform for Continuous-time signals (FTC)</a>. A similar approach is also possible for discrete-time signals if we take into account the specific property that such a signal is defined only at discrete instances of time and not in between.
 The resulting description in frequency domain is the so called Fourier Transform for Discrete-time signals (FTD). Most of the derivations are not formal but have an intuitive character based on physical insight.
@@ -198,12 +193,7 @@ $$</li>
 
 ## FTD Examples
 
-<div>
-<video controls preload>
-  <source src="/../files/8.Screencast/Fourier/Discrete/FTD/2FTDExamples.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/3yPFxOeVN9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This section discusses some important examples of the FTD and IFTD.
 To gain more skill with this transformation, it is useful to first elaborate some of these examples yourself.
@@ -516,13 +506,7 @@ $$
 
 
 ## FTD Properties
-
-<div>
-<video controls preload>
-  <source src="/../files/8.Screencast/Fourier/Discrete/FTD/3FTDProperties.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/2kIrvAyID-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 As shown before the frequency representation $X(e^{j\theta})$ is periodic, which is denoted by representing the frequency variable $\theta$ in the exponent.
 Furthermore because of the fact that integral in the FTD is a linear operator, it is straightforward to show that the FTD is also linear.
