@@ -21,6 +21,7 @@ type = "docs"  # Do not modify.
 The Fourier Series (FS) representation is an extremely useful signal representation. Unfortunately, this signal representation can only be used for periodic signals.
 That's why we will introduce a tool for representing non-periodic signals, known as the <b>F</b>ourier <b>T</b>ransform for <b>C</b>ontinuous time signals, abbreviated as FTC. One might wonder if we can somehow use the Fourier Series to develop a representation for non-periodic signals. As it turns out, this is possible. By viewing a non-periodic as a periodic signal with an infinitely large period, we can use the Fourier Series to develop a more general signal representation that can be used in the non-periodic case. By doing so we should realise that the development of the FTC is not completely rigorous. Instead it is plausible which suggests the correct form of the FTC equations and it provides a useful interpretation.
 
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/r1_Dotj41L4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Fourier Series (FS) recap
@@ -225,6 +226,8 @@ This implies that a sufficient, but not necessary, condition to check the existe
 
 ## FTC Examples
 In this section we will discuss the FTC of some basic signals. As such we will discuss the FTC and IFTC of a delta pulse, a block signal, a sinusoidal signal and finally a pulse train.
+
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/jWRR689o1zs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### (I)FTC delta pulse and General Phasor Integral (GPI)
 The FTC of a delta pulse $\delta(t)$ can be found as follows:
@@ -453,6 +456,8 @@ This property is the basis for the so-called aliasing effect of an A-to-D conver
 
 ## FTC Properties
 In this section we will discuss the main properties of the FTC.
+
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/rz5kJ13gMck" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Linearity
 As a result of the fact that the integration operation of the FTC is a linear operation it follows that the FTC is linear.
