@@ -1,5 +1,5 @@
 +++
-title = "Reconstruction of D-to-C converter"
+title = "Reconstruction of sinusoidal signals"
 
 # date = {{ .Date }}
 lastmod = 2019-08-22
@@ -10,15 +10,15 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Reconstruction of D-to-C converter"
-  weight = 24
-  parent = "Sampling and reconstruction"
+  name = "Reconstruction of sinusoidal signals"
+  weight = 22
+  parent = "Basics of sampling and reconstruction"
 
 +++
 
 In this section we will describe the reconstruction process of the D-to-C convertor which converts the sequence of discrete-time samples $x[n]$ into the continuous-time signal $x(t)$.
 
-### Conceptual video
+## Conceptual video
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/xeW5RyqHVis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Ideal D-to-C convertor
@@ -163,3 +163,8 @@ p(t) =
 $$
 
 which leads to the conversion as shown in the right-hand side of Fig. 3. The signal samples are interpolated in a linear way. The reconstructed continuous-time signal looks like a 'triangular-like' approximation of the sinusoidal signal as depicted (in red) in the left-hand side figure.
+
+## Sampling theorem
+From the previous section it follows that for a system as depicted in Fig. 1, with $f\_{s,in}=f\_{s,out}=f\_s$, the output $y(t)$ of the D-to-C convertor is equal to input $x(t)$ of the ideal C-to-D convertor if the continuous-time signal $x(t)$ contains no frequencies higher than $f_{max}$ and the sampling frequency $f_s$ is larger than $2 \cdot f\_{max}$. This results into the following important <b>sampling theorem</b>, which is usually assigned to Shannon, who introduced this theorem around 1940. Almost at the same time Kotelnikov did the same. However some years before the theoretical basis was created by E.T. and J.A. Whittaker. This theorem states:
+
+<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>A continuous-time signal $x(t)$ with frequencies no higher than $f_{max}$ can be reconstructed exactly from its samples $x[n]= x(t)\mid_{t=n \cdot T_s}$, if samples are taken at a rate $f_s=1/T_s$, that is greater than $2 f_{max}$.</i></div>

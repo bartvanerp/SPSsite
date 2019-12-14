@@ -14,6 +14,11 @@ type = "docs"       # Do not modify.
 
 +++
 
+## Introductory video
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/7OQOAQPDOhQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 ## Module overview
 In addition to the set of real numbers that everyone is used to working with, a whole new dimension is introduced by complex numbers. These complex numbers can be used to describe sinusoidal signals through phasors, which has proven to be useful in many applications.
 This module concerns the following topics:
@@ -23,13 +28,21 @@ This module concerns the following topics:
 3. <a href="../mathematicalbackground_complex_notation">Complex numbers</a> - This section elaborates more on the notation of complex numbers and introduces mathematical operations on these complex numbers.
 4. <a href="../mathematicalbackground_complex_phasors">Phasors</a> - This section introduces sinusoidal signals in terms of time varying complex exponentials.
 
-### Introductory video
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/7OQOAQPDOhQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
+
+## Exercises
+In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
+
+### Video quizzes
+
 
 <div class="example">
 <button class="collapsible">Test your knowledge</button>
 <div class="content">
-
 
 <button class="collapsible">Question 1</button>
 <div class="content">
@@ -90,11 +103,6 @@ This module concerns the following topics:
 </div>
 
 
-
-## Exercises
-In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
-
-
 ### Exercise bundle
 
 <object data="/../files/3.Exercises/1.CNAP-exercises.pdf" type="application/pdf" width="100%" height="400px">
@@ -110,6 +118,7 @@ Download the answers <a href="/../files/3.Exercises/Answers/1.CNAP-answers.pdf">
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPGbXXJZZ2DtsIvvg1X2xqhB" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
+
 
 ## MATLAB lab
 Accompanied to this modules are some exercises in MATLAB, which will test your knowledge of the module and will help improve your MATLAB skills.

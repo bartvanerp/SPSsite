@@ -30,7 +30,7 @@
 
 ######################## CONTINUOUS SIGNAL PROCESSING ##############################
 [[main]]
-  name = "Basics of continuous-time signals and systems (in progress)"
+  name = "Basics of continuous-time signals and systems"
   url = "/disciplines/continuous/continuoussignalprocessing_main"
   parent = "Disciplines"
   weight = 23
@@ -38,7 +38,7 @@
 
   ######################## DISCRETE SIGNAL PROCESSING ##############################
   [[main]]
-    name = "Basics of discrete-time signal processing (in progress)"
+    name = "Discrete-time signal processing basics"
     url = "/disciplines/discrete/discretesignalprocessing_main"
     parent = "Disciplines"
     weight = 24

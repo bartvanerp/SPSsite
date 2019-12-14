@@ -1,5 +1,5 @@
 +++
-title = "Sampling and reconstruction"
+title = "Basics of sampling and reconstruction"
 
 # date = {{ .Date }}
 lastmod = 2019-06-23
@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Sampling and reconstruction"
+  name = "Basics of sampling and reconstruction"
   weight = 20
 
 +++
@@ -18,11 +18,8 @@ type = "docs"  # Do not modify.
 ## Module overview
 This module will cover one of the most fundamental aspects in signal processing, namely the principle behind converting a continuous-time signal into a discrete-time signal in order to process it with the help of computers.
 
-1. <a href="../discretesignalprocessing_sampling_samplingprocess">Sampling process of C-to-D converter</a> - First the concept of sampling is discussed, which represents the conversion from the continuous-time to discrete-time domain.
-2. <a href="../discretesignalprocessing_sampling_frequency">Absolute and relative frequency</a> - The frequency of the sampled signal is better to be described by a relative frequency, because of the effect of the sampling process.
-3. <a href="../discretesignalprocessing_sampling_uniqueness">Uniqueness issue</a> - Through the sampling there can also be a loss of spectral information, known as aliasing. This is caused by the uniqueness issue.
-4. <a href="../discretesignalprocessing_sampling_reconstruction">Reconstruction of D-to-C converter</a> - Similarly to the sampling, the signal can also be converted back from the discrete-time domain to the continuous-time domain.
-5. <a href="../discretesignalprocessing_sampling_samplingtheorem">Sampling theorem</a> - In order to prevent aliasing the sampling theorem has to be satisfied.
+1. <a href="../discretesignalprocessing_sampling_sampling">Sampling of sinusoidal signals</a> - First the concept of sampling is discussed, which represents the conversion from the continuous-time to discrete-time domain. The frequency of the sampled signal is better to be described by a relative frequency, because of the effect of the sampling process. Through the sampling there can also be a loss of spectral information, known as aliasing. This is caused by the uniqueness issue.
+2. <a href="../discretesignalprocessing_sampling_reconstruction">Reconstruction of sinusoidal signals</a> - Similarly to the sampling, the signal can also be converted back from the discrete-time domain to the continuous-time domain. In order to prevent aliasing the sampling theorem has to be satisfied.
 
 ## Examples
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/er2dUoPBKL4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
