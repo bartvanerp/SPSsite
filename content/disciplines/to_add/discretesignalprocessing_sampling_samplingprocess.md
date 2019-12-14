@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 [menu.discrete]
   name = "Sampling process of C-to-D converter"
   weight = 21
-  parent = "Sampling and reconstruction"
+  parent = "Basics of sampling and reconstruction"
 
 +++
 ### Conceptual video

@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 [menu.discrete]
   name = "Sampling theorem"
   weight = 25
-  parent = "Sampling and reconstruction"
+  parent = "Basics of sampling and reconstruction"
 
 +++
 

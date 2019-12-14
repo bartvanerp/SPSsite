@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 [menu.discrete]
   name = "Absolute and relative frequency"
   weight = 22
-  parent = "Sampling and reconstruction"
+  parent = "Basics of sampling and reconstruction"
 
 +++
 
