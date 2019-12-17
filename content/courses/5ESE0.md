@@ -42,7 +42,7 @@ The corresponding sections on this website are:
     <li>  <a href="../../disciplines/mathematicalbackground/mathematicalbackground_complex_notation">Complex numbers</a> </li>
     <li>  <a href="../../disciplines/mathematicalbackground/mathematicalbackground_complex_phasors">Phasors</a>  </li>
   </ul>
-  <li>  <a href="../../disciplines/continuous/continuoussignalprocessing_transforms_main">Spectrum and Fourier series</a> </li>
+  <li>  Spectrum and Fourier series</li>
   <ul>
     <li>  <a href="../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">Spectrum of sinusoidal signals</a> </li>
     <li>  <a href="../../disciplines/continuous/continuoussignalprocessing_transforms_Fourier">Fourier series</a> </li>
@@ -52,7 +52,7 @@ The corresponding sections on this website are:
     <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_sampling">Sampling of sinusoidal signals</a> </li>
     <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_reconstruction">Reconstruction of sinusoidal signals</a> </li>
   </ul>
-  <li>  <a href="../../disciplines/discrete/discretesignalprocessing_signals_main">Discrete-time signals</a> </li>
+  <li>  Discrete-time signals</li>
   <ul>
     <li>  <a href="../../disciplines/discrete/discretesignalprocessing_signals_basics">Elementary signals</a> </li>
   </ul>  
