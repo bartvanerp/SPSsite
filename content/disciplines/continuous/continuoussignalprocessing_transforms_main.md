@@ -19,10 +19,10 @@ Continuous-time signals are often processed in the time domain. However, many mo
 
 The concepts covered in this module are:
 
-1. <a href="../continuoussignalprocessing_transforms_spectrum">Spectrum of sinusoidal signals</a> -
+1. <a href="../continuoussignalprocessing_transforms_spectrum">Spectrum of sinusoidal signals</a> - A time-domain signal can be converted to the frequency domain. The frequency representation of a signal is called its frequency spectrum.
 
-2. <a href="../continuoussignalprocessing_transforms_fourier">Fourier Series (FS)</a> -
+2. <a href="../continuoussignalprocessing_transforms_fourier">Fourier Series (FS)</a> - The frequency spectrum of periodic signals can be represented as the sum of harmonically related sinusoidal signals.
 
-3. <a href="../continuoussignalprocessing_transforms_ftc">Fourier Transform of Continuous-time signals (FTC)</a> -
+3. <a href="../continuoussignalprocessing_transforms_ftc">Fourier Transform of Continuous-time signals (FTC)</a> - The transformation from the time-domain to the frequency domain and vice versa. The Fourier Transform of Continuous-time signals is a frequency analysis tool for continuous-time signals.
 
-4. **Laplace transform** (to be added) - Similarly to continuous-time signals, also systems can be characterized in different domains. Usually this allows for better insight in the system and simplified calculations.
+4. **Laplace transform** (to be added) - Whereas the Fourier transform is a complex function of the *it* real frequency. The Laplace transformation calculates a complex function of a *complex* variable.

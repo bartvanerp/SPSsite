@@ -16,7 +16,6 @@ type = "docs"  # Do not modify.
 +++
 
 
-
 The signal processing field deals with the analysis and manipulation of signals.
 Signals that are observed in everyday life are continuous-time signals, which are not yet converted to the digital domain.
 Understanding the basics that are related to the signal and system behavior in the continuous-time domain allows for a better understanding on how to process these signals in the digital domain. This module therefore covers the basics of signals and systems in the continuous-time domain.
@@ -33,8 +32,10 @@ The concepts covered in this module are:
 
 5. <a href="../discretesignalprocessing_analysis_main">Transform analysis of discrete-time systems</a> - Similarly to discrete-time signals, also systems can be characterized in different domains. Usually this allows for better insight in the system and simplified calculations.
 
-6. **Special filter structures** (to be added) - Some filter structures behave in a very distinct way. Because of their characteristics and consequences it is worth discussing them.
+6. <a href="../discretesignalprocessing_multirate_main">Sampling, reconstruction and multirate signal processing</a> - The sample rate of a signal is a fixed characteristic of the measurement device. Sometimes it is desired to reduce or increase this rate after the measurement itself. This will lead to certain consequences.
 
-7. **Multirate signal processing** (to be added) - The sample rate of a signal is a fixed characteristic of the measurement device. Sometimes it is desired to reduce or increase this rate after the measurement itself. This will lead to certain consequences.
+7. **Filter structures** (to be added) - Some filter structures behave in a very distinct way. Because of their characteristics and consequences it is worth discussing them.
 
-8. **Additional topics** (to be added) - Besides the abovementioned topics, many more concepts exist that are relevant for discrete-time signal processing. These topics include: filter design techniques, finite word length effects and spectral estimation techniques.
+8. **Filter design** (to be added) - The analysis of a filter gives insight into the operations of a filter. However, it is also important to use this knowledge in order to design a filter.
+
+9. **Finite wordlength effects** (to be added) - Sampling signals is the process of converting a continuous-time signal into bits. More available bits allow for a higher resolution in the signal. This also means that there is an inevitable quantization error, which has an effect on the signal.
