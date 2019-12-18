@@ -16,7 +16,7 @@ type = "docs"  # Do not modify.
 
 +++
 
-In the previous section we studied the spectral behavior of the sum of sinusoidal signals. In this section we will study signals which are composed of a sum of harmonic related sine waves.
+In the <a href="../continuoussignalprocessing_transforms_spectrum">previous module</a> we studied the spectral behavior of the sum of sinusoidal signals. In this section we will study signals which are composed of a sum of harmonic related sine waves.
 
 ## Introductory video
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/8XKqEFoVY1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

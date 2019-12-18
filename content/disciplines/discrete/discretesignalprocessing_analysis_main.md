@@ -22,9 +22,8 @@ type = "docs"  # Do not modify.
 This module will analyze discrete-time filters not only in the time-domain, but also in other domains, such as the frequency domain.
 
 1. <a href="../discretesignalprocessing_analysis_frequency/">Frequency response of finite impulse response filters</a> - The most basic filter is defined as a finite impulse response filter. This section discusses the behaviour of the filter in the frequency domain.
-2. <a href="../discretesignalprocessing_analysis_lti/">Frequency response of LTI systems</a> (to be added)
-3. **Solving difference equations with the Z-transform** (to be added)
-4. **System functions with poles and zeros** (to be added)
+2. <a href="../discretesignalprocessing_analysis_lti/">Frequency response of LTI systems</a> (in progress) - The frequency response can be extended to infinite impulse response filters, where other aspects are also of importance, such as stability.
+3. **System functions** (to be added) - The difference equation can easily be converted to a system function through the z-transform, which offers us with valuable insight of the operations of the filter.
 
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.

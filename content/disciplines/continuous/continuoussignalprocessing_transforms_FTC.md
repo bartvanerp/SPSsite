@@ -18,7 +18,7 @@ type = "docs"  # Do not modify.
 
 
 ## Introduction
-The Fourier Series (FS) representation is an extremely useful signal representation. Unfortunately, this signal representation can only be used for periodic signals.
+The <a href="../continuoussignalprocessing_transforms_fourier">Fourier Series (FS)</a> representation is an extremely useful signal representation. Unfortunately, this signal representation can only be used for periodic signals.
 That's why we will introduce a tool for representing non-periodic signals, known as the <b>F</b>ourier <b>T</b>ransform for <b>C</b>ontinuous time signals, abbreviated as FTC. One might wonder if we can somehow use the Fourier Series to develop a representation for non-periodic signals. As it turns out, this is possible. By viewing a non-periodic as a periodic signal with an infinitely large period, we can use the Fourier Series to develop a more general signal representation that can be used in the non-periodic case. By doing so we should realise that the development of the FTC is not completely rigorous. Instead it is plausible which suggests the correct form of the FTC equations and it provides a useful interpretation.
 
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/r1_Dotj41L4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
