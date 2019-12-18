@@ -29,6 +29,146 @@ This module will cover one of the most fundamental aspects in signal processing,
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
 
 
+### Video quiz
+
+<div class="example">
+<button class="collapsible">Test your knowledge (click to expand)</button>
+<div class="content">
+
+<button class="collapsible">Question 1</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+   Given the following situation:
+   <div style="max-width: 600px; margin: auto">
+     <figure>
+       <img
+         src="/../files/7.Images/discrete/sampling/quiz/question1.PNG"
+         alt="CD converter, question 1."
+       />
+     </figure>
+   </div>
+   where $x(t) = \cos(2\pi\cdot f_0 t)$ and $f_s > 2\cdot f_0$. Two cases are defined as: <br>
+   case 1: $f_s = f_{s1} \rightarrow x_1[n]=\cos(\theta_1 n)$<br>
+   case 2: $f_s = 1/3\cdot f_{s1} \rightarrow x_2[n]=\cos(\theta_2n)$<br>
+   In the equation $\theta_2= \alpha\cdot \theta_1$, what is the value of $\alpha$?
+</br>
+    <input type="radio" name="question1">
+       <label>$\alpha=\frac{1}{3}$</label><br/>
+    <input type="radio" id="answer1" name="question1">
+        <label for="answer1">$\alpha=3$</label><br/>
+    <input type="radio"  name="question1">
+        <label>$\alpha=6$</label><br/>
+    <input type="radio"  name="question1">       
+        <label>$\alpha=3\pi$</label><br/>
+    <input type="radio"  name="question1">
+        <label>None of the answers is correct.</label><br/>
+ </div>
+ </div>
+ <br>
+
+
+<button class="collapsible">Question 2</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+  Given the following situation:
+  <div style="max-width: 600px; margin: auto">
+    <figure>
+      <img
+        src="/../files/7.Images/discrete/sampling/quiz/question2.PNG"
+        alt="CD and DC converter, question 2."
+      />
+    </figure>
+  </div>
+  where $x(t)=\cos(2\pi 50 t + \frac{\pi}{3})\cdot \sin(2\pi 700 t - \frac{\pi}{3})$. <br>
+  What is the minimal sampling rate $f_s$ to obtain no aliasing, thus $y(t)=x(t)$.
+<br>
+</br>
+    <input type="radio" name="question2">
+      <label>$f_s > 700$ Hz</label><br/>
+    <input type="radio" name="question2">
+      <label>$f_s > 750$ Hz</label><br/>
+    <input type="radio"  name="question2">
+      <label>$f_s > 1400$ Hz</label><br/>    
+    <input type="radio" id="answer2"  name="question2">
+      <label for="answer2">$f_s > 1500$ Hz</label><br/>
+    <input type="radio" name="question2">
+      <label>None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+<button class="collapsible">Question 3</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+    Given the following situation:
+    <div style="max-width: 600px; margin: auto">
+      <figure>
+        <img
+          src="/../files/7.Images/discrete/sampling/quiz/question3.PNG"
+          alt="CD and DC converter, question 3."
+        />
+      </figure>
+    </div>
+    where<br>
+    $f_{si} = 500$ [samples/sec] <br>
+    $f_{so} = 400$ [samples/sec] <br>
+    $x(t) = \cos(2\pi\cdot100t)$ and $y(t) = \cos(2\pi\cdot f_y t)$<br>
+    What is the value of $f_y$?
+<br>
+</br>
+    <input type="radio" name="question3">
+      <label>$f_y = 50$ [Hz]</label><br/>
+    <input type="radio" id="answer3" name="question3">
+      <label for="answer3">$f_y = 80$ [Hz]</label><br/>
+    <input type="radio"  name="question3">
+      <label>$f_y = 100$ [Hz]</label><br/>
+      <input type="radio"  name="question3">
+        <label>$f_y = 125$ [Hz]</label><br/>
+        <input type="radio"  name="question3">
+          <label>$f_y = 200$ [Hz]</label><br/>
+    <input type="radio" name="question3">
+      <label>None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+
+<button class="collapsible">Question 4</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+  Given the following situation:
+  <div style="max-width: 600px; margin: auto">
+    <figure>
+      <img
+        src="/../files/7.Images/discrete/sampling/quiz/question4.PNG"
+        alt="CD and DC converter including input signal, question 4."
+      />
+    </figure>
+  </div>
+  How do we have to choose $f_s$ in order to obtain no aliasing, thus $y(t) = x(t)$?
+<br>
+</br>
+    <input type="radio" name="question4">
+       <label>$f_s = 1/2$ [Hz]</label><br/>
+    <input type="radio"  name="question4">
+        <label>$f_s = 1$ [Hz]</label><br/>
+    <input type="radio"  name="question4">
+       <label>$f_s = 2$ [Hz]</label><br/>
+   <input type="radio" id="answer4" name="question4">
+      <label for="answer4">None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+
+</div>
+</div>
+
+
 ### Exercise bundle
 
 <object data="/../files/3.Exercises/3.SAA-exercises.pdf" type="application/pdf" width="100%" height="400px">

@@ -249,6 +249,149 @@ The above example should give you some intuition on how the Fourier series works
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos. These exercises also include topics relating to the spectrum of sinusoidal signals.
 
+
+### Video quiz
+
+<div class="example">
+<button class="collapsible">Test your knowledge (click to expand)</button>
+<div class="content">
+
+<button class="collapsible">Question 1</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+   Define the Fundamental Frequency of the signal $x(t) = x_1 + x_2 + x_3$, where
+   $x_1= 4 + \sin(500\pi t - \frac{\pi}{3})$, $x_2 = \cos(2.8\pi t - \frac{\pi}{8})$ and $x_3 = \sin(2\pi\cdot 22t - \frac{\pi}{4})$.
+</br>
+    <input type="radio" id="answer1" name="question1">
+       <label for="answer1">$F_0 = 0.2$ Hz</label><br/>
+    <input type="radio" name="question1">
+        <label>$F_0 = 0.4$ Hz</label><br/>
+    <input type="radio" name="question1">
+       <label>$F_0 = 0.8$ Hz</label><br/>
+      <input type="radio"  name="question1">
+         <label>None of the answers is correct.</label><br/>
+ </div>
+ </div>
+ <br>
+
+
+<button class="collapsible">Question 2</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+   With $F_0 = 1/T_0$ and integer $k=0,\pm 1, \pm 2 , \ldots$, what holds for the following expression?
+   $\int_{-T_0/2}^{T_0/2}e^{jk2\pi F_0 t}dt = ?$
+<br>
+</br>
+    <input type="radio" name="question2">
+       <label>$=0$ for $k=0$</label><br/>
+    <input type="radio" name="question2">
+        <label>$=0$ for all values of $k$</label><br/>
+    <input type="radio" id="answer2" name="question2">
+       <label for="answer2">$\neq 0$ for $k=0$</label><br/>
+    <input type="radio" name="question2">
+      <label>$\neq 0$ for all values of $k$</label><br/>
+    <input type="radio"  name="question2">
+       <label>None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+<button class="collapsible">Question 3</button>
+<div class="content">
+<div class="scp-quizzes-data quiz">
+  For what value of $\alpha$ does the following integral with $F_0=1/T_0$ hold?
+  $\int_{0}^{\alpha T_0}e^{j2\pi F_0 t}dt = 0$
+<br>
+</br>
+    <input type="radio" name="question3">
+      <label>$\alpha = 1/4$</label><br/>
+    <input type="radio" name="question3">
+      <label>$\alpha = 2/4$</label><br/>
+    <input type="radio" name="question3">
+      <label>$\alpha = 3/4$</label><br/>
+    <input type="radio"  id="answer3"  name="question3">
+      <label for="answer3">$\alpha = 4/4$</label><br/>
+    <input type="radio" name="question3">
+      <label>None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+
+<button class="collapsible">Question 4</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+      With $F_0 = 1/T_0$ and positive integers $k$ and $l$, when does the following hold?
+      $\int_{T_0/2}^{T_0/2} \cos(k\cdot 2\pi F_0 t) \cdot \cos(l\cdot 2\pi F_0 t) \neq 0$
+   <br>
+</br>
+    <input type="radio" name="question4">
+       <label>$k>l$</label><br/>
+    <input type="radio"  name="question4">
+        <label> $k < l$ </label><br/>
+    <input type="radio" id="answer4"  name="question4">
+       <label for="answer4">$k=l$</label><br/>
+   <input type="radio" name="question4">
+      <label>$k\neq l$</label><br/>
+ </div>
+</div>
+<br>
+
+<button class="collapsible">Question 5</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+  Given the following periodic signal $x(t)$ and considering the fundamental frequency $F_0$, which of the following figures represent the spectral plot?
+  $x(t) = 3 + 0.5\cos(7.8\pi t + \frac{\pi}{4}) + 2\sin(130\pi t)$
+<br>
+</br>
+    <input type="radio" name="question5">
+       <label>
+       <div style="max-width: 600px; margin: auto">
+         <figure>
+           <img
+             src="/../files/7.Images/continuous/transforms/Fourier/quiz/question5a.jpg"
+             alt="Spectral plot 5a."
+           />
+         </figure>
+       </div>
+       </label><br/>
+    <input type="radio" name="question5">
+        <label>
+        <div style="max-width: 600px; margin: auto">
+          <figure>
+            <img
+              src="/../files/7.Images/continuous/transforms/Fourier/quiz/question5b.jpg"
+              alt="Spectral plot 5b."
+            />
+          </figure>
+        </div>
+        </label><br/>
+    <input type="radio" name="question5">
+       <label>
+       <div style="max-width: 600px; margin: auto">
+         <figure>
+           <img
+             src="/../files/7.Images/continuous/transforms/Fourier/quiz/question5c.jpg"
+             alt="Spectral plot 5c."
+           />
+         </figure>
+       </div>
+       </label><br/>
+    <input type="radio"  id="answer5" name="question5">
+      <label for="answer5">None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+
+</div>
+</div>
+
+
 ### Exercise bundle
 <object data="/../files/3.Exercises/2.SPAFS-exercises.pdf" type="application/pdf" width="100%" height="400px">
     <embed src="/../files/3.Exercises/2.SPAFS-exercises.pdf" type="application/pdf">

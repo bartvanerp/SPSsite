@@ -214,6 +214,215 @@ From the previous example we may conclude that
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos. These exercises also include topics relating to the Fourier series.
 
+
+### Video quiz
+
+<div class="example">
+<button class="collapsible">Test your knowledge (click to expand)</button>
+<div class="content">
+
+<button class="collapsible">Question 1</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+   Which spectral plot corresponds to the complex signal $z(t) = 2e^{-j(2\pi t - \frac{\pi}{6})}$?
+</br>
+    <input type="radio" name="question1">
+       <label>
+       <div style="max-width: 600px; margin: auto">
+         <figure>
+           <img
+             src="/../files/7.Images/continuous/transforms/Spectrum/quiz/question1a.PNG"
+             alt="Spectral plot 1a."
+           />
+         </figure>
+       </div>
+       </label><br/>
+    <input type="radio" name="question1">
+        <label>
+        <div style="max-width: 600px; margin: auto">
+          <figure>
+            <img
+              src="/../files/7.Images/continuous/transforms/Spectrum/quiz/question1b.PNG"
+              alt="Spectral plot 1b."
+            />
+          </figure>
+        </div>
+        </label><br/>
+    <input type="radio" id="answer1" name="question1">
+       <label for="answer1">
+       <div style="max-width: 600px; margin: auto">
+         <figure>
+           <img
+             src="/../files/7.Images/continuous/transforms/Spectrum/quiz/question1c.PNG"
+             alt="Spectral plot 1c."
+           />
+         </figure>
+       </div>
+       </label><br/>
+   <input type="radio"  name="question1">
+      <label>
+      <div style="max-width: 600px; margin: auto">
+        <figure>
+          <img
+            src="/../files/7.Images/continuous/transforms/Spectrum/quiz/question1d.PNG"
+            alt="Spectral plot 1d."
+          />
+        </figure>
+      </div>
+      </label><br/>
+      <input type="radio"  name="question1">
+         <label>None of the answers is correct.</label><br/>
+ </div>
+ </div>
+ <br>
+
+
+<button class="collapsible">Question 2</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+   Which spectral plot corresponds to the signal $x(t) = 2 \cos(2\pi\cdot 100t - \frac{\pi}{3})$?
+<br>
+</br>
+    <input type="radio" id="answer2" name="question2">
+       <label for="answer2">
+       <div style="max-width: 600px; margin: auto">
+         <figure>
+           <img
+             src="/../files/7.Images/continuous/transforms/Spectrum/quiz/question2a.PNG"
+             alt="Spectral plot 2a."
+           />
+         </figure>
+       </div>
+       </label><br/>
+    <input type="radio" name="question2">
+        <label>
+        <div style="max-width: 600px; margin: auto">
+          <figure>
+            <img
+              src="/../files/7.Images/continuous/transforms/Spectrum/quiz/question2b.PNG"
+              alt="Spectral plot 2b."
+            />
+          </figure>
+        </div>
+        </label><br/>
+    <input type="radio"  name="question2">
+       <label>
+       <div style="max-width: 600px; margin: auto">
+         <figure>
+           <img
+             src="/../files/7.Images/continuous/transforms/Spectrum/quiz/question2c.PNG"
+             alt="Spectral plot 2c."
+           />
+         </figure>
+       </div>
+       </label><br/>
+    <input type="radio" name="question2">
+      <label>
+      <div style="max-width: 600px; margin: auto">
+        <figure>
+          <img
+            src="/../files/7.Images/continuous/transforms/Spectrum/quiz/question2d.PNG"
+            alt="Spectral plot 2d."
+          />
+        </figure>
+      </div>
+      </label><br/>
+      <input type="radio"  name="question2">
+         <label>None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+<button class="collapsible">Question 3</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+   Which signal corresponds to the following spectral plot?
+   <div style="max-width: 600px; margin: auto">
+     <figure>
+       <img
+         src="/../files/7.Images/continuous/transforms/Spectrum/quiz/question3.PNG"
+         alt="Spectral plot 3."
+       />
+     </figure>
+   </div>
+<br>
+</br>
+    <input type="radio" name="question3">
+      <label>$x(t) = 2\sin(20\pi t - \frac{\pi}{3})$</label><br/>
+    <input type="radio" name="question3">
+      <label>$x(t) = \cos(20\pi t - \frac{\pi}{3})$</label><br/>
+    <input type="radio"  name="question3">
+      <label>$x(t) = 2\sin(20\pi t + \frac{\pi}{3})$</label><br/>
+    <input type="radio"  name="question3">
+      <label>$x(t) = \cos(20\pi t + \frac{\pi}{3})$</label><br/>
+    <input type="radio"  id="answer3" name="question3">
+      <label for="answer3">None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+
+<button class="collapsible">Question 4</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+    Which signal corresponds to the following spectral plot?
+    <div style="max-width: 600px; margin: auto">
+      <figure>
+        <img
+          src="/../files/7.Images/continuous/transforms/Spectrum/quiz/question4.PNG"
+          alt="Spectral plot 4."
+        />
+      </figure>
+    </div>
+   <br>
+</br>
+    <input type="radio" name="question4">
+       <label>$x(t) = 2\sin(2\pi t) + 4\cos(4\pi t +\frac{\pi}{4})$</label><br/>
+    <input type="radio"  name="question4">
+        <label>$x(t) = 2\cos(2\pi t) + 4\cos(4\pi t -\frac{\pi}{4})$</label><br/>
+    <input type="radio"  name="question4">
+       <label>$x(t) = 2\cos(2\pi t) + 4\cos(4\pi t +\frac{\pi}{4})$</label><br/>
+   <input type="radio" id="answer4" name="question4">
+      <label for="answer4">$x(t) = 2\sin(2\pi t) + 4\cos(4\pi t -\frac{\pi}{4})$</label><br/>
+ </div>
+</div>
+<br>
+
+<button class="collapsible">Question 5</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+  Consider the spectral plot of an amplitude modulated signal depicted in the figure below. The signal is the porduct of the carrier signal $g(t)$ multiplied with the message signal $s(t)$. The signal $s(t)$ can be written as $s(t) = A_0 + A_1\cos(2\pi f_1 t + \Phi_1)$. Compute the parameters $A_0$, $A_1$, $f_c$, $f_1$ and $\Phi_1$.
+  <div style="max-width: 600px; margin: auto">
+    <figure>
+      <img
+        src="/../files/7.Images/continuous/transforms/Spectrum/quiz/question5.png"
+        alt="Spectral plot 5."
+      />
+    </figure>
+  </div>
+<br>
+</br>
+    <input type="radio" name="question5">
+       <label>$A_0 = 1$, $A_1= \frac{1}{4}$, $f_c= 5000$ Hz, $f_1 = 750$ Hz and $\Phi_1=\frac{\pi}{4}$</label><br/>
+    <input type="radio" id="answer5" name="question5">
+        <label for="answer5">$A_0 = 2$, $A_1= 1$, $f_c= 5000$ Hz, $f_1 = 750$ Hz and $\Phi_1=-\frac{\pi}{4}$</label><br/>
+    <input type="radio" name="question5">
+       <label>$A_0 = 2$, $A_1= 1$, $f_c= 750$ Hz, $f_1 = 5000$ Hz and $\Phi_1=\frac{\pi}{4}$</label><br/>
+    <input type="radio" name="question5">
+      <label>None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+
+</div>
+</div>
+
 ### Exercise bundle
 <object data="/../files/3.Exercises/2.SPAFS-exercises.pdf" type="application/pdf" width="100%" height="400px">
     <embed src="/../files/3.Exercises/2.SPAFS-exercises.pdf" type="application/pdf">

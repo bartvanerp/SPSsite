@@ -27,6 +27,164 @@ This module will introduce basic filter structures for filtering discrete-time s
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
 
 
+### Video quiz
+
+<div class="example">
+<button class="collapsible">Test your knowledge (click to expand)</button>
+<div class="content">
+
+<button class="collapsible">Question 1</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+   Given the signal $x[n]$ below: <br>
+   $x[n] = \begin{cases}0 & \text{for } n \text{ even} \\ 1 &\text{for } n \text{odd}\end{cases}$ <br>
+   The Difference Equation (DE) is given as: <br>
+   $y[n] = x[n] + x[n-1] + x[n-2]$ <br>
+   Calculate $y[n]$ for $n$ even and $n$ odd.
+</br>
+    <input type="radio" name="question1">
+       <label>$x[n] = \begin{cases}0 & \text{for } n \text{ even} \\ 1 &\text{for } n \text{odd}\end{cases}$ </label><br/>
+    <input type="radio" id="answer1" name="question1">
+        <label for="answer1">$x[n] = \begin{cases}1 & \text{for } n \text{ even} \\ 2 &\text{for } n \text{odd}\end{cases}$ </label><br/>
+    <input type="radio"  name="question1">
+        <label>$x[n] = \begin{cases}-1 & \text{for } n \text{ even} \\ 2 &\text{for } n \text{odd}\end{cases}$ </label><br/>
+    <input type="radio"  name="question1">       
+        <label>$x[n] = \begin{cases}-1 & \text{for } n \text{ even} \\ -2 &\text{for } n \text{odd}\end{cases}$ </label><br/>
+    <input type="radio"  name="question1">       
+        <label>$x[n] = \begin{cases}1 & \text{for } n \text{ even} \\ 0 &\text{for } n \text{odd}\end{cases}$ </label><br/>
+    <input type="radio"  name="question1">       
+        <label>$x[n] = \begin{cases}1 & \text{for } n \text{ even} \\ -2 &\text{for } n \text{odd}\end{cases}$ </label><br/>
+    <input type="radio"  name="question1">
+        <label>None of the answers is correct.</label><br/>
+ </div>
+ </div>
+ <br>
+
+
+<button class="collapsible">Question 2</button>
+<div class="content">
+<div class="scp-quizzes-data quiz">
+
+  Given the impulse response of an LTI system: <br>
+  $h_1[n] = \delta [n] + \delta[n-1] - \delta[n-2]$ <br>
+  Let the input of this system be the unit step function:<br>
+  $x[n] = u[n] = \begin{cases} 1 & \text{for } n \geq 0 \\ 0 & \text{elsewhere}\end{cases}$ <br>
+  $y[n] = x[n] \ast h[n]$ <br>
+Calculate the output of this system for the given input.
+<br>
+</br>
+    <input type="radio" name="question2">
+      <label>$y[n] = \delta[n] + \delta[n-1] + \delta[n-2]$</label><br/>
+    <input type="radio" name="question2">
+      <label>$y[n] = \delta[n] + \delta[n-1] - \delta[n-2]$</label><br/>
+    <input type="radio"  name="question2">
+      <label>$y[n] = \delta[n] + 2\delta[n-1] - \delta[n-2]$</label><br/>    
+    <input type="radio"  name="question2">
+      <label>$y[n] = \delta[n] + 2\delta[n-1] + \delta[n-2]$</label><br/>
+    <input type="radio" id="answer2" name="question2">
+      <label for="answer2">None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+<button class="collapsible">Question 3</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+    Given the cascade of 2 LTI systems in series, with the following individual impulse responses: <br>
+    $h_1 [n] = \delta[n] + 2\delta[n-1]$ <br>
+    $h_2 [n] = \delta[n] - \delta[n-1]$ <br>
+    Whta is the total impulse response $h[n]$ of the LTI system?
+<br>
+</br>
+    <input type="radio" id="answer3"  name="question3">
+      <label for="answer3">$h[n] = \delta[n] + \delta[n-1] -2 \delta[n-2]$</label><br/>
+    <input type="radio" name="question3">
+      <label>$h[n] = 3\delta[n-1] $</label><br/>
+    <input type="radio"  name="question3">
+      <label>$h[n] = \delta[n] + 2\delta[n-1] + \delta[n-2] - \delta[n-3]$</label><br/>
+      <input type="radio"  name="question3">
+        <label>$h[n] = 2\delta[n] + \delta[n-1]$</label><br/>
+    <input type="radio" name="question3">
+      <label>None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+
+<button class="collapsible">Question 4</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+  Consider an LTI system where the output $y[n]$ has been recorded from two different inputs $x[n]$ as shown below:
+  $x_1[n] = \delta[n] + \delta[n-1] \quad \rightarrow \quad y_1[n] = \delta[n] + \delta[n-1] - \delta[n-2] - \delta[n-3]$ <br>
+  $x_2[n] = \delta[n] - \delta[n-1] \quad \rightarrow \quad y_2[n] = \delta[n] - \delta[n-1] - \delta[n-2] + \delta[n-3]$ <br>
+  What is the impulse response $h[n]$ of this LTI system?
+<br>
+</br>
+    <input type="radio" id="answer4" name="question4">
+       <label for="answer4">$h[n] = \delta[n] - \delta[n-2]$</label><br/>
+    <input type="radio"  name="question4">
+        <label>$h[n] = \delta[n] + \delta[n-2]$</label><br/>
+    <input type="radio"  name="question4">
+       <label>$h[n] = \delta[n-1] - \delta[n-2]$</label><br/>
+   <input type="radio"  name="question4">
+      <label>$h[n] = \delta[n] + \delta[n-1]$</label><br/>
+  <input type="radio"  name="question4">
+      <label>$h[n] = \delta[n-1] + \delta[n-2]$</label><br/>
+  <input type="radio"  name="question4">
+      <label>$h[n] = -\delta[n-1] - \delta[n-2]$</label><br/>
+  <input type="radio"  name="question4">
+      <label>$h[n] = \delta[n] - \delta[n-1]$</label><br/>
+  <input type="radio"  name="question4">
+      <label>$h[n] = -\delta[n-1] + \delta[n-2]$</label><br/>
+   <input type="radio" name="question4">
+      <label>None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+<button class="collapsible">Question 5</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+  Given the following FIR filter from which the initial state is equal to zero, thus $y[n] = 0$ for $n<0$.
+  <div style="max-width: 600px; margin: auto">
+    <figure>
+      <img
+        src="/../files/7.Images/discrete/systems/FIR/quiz/question5.PNG"
+        alt="FIR filter, question 5."
+      />
+    </figure>
+  </div>
+  What is the value of $y[3]$?
+<br>
+</br>
+    <input type="radio" name="question5">
+       <label>$y[3] = -3$</label><br/>
+    <input type="radio"  name="question5">
+        <label>$y[3] = -2$</label><br/>
+    <input type="radio"  id="answer5" name="question5">
+       <label for="answer5">$y[3] = -1$</label><br/>
+   <input type="radio"  name="question5">
+      <label>$y[3] = 0$</label><br/>
+  <input type="radio"  name="question5">
+      <label>$y[3] = 1$</label><br/>
+  <input type="radio"  name="question5">
+      <label>$y[3] = 2$</label><br/>
+  <input type="radio"  name="question5">
+      <label>$y[3] = 3$</label><br/>
+   <input type="radio" name="question5">
+      <label>None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+
+</div>
+</div>
+
 ### Exercise bundle
 
 <object data="/../files/3.Exercises/4.FIR-exercises.pdf" type="application/pdf" width="100%" height="400px">

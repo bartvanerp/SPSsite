@@ -22,12 +22,155 @@ type = "docs"  # Do not modify.
 This module will analyze discrete-time filters not only in the time-domain, but also in other domains, such as the frequency domain.
 
 1. <a href="../discretesignalprocessing_analysis_frequency/">Frequency response of finite impulse response filters</a> - The most basic filter is defined as a finite impulse response filter. This section discusses the behaviour of the filter in the frequency domain.
-2. **Frequency response of LTI systems** (to be added)
+2. <a href="../discretesignalprocessing_analysis_lti/">Frequency response of LTI systems</a> (to be added)
 3. **Solving difference equations with the Z-transform** (to be added)
 4. **System functions with poles and zeros** (to be added)
 
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
+
+### Video quiz
+
+<div class="example">
+<button class="collapsible">Test your knowledge (click to expand)</button>
+<div class="content">
+
+<button class="collapsible">Question 1</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+   The input signal is $x[n] = \cos(0.5\pi n)$. This signal is applied to a filter with impulse response $h[n]$ and frequency response $H(e^{j\theta}) = 2\sin(\theta)$. Give a description of the output signal $y[n]$.
+</br>
+    <input type="radio" name="question1">
+       <label>$y[n] = 0$</label><br/>
+    <input type="radio" name="question1">
+        <label>$y[n] = 2$</label><br/>
+    <input type="radio"  id="answer1" name="question1">
+        <label for="answer1">$y[n] = 2\cos(0.5\pi n)$</label><br/>
+    <input type="radio"  name="question1">       
+        <label>$y[n] = 2\cos(0.5\pi n + 0.5\pi)$</label><br/>
+    <input type="radio"  name="question1">
+        <label>None of the answers is correct.</label><br/>
+ </div>
+ </div>
+ <br>
+
+
+<button class="collapsible">Question 2</button>
+<div class="content">
+<div class="scp-quizzes-data quiz">
+
+    Have a look at the following system: <br>
+    <div style="max-width: 600px; margin: auto">
+      <figure>
+        <img
+          src="/../files/7.Images/discrete/analysis/FIR/quiz/question2.PNG"
+          alt="FIR filter, question 2."
+        />
+      </figure>
+    </div>
+    Signal $x[n]$ consists out of two frequencies $\theta_1 = \frac{\pi}{3}$ and $\theta_2=\pi$. Which frequencies does the output signal $y[n]$ contain?  
+<br>
+</br>
+    <input type="radio" name="question2">
+      <label>Both frequencies remain.</label><br/>
+    <input type="radio" name="question2">
+      <label>Both frequencies get cancelled out.</label><br/>
+    <input type="radio" id="answer2" name="question2">
+      <label for="answer2">Only $\theta=\frac{\pi}{3}$ remains.</label><br/>    
+    <input type="radio"  name="question2">
+      <label>Only $\theta=\pi$ remains.</label><br/>
+    <input type="radio" name="question2">
+      <label>None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+<button class="collapsible">Question 3</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+    What is the response of the following filter to a DC signal?
+    <div style="max-width: 600px; margin: auto">
+      <figure>
+        <img
+          src="/../files/7.Images/discrete/analysis/FIR/quiz/question3.PNG"
+          alt="FIR filter, question 3."
+        />
+      </figure>
+    </div>
+<br>
+</br>
+    <input type="radio"  name="question3">
+      <label>The DC signal remains the unchanged.</label><br/>
+    <input type="radio" id="answer3"  name="question3">
+      <label for="answer3">The DC signal gets filtered out.</label><br/>
+    <input type="radio"  name="question3">
+      <label>The DC signal gets doubled.</label><br/>
+ </div>
+</div>
+<br>
+
+
+<button class="collapsible">Question 4</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+    What is the response of the following cascaded filters to a DC signal?
+    <div style="max-width: 600px; margin: auto">
+      <figure>
+        <img
+          src="/../files/7.Images/discrete/analysis/FIR/quiz/question4.PNG"
+          alt="cascaded FIR filter, question 4."
+        />
+      </figure>
+    </div>
+<br>
+</br>
+<input type="radio"  name="question4">
+  <label>The DC signal remains the unchanged.</label><br/>
+<input type="radio" id="answer4"  name="question4">
+  <label for="answer4">The DC signal gets filtered out.</label><br/>
+<input type="radio"  name="question4">
+  <label>The DC signal gets doubled.</label><br/>
+  <input type="radio"  name="question4">
+    <label>The DC signal gets tripled.</label><br/>
+ </div>
+</div>
+<br>
+
+<button class="collapsible">Question 5</button>
+<div class="content">
+
+<div class="scp-quizzes-data quiz">
+    What is does the system with the following phase response represent?
+    <div style="max-width: 600px; margin: auto">
+      <figure>
+        <img
+          src="/../files/7.Images/discrete/analysis/FIR/quiz/question5.PNG"
+          alt="Phase response, question 5."
+        />
+      </figure>
+    </div>
+<br>
+</br>
+    <input type="radio" name="question5">
+       <label>Delay by 2/3 samples.</label><br/>
+    <input type="radio"  name="question5">
+        <label>Delay by 2 samples.</label><br/>
+    <input type="radio"  id="answer5" name="question5">
+       <label for="answer5">Delay by 3 samples.</label><br/>
+   <input type="radio"  name="question5">
+      <label>Saw tooth</label><br/>
+   <input type="radio" name="question5">
+      <label>None of the answers is correct.</label><br/>
+ </div>
+</div>
+<br>
+
+
+</div>
+</div>
 
 
 ### Exercise bundle
