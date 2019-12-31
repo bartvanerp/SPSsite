@@ -102,7 +102,7 @@ The only differences of the Inverse DFT with the DFT are:
 <li>Secondly, all Fourier transforms, including the DFT, preserve energy. This means the energy in both time- and frequency-domain stays the same: A Fourier transform cannot change energy when going from one domain to the other. For this reason it can be shown that we need a factor $\frac{1}{N}$ in the Inverse DFT definition. </li>
 </ul>
 
-#### DFT of sinusoidal signal (example 1)
+#### DFT of sinusoidal signal example
 To become more familiar with the concept of the DFT, let us first consider the following simple example in which we sketch the result of applying a 4-point DFT to the sampled version of a 1 Hertz sinusoidal signal $x(t)=\cos (2 \pi t)$ which is sampled at a sample rate of $f_s = 4$ [Hz]. The different steps as discussed in the previous subsection are depicted in Fig. 2.
 
 
@@ -194,12 +194,9 @@ In this definition the indices $n$ and $k$ range from $-\infty$ to $+\infty$. Ho
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Give an expression for the 4-point periodic extended signal $x_p[n]$ of $x[n]=\delta[n-1]$ and calculate the 4-point DFT.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The periodic extended signal writes as $x_p[n]= \delta[(n-1)\text{mod}(4)]$. Some values are:
 \begin{eqnarray}
 x_p[-4]&=& \delta[(-5)\text{mod}(4)]=0 \text{ ; }
@@ -225,7 +222,6 @@ Some values are:
 & X_p[0]= 1 \text{ ; } X_p[1]= -j \text{ ; } X_p[2] = -1 \text{ ; } X_p[3]= j & \\
 & X_p[4]= 1 \text{ ; } X_p[5]= -j \text{ ; } X_p[6] = -1 \text{ ; } X_p[7]= j &
 \end{eqnarray}
-
 </div>
 </div>
 
@@ -279,12 +275,9 @@ Thus, the summation $S[k]$ is always equal to zero, except for the cases that th
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Calculate the values of $S[k]$ for $N=4$ and $k=-1,0,1,2,3,4$ explicitly.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 \begin{eqnarray}
 S[-1] &=& \sum_{n=0}^{3} \left (e^{j\frac{\pi}{2} \cdot -1}\right )^n = \sum_{n=0}^{3} \left (e^{-j\frac{\pi}{2} \cdot 1}\right )^n = 1 - j - 1 +j =0 \\
 S[0] &=& \sum_{n=0}^{3} \left (e^{j\frac{\pi}{2} \cdot 0}\right )^n =
@@ -296,25 +289,20 @@ S[4] &=& \sum_{n=0}^{3} \left (e^{j\frac{\pi}{2} \cdot 4}\right )^n =
 \sum_{n=0}^{3} \left (e^{j2 \pi }\right )^n =
 \sum_{n=0}^{3} \left (1 \right )^n = 1 + 1 + 1 + 1 = 4
 \end{eqnarray}
-
 </div>
 </div>
 
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Give a mathematical expression in terms of a delta pulse of $A[k]=\sum_{n=0}^{7} e^{j\frac{2\pi}{4} \cdot n \cdot k}$ and calculate $A[k]$ for for $k=-8,-7, \cdots, 14, 15$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 \begin{eqnarray}
 A[k]&=\sum_{n=0}^{7} e^{j\frac{2\pi}{4} \cdot n \cdot k}  \\
 &= \sum_{n=0}^{7} \left\{ e^{j\frac{2\pi}{8} 2k} \right\}^n \\
 &= 8 \cdot \delta[2k \text{mod}(8)]
 \end{eqnarray}
-
 Explicit evaluation of $A[k]$ are as follows:
 $$
 \begin{eqnarray}
@@ -382,8 +370,7 @@ X[k]&=& \sum\_{n=0}^{3} \frac{1}{2} \cdot \left ( e^{j\frac{\pi}{2} n} +  e^{-j\
 
 Now we can use for each of these individual summations the previous described basic DFT summation property. The first summation will always result into zero except for the case when the DFT frequency index $k-1$ is a 4-fold, thus for $k=1$ or $k=5$ or $k=-3$ etc. Mathematically this can be described by a delta function from which the index contains a modulo-4 operation as given in the first part of the following result:
 $$
-X[k]= \frac{1}{2} \cdot 4 \delta[(k-1) \text{ mod}(4)]
-+ \frac{1}{2} \cdot 4 \delta[(k+1) \text{ mod}(4)]
+X[k]= \frac{1}{2} \cdot 4 \delta[(k-1) \text{ mod}(4)]+ \frac{1}{2} \cdot 4 \delta[(k+1) \text{ mod}(4)]
 $$
 The second summation will always result into zero except for the case when the DFT frequency index $k+1$ is a 4-fold, thus for $k=-1$ or $k=-5$ or $k=3$ etc. which also results in a delta function.
 
@@ -402,16 +389,13 @@ This example shows how the basic DFT summation property is used in the DFT algor
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Calculate a trigoniometric expression for the 16 point IDFT $x_p[n]$ of $X_p[k]$ which is defined as:
 $$
 X_p[k]= 2 \delta[(k-1) \text{mod}(16)] + \delta[(k-3) \text{mod}(16)]
 + \delta[(k-13) \text{mod}(16)] + 2 \delta[(k-15) \text{mod}(16)]
 $$
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 $$
 \begin{eqnarray}
 x_p[n] &=& \frac{1}{16} \sum_{k=0}^{15} \left \{ 2 \delta[(k-1) \text{mod}(16)] + \delta[(k-3) \text{mod}(16)] + \right .\\
@@ -424,13 +408,13 @@ x_p[n] &=& \frac{1}{16} \sum_{k=0}^{15} \left \{ 2 \delta[(k-1) \text{mod}(16)] 
 \right \} = \frac{1}{4} \cos (\frac{\pi}{8} n) + \frac{1}{8} \cos (\frac{3\pi}{8} n)
 \end{eqnarray}
 $$
-
 </div>
 </div>
 
 
 
 
+<br></br>
 
 ## DFT properties
 
@@ -494,10 +478,8 @@ $$
 <div class="example">
 <h4> Proof of circular shift property</h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 The DFT of the shifted samples $x_p[n-n_0]$ is denoted as:
 $$
 Y[k]= \sum_{n=0}^{N-1} x_p[n-n_0] e^{-j\frac{2\pi}{N} k n}.
@@ -534,7 +516,6 @@ $$
 \boxed{
 e^{j\frac{2 \pi}{N} n k_0} \cdot x_p[n] \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm} X_p[k-k_0]}
 $$
-
 </div>
 </div>
 
@@ -542,7 +523,6 @@ $$
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 The values within the FI of the 5-point DFT of $x_p[n]$ are:
 $$
 X_p[k]= \begin{cases}
@@ -554,11 +534,8 @@ X_p[k]= \begin{cases}
 \end{cases}
 $$
 A new signal is defined as $y_p[n] = W_5^{-2n} x_p[n]$, with twiddle factor $W_5 = e^{j\frac{2\pi}{5}}$. Calculate within the Fundamental Interval the values of $Y_p[k]$ which is the 5-point DFT of this new signal $y_p[n]$.
-
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 According to the shift property we obtain:
 \begin{eqnarray}
 y_p[n] = e^{-j\frac{2\pi}{5}2n} \cdot x_p[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
@@ -574,7 +551,6 @@ X_p[0]=5 & \text{for } k=3 \\
 X_p[1]=6 & \text{for } k=4 \\
 \end{cases}
 $$
-
 </div>
 </div>
 
@@ -592,9 +568,9 @@ The different steps of the circular procedure are as follows:
 <li> Plot one of the signals, e.g. $h_p[n]$, as function of another index, e.g. $h_p[i]$. </li>
 <li> Flip $h_p[i]$ to obtain $h_p[-i]$. </li>
 <li> For $n=0,1, \cdots, N-1$:
-Calculate $y\_p[n]=\sum\_{i=0}^{N-1} x\_p[i] h\_p[n-i]$.</li>
+Calculate $y\_p[n]=\sum_{i=0}^{N-1} x_p[i] h_p[n-i]$.</li>
 </ol>
-As an example the circular convolution result $y\_{p} [n] = x\_{p}[n] \circledast h\_{p}[n]$
+As an example the circular convolution result $y_{p} [n] = x_{p}[n] \circledast h_{p}[n]$
 is depicted in Fig. 6.
 
 <div style="max-width: 700px; margin: auto">
@@ -611,7 +587,7 @@ is depicted in Fig. 6.
 
 Within the FP these Periodic Extended signals are defined as:
 \begin{eqnarray}
-x\_p[n]&=&\delta[n]+ \delta[n-1] + \delta[n-2] + \frac{1}{2} \delta[n-3] \\
+x\_p[n]&=&\delta[n]+ \delta[n-1] + \delta[n-2] + \frac{1}{2} \delta[n-3] \newline
 h\_p[n]&=&\delta[n]+ \frac{3}{4} \delta[n-1] + \frac{1}{2}\delta[n-2] + \frac{1}{4} \delta[n-3]
 \end{eqnarray}
 resulting in:
@@ -627,16 +603,13 @@ $$
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Compute $y_p[n]=x_p[n] \circledast h_{p}[n]$ with
 \begin{eqnarray}
-x_p[n] &=& \delta[n \text{mod}(4)] + 2\delta[(n-1) \text{mod}(4)] + \delta[(n-2) \text{mod}(4)] - \delta[(n-3) \text{mod}(4)] \\
+x_p[n] &=& \delta[n \text{mod}(4)] + 2\delta[(n-1) \text{mod}(4)] + \delta[(n-2) \text{mod}(4)] - \delta[(n-3) \text{mod}(4)] \newline
 h_p[n] &=& \frac{1}{3} \delta[(n-1) \text{mod}(4)] -\frac{1}{3} \delta[(n-2) \text{mod}(4)] +\frac{1}{3} \delta[(n-3) \text{mod}(4)]
 \end{eqnarray}
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 <!-- TODO:
 \centerline{\em SHOW SOLUTION}
 Show solution step by step with Matlab animation.m. Result:
@@ -644,7 +617,6 @@ $$
 y_p[n]=\delta[(n-1)\text{mod}(4)].
 $$
 -->
-
 </div>
 </div>
 
@@ -657,10 +629,8 @@ $$
 <div class="example">
 <h4> Proof of circular convolution property </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 For the proof of this property we first apply  the DFT operation to the circular convolution  and then switch the order of the two summations:
 \begin{eqnarray}
 Y[k]&=& \text{DFT}\left \{ x_p[n] \circledast h_p[n]\right \} =\sum_{n=0}^{N-1} \left (\sum_{i=0}^{N-1} x_p[i] h_p[n-i] \right ) e^{-j(2 \pi/N) k n}\\
@@ -681,7 +651,6 @@ $$
 x_p[n] \cdot h_p[n] \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm} X_p[k] \circledast H_p[k]
 }
 $$
-
 </div>
 </div>
 
@@ -689,18 +658,14 @@ $$
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Given the same 4-point periodic extended signals as in the previous example:
 \begin{eqnarray}
 x_p[n] &=& \delta[n \text{mod}(4)] + 2\delta[(n-1) \text{mod}(4)] + \delta[(n-2) \text{mod}(4)] - \delta[(n-3) \text{mod}(4)] \\
 h_p[n] &=& \frac{1}{3} \delta[(n-1) \text{mod}(4)] -\frac{1}{3} \delta[(n-2) \text{mod}(4)] +\frac{1}{3} \delta[(n-3) \text{mod}(4)]
 \end{eqnarray}
 Furthermore we have the following 4-point DFT's: $X_p[k] \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ x_p[n]$ and  $H_p[k] \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ h_p[n]$. Calculate $Y_p[k] = X_p[k] \cdot H_p[k]$
-
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 From the circular convolution property it follows that
 $$
 Y_p[k] = X_p[k] \cdot H_p[k] \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm} y_p[n]= x_p[n] \circledast h_p[n]
@@ -716,7 +681,6 @@ X_p[k] &=& 1 + 2 e^{-j\frac{2\pi}{4} k} + e^{-j\frac{2\pi}{4} 2k} - e^{-j\frac{2
 H_p[k] &=& \frac{1}{3} \left \{e^{-j\frac{2\pi}{4} k} -e^{-j\frac{2\pi}{4} 2k} + e^{-j\frac{2\pi}{4} 3k} \right \}
 \end{eqnarray}
 resulting in $Y_p[k] = X_p[k] \cdot H_p[k]= e^{-j\frac{2\pi}{4} k}$.
-
 </div>
 </div>
 
@@ -728,12 +692,10 @@ $$
 $$
 
 <div class="example">
-<h4> Proof of circular convolution property </h4>
+<h4> Proof of complex conjugation property </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 In the first step  of the proof we apply the DFT operation to the complex conjugated samples and take the the complex operation outside the brackets and  multiply with 1:
 $$
 Y[k] = \sum_{n=0}^{N-1} x^\ast_p[n] e^{-j\frac{2 \pi}{N}kn} =
@@ -755,27 +717,23 @@ $$
 $$
 Thus when $x[n]$ is real we only need to calculate half of the DFT components, the other half can by obtained from the resulting symmetry property. More specifically the range of DFT coefficients that we need to calculate for a real signal is as follows:
 <ul>
-<li> $0 \leq k \leq (N-1)/2$, for $N$ {\bf odd} </li>
-<li> $0 \leq k \leq N/2$, for $N$ {\bf even} </li>
+<li> $0 \leq k \leq (N-1)/2$, for $N$ <b>odd</b> </li>
+<li> $0 \leq k \leq N/2$, for $N$ <b>even</b> </li>
 </ul>
 <i>Note that for $N$ even the coefficient $X_p[N/2]=X^\ast_p[N/2]$. In other words $X_p[N/2]$ is a real number.</i>
-
 </div>
 </div>
 
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 The even samples of the 9-point DFT $X_p[k]$ of a real signal $x_p[n]$ are given as follows:
 $$
 X_p[0]=1 \text{ ; } X_p[2]=5-2 j \text{ ; } X_p[4]=-3 e^{-j\frac{\pi}{10}} \text{ ; }X_p[6]= 7 \text{ ; }X_p[8]=2+5 j
 $$
 Calculate the odd values of $X_p[k]$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 Signal $x_p[n]$ is real thus we have $X_p[k]= X^\ast[N-k]$ which results in this case, with $N=9$, in:
 $$
 X_p[1]= X_p^\ast[8]= 2-5 j \text{ ; }
@@ -783,31 +741,26 @@ X_p[3]= X_p^\ast[6]= 7 \text{ ; }
 X_p[5]= X_p^\ast[4]= -3 e^{j\frac{\pi}{10}} \text{ ; }
 X_p[7]= X_p^\ast[2]= 5+2 j
 $$
-
 </div>
 </div>
 
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Given the $N$-point DFT
 $$
 X_p[k]= e^{j\theta_0} \delta[(k-1) \text{mod}(N)] + e^{-j\theta_0} \delta[(k-(N-1)) \text{mod}(N)]
 $$
 in which $\theta_0$ is some fixed value.
 Calculate $x_p[n]$ the $N$-point IDFT. The answer should be a formula for $x_p[n]$ in terms of $n$ and $N$. Is $x_p[n]$ a real valued signal? If so simplify the resulting formula in such a way that it does not contain $j = \sqrt{-1}$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The resulting signal $x_p[n]$ will be real since $X_p[k]=X_p^\ast[N-k]$ and can be expressed as follows:
 \begin{eqnarray}
 x_p[n] &=& e^{j\theta_0} \cdot e^{j\frac{2\pi}{N} n} + e^{-j\theta_0} \cdot e^{j\frac{2\pi}{N}(N-1) n} \\
 &=& e^{j\theta_0} \cdot e^{j\frac{2\pi}{N} n} + e^{-j\theta_0} \cdot e^{-j\frac{2\pi}{N} n} =
 2 \cos (\frac{2\pi}{N} n + \theta_0)
 \end{eqnarray}
-
 </div>
 </div>
 
@@ -820,10 +773,8 @@ $$
 <div class="example">
 <h4> Proof of Parceval property </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 Parceval has shown that the Fourier transform preserves energy. Here we will show that this property also holds for the DFT. First we write out according to the DFT definition the term $X^\ast_p[k]$:
 $$
 Y[k]= \frac{1}{N} \color{blue}{\sum_{k=0}^{N-1}} X_p[k] \cdot X^\ast_p[k]
@@ -842,22 +793,18 @@ $$
 Y[k]=\color{red}{\sum_{n=0}^{N-1}} x^\ast_p[n] \cdot \left \{ x_p[n] \right \} =\color{red}{\sum_{n=0}^{N-1}} |x_p[n]|^2
 $$
 Note that it seems as if there is a difference of a factor $\frac{1}{N}$ between the energy in time- and frequency domain. However this is the result of the way that the DFT and Inverse DFT operations have been defined.
-
 </div>
 </div>
 
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Show the Parceval relation for the 4-point Periodic Extended signal
 $$
 x_p[n]=\delta[n \text{mod}(4)] +\delta[(n-1) \text{mod}(4)] +\delta[(n-2) \text{mod}(4)] +\delta[(n-3) \text{mod}(4)].
 $$
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 First we calculate the 4-point DFT:
 $$
 X_p[k] = \sum_{n=0}^{3} x_p[n] e^{-j\frac{2\pi}{4} kn} = \sum_{n=0}^{3} e^{-j\frac{2\pi}{4} kn} =
@@ -869,14 +816,13 @@ The energy in time- and frequency domain can be calculated as follows:
 \text{Frequency} &:& \frac{1}{4} \sum_{k=0}^{3} |X_p[k]|^2 = \frac{1}{4} ( 4^2 ) = 4
 \end{eqnarray}
 which proves that the Parceval relation is indeed correct.
-
 </div>
 </div>
 
 
 
 
-<br>
+<br></br>
 
 ## Linear-  by circular-convolution
 If we want to perform a filter operation in practice then we need a linear and not a circular convolution. In this section we will show how a circular convolution can be used to realize a linear convolution between two signals $x[n]$ and $h[n]$.
@@ -899,13 +845,13 @@ Fig. 7 shows an example of the linear convolution of $x[n]$ and $h[n]$, which ar
 x[n]&=&\delta[n]+ \delta[n-1] + \delta[n-2] + \frac{1}{2} \delta[n-3] \\
 h[n]&=&\delta[n]+ \frac{3}{4} \delta[n-1] + \frac{1}{2}\delta[n-2] + \frac{1}{4} \delta[n-3]
 \end{eqnarray}
-The result $y[n]=x[n] \star h[n]$ has finite duration of $N=N\_1 + N\_2 -1=7$ samples:
+The result $y[n]=x[n] \star h[n]$ has finite duration of $N=N_1 + N_2 -1=7$ samples:
 $$
 y[n]=\delta[n]+ \frac{7}{4} \delta[n-1] + \frac{9}{4}\delta[n-2] + 2 \delta[n-3]+
 \frac{9}{8} \delta[n-4]+ \frac{1}{2} \delta[n-5]+ \frac{1}{8} \delta[n-6]
 $$
-Despite the fact that within the FP both  $x\_p[n]$ and $h\_p[n]$ of Fig. 6 are the same as the signals $x[n]$ and $h[n]$ of Fig. 7, it is clear that the FP of the circular convolution result $y\_p[n]$ does not result in the desired linear convolution result $y[n]$.
-However when first pad both $x\_p[n]$ and $h\_p[n]$ with zeros up to a length of $N=7$, as depicted in Fig. 8 by $x\_{p,b}[n]$ and $h\_{p,b}[n]$, then applying a circular convolution the result of $y\_{p,b}[n]= x\_{p,b}[n] \circledast h\_{p,b}[n]$ within the FP is exactly the same as the linear convolution result.
+Despite the fact that within the FP both  $x_p[n]$ and $h_p[n]$ of Fig. 6 are the same as the signals $x[n]$ and $h[n]$ of Fig. 7, it is clear that the FP of the circular convolution result $y_p[n]$ does not result in the desired linear convolution result $y[n]$.
+However when first pad both $x_p[n]$ and $h_p[n]$ with zeros up to a length of $N=7$, as depicted in Fig. 8 by $x_{p,b}[n]$ and $h_{p,b}[n]$, then applying a circular convolution the result of $y_{p,b}[n]= x_{p,b}[n] \circledast h_{p,b}[n]$ within the FP is exactly the same as the linear convolution result.
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
@@ -919,7 +865,7 @@ However when first pad both $x\_p[n]$ and $h\_p[n]$ with zeros up to a length of
 </div>
 
 In general we can conclude with the following procedure:
-<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>If signal $x[n]$ consists of $N\_1$ samples and impulse response $h[n]$ of $N\_2$ samples the result of the linear convolution $y[n] = x[n] \star h[n]$ can be obtained from a circular convolution $y\_p[n]=x\_p[n] \circledast h\_p[n]$ in which both periodic extended $x\_p[n]$ and $h\_p[n]$ are padded with zeros up to a length of $N \geq N\_1 + N\_2 -1$ samples.</i></div>
+<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>If signal $x[n]$ consists of $N_1$ samples and impulse response $h[n]$ of $N_2$ samples the result of the linear convolution $y[n] = x[n] \star h[n]$ can be obtained from a circular convolution $y_p[n]=x_p[n] \circledast h_p[n]$ in which both periodic extended $x_p[n]$ and $h_p[n]$ are padded with zeros up to a length of $N \geq N_1 + N_2 -1$ samples.</i></div>
 
 
 Combining the previous procedure with the fact that a circular convolution is equivalent to a multiplication in the DFT frequency domain we will present a procedure to calculate a linear convolution by a circular one which is implemented in the DFT frequency domain. Referring to Fig. 9 the derivation of this procedure goes as follows:
@@ -943,17 +889,14 @@ In one of the following sections we will show that the DFT can be implemented ve
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Given two finite duration signals:
 \begin{eqnarray}
 x[n] =\delta[n] + \delta[n-1] & \text{and} & h[n]=\delta[n-1] + \delta[n-2]
 \end{eqnarray}
 Calculate the linear convolution result $y[n]= x[n] \star h[n]$ and show how you can obtain this result by using a circular convolution of the periodic extended signals.
 Finally show that this result can be achieved via the DFT domain.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The linear convolution result is $y[n] = \delta[n-1] + 2 \delta[n-2] + \delta[n-3]$.
 The 3-point circular convolution result of the periodic extended signals
 \begin{eqnarray}
@@ -971,7 +914,6 @@ $$
 y_p[n] = \delta[(n-1) \text{mod}(4)] + 2 \delta[(n-2)\text{mod}(4)] + \delta[(n-3) \text{mod}(4)]
 $$
 which is, within the FP, the same result as the linear convolution $y[n]$.
-
 Via the 4-point DFT we can obtain the same result. For simplicity reasons we calculate the 4-point DFT and IDFT results for indices within the FI and FP respectively, so we can skip the modulo notation:
 \begin{eqnarray}
 X_p[k] &=& 1 + e^{-j\frac{2\pi}{4} k} \\
@@ -979,7 +921,6 @@ H_p[k] &=& e^{-j\frac{2\pi}{4} k} + e^{-j\frac{2\pi}{4} 2k}\\
 Y_p[k] &=& X_p[k] \cdot H_p[k] = e^{-j\frac{2\pi}{4} k} + 2e^{-j\frac{2\pi}{4} 2k} + e^{-j\frac{2\pi}{4} 3k} \\
 y_p[k] &=& IDFT \{ Y_p[k] \} = \delta[n-1] + 2 \delta[n-2] + \delta[n-3]
 \end{eqnarray}
-
 </div>
 </div>
 
@@ -1027,6 +968,7 @@ As depicted in Fig. \ref{Fig:overlapsave}, the overlap-save procedure is as foll
 \centerline{{\color{blue}Video DFT length here}}
 
 -->
+<br></br>
 
 ## Implications of DFT length $N$
 
@@ -1049,25 +991,25 @@ An example of a finite duration signal of $M$ samples is depicted in Fig. 10.
 </div>
 When applying the FTD, the infinite summation reduces to the following finite summation, in which the relative frequency is represented by the continuous variable $\theta$:
 $$
-\text{FTD:} \hspace{2mm} X(e^{j\theta})= \sum\_{n=-\infty}^{\infty} x[n] e^{-jn \theta}
-= \sum\_{n=0}^{\color{green}{M}-1} x[n] e^{-jn \color{red} {\theta}}
+\text{FTD:} \hspace{2mm} X(e^{j\theta})= \sum_{n=-\infty}^{\infty} x[n] e^{-jn \theta}
+= \sum_{n=0}^{\color{green}{M}-1} x[n] e^{-jn \color{red} {\theta}}
 $$
 On the other hand for $M \leq N$ the DFT results in the following equation:
 $$
-X[k]= \sum\_{n=0}^{\color{blue}{N}-1} x[n] e^{-jn {\color{red}k \cdot \frac{2 \pi}{\color{blue}{N}}} } = \sum\_{n=0}^{{\color{green}M}-1} x[n] e^{-jn \color{red}{k \cdot \frac{2 \pi}{\color{blue}{N}}} } \hspace{2mm} \text{for } k =0, \cdots , N-1
+X[k]= \sum_{n=0}^{\color{blue}{N}-1} x[n] e^{-jn {\color{red}k \cdot \frac{2 \pi}{\color{blue}{N}}} } = \sum_{n=0}^{{\color{green}M}-1} x[n] e^{-jn \color{red}{k \cdot \frac{2 \pi}{\color{blue}{N}}} } \hspace{2mm} \text{for } k =0, \cdots , N-1
 $$
 When comparing the FTD and $N$-point DFT equations we can conclude the following:
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>The $N$ DFT samples $X[k]$ of a finite duration signal $x[n]$ with $M \leq N$ samples,
 represent the sampled version of the FTD of $x[n]$:
 $$
-X[k] = X(e^{j\theta})|\_{\theta = k \cdot \frac{2\pi}{N}} \text{ for } k = 0,1, \cdots , N-1
+X[k] = X(e^{j\theta})\mid_{\theta = k \cdot \frac{2\pi}{N}} \text{ for } k = 0,1, \cdots , N-1
 $$</i></div>
 
 
 
 <b> Examples of FTD and DFT of finite duration signal </b>
 
-The first example is a finite duration signal of $M=8$ samples, as depicted at the left hand side  Fig. \ref{Fig:example6N8}. The FTD result $|X(e^{j\theta})|$, is depicted in a black drawn curve at the right hand side of the same figure. The relative frequency $\theta$ ranges from 0 until $2\pi$.
+The first example is a finite duration signal of $M=8$ samples, as depicted at the left hand side  Fig. 11. The FTD result $|X(e^{j\theta})|$, is depicted in a black drawn curve at the right hand side of the same figure. The relative frequency $\theta$ ranges from 0 until $2\pi$.
 
 <figure>
 <div class="rowimg2">
@@ -1128,13 +1070,10 @@ Concluding:
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 The FTD of $x[n]$ is given as $X(e^{j\theta})= 2 \cos (\frac{\theta}{2}) e^{-j\frac{3 \theta}{2}}$.
 What is the minimal value of the parameter $N$, such that the $N$-point DFT $X_p[k]$ is a sampled version of $X(e^{j\theta})$. Calculate for this value of $N$ the resulting DFT samples $X_p[k]$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 We can rewrite $X(e^{j\theta})$ as follows:
 $$
 X(e^{j\theta}) = \left \{ e^{j\frac{\theta}{2}} +  e^{-j\frac{\theta}{2}} \right \} \cdot e^{-j\frac{3 \theta}{2}} = e^{-j\theta} + e^{-j2 \theta}
@@ -1147,7 +1086,6 @@ X_p[0] = 2 \text{ ; } X_p[1] = e^{-j\frac{2\pi}{3}} + e^{-j\frac{2\pi}{3}2} \tex
 X_p[2] = e^{-j\frac{2\pi}{3}2} + e^{-j\frac{2\pi}{3}4}
 $$
 which is indeed a sampled version of $X(e^{j\theta})$.
-
 </div>
 </div>
 
@@ -1207,10 +1145,8 @@ The first explanation is a mathematical one, the second a physical one and the t
 <div class="example">
 <h4> Why the DFT smears out peaks: explanation 1 </h4>
 <hr>
-
 <button class="collapsible">Show explanation</button>
 <div class="content">
-
 For this first explanation we use the basic DFT summation property.
 First we use this property for the evaluation of the 12-point DFT of the same sinusoidal signal $x[n]=\cos(\frac{2\pi}{6}n)$ as above.  In the first step we use Euler to write the sinusoidal signal as the sum of two phasors:
 $$
@@ -1227,9 +1163,7 @@ X[k]= 6 \delta[\color{red}{(2-k)} \text{ mod}(12)] +
 6 \delta[\color{blue}{(2+k)} \text{ mod}(12)]
 $$
 In a similar way it follows that the second summation is always zero except for the case when the frequency index $2+k$ modulo 12 is equal to zero. Thus within the Fundamental Interval the second summation is equal to zero for all frequency indices $k$ except for $k=-2+12=10$. For this index the result is  $\frac{1}{2} \cdot 12 = 6$, as indicated in the resulting equation above.
-
 Concluding it follows that the 12-point DFT of the periodic sinusoidal signal $x[n]=\cos(\frac{2\pi}{6}n)$ results into two peaks at frequency indices $k=2$ and $k=10$ respectively, which is indeed the same result as shown at the right hand side of Fig. 13.
-
 Applying similar steps for the evaluation of a 16-point DFT of the same periodic sinusoidal signal $x[n]=\cos(\frac{2\pi}{6}n)$ the result is as follows:
 \begin{eqnarray}
 X[k]&=&\sum_{n=0}^{\color{red}{16}-1} \cos (\frac{2\pi}{\color{purple}{6}}n) e^{-j(\frac{2\pi}{\color{red}{16}})k n} =\frac{1}{2} \sum_{n=0}^{\color{red}{16}-1} \left \{ e^{j\frac{2\pi}{\color{brown}{6}} n}
@@ -1239,7 +1173,6 @@ e^{-j\frac{2 \pi}{\color{red}{16}}k n} \nonumber \\
 e^{-j\frac{2\pi}{16}\color{orange}{(\frac{16}{6} + k)}}n \right \}
 \end{eqnarray}
 However when trying to apply the basic DFT summation property it follows that in the first summation the frequency index $k$ should be equal to $\frac{16}{6} \approx 2.7$, which is not an integer value. In other words the basic DFT summation property can not be applied to the first summation and the result of this summation will add up to a non zero value for all frequency indices $k$. A similar reasoning follows for the second summation: The frequency index $k$ should be equal to $-\frac{16}{6}$, which becomes $-\frac{16}{6}+ 16 \approx 13.3$ when taking into account modulo 16 calculation. This implies that the 16-point DFT result of the sinusoidal signal $x[n]=\cos(\frac{2\pi}{6}n)$ results in two <b> smeared out</b> peaks around integer indices $k$ which are close to the values 2.7 and 13.3, which is shown in the 16-point DFT plot of Fig. 14.
-
 </div>
 </div>
 
@@ -1247,10 +1180,8 @@ However when trying to apply the basic DFT summation property it follows that in
 <div class="example">
 <h4> Why the DFT smears out peaks: explanation 2 </h4>
 <hr>
-
 <button class="collapsible">Show explanation</button>
 <div class="content">
-
 A second, more physical, explanation is as follows: When applying a 6-point DFT to the sinusoidal signal $x[n]=\cos(\frac{2\pi}{6}n)$, as depicted in the top figure of the following figure, we use 6 samples (colored in red) which span exactly one period of $x[n]$. As discussed before, the DFT frequency samples represent the frequency content of a periodic extended signal in time domain. In this case the 6-point periodic extended signal is shown in the figure at the bottom of the following figure.
 <div style="max-width: 600px; margin: auto">
   <figure>
@@ -1263,9 +1194,7 @@ A second, more physical, explanation is as follows: When applying a 6-point DFT 
     </figcaption>
   </figure>
 </div>
-
 Because of the fact that one period of $x[n]$ consists exactly of the 6 samples (in red), the samples of the periodic extended signal are exactly the same as the samples of the original periodic signal $x[n]$. In other words the peaks of the DFT frequency samples coincide exactly with the peaks of the phasor frequencies of $x[n]$ in this example. The same reasoning holds when choosing the length of the DFT any other 6-fold, thus 12, 18 etc.
-
 On the other hand, when using a 16-point DFT (or another <b>non</b> 6-fold in this case),  the periodic extension will cause artifacts at the edges, as depicted in the next figure.
 <div style="max-width: 600px; margin: auto">
   <figure>
@@ -1278,9 +1207,7 @@ On the other hand, when using a 16-point DFT (or another <b>non</b> 6-fold in th
     </figcaption>
   </figure>
 </div>
-
 As a result the peaks of the DFT frequency samples do not coincide with the peaks of the phasor frequencies of $x[n]$ in this example.  So we can conclude that the smearing out effect is caused by the mismatch of the periodic extension.
-
 A practical way to reduce the smearing out effect is to minimize the artifacts at the edges which can be achieved by multiplying the original $N$ signal samples with a so called window function.
 The shape of such a window function is typically close to 1 in the middle of the segment of $N$ samples and close to zero at the edges.  An example of such a window function is the Hanning window:
 $$
@@ -1308,19 +1235,15 @@ At the left hand side of the next figure we see (in red) the $N=16$ signal sampl
   Windowed periodic signal $x[n]=\cos(\frac{2\pi}{6}n)$ and $N=16$ point DFT result.
 </figcaption>
 </figure>
-
 At the right hand side of this figure we see (in black) the original DFT result, thus without windowing.  The DFT result with windowing is shown in red. From this we can see that the smearing out behavior, especially in the range of frequency indices $k=5$ until $k=11$, is reduced.
-
 </div>
 </div>
 
 <div class="example">
 <h4> Why the DFT smears out peaks: explanation 3 </h4>
 <hr>
-
 <button class="collapsible">Show explanation</button>
 <div class="content">
-
 For the third explanation of the smearing out effect we will evaluate and compare the FTD and DFT  transforms of a sinusoidal signal with relative frequency $\theta = 0.28 \pi$. The results of 4 of these Fourier transforms are depicted in the next figure.
 <div style="max-width: 600px; margin: auto">
   <figure>
@@ -1333,25 +1256,20 @@ For the third explanation of the smearing out effect we will evaluate and compar
     </figcaption>
   </figure>
 </div>
-
 The first plot in the figure represents the FTD which takes into account all infinite samples of the periodic signal $x[n]=\cos(0.28 \pi n)$. This transform results into two delta pulses at frequencies $\theta = \pm 0.28 \pi$, representing the two phasors of the sinusoidal signal. Delta pulses can not be measured as such in practice, and for this reason they are depicted as two arrows at frequencies $\theta = \pm 0.28 \pi$ in the figure, to indicate the location of the phasors.
-
-In practice we can only measure and process a finite part of an infinite long signal. This can be achieved by a multiplication of the infinite long original signal $x[n]$ with a finite length window function $w[n]$. In this example we will use a length $N$ rectangular window which results in the following windowed signal $x\_{win}[n]$:
+In practice we can only measure and process a finite part of an infinite long signal. This can be achieved by a multiplication of the infinite long original signal $x[n]$ with a finite length window function $w[n]$. In this example we will use a length $N$ rectangular window which results in the following windowed signal $x_{win}[n]$:
 $$
-x\_{win}[n] = x[n] \cdot {\color{blue}w[n]} \hspace{3mm} \text{with} \hspace{3mm}
+x_{win}[n] = x[n] \cdot {\color{blue}w[n]} \hspace{3mm} \text{with} \hspace{3mm}
 \color{blue}{w[n]}=\begin{cases}
 1 & n=0, \cdots , N-1 \newline
 0 & \text{elsewhere}
 \end{cases}
 $$
-The FTD of a rectangular function results in a Dirichlet function. Its main lobe width is inversely proportional to the window length $N$. Thus the longer the window length, the smaller the main lobe width. Furthermore, as a general rule of thumb, we have seen that multiplication in time domain results in convolution in frequency domain. As a result, the FTD of the finite length windowed signal $x\_{win}[n]$ with $N=32$ is a continuous frequency function. This result is depicted as a solid line in blue: The delta pulses are smeared out by the shape of the Dirichlet function.
+The FTD of a rectangular function results in a Dirichlet function. Its main lobe width is inversely proportional to the window length $N$. Thus the longer the window length, the smaller the main lobe width. Furthermore, as a general rule of thumb, we have seen that multiplication in time domain results in convolution in frequency domain. As a result, the FTD of the finite length windowed signal $x_{win}[n]$ with $N=32$ is a continuous frequency function. This result is depicted as a solid line in blue: The delta pulses are smeared out by the shape of the Dirichlet function.
 
 When applying a $N=32$ point DFT to this finite length signal $x\_{win}[n]$ the result is a sampled version of the blue solid line, the FTD of $x\_{win}[n]$, from which the inter frequency sampling distance equals $2\pi/32$. This DFT result is depicted by the green diamonds in the figure. From this result we can see that, depending on the relative frequency of the original signal $x[n]$ and on the choice of $N$, the DFT samples may or may not coincide exactly with the original phasor frequencies.
-
 Finally, we apply zero padding, in this case up to a length of $4N=128$. The result of the $4N$-point DFT is a sampled version of the blue solid line, the FTD of $x\_{win}[n]$, from which the inter frequency sampling distance equals $2\pi/128$. This DFT result is depicted by red spots in the figure. The underlying FTD of the length $N$ windowed signal $x\_{win}[n]$ is sampled with a finer grid and the position of the phasor peaks is shown more accurate by the DFT result.
-
 Finally it is important to note that by increasing the zero padding more and more, that is using a DFT which is much larger than the $N$ samples of $x\_{win}[n]$, we can make the sampling grid of the underlying FTD result of $x\_{win}[n]$ finer and finer. However the main lobe width of the underlying Dirichlet function, as depicted by the solid blue line in the figure, can not be reduced by zero padding. The smearing out behavior, or the resolution of the spectral content of the underlying signal $x[n]$, can only be reduced by increasing the window length $N$, thus taking more samples of the original signal $x[n]$ into account for the calculation of the DFT.
-
 </div>
 </div>
 
@@ -1361,16 +1279,12 @@ Finally it is important to note that by increasing the zero padding more and mor
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 The frequency content of the sinusoidal signal $x[n]=\sin(n \cdot \frac{\pi}{2})$ contains two peaks representing the two phasor frequencies. Reason out in which region you can find these two peaks for a 6-point DFT of $x[n]$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The phasor frequencies are located at the frequencies $\theta = \pm \frac{\pi}{2}$.
 The number of samples in one period of $x[n]$ is 4. Because of the fact that 6 is not a 4-fold, the phasor peaks will be smeared out. The inter sample distance for the 6-point DFT domain is $\frac{2\pi}{6}= \frac{\pi}{3}$. Thus the phasor frequency $\theta = \frac{\pi}{2}$ is in between the frequency indices $k=1$ and $k=2$.
 The phasor frequency $\theta = -\frac{\pi}{2}$ is in between the frequency indices $k=-1$ and $k=-2$, which becomes, by mod(6) counting, in between the frequency indices $k=4$ and $k=5$.
-
 </div>
 </div>
 
@@ -1451,14 +1365,11 @@ In general the use of a length $N$ DFT for a signal of infinite duration causes 
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 The $N$-point DFT of an infinite length signal is always too short in order to capture all signal samples. As a result there will always be a mismatch between the FTD and the DFT frequency samples. In this example first calculate the FTD $X(e^{j\theta})$ of a signal which consists of 4 samples
 $x[n]=\delta[n]+\delta[n-1]+\delta[n-2] +\delta[n-3$.
 Then calculate a too short DFT of length 3 and show that this 3-point DFT result is not a sampled version of this FTD. Finally show that the 4-point DFT is a valid sampled version of the FTD.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 $$
 X(e^{j\theta}) = \sum_{n=0}^{3} e^{-jn \theta} = \frac{\sin(2 \theta)}{\sin (\frac{1}{2} \theta)} \cdot e^{-j\frac{3}{2} \theta}
 $$
@@ -1469,7 +1380,6 @@ X_p[k]= \sum_{n=0}^{N-1} e^{-j\frac{2\pi}{N} k n} = N \delta [k \text{mod}(N)]
 $$
 Thus for $N=3$ we have $X_p[k]=3 \delta [k \text{mod}(3)]$ and for $N=4$ the result is
 $X_p[k]=4 \delta [k \text{mod}(4)]$. Besides the FTD results in the figure below, it also shows the 3-point DFT result (blue dots in figure at the top), which is clearly not a sampled version of the FTD, while the 4-point DFT result (red dots in the figure at the bottom) is a sampled version of the FTD.
-
 <div style="max-width: 500px; margin: auto">
   <figure>
     <img
@@ -1481,11 +1391,11 @@ $X_p[k]=4 \delta [k \text{mod}(4)]$. Besides the FTD results in the figure below
     </figcaption>
   </figure>
 </div>
-
 </div>
 </div>
 
 
+<br></br>
 
 ## DFT for continuous time signals
 In practice the DFT, or its efficient version the FFT, is often used to calculate the frequency content of (non periodic) continuous time signals. This will always result in an approximation from which the various causes of errors are shown for all intermediate steps in Fig. 17.
@@ -1527,6 +1437,7 @@ This equation reflect a fundamental property which implies that the time-bandwid
 \\
 A very efficient implementation of the DFT is the so called Fast Fourier Transform, abbreviated as FFT. Together with the convolution property this is the main reason for the existence of the DFT.
 -->
+<br></br>
 
 ## Summary
 
@@ -1548,7 +1459,7 @@ $$
 
 <b><u> DFT properties: </u></b>
 <ul>
-<li> <u>DFT summation property:</u> With twiddle factor $W\_N=e^{j\frac{2 \pi}{N}}$
+<li> <u>DFT summation property:</u> With twiddle factor $W_N=e^{j\frac{2 \pi}{N}}$
 
 $$
 \boxed{
@@ -1559,7 +1470,7 @@ $$
 </li>
 <li> <u> Linearity:</u>
 $$
-a x\_{p,1}[n]+bx_{p,2}[n] \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm} a X\_{p,1}[k] + b X\_{p,2}[k]
+a x_{p,1}[n]+bx_{p,2}[n] \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm} a X_{p,1}[k] + b X_{p,2}[k]
 $$
 </li>
 <li> <u> Circular shift: </u>
@@ -1570,25 +1481,25 @@ $$
 </li>
 <li> <u> Circular convolution: </u>
 $$
-x\_p[n] \circledast h\_p[n] =\sum\_{i=0}^{N-1} x\_p[i] h\_p[n-i]= \sum\_{i=0}^{N-1} x\_p[n-i] h\_p[i]
-\hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm}  X\_p[k] \cdot H\_p[k]
+x_p[n] \circledast h_p[n] =\sum_{i=0}^{N-1} x_p[i] h_p[n-i]= \sum_{i=0}^{N-1} x_p[n-i] h_p[i]
+\hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm}  X_p[k] \cdot H_p[k]
 $$
 $$
-x_p[n] \cdot h\_p[n] \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm}  X\_p[k] \circledast H\_p[k]
+x_p[n] \cdot h_p[n] \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm}  X_p[k] \circledast H_p[k]
 $$
 </li>
 
 <li> <u>Complex conjugation:</u>
 $$
-x\_p^\ast[n] \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm} X\_p^\ast[N-k]
+x_p^\ast[n] \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm} X_p^\ast[N-k]
 $$
 $$
-x[n] \text{ real } \Rightarrow \text{ } X\_p[k]=X^\ast\_p[N-k]
+x[n] \text{ real } \Rightarrow \text{ } X_p[k]=X^\ast_p[N-k]
 $$
 </li>
 <li> <u>Preserve energy (Parceval):</u>
 $$
-\sum\_{n=0}^{N-1} |x\_p[n]|^2 = \sum\_{k=0}^{N-1} | X\_p[k]|^2
+\sum_{n=0}^{N-1} |x_p[n]|^2 = \sum_{k=0}^{N-1} | X_p[k]|^2
 $$
 </li>
 </ul>
@@ -1602,17 +1513,17 @@ $$
 <!-- TODO: As depicted in Fig. \ref{Fig:overlapadd}, -->The overlap-add procedure is as follows:
 <ol>
 <li> Split $x[n]$ in length $M \geq 1 (L)$ non-overlapping segments </li>
-<li> Calculate $y\_i[n]=h[n] \star x\_i[n]$ (efficiently with FFT's) </li>
+<li> Calculate $y_i[n]=h[n] \star x_i[n]$ (efficiently with FFT's) </li>
 <li> Add last $L-1$ samples previous segment with first samples current segment</li>
-<li> $y[n]= \sum\_{i=0}^{\infty} y\_i[n-Mi]</li>
+<li> $y[n]= \sum_{i=0}^{\infty} y_i[n-Mi]$</li>
 </ol></li>
 <!-- TODO: As depicted in Fig. \ref{Fig:overlapsave}, -->
 The overlap-save procedure is as follows:
 <ol>
 <li> Split $x[n]$ in length $M \geq L-1$ overlapping segments, overlap $L-1$ </li>
-<li> Calculate $y\_i[n]=h[n] \star x\_i[n]$ (efficiently with FFT's) </li>
-<li> Construct $\tilde{y}\_i[n]$: Discard first $L-1$ samples, last $N=M-L+1$ are correct </li>
-<li> $y[n]= \sum\_{i=0}^{\infty} \tilde{y}\_i[n-Mi]$ </li>
+<li> Calculate $y_i[n]=h[n] \star x_i[n]$ (efficiently with FFT's) </li>
+<li> Construct $\tilde{y}_i[n]$: Discard first $L-1$ samples, last $N=M-L+1$ are correct </li>
+<li> $y[n]= \sum_{i=0}^{\infty} \tilde{y}_i[n-Mi]$ </li>
 </ol>
 </ul>
 
@@ -1626,7 +1537,7 @@ $\Rightarrow$ Artefacts during PE $\Rightarrow$ Use windowing.
 </li>
 
 <li> <u>Signals of finite duration $M \leq N$:</u>
-DFT coefficients sampled version of FTD: $X[k]= X(e^{j\theta})|\_{\theta = k \cdot \frac{2 \pi}{N}}$
+DFT coefficients sampled version of FTD: $X[k]= X(e^{j\theta})\mid_{\theta = k \cdot \frac{2 \pi}{N}}$
 <br>
 <i>Note: For $N>M$:Zero padding with $N-M$ zeros:</i>
 <ul>

@@ -21,6 +21,8 @@ In this section we will describe the reconstruction process of the D-to-C conver
 ## Conceptual video
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/xeW5RyqHVis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br></br>
+
 ## Ideal D-to-C convertor
 Because of the <a href="../../discrete/discretesignalprocessing_sampling_uniqueness">uniqueness issue</a> in the discrete-time domain, the ideal D-to-C convertor makes a choice which frequencies are used for the conversion to the continuous-time domain. For this reason the ideal D-to-C convertor selects only frequencies which are inside the FI.
 
@@ -78,11 +80,9 @@ In Fig. 2 the sequence of input signal samples $x[n]$ is represented in a plot.
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 A continuous-time input signal $x(t)$ is converted to the discrete-time domain samples $x[n]$ with an ideal C-to-D convertor which runs at a sample rate of $f_{s,in}$ [samples/sec]. After that the samples $x[n]$ are converted back to the continuous-time signal $y(t)$ with an ideal D-to-C convertor which runs at a sample rate of $f_{s,out}$ [samples/sec]. The input signal $x(t)$ and the sample rate $f_{s,in}$ are $x(t) = x_1(t) + x_2(t)$, with $x_1(t)= 4 \cos(400 \pi t + \frac{\pi}{4})$, $x_2(t)= 2 \sin (1000 \pi t - \frac{\pi}{3})$ and $f_{s,in}=600$ [samples/sec]. In first instance we choose the sample rate of the D-to-C convertor equal to the sample rate of the C-to-D convertor, thus $f_{s,out} = f_{s,in}=600$ [samples/sec]. After that we change the sample rate of the D-to-C convertor to $f_{s,out}=900$ [samples/sec].
 <br>
 Calculate an expression for the output signal $y(t)$ in both cases.
-
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
@@ -95,11 +95,8 @@ Calculate an expression for the output signal $y(t)$ in both cases.
   </figure>
 </div>
 <br>
-
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The first steps are the same of the last example of the previous subsection. The largest absolute frequency of the FI after the C-to-D convertor equals $f_{s,in}/2=300$ [Hz]. Thus the frequency of $x_1(t)$ (200 [Hz]) is converted inside the FI, at relative frequency $\frac{2\pi}{3}$, while the frequency of $x_2(t)$ (500 [Hz]) is converted outside the FI, at relative frequency $\frac{5\pi}{3}$. After mapping back this frequency inside the FI, into relative frequency $\frac{\pi}{3}$, we obtain the following mathematical description of the sequence of discrete-time samples $x[n]$:
 $$
 x[n]= 4 \cos \left(\frac{2 \pi}{3}n + \frac{\pi}{4}\right) - 2 \sin\left(\frac{\pi}{3} n + \frac{\pi}{3} \right)
@@ -114,10 +111,10 @@ $$
 y(t) = 4 \cos \left(600 \pi t + \frac{\pi}{4}\right) - 2 \sin\left(300 \pi t + \frac{\pi}{3}\right).
 $$
 Thus both frequencies are changed. The frequency of $x_2(t)$ has changed because of aliasing while above that both frequencies of $x_1(t)$ and $x_2(t)$ have changed because of the fact that the sample rates of C-to-D and D-to-C are different.
-
 </div>
 </div>
 
+<br></br>
 
 ## Reconstruction D-to-C convertor based on samples $x[n]$
 The D-to-C convertor constructs a continuous-time signal $x(t)$, based on the discrete-time samples $x[n]$.
@@ -163,6 +160,8 @@ p(t) =
 $$
 
 which leads to the conversion as shown in the right-hand side of Fig. 3. The signal samples are interpolated in a linear way. The reconstructed continuous-time signal looks like a 'triangular-like' approximation of the sinusoidal signal as depicted (in red) in the left-hand side figure.
+
+<br></br>
 
 ## Sampling theorem
 From the previous section it follows that for a system as depicted in Fig. 1, with $f\_{s,in}=f\_{s,out}=f\_s$, the output $y(t)$ of the D-to-C convertor is equal to input $x(t)$ of the ideal C-to-D convertor if the continuous-time signal $x(t)$ contains no frequencies higher than $f_{max}$ and the sampling frequency $f_s$ is larger than $2 \cdot f\_{max}$. This results into the following important <b>sampling theorem</b>, which is usually assigned to Shannon, who introduced this theorem around 1940. Almost at the same time Kotelnikov did the same. However some years before the theoretical basis was created by E.T. and J.A. Whittaker. This theorem states:

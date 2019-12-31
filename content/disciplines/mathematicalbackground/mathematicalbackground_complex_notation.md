@@ -11,7 +11,7 @@ type = "docs"       # Do not modify.
 [menu.mathematicalbackground]
   name = "Complex numbers"
   parent = "Complex numbers and phasors"
-  weight = 3
+  weight = 13
 
 +++
 
@@ -20,6 +20,8 @@ In this section we will first introduce the set of complex numbers in two differ
 Then we will introduce the concept of complex conjugation, which is important to obtain the definition of the length of a complex vector.
 Furthermore we will introduce calculation rules for complex numbers, which are defined in such a way that these rules are generalizations of the calculation rules for real numbers.
 Finally we show how the addition of two complex numbers can be visualized, which leads to the vectorial addition rule.
+
+<br></br>
 
 ## Polar and Cartesian representation
 ### Polar notation
@@ -103,12 +105,9 @@ $$
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Convert $z = 4 e^{j\frac{3 \pi}{4}}$ to Cartesian notation $z=x+ j\cdot y$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 By using the <a href="../mathematicalbackground_complex_euler">Euler equations</a> we obtain:
 \begin{eqnarray*}
 {4 e^{j\frac{3 \pi}{4}}} &=& 4\cos\left(\frac{-3\pi}{4}\right) + j 4\sin\left(\frac{-3\pi}{4}\right) \\
@@ -122,12 +121,9 @@ By using the <a href="../mathematicalbackground_complex_euler">Euler equations</
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Convert $z=-\frac{3}{2}\sqrt{3} + j \frac{3}{2}$ to polar notation $z = r e^{j\theta}$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 First calculate the length $r$ of the complex vector $z$ as follows:
 $$
 r = |z|  =\sqrt{\left(-\frac{3}{2}\sqrt{3}\right)^2 + \left(\frac{3}{2}\right)^2}
@@ -143,10 +139,10 @@ Concluding we obtain:
 $$
 z ={-\frac{3}{2}\sqrt{3}} + j \frac{3}{2} = {3 e^{j\frac{5}{6}\pi}}
 $$
-
 </div>
 </div>
 
+<br></br>
 
 ## Mathematical operations
 Similar to each extension from one set of numbers to a more general set of numbers, the calculation rules for complex numbers are defined in such a way that these rules generalize the calculation rules of real numbers.
@@ -218,12 +214,9 @@ with $r=r_1 \cdot r_2$ and $\theta=\theta_1 + \theta_2$.
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Use the Cartesian notation to find the result of the multiplication of two arbitrary complex numbers.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 When using the Cartesian notation the result becomes as follows:
 $$\begin{eqnarray}
 z & = & z_1 \cdot z_2 = \left( x_1 + j y_1 \right) \cdot \left( x_2 + j y_2 \right) \newline
@@ -231,7 +224,6 @@ z & = & z_1 \cdot z_2 = \left( x_1 + j y_1 \right) \cdot \left( x_2 + j y_2 \rig
 &=& (x_1 x_2 - y_1 y_2) + j \cdot( x_1 y_2 + x_2 y_1) \newline
 &=& \Re e \{ z \} + j \cdot \Im m \{ z \}
 \end{eqnarray}$$
-
 </div>
 </div>
 
@@ -244,12 +236,9 @@ with $r=\frac{r_1}{r_2}$ and $\theta=\theta_1 - \theta_2$.
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Use the Cartesian notation to find the result of the division of two arbitrary complex numbers.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 When using the Cartesian notations $z_1 = x_1 + j y_1$ and $z_2=x_2 + j y_2$ for dividing two complex numbers the main problem is that there is a complex number in the denominator. So we have to find a way to get rid of this complex number in the denominator. Now we have seen before that when multiplying a complex number by its complex conjugate the result is real. We can use this fact to rewrite the original fraction of two complex numbers as a fraction of a complex number divided by a real number. This strategy goes as follows:
 $$
 z = \frac{z_1}{z_2} = \frac{z_1}{z_2} \cdot 1 = \frac{z_1}{z_2} \cdot \frac{z_2^*}{z_2^*} =
@@ -263,8 +252,5 @@ z & = & \frac{z_1}{z_2} = \frac{z_1 \cdot z_2^*}{|z_2|^2} =
 &=& \left ( \frac{x_1 x_2 + y_1 y_2}{x_1^2 + y_1^2} \right) + j \left (
 \frac{y_1 x_2 - x_1 y_2}{x_1^2 + y_1^2} \right ) = \Re e \{ z \} + j \Im m \{ z \}
 \end{eqnarray} $$
-
-
-
 </div>
 </div>

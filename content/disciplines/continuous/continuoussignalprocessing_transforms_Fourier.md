@@ -18,11 +18,15 @@ type = "docs"  # Do not modify.
 
 In the <a href="../continuoussignalprocessing_transforms_spectrum">previous module</a> we studied the spectral behavior of the sum of sinusoidal signals. In this section we will study signals which are composed of a sum of harmonic related sine waves.
 
+<br></br>
+
 ## Introductory video
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/8XKqEFoVY1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br></br>
+
 ## Periodic signals
-In this subsection we will show that any periodic signal with a, so called, Fundamental period $T_0$ can be composed as the sum of sinusoidal signals from which each of these frequencies is related to the, so called, Fundamental frequency $F_0 = 1/T_0$ as an integer multiple. In order to show this Fig. 4 depicts a signal $y_2(t)$ which is composed of the sum of two sinusoidal signals $x_1(t)$ of frequency $f_1 = 6$ [Hz] and $x_2(t)$ of frequency $f_2 = 2$ [Hz]. From this figure it follows that $y_2(t)$ is periodic and we can measure that the period equals $T_0 = 1/F_0 = 0.5$ [sec]. The reason for this periodicity of signal $y_2(t)$ is that exactly three periods of $x_1(t)$ and one period of $x_2(t)$ fit into one period $T_0$ of signal $y_2(t)$. Thus after each $T_0 = 0.5$ [sec] the same composition of the signals $x_1(t)$ and $x_2(t)$ appears in the signal $y_2(t)$.
+In this subsection we will show that any periodic signal with a, so called, Fundamental period $T_0$ can be composed as the sum of sinusoidal signals from which each of these frequencies is related to the, so called, Fundamental frequency $F_0 = 1/T_0$ as an integer multiple. In order to show this Fig. 1 depicts a signal $y_2(t)$ which is composed of the sum of two sinusoidal signals $x_1(t)$ of frequency $f_1 = 6$ [Hz] and $x_2(t)$ of frequency $f_2 = 2$ [Hz]. From this figure it follows that $y_2(t)$ is periodic and we can measure that the period equals $T_0 = 1/F_0 = 0.5$ [sec]. The reason for this periodicity of signal $y_2(t)$ is that exactly three periods of $x_1(t)$ and one period of $x_2(t)$ fit into one period $T_0$ of signal $y_2(t)$. Thus after each $T_0 = 0.5$ [sec] the same composition of the signals $x_1(t)$ and $x_2(t)$ appears in the signal $y_2(t)$.
 
 <div style="max-width: 700px; margin: auto">
   <figure>
@@ -36,7 +40,7 @@ In this subsection we will show that any periodic signal with a, so called, Fund
   </figure>
 </div>
 
-The figure also shows another signal $y_3(t)$ which is composed of the sum three sinusoidal signals. The same sinusoidal signals $x_1(t)$, $x_2(t)$ and a new sinusoidal signal $x_3(t)$, with frequency $f_3 = 1.2$ [Hz]. Again it follows from the figure that $y_3(t)$ is periodic but now we can measure that the period equals $T_0 = 1/F_0 = 2.5$ [sec]. This is because of the fact that exactly fifteen periods of $x_1(t)$, five periods of $x_2(t)$ and three periods of $x_3(t)$ fit into one period $T_0$ of signal $y_3(t)$. Mathematically we can calculate $F_0 = 1/T_0$ of $y_3(t)$ as the Greatest Common Divisor (gcd) of the frequencies from the individual sinusoidal components, since $F_0 = \text{gcd}\\{f_1, f_2, f_3\\} = \text{gcd}{6, 2, 1.2} = 0.4$ [Hz]. The greatest common divisor of a set of numbers is the largest number that all numbers of that set can be _fully_ divided by. From this it follows that the Fundamental period of $y_3(t)$ equals $T_0 = 1/F_0 = 2.5$ [sec]. This leads to the following general statement:
+The figure also shows another signal $y_3(t)$ which is composed of the sum three sinusoidal signals. The same sinusoidal signals $x_1(t)$, $x_2(t)$ and a new sinusoidal signal $x_3(t)$, with frequency $f_3 = 1.2$ [Hz]. Again it follows from the figure that $y_3(t)$ is periodic but now we can measure that the period equals $T_0 = 1/F_0 = 2.5$ [sec]. This is because of the fact that exactly fifteen periods of $x_1(t)$, five periods of $x_2(t)$ and three periods of $x_3(t)$ fit into one period $T_0$ of signal $y_3(t)$. Mathematically we can calculate $F_0 = 1/T_0$ of $y_3(t)$ as the Greatest Common Divisor (gcd) of the frequencies from the individual sinusoidal components, since $F_0 = \text{gcd}\\{f_1, f_2, f_3\\} = \text{gcd}\\{6, 2, 1.2\\} = 0.4$ [Hz]. The greatest common divisor of a set of numbers is the largest number that all numbers of that set can be _fully_ divided by. From this it follows that the Fundamental period of $y_3(t)$ equals $T_0 = 1/F_0 = 2.5$ [sec]. This leads to the following general statement:
 
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>A real signal $x(t)$, which consists of a DC component and a sum of $N$ different frequencies $f_1, f_2,\ldots, f_N$, with $f_1 &lt f_2 &lt \ldots &lt f_N$, is a periodic signal with Fundamental period $T_0 = 1/F_0$ and has a Fundamental frequency $F_0 = \text{gcd}\{f_1,f_2,\ldots,f_N\} $.</i></div>
 
@@ -49,23 +53,17 @@ in which the complex weights $\alpha_k$ represent the amplitude and phase of the
 
 <div class="example">
 <h4> Example </h4>
-
 $$
 x(t) = 2+2\cos\left(102\pi t-\frac{\pi}{8}\right) - \sin\left(238\pi t +\frac{\pi}{3}\right) + 3\cos\left(340\pi t+\frac{\pi}{2}\right)
 $$
 Determine if the above signal is periodic and if so calculate the Fundamental frequency $F_0=1/T_0$ and give the general expression for $x(t)$ as in the above equation and make a spectral plot of $x(t)$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The signal consists out of a DC component and a sum of 3 sinusoids with frequencies $f_1=51$, $f_2=119$ and $f_3=170$ [Hz]. The Fundamental frequency can be determined as $F_0 = \text{gcd}\{ 51, 119, 170\} = 17$ [Hz]. Therefore $x(t)$ is a periodic signal with Fundamental period $T_0=1/F_0=1/17$ [sec]. The relationships between the three frequencies and the Fundamental frequencies are $f_1=51=3\cdot F_0$, $f_2=119=7\cdot F_0$ and $f_3=170=10\cdot F_0$ [Hz].
-
 The highest frequency contains $10$ times the Fundamental frequency and therefore $x(t)$ can be written as
-
 $$
 x(t) = \sum_{k=-10}^{10} \alpha_k e^{j2\pi kF_0 t}.
 $$
-
 By using <a href="../../mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> we can write $x(t)$ as
 $$
 \begin{split}
@@ -74,7 +72,6 @@ x(t)
 &\qquad + e^{-j\frac{\pi}{8}}e^{j2\pi 51t} + \frac{-1}{2j}e^{j\frac{\pi}{3}}e^{j2\pi 119t}  + \frac{3}{2}e^{j\frac{\pi}{2}}e^{j2\pi 170t}.
 \end{split}
 $$
-
 When comparing the above two equations, the values of $\alpha_k$ can be determined as
 $$
 \alpha_k =
@@ -89,8 +86,7 @@ e^{j\frac{\pi}{8}}=\alpha_3^\ast,   &\text{for }k=-3\\
 0.      &\text{otherwise}
 \end{cases}
 $$
-The spectral plot of $x(t)$ is given in Fig. 5. The x-axis contains both the frequency as the integer values of $k$, which are the frequency divided by the Fundamental frequency.
-
+The spectral plot of $x(t)$ is given in Fig. 2. The x-axis contains both the frequency as the integer values of $k$, which are the frequency divided by the Fundamental frequency.
 <div style="max-width: 700px; margin: auto">
   <figure>
     <img
@@ -102,10 +98,10 @@ The spectral plot of $x(t)$ is given in Fig. 5. The x-axis contains both the fre
     </figcaption>
   </figure>
 </div>
-
 </div>
 </div>
 
+<br></br>
 
 ## Fourier series synthesis
 In the previous subsection we have seen that every periodic signal $x(t)$, with Fundamental period $T_0 = 1/F_0$, can be written as a sum of weighted harmonic related phasor components. In theory the summation can contain an infinite amount of components which leads to the following Fourier series expansion:
@@ -169,8 +165,6 @@ It is obvious that the approximation becomes better and better for larger $N$.
 <div class="example">
 <h4> Example </h4>
 Given the following periodic signal $x(t)$, evaluate the spectral weights $\alpha_k$. Furthermore, show the approximated periodic signal $x(t)$ when using only up to the first 5 terms.
-
-
   <figure style="max-width: 600px; margin: auto">
     <img
       src="/../files/7.Images/continuous/transforms/block_ideal.svg"
@@ -180,18 +174,13 @@ Given the following periodic signal $x(t)$, evaluate the spectral weights $\alph
       Ideal periodic block wave $x(t)$.
     </figcaption>
   </figure>
-
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 From the figure it follows that $x(t)$ is a periodic signal with period $T_0=1/F_0=4$ [sec]. In most cases it is convenient to evaluate first the DC component $\alpha_0$ of the periodic signal (which can be regarded as just the average value of the signal). The DC component can be calculated simply by averaging as
 $$
 \alpha_0 = \frac{1}{T_0}\int_0^{T_0} x(t)\mathrm{d}t = \frac{1}{4} \bigg\{ \int_0^2 2\mathrm{d}t + \int_2^4 0\mathrm{d}t\bigg\} = \frac{1}{4}\{ 4+0\} = 1.
 $$
-
 Furthermore with $\omega_0=2\pi F_0 = \frac{2\pi}{4} = \frac{\pi}{2}$, we obtain for $\alpha_k$
-
 $$
 \begin{split}
 \alpha_k
@@ -204,7 +193,6 @@ $$
 &= \frac{1-(-1)^k}{k\pi}e^{-j\frac{\pi}{2}}.
 \end{split}
 $$
-
 Thus except for $k=0$ all Fourier coefficients with even index $k$ are equal to zero. The Fourier coefficients with odd indices are:
 $$
 \alpha_1 = \alpha_{-1}^\ast = \frac{2}{\pi}e^{-j\frac{\pi}{2}},
@@ -212,9 +200,7 @@ $$
 \quad \alpha_5 = \alpha_{-5}^\ast = \frac{2}{5\pi}e^{-j\frac{\pi}{2}},
 \quad \text{etc.}
 $$
-
 When approximating this periodic signal with the first $N$ terms we obtain
-
 $$
 \begin{split}
 \hat{x}(t)
@@ -223,9 +209,7 @@ $$
 &= 1 + \frac{4}{k\pi}\sum_{k=1,3,5,\ldots}^N \sin\left(k\frac{\pi}{2}t\right).
 \end{split}
 $$
-
 The figure below gives the approximation of the block wave for an increased number of Fourier coefficients, where $k$ is limited between $-N$ and $N$.
-
 <div style="max-width: 700px; margin: auto">
   <figure>
     <img
@@ -237,14 +221,17 @@ The figure below gives the approximation of the block wave for an increased numb
     </figcaption>
   </figure>
 </div>
+</div>
+</div>
 
-</div>
-</div>
+<br></br>
 
 ## Fourier series examples
 The above example should give you some intuition on how the Fourier series works. For a better clarification of the subject matter the following screencast video will give some more examples
 
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/DETTPI_R0SY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br></br>
 
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos. These exercises also include topics relating to the spectrum of sinusoidal signals.
@@ -255,10 +242,8 @@ In this section several exercises are available, including their answers. The ex
 <div class="example">
 <button class="collapsible">Test your knowledge (click to expand)</button>
 <div class="content">
-
 <button class="collapsible">Question 1</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
    Define the Fundamental Frequency of the signal $x(t) = x_1 + x_2 + x_3$, where
    $x_1= 4 + \sin(500\pi t - \frac{\pi}{3})$, $x_2 = \cos(2.8\pi t - \frac{\pi}{8})$ and $x_3 = \sin(2\pi\cdot 22t - \frac{\pi}{4})$.
@@ -273,12 +258,9 @@ In this section several exercises are available, including their answers. The ex
          <label>None of the answers is correct.</label><br/>
  </div>
  </div>
- <br>
-
-
+ <br></br>
 <button class="collapsible">Question 2</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
    With $F_0 = 1/T_0$ and integer $k=0,\pm 1, \pm 2 , \ldots$, what holds for the following expression?
    $\int_{-T_0/2}^{T_0/2}e^{jk2\pi F_0 t}dt = ?$
@@ -296,8 +278,7 @@ In this section several exercises are available, including their answers. The ex
        <label>None of the answers is correct.</label><br/>
  </div>
 </div>
-<br>
-
+<br></br>
 <button class="collapsible">Question 3</button>
 <div class="content">
 <div class="scp-quizzes-data quiz">
@@ -317,12 +298,9 @@ In this section several exercises are available, including their answers. The ex
       <label>None of the answers is correct.</label><br/>
  </div>
 </div>
-<br>
-
-
+<br></br>
 <button class="collapsible">Question 4</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
       With $F_0 = 1/T_0$ and positive integers $k$ and $l$, when does the following hold?
       $\int_{T_0/2}^{T_0/2} \cos(k\cdot 2\pi F_0 t) \cdot \cos(l\cdot 2\pi F_0 t) \neq 0$
@@ -338,11 +316,9 @@ In this section several exercises are available, including their answers. The ex
       <label>$k\neq l$</label><br/>
  </div>
 </div>
-<br>
-
+<br></br>
 <button class="collapsible">Question 5</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
   Given the following periodic signal $x(t)$ and considering the fundamental frequency $F_0$, which of the following figures represent the spectral plot?
   $x(t) = 3 + 0.5\cos(7.8\pi t + \frac{\pi}{4}) + 2\sin(130\pi t)$
@@ -386,8 +362,6 @@ In this section several exercises are available, including their answers. The ex
  </div>
 </div>
 <br>
-
-
 </div>
 </div>
 
@@ -408,6 +382,8 @@ Download the answers <a href="/../files/3.Exercises/Answers/2.SPAFS-answers.pdf"
 
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
 
+<br></br>
+
 ## MATLAB lab
 Accompanied to this modules are some exercises in MATLAB, which will test your knowledge of the module and will help improve your MATLAB skills.
 These lab exercises also include topics relating to the spectrum of sinusoidal signals.
@@ -421,6 +397,8 @@ These lab exercises also include topics relating to the spectrum of sinusoidal s
 
 ### MATLAB demo
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/UiN1Wom_F5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br></br>
 
 ## Summary
 <ul>

@@ -35,10 +35,12 @@ enableGitInfo = true
 defaultContentLanguage = "en"
 hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
+defaultMarkdownHandler = "goldmark"
 
 paginate = 10  # Number of items per page in paginated lists.
 enableEmoji = true
-footnotereturnlinkcontents = "<sup>^</sup>"
+#footnotereturnlinkcontents = "<sup>^</sup>"
+footnotereturnlinkcontents = " "
 ignorefiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "to_add"]
 preserveTaxonomyNames = true
 
@@ -53,6 +55,38 @@ preserveTaxonomyNames = true
 	angledQuotes = false
 	latexDashes = true
   extensions = ["backslashLineBreak"]
+
+
+[markup.goldmark]
+  [markup.goldmark.extensions]
+    definitionList = true
+    footnote = true
+    linkify = true
+    strikethrough = true
+    table = true
+    taskList = true
+    typographer = true
+  [markup.goldmark.parser]
+    attribute = true
+    autoHeadingID = true
+  [markup.goldmark.renderer]
+    hardWraps = false
+    unsafe = true
+    xHTML = false
+[markup.highlight]
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true
+  style = "monokai"
+  tabWidth = 4
+[markup.tableOfContents]
+  endLevel = 4
+  ordered = false
+  startLevel = 1
 
 [imaging]
   resampleFilter = "lanczos"

@@ -36,15 +36,12 @@ $$ x[n] = x(t)|\_{t = n \cdot T_s}= A \cos (\omega \cdot n \cdot T_s + \phi) = A
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 The left hand side of Fig. 1 shows two periods of the continuous-time signal $x(t)=\cos ( 400 \pi t)$. This continuous-time signal is sampled with an ideal C-to-D convertor, which runs at a sampling frequency of $f_s=1000$ [samples/sec]. Evaluate and plot the samples $x[n]$ is the discrete-time domain.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
   The samples $x[n]$ can be evaluated as follows:
   $$ x[n] = \cos ( 400 \pi t)\mid_{t=n / f_s} = \cos (0.4 \pi n)= \ldots, \overset{\overset{n=0}{\downarrow}}{1}, 0.3, -0.8, -0.8, 0.3, 1, \ldots $$
 as depicted at the right hand side of Fig. 1.
-
 Usually we represent the set of numbers $x[n]$ in a plot as depicted at the right hand side of Fig. 2, where  the horizontal axis denotes the integer index $n$ and the vertical axis represents the sample value $x[n]$.
 </div>
 </div>
@@ -72,6 +69,8 @@ Usually we represent the set of numbers $x[n]$ in a plot as depicted at the righ
     </figcaption>
   </figure>
 </div>
+
+<br></br>
 
 ## Absolute and relative frequency
 
@@ -124,11 +123,9 @@ From this equation it follows that the <a href="../../continuous/continuoussigna
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 In this example we convert the 200 [Hz] continuous-time signal $x(t) = \cos (400 \pi t)$ to the discrete-time domain signal samples $x[n]$ with an ideal C-to-D convertor which runs at a sample rate of $f_s=1000$ [samples/sec].
 <br>
 Make a plot of the frequency content of both the continuous-time signal $x(t)$ and the discrete-time signal samples $x[n]$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
   By using the <a href="../../mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> equations we can write the input signal of the C-to-D convertor as
@@ -138,7 +135,6 @@ Make a plot of the frequency content of both the continuous-time signal $x(t)$ a
   By using $\theta = 2 \pi \frac{f}{f_s}$, the output signal samples of the C-to-D convertor can mathematically be described as:
   $$ x[n] = \cos (0.4 \pi n) = \frac{1}{2} e^{j0.4 \pi n} + \frac{1}{2} e^{-j0.4 \pi n} $$
   In a similar way as with the absolute frequency plot, we can derive the relative frequency plot form this <a href="../../mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> equation, which results in the plot as depicted in the lower part of the figure below.
-
   <div style="max-width: 600px; margin: auto">
     <figure>
       <img
@@ -150,9 +146,10 @@ Make a plot of the frequency content of both the continuous-time signal $x(t)$ a
       </figcaption>
     </figure>
   </div>
+</div>
+</div>
 
-</div>
-</div>
+<br></br>
 
 ## Uniqueness issue
 
@@ -179,12 +176,9 @@ So we have found two different ways to represent the spectral information of the
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Plot the <a href="../../continuous/continuoussignalprocessing_transforms_spectrum">spectral representation</a> of the sequence of samples which are represented by $x[n]=2 \cos(0.4 \pi n + \frac{\pi}{4})$ in the range $-3 \pi < \theta < 3 \pi$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 By using <a href="../../mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> we can write $x[n]$ as
 $$ x[n] = e^{j{\color{red}{(0.4 \pi n + \frac{\pi}{4})}}} + e^{-j{\color{blue}{(0.4 \pi n + \frac{\pi}{4})}}} \mbox{ } \left( = 2 \cos \left( 0.4 \pi n + \frac{\pi}{4}\right) \right).$$
 So the spectral plot contains two bars: One at frequency $0.4 \pi$ (in red) and one at $-0.4 \pi$ (in blue) as depicted in the Figure below.
@@ -202,10 +196,8 @@ x[n] &=& e^{j{\color{red}{(-1.6 \pi n + \frac{\pi}{4})}}} + e^{-j{\color{blue}{(
 \mbox{ } \left( = 2\cos \left(1.6 \pi n - \frac{\pi}{4}\right) \right)
 \end{eqnarray}
 Note that for this last case the phase has changed from sign.
-
 All these possibilities are depicted in the Figure below.
 From this Figure it follows that the <a href="../../continuous/continuoussignalprocessing_transforms_spectrum">spectral representation</a> of $x[n]$ is indeed repeated every $2\pi$ outside the period $-\pi < \theta < \pi$.
-
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
@@ -228,12 +220,9 @@ In this subsection we will show by an example that different continuous-time sig
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 In this example we convert two different continuous-time signals $x_1(t)=\cos (400 \pi t)$ and ${\color{red}{x_2(t)}} = \cos (2400 \pi t)$ with a C-to-D convertor, which runs at a sample rate of $f_s=1000$ [samples/sec], to the discrete-time domain. Calculate the sequence of samples $x_1[n]$ and $x_2[n]$ for two periods and make a plot which shows $x_1(t), {\color{red}{x_2(t)}}$ and the samples of $x_1[n]$ and $x_2[n]$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The converted signals are as follows:
 \begin{eqnarray}
 x_1[n] &=& \cos \left( 400 \pi \cdot \frac{1}{1000} n \right)\newline
@@ -241,11 +230,9 @@ x_1[n] &=& \cos \left( 400 \pi \cdot \frac{1}{1000} n \right)\newline
 x_2[n] &=& \cos \left( 2400 \pi \cdot \frac{1}{1000} n \right) \newline
 &=& \cos (2.4 \pi n) = {\color{blue}{\ldots, 1, 0.3, -0.8, -0.8, 0.3, 1, \ldots }}
 \end{eqnarray}
-
 Thus the samples which result from the C-to-D conversion of the two different continuous-time signals $x_1(t)$ and ${\color{red}{x_2(t)}}$ result in the same sequence of samples $x_1[n]=x_2[n]=x[n]={\color{blue}{\ldots, 1, 0.3, -0.8, -0.8, 0.3, 1, \ldots }}$.
 <br>
 The Figure below shows a plot with two periods of the two different continuous-time $x_1(t)$ (in black) and ${\color{red}{x_2(t)}}$ (in red) and the resulting discrete-time signal samples $x[n]={\color{blue}{\ldots, 1, 0.3, -0.8, -0.8, 0.3, 1, \ldots }}$ (in blue).
-
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
@@ -257,7 +244,6 @@ The Figure below shows a plot with two periods of the two different continuous-t
     </figcaption>
   </figure>
 </div>
-
 </div>
 </div>
 
@@ -294,16 +280,13 @@ We have seen that the relative frequency representation of a discrete-time signa
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 In this example we convert the continuous-time signal $x(t) = x_1(t) + x_2(t)$, which consists of frequencies 200 [Hz] and 500 [Hz] with
 $$
 x_1(t)= 4 \cos(400 \pi t + \frac{\pi}{4}) \mbox{  and  } x_2(t)= 2 \sin (1000 \pi t - \frac{\pi}{3}),
 $$
 to the discrete-time domain samples $x[n]=x_1[n]+x_2[n]$, by an ideal C-to-D convertor which runs at a sample rate of $f_s=600$ [samples/sec]. Give a plot of the <a href="../../continuous/continuoussignalprocessing_transforms_spectrum">frequency representation</a> of the continuous-time signal $x(t)$ and give also a plot of the <a href="../../continuous/continuoussignalprocessing_transforms_spectrum">frequency representation</a> of the discrete-time signal $x[n]$ in the Fundamental Interval (FI).
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The spectral components of the continuous-time domain signal $x(t)$ are depicted in the upper part of the Figure below.
 This Figure also shows that frequencies smaller than 300 [Hz] map into the FI.
 So the result of the C-to-D conversion of $x_1(t)$ is as follows:
@@ -326,7 +309,6 @@ x_2[n]&=& 2 \sin\left(\frac{5 \pi}{3} n - \frac{\pi}{3} \right) \newline
 Thus the frequency component of $x_2(t)$ is converted outside the FI into relative frequency $\frac{5 \pi}{3}$. When mapping this component back inside the FI it results in the relative frequency $\frac{\pi}{3}$ and the phase changes from sign.
 The lower part of the Figure below shows the spectral components.
 The components outside the FI, which are periodic components, are denoted in dashed lines.
-
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img

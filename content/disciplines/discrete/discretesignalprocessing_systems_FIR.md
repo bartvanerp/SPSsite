@@ -27,12 +27,10 @@ From this equation it follows that each new output sample $y[n]$ is equal to the
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Calculate and plot the 3-point running averaged output samples $y[n]$ when the input sequence of samples is given by:
 $$
 x[n]=2 \delta[n] + 4 \delta[n-1] + 6 \delta[n-2] + 4 \delta[n-3] + 2 \delta[n-4]
 $$
-
 <button class="collapsible">Show solution</button>
 <div class="content">
 The DE of a 3-point running average filter is as follows:
@@ -58,8 +56,6 @@ $$
 y[n]= \frac{2}{3}\delta[n] + 2 \delta[n-1] + 4 \delta[n-2] + \frac{14}{3} \delta[n-3] + 4 \delta[n-4] +2 \delta[n-5] + \frac{2}{3} \delta[n-6]
 $$
 which is depicted in the figure below.
-
-
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
@@ -71,7 +67,6 @@ which is depicted in the figure below.
     </figcaption>
   </figure>
 </div>
-
 </div>
 </div>
 
@@ -99,6 +94,8 @@ $$
 
 Further on we will see that this is the DE of a so-called Finite Impulse Response (FIR) filter.
 
+<br></br>
+
 ## Basic building blocks
 When realizing or implementing a discrete-time filter, it follows from the general DE of an FIR filter, as denoted in the equation above, that we need the following basic building blocks: A multiplier, which multiplies signal sample $x[n]$ by a scalar $\beta$ which results in a sample with value $y[n] = \beta \cdot x[n]$; An adder which adds two signal samples $x_1[n]$ and $x_2[n]$ together into $y[n]= x_1[n] + x_2[n]$ and finally an unit delay operator which delays a signal sample $x[n]$ by one sample index into $y[n]=x[n-1]$. These basic building blocks are are depicted in Fig. 2.
 
@@ -118,14 +115,10 @@ When realizing or implementing a discrete-time filter, it follows from the gener
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Draw a realization scheme of the system which is described by the following DE: $y[n]=2x[n-1] -\frac{1}{2}x[n-3]$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The realization scheme is depicted in the figure below. This scheme consists of 3 unit-delay elements, since we need delayed input signal samples up to $x[n-3]$. The signal sample $x[n-1]$ is multiplied by $2$, resulting in the signal sample $v_1[n]$., while the signal sample $x[n-3]$ is multiplied by $-\frac{1}{2}$, resulting in $v_2[n]$. Finally the output $y[n]$ is obtained by adding the signal samples $v_1[n]$ and $v_2[n]$.
-
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
@@ -137,7 +130,6 @@ The realization scheme is depicted in the figure below. This scheme consists of 
     </figcaption>
   </figure>
 </div>
-
 </div>
 </div>
 
@@ -164,9 +156,7 @@ Sometimes we have available the realization scheme and we want to evaluate the D
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Give the difference equation of the system as depicted in the following figure:
-
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
@@ -179,12 +169,9 @@ Give the difference equation of the system as depicted in the following figure:
   </figure>
 </div>
 <br>
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 By defining the following intermediate signals together with their difference equation's:
-
 \begin{eqnarray*}
 y[n] &=& b_0 x[n] + {\color{blue}{v_1[n-1]}} \\
 {\color{blue}{v_1[n]}} &=& b_1 x[n] + {\color{red}{v_2[n-1]}} \\
@@ -195,10 +182,10 @@ and by substituting these DE's into each other, we obtain:
 \Rightarrow \mbox{ } {\color{blue}{v_1[n]}} &=& b_1 x[n] + {\color{red}{b_2 x[n-1]}} \\
 \Rightarrow \mbox{ }y[n] &=& b_0 x[n] + {\color{blue}{ b_1 x[n-1] + b_2 x[n-2]}}
 \end{eqnarray*}
-
 </div>
 </div>
 
+<br></br>
 
 ## The impulse response
 
@@ -225,12 +212,9 @@ In the previous section we have seen that the DE describes the input-output rela
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Given the following DE: $y[n]= \sum_{k=0}^{2} x[n-k]$. Draw the realization scheme. Furthermore, give a mathematical expression of the impulse response $h[n]$ of this system and draw a plot of $h[n]$ in the range $n = -1,0,1,2,3,4$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The realization scheme is depicted in the figure below. When applying a unit delta pulse $x[n]=\delta[n]$ to the input we obtain the impulse response $y[n]=h[n]$. Thus:
 \begin{eqnarray*}
 \vdots & & \vdots \\
@@ -246,7 +230,6 @@ $$
 h[n]= \delta[n] + \delta[n-1] + \delta[n-2] =\sum_{k=0}^{2} \delta[n-k]
 $$
 which is also depicted in the figure below.
-
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
@@ -258,8 +241,6 @@ which is also depicted in the figure below.
     </figcaption>
   </figure>
 </div>
-
-
 </div>
 </div>
 
@@ -290,20 +271,18 @@ From the realization scheme of an FIR, as depicted in Fig. 3, it follows that th
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Is the system, which is described by the DE $y[n]=3 x[n+1] -x[n] + 2x[n-1]$, causal or non-causal?
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 From the DE it follows that the impulse response of this system equals $h[n]=3 \delta[n+1] - \delta[n] + 2 \delta[n-1] $. Since $h[-1]=3$, it follows that this system is {\bf Non-causal}: In order to calculate the output signal sample for time index $n$, we need input signal sample for index $n+1$, which in the future of index $n$. Thus we need an 'inverse' delay, which is impossible to realize such a non-causal system. In other words: We can't realize a non-causal system with an FIR scheme as depicted in Fig. 3, since we can't realize an 'inverse' delay $T^{-1}$.
-
 </div>
 </div>
 
 <br>
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>A causal system has an impulse response for which $h[n]=0$ for $n<0$.</i></div>
 <br>
+
+<br></br>
 
 ## The convolution sum
 
@@ -339,12 +318,9 @@ y[n] =  \sum_{k=0}^{M-1} h[k] x[n-k] \equiv h[n] \star x[n]
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Show in a plot the convolution sum result of $x[n]=\delta[n]+2 \delta[n-1]+3 \delta[n-2]$ with an FIR filter with coefficients $b_0=b_1=b_2=1$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The impulse response of the FIR filter writes as: $h[n] = \delta[n] + \delta[n-1]+\delta[n-2]$.
 The upper hand two plots of the figure below show the impulse response $h[k]$ and the input signal samples $x[k]$. The next step is to mirror the input signal samples into $x[-k]$. Now for each new sample $n$ we have to shift this mirrored sequence of input signal samples over  $n$ samples
 and calculate the sum of the element by element multiplication of the two sequences $h[k]$ and $x[n-k]$. The intermediate results of the sequence $x[n-k]$, for ${\color{blue}{n=0}}, {\color{red}{n=1}}$ and ${\color{green}n=2}$, are depicted in the figure below, while the result of the convolution sum procedure for all indices $n$ is as follows:
@@ -362,7 +338,6 @@ n=5 & \Rightarrow & y[5]=h[0] x[5] + h[1]x[4] + h[2] x[3] = 0 \newline
 Thus the output signal samples can be described as:
 $y[n] = \delta[n] + 3 \delta[n-1] + 6 \delta[n-2] + 5 \delta[n-3] + 3 \delta[n-4]$
 which is depicted at the lower right corner of the figure below.
-
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
@@ -374,7 +349,6 @@ which is depicted at the lower right corner of the figure below.
     </figcaption>
   </figure>
 </div>
-
 </div>
 </div>
 
@@ -387,6 +361,7 @@ From the previous example it follows that the convolution sum procedure results 
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>When the length of an input sequence of signal samples is $N$ and the length of the sequence of impulse response values is $M$, then the convolution sum procedure results in a sequence of length $N+M-1$ output signal samples $y[n]$.</i></div>
 <br>
 
+<br></br>
 
 ## Linear time invariance (LTI)
 
@@ -422,12 +397,9 @@ A visualisation of this definition is depicted in Fig. 5.
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Show that the system $y[n]= ( x[n])^2$ is non-linear.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 Referring to the left-hand side of Fig. 5 we obtain:
 $$
 y[n] = \left ( x[n] \right )^2 =
@@ -438,7 +410,6 @@ $$
 w[n] = \alpha y_1[n] + \beta y_2[n] = \alpha x_1^2[n] + \beta x_2^2[n]
 $$
 Since $w[n] \neq y[n]$ it follows that the system $y[n]= ( x[n])^2$ is non-linear.
-
 </div>
 </div>
 
@@ -466,19 +437,15 @@ A visualisation of this definition is depicted in Fig. 6.
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Show that the system $y[n]= ( x[n])^2$ is Time Invariant.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 From the upper part of Fig. 6 it follows that
 $w[n] = x^2[n-n_0]$. From the lower part of the same Figure it follows:
 $$
 y[n] = x^2[n] \hspace{3mm} \Rightarrow \hspace{3mm} y[n-n_0] = x^2[n-n_0]
 $$
 The system $y[n]= ( x[n])^2$ is Time Invariant since $w[n]=y[n-n_0]$.
-
 </div>
 </div>
 
@@ -495,6 +462,7 @@ $$
 $$
 Note that in general for an LTI system the summation index $k$ of the convolution sum runs from $k=-\infty$ to $k=+\infty$, while for an FIR filter this range is automatically limited because of the finite length of the impulse response.
 
+<br></br>
 
 ## Cascading LTI systems
 In the first subsection it is shown that the convolution sum operator has the commutative property. As a result it is sown in the next subsection that the cascading of two LTI systems can be combined to one LTI system, while above that the order of the cascaded LTI systems can be interchanged.
@@ -534,12 +502,9 @@ $$
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 In the example of the section of the convolution sum it is shown that with $x[n] = \delta[n] + 2 \delta[n-1] + 3 \delta[n-2]$  and $h[n]= \delta[n] + \delta[n-1] + \delta[n-2]$ the convolution sum result $y[n]=h[n] \star x[n]$ was equal to $y[n] = \delta[n] + 3 \delta[n-1] + 6 \delta[n-2] + 5 \delta[n-3] + 3 \delta[n-4]$. Show that the result of $x[n] \star h[n]$ is the same.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The convolution sum operator for this FIR filter equals:
 $
 y[n] = x[n] \star h[n] = \sum_{k=n-2}^{n} h[n-k]x[k]
@@ -560,7 +525,6 @@ This result is indeed equivalent to
 $$
 y[n] = h[n] \star x[n] = \delta[n] + 3 \delta[n-1] + 6 \delta[n-2] + 5 \delta[n-3] + 3 \delta[n-4].
 $$
-
 </div>
 </div>
 
@@ -599,9 +563,7 @@ which is shown in the lower right part of Fig. 7. This combined impulse response
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 The cascading of two LTI systems is depicted in the figure below. Give an expression for the impulse responses $h_1[n]$ and $h_2[n]$ of both systems and evaluate the impulse response $h[n]$ of the combined LTI system. Give also a realization scheme of this combined system.
-
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
@@ -614,10 +576,8 @@ The cascading of two LTI systems is depicted in the figure below. Give an expres
   </figure>
 </div>
 <br>
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 From the figure it follows that the impulse response are as follows:
 $$
 h_1[n] =
@@ -642,6 +602,5 @@ h[n] &=& h_1[n] \star h_2[n] \\
 &=& \delta[n] + 2 \delta[n-1] + 3\delta[n-2]+ 2 \delta[n-3] + \delta[n-4]
 \end{eqnarray*}
 A realization scheme of this combined LTI system is depicted in the lower part of the figure above.
-
 </div>
 </div>

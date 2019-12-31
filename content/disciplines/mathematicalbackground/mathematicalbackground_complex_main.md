@@ -10,7 +10,7 @@ type = "docs"       # Do not modify.
 # Add menu entry to sidebar.
 [menu.mathematicalbackground]
   name = "Complex numbers and phasors"
-  weight = 0
+  weight = 10
 
 +++
 
@@ -18,6 +18,7 @@ type = "docs"       # Do not modify.
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/7OQOAQPDOhQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+<br></br>
 
 ## Module overview
 In addition to the set of real numbers that everyone is used to working with, a whole new dimension is introduced by complex numbers. These complex numbers can be used to describe sinusoidal signals through phasors, which has proven to be useful in many applications.
@@ -29,10 +30,7 @@ This module concerns the following topics:
 4. <a href="../mathematicalbackground_complex_phasors">Phasors</a> - This section introduces sinusoidal signals in terms of time varying complex exponentials.
 
 
-
-
-
-
+<br></br>
 
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
@@ -41,158 +39,132 @@ In this section several exercises are available, including their answers. The ex
 
 <div class="example">
 <button class="collapsible">Test your knowledge (click to expand)</button>
-<div class="content">
-
-<button class="collapsible">Question 1</button>
-<div class="content">
-
-<div class="scp-quizzes-data quiz">
-   Finish the following sentence: <br><br>
-   <i>The complex number $z=\sqrt{j}$ is equal to ...</i><br>
-</br>
-    <input type="radio" name="question1">
-       <label>$z=\pm 2 e^{j\frac{\pi}{4}}$</label><br/>
-    <input type="radio" id="answer1" name="question1">
-        <label for="answer1">$z=\pm  e^{j\frac{\pi}{4}}$</label><br/>
-    <input type="radio"  name="question1">
-       <label>$z=\pm  e^{j\frac{3\pi}{4}}$</label><br/>
-   <input type="radio"  name="question1">
-      <label>None of the answers is correct.</label><br/>
- </div>
- </div>
- <br>
-
-
-<button class="collapsible">Question 2</button>
-<div class="content">
-
-<div class="scp-quizzes-data quiz">
-   Convert the following complex number from Cartesian to polar representation: $z=\sqrt{3} - j$
-<br>
-</br>
-    <input type="radio" name="question2">
-       <label>$z=2 e^{j\frac{5\pi}{6}}$</label><br/>
-    <input type="radio" name="question2">
-        <label>$z=e^{j\frac{2\pi}{3}}$</label><br/>
-    <input type="radio"  name="question2">
-       <label>$z=2e^{j\frac{7\pi}{6}}$</label><br/>
-    <input type="radio" id="answer2" name="question2">
-      <label for="answer2">None of the answers is correct.</label><br/>
- </div>
-</div>
-<br>
-
-<button class="collapsible">Question 3</button>
-<div class="content">
-
-<div class="scp-quizzes-data quiz">
-   Convert the following complex number from polar to Cartesian representation: $z=2\sqrt{2}e^{j\frac{\pi}{4}}$
-<br>
-</br>
-    <input type="radio" name="question3">
-      <label>$z=2\sqrt{2} + j2\sqrt{2}$</label><br/>
-    <input type="radio" id="answer3" name="question3">
-      <label for="answer3">$z=2+j2$</label><br/>
-    <input type="radio"  name="question3">
-      <label>$z=2\sqrt{2} + j2$</label><br/>
-    <input type="radio" name="question3">
-      <label>None of the answers is correct.</label><br/>
- </div>
-</div>
-<br>
-
-
-<button class="collapsible">Question 4</button>
-<div class="content">
-
-<div class="scp-quizzes-data quiz">
-  Evaluate the expression of the following complex number:
-  $z=j^3 - \frac{1}{2j^2}$
-   <br>
-</br>
-    <input type="radio" name="question4">
-       <label>$z=-\frac{1}{2} + j$</label><br/>
-    <input type="radio"  name="question4">
-        <label>$z = -j$</label><br/>
-    <input type="radio"  name="question4">
-       <label>$z = 2j + 2$</label><br/>
-   <input type="radio" id="answer4" name="question4">
-      <label for="answer4">None of the answers is correct.</label><br/>
- </div>
-</div>
-<br>
-
-<button class="collapsible">Question 5</button>
-<div class="content">
-
-<div class="scp-quizzes-data quiz">
-   Find a solution for the following equation:
-   $zz^\ast - \mathrm{Im}(z)^2 -1 = 0$s
-<br>
-</br>
-    <input type="radio" name="question5">
-       <label>$z=-2+j3$</label><br/>
-    <input type="radio" name="question5">
-        <label>$z=3+2j$</label><br/>
-    <input type="radio" id="answer5" name="question5">
-       <label for="answer5">$z=1$</label><br/>
-    <input type="radio" name="question5">
-      <label>None of the answers is correct.</label><br/>
- </div>
-</div>
-<br>
-
-<button class="collapsible">Question 6</button>
-<div class="content">
-
-<div class="scp-quizzes-data quiz">
-   Define $A$, $\omega$, $\Phi$ knowing that the following figure represents the real part of the phasor $z(t) = Ae^{j(\omega t+\Phi)}$.
-   <div style="max-width: 600px; margin: auto">
-     <figure>
-       <img
-         src="/../files/7.Images/math/CNAP/quiz/question6.jpg"
-         alt="Sinusoidal signal for question 6."
-       />
-     </figure>
-   </div>
-<br>
-</br>
-    <input type="radio" name="question6">
-       <label>$A=8, \omega=4\pi, \Phi=\frac{\pi}{6}$ [rad]</label><br/>
-    <input type="radio" name="question6">
-        <label>$A=4, \omega=2\pi, \Phi=\frac{\pi}{3}$ [rad]</label><br/>
-    <input type="radio"  id="answer6" name="question6">
-       <label for="answer6">$A=4, \omega=4\pi, \Phi=\frac{\pi}{3}$ [rad]</label><br/>
-    <input type="radio" name="question6">
-      <label>None of the answers is correct.</label><br/>
- </div>
-</div>
-<br>
-
-<button class="collapsible">Question 7</button>
-<div class="content">
-
-<div class="scp-quizzes-data quiz">
-   Find possible values for $\Phi_0$ and $\Phi_1$ that satisfy the following equation:
-   $\sqrt{3}\cos(\omega_0 t + \Phi_0) = \cos(\omega_0 t + \Phi_1) + \cos(\omega_0 t - \Phi_1)
-<br>
-</br>
-    <input type="radio" name="question7">
-       <label>$\Phi_0 = -\frac{\pi}{6}$ [rad] and $\Phi_1 = \frac{\pi}{6}$ [rad]</label><br/>
-    <input type="radio" name="question7">
-        <label>$\Phi_0 = \frac{\pi}{6}$ [rad] and $\Phi_1 = 0$ [rad]</label><br/>
-    <input type="radio" id="answer7"  name="question7">
-       <label for="answer7">$\Phi_0 = 0$ [rad] and $\Phi_1 = \frac{\pi}{6}$ [rad]</label><br/>
-    <input type="radio" name="question7">
-      <label>None of the answers is correct.</label><br/>
- </div>
-</div>
-<br>
-
-
-
-</div>
-</div>
+  <div class="content">
+  <button class="collapsible">Question 1</button>
+    <div class="content">
+    <div class="scp-quizzes-data quiz">
+       Finish the following sentence: <br></br>
+       <i>The complex number $z=\sqrt{j}$ is equal to ...</i><br></br>
+        <input type="radio" name="question1">
+           <label>$z=\pm 2 e^{j\frac{\pi}{4}}$</label>
+        <input type="radio" id="answer1" name="question1">
+            <label for="answer1">$z=\pm  e^{j\frac{\pi}{4}}$</label>
+        <input type="radio"  name="question1">
+           <label>$z=\pm  e^{j\frac{3\pi}{4}}$</label>
+       <input type="radio"  name="question1">
+          <label>None of the answers is correct.</label>
+     </div>
+     </div>
+  <br></br>
+  <button class="collapsible">Question 2</button>
+    <div class="content">
+    <div class="scp-quizzes-data quiz">
+      Convert the following complex number from Cartesian to polar representation: $z=\sqrt{3} - j$
+      <br></br>
+      <input type="radio" name="question2">
+         <label>$z=2 e^{j\frac{5\pi}{6}}$</label>
+      <input type="radio" name="question2">
+          <label>$z=e^{j\frac{2\pi}{3}}$</label>
+      <input type="radio"  name="question2">
+         <label>$z=2e^{j\frac{7\pi}{6}}$</label>
+      <input type="radio" id="answer2" name="question2">
+        <label for="answer2">None of the answers is correct.</label>
+    </div>
+    </div>
+  <br></br>
+  <button class="collapsible">Question 3</button>
+    <div class="content">
+    <div class="scp-quizzes-data quiz">
+      Convert the following complex number from polar to Cartesian representation: $z=2\sqrt{2}e^{j\frac{\pi}{4}}$
+      <br></br>
+        <input type="radio" name="question3">
+          <label>$z=2\sqrt{2} + j2\sqrt{2}$</label>
+        <input type="radio" id="answer3" name="question3">
+          <label for="answer3">$z=2+j2$</label>
+        <input type="radio"  name="question3">
+          <label>$z=2\sqrt{2} + j2$</label>
+        <input type="radio" name="question3">
+          <label>None of the answers is correct.</label>
+    </div>
+    </div>
+  <br></br>
+  <button class="collapsible">Question 4</button>
+    <div class="content">
+    <div class="scp-quizzes-data quiz">
+      Evaluate the expression of the following complex number:
+      $z=j^3 - \frac{1}{2j^2}$
+      <br></br>
+      <input type="radio" name="question4">
+         <label>$z=-\frac{1}{2} + j$</label>
+      <input type="radio"  name="question4">
+          <label>$z = -j$</label>
+      <input type="radio"  name="question4">
+         <label>$z = 2j + 2$</label>
+     <input type="radio" id="answer4" name="question4">
+        <label for="answer4">None of the answers is correct.</label>
+    </div>
+    </div>
+  <br></br>
+  <button class="collapsible">Question 5</button>
+    <div class="content">
+    <div class="scp-quizzes-data quiz">
+         Find a solution for the following equation:
+         $zz^\ast - \mathrm{Im}(z)^2 -1 = 0$
+          <br></br>
+          <input type="radio" name="question5">
+             <label>$z=-2+j3$</label>
+          <input type="radio" name="question5">
+              <label>$z=3+2j$</label>
+          <input type="radio" id="answer5" name="question5">
+             <label for="answer5">$z=1$</label>
+          <input type="radio" name="question5">
+            <label>None of the answers is correct.</label>
+    </div>
+    </div>
+    <br></br>
+    <button class="collapsible">Question 6</button>
+      <div class="content">
+      <div class="scp-quizzes-data quiz">
+         Define $A$, $\omega$, $\Phi$ knowing that the following figure represents the real part of the phasor $z(t) = Ae^{j(\omega t+\Phi)}$.
+         <div style="max-width: 600px; margin: auto">
+           <figure>
+             <img
+               src="/../files/7.Images/math/CNAP/quiz/question6.jpg"
+               alt="Sinusoidal signal for question 6."
+             />
+           </figure>
+         </div>
+    <br></br>
+        <input type="radio" name="question6">
+           <label>$A=8, \omega=4\pi, \Phi=\frac{\pi}{6}$ [rad]</label>
+        <input type="radio" name="question6">
+            <label>$A=4, \omega=2\pi, \Phi=\frac{\pi}{3}$ [rad]</label>
+        <input type="radio"  id="answer6" name="question6">
+           <label for="answer6">$A=4, \omega=4\pi, \Phi=\frac{\pi}{3}$ [rad]</label>
+        <input type="radio" name="question6">
+          <label>None of the answers is correct.</label>
+     </div>
+    </div>
+    <br></br>
+  <button class="collapsible">Question 7</button>
+    <div class="content">
+    <div class="scp-quizzes-data quiz">
+       Find possible values for $\Phi_0$ and $\Phi_1$ that satisfy the following equation:
+       $\sqrt{3}\cos(\omega_0 t + \Phi_0) = \cos(\omega_0 t + \Phi_1) + \cos(\omega_0 t - \Phi_1)$
+    <br></br>
+        <input type="radio" name="question7">
+           <label>$\Phi_0 = -\frac{\pi}{6}$ [rad] and $\Phi_1 = \frac{\pi}{6}$ [rad]</label>
+        <input type="radio" name="question7">
+            <label>$\Phi_0 = \frac{\pi}{6}$ [rad] and $\Phi_1 = 0$ [rad]</label>
+        <input type="radio" id="answer7"  name="question7">
+           <label for="answer7">$\Phi_0 = 0$ [rad] and $\Phi_1 = \frac{\pi}{6}$ [rad]</label>
+        <input type="radio" name="question7">
+          <label>None of the answers is correct.</label>
+     </div>
+    </div>
+    <br></br>
+    </div>
+    </div>
 
 
 ### Exercise bundle
@@ -211,6 +183,7 @@ Download the answers <a href="/../files/3.Exercises/Answers/1.CNAP-answers.pdf">
 
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
 
+<br></br>
 
 ## MATLAB lab
 Accompanied to this modules are some exercises in MATLAB, which will test your knowledge of the module and will help improve your MATLAB skills.
@@ -224,6 +197,8 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
 
 ### MATLAB demo
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/4lThore8Lp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br></br>
 
 ## Summary
 
@@ -253,7 +228,7 @@ $$
 \right .
 }
 $$</li>
-<li> Conversion Polar to Cartesion representation:
+<li> Conversion Polar to Cartesian representation:
 $$
 \boxed{ x= r \cos(\theta)} \mbox{ and } \boxed{y = r \sin(\theta)}
 $$</li>

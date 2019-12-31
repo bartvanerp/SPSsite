@@ -21,9 +21,12 @@ This module will cover one of the most fundamental aspects in signal processing,
 1. <a href="../discretesignalprocessing_sampling_sampling">Sampling of sinusoidal signals</a> - First the concept of sampling is discussed, which represents the conversion from the continuous-time to discrete-time domain. The frequency of the sampled signal is better to be described by a relative frequency, because of the effect of the sampling process. Through the sampling there can also be a loss of spectral information, known as aliasing. This is caused by the uniqueness issue.
 2. <a href="../discretesignalprocessing_sampling_reconstruction">Reconstruction of sinusoidal signals</a> - Similarly to the sampling, the signal can also be converted back from the discrete-time domain to the continuous-time domain. In order to prevent aliasing the sampling theorem has to be satisfied.
 
+<br></br>
+
 ## Examples
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/er2dUoPBKL4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br></br>
 
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
@@ -34,10 +37,8 @@ In this section several exercises are available, including their answers. The ex
 <div class="example">
 <button class="collapsible">Test your knowledge (click to expand)</button>
 <div class="content">
-
 <button class="collapsible">Question 1</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
    Given the following situation:
    <div style="max-width: 600px; margin: auto">
@@ -66,11 +67,8 @@ In this section several exercises are available, including their answers. The ex
  </div>
  </div>
  <br>
-
-
 <button class="collapsible">Question 2</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
   Given the following situation:
   <div style="max-width: 600px; margin: auto">
@@ -98,10 +96,8 @@ In this section several exercises are available, including their answers. The ex
  </div>
 </div>
 <br>
-
 <button class="collapsible">Question 3</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
     Given the following situation:
     <div style="max-width: 600px; margin: auto">
@@ -134,11 +130,8 @@ In this section several exercises are available, including their answers. The ex
  </div>
 </div>
 <br>
-
-
 <button class="collapsible">Question 4</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
   Given the following situation:
   <div style="max-width: 600px; margin: auto">
@@ -163,8 +156,6 @@ In this section several exercises are available, including their answers. The ex
  </div>
 </div>
 <br>
-
-
 </div>
 </div>
 
@@ -185,6 +176,8 @@ Download the answers <a href="/../files/3.Exercises/Answers/3.SAA-answers.pdf">h
 
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
 
+<br></br>
+
 ## MATLAB lab
 Accompanied to this modules are some exercises in MATLAB, which will test your knowledge of the module and will help improve your MATLAB skills.
 
@@ -197,6 +190,8 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
 
 ### MATLAB demo
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/xk942JXSNxg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br></br>
 
 ## Summary
 $$

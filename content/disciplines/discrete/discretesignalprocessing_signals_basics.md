@@ -30,6 +30,8 @@ $$
 }
 $$
 
+<br></br>
+
 ## The unit step function
 
 Another important basic signal is the discrete-time unit step function, which is defined as
@@ -61,13 +63,10 @@ A plot of these two basic signals, within the range $-3 \leq n \leq 3$, is depic
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Make a plot, in the range $-3 \leq n \leq 3$, of the following signals:
 $x_1[n]= \delta[n-2]$,   $x_2[n]= \delta[n+2]$  and  $x_3[n]= u[-n+1]$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 By using the definition of the Dirac delta pulse we can find the integer index of the unit delta pulse of the signals $x_1[n]$ and $x_2[n]$ as follows:
 $$
 \begin{eqnarray}
@@ -87,7 +86,6 @@ x_2[n]= \delta[n+2] & = &
 \right .
 \end{eqnarray}
 $$
-
 In a similar way by using the definition of the unit step function we obtain:
 $$
 x_3[n]=u[-n+1] = \left \{
@@ -97,9 +95,7 @@ x_3[n]=u[-n+1] = \left \{
 \end{array}
 \right .
 $$
-
 The figure below shows a plot of these signals.
-
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
@@ -111,7 +107,5 @@ The figure below shows a plot of these signals.
     </figcaption>
   </figure>
 </div>
-
-
 </div>
 </div>

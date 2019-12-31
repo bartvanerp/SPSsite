@@ -23,6 +23,7 @@ That's why we will introduce a tool for representing non-periodic signals, known
 
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/r1_Dotj41L4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br></br>
 
 ## Fourier Series (FS) recap
 The development of the Fourier Series was based on the following General Phasor Integral (GPI-FS) property:
@@ -86,8 +87,10 @@ This implies that a periodic signal can only have discrete (related) frequencies
 
 An example of a periodic signal $x_p(t)$, with fundamental period $T_0=1/F_0$, and its Fourier series representation is shown in Figure 2. The weights $\alpha_k$ represent the frequency content of the periodic signal $x_p(t)$.
 
+<br></br>
 
 ## FTC as limit of FS
+
 The FTC and Inverse FTC are defined as follows:
 $$
 \boxed{
@@ -136,6 +139,7 @@ When the length $\Delta T$ goes to infinite, or equivalently when $\Delta F$ goe
 As mentioned before we should realise that the given development of the FTC equations is not completely rigorous. Instead it is plausible which suggests the correct form of the FTC equations and it provides a useful interpretation.
 
 ### Example rectangular signal
+
 In order to further clarify the given insight we will evaluate the FTC, as an approximation of the Fourier Series, of the finite length non-periodic rectangular signal $x(t)$, which is depicted in Figure 4 and defined by the following equation:
 $$
 x(t) = \begin{cases}
@@ -154,31 +158,30 @@ $$
     </figcaption>
   </figure>
 </div>
-
-With $T_0 > \Delta T$, we can interpret the non-periodic signal $x(t)$ as <b>one</b> period of the periodic signal $x_p(t)$, with period $T_0$. The upper figure shows an example for $T_0 = 2 \Delta T$.  When increasing the period $\Delta T$, as depicted in the other figures,  it follows that the non-periodic signal $x(t)$ can be approximated by the periodic signal $x\_p(t)$ when the period $T\_0$  goes to infinity as follows:
+With $T_0 > \Delta T$, we can interpret the non-periodic signal $x(t)$ as <b>one</b> period of the periodic signal $x_p(t)$, with period $T_0$. The upper figure shows an example for $T_0 = 2 \Delta T$.  When increasing the period $\Delta T$, as depicted in the other figures,  it follows that the non-periodic signal $x(t)$ can be approximated by the periodic signal $x_p(t)$ when the period $T_0$  goes to infinity as follows:
 $$
-x(t) = \lim\_{T\_0 \rightarrow \infty} x\_p(t)
+x(t) = \lim_{T_0 \rightarrow \infty} x_p(t)
 $$
-From this it follows that the FTC of the non-periodic signal $x(t)$ can be viewed as a reasonable approximation of the Fourier Series of the periodic signal $x\_p(t)$. The weights $\alpha\_k$ multiplied by $T\_0$ of the periodic signal $x\_p(t)$ can be evaluated via the following Fourier Series:
+From this it follows that the FTC of the non-periodic signal $x(t)$ can be viewed as a reasonable approximation of the Fourier Series of the periodic signal $x_p(t)$. The weights $\alpha_k$ multiplied by $T_0$ of the periodic signal $x_p(t)$ can be evaluated via the following Fourier Series:
 \begin{eqnarray}
-\alpha\_{k} = \frac{1}{T\_0} \int\_{-T\_0/2}^{T\_0/2} x\_p(t) e^{-j2 \pi  k F\_0 t} \text{d}t
-&\overset{\text{FS}}{\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ}&
-x\_p(t) = \sum\_{k=- \infty}^{\infty} \alpha\_{k} e^{j2 \pi k F\_0 t}
+\alpha_{k} = \frac{1}{T_0} \int_{-T_0/2}^{T_0/2} x_p(t) e^{-j2 \pi  k F_0 t} \text{d}t
+&\overset{\text{FS}}{\quad\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ\quad}&
+x_p(t) = \sum_{k=- \infty}^{\infty} \alpha_{k} e^{j2 \pi k F_0 t}
 \end{eqnarray}
 The block signal $x_p(t)$ equals 1 within the boundaries $-\Delta T/2$ and $+\Delta T/2$, which leads to the following result:
 \begin{eqnarray}
-\alpha\_{k} \cdot T_0 &=& \int\_{-\Delta T/2}^{\Delta T/2} 1 e^{-j2 \pi  k F\_0 t} \text{d}t
+\alpha_{k} \cdot T_0 &=& \int_{-\Delta T/2}^{\Delta T/2} 1 e^{-j2 \pi  k F_0 t} \text{d}t
  =
-\frac{1}{-j 2 \pi k F\_0} \left . e^{-j2 \pi k F_0 t} \right |\_{-\Delta T/2}^{\Delta T/2}
+\frac{1}{-j 2 \pi k F_0}  e^{-j2 \pi k F_0 t} \Big|_{-\Delta T/2}^{\Delta T/2}
 \newline
-&=& \frac{e^{-j2 \pi k F\_0 \Delta T/2}- e^{j2 \pi k F\_0 \Delta T/2}}{-j 2 \pi k F\_0} =
-\Delta T \cdot \frac{\sin (\pi k F\_0 \Delta T)}{\pi k F\_0 \Delta T}
+&=& \frac{e^{-j2 \pi k F_0 \Delta T/2}- e^{j2 \pi k F_0 \Delta T/2}}{-j 2 \pi k F_0} =
+\Delta T \cdot \frac{\sin (\pi k F_0 \Delta T)}{\pi k F_0 \Delta T}
 \end{eqnarray}
-With $F\_0=1/T\_0$ and for the limiting case $F\_0 \rightarrow 0$ and $k F\_0 \rightarrow f$ we obtain:
+With $F_0=1/T_0$ and for the limiting case $F_0 \rightarrow 0$ and $k F_0 \rightarrow f$ we obtain:
 $$
 \Rightarrow \hspace{2mm}
-\lim\_{F\_0 \rightarrow 0 }
-\alpha\_{k} \cdot T\_0 \widehat{=} X(f) \rightarrow \Delta T \cdot \frac{\sin (\pi \color{blue}{f} \Delta T)}{\pi \color{blue}{f} \Delta T} \hspace{3mm} \left ( \widehat{=} \text{ Sinc} \right )
+\lim_{F_0 \rightarrow 0 }
+\alpha_{k} \cdot T_0 \widehat{=} X(f) \rightarrow \Delta T \cdot \frac{\sin (\pi \color{blue}{f} \Delta T)}{\pi \color{blue}{f} \Delta T} \hspace{3mm} \left ( \widehat{=} \text{ Sinc} \right )
 $$
 A plot of this function for increasing values of $T_0$ is depicted in Fig. 5.
 
@@ -208,6 +211,7 @@ $$
 With $\omega = 2 \pi f$, the replacement of the integral variable $f$ by $\omega$, in the Inverse FTC equation, results in the pre-multiplication factor of $1/ 2\pi$ in this case.
 
 ### Existence and convergence FTC
+
 Not every function $x(t)$ has an FTC representation. So it would be helpful to be able to determine whether the FTC exists or not. As a simple condition for convergence of the FTC integral, we can check the magnitude $|X(f)|$. By first using the fact that the absolute value of an integral is smaller or equal than the integral of the absolute value and then that the absolute value of the given phasor equals one, we obtain the resulting integral.
 \begin{eqnarray}
 \left | X(f) \right | &=& \left |\int\_{-\infty}^{\infty} x(t) e^{-j2 \pi f t}  \text{d} t \right | \\
@@ -222,6 +226,7 @@ Not every function $x(t)$ has an FTC representation. So it would be helpful to b
 
 This implies that a sufficient, but not necessary, condition to check the existence of the FTC of a signal $x(t)$ is to evaluate the integral of the absolute value of $x(t)$ and verifying if the result is bounded.
 
+<br></br>
 
 
 ## FTC Examples
@@ -301,7 +306,7 @@ $$
 and depicted in Fig. 7.
 The evaluation of the IFTC is as follows:
 \begin{eqnarray}
-x(t) &=& \int\_{-\infty}^{\infty} X(f) \cdot e^{j2 \pi f t} \text{d} f
+x(t) &=& \int\_{-\infty}^{\infty} X(f) \cdot e^{j2 \pi f t} \text{d} f =
 \int_{-F\_c}^{F\_c} 1 \cdot e^{j2 \pi f t \text{d} f}
 = \frac{1}{2j \pi t} e^{j2 \pi f t} \left . \right |\_{-F\_c}^{F\_c}  \newline
 &=& \frac{e^{j2 \pi F\_c t}- e^{-j2 \pi F\_c t} }{2j \pi t}
@@ -452,6 +457,7 @@ Note that the resulting train of delta pulses in frequency domain is scaled by t
 In other words, if we increase the period $T$ in the time domain, by taking less pulses per time unit, the repetitions of the pulses in frequency domain become spaced more closely.
 This property is the basis for the so-called aliasing effect of an A-to-D convertor.
 
+<br></br>
 
 
 ## FTC Properties
@@ -475,10 +481,8 @@ $$
 <div class="example">
 <h4> Proof of linearity property </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 \begin{eqnarray}
   \mathcal{F}\{a \cdot x(t) + b \cdot y(t)\} &&=\int_{-\infty}^{\infty} \left ( a \cdot x(t) + b \cdot y(t) \right ) e^{-j2 \pi f t}  \text{d} t  \\
 &&=  \int_{-\infty}^{\infty} \left ( a \cdot x(t) \right ) e^{-j2 \pi f t}  \text{d} t +
@@ -488,7 +492,6 @@ $$
 &&= a \cdot X(f) + b \cdot Y(f)
 \end{eqnarray}
 The linearity property implies that of the sum of signals equals the sum of the FTC's of the signals.
-
 </div>
 </div>
 
@@ -496,10 +499,8 @@ The linearity property implies that of the sum of signals equals the sum of the 
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 <button class="collapsible">Show example</button>
 <div class="content">
-
 As an example of this linear property we calculate the FTC of a sinusoidal signal.
 By using Euler we can write the signal into two phasors.
 Each of these phasors transforms into a delta pulse in frequency domain.
@@ -515,7 +516,6 @@ By using the linearity property we can now write the FTC of the sum of phasors  
 &=& \frac{1}{2}\delta(f-f_0) + \frac{1}{2}\delta(f+f_0)
 \end{eqnarray}
 Thus the FTC of a cosine signal consists of  a sum of two delta pulses in the frequency domain.
-
 </div>
 </div>
 
@@ -532,10 +532,8 @@ $$
 <div class="example">
 <h4> Proof of conjugation property </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 The first step of the proof of the conjugation property  is to move the conjugation sign outside the integral.  Inside the brackets this results into an FTC from which the phasor has a positive sign, which writes as $X(-f)$.
 \begin{eqnarray}
 y(t) = x^\ast(t) \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ
@@ -544,7 +542,6 @@ Y(f)&=&\int_{-\infty}^{\infty} x^\ast(t) e^{-j2 \pi f t} \text{d} t
 &=& \left ( X(-f) \right )^\ast=X^\ast(-f)
 \end{eqnarray}
 The final notation $X^\ast(-f)$  is just simpler way of the notation $(X(-f))^\ast$.
-
 An important result of this conjugation property is that FTC $X(f)$ of a real signal $x(t)$, thus when $x(t)=x^\ast(t)$, has the following symmetry properties:
 \\
 The magnitude response is symmetric, while the phase response is anti-symmetric, thus:
@@ -555,7 +552,6 @@ $$
 |X(f)| = |X(-f)| &:& \quad\textbf{Magnitude response symmetric}\\
 \angle \{X(f)\} = - \angle \{X(f)\} &:& \quad\textbf{Phase response anti-symmetric}
 \end{eqnarray}
-
 </div>
 </div>
 
@@ -563,10 +559,8 @@ $$
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 <button class="collapsible">Show example</button>
 <div class="content">
-
 A simple example of these symmetry properties can be found in the FTC of a shifted delta pulse. For this case the time domain signal is a real and the FTC results in a complex exponent as follows:
 \begin{eqnarray}
 x(t)=\delta(t-t_0) &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ X(f)&= \int_{-\infty}^{\infty} x(t) e^{-j2 \pi f t} \text{d} t  \\
@@ -592,7 +586,6 @@ A plot of this magnitude- and phase response is depicted in the figure below.
 </div>
 From this plot the symmetry properties are clearly visible.
 Note finally that for this case the angle of the phase response is directly related to the shift in time domain.
-
 </div>
 </div>
 
@@ -608,10 +601,8 @@ $$
 <div class="example">
 <h4> Proof of scaling property </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 $$
 y(t) = x(k \cdot t) \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ Y(f) = \int_{-\infty}^{\infty} x(k \cdot t) e^{-j2 \pi f t}
 $$
@@ -625,19 +616,15 @@ For $k<0$ we follow the same procedure. But now the boundaries of the integral a
 \begin{eqnarray}
 Y(f) &\overset{\tau =k \cdot t}{=}& \int_{{\color{red}+\infty}}^{{\color{red}-\infty}} x(\tau) e^{-j2\pi f \frac{1}{k} \tau} \cdot \frac{1}{k} \text{d} \tau  \\
 &=& \frac{{\color{red}-1}}{k} \int_{{\color{red}-\infty}}^{{\color{red}+\infty}} x(\tau) e^{-j2\pi f \frac{1}{k} \tau} \text{d} \tau = \frac{1}{|k|} X(\frac{f}{k})
-
 \end{eqnarray}
-
 </div>
 </div>
 
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 <button class="collapsible">Show example</button>
 <div class="content">
-
 previously we have shown that the FTC of a block signal results in a sinc function, as given in the following equation and depicted in  the figure below.
 $$
 x(t)= \begin{cases}
@@ -658,7 +645,6 @@ $$
     </figcaption>
   </figure>
 </div>
-
 The figure shows an example in which applied a scale factor of 2: The time domain signal has shrunk by a factor of 2, while the frequency domain signal is stretched by a factor 2.
 </div>
 </div>
@@ -679,10 +665,8 @@ $$
 <div class="example">
 <h4> Proof of time shifting property </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 The first step of the proof is to change everywhere the variable $t$ by $t-t_0$.
 \begin{eqnarray}
 x(t-t_0) &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & \int_{-\infty}^{\infty} x(t-t_0) e^{-j2 \pi f t} \text{d} t \\
@@ -693,7 +677,6 @@ In the next step we take out the negative exponent with the term $t_0$ and subst
 &\overset{\color{red}{\tau}=t-t_0}{=}&  e^{-j2 \pi f \color{blue}{t_0}} \cdot \int_{-\infty}^{\infty} x(\color{red}{\tau}) e^{-j2 \pi f \color{red}{\tau}} \text{d} {\color{red}\tau} \\
 &=& e^{-j2 \pi f t_0} \cdot X(f)
 \end{eqnarray}
-
 </div>
 </div>
 
@@ -708,10 +691,8 @@ $$
 <div class="example">
 <h4> Proof of frequency shifting property </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 The steps of this proof are similar to the previous ones and are as follows:
 \begin{eqnarray}
 \mathcal{F}^{-1}\{X(f-f_0)\} &=& \int_{-\infty}^{\infty} X(f-f_0) e^{j2 \pi f t} \text{d} f \\
@@ -719,7 +700,6 @@ The steps of this proof are similar to the previous ones and are as follows:
 &\overset{{\color{red}\eta}=f-f_0}{=}&  e^{j2 \pi {\color{blue}f_0} t} \cdot \int_{-\infty}^{\infty} X({\color{red}\eta}) e^{j2 \pi {\color{red}\eta} t} \text{d} {\color{red}\eta}
 = e^{j2 \pi f_0 t} \cdot x(t)
 \end{eqnarray}
-
 </div>
 </div>
 
@@ -744,14 +724,11 @@ $$
 x(t) \star y(t) & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &  X(f) \cdot Y(f)
 \end{eqnarray}}
 $$
-
 <div class="example">
 <h4> Proof of time domain convolution property </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 The first step of the proof of the time domain convolution property is to use the definition of the convolution integral into the FTC definition.
 \begin{eqnarray}
 \mathcal{F}\{\color{red}{x(t) \star y(t)}\} &=& \int_{t=-\infty}^{\infty} \left ( {\color{red}\int_{\tau= -\infty}^{\infty} x(\tau) y(t-\tau) \text{d} \tau }\right ) e^{-j2 \pi f t} \text{d} t
@@ -768,7 +745,6 @@ Finally by substituting $t-\tau$ by a new variable  $p$ we obtain the final resu
 \ldots &=& \left ( \int_{\tau=-\infty}^{\infty} x(\tau) e^{-j2 \pi f \tau} \text{d} \tau \right ) \cdot \left ( \int_{p=-\infty}^{\infty}  y(p) e^{-j2 \pi f p } \text{d} p \right ) \\
 &=& X(f) \cdot Y(f)
 \end{eqnarray}
-
 </div>
 </div>
 
@@ -784,10 +760,8 @@ $$
 <div class="example">
 <h4> Proof of frequency domain convolution property </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 The first step of the proof of the frequency domain convolution property is  to use the definition of Inverse FTC for the signal $x(t)$.
 \begin{eqnarray}
 \mathcal{F}\{x(t) \cdot y(t)\} &=& \int_{t=-\infty}^{\infty} \color{red}{x(t)} \cdot y(t) e^{-j2 \pi f t} \text{d} t\\
@@ -806,7 +780,6 @@ Then by interchanging the order of the integrals and  combining the two phasor c
 &=& \int_{\eta=-\infty}^{\infty} X(\eta) \color{red}{Y(f-\eta)} \text{d} \eta
 = X(f) \star Y(f)
 \end{eqnarray}
-
 </div>
 </div>
 
@@ -816,10 +789,8 @@ This leads to the following important "rule of thumb":
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 <button class="collapsible">Show example</button>
 <div class="content">
-
 As an example of the convolution property we will use the modulation property as discussed before. In this example signal $x(t)$ is a sinc function as depicted in the upper left side of the figure below.
 <div style="max-width: 800px; margin: auto">
   <figure>
@@ -837,7 +808,6 @@ Previously we have shown that the sinc function is the result of the IFTC of a f
 \delta(f \pm f_0) \star X(f) &=& \int_{\eta=-\infty}^{\infty} \delta(\eta \pm f_0) X(f-\eta) \text{d} \eta = X(f \pm f_0)
 \end{eqnarray}
 The result is shown in the lower part of the figure.
-
 </div>
 </div>
 
@@ -858,10 +828,8 @@ $$
 <div class="example">
 <h4> Proof of time domain differentiation property </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 By using the IFTC definition of $x(t)$ and differentiating both sides with respect to $t$ we obtain:
 $$
 \frac{\text{d} }{\text{d} t} x(t) = \frac{\text{d} }{\text{d} t} \left (
@@ -869,7 +837,6 @@ $$
 = \int_{-\infty}^{\infty} X(f) (j 2 \pi f) e^{j2 \pi f t} \text{d} f
 = \mathcal{F}^{-1}\{j \omega X(f) \}
 $$
-
 </div>
 </div>
 
@@ -877,10 +844,8 @@ $$
 <h4> Example </h4>
 <hr>
 Find the FTC of the signal $x(t)= \frac{\text{d} }{\text{d} t} \delta(t)$.
-
 <button class="collapsible">Show example</button>
 <div class="content">
-
 Taking the FTC of both sides gives:
 $$
 X(f)= \mathcal{F}\{\frac{\text{d} }{\text{d} t} \delta(t)\}  = j \omega \cdot \mathcal{F}\{ \delta(t) \} = j \omega \cdot 1 = j \omega
@@ -901,10 +866,8 @@ $$
 <div class="example">
 <h4> Proof of frequency domain differentiation property </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 Differentiation of both sides of the FTC difinition gives:
 \begin{eqnarray*}
 \frac{\text{d}}{\text{d} f} X(f) &=& \int_{-\infty}^{\infty} x(t) (-j 2 \pi t) e^{-j2 \pi f t}  \text{d} t = - j 2 \pi \int_{-\infty}^{\infty} t x(t)  e^{-j2 \pi f t}  \text{d} t = - j 2 \pi \mathcal{F}\\{t x(t)}
@@ -913,7 +876,6 @@ Finally, multiplying both sides by the complex number $j$ results into:
 $$
 \frac{j}{2 \pi} \frac{\text{d}}{\text{d} f} X(f) = \mathcal{F}\\{t x(t)}
 $$
-
 </div>
 </div>
 
@@ -924,7 +886,6 @@ $$
 Find the FTC of $x(t) = t \cos(2 \pi F_0 t)$
 <button class="collapsible">Show example</button>
 <div class="content">
-
 \begin{eqnarray}
 X(f) &=& \mathcal{F}\{t \cos(2 \pi F_0 t)\} = \frac{j}{2 \pi} \frac{\text{d}}{\text{d} f}
 \left [\mathcal{F}\{ \cos(2 \pi F_0 t)\} \right ] \\
@@ -947,10 +908,8 @@ $$
 <div class="example">
 <h4> Proof of the Parseval theorem </h4>
 <hr>
-
 <button class="collapsible">Show proof</button>
 <div class="content">
-
 In the first step of the proof we replace the complex conjugated version of $x(t)$ by the IFTC of the FTC of $x^\ast(t)$.
 \begin{eqnarray}
 \int_{-\infty}^{\infty} |x(t)|^2 \text{d} t &=& \int_{-\infty}^{\infty} x(t) \color{red}{x^\ast(t)} \text{d} t
@@ -972,7 +931,6 @@ Finally interchanging the variable $-f$ by $f$ and then interchanging the order 
 \int_{-\infty}^{\infty} x(t) e^{-j2 \pi f t} \text{d} t } \right ) \text{d} f \\
 &=& \int_{-\infty}^{\infty} |X(f)|^2 \text{d} f
 \end{eqnarray}
-
 </div>
 </div>
 
@@ -983,7 +941,6 @@ Concluding it follows that the theorem of Parseval states that the energy in tim
 <h4> Example </h4>
 <hr>
 In this example the goal is to calculate the energy of a time domain sinc function as depicted on the left side of the figure below.
-
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
@@ -993,10 +950,8 @@ In this example the goal is to calculate the energy of a time domain sinc functi
   </figure>
 </div>
 <br>
-
 <button class="collapsible">Show example</button>
 <div class="content">
-
 When using the definition of a sinc function we can calculate the energy as follows:
 \begin{eqnarray}
 E &=& \int_{t=-\infty}^{\infty} |{\color{red}x(t)}|^2 \text{d} t
@@ -1008,10 +963,10 @@ The evaluation of this integral is not trivial. However, when using the theorem 
 E &=& \int_{t=-\infty}^{\infty} |{\color{red}x(t)}|^2 \text{d} t \\
 &\overset{\text{Parseval}}{=} & \int_{f=-\infty}^{\infty} |{\color{blue}X(f)}|^2 \text{d} f = \int_{f=-F_c}^{F_c} |1|^2 \text{d} f  = 2 F_c
 \end{eqnarray}
-
 </div>
 </div>
 
+<br></br>
 
 
 ## Summary

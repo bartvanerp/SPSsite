@@ -22,6 +22,7 @@ This module will introduce basic filter structures for filtering discrete-time s
 2. **Infinite impulse response filters** (to be added) - Besides filters with a finite impulse response, there also exist filters whose output depends on their previous outputs. This recursive operations leads to infinite impulse response filters, which posses different characteristics in comparison to finite impulse response filters.
 3. **Special convolution methods** (to be added) - When performing filter calculations with a limited amount of memory, convolutions might not be possible to calculate if the signal length is very long. In order to circumvent this problem new procedures have been developed in order to split the convolution operation in multiple smaller ones.
 
+<br></br>
 
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
@@ -32,10 +33,8 @@ In this section several exercises are available, including their answers. The ex
 <div class="example">
 <button class="collapsible">Test your knowledge (click to expand)</button>
 <div class="content">
-
 <button class="collapsible">Question 1</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
    Given the signal $x[n]$ below: <br>
    $x[n] = \begin{cases}0 & \text{for } n \text{ even} \\ 1 &\text{for } n \text{odd}\end{cases}$ <br>
@@ -60,12 +59,9 @@ In this section several exercises are available, including their answers. The ex
  </div>
  </div>
  <br>
-
-
 <button class="collapsible">Question 2</button>
 <div class="content">
 <div class="scp-quizzes-data quiz">
-
   Given the impulse response of an LTI system: <br>
   $h_1[n] = \delta [n] + \delta[n-1] - \delta[n-2]$ <br>
   Let the input of this system be the unit step function:<br>
@@ -87,10 +83,8 @@ Calculate the output of this system for the given input.
  </div>
 </div>
 <br>
-
 <button class="collapsible">Question 3</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
     Given the cascade of 2 LTI systems in series, with the following individual impulse responses: <br>
     $h_1 [n] = \delta[n] + 2\delta[n-1]$ <br>
@@ -111,11 +105,8 @@ Calculate the output of this system for the given input.
  </div>
 </div>
 <br>
-
-
 <button class="collapsible">Question 4</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
   Consider an LTI system where the output $y[n]$ has been recorded from two different inputs $x[n]$ as shown below:
   $x_1[n] = \delta[n] + \delta[n-1] \quad \rightarrow \quad y_1[n] = \delta[n] + \delta[n-1] - \delta[n-2] - \delta[n-3]$ <br>
@@ -144,10 +135,8 @@ Calculate the output of this system for the given input.
  </div>
 </div>
 <br>
-
 <button class="collapsible">Question 5</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
   Given the following FIR filter from which the initial state is equal to zero, thus $y[n] = 0$ for $n<0$.
   <div style="max-width: 600px; margin: auto">
@@ -180,8 +169,6 @@ Calculate the output of this system for the given input.
  </div>
 </div>
 <br>
-
-
 </div>
 </div>
 
@@ -201,6 +188,8 @@ Download the answers <a href="/../files/3.Exercises/Answers/4.FIR-answers.pdf">h
 
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
 
+<br></br>
+
 ## MATLAB lab
 Accompanied to this modules are some exercises in MATLAB, which will test your knowledge of the module and will help improve your MATLAB skills.
 
@@ -213,6 +202,8 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
 
 ### MATLAB demo
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/GLhOpGsN0F8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br></br>
 
 ## Summary finite impulse response (FIR) filter
 $$
