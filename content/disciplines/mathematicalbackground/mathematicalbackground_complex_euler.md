@@ -12,12 +12,14 @@ type = "docs"       # Do not modify.
 [menu.mathematicalbackground]
   name = "Euler equations"
   parent = "Complex numbers and phasors"
-  weight = 2
+  weight = 12
 
 +++
 
 From practical experience we know that the solution $f(\theta)$, which describes the movement of a harmonic oscillator, behaves as a real sinusoidal function.
 So the question is how the general complex exponential solution, as introduced <a href="../mathematicalbackground_complex_numbersets/#derivation-2">here</a>, relates to the expected real sinusoidal solution. In order to show this first the Taylor series is introduced.
+
+<br></br>
 
 ## Taylor expansion
 Every function can be approximated by a polynomial function.
@@ -49,6 +51,8 @@ $$ \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots.$$
     </figcaption>
   </figure>
 </div>
+
+<br></br>
 
 ## Euler equations
 When returning to the example of the harmonic oscillator we found that the solution was given as $f(\theta) = e^{j\theta}$.
@@ -84,9 +88,7 @@ As a result it follows from the alternative representations of the sine and cosi
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Prove the following identity: $e^{j\pi} + 1 = 0$
-
 <button class="collapsible">Show solution</button>
 <div class="content">
   By using Euler's equation for $\theta=\pi$, the identity results in:

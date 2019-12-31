@@ -22,6 +22,6 @@ The concepts covered in this module are:
 
 1. <a href="../discretesignalprocessing_multirate_math">Mathematical description sampling process</a> (in progress) - In order to obtain full understanding of the theory
 
-2. <a href="../discretesignalprocessing_multirate_blocks>Basic building blocks of multirate signal processing</a> (in progress) - The conversion of a sample frequency can give rise to several undesired artifacts. The correct filtering of the signal is therefore of crucial importance.
+2. <a href="../discretesignalprocessing_multirate_blocks">Basic building blocks of multirate signal processing</a> (in progress) - The conversion of a sample frequency can give rise to several undesired artifacts. The correct filtering of the signal is therefore of crucial importance.
 
 3. <a href="../discretesignalprocessing_multirate_tool">The DFT modulated Filterbank</a> (to be added)

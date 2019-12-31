@@ -165,8 +165,8 @@ Important aspects of these transforms are:
 <li> The frequency representation $X(\omega)$ is a continuous function and not periodic, </li>
 <li> Both FTC and IFTC are evaluated by an integral, </li>
 <li> Finally we will use these notations for the FTC and IFTC:
-$$\label{Eq:NotationFTC}
-X(\omega)=\mathscr{F}\left\\{x(t)\right\\} \text{   and   } x(t)=\mathscr{F}^{-1} \left\\{ X(\omega)\right\\}
+$$
+X(\omega)=\mathscr{F}\left\{x(t)\right\} \text{   and   } x(t)=\mathscr{F}^{-1} \left\{ X(\omega)\right\}
 $$ </li>
 </ul>
 
@@ -187,9 +187,11 @@ Important aspects of these transforms, which differ from the FTC and IFTC equati
 <li> The IFTD is evaluated by an integral over one period of the frequency representation $X(e^{j\theta})$.</li>
 <li> Finally, to make a clear distinction we will use the following notations for the FTD and IFTD:
 $$
-X(e^{j\theta})=\mathcal{F}\left\\{x[n]\right\\} \text{   and   } x[n]=\mathcal{F}^{-1} \left\\{ X(e^{j\theta})\right\\}
+X(e^{j\theta})=\mathcal{F}\left\{x[n]\right\} \text{   and   } x[n]=\mathcal{F}^{-1} \left\{ X(e^{j\theta})\right\}
 $$</li>
 </ul>
+
+<br></br>
 
 ## FTD Examples
 
@@ -275,17 +277,14 @@ This DPP equation shows that we can express a non converging summation, at the l
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 In this example we use the DPP property of the previous subsection to show that the FTD of a sinusoidal signal results in the following expression:
 $$
 x[n]=\cos(n \theta_0) \hspace{3mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{3mm}
 \pi \delta(\theta - \theta_0) + \pi \delta(\theta + \theta_0)
 $$
 as depicted in Fig. 6.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The first step is to use Euler and write the function as a sum of two, discrete time phasors $\cos(n \theta_0) = \frac{1}{2} e^{jn \theta_0} + \frac{1}{2} e^{-jn \theta_0}$.
 From the DPP property it follows that the FTD of the first phasor results in $2\pi$ times a delta pulse at $\theta=\theta_0$  and the second one in $2\pi$ times a delta pulse at $\theta=-\theta_0$:
 \begin{eqnarray*}
@@ -316,18 +315,13 @@ which is represented in Fig. 6.</div>
   </figure>
 </div>
 
-
 ### FTD of exponential decaying function
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 In this example we will calculate the FTD $X(e^{j\theta})$ of a discrete time exponential decaying function $x[n]=a^n u[n]$, with $u[n]$ the unit step function. Furthermore we will sketch a plot of $|X(e^{j\theta})|$ in the Fundamental Interval (FI) for $0 < a < 1$ and $-1 < a < 0$ and give a reasoning for the difference between these two plots.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
-
 The FTD can be calculated as given in the following equations:
 \begin{eqnarray}
 X(e^{j\theta}) &=& \sum_{n=-\infty}^{\infty} x[n] e^{-jn \theta}
@@ -337,9 +331,7 @@ X(e^{j\theta}) &=& \sum_{n=-\infty}^{\infty} x[n] e^{-jn \theta}
 \end{eqnarray}
 Because of the unit step function $u[n]$, the summation starts at index $n=0$.  Combining the parameter $a$ and the exponent results in the argument of a summation from which the running index $n$ ranges from zero to infinity. The argument of the summation is taken to a power of $n$. This is a well known geometric series which writes as  one divided by 1 minus the
 argument of the summation.  The geometric series do only converge when the absolute value of the argument is smaller than 1. Otherwise the geometric series will diverge. Because of the fact that the amplitude of the complex exponent equals one, this implies that the absolute value of the parameter $a$ has to be smaller than 1.
-
 A plot of a discrete time exponential decaying function $x[n]=a^n u[n]$, with $u[n]$ the unit step function and positive real parameter $a$ ($0 < a < 1$) is depicted at the left-hand side of the figure below.
-
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
@@ -351,13 +343,9 @@ A plot of a discrete time exponential decaying function $x[n]=a^n u[n]$, with $u
     </figcaption>
   </figure>
 </div>
-
-
 For positive values of $a$ smaller than 1, a plot of $|X(e^{j\theta})|$ is given at the right-hand side of the figure above.
-
 For negative values of $a$ larger than -1,  a plot of the absolute value of the FTD is given in
 the figure below. The speed of fluctuations in this second sequence of samples with negative parameter $a$ are higher in comparison to the first sequence of samples with positive parameter $a$. This effect is reflected in the FTD plots: The second FTD plot shows high frequency behavior, while the first FTD plot represents a low frequency behavior.
-
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
@@ -369,7 +357,6 @@ the figure below. The speed of fluctuations in this second sequence of samples w
     </figcaption>
   </figure>
 </div>
-
 </div>
 </div>
 
@@ -393,15 +380,12 @@ One of the filters which is used in many practical situations is a Low Pass Filt
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 In this example we will show that the IFTD of the LPF results in the following Sinc-function:
 $$
 x[n] = \frac{\theta_c}{\pi} \cdot \frac{\sin(\theta_c n)}{\theta_c n}
 $$
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 With the ideal LPF as depicted at the right-hand side of Fig. 7, the integral of the IFTD equation reduces to an integral of a complex exponent within boundaries $\pm \theta_c$.
 $$
 x[n] = \frac{1}{2 \pi} \int_{-\pi}^{\pi} X(e^{j\theta}) e^{jn\theta} \text{d} \theta
@@ -418,9 +402,7 @@ x[n] &=& \frac{1}{2 \pi j n} e^{jn\theta}\mid_{- \theta_c}^{\theta_c}
 = \frac{\theta_c}{\pi} \cdot \frac{\sin(\theta_c n)}{\theta_c n}
 \end{eqnarray}
 Such a Sinc-function is infinite long, which is caused by the fact that the frequency function $X(e^{j\theta})$ has infinite steep drops for $\theta= \pm \theta_c$.
-
 For the case $\theta_c=\frac{\pi}{2}$ the IFTD result is depicted at the left-hand side of Fig. 7. For this case the samples are zero for all even values of the time index, except for $n=0$.
-
 </div>
 </div>
 
@@ -442,18 +424,14 @@ When processing a signal it is often useful of even necessary to use or select o
 <div class="example">
 <h4> Example </h4>
 <hr>
-
-
 In this example we will show that the FTD of a block function of length $N$ results into the following so called Dirichlet function:
 $$
 X(e^{j\theta}) = e^{-j\frac{N-1}{2} \theta} \cdot \frac{\sin(N \frac{\theta}{2} )}{\sin(\frac{\theta}{2} )}
 $$
 A plot of both magnitude $|X(e^{j\theta})|$ and phase $\angle \{X(e^{j\theta}) \}$, for $\theta$ in the FI and $N=21$, is depicted in Fig. 8.
 Furthermore we will explain the fact that the phase is a straight line, evaluate the zero crossings  and the value for $\theta=0$ of the magnitude $|X(e^{j\theta})|$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 In general we can describe a block function as the difference of two step functions $u[n]-u[n-N]$
 and the result is a summation from which the index runs from $n=0$ until $N-1$:
 $$
@@ -482,7 +460,6 @@ $$
 B(e^{j\theta})= \frac{\sin(N \frac{\theta}{2} )}{\sin(\frac{\theta}{2} )}
 $$
 which implies that the phase is zero, thus $\angle \{X(e^{j\theta}) \}=0$. In other words we can conclude that the angle indicates the amount of samples with which the symmetric block function is shifted. In case of the block function $x[n] = u[n] - u[n-N]$ this is indeed $\frac{N-1}{2}$ samples.
-
 The magnitude  $|X(e^{j\theta})|$ is a periodic function which contains zero crossings. The zero crossings follow from the zeros of the numerator as follows:
 $$
 \sin(N \frac{\theta}{2} )=0 \hspace{3mm} \Rightarrow \hspace{3mm} \theta= k \cdot \frac{2\pi}{N}
@@ -499,11 +476,11 @@ $$
 \frac{\sin(N \frac{\theta}{2} )}{\sin(\frac{\theta}{2} )} \right \} =
 \frac{N \frac{\theta}{2}}{\frac{\theta}{2}} = N
 $$
-
 </div>
 </div>
 
 
+<br></br>
 
 ## FTD Properties
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/2kIrvAyID-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -742,29 +719,43 @@ shows at the left hand side the result of the multiplication of the sinc functio
 #### Example multiplication property: Finite length sinusoidal
 In most cases we assume in theory that a signal is infinite long. In practice however this will never be true and we will work with a finite length signal. In this example we will show the implication of this effect in frequency domain for a sinusoidal signal.  The top figures of Fig. 12 shows at the left hand side an infinite long sinusoidal signal $s[n]$ of frequency $\theta_0$ and at the right hand side the FTD result $S(e^{j\theta})$, which consists of two delta functions at frequency $\pm \theta_0$.
 
+
 <figure>
-  <div class="image-wrapper">
-    <img src="/../files/7.Images/discrete/transforms/FTD/signal.svg" />
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/discrete/transforms/FTD/signal.svg"
+    style="width:90%">
   </div>
-  <div class="image-wrapper">
-    <img src="/../files/7.Images/discrete/transforms/FTD/FTDsignal.svg" />
+  <div class="columnimg2">
+    <img src="/../files/7.Images/discrete/transforms/FTD/FTDsignal.svg"
+    style="width:90%">
   </div>
-  <div class="image-wrapper">
-    <img src="/../files/7.Images/discrete/transforms/FTD/window.svg" />
+</div>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/discrete/transforms/FTD/window.svg"
+    style="width:90%">
   </div>
-  <div class="image-wrapper">
-    <img src="/../files/7.Images/discrete/transforms/FTD/FTDwindow.svg" />
+  <div class="columnimg2">
+    <img src="/../files/7.Images/discrete/transforms/FTD/FTDwindow.svg"
+    style="width:90%">
   </div>
-  <div class="image-wrapper">
-    <img src="/../files/7.Images/discrete/transforms/FTD/wsignal.svg" />
+</div>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/discrete/transforms/FTD/wsignal.svg"
+    style="width:90%">
   </div>
-  <div class="image-wrapper">
-    <img src="/../files/7.Images/discrete/transforms/FTD/FTDwsignal.svg" />
+  <div class="columnimg2">
+    <img src="/../files/7.Images/discrete/transforms/FTD/FTDwsignal.svg"
+    style="width:90%">
   </div>
+</div>
 <figcaption class="numbered">
   FTD of an infinite and a finite length (windowed) sinusoidal signal.
 </figcaption>
 </figure>
+
 
 A finite length sinusoidal $s_w[n]$ can be obtained by multiplication this infinite length sinusoidal $s[n]$ with a finite length window or block function $w[n]$.
 The left hand side of the middle figure of Fig. 12 shows a rectangular block function $w[n]$ of length $N=32$ samples. The FTD $W(e^{j\theta})$ of this block function is depicted at the right hand side of the middle figure.
@@ -839,9 +830,10 @@ E &=& \sum\_{n=-\infty}^{\infty} | x[n]|^2
 \end{eqnarray}
 $$
 
+<br></br>
 
 ## Summary
-\\
+
 $$
 \boxed{
 \begin{eqnarray}
@@ -850,13 +842,11 @@ X(e^{j\theta})
 \sum\_{n=- \infty}^{\infty} x[n] e^{-jn\theta}
 &\\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &  
 x[n]
-\overset{\mathcal{F}^{-1}\{X(e^{j\theta})\}}{=\\! =\\! =\\!}
+\overset{\mathcal{F}^{-1}\\{X(e^{j\theta})\\}}{=\\! =\\! =\\! =\\! =\\!}
 \frac{1}{2 \pi} \int\_{-\pi}^{\pi} X(e^{j\theta}) e^{jn\theta} \mathrm{d} \theta
 \end{eqnarray}}
 $$
 
-
-\\
 <b><u> Main differences with continuous-time Fourier transforms: </u></b>
 <ul>
 <li>  The signal samples $x[n]$ are discrete in time and not periodic, </li>
@@ -868,13 +858,11 @@ $$
 </ul>
 
 
-\\
 <b><u> Discrete phasor property: </u></b>
 $$
 \textbf{DPP:} \qquad \sum\_{p=-\infty}^{\infty} e^{-jp \theta} = \sum\_{k=-\infty}^{\infty} 2 \pi \delta(\theta + k \cdot 2 \pi)
 $$
 
-\\
 <b><u> Most important FTD pairs: </u></b>
 <table style="width:100%">
   <tr>

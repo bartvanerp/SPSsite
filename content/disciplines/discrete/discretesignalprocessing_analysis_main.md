@@ -25,6 +25,8 @@ This module will analyze discrete-time filters not only in the time-domain, but 
 2. <a href="../discretesignalprocessing_analysis_lti/">Frequency response of LTI systems</a> (in progress) - The frequency response can be extended to infinite impulse response filters, where other aspects are also of importance, such as stability.
 3. **System functions** (to be added) - The difference equation can easily be converted to a system function through the z-transform, which offers us with valuable insight of the operations of the filter.
 
+<br></br>
+
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
 
@@ -33,10 +35,8 @@ In this section several exercises are available, including their answers. The ex
 <div class="example">
 <button class="collapsible">Test your knowledge (click to expand)</button>
 <div class="content">
-
 <button class="collapsible">Question 1</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
    The input signal is $x[n] = \cos(0.5\pi n)$. This signal is applied to a filter with impulse response $h[n]$ and frequency response $H(e^{j\theta}) = 2\sin(\theta)$. Give a description of the output signal $y[n]$.
 </br>
@@ -53,12 +53,9 @@ In this section several exercises are available, including their answers. The ex
  </div>
  </div>
  <br>
-
-
 <button class="collapsible">Question 2</button>
 <div class="content">
 <div class="scp-quizzes-data quiz">
-
     Have a look at the following system: <br>
     <div style="max-width: 600px; margin: auto">
       <figure>
@@ -84,10 +81,8 @@ In this section several exercises are available, including their answers. The ex
  </div>
 </div>
 <br>
-
 <button class="collapsible">Question 3</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
     What is the response of the following filter to a DC signal?
     <div style="max-width: 600px; margin: auto">
@@ -109,11 +104,8 @@ In this section several exercises are available, including their answers. The ex
  </div>
 </div>
 <br>
-
-
 <button class="collapsible">Question 4</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
     What is the response of the following cascaded filters to a DC signal?
     <div style="max-width: 600px; margin: auto">
@@ -137,10 +129,8 @@ In this section several exercises are available, including their answers. The ex
  </div>
 </div>
 <br>
-
 <button class="collapsible">Question 5</button>
 <div class="content">
-
 <div class="scp-quizzes-data quiz">
     What is does the system with the following phase response represent?
     <div style="max-width: 600px; margin: auto">
@@ -166,8 +156,6 @@ In this section several exercises are available, including their answers. The ex
  </div>
 </div>
 <br>
-
-
 </div>
 </div>
 
@@ -188,6 +176,8 @@ Download the answers <a href="/../files/3.Exercises/Answers/5.FREQ-answers.pdf">
 
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
 
+<br></br>
+
 ## MATLAB lab
 Accompanied to this modules are some exercises in MATLAB, which will test your knowledge of the module and will help improve your MATLAB skills.
 
@@ -200,6 +190,8 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
 
 ### MATLAB demo
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/7oas6xLIYhc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br></br>
 
 ## Summary frequency response of FIR filters
 
@@ -217,12 +209,12 @@ $$
 <br>
 <b><u> Basic FIR property: </u></b>
 <br>
-<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>When applying a sinusoidal signal with a single frequency $\theta=\theta_1$ to an FIR filter, the output is a sinusoidal signal with the same frequency $\theta_1$ as the input signal, only the amplitude and phase have changed. The change in amplitude is described by the magnitude response evaluated at frequency $\theta_1$, thus $|H(e^{j{\theta}})|\_{\theta=\theta_1}$, while the change in phase is described by the phase response evaluated at frequency $\theta_1$, thus $\angle{H(e^{j{\theta}})}|\_{\theta=\theta_1}$.</i></div>
+<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>When applying a sinusoidal signal with a single frequency $\theta=\theta_1$ to an FIR filter, the output is a sinusoidal signal with the same frequency $\theta_1$ as the input signal, only the amplitude and phase have changed. The change in amplitude is described by the magnitude response evaluated at frequency $\theta_1$, thus $|H(e^{j{\theta}})\mid_{\theta=\theta_1}$, while the change in phase is described by the phase response evaluated at frequency $\theta_1$, thus $\angle{H(e^{j{\theta}})}\mid_{\theta=\theta_1}$.</i></div>
 
 <br>
-When applying a sum of frequencies $x[n] = A_0 + \sum\_{k=1}^{N} A_k \cos ( \theta_k n + \phi_k)$ to an FIR filter with frequency response $H(e^{j{\theta}}) = |H(e^{j\theta})| e^{j{\angle{H(e^{j{\theta}})}}}$ then the output can be written as follows:
+When applying a sum of frequencies $x[n] = A_0 + \sum_{k=1}^{N} A_k \cos ( \theta_k n + \phi_k)$ to an FIR filter with frequency response $H(e^{j{\theta}}) = |H(e^{j\theta})| e^{j{\angle{H(e^{j{\theta}})}}}$ then the output can be written as follows:
 $$
-y[n] = |H(e^{j0})| + \sum\_{k=1}^{N} |H(e^{j\theta_k})| A_k \cos (\theta_k n + \phi_k +
+y[n] = |H(e^{j0})| + \sum_{k=1}^{N} |H(e^{j\theta_k})| A_k \cos (\theta_k n + \phi_k +
 \angle{H(e^{j\theta_k})})
 $$
 
@@ -260,4 +252,4 @@ $$
 
 <br>
 <b><u> Steady state and transient behaviour: </u></b>
-<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i><ul><li><b> Transient region:</b> The complex multiplier $\left ( \sum_{k=0}^{{\color{red}{n}}} h[k] e^{-j\theta_1 k} \right )$ depends on the index $n$.</li><li><b>Steady state region:</b> The complex multiplier $\sum\_{k=0}^{{\color{blue}{M-1}}} h[k] e^{-j\theta_1 k}$ is constant. Output contains only input frequency ($\theta_1$ in this example).</li><li>If for $n > M-1$ the input changes to zero or to another frequency $\theta\_2 \neq \theta\_1$, then there will be a new transition- and steady state- region.</li></ul></i></div>
+<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i><ul><li><b> Transient region:</b> The complex multiplier $\left ( \sum_{k=0}^{{\color{red}{n}}} h[k] e^{-j\theta_1 k} \right )$ depends on the index $n$.</li><li><b>Steady state region:</b> The complex multiplier $\sum_{k=0}^{{\color{blue}{M-1}}} h[k] e^{-j\theta_1 k}$ is constant. Output contains only input frequency ($\theta_1$ in this example).</li><li>If for $n > M-1$ the input changes to zero or to another frequency $\theta_2 \neq \theta_1$, then there will be a new transition- and steady state- region.</li></ul></i></div>

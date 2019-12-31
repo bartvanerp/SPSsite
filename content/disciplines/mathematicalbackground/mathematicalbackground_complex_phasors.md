@@ -12,7 +12,7 @@ type = "docs"       # Do not modify.
 [menu.mathematicalbackground]
   name = "Phasors"
   parent = "Complex numbers and phasors"
-  weight = 4
+  weight = 14
 
 +++
 
@@ -46,6 +46,8 @@ $$ \begin{eqnarray}
 && A \cos (\omega_o t +\phi) = \Re e \\{ A  e^{j(\omega_o t +\phi)} \\} = \frac{A e^{j(\omega_o t +\phi)} + A e^{-j(\omega_o t +\phi)}}{2}  \newline
 && A \sin (\omega_o t +\phi) = \Im m \\{ A e^{j(\omega_o t +\phi)} \\} = \frac{A e^{j(\omega_o t +\phi)} - A e^{-j(\omega_o t +\phi)}}{2 j}
 \end{eqnarray} $$
+
+<br></br>
 
 ## Phasor addition rule
 We can write a phasor as the following product:
@@ -108,31 +110,24 @@ In words this results in the so called phasor addition rule:
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 The function $x(t)$ consists of the sum of the following 3 sinusoidal signals:
 $$
 x(t) = 5 \cos\left(\omega_0 t + \frac{3}{2}\pi\right) + 4 \cos\left(\omega_0 t + \frac{2}{3}\pi\right) + 4 \cos\left(\omega_0 t + \frac{1}{3}\pi\right)
 $$
 Express $x(t)$ in the form $x(t) = A\cos(\omega_0 t + \phi)$ by finding the numerical values of $A$ and $\phi$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The different cosine functions can be written as the real part of phasors.
 $$ x(t) = \Re e \{5 e^{j(\omega_0 t + \frac{3}{2}\pi)} \}+\Re e \{4 e^{j(\omega_0 t + \frac{2}{3}\pi)} \} + 4\Re e \{ e^{j(\omega_0 t + \frac{1}{3}\pi)} \} $$
 The phasor component ($e^{j\omega_0 t}$) can be separated:
 $$ x(t) = \Re e \{ e^{j\omega_0 t} \cdot \left ( 5e^{j\frac{3\pi}{2}}+4e^{j\frac{2\pi}		{3}}+4e^{j\frac{\pi}{3}} \right ) \}$$
 The complex numbers, containing the amplitude and phase of the 3 individual sinusoidal signals, can be added together by using complex addition rules. Since we have to add complex numbers it is easiest to rewrite these complex numbers in Cartesian notation:
-
 $$\begin{eqnarray}
 x(t)&=& \Re e \{ e^{j\omega_0 t} \cdot \left(- j 5 + 4 (- \frac{1}{2} + j \frac{1}{2} \sqrt{3}) + 4 (\frac{1}{2} + j \frac{1}{2} \sqrt{3}) \right) \newline
 &=& \Re e \{ e^{j\omega_0 t} \cdot \left ( (4 \sqrt{3} -5) j \right ) \} =  \Re e \{ e^{j\omega_0 t} \cdot \left ( (4 \sqrt{3} -5) e^{j\frac{\pi}{2}} \right ) \} \newline
 &=& \Re e \{ (4 \sqrt{3} -5) e^{j\omega_0 t + \frac{\pi}{2}} \}
 \end{eqnarray}$$
-
 Now this answer can be written as the final answer:
 $$ x(t) = (4\sqrt{3}-5)\cos\left(\omega_0 t +\frac{\pi}{2}\right)$$
-
-
 </div>
 </div>

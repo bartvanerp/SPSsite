@@ -29,4 +29,4 @@ The concepts covered in this module are:
 
 4. **Multivariate calculus** (to be added) - These functions usually are not only a function of a single variable, but often of multiple variables. Understanding these functions with respect to each of these variables gives insight in the underlying data generating process and allows for better understanding of the underlying process.
 
-5. **Probability theory** (to be added) - When uncertainty is involved in noisy signals, exact values cannot be determined. Embracing the random nature of these signals opens up a completely new field, called probability theory, which provides the analytical solution to problems where uncertainty is involved.
+5. <a href="../mathematicalbackground_probability_main">Probability theory</a> - When uncertainty is involved in noisy signals, exact values cannot be determined. Embracing the random nature of these signals opens up a completely new field, called probability theory, which provides the analytical solution to problems where uncertainty is involved.

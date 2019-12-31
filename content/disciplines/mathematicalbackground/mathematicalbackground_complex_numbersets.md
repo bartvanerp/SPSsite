@@ -12,13 +12,15 @@ type = "docs"       # Do not modify.
 [menu.mathematicalbackground]
   name = "Number sets"
   parent = "Complex numbers and phasors"
-  weight = 1
+  weight = 11
 
 +++
 
 In mathematics, sets are defined as collections of objects.
 Number sets can therefore be regarded as collections of numbers.
 These number sets can be distinguished by the set to which they belong, each allowing for more flexibility when working with them.
+
+<br></br>
 
 ## Natural numbers
 Numbers have been present in human history since the ancient Egyptians (and possibly even earlier).
@@ -28,6 +30,8 @@ The discrete countable set of these objects is called the set of natural numbers
 The mathematical representation of this set is given by
 $$ \mathbb{N} = \\{ 0, 1,2,\dots \\} .$$
 _The presence of the number 0 in this set is often debatable, however, following conventions the number is included._
+
+<br></br>
 
 ## Integer numbers
 The set of natural numbers always allowed for addition, however, other mathematical operations, such as subtraction, were not always allowed.
@@ -42,6 +46,8 @@ In order to allow for subtraction in the set of natural numbers, the set needs t
 This new set is called the set of integer numbers and is represented mathematically as
 $$ \mathbb{Z} = \\{ \dots, -2, -1, 0, 1,2,\dots \\} .$$
 
+<br></br>
+
 ## Rational numbers
 With the numbers in this set, many operations like addition, subtraction and multiplication can be performed.
 However, division of the numbers in this set might result in a number which is not an integer number (e.g. one divided by 2 results in 1/2 = 0.5, where 0.5 is not an integer).
@@ -50,12 +56,16 @@ This set is denoted mathematically as
 $$ \mathbb{Q} = \\{ \frac{a}{b}: a,b \in \mathbb{Z}, b \neq 0\\} .$$
 This set can be described in easy words as: the set of fractions, $a$ divided by $b$, where $a$ and $b$ are integer numbers and $b$ is not equal to zero.
 
+<br></br>
+
 ## Real numbers
 With the set of rational numbers, almost all commonly used numbers can be described.
 However, it still offers some limitations, since some numbers can not be written as a fraction.
 Examples of these numbers are $\sqrt{2}$, $\pi$ and $e$.
 These numbers are part of the set of irrational numbers $\mathbb{P}$.
 In order to include this set of numbers, the set of real numbers $\mathbb{R}$ is defined as the set of all numbers between $-∞$ and $∞$.
+
+<br></br>
 
 ## Complex numbers
 
@@ -91,6 +101,8 @@ Not only the function $e^{\pm j\theta}$ is a solution, but any linear combinatio
 
 <a href="../mathematicalbackground_complex_notation">This section</a> makes the link between both derivations and allows us to use different types of notation for complex number by using the <a href="../mathematicalbackground_complex_euler">Euler equations</a>.
 
+<br></br>
+
 ## Visualisation of the number sets
 <div style="max-width: 600px; margin: auto">
   <figure>
@@ -110,9 +122,7 @@ The main message from this figure is that the newer number sets are an extension
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Find the roots of the following equation: $x^{2}-2x +4=0$
-
 <button class="collapsible">Show solution</button>
 <div class="content">
 We can use the standard quadratic rule for determining the two root(s) $x_1$ and $x_2$ of this quadratic equation:
@@ -124,17 +134,15 @@ $\sqrt{-3} = \sqrt{-1}\cdot\sqrt{3} = \mbox{j} \cdot \sqrt{3}$ which results in 
 $$
 x_{1,2} = 1 \pm \mbox{j} \cdot \sqrt{3}
 $$
-
 <i>Check:</i>
-
 We can verify that $x_1=1 + \mbox{j} \cdot \sqrt{3}$ and $x_2=1 - \mbox{j} \cdot \sqrt{3}$ are indeed the roots of the original equation by filling in these values into the original
 equation. By doing so and using the fact that j$^2 = (\sqrt{-1})^2=-1$, this results into the following:
 \begin{eqnarray*}
-x^2-2x+4|_{x=x_1} &=& (1 + \mbox{j} \cdot \sqrt{3})^2-2(1 + \mbox{j} \cdot \sqrt{3})+4 \\
+x^2-2x+4\mid_{x=x_1} &=& (1 + \mbox{j} \cdot \sqrt{3})^2-2(1 + \mbox{j} \cdot \sqrt{3})+4 \\
 &=& 1 + 2 \mbox{j} \sqrt{3} + 3 \mbox{j}^2 -2 -2 \mbox{j} \sqrt{3} + 4 \\
 &=& 1 + 2 \mbox{j} \sqrt{3} -3 -2 -2 \mbox{j} \sqrt{3} + 4 =0 \\
 \mbox{and} & & \\
-x^2-2x+4|_{x=x_2} &=& (1 - \mbox{j} \cdot \sqrt{3})^2-2(1 - \mbox{j} \cdot \sqrt{3})+4 \\
+x^2-2x+4\mid_{x=x_2} &=& (1 - \mbox{j} \cdot \sqrt{3})^2-2(1 - \mbox{j} \cdot \sqrt{3})+4 \\
 &=& 1 - 2 \mbox{j} \sqrt{3} + 3 \mbox{j}^2 -2 +2 \mbox{j} \sqrt{3} + 4 \\
 &=& 1 - 2 \mbox{j} \sqrt{3} -3 -2 +2 \mbox{j} \sqrt{3} + 4 =0
 \end{eqnarray*}
@@ -143,7 +151,5 @@ $$
 x^{2} -2x + 4 = (x - x_1) \cdot (x - x_2) =
 \left ( x - (1 + \mbox{j} \cdot \sqrt{3}) \right ) \cdot \left ( x - (1 - \mbox{j} \cdot \sqrt{3}) \right )
 $$
-
-
 </div>
 </div>

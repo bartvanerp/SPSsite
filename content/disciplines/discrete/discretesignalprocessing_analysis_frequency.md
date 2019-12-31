@@ -47,12 +47,9 @@ From this result it follows that when applying a single phasor with frequency $\
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Given an FIR filter which consists of 4 delays, or equivalently, the impulse response equals $h[n]= \delta[n-4]$. Calculate the response of this filter when the input is a phasor with frequency $\theta_1=\frac{\pi}{8}$: $x[n] = \color{red}{2 e^{j(\frac{\pi}{8}n + \frac{\pi}{3})}}$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The output of this FIR filter with 4 delays is as follows:
 $$
 \begin{eqnarray*}
@@ -61,7 +58,6 @@ y[n]&=& x[n-4]= 2 e^{j(\frac{\pi}{8}(n-4) + \frac{\pi}{3})} = 2 e^{j(\frac{\pi}{
 \end{eqnarray*}
 $$
 Thus a system which contains 4 delays does only change the phase of the input phasor (from $+\frac{\pi}{3}$ into $- \frac{\pi}{6}$).
-
 </div>
 </div>
 
@@ -69,9 +65,7 @@ Thus a system which contains 4 delays does only change the phase of the input ph
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Calculate the response of a simple FIR filter, as depicted in the figure below, when the input is the following phasor with frequency $\theta_1=\frac{\pi}{8}$: $x[n] = \color{red}{2 e^{j(\frac{\pi}{8}n + \frac{\pi}{3})}}$.
-
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
@@ -84,10 +78,8 @@ Calculate the response of a simple FIR filter, as depicted in the figure below, 
   </figure>
 </div>
 <br>
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The output of this FIR filter is as follows:
 $$
 \begin{eqnarray*}
@@ -97,7 +89,6 @@ y[n]&=& x[n] + x[n-4]= 2 e^{j(\frac{\pi}{8}n + \frac{\pi}{3})} + 2 e^{j(\frac{\p
 \end{eqnarray*}
 $$
 So the phasor at the output has the same frequency ($\frac{\pi}{8}$) as the input, only the amplitude has changed from $2$ into $2\sqrt{2}$ and the phase has changed from $+\frac{\pi}{3}$ to $+\frac{\pi}{3}- \frac{\pi}{4} = \frac{\pi}{12}$.
-
 </div>
 </div>
 
@@ -139,12 +130,9 @@ The frequency response $H(e^{j\theta})$ of an FIR describes how a phasor frequen
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 First calculate the Frequency response $H(e^{j\theta})$ of the FIR filter with impulse response $h[n] = \delta[n] + 2 \delta[n-\color{red}{1}] + \delta[n-\color{blue}{2}]$ and then evaluate the response of this FIR filter to the phasor frequency $x[n]= e^{j(\frac{\pi}{3} n + \frac{\pi}{4})}$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 With the given impulse response $h[n]$ we obtain from the definition of the frequency response the following expression:
 \begin{equation}
 H(e^{j\theta})= 1 \cdot e^{-j0 \cdot \theta} + 2 \cdot e^{-j\color{red}{1} \cdot \theta} + 1 \cdot e^{-j\color{blue}{2} \cdot \theta}  = 1 +2 e^{-j\theta} + e^{-j2 \theta}.
@@ -156,7 +144,6 @@ y[n]&=& x[n] + 2 x[n-1] + x[n-2] \\
 &=& \left ( \color{blue}{ e^{-j0 \cdot \frac{\pi}{3}} + 2 e^{-j1 \cdot \frac{\pi}{3}} + e^{-j2 \cdot \frac{\pi}{3}}} \right ) \cdot \color{red}{e^{j(\frac{\pi}{3} n + \frac{\pi}{4})}}
 \end{eqnarray*}
 Alternatively, we can obtain the first part (in blue) of this last equation by evaluation the general description of the frequency response $H(e^{j\theta})$, as derived in the equation above, for frequency $\theta=\frac{\pi}{3}$. This will be denoted by $H(e^{j\theta})\mid_{\theta = \frac{\pi}{3}}$.
-
 Thus for an input signal $x[n]= \color{red}{e^{j(\frac{\pi}{3} n + \frac{\pi}{4})}}$, which consists of a single phasor frequency $\theta=\frac{\pi}{3}$, with amplitude $A=1$ and phase $\phi=\frac{\pi}{4}$, we can alternatively obtain the output $y[n]$ of this FIR filter as follows:
 $$
 \begin{eqnarray*}
@@ -168,7 +155,6 @@ y[n] &=& \left ( \color{blue}{ H(e^{j\theta})\mid_{\theta = \frac{\pi}{3}} } \ri
 \end{eqnarray*}
 $$
 Thus, the output signal $y[n]$ is also a phasor with the same frequency $\theta=\color{red}{\frac{\pi}{3}}$ as the input. However, the amplitude and phase of the input signal have been changed in a way which can be obtained by evaluating the frequency response $H(e^{j\theta})$ for the frequency $\theta = \frac{\pi}{3}$ of the input signal.
-
 </div>
 </div>
 
@@ -177,7 +163,7 @@ Thus, the output signal $y[n]$ is also a phasor with the same frequency $\theta=
 
 ### Response FIR to sinusoidal signal with single frequency
 Using the result of the previous subsection we can now find in a few steps,
-as depicted in Fig. \ref{Fig:cosresponseFIR}, the response of an FIR filter to a sinusoidal signal with a single frequency $x[n]=\color{red}{A \cos (\theta_1 n + \phi)}$.
+as depicted in Fig. 3, the response of an FIR filter to a sinusoidal signal with a single frequency $x[n]=\color{red}{A \cos (\theta_1 n + \phi)}$.
 
   <div style="max-width: 600px; margin: auto">
     <figure>
@@ -212,20 +198,17 @@ This is depicted in Fig. 4.
 
 
 Concluding, we have the following general result:
-<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>When applying a sinusoidal signal with a single frequency $\theta=\theta_1$ to an FIR filter, the output is a sinusoidal signal with the same frequency $\theta_1$ as the input signal, only the amplitude and phase have changed. The change in amplitude is described by the magnitude response evaluated at frequency $\theta_1$, thus $|H(e^{j{\theta}})|\_{\theta=\theta_1}$, while the change in phase is described by the phase response evaluated at frequency $\theta_1$, thus $\angle{H(e^{j{\theta}})}|\_{\theta=\theta_1}$.</i></div>
+<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>When applying a sinusoidal signal with a single frequency $\theta=\theta_1$ to an FIR filter, the output is a sinusoidal signal with the same frequency $\theta_1$ as the input signal, only the amplitude and phase have changed. The change in amplitude is described by the magnitude response evaluated at frequency $\theta_1$, thus $|H(e^{j{\theta}})\mid_{\theta=\theta_1}$, while the change in phase is described by the phase response evaluated at frequency $\theta_1$, thus $\angle{H(e^{j{\theta}})}\mid_{\theta=\theta_1}$.</i></div>
 <br>
 
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 In this example we use the same FIR filter as used in the previous example. Thus
 $h[n] = \delta[n] + 2 \delta[n-1] + \delta[n-2]$ and from this it follows that the frequency response is given by $H(e^{j\theta}) = 1 + 2 e^{-j\theta} + e^{-j2 \theta}$. Now the input signal is given by the following sinusoidal signal: $x[n]= \cos(\frac{\pi}{3} n)$.
 Calculate the output signal $y[n]$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 Now we can use the superposition property, which implies that
 we can evaluate the output $y[n]$ to the input signal $x[n]=\cos(\frac{\pi}{3} n)$ by first splitting the cosine into its two phasor components $x_1[n]= e^{j\frac{\pi}{3}n}$ and $x_2[n]=e^{-j\frac{\pi}{3}n}$. Then evaluate the output of each of these two individual phasor components, which results into:
 \begin{eqnarray*}
@@ -256,7 +239,6 @@ x[n] = \cos (\frac{\pi}{3} n) & \mapsto & y[n]=
 & & = \color{red}{3} \cdot \cos (\frac{\pi}{3} n \color{blue}{- \frac{\pi}{3}})
 \end{eqnarray*}
 The result is depicted in the figure below.
-
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
@@ -268,10 +250,10 @@ The result is depicted in the figure below.
     </figcaption>
   </figure>
 </div>
-
 </div>
 </div>
 
+<br></br>
 
 ## Superposition
 Because an FIR filter is Time Invariant (LTI) system, we can use the superposition rule when an input signal consists of more than one frequency.
@@ -294,12 +276,9 @@ $$
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 In this example we use the same FIR filter as in the previous example. Thus $h[n] = \delta[n] + 2 \delta[n-1] + \delta[n-2]$ and the frequency response is given by $H(e^{j\theta}) = 1 + 2 e^{-j\theta} + e^{-j2 \theta}$. Now, the input signal is given by the following frequencies: $x[n] = 1 + \frac{4}{3} \cos (\frac{\pi}{3} n) + 2 \cos(\frac{\pi}{2}n) + \cos(\pi n)$. Calculate the output signal $y[n]$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 Using superposition, we first calculate the response of the given FIR filter as a result of the individual frequency components of the input signal $x[n]$ and then we add the resulting outputs. With the individual frequency components $\theta =0, \pm \frac{\pi}{3}, \pm \frac{\pi}{2}$ and $\theta=\pm \pi$, this results in:
 \begin{eqnarray*}
 H(e^{j\theta})\mid_{\theta=0} &=& 4 \\
@@ -316,10 +295,10 @@ y[n] &=& 4 \cdot 1 + \color{red}{3} \cdot \frac{4}{3} \cos (\frac{\pi}{3}n \colo
 + {\color{green} 0} \cdot \cos(\pi n) \\
 &=& 4 + 4 \cos (\frac{\pi}{3} n - \frac{\pi}{3}) + 4 \cos (\frac{\pi}{2} n - \frac{\pi}{2}).
 \end{eqnarray*}
-
 </div>
 </div>
 
+<br></br>
 
 ## Properties Frequency Response
 In the previous section, we found the following relation between the impulse response description in time domain $h[n]$ and the frequency response description in frequency domain $H(e^{j\theta})$:
@@ -366,9 +345,7 @@ $$
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Calculate the frequency response $H(e^{j\theta})$ of the FIR filter as depicted in the figure below and show the two main basic properties as described above.
-
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
@@ -381,10 +358,8 @@ Calculate the frequency response $H(e^{j\theta})$ of the FIR filter as depicted 
   </figure>
 </div>
 <br>
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 From the signal flow graph (or realization scheme) of the FIR filter it follows that the impulse response is given by:
 $$
 h[n] = -\delta[n] + 3 \delta[n-1] - \delta[n-2]
@@ -406,10 +381,10 @@ H(e^{-j\theta}) &=& -1  + 3 e^{j\theta} - e^{j2\theta} = -1 + 3 (e^{-j\theta})^\
 &=& (-1)^\ast + (3 e^{-j\theta})^* + (-e^{-j2\theta})^\ast \\
 &=& (-1  + 3 e^{-j\theta} - e^{-j2\theta})^\ast = H^\ast(e^{j\theta})
 \end{eqnarray*}
-
 </div>
 </div>
 
+<br></br>
 
 ## Graphical Representation
 
@@ -430,19 +405,15 @@ $$
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Calculate the frequency response of a system that consists of two delays in series. Make a plot of both the magnitude- and phase-response as a function of relative frequency $\theta$ inside the Fundamental Interval (FI), thus with $|\theta| \leq \pi$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The impulse response of this system is given by $h[n]=\delta[n-2]$ and from this it follows that the frequency response equals $H(e^{j\theta}) = \color{red}{1} \cdot \text{e}^{j (\color{blue}{-2 \theta})}$. Thus the magnitude response is equal to $\color{red}{|H(e^{j\theta})| =1}$ and the phase response is equal to $\color{blue}{\angle{H(e^{j\theta})}= -2 \theta}$.
 The graphical representation of the magnitude- and phase-response is depicted in the figure below. In the lower left-hand side figure we can see that, within the FI, the plot of the phase response of this system is in the range:
 $-2\pi \leq e^{j\angle{H(e^{j\theta})}} \leq 2 \pi$.
 However, the phase does not change if we add or subtract $2\pi$, since $e^{j2\pi} = e^{-j2\pi}=1$.
 Thus, in the graphical representation of the phase response we can subtract $2\pi$ in case the phase response becomes larger than $2\pi$. Similarly we can add $2\pi$ in case the value becomes smaller than $2 \pi$. The lower right-hand plot depicts the phase response within these boundaries
 $\color{blue}{|\angle{H(e^{j\theta})|}} \leq \pi$. This is usually automatically done in MATLAB.
-
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
@@ -454,7 +425,6 @@ $\color{blue}{|\angle{H(e^{j\theta})|}} \leq \pi$. This is usually automatically
     </figcaption>
   </figure>
 </div>
-
 </div>
 </div>
 
@@ -472,12 +442,9 @@ Thus, due to the fact that we plot the magnitude response $|H(e^{j\theta})|$, we
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Calculate the frequency response $H(e^{j\theta})$ of a first order difference system, from which the Difference Equation is given by: $y[n]=x[n]-x[n-1]$, and make a graphical plot for $\theta$ in the Fundamental Interval ($|\theta| \leq \pi$)of the magnitude response $|H(e^{j\theta})|$ and phase response $\angle{H(e^{j\theta})}$, with $|\angle{H(e^{j\theta})}| \leq \pi$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 The frequency response of this first order difference system is given by: $H(e^{j\theta}) = 1 - e^{-j\theta}$. In order to give the graphical representation of the magnitude- and phase-response we can rewrite the frequency response as follows:
 \begin{eqnarray*}
 H(e^{j\theta}) &=& \left ( e^{j\frac{\theta}{2}} - e^{-j\frac{\theta}{2}} \right ) \cdot e^{-j\frac{\theta}{2}} = 2 \sin (\frac{\theta}{2} ) \cdot j \cdot e^{-j\frac{\theta}{2}} \\
@@ -494,7 +461,6 @@ $$
 \right .
 $$
 These plots are shown in the figure below. We can see a phase jump of $\pi$ at the zero crossing for frequency $\theta =0$.
-
 <div style="max-width: 400px; margin: auto">
   <figure>
     <img
@@ -506,7 +472,6 @@ These plots are shown in the figure below. We can see a phase jump of $\pi$ at t
     </figcaption>
   </figure>
 </div>
-
 </div>
 </div>
 
@@ -559,6 +524,8 @@ An example is shown in Fig. 5, which is the graphical representation of the magn
 From the left-hand figure we clearly can see that indeed this 11-point averaging filter attenuates higher frequencies. Furthermore, we see 10 zero crossings at locations $\theta=k \cdot \frac{2 \pi}{11}$, for $k=\pm 1, \pm 2, \cdots \pm 5$.
 In the right-hand side phase-response plot we see that the slope of the plot is $-(L-1)\frac{\theta}{2}= - 5 \theta$. Furthermore, at each of the 10 zero crossings of the magnitude-response we observe a phase jump of $\pm \pi$.
 
+<br></br>
+
 ## Cascading FIR systems
 In the previous module FIR we have seen that we can combine the impulse responses $h_1[n]$ and $h_2[n]$ of two cascaded FIR filters to one impulse response $h[n]$ which can be obtained as the convolution sum of the two individual impulse responses. Thus $h[n]=h_1[n] \star h_2[n]$.
 
@@ -585,13 +552,10 @@ When applying a phasor with frequency $\color{red}{e^{j\theta n}}$ to the first 
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 The following two FIR filters are cascaded:
 $h_1[n] = \delta[n]+\delta[n+2]$ and $h_2[n] = \delta[n]-\delta[n+2]$. Calculate the impulse- and frequency- response when we cascade these two FIR filters.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 Via the impulse responses:
 $$
 h[n]= h_1[n] \star h_2[n] = \left ( \delta[n] + \delta[n-2] \right ) \star \left ( \delta[n] -\delta[n-2] \right ) =\delta[n] -\delta[n-4]
@@ -601,7 +565,6 @@ $$
 H(e^{j\theta})= H_1(e^{j\theta}) \cdot H_2(e^{j\theta}) = \left ( 1 + e^{-j2 \theta} \right ) \cdot
 \left ( 1 - e^{-j2 \theta} \right ) = 1 - e^{-j4 \theta}
 $$
-
 </div>
 </div>
 
@@ -613,6 +576,7 @@ h_1[n] * h_2[n] \hspace{3mm} \circ  \hspace{-2.3mm} - \hspace{-1.1mm}  \circ \hs
 }
 $$
 
+<br></br>
 
 ## Steady State and transient behaviour
 Until now we assumed signals exist for all values of $n$ in the range $-\infty < n < \infty$. However, in practice this will not be the case. More realistically, a signal would for example start with index $n=0$, thus:
@@ -641,7 +605,7 @@ y[n] =
 $$
 
 <b><u>Concluding:</u></b>
-<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i><ul><li><b> Transient region:</b> The complex multiplier $\left ( \sum_{k=0}^{{\color{red}{n}}} h[k] e^{-j\theta_1 k} \right )$ depends on the index $n$.</li><li><b>Steady state region:</b> The complex multiplier $\sum\_{k=0}^{{\color{blue}{M-1}}} h[k] e^{-j\theta_1 k}$ is constant. Output contains only input frequency ($\theta_1$ in this example).</li><li>If for $n > M-1$ the input changes to zero or to another frequency $\theta\_2 \neq \theta\_1$, then there will be a new transition- and steady state- region.</li></ul></i></div>
+<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i><ul><li><b> Transient region:</b> The complex multiplier $\left ( \sum_{k=0}^{{\color{red}{n}}} h[k] e^{-j\theta_1 k} \right )$ depends on the index $n$.</li><li><b>Steady state region:</b> The complex multiplier $\sum_{k=0}^{{\color{blue}{M-1}}} h[k] e^{-j\theta_1 k}$ is constant. Output contains only input frequency ($\theta_1$ in this example).</li><li>If for $n > M-1$ the input changes to zero or to another frequency $\theta_2 \neq \theta_1$, then there will be a new transition- and steady state- region.</li></ul></i></div>
 
 
 Fig. 7 shows the transient-region (in red samples) and steady- state region when we apply the signal $x[n]= \cos(\frac{\pi}{3}n) \cdot u[n]$ to an FIR filter with impulse response $h[k] = \delta[n] + 2 \delta[n-1] + \delta[n-2]$.
@@ -658,7 +622,7 @@ Fig. 7 shows the transient-region (in red samples) and steady- state region when
   </figure>
 </div>
 
-
+<br></br>
 
 ## Filtering continuous signal
 In practice we often filter a continuous-time signal in the discrete-time domain as depicted in Fig. 8. The main motivations for this, is that the implementation in discrete-time domain is much more flexible and cheaper compared to the implementation in the continuous-time domain.
@@ -680,13 +644,10 @@ Of course in practice we have to take care of the aliasing effect, as discussed 
 <div class="example">
 <h4> Example </h4>
 <hr>
-
 Given the continuous-time signal $x(t)= 5 + 2 \cos(2100 \pi t + \frac{\pi}{4}) + 3 \cos(2800 \pi t - \frac{\pi}{6})$. We sample this signal with a C/D convertor that runs at a a sample rate $f_s = 1/T_s = 4200$ [samples/sec]. Next we filter the discrete-time signal samples $x[n]$ with an FIR filter of which the impulse response is given by $h[n]=\delta[n] + \delta[n-1]$. The discrete-time output signal samples $y[n]$ are converted back to the continuous-time signal $y(t)$ by a D/C convertor.
 The D/C convertor runs at the same sampling frequency $f_s1/T_s = 4200$ [samples/sec] as the C/D convertor. Calculate the continuous-time signal $y(t)$.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-
 With a sample rate $f_s = 1/T_s = 4200$ [samples/sec] of the C/D convertor we obtain the following expression for the discrete-time input signal samples:
 $$
 x[n] = 5 + 2 \cos(\frac{\pi}{2}n + \frac{\pi}{4}) + 3 \cos (\frac{2 \pi}{3}n - \frac{\pi}{6}).
@@ -712,6 +673,5 @@ With a sample rate $f_s = 1/T_s = 4200$ [samples/sec] of the D/C convertor the r
 $$
 y(t) = 10 + 2 \sqrt{2} \cos(2100 \pi t ) + 3 \cos (2800 \pi t - \frac{\pi}{2}).
 $$
-
 </div>
 </div>
