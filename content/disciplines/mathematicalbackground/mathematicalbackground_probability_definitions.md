@@ -1,5 +1,5 @@
 +++
-title = "Definition of probability"
+title = "Definitions of probability"
 
 # date = {{ .Date }}
 lastmod = 2019-12-30
@@ -10,7 +10,7 @@ type = "docs"       # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.mathematicalbackground]
-  name = "Definition of probability"
+  name = "Definitions of probability"
   parent = "Probability theory"
   weight = 51
 
