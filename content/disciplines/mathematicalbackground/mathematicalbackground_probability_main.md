@@ -25,3 +25,12 @@ In signal processing we deal with measured signals which are often not ideal. Us
 Probability theory provides us with the tools in order to still make sense of signals with a random component. This module will discuss the main concepts behind probability theory that we need in order to process these signals.
 
 ## Module overview
+The concepts covered in this module are:
+
+1. <a href="../mathematicalbackground_probability_definitions">Definitions of probability</a> - In order to describe how uncertainty affects experiments some general definitions are clarified. Furthermore the basic theory of probability theory is explained.
+
+2. <a href="../mathematicalbackground_probability_variables">Random variables</a> - Calculations with uncertainty involve so-called random variables. These random variables have specific characteristics and allow us to solve problems involving uncertainty.
+
+3. <a href="../mathematicalbackground_probability_functions">Functions and pairs of random variables</a> - Random variables are often not present in their simplest form. Problems usually involve functions of random variables and/or multiple random variables.
+
+4. <a href="../mathematicalbackground_probability_families">Families of random variables</a> - Some processes can be described by random variables following very specific and well-known functions. These common functions and their characteristics are called the families of random variables.

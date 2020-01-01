@@ -265,4 +265,4 @@ $$
 $$
 
 <br>
-<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i><b> Sampling theorem:</b> A continuous-time signal $x(t)$ with frequencies no higher than $f_{max}$ can be reconstructed exactly from its samples $x[n]= x(t)\mid\_{t=n \cdot T_s}$, if samples are taken at a rate $f\_s=1/T\_s$, that is greater than $2 f\_{max}$.</i></div>
+<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i><b> Sampling theorem:</b> A continuous-time signal $x(t)$ with frequencies no higher than $f_{max}$ can be reconstructed exactly from its samples $x[n]= x(t)\mid_{t=n \cdot T_s}$, if samples are taken at a rate $f_s=1/T_s$, that is greater than $2 f_{max}$.</i></div>
