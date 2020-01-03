@@ -33,6 +33,22 @@ In order to indicate that a random variable $X$ is distributed according to a ce
 ### The Bernoulli(p) distribution
 The Bernoulli distribution is a discrete probability distribution that models an experiment where only 2 outcomes are possible. The probability distribution of flipping a coin is an example of a Bernoulli distribution. These outcomes are mapped to 0 and 1, whose probabilities are $1-p$ and $p$ respectively. The distribution is fully characterized by the parameter $p$, which is the probability of success ($\Pr[X = 1]$).
 
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/discrete_bernoulli_pmf.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/discrete_bernoulli_cdf.svg"
+    style="width:100%">
+  </div>
+</div>
+<figcaption>
+  Example plot of the (a) probability mass function and (b) cumulative density function of the Bernoulli(p) distribution.
+</figcaption>
+</figure>
+
 <div class="example">
   <!---->
   <h4> Probability mass function </h4>
@@ -156,6 +172,22 @@ The Bernoulli distribution is a discrete probability distribution that models an
 
 ### The Geometric(p) distribution
 The Geometric distribution is a discrete probability distribution that models an experiment with probability of success $p$. The Geometric distribution gives the probability that the first success is observed at the $x^{th}$ independent trial. The distribution is fully characterized by the parameter $p$, which is the probability of a success.
+
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/discrete_geometric_pmf.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/discrete_geometric_cdf.svg"
+    style="width:100%">
+  </div>
+</div>
+<figcaption>
+  Example plot of the (a) probability mass function and (b) cumulative density function of the Geometric(p) distribution.
+</figcaption>
+</figure>
 
 <div class="example">
   <!---->
@@ -296,6 +328,22 @@ The Geometric distribution is a discrete probability distribution that models an
 ### Binomial(n,p) distribution
 The Binomial distribution is a discrete probability distribution that models an experiment with probability of success $p$. The Binomial distribution gives the probability of observing $x$ successes in $n$ independent trials. The distribution is fully characterized by the parameters $n$ and $p$. The parameter $n$ denotes the amount of independent trials and the parameter $p$ denotes the probability of observing a success per trial.
 
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/discrete_binomial_pmf.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/discrete_binomial_cdf.svg"
+    style="width:100%">
+  </div>
+</div>
+<figcaption>
+  Example plot of the (a) probability mass function and (b) cumulative density function of the Binomial(n,p) distribution.
+</figcaption>
+</figure>
+
 <div class="example">
   <!---->
   <h4> Probability mass function </h4>
@@ -423,6 +471,22 @@ The Binomial distribution is a discrete probability distribution that models an 
 ### The Pascal(k,p) distribution
 The Pascal distribution is a probability distribution that is also known as the negative Binomial distribution. The Pascal distribution gives the probability of observing the $k^{th}$ success at the $x^{th}$ trial. The distribution is fully characterized by the parameters $k$ and $p$. The parameter $k$ denotes the desired amount of successes and the parameter $p$ denotes the chance of a success on an individual trial.
 
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/discrete_pascal_pmf.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/discrete_pascal_cdf.svg"
+    style="width:100%">
+  </div>
+</div>
+<figcaption>
+  Example plot of the (a) probability mass function and (b) cumulative density function of the Pascal(k,p) distribution.
+</figcaption>
+</figure>
+
 <div class="example">
   <!---->
   <h4> Probability mass function </h4>
@@ -543,6 +607,22 @@ The Pascal distribution is a probability distribution that is also known as the 
 
 ### The discrete Uniform(k,l) distribution
 The discrete uniform distribution is a discrete probability distribution that models an experiment where the outcomes are mapped only to discrete points on the interval from $k$ up to and including $l$. The distribution is fully characterized by the parameters $k$ and $l$, which are the discrete lower and upper bound of the interval respectively.
+
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/discrete_uniform_pmf.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/discrete_uniform_cdf.svg"
+    style="width:100%">
+  </div>
+</div>
+<figcaption>
+  Example plot of the (a) probability mass function and (b) cumulative density function of the discrete Uniform(k,l) distribution.
+</figcaption>
+</figure>
 
 <div class="example">
   <!---->
@@ -694,6 +774,22 @@ The discrete uniform distribution is a discrete probability distribution that mo
 ### The Poisson($\alpha$) distribution
 The Poisson distribution is a discrete probability distribution that models the number of events occurring within a certain interval of time, in which the events occur independently from each other at a constant rate. The exact moments at which the events occur are unknown, however, the average number of events occurring within the interval is known and is denoted by the parameter $\alpha$. An example of a process, where the number of events within an interval can be described as a Poisson distribution, is the number of phone calls over a network. For optimal allocation of resources, a service provider needs to know the chance that the allocated capacity is insufficient in order to limit the number of dropped calls. The inhabitants can be described as independent entities (i.e. everyone makes a phone call whenever it suits him or her), whilst they usually have their own habit of making phone calls.
 
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/discrete_poisson_pmf.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/discrete_poisson_cdf.svg"
+    style="width:100%">
+  </div>
+</div>
+<figcaption>
+  Example plot of the (a) probability mass function and (b) cumulative density function of the Poisson($\alpha$) distribution.
+</figcaption>
+</figure>
+
 <div class="example">
   <!---->
   <h4> Probability mass function </h4>
@@ -835,6 +931,22 @@ The Poisson distribution is a discrete probability distribution that models the 
 
 ### The Exponential($\lambda$) distribution
 The exponential distribution is a continuous probability distribution that follow an exponential curve. The curve is fully characterized by the rate parameter $\lambda$.
+
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/continuous_exponential_pdf.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/continuous_exponential_cdf.svg"
+    style="width:100%">
+  </div>
+</div>
+<figcaption>
+  Example plot of the (a) probability density function and (b) cumulative density function of the Exponential($\lambda$) distribution.
+</figcaption>
+</figure>
 
 <div class="example">
   <!---->
@@ -979,7 +1091,21 @@ The exponential distribution is a continuous probability distribution that follo
 ### The Normal or Gaussian $\mathcal{N}(\mu, \sigma^2)$ distribution
 The Normal or Gaussian distribution is probably the most commonly used continuous probability distribution. The distribution is bell-shaped and symmetric. The function is characterized by its mean $\mu$ and its variance $\sigma^2$.
 
-
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/continuous_gaussian_pdf.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/continuous_gaussian_cdf.svg"
+    style="width:100%">
+  </div>
+</div>
+<figcaption>
+  Example plot of the (a) probability density function and (b) cumulative density function of the Gaussian($\mu$, $\sigma^2$) distribution.
+</figcaption>
+</figure>
 
 #### The Standard normal $\mathcal{N}(0,1)$ distribution
 The Standard normal distribution is a specific case of the Normal or Gaussian distribution, where the mean equals $\mu = 0$ and the variance equals $\sigma^2=1$. This function can be regarded as the normalized Gaussian distribution. Any random variable $Y \sim \mathcal{N}(\mu_Y, \sigma_Y^2)$ can be transformed to a random variable $X$ under the Standard normal distribution by subtracting its mean and dividing by the standard deviation as $X = \frac{Y-\mu_Y}{\sigma_Y}$
@@ -1106,6 +1232,22 @@ The function can be used for all Gaussian distributed random variables, however,
 
 ### The continuous Uniform(a,b) distribution
 The continuous Uniform distribution is a continuous probability distribution that models an experiment where the outcomes are mapped only to the interval from $a$ up to and including $b$, with the same probability all over this range. The distribution is fully characterized by the parameters $a$ and $b$, which are the continuous lower and upper bound of the interval respectively.
+
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/continuous_uniform_pdf.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/continuous_uniform_cdf.svg"
+    style="width:100%">
+  </div>
+</div>
+<figcaption>
+  Example plot of the (a) probability density function and (b) cumulative density function of the continuous Uniform(a,b) distribution.
+</figcaption>
+</figure>
 
 <div class="example">
   <!---->
