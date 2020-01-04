@@ -46,7 +46,7 @@
 
 ######################## STATISTICAL SIGNAL PROCESSING ##############################
 [[main]]
-  name = "Statistical signal processing (to be added)"
+  name = "Statistical signal processing"
   url = "/disciplines/statistical/statisticalsignalprocessing_main"
   parent = "Disciplines"
   weight = 25
