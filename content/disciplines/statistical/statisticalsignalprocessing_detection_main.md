@@ -48,3 +48,8 @@ The field of detection theory also extends to the field of medicine, where an ex
 <br></br>
 
 ## Module overview
+This module will cover the field of detection theory.
+
+1. <a href="../../statistical/statistical_detection_hypothesis">Hypothesis testing</a> - This section will cover the decision theory concerning whether the a signal is measured or whether it is absent.
+2. <a href="../../statistical/statistical_detection_matched">Matched filter</a> - When the decision criteria is established, a practical application can be created. The idealized filter for testing whether a signal is present is called a matched filter.
+3. <a href="../../statistical/statistical_detection_tests">Statistical tests</a> - A single observation is usually not enough to accept or reject a hypothesis. Usually a decision is based on multiple observations to limit the effect of measurement noise. This section will discuss how decisions can be made when dealing with limited information.
