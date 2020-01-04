@@ -328,3 +328,50 @@ Now finally we can use our previous results in order to determine the conditiona
     \end{split}
 \end{equation}
 One could apply the axiom of total probability to all marginalized and conditional probability density functions over their domain and should note that the axiom is satisfied.
+
+<br></br>
+
+## Central limit theorem
+We have briefly discussed what happens with the signal statistics, especially the mean and variance, when a random variable is linearly transformed.
+Now let us focus on the specific situation where we take the sum of $N$ independent continuous random variables. We will define a random variable $Y$ as
+\begin{equation}
+    Y = \frac{X_1 + X_2 + \ldots + X_N}{N}
+\end{equation}
+and have a look at what the probability density functions of $Y$ looks like.
+
+In Fig. 1,  100000 samples are generated  from three different probability distributions and the resulting histograms are plotted. This is repeated for an increasing number $N$, and the histogram are plotted after averaging $N$ similarly generated sets of data. It can be noted that after averaging multiple realizations of a random variable generated from the same (arbitrary) distribution, the distribution of the averaged random variables converges to a Gaussian distribution. This result is known as the <i>central limit theorem (CLT)</i>.
+
+<div style="max-width: 900px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/math/probability/centrallimittheorem.svg"
+      alt="Visualisation of the central limit theorem."
+    />
+    <figcaption class="numbered">
+      Demonstration of the CLT for three different probability distributions, i.e. $\mathcal{U}(0,5)$, $\mathcal{U}(-10,10)$ and Exp$(\lambda = 1)$, where $N$ sets of 100000 realizations are averaged and the new distributions of the averaged 100000 samples are shown for different values of $N$. A Gaussian function is fitted over the distributions and it can be seen that after averaging over more realizations, the new distribution will converge to the Gaussian distribution.
+    </figcaption>
+  </figure>
+</div>
+
+ The formal definition is given as:
+
+{{% alert note %}}
+Let $X_1,X_2,...,X_n$ be a set of $N$ independent identically-distributed (i.i.d) random variables and each $X_i$ has an arbitrary probability distribution $p(x_1,x_2, ..., x_n)$ with finite mean $\mu_i=\mu$ and finite standard deviation $\sigma_i=\sigma$. If the sample size $N$ is “sufficiently large”, then the CDF of the sum converges to a Gaussian CDF.
+{{% /alert %}}
+
+In simple words, the CLT states that the normalized sum of a sufficient number of i.i.d. random variables tends to a Gaussian distribution. It is also possible to predict the mean and the variance of the Gaussian probability density function after a sufficiently large set of $N$ random variables has been summed. The minimum value of $N$ for the CLT approximation to be valid depends on the distribution of the individual random variables.
+
+Under certain conditions, the CLT can be extended for the sum of random variables that are independent but not necessarily identically distributed (i.e., Lyapunov condition). In both cases, the mean or expected value of the approximate Gaussian probability density function can be determined as
+\begin{equation}
+    \mathrm{E}[Y] = \frac{1}{N} \sum_{i=1}^N \mathrm{E}[X_i],
+\end{equation}
+which is simply than the average value of all individual expected values. Similarly the variance can be determined as
+\begin{equation}
+    \text{Var}[Y] = \sigma_Y^2 = \frac{1}{N^2} \sum_{i=1}^N \sigma^2_{X_i} = \frac{1}{N^2} \sum_{i=1}^N \text{Var}[X_i].
+\end{equation}
+
+Similarly the random variable $Z$, which is the sum over normalized random variables, can be defined as
+\begin{equation}
+    Z = \frac{1}{N}\sum_{i=1}^N \frac{X_i-\mathrm{E}[X_i]}{\sigma_{X_i}}.
+\end{equation}
+Through the central limit theorem it follows that the probability density function of the random variable $Z$ converges the the normalized Gaussian distribution $\mathcal{N}(0,1)$.

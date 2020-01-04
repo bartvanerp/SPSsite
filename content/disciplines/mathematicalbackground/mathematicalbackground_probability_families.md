@@ -1227,6 +1227,83 @@ The function can be used for all Gaussian distributed random variables, however,
 [^18]: Gaussian integral: $$ \int_{-\infty}^\infty e^{-x^2} \mathrm{d}x =\sqrt{\pi} $$
 
 
+As is implicated by the <a href="../mathematicalbackground_probability_functions/#central-limit-theorem">central limit theorem</a>, the Gaussian distribution is extremely important. The Gaussian distribution is often used to model measurements in practice and, thanks to the CLT, its use can often be extended to other distributions. A Gaussian distribution is also often used to model the thermal noise of a band-limited system. This section will generalize the definition of the Gaussian distribution given in the previous reader and extend it to the multivariate case.
+
+#### Univariate distribution
+In the case of a single random variable $X$ that is generated according to a Gaussian distribution, defined by its mean $\mu$ and variance $\sigma^2$ where the subscript $\cdot_X$ is now omitted for simplification, the probability density function is defined as
+\begin{equation}
+    p_X(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
+\end{equation}
+The left side of the figure below shows an example of an univariate Gaussian distribution.
+
+<div style="max-width: 900px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/math/probability/gaussian.svg"
+      alt="Example of an univariate and a multivariate Gaussian probability density function."
+    />
+    <figcaption>
+      Example of an univariate and a multivariate Gaussian probability density function.
+    </figcaption>
+  </figure>
+</div>
+
+#### Multivariate distribution
+The definition of the univariate Gaussian distribution can be extended to a multivariate distribution. In order to define the Gaussian distribution the position and its spread are required. These quantities are represented by the mean vector $\bf\mu$ and the covariance matrix $\bf\Sigma$. Whereas the covariance matrix is defined as $\bf\Gamma$ <a href="../mathematicalbackground_probability_vectors/#cross-covariance-matrix">in this section</a>, literature has adopted the $\bf\Sigma$ notation when discussing multivariate Gaussian distributions, as $\Sigma$ is the Greek capital letter of $\sigma$.
+
+To indicate that a $k$-dimensional random vector $\bf{X}$ is Gaussian distributed, we can write ${\bf{X}} \sim \mathcal{N}\_k(\bf{\mu},\bf{\Sigma})$. The probability density function of such a multivariate Gaussian distribution is defined as
+\begin{equation}
+    p_{\bf{X}}({\bf{x}}) = \frac{1}{\sqrt{(2\pi)^k|\bf{\Sigma}|}}\exp \left\\{-\frac{1}{2} ({\bf{x}}-\bf{\mu})^\top \bf{\Sigma}^{-1}({\bf{x}}-\bf{\mu})\right\\},
+\end{equation}
+where $|\bf{\Sigma}|$ is the determinant of the covariance matrix. Please note the similarities between the univariate Gaussian distribution and the multivariate distribution. The inverse covariance matrix $\bf{\Sigma}^{-1}$ is often also called the <i>precision matrix</i> and is denoted by $\bf{\Lambda}$, because a low variance (i.e. low spread) relates to a high precision and vice versa.
+
+#### The covariance matrix of a multivariate Gaussian distribution
+The probability density function of a Gaussian distribution is fully determined by its mean $\bf{\mu}$ and its covariance matrix $\bf{\Sigma}$. In order to give some intuition on how the mean and covariance matrix structure influence the final distribution, we jump forward to Fig. 2 in <a href="../mathematicalbackground_probability_vectors/#correlation-coefficient">the next section</a> where three multivariate distributions have been plotted. The covariance matrices that were used to plot these distributions in the figure are from left to right:
+\begin{equation}
+    \bf{\Sigma}\_1 = \begin{bmatrix}1 & -0.5 \newline -0.5 & 1\end{bmatrix} \qquad \bf{\Sigma}\_2 = \begin{bmatrix}1 & 0 \newline 0 & 1\end{bmatrix} \qquad \bf{\Sigma}\_3 = \begin{bmatrix}1 & 0.5 \newline 0.5 & 1\end{bmatrix}
+\end{equation}
+Please note how the off-diagonal entries, referring to Cov$[X_1,X_2]$ and Cov$[X_2,X_1]$ influence the shape of the distribution.
+
+In order to understand how the covariance matrix is related to the tilt and the shape of the distribution, we need to first introduce the so-called rotation matrix and the eigenvalue decomposition. The rotation matrix $R_\theta$ rotates a coordinate counter-clockwise over an angle $\theta$ with respect to the origin. This rotation matrix is defined as
+\begin{equation}\label{eq:rot_mat}
+    R_\theta = \begin{bmatrix} \cos(\theta) & -\sin(\theta) \newline \sin(\theta) & \cos(\theta) \end{bmatrix}
+\end{equation}
+and a rotation of $\theta$ from the coordinates $(x,y)$ to the coordinates $(x', y')$ can be represented by
+\begin{equation}
+    \begin{bmatrix} x' \newline y' \end{bmatrix} = R_\theta \begin{bmatrix} x \newline y \end{bmatrix} = \begin{bmatrix} x\cos(\theta) - y\sin(\theta) \newline x\sin(\theta) + y\cos(\theta) \end{bmatrix}.
+\end{equation}
+One of the properties of a rotation matrix is that it is orthogonal. This means that $R_\theta R_\theta^\top = I$, where $I$ is the identity matrix. Using the fact that $R_\theta^{-1}= R_{-\theta} = R_\theta^\top$ from its definition, the orthogonality property makes complete sense, because rotating a coordinate with the angle $-\theta$ and $\theta$ respectively does not change anything.
+
+Besides the rotation matrices, we need to introduce the eigenvalue decomposition in order to better understand the covariance matrix structure. The eigenvalue decomposition states that a square invertible symmetric matrix $A$ can be written as
+\begin{equation}
+    A = Q\Lambda Q^{-1},
+\end{equation}
+where the orthogonal matrix $Q$ contains the eigenvectors of $A$ and $\Lambda$ is a diagonal matrix containing the eigenvalues of $A$.
+
+Now the general representation of the rotation matrix has been defined as well as the eigenvalue decomposition, we can show that <i>any covariance matrix can be written as the rotations of a diagonal covariance matrix</i>. This point is very important to understand. To start off, a diagonal covariance matrix can be represented as
+\begin{equation}
+    \bf{\Sigma}\_d = \begin{bmatrix} a & 0 \newline 0 & b \end{bmatrix}.
+\end{equation}
+The entries $a$ and $b$ correspond to the individual variances of $X_1$ and $X_2$ according to the definitions and are at the same time the eigenvalues of $\bf{\Sigma}\_d$. An example of a Gaussian distribution that corresponds to a diagonal covariance matrix where $a = 25$ and $b=4$ is shown on the left in the figure below. Please note that the ratio of $\sqrt{a}$ and $\sqrt{b}$ also represents the ratio of the length (the major axis) and the width (the minor axis) of the distribution.
+\par
+If we were to apply the eigenvalue decomposition to a covariance matrix $\bf{\Sigma}$, we would interestingly enough find that
+\begin{equation}
+    \bf{\Sigma} = R_\theta \bf{\Sigma}_d R_\theta^\top.
+\end{equation}
+The right of the figure below shows an example of a multivariate Gaussian distribution whose covariance matrix is a rotated version of the diagonal covariance matrix corresponding to the left side of the same figure. From this we can see that the ratio of eigenvalues of $\bf{\Sigma}$ corresponds to the ratio of the lengths of the major and minor axes. Furthermore, we can conclude that the matrix containing the eigenvectors of $\bf{\Sigma}$ is at the same time a rotation matrix, implicitly defining the rotation angle.
+
+<div style="max-width: 900px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/math/probability/gaussiandiag.svg"
+      alt="Two multivariate Gaussian distribution, whose covariance matrices are related through the rotation matrices corresponding to a counter-clockwise rotation of $\pi/4$ radians."
+    />
+    <figcaption>
+      Two multivariate Gaussian distribution, whose covariance matrices are related through the rotation matrices corresponding to a counter-clockwise rotation of $\pi/4$ radians.
+    </figcaption>
+  </figure>
+</div>
+
 
 <br></br>
 
