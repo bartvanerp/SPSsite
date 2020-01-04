@@ -1,0 +1,97 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.221 235.008">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-5, .cls-6 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1 {
+        stroke: #000;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: gray;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 12.533 12.533;
+      }
+
+      .cls-4, .cls-7 {
+        font-size: 15px;
+      }
+
+      .cls-4 {
+        font-family: TimesNewRomanPSMT, Times New Roman;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: red;
+        stroke-width: 2px;
+      }
+
+      .cls-6 {
+        stroke-dasharray: 13 13;
+      }
+
+      .cls-7 {
+        font-family: TimesNewRomanPS-BoldMT, Times New Roman;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <title>bpsk</title>
+  <line class="cls-1" x1="18.221" y1="35.008" x2="18.221" y2="235.008"/>
+  <g>
+    <line class="cls-2" x1="78.221" y1="35.008" x2="78.221" y2="41.008"/>
+    <line class="cls-3" x1="78.221" y1="53.542" x2="78.221" y2="222.742"/>
+    <line class="cls-2" x1="78.221" y1="229.008" x2="78.221" y2="235.008"/>
+  </g>
+  <g>
+    <line class="cls-2" x1="138.221" y1="35.008" x2="138.221" y2="41.008"/>
+    <line class="cls-3" x1="138.221" y1="53.542" x2="138.221" y2="222.742"/>
+    <line class="cls-2" x1="138.221" y1="229.008" x2="138.221" y2="235.008"/>
+  </g>
+  <g>
+    <line class="cls-2" x1="198.221" y1="35.008" x2="198.221" y2="41.008"/>
+    <line class="cls-3" x1="198.221" y1="53.542" x2="198.221" y2="222.742"/>
+    <line class="cls-2" x1="198.221" y1="229.008" x2="198.221" y2="235.008"/>
+  </g>
+  <g>
+    <line class="cls-2" x1="258.221" y1="35.008" x2="258.221" y2="41.008"/>
+    <line class="cls-3" x1="258.221" y1="53.542" x2="258.221" y2="222.742"/>
+    <line class="cls-2" x1="258.221" y1="229.008" x2="258.221" y2="235.008"/>
+  </g>
+  <g>
+    <line class="cls-2" x1="318.221" y1="35.008" x2="318.221" y2="41.008"/>
+    <line class="cls-3" x1="318.221" y1="53.542" x2="318.221" y2="222.742"/>
+    <line class="cls-2" x1="318.221" y1="229.008" x2="318.221" y2="235.008"/>
+  </g>
+  <g>
+    <line class="cls-2" x1="378.221" y1="35.008" x2="378.221" y2="41.008"/>
+    <line class="cls-3" x1="378.221" y1="53.542" x2="378.221" y2="222.742"/>
+    <line class="cls-2" x1="378.221" y1="229.008" x2="378.221" y2="235.008"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="431.045" y1="134.508" x2="18.221" y2="134.508"/>
+    <polygon points="429.586 129.522 438.221 134.508 429.586 139.494 429.586 129.522"/>
+  </g>
+  <text class="cls-4" transform="translate(429 153.466)">t</text>
+  <text class="cls-4" transform="translate(5 138.466)">0</text>
+  <text class="cls-4" transform="translate(4.995 66.466) scale(0.985 1)">1</text>
+  <text class="cls-4" transform="translate(0 207.466)">-1</text>
+  <polyline class="cls-5" points="378.221 61.508 318.221 61.508 318.221 203.508 258.221 203.508 258.221 61.508 198.221 61.508 198.221 203.508 138.221 203.508 138.221 61.508 138.221 62.008 18.721 62.008"/>
+  <g>
+    <line class="cls-5" x1="429.221" y1="61.508" x2="423.221" y2="61.508"/>
+    <line class="cls-6" x1="410.221" y1="61.508" x2="390.721" y2="61.508"/>
+    <line class="cls-5" x1="384.221" y1="61.508" x2="378.221" y2="61.508"/>
+  </g>
+  <text class="cls-7" transform="translate(45.995 12.466) scale(0.985 1)">1</text>
+  <text class="cls-7" transform="translate(103.995 12.466) scale(0.985 1)">1</text>
+  <text class="cls-7" transform="translate(225.995 12.466) scale(0.985 1)">1</text>
+  <text class="cls-7" transform="translate(343.995 12.466) scale(0.985 1)">1</text>
+  <text class="cls-7" transform="translate(403.995 12.466) scale(0.985 1)">1</text>
+  <text class="cls-7" transform="translate(164 12.466)">0</text>
+  <text class="cls-7" transform="translate(286 12.466)">0</text>
+</svg>
