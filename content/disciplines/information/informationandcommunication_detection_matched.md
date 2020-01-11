@@ -9,9 +9,9 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
-[menu.statistical]                       # name of menu section (main module)
+[menu.information]                       # name of menu section (main module)
   name = "Matched filter"        # name of this item in that menu
-  weight = 32                           # location in that menu
+  weight = 22                           # location in that menu
   parent = "Detection theory"
 
 +++
@@ -39,11 +39,11 @@ It is now also assumed that the hypotheses are valid for the entire signal durat
 ## Likelihood ratio model
 The extension from random samples to random signals is a rather straightforward step for real world applications. So now the question arises how we can perform the hypothesis testing for random vectors, where the probability density functions are now multivariate?
 
-The answer to this question has already been presented in the section on <a href="../../statistical/statisticalsignalprocessing_detection_hypothesis/">hypotesis testing</a>, where this likelihood ratio for binary hypothesis testing can be extended to multivariate probability density functions. Deciding for a detection, meaning that $\bf{\mathcal{H}}_1$ is regarded to be true, occurs when
+The answer to this question has already been presented in the section on <a href="../../information/informationandcommunication_detection_hypothesis/">hypotesis testing</a>, where this likelihood ratio for binary hypothesis testing can be extended to multivariate probability density functions. Deciding for a detection, meaning that $\bf{\mathcal{H}}_1$ is regarded to be true, occurs when
 \begin{equation}\label{eq:prob_ratio_multi}
     L(\bf{x}) = \frac{p(\bf{x}\mid\bf{\mathcal{H}}_1)}{p(\bf{x}\mid\bf{\mathcal{H}}_0)} > \gamma
 \end{equation}
-holds. The corresponding decision boundary can be represented by a line for the bivariate case as shown in Fig. 4 of <a href="../../statistical/statisticalsignalprocessing_detection_hypothesis/">the previous section</a> or an $N$-dimensional surface for random vectors of length $N$.
+holds. The corresponding decision boundary can be represented by a line for the bivariate case as shown in Fig. 4 of <a href="../../information/informationandcommunication_detection_hypothesis/">the previous section</a> or an $N$-dimensional surface for random vectors of length $N$.
 
 Let us now model these multivariate probability density functions. In order to do so, multiple assumptions about the noise components have to be made.
 

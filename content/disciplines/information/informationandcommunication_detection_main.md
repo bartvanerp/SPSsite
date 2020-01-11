@@ -9,15 +9,15 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
-[menu.statistical]                       # name of menu section (main module)
+[menu.information]                       # name of menu section (main module)
   name = "Detection theory"        # name of this item in that menu
-  weight = 30                           # location in that menu
+  weight = 20                           # location in that menu
 
 +++
 
 ## Introduction
 
-In the previous readers we have seen that noise makes it impossible to predict instantaneous values of received signals. Instead, we can define a probability density function that can tell us how likely it is that the received signal is within a certain interval. This probability density function is defined by the deterministic component of the stochastic signal, i.e. the noise-less signal, and the probability distribution of the noise signal. A discrete-time stochastic signal $x[n]$ can therefore be split into a deterministic signal $s[n]$ and a stochastic noise component $\epsilon[n]$ as
+Noise makes it impossible to predict instantaneous values of received signals. Instead, we can define a probability density function that can tell us how likely it is that the received signal is within a certain interval. This probability density function is defined by the deterministic component of the stochastic signal, i.e. the noise-less signal, and the probability distribution of the noise signal. A discrete-time stochastic signal $x[n]$ can therefore be split into a deterministic signal $s[n]$ and a stochastic noise component $\epsilon[n]$ as
 \begin{equation}
     x[n] = s[n] + \epsilon[n].
 \end{equation}
@@ -27,7 +27,7 @@ Now imagine the case where the noise power is close to or larger than the signal
 <div style="max-width: 900px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/math/probability/detection_difficulties.svg"
+      src="/../files/7.Images/information/detection/detection_difficulties.svg"
       alt="Visualisation of the difficulties of signal detection."
     />
     <figcaption class="numbered">
@@ -50,6 +50,6 @@ The field of detection theory also extends to the field of medicine, where an ex
 ## Module overview
 This module will cover the field of detection theory.
 
-1. <a href="../../statistical/statistical_detection_hypothesis">Hypothesis testing</a> - This section will cover the decision theory concerning whether the a signal is measured or whether it is absent.
-2. <a href="../../statistical/statistical_detection_matched">Matched filter</a> - When the decision criteria is established, a practical application can be created. The idealized filter for testing whether a signal is present is called a matched filter.
-3. <a href="../../statistical/statistical_detection_tests">Statistical tests</a> - A single observation is usually not enough to accept or reject a hypothesis. Usually a decision is based on multiple observations to limit the effect of measurement noise. This section will discuss how decisions can be made when dealing with limited information.
+1. <a href="../../information/informationandcommunication_detection_hypothesis">Hypothesis testing</a> - This section will cover the decision theory concerning whether the a signal is measured or whether it is absent.
+2. <a href="../../information/informationandcommunication_detection_matched">Matched filter</a> - When the decision criteria is established, a practical application can be created. The idealized filter for testing whether a signal is present is called a matched filter.
+3. <a href="../../information/informationandcommunication_detection_tests">Statistical tests</a> - A single observation is usually not enough to accept or reject a hypothesis. Usually a decision is based on multiple observations to limit the effect of measurement noise. This section will discuss how decisions can be made when dealing with limited information.
