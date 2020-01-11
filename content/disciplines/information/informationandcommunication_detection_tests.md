@@ -9,9 +9,9 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
-[menu.statistical]                       # name of menu section (main module)
+[menu.information]                       # name of menu section (main module)
   name = "Statistical tests"        # name of this item in that menu
-  weight = 33                          # location in that menu
+  weight = 23                          # location in that menu
   parent = "Detection theory"
 
 +++
@@ -124,7 +124,7 @@ The $t$-statistic can be regarded as the normalized sample mean, where the varia
 <div style="max-width: 900px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/math/probability/tdistribution.svg"
+      src="/../files/7.Images/information/detection/tdistribution.svg"
       alt="Visualisation of the concept of covariance."
     />
     <figcaption class="numbered">

@@ -9,9 +9,9 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
-[menu.statistical]                       # name of menu section (main module)
+[menu.information]                       # name of menu section (main module)
   name = "Hypothesis testing"        # name of this item in that menu
-  weight = 31                           # location in that menu
+  weight = 21                           # location in that menu
   parent = "Detection theory"
 
 +++
@@ -32,7 +32,7 @@ Let us consider a simplified example of binary phase-shift keying (BPSK), which 
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/math/probability/bpsk.svg"
+      src="/../files/7.Images/information/detection/bpsk.svg"
       alt="An example of a binary phase-shift keying (BPSK) signal."
     />
     <figcaption class="numbered">
@@ -83,7 +83,7 @@ A graphical representation of the probability distribution of $x[n]$ is given in
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/math/probability/binary_sn.svg"
+      src="/../files/7.Images/information/detection/binary_sn.svg"
       alt="Two distributions of the signal $x[n]$ for the cases when either $\mathcal{H}_0[n]$ or $\mathcal{H}_1[n]$ is true."
     />
     <figcaption class="numbered">
@@ -117,7 +117,7 @@ For some arbitrary univariate distributions it is possible that there are multip
 <div style="max-width: 900px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/math/probability/decision_boundary.svg"
+      src="/../files/7.Images/information/detection/decision_boundary.svg"
       alt="This figure gives two example of decision boundaries. In (a) two univariate distributions have multiple decision boundary points and in (b) the decision boundary of the multivariate distributions is represented by a line."
     />
     <figcaption class="numbered">
@@ -185,7 +185,7 @@ and
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/math/probability/detection_probabilities.svg"
+      src="/../files/7.Images/information/detection/detection_probabilities.svg"
       alt="Visual representation of the probability distribution for both hypotheses $\mathcal{H}_0$ and $\mathcal{H}_1$. In both cases the decision boundary is drawn with the corresponding choice of estimated hypothesis. The highlighted areas represent the probabilities of making a good or wrong decision and the conventional naming of these areas is given in the legends."
     />
     <figcaption class="numbered">
