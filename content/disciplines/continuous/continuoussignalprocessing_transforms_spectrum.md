@@ -408,9 +408,9 @@ In this section several exercises are available, including their answers. The ex
 </div>
 
 ### Exercise bundle
-<object data="/../files/3.Exercises/2.SPAFS-exercises.pdf" type="application/pdf" width="100%" height="400px">
-    <embed src="/../files/3.Exercises/2.SPAFS-exercises.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/3.Exercises/2.SPAFS-exercises.pdf">Download PDF</a>.</p>
+<object data="/../files/3.Exercises/SpectrumExercises.pdf" type="application/pdf" width="100%" height="400px">
+    <embed src="/../files/3.Exercises/SpectrumExercises.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/3.Exercises/SpectrumExercises.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
@@ -419,25 +419,9 @@ In this section several exercises are available, including their answers. The ex
 Download the answers <a href="/../files/3.Exercises/Answers/2.SPAFS-answers.pdf">here</a>.
 
 ### Pencast videos
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPGn3EuYqCpSPZ8TL5HRFNXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPEoL814VlfZ5ZFv1eGh3PGB" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
-
-<br></br>
-
-## MATLAB lab
-Accompanied to this modules are some exercises in MATLAB, which will test your knowledge of the module and will help improve your MATLAB skills.
-These lab exercises also include topics relating to the Fourier series.
-
-### Lab assignment
-<object data="/../files/10.Matlab/Lab 3 - Fourier Transform.pdf" type="application/pdf" width="100%" height="400px">
-    <embed src="/../files/10.Matlab/Lab 3 - Fourier Transform.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/../files/10.Matlab/Lab 3 - Fourier Transform.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
-
-### MATLAB demo
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/UiN1Wom_F5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br></br>
 
