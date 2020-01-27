@@ -2,7 +2,7 @@
 title = "5ESE0 - Signal processing basics"
 
 # date = {{ .Date }}
-lastmod = 2020-01-11
+lastmod = 2020-01-24
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -12,11 +12,12 @@ type = "docs"  # Do not modify.
 responsibleteacher = "R.Vullings@tue.nl"
 
 # Add menu entry to sidebar.
-[menu.courses]
+[menu.5ese0]
 name = "5ESE0 - Signal processing basics"
 weight = 10
 
 +++
+
 ## News
 <i> No news is available </i>
 
@@ -90,18 +91,20 @@ The (sub)modules on this website that are covered in this course are:
 </ol>
 -->
 <ol>
-  <li><a href="../../disciplines/mathematicalbackground/mathematicalbackground_complex_main">Complex numbers and phasors</a> <i>(incl. all submodules)</i></li>
-  <li>  <a href="../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">Spectrum of sinusoidal signals</a> </li>
-  <li>  <a href="../../disciplines/continuous/continuoussignalprocessing_transforms_fourier">Fourier series</a> </li>
-  <li>  <a href="../../disciplines/discrete/discretesignalprocessing_sampling_main">Sampling and reconstruction</a> <i>(incl. all submodules)</i></li>
-  <li>  <a href="../../disciplines/discrete/discretesignalprocessing_signals_basics">Elementary signals</a> </li>
-  <li>  <a href="../../disciplines/discrete/discretesignalprocessing_systems_fir">Finite impulse response filters</a> </li>
-  <li>  <a href="../../disciplines/discrete/discretesignalprocessing_analysis_frequency">Frequency response of finite impulse response filters</a> </li>
+  <li><a href="../mathematicalbackground_complex_main">Complex numbers and phasors</a> <i>(incl. all submodules)</i></li>
+  <li>  <a href="../continuoussignalprocessing_transforms_spectrum">Spectrum of sinusoidal signals</a> </li>
+  <li>  <a href="../continuoussignalprocessing_transforms_fourier">Fourier series</a> </li>
+  <li>  <a href="../discretesignalprocessing_sampling_main">Sampling and reconstruction</a> <i>(incl. all submodules)</i></li>
+  <li>  <a href="../discretesignalprocessing_signals_basics">Elementary signals</a> </li>
+  <li>  <a href="../discretesignalprocessing_systems_fir">Finite impulse response filters</a> </li>
+  <li>  <a href="../discretesignalprocessing_analysis_frequency">Frequency response of finite impulse response filters</a> </li>
 </ol>
 
+<!--
 {{% alert note %}}
-In the case that a module contains several submodules (such as the module <a href="../../disciplines/mathematicalbackground/mathematicalbackground_complex_main">Complex numbers and phasors</a>) <b>all</b> submodules are covered during the course. When only a submodule is listed (such as the submodules <a href="../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">Spectrum of sinusoidal signals</a> and <a href="../../disciplines/continuous/continuoussignalprocessing_transforms_fourier">Fourier series</a>) <b>only the specified submodules</b> are covered during the course (so not the submodule <a href="../../disciplines/continuous/continuoussignalprocessing_transforms_ftc">Fourier transform for continuous-time signals</a>).
+In the case that a module contains several submodules (such as the module <a href="../mathematicalbackground_complex_main">Complex numbers and phasors</a>) <b>all</b> submodules are covered during the course. When only a submodule is listed (such as the submodules <a href="../continuoussignalprocessing_transforms_spectrum">Spectrum of sinusoidal signals</a> and <a href="../continuoussignalprocessing_transforms_fourier">Fourier series</a>) <b>only the specified submodules</b> are covered during the course (so not the submodule <a href="../continuoussignalprocessing_transforms_ftc">Fourier transform for continuous-time signals</a>).
 {{% /alert %}}
+-->
 
 ### Additional reading material
 The material covered in this course is based on the book:
