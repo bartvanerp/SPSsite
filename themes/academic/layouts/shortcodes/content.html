@@ -1,0 +1,4 @@
+{{ $file := .Get "duplicate"}}
+{{ with .Site.GetPage $file }}
+  {{ .Content | markdownify }}
+{{ end }}
