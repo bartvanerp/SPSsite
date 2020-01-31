@@ -3,6 +3,15 @@
 - id: toggle_navigation
   translation: Navigatiebalk
 
+- id: on_this_page
+  translation: Op deze pagina
+
+- id: in_this_module
+  translation: In deze module
+
+- id: this_course
+  translation: Dit vak
+
 # Buttons
 
 - id: btn_details
