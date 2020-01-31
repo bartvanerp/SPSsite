@@ -10,8 +10,14 @@
 
     {{ if .Params.toc }}
     <div class="d-none d-xl-block col-xl-2 docs-toc">
-      {{ with (i18n "on_this_page") }}
-      <p class="docs-toc-title">{{.}}</p>
+      {{ if eq .Page.Title "5ESE0 - Signal processing basics" }}
+        {{ with (i18n "this_course") }}
+          <p class="docs-toc-title">{{.}}</p>
+        {{ end }}
+      {{ else }}
+        {{ with (i18n "in_this_module") }}
+          <p class="docs-toc-title">{{.}}</p>
+        {{ end }}
       {{ end }}
       {{ if .Params.duplicated_page }}
         {{ with .Site.GetPage .Params.duplicated_page }}

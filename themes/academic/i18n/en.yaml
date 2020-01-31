@@ -12,6 +12,12 @@
 - id: back_to_top
   translation: Back to top
 
+- id: in_this_module
+  translation: In this module
+
+- id: this_course
+  translation: This course
+
 # General
 
 - id: related
