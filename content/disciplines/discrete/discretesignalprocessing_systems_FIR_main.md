@@ -191,7 +191,7 @@ and by substituting these DE's into each other, we obtain:
 
 ### Screencast video
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/yVNNNWAaH2s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/20j0M8b_pu4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <br>
 <br>
@@ -290,7 +290,7 @@ From the DE it follows that the impulse response of this system equals $h[n]=3 \
 
 ### screencast video
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/tq1q3SdKPBg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/7Q8w8XkYmHk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <br>
 <br>
@@ -371,7 +371,7 @@ From the previous example it follows that the convolution sum procedure results 
 
 ### Screencast video
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/jdfIURKrLJ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/JnP9ybC6wJc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <br>
 <br>

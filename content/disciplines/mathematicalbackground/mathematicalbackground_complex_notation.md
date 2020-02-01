@@ -152,7 +152,7 @@ Because of the fact that we can represent a complex number in Cartesian or in po
 ___It is easiest to use Cartesian notation when adding or subtraction complex numbers, while polar notation works easiest for multiplication and division.___
 
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ey_fcdVNiMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/krp-1XQC0pQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### Complex conjugation

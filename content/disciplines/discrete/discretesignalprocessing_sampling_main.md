@@ -17,7 +17,7 @@ type = "docs"  # Do not modify.
 
 ## Conceptual video
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Xs8AS-F16P4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/GhZ0H8nQKLY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br></br>
@@ -32,7 +32,7 @@ This module will cover one of the most fundamental aspects in signal processing,
 
 ## Examples
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/er2dUoPBKL4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/WRWZTm2MWc0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br></br>

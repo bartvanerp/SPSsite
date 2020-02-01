@@ -9,7 +9,7 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # duplicate page
-duplicated_page = "disciplines/continuous/continuoussignalprocessing_transforms_fourier.md"
+duplicated_page = "disciplines/continuous/continuoussignalprocessing_transforms_fourier_main.md"
 
 # Add menu entry to sidebar.
 [menu.5ese0]
@@ -18,4 +18,4 @@ weight = 30
 
 +++
 
-{{% content duplicate="disciplines/continuous/continuoussignalprocessing_transforms_fourier.md" %}}
+{{% content duplicate="disciplines/continuous/continuoussignalprocessing_transforms_fourier_main.md" %}}
