@@ -14,7 +14,7 @@ duplicated_page = "disciplines/continuous/continuoussignalprocessing_transforms_
 # Add menu entry to sidebar.
 [menu.5ese0]
 name = "Spectrum of sinusoidal signals"
-weight = 30
+weight = 20
 
 +++
 

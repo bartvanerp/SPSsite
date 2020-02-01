@@ -639,7 +639,7 @@ In practice we often filter a continuous-time signal in the discrete-time domain
   </figure>
 </div>
 
-Of course in practice we have to take care of the aliasing effect, as discussed in the module on <a href="../discretesignalprocessing_sampling_main/">sampling and reconstruction</a>, so the sampling frequencies of the C/D and D/C convertor are chosen at least twice the largest frequency of the continuous-time signal $x(t)$.
+Of course in practice we have to take care of the aliasing effect, as discussed in the module on <a href="../../../disciplines/discrete/discretesignalprocessing_sampling_main/">sampling and reconstruction</a>, so the sampling frequencies of the C/D and D/C convertor are chosen at least twice the largest frequency of the continuous-time signal $x(t)$.
 
 <div class="example">
 <h4> Example </h4>

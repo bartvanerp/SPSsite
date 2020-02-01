@@ -16,8 +16,6 @@ duplicated_page = "disciplines/discrete/discretesignalprocessing_signals_basics.
 name = "Elementary signals"
 parent = "Discrete-time signals"
 weight = 1
-[parent]
-  weight = 1
 
 +++
 
