@@ -20,6 +20,7 @@ type = "docs"       # Do not modify.
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/IS3LOzP5cqk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<br></br>
 
 Many real world signals can be described by a time depending sinusoidal signals such as:
 $$ x(t) = A \cos (\omega_o t +\phi) $$
