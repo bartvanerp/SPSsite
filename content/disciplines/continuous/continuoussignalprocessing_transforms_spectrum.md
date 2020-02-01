@@ -32,8 +32,8 @@ $$
 x(t) = A_0 + \sum\_{k=1}^{N} A_k\cos \left( 2\pi  f_k t+ \phi_k \right).
 $$
 
-Now by using the <a href="../../mathematicalbackground/mathematicalbackground_complex_euler">Euler equations</a> we can write this equation as the following sum of
-rotating <a href="../../mathematicalbackground/mathematicalbackground_complex_phasors">phasors</a>:
+Now by using the <a href="../../../disciplines/mathematicalbackground/mathematicalbackground_complex_euler">Euler equations</a> we can write this equation as the following sum of
+rotating <a href="../../../disciplines/mathematicalbackground/mathematicalbackground_complex_phasors">phasors</a>:
 
 $$
 \begin{split}
@@ -59,7 +59,7 @@ $$ x(t) = 10 + 14 \cos\left(200\pi t -\frac{\pi}{3}\right) + 8\cos\left(500\pi t
 and make a spectral plot of the signal.
 <button class="collapsible">Show solution</button>
 <div class="content">
-By using <a href="../../mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> the expression for $x(t)$ can be rewritten as
+By using <a href="../../../disciplines/mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> the expression for $x(t)$ can be rewritten as
 $$
 \begin{split}
 x(t)
@@ -88,7 +88,7 @@ The spectral plot of the signal $x(t)$ is shown in Fig. 1.
 </div>
 </div>
 
-In a spectral plot, such as the one from the previous example, the phasor components of the signal are represented by bars and the corresponding weights are denoted by complex numbers above these bars. The amplitude or magnitude of the complex weights corresponds to the length of the bar. When denoting these complex weights in <a href="../../mathematicalbackground/mathematicalbackground_complex_notation">Polar notation</a> it becomes very easy to 'read from the spectral plot' and to convert the spectral plot back to the time-domain representation of the real signal $x(t)$.
+In a spectral plot, such as the one from the previous example, the phasor components of the signal are represented by bars and the corresponding weights are denoted by complex numbers above these bars. The amplitude or magnitude of the complex weights corresponds to the length of the bar. When denoting these complex weights in <a href="../../../disciplines/mathematicalbackground/mathematicalbackground_complex_notation">Polar notation</a> it becomes very easy to 'read from the spectral plot' and to convert the spectral plot back to the time-domain representation of the real signal $x(t)$.
 
 From the spectral plot of the above example it can be noted that the spectrum is symmetric, indicating that we are dealing with a real signal. The spectrum consists of a DC term and two sinusoids. The DC term has a value of 10 and is by definition located at a frequency of $0$ [Hz]. The first sinusoid is located at $100$ [Hz] and has an amplitude of $2\times7 = 14$ and has a phase of $-\frac{\pi}{3}$, which is obtained from the right-hand side of the spectrum. The second sinusoid has an amplitude of $2\times4=8$ and has a phase of $\frac{\pi}{2}$. Keep in mind to read the phase of the sinusoid from the right-hand side of the spectrum, since the left-hand side contains the negated phase.
 All together the spectral plot of the above example belongs to the following time-domain representation of signal $x(t)$:
@@ -106,7 +106,7 @@ In the previous section we have seen that a spectral plot represents the spectra
 So lets start our discussion by assuming that a signal $x(t)$ consists of the multiplication of two sinusoids, one with carrier frequency $f_c$ and the other with (baseband or message) frequency $f\_{\Delta}$ (typically with $f_c >> f\_{\Delta}$, i.e. the carrier frequency is way larger than the baseband frequency), as
 $$ x(t) = 2\cos(2\pi f_c t) \cdot \cos(2\pi f\_\Delta t). $$
 
-By using <a href="../../mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> we can rewrite this equation as
+By using <a href="../../../disciplines/mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> we can rewrite this equation as
 
 $$
 \begin{split}
@@ -156,7 +156,7 @@ One of the examples where we use this concept is when tuning a guitar or piano. 
 Assume the baseband (message) signal $m(t)=4+2\cos(2\pi 6t-\frac{\pi}{4})$ is multiplied (modulated) with the carrier signal $c(t) = \cos(2\pi 1000t)$ to produce the Amplitude Modulated (AM) signal $x(t)=c(t)\cdot m(t)$. Determine the spectral plots of all three signals.
 <button class="collapsible">Show solution</button>
 <div class="content">
-In order to create a spectral plot we first need to find the frequency components of all three signals. To do so, the signals are converted into <a href="../continuoussignalprocessing_transforms_fs/#real-signal-as-sum-of-phasors">phasor</a> notation. The message signal $m(t)$ can be written as
+In order to create a spectral plot we first need to find the frequency components of all three signals. To do so, the signals are converted into <a href="../continuoussignalprocessing_transforms_spectrum/#real-signal-as-sum-of-phasors">phasor</a> notation. The message signal $m(t)$ can be written as
 $$
 \begin{split}
 m(t)
@@ -171,7 +171,7 @@ c(t)
 &= \left(\frac{1}{2}\right)e^{j2\pi 1000 t} + \left(\frac{1}{2}\right)e^{-j2\pi 1000 t}.
 \end{split}
 $$
-Both these signals can already be represented in their spectral plots. In order to also be able to represent $x(t)$ in a spectral plot the signal also needs to be rewritten in <a href="../continuoussignalprocessing_transforms_fs/#real-signal-as-sum-of-phasors">phasor</a> notation as
+Both these signals can already be represented in their spectral plots. In order to also be able to represent $x(t)$ in a spectral plot the signal also needs to be rewritten in <a href="../continuoussignalprocessing_transforms_spectrum/#real-signal-as-sum-of-phasors">phasor</a> notation as
 $$
 \begin{split}
 x(t)

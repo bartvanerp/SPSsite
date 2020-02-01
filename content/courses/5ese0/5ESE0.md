@@ -107,11 +107,10 @@ In the case that a module contains several submodules (such as the module <a hre
 -->
 
 ### Additional reading material
-The material covered in this course is based on the book:
+The material covered in this course is based on the first six chapters of the book:
 
 <i>"Signal Processing First" by James H. McClellan et. al. </i>
 
-The purchase and use of this book is completely optional and definitely not required to pass the course, since all the compulsory material is available on this platform. However, as with any book, it provides a different phrasing and explanation of the covered topics and might therefore help in studying the material.
 
 <br></br>
 
@@ -306,7 +305,7 @@ The below table provides the links to the lecture recordings of the course. The 
       <tr>
       </tr>
       <tr>
-        <td><a href="../../disciplines/mathematicalbackground/mathematicalbackground_complex_main/#exercises">Complex numbers and phasors</a></td>
+        <td><a href="../mathematicalbackground_complex_main/#exercises">Complex numbers and phasors</a></td>
         <td>Sinusoidal signals</td>
         <td>Ex. 1 </td>
       </tr>
@@ -329,18 +328,18 @@ The below table provides the links to the lecture recordings of the course. The 
       </tr>
       <tr>
         <td>Spectrum and Fourier series</td>
-        <td><a href="../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum/#exercises">Spectrum</a></td>
+        <td><a href="../continuoussignalprocessing_transforms_spectrum/#exercises">Spectrum</a></td>
         <td>Ex. 1, 2, 3, 5 </td>
       </tr>
       <tr>
         <td></td>
-        <td><a href="../../disciplines/continuous/continuoussignalprocessing_transforms_fourier/#exercises">Fourier Series</a></td>
+        <td><a href="../continuoussignalprocessing_transforms_fourier/#exercises">Fourier Series</a></td>
         <td>Ex. 4, 5, 7, 9 </td>
       </tr>
       <tr>
       </tr>
       <tr>
-        <td><a href="../../disciplines/discrete/discretesignalprocessing_sampling_main/#exercises">Sampling and reconstruction</a></td>
+        <td><a href="../discretesignalprocessing_sampling_main/#exercises">Sampling and reconstruction</a></td>
         <td>C/D conversion</td>
         <td>Ex. 3 </td>
       </tr>
@@ -362,7 +361,7 @@ The below table provides the links to the lecture recordings of the course. The 
       <tr>
       </tr>
       <tr>
-        <td><a href="../../disciplines/discrete/discretesignalprocessing_systems_fir/#exercises">FIR filters</a></td>
+        <td><a href="../discretesignalprocessing_systems_fir/#exercises">FIR filters</a></td>
         <td>Linearity, LTI and causality</td>
         <td>Ex. 8c, 8d, 8e </td>
       </tr>
@@ -384,7 +383,7 @@ The below table provides the links to the lecture recordings of the course. The 
       <tr>
       </tr>
       <tr>
-        <td><a href="../../disciplines/discrete/discretesignalprocessing_analysis_frequency/#exercises">Frequency response</a></td>
+        <td><a href="../discretesignalprocessing_analysis_frequency/#exercises">Frequency response</a></td>
         <td>Calculating filter output</td>
         <td>Ex. 2 </td>
       </tr>

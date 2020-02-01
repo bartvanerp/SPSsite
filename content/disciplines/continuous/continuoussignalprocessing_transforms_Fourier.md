@@ -64,7 +64,7 @@ The highest frequency contains $10$ times the Fundamental frequency and therefor
 $$
 x(t) = \sum_{k=-10}^{10} \alpha_k e^{j2\pi kF_0 t}.
 $$
-By using <a href="../../mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> we can write $x(t)$ as
+By using <a href="../../../disciplines/mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> we can write $x(t)$ as
 $$
 \begin{split}
 x(t)

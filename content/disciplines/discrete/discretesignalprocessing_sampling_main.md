@@ -15,6 +15,10 @@ type = "docs"  # Do not modify.
 
 +++
 
+## Conceptual video
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/Xs8AS-F16P4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br></br>
+
 ## Module overview
 This module will cover one of the most fundamental aspects in signal processing, namely the principle behind converting a continuous-time signal into a discrete-time signal in order to process it with the help of computers.
 

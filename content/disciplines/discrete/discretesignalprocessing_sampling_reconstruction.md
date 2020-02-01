@@ -24,7 +24,7 @@ In this section we will describe the reconstruction process of the D-to-C conver
 <br></br>
 
 ## Ideal D-to-C convertor
-Because of the <a href="../../discrete/discretesignalprocessing_sampling_uniqueness">uniqueness issue</a> in the discrete-time domain, the ideal D-to-C convertor makes a choice which frequencies are used for the conversion to the continuous-time domain. For this reason the ideal D-to-C convertor selects only frequencies which are inside the FI.
+Because of the <a href="../discretesignalprocessing_sampling_sampling/#uniqueness-issue">uniqueness issue</a> in the discrete-time domain, the ideal D-to-C convertor makes a choice which frequencies are used for the conversion to the continuous-time domain. For this reason the ideal D-to-C convertor selects only frequencies which are inside the FI.
 
 <div style="max-width: 400px; margin: auto">
   <figure>
@@ -40,7 +40,7 @@ Because of the <a href="../../discrete/discretesignalprocessing_sampling_uniquen
 
 Let's start the description of the reconstruction from discrete-time to continuous-time by using again a simple sinusoidal signal from which the sequence of samples is described by
 $$ x[n] =  A \cos (\theta n + \phi). $$
-Because of the <a href="../../discrete/discretesignalprocessing_sampling_uniqueness">uniqueness issue</a> we assume that the <a href="../../discrete/discretesignalprocessing_sampling_frequency">relative frequency</a> $\theta$ is within the <a href="../../discrete/discretesignalprocessing_sampling_uniqueness/#the-fundamental-interval-fi">Fundamental Interval (FI)</a>, thus $\theta < \pi$. In case this is not true, we first map the relative frequency into the FI. Furthermore we use the relation between relative and absolute frequency given by
+Because of the <a href="../discretesignalprocessing_sampling_sampling/#uniqueness-issue">uniqueness issue</a> we assume that the <a href="../discretesignalprocessing_sampling_sampling/#absolute-and-relative-frequency">relative frequency</a> $\theta$ is within the <a href="../discretesignalprocessing_sampling_sampling/#the-fundamental-interval-fi">Fundamental Interval (FI)</a>, thus $\theta < \pi$. In case this is not true, we first map the relative frequency into the FI. Furthermore we use the relation between relative and absolute frequency given by
 $$\theta= 2 \pi \frac{f}{f_s},$$
 from which we assume as before that the ratio $\frac{f}{f_s}$ is a rational number. Finally, since we have for this simple example the mathematical description of the signal samples as a sinusoidal function, we can obtain the mathematical description of the continuous-time signal $x(t)$ by replacing the integer index $n$ by the continuous-time variable $t \cdot f_s$, leading to
 $$ x(t) = x[n]|\_{n=t \cdot f_s} = A \cos ( 2 \pi \frac{f}{f_s} \cdot f_s \cdot t + \phi) = A \cos (2 \pi f t + \phi) $$

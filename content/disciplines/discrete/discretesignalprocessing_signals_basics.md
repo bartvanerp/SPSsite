@@ -19,7 +19,7 @@ type = "docs"  # Do not modify.
 
 
 ## The (Dirac) delta pulse
-The Dirac delta pulse is the most elemenary signal in the discrete-time domain. It namely represents a single sample. The Dirac delta pulse is defined as
+The Dirac delta pulse is the most elementary signal in the discrete-time domain. It namely represents a single sample. The Dirac delta pulse is defined as
 $$
 \boxed{
 \text{Dirac delta pulse:} \qquad

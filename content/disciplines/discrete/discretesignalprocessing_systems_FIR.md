@@ -97,7 +97,7 @@ Further on we will see that this is the DE of a so-called Finite Impulse Respons
 <br></br>
 
 ## Basic building blocks
-When realizing or implementing a discrete-time filter, it follows from the general DE of an FIR filter, as denoted in the equation above, that we need the following basic building blocks: A multiplier, which multiplies signal sample $x[n]$ by a scalar $\beta$ which results in a sample with value $y[n] = \beta \cdot x[n]$; An adder which adds two signal samples $x_1[n]$ and $x_2[n]$ together into $y[n]= x_1[n] + x_2[n]$ and finally an unit delay operator which delays a signal sample $x[n]$ by one sample index into $y[n]=x[n-1]$. These basic building blocks are are depicted in Fig. 2.
+When realizing or implementing a discrete-time filter, it follows from the general DE of an FIR filter, as denoted in the equation above, that we need the following basic building blocks: A multiplier, which multiplies signal sample $x[n]$ by a scalar $\beta$ which results in a sample with value $y[n] = \beta \cdot x[n]$; An adder which adds two signal samples $x_1[n]$ and $x_2[n]$ together into $y[n]= x_1[n] + x_2[n]$ and finally an unit delay operator which delays a signal sample $x[n]$ by one sample index into $y[n]=x[n-1]$. These basic building blocks are depicted in Fig. 2.
 
 <div style="max-width: 800px; margin: auto">
   <figure>
