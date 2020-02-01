@@ -16,7 +16,10 @@ type = "docs"  # Do not modify.
 +++
 
 ## Conceptual video
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/Xs8AS-F16P4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Xs8AS-F16P4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <br></br>
 
 ## Module overview
@@ -28,7 +31,9 @@ This module will cover one of the most fundamental aspects in signal processing,
 <br></br>
 
 ## Examples
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/er2dUoPBKL4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/er2dUoPBKL4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <br></br>
 
@@ -176,7 +181,9 @@ In this section several exercises are available, including their answers. The ex
 Download the answers <a href="/../files/3.Exercises/Answers/3.SAA-answers.pdf">here</a>.
 
 ### Pencast videos
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPHjRcAglKEybG4eE5b9MtdP" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPHjRcAglKEybG4eE5b9MtdP" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
 
@@ -193,8 +200,9 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
 </object>
 
 ### MATLAB demo
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/xk942JXSNxg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xk942JXSNxg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <br></br>
 
 ## Summary

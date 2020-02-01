@@ -19,8 +19,9 @@ type = "docs"  # Do not modify.
 In this section we will describe the reconstruction process of the D-to-C convertor which converts the sequence of discrete-time samples $x[n]$ into the continuous-time signal $x(t)$.
 
 ## Conceptual video
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/xeW5RyqHVis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xeW5RyqHVis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <br></br>
 
 ## Ideal D-to-C convertor

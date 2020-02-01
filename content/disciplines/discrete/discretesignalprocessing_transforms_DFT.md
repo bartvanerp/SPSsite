@@ -19,8 +19,9 @@ type = "docs"  # Do not modify.
 
 
 ## DFT Concept
-
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/SAq9y5t6FfY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/SAq9y5t6FfY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 In previous modules have seen that a Fourier transform can be used to calculate the frequency distribution of a signal. Various Fourier transforms have been discussed, each for a different type signal. In this section we will introduce again another Fourier transform: The Discrete Fourier Transform (DFT). The main advantage of the DFT is that this transform, in contrast to almost all other Fourier transforms, can be calculated on a computer. In this section we will give  a conceptual view of the DFT. In the first subsection we show how the DFT equation can be related, in different intermediate steps, to the Fourier Transform for Continuous time signals (FTC). In the second subsection we will discuss the periodic behaviour of the DFT. In order to calculate the frequency distribution on a computer, we will explain in the last subsection how the DFT can extract frequencies of a signal.
 
@@ -138,8 +139,9 @@ Concluding it follows that the 4-point DFT result of the finite length sequence 
 
 Up to now we have shown the main steps to obtain an equation of a Fourier transform that can be calculated on a computer. In the following subsection we will go into more detail of the periodic behavior of the DFT.
 
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/cMsFFW8nyOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/cMsFFW8nyOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Periodicity DFT and Periodic Extension (PE)
 In general a discrete time signal $x[n]$ can have an infinite amount of samples from which the sampling index $n$ ranges from $-\infty$ to $+\infty$, as depicted at the left hand side of Fig. 3. However when using the $N$-point DFT, we select $N$ samples of $x[n]$, typically ranging from time index $n=0$ until $n=N-1$. The frequency indices $k$ of the DFT resulting samples $X[k]$ also range from $k=0$ until $k=N-1$.
@@ -417,8 +419,9 @@ $$
 <br></br>
 
 ## DFT properties
-
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/0yRxU3HQWto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/0yRxU3HQWto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 In this section we will discuss the main DFT properties. We will see that most of these properties look similar to the properties of other Fourier transforms however there are some important differences which are caused by the fact that the DFT is a periodic, or circular, operation.
 
@@ -971,8 +974,9 @@ As depicted in Fig. \ref{Fig:overlapsave}, the overlap-save procedure is as foll
 <br></br>
 
 ## Implications of DFT length $N$
-
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/OXN9aW6ETKY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/OXN9aW6ETKY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 In practice we often use a DFT, or its efficient version the Fast Fourier Transform (FFT), algorithm to calculate a description of a signal in frequency domain. As discussed before, the DFT is related to the FTD and FTC but it is certainly not the same: The DFT uses only a finite set of $N$ samples, is discrete and periodic in both time and frequency domain. In this section we will explain which implications the choice of the length $N$ will have for the relation between the DFT and the FTD. We will do this for signals with finite duration, periodic signals and non-periodic signals with infinite duration.
 

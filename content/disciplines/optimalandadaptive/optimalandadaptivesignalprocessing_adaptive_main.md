@@ -16,7 +16,11 @@ type = "docs"  # Do not modify.
 +++
 
 ## Steepest Gradient Descent (SGD) algorithm
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/azRmW_rJCMg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/azRmW_rJCMg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Least Mean Squares (LMS) algorithm
+<div class="video-container">
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/t_vp5A_Kzjs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

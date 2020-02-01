@@ -21,7 +21,9 @@ In the <a href="../continuoussignalprocessing_transforms_spectrum">previous modu
 <br></br>
 
 ## Introductory video
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/8XKqEFoVY1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/8XKqEFoVY1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <br></br>
 
@@ -229,7 +231,9 @@ The figure below gives the approximation of the block wave for an increased numb
 ## Fourier series examples
 The above example should give you some intuition on how the Fourier series works. For a better clarification of the subject matter the following screencast video will give some more examples
 
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/DETTPI_R0SY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/DETTPI_R0SY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <br></br>
 
@@ -378,7 +382,9 @@ In this section several exercises are available, including their answers. The ex
 Download the answers <a href="/../files/3.Exercises/Answers/2.SPAFS-answers.pdf">here</a>.
 
 ### Pencast videos
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPGMYQijO9BDFR3ryItuXb6w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPGMYQijO9BDFR3ryItuXb6w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
 
@@ -396,8 +402,9 @@ These lab exercises also include topics relating to the spectrum of sinusoidal s
 </object>
 
 ### MATLAB demo
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/UiN1Wom_F5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/UiN1Wom_F5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <br></br>
 
 ## Summary

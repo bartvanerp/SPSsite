@@ -20,4 +20,6 @@ type = "docs"  # Do not modify.
 
 
 ## Screencast video
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/04YtOIj9zjY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/04YtOIj9zjY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

@@ -15,5 +15,6 @@ type = "docs"  # Do not modify.
   parent = "Transform analysis of discrete-time systems"
 
 +++
-
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/Oqmj3fHpsYQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Oqmj3fHpsYQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

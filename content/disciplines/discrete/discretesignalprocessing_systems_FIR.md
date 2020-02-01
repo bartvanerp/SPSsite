@@ -190,7 +190,9 @@ and by substituting these DE's into each other, we obtain:
 ## The impulse response
 
 ### Screencast video
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/yVNNNWAaH2s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/yVNNNWAaH2s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <br>
 <br>
 
@@ -287,7 +289,9 @@ From the DE it follows that the impulse response of this system equals $h[n]=3 \
 ## The convolution sum
 
 ### screencast video
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/tq1q3SdKPBg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/tq1q3SdKPBg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <br>
 <br>
 
@@ -366,7 +370,9 @@ From the previous example it follows that the convolution sum procedure results 
 ## Linear time invariance (LTI)
 
 ### Screencast video
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/jdfIURKrLJ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/jdfIURKrLJ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <br>
 <br>
 The FIR filter, as described in the previous sections, belongs to a general class of systems that is used very often in practice: The so called <b>Linear Time Invariant (LTI)</b> systems.
@@ -767,8 +773,9 @@ Calculate the output of this system for the given input.
 Download the answers <a href="/../files/3.Exercises/Answers/4.FIR-answers.pdf">here</a>.
 
 ### Pencast videos
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPF8wIM4ys_57Vz18_18VQKJ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPF8wIM4ys_57Vz18_18VQKJ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
 
 <br></br>
@@ -784,8 +791,9 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
 </object>
 
 ### MATLAB demo
+<div class="video-container">
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/GLhOpGsN0F8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+</div>
 <br></br>
 
 ## Summary

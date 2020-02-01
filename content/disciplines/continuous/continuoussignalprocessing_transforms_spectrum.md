@@ -21,7 +21,9 @@ Many practical signals can be described as a set of sinusoidal signals. In this 
 <br></br>
 
 ## Introductory video
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/lC1-SNdO8Lo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/lC1-SNdO8Lo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <br></br>
 
@@ -204,7 +206,9 @@ From the previous example we may conclude that
 
 
 ## Special cases
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/3XA-zK1XpQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/3XA-zK1XpQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <br></br>
 
@@ -419,7 +423,9 @@ In this section several exercises are available, including their answers. The ex
 Download the answers <a href="/../files/3.Exercises/Answers/2.SPAFS-answers.pdf">here</a>.
 
 ### Pencast videos
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPEoL814VlfZ5ZFv1eGh3PGB" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPEoL814VlfZ5ZFv1eGh3PGB" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div>
 
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
 
