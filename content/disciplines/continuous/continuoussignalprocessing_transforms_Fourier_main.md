@@ -16,13 +16,13 @@ type = "docs"  # Do not modify.
 
 +++
 
-In the <a href="../continuoussignalprocessing_transforms_spectrum">previous module</a> we studied the spectral behavior of the sum of sinusoidal signals. In this section we will study signals which are composed of a sum of harmonic related sine waves.
+In the <a href="../continuoussignalprocessing_transforms_spectrum_main">previous module</a> we studied the spectral behavior of the sum of sinusoidal signals. In this section we will study signals which are composed of a sum of harmonic related sine waves.
 
 <br></br>
 
-## Introductory video
+## Conceptual video
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/8XKqEFoVY1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/eUcFlwXPFb0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br></br>
@@ -232,7 +232,7 @@ The figure below gives the approximation of the block wave for an increased numb
 The above example should give you some intuition on how the Fourier series works. For a better clarification of the subject matter the following screencast video will give some more examples
 
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/DETTPI_R0SY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/5yfZm8E_xtw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br></br>

@@ -92,12 +92,12 @@ The (sub)modules on this website that are covered in this course are:
 -->
 <ol>
   <li><a href="../mathematicalbackground_complex_main">Complex numbers and phasors</a> <i>(incl. all submodules)</i></li>
-  <li>  <a href="../continuoussignalprocessing_transforms_spectrum">Spectrum of sinusoidal signals</a> </li>
-  <li>  <a href="../continuoussignalprocessing_transforms_fourier">Fourier series</a> </li>
+  <li>  <a href="../continuoussignalprocessing_transforms_spectrum_main">Spectrum of sinusoidal signals</a> </li>
+  <li>  <a href="../continuoussignalprocessing_transforms_fourier_main">Fourier series</a> </li>
   <li>  <a href="../discretesignalprocessing_sampling_main">Sampling and reconstruction</a> <i>(incl. all submodules)</i></li>
   <li>  <a href="../discretesignalprocessing_signals_basics">Elementary signals</a> </li>
-  <li>  <a href="../discretesignalprocessing_systems_fir">Finite impulse response filters</a> </li>
-  <li>  <a href="../discretesignalprocessing_analysis_frequency">Frequency response of finite impulse response filters</a> </li>
+  <li>  <a href="../discretesignalprocessing_systems_fir_main">Finite impulse response filters</a> </li>
+  <li>  <a href="../discretesignalprocessing_analysis_frequency_main">Frequency response of finite impulse response filters</a> </li>
 </ol>
 
 <!--
@@ -328,12 +328,12 @@ The below table provides the links to the lecture recordings of the course. The 
       </tr>
       <tr>
         <td>Spectrum and Fourier series</td>
-        <td><a href="../continuoussignalprocessing_transforms_spectrum/#exercises">Spectrum</a></td>
+        <td><a href="../continuoussignalprocessing_transforms_spectrum_main/#exercises">Spectrum</a></td>
         <td>Ex. 1, 2, 3, 5 </td>
       </tr>
       <tr>
         <td></td>
-        <td><a href="../continuoussignalprocessing_transforms_fourier/#exercises">Fourier Series</a></td>
+        <td><a href="../continuoussignalprocessing_transforms_fourier_main/#exercises">Fourier Series</a></td>
         <td>Ex. 4, 5, 7, 9 </td>
       </tr>
       <tr>
@@ -361,7 +361,7 @@ The below table provides the links to the lecture recordings of the course. The 
       <tr>
       </tr>
       <tr>
-        <td><a href="../discretesignalprocessing_systems_fir/#exercises">FIR filters</a></td>
+        <td><a href="../discretesignalprocessing_systems_fir_main/#exercises">FIR filters</a></td>
         <td>Linearity, LTI and causality</td>
         <td>Ex. 8c, 8d, 8e </td>
       </tr>
@@ -383,7 +383,7 @@ The below table provides the links to the lecture recordings of the course. The 
       <tr>
       </tr>
       <tr>
-        <td><a href="../discretesignalprocessing_analysis_frequency/#exercises">Frequency response</a></td>
+        <td><a href="../discretesignalprocessing_analysis_frequency_main/#exercises">Frequency response</a></td>
         <td>Calculating filter output</td>
         <td>Ex. 2 </td>
       </tr>

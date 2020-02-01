@@ -20,6 +20,12 @@ type = "docs"  # Do not modify.
 ## Frequency response FIR
 Besides the impulse response, denoted by $h[n]$, and the Difference Equation (DE) we will see that the frequency response is an alternative description of an FIR filter. Obviously all these different descriptions are related to each other and each of the descriptions has its own advantage. The advantage of the frequency response description is that we can fairly easily see the response of the FIR to frequencies.
 
+### Conceptual video
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/-p2D03X31uk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br></br>
+
 ### Response FIR to phasor with single frequency
 Since each single frequency can be viewed as the sum of two phasor components, we will first study the response of a very simple FIR filter, a delay, as a result of an input signal $x[n]$ which consists of one phasor frequency $\theta_1$, amplitude $A$ and phase $\phi$, thus $x[n]=\color{red}{ A e^{j(\theta_1 n + \phi)}}$. This is depicted in Fig. 1.
 
@@ -301,6 +307,13 @@ y[n] &=& 4 \cdot 1 + \color{red}{3} \cdot \frac{4}{3} \cos (\frac{\pi}{3}n \colo
 <br></br>
 
 ## Properties Frequency Response
+
+### Screencast video
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/NfUhwbn5ANU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br></br>
+
 In the previous section, we found the following relation between the impulse response description in time domain $h[n]$ and the frequency response description in frequency domain $H(e^{j\theta})$:
 $$
 \boxed{

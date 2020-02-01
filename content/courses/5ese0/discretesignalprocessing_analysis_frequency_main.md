@@ -9,7 +9,7 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # duplicate page
-duplicated_page = "disciplines/discrete/discretesignalprocessing_analysis_frequency.md"
+duplicated_page = "disciplines/discrete/discretesignalprocessing_analysis_frequency_main.md"
 
 # Add menu entry to sidebar.
 [menu.5ese0]
@@ -18,4 +18,4 @@ weight = 80
 
 +++
 
-{{% content duplicate="disciplines/discrete/discretesignalprocessing_analysis_frequency.md" %}}
+{{% content duplicate="disciplines/discrete/discretesignalprocessing_analysis_frequency_main.md" %}}

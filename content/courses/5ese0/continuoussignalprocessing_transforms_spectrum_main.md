@@ -9,7 +9,7 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # duplicate page
-duplicated_page = "disciplines/continuous/continuoussignalprocessing_transforms_spectrum.md"
+duplicated_page = "disciplines/continuous/continuoussignalprocessing_transforms_spectrum_main.md"
 
 # Add menu entry to sidebar.
 [menu.5ese0]
@@ -18,4 +18,4 @@ weight = 20
 
 +++
 
-{{% content duplicate="disciplines/continuous/continuoussignalprocessing_transforms_spectrum.md" %}}
+{{% content duplicate="disciplines/continuous/continuoussignalprocessing_transforms_spectrum_main.md" %}}

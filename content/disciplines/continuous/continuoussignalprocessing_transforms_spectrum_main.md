@@ -22,7 +22,7 @@ Many practical signals can be described as a set of sinusoidal signals. In this 
 
 ## Introductory video
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/lC1-SNdO8Lo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/pQkFbM6gyIA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br></br>
@@ -207,7 +207,7 @@ From the previous example we may conclude that
 
 ## Special cases
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/3XA-zK1XpQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/MzgUWF-QQUU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br></br>
