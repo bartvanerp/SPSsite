@@ -22,7 +22,7 @@
     <a class="docs-toc-link" {{ if and (.URL) (.Page.WordCount) }}href="{{ .URL }}"{{else if .HasChildren }}href="{{ (index .Children 0).URL }}"{{end}}>{{ .Name }}</a>
 
     {{- if .HasChildren }}
-    <ul class="nav docs-sidenav">
+    <ul class="nav docs-sidenav {{ if or ($current_page.HasMenuCurrent $menu_name .) ($current_page.IsMenuCurrent $menu_name .) }} {{ else }} collapse {{ end }}">
       {{ range .Children }}
       <li {{ if $current_page.IsMenuCurrent $menu_name . }}class="active"{{ end }}>
         <a href="{{ .URL }}">{{ .Name }}</a>
