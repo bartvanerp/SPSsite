@@ -26,6 +26,6 @@ The concepts covered in this module are:
 
 3. **Fast Fourier Transform (FFT)** (to be added) - The DFT operation can be sped up significantly. This faster implementation is called the fast Fourier transform.
 
-4. **Z-Transform** (to be added) - The Z-transform provides us with insight straight from the difference equation of the signal.
+4. <a href="../discretesignalprocessing_transforms_ztransform_main">Z-Transform</a> - The Z-transform provides us with insight straight from the difference equation of the signal.
 
 5. **Relation between different transforms** (to be added) - In order to fully grasp all the differences and similarities between the many different transforms, a good understanding of the relationships between them is crucial.
