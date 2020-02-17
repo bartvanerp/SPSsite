@@ -1,5 +1,5 @@
 +++
-title = "Fourier transform for discrete-time signals"
+title = "Transforms I: Fourier transform for discrete-time signals"
 
 # date = {{ .Date }}
 lastmod = 2019-06-23
@@ -10,9 +10,8 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Fourier transform for discrete-time signals"
+  name = "Transforms I: Fourier transform for discrete-time signals"
   weight = 51
-  parent = "Discrete-time transforms"
 
 
 +++
