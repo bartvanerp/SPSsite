@@ -10,9 +10,8 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.continuous]
-  name = "Fourier series"
+  name = "Transforms II: Fourier series"
   weight = 42
-  parent = "Continuous-time transforms"
 
 +++
 
@@ -114,7 +113,7 @@ $$
 
 Thus when the spectral weights, which are represented by the complex numbers $\alpha_k$, are known we can construct (synthesize) the periodic signal $x(t)$ according the above general expression.
 
-### Fourier series analysis
+## Fourier series analysis
 In this subsection we will show the other way around: when we are given the waveform in the time-domain of a periodic signal $x(t)$, how can we derive the spectral weights $\alpha_k$? In order to do so we need the following basic property of a phasor function:
 
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>The integral over one period $T_0=1/F_0$ of a phasor with a harmonic related frequency $k \cdot F_0$ results always in zero except for the case $k=0$.</i></div>

@@ -10,7 +10,7 @@ type = "docs"       # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.mathematicalbackground]
-  name = "Overview"
+  name = "Mathematical background: overview"
   weight = 1
 
 +++

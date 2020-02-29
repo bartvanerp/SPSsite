@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.machinelearning]
-  name = "Overview"
+  name = "Machine learning: overview"
   weight = 10
 
 +++

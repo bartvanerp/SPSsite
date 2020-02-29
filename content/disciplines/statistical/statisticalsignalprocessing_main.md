@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.statistical]                       # name of menu section (main module)
-  name = "Overview"        # name of this item in that menu
+  name = "Statistical signal processing: overview"        # name of this item in that menu
   weight = 10                           # location in that menu
 
 +++

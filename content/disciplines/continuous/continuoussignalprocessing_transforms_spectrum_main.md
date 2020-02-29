@@ -10,9 +10,8 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.continuous]
-  name = "Spectrum of sinusoidal signals"
+  name = "Transforms I: Spectrum of sinusoidal signals"
   weight = 41
-  parent = "Continuous-time transforms"
 
 +++
 
@@ -158,7 +157,7 @@ One of the examples where we use this concept is when tuning a guitar or piano. 
 Assume the baseband (message) signal $m(t)=4+2\cos(2\pi 6t-\frac{\pi}{4})$ is multiplied (modulated) with the carrier signal $c(t) = \cos(2\pi 1000t)$ to produce the Amplitude Modulated (AM) signal $x(t)=c(t)\cdot m(t)$. Determine the spectral plots of all three signals.
 <button class="collapsible">Show solution</button>
 <div class="content">
-In order to create a spectral plot we first need to find the frequency components of all three signals. To do so, the signals are converted into <a href="../continuoussignalprocessing_transforms_spectrum/#real-signal-as-sum-of-phasors">phasor</a> notation. The message signal $m(t)$ can be written as
+In order to create a spectral plot we first need to find the frequency components of all three signals. To do so, the signals are converted into <a href="./#real-signal-as-sum-of-phasors">phasor</a> notation. The message signal $m(t)$ can be written as
 $$
 \begin{split}
 m(t)
@@ -173,7 +172,7 @@ c(t)
 &= \left(\frac{1}{2}\right)e^{j2\pi 1000 t} + \left(\frac{1}{2}\right)e^{-j2\pi 1000 t}.
 \end{split}
 $$
-Both these signals can already be represented in their spectral plots. In order to also be able to represent $x(t)$ in a spectral plot the signal also needs to be rewritten in <a href="../continuoussignalprocessing_transforms_spectrum/#real-signal-as-sum-of-phasors">phasor</a> notation as
+Both these signals can already be represented in their spectral plots. In order to also be able to represent $x(t)$ in a spectral plot the signal also needs to be rewritten in <a href="./#real-signal-as-sum-of-phasors">phasor</a> notation as
 $$
 \begin{split}
 x(t)
