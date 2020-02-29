@@ -10,9 +10,8 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Frequency response LTI"
+  name = "Analysis II: Frequency response LTI"
   weight = 62
-  parent = "Transform analysis of discrete-time systems"
 
 +++
 <div class="video-container">

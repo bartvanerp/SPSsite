@@ -13,7 +13,7 @@ duplicated_page = "disciplines/discrete/discretesignalprocessing_systems_FIR_mai
 
 # Add menu entry to sidebar.
 [menu.5ese0]
-name = "Finite impulse response (FIR) filter"
+name = "Systems I: Finite impulse response (FIR) filter"
 weight = 70
 
 +++

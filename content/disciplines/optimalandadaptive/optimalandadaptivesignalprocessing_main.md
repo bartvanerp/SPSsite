@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.optimalandadaptive]                       # name of menu section (main module)
-  name = "Overview"        # name of this item in that menu
+  name = "Optimal and adaptive signal processing: overview"        # name of this item in that menu
   weight = 10                           # location in that menu
 
 +++
