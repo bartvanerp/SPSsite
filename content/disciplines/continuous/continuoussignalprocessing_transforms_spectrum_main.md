@@ -424,12 +424,11 @@ Download the answers <a href="/../files/3.Exercises/Answers/2.SPAFS-answers.pdf"
 ### Pencast videos
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPEoL814VlfZ5ZFv1eGh3PGB" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<div>
+</div>
 
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
 
 <br></br>
-
 ## Summary
 <ul>
 <li> Sum of DC and $N$ sinusoids written as sum of phasors:

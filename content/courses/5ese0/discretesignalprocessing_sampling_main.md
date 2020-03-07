@@ -14,7 +14,7 @@ duplicated_page = "disciplines/discrete/discretesignalprocessing_sampling_main.m
 # Add menu entry to sidebar.
 [menu.5ese0]
 name = "Basics of sampling and reconstruction"
-weight = 50
+weight = 40
 
 +++
 

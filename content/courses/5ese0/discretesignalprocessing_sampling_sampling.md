@@ -14,7 +14,7 @@ duplicated_page = "disciplines/discrete/discretesignalprocessing_sampling_sampli
 # Add menu entry to sidebar.
 [menu.5ese0]
 name = "Sampling of sinusoidal signals"
-weight = 51
+weight = 1
 parent = "Basics of sampling and reconstruction"
 
 +++

@@ -91,11 +91,11 @@ The (sub)modules on this website that are covered in this course are:
 </ol>
 -->
 <ol>
-  <li><a href="../mathematicalbackground_complex_main">Complex numbers and phasors</a> <i>(incl. all submodules)</i></li>
+  <li><a href="../mathematicalbackground_complex_main">Complex numbers and phasors</a></li>
   <li>  <a href="../continuoussignalprocessing_transforms_spectrum_main">Spectrum of sinusoidal signals</a> </li>
   <li>  <a href="../continuoussignalprocessing_transforms_fourier_main">Fourier series</a> </li>
-  <li>  <a href="../discretesignalprocessing_sampling_main">Sampling and reconstruction</a> <i>(incl. all submodules)</i></li>
-  <li>  <a href="../discretesignalprocessing_signals_basics">Elementary signals</a> </li>
+  <li>  <a href="../discretesignalprocessing_sampling_main">Sampling and reconstruction</a></li>
+  <li>  <a href="../discretesignalprocessing_signals_main">Discrete-time signals</a></li>
   <li>  <a href="../discretesignalprocessing_systems_fir_main">Finite impulse response filters</a> </li>
   <li>  <a href="../discretesignalprocessing_analysis_frequency_main">Frequency response of finite impulse response filters</a> </li>
 </ol>
