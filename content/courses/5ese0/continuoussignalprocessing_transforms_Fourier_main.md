@@ -13,7 +13,7 @@ duplicated_page = "disciplines/continuous/continuoussignalprocessing_transforms_
 
 # Add menu entry to sidebar.
 [menu.5ese0]
-name = "Fourier series"
+name = "Transforms II: Fourier series"
 weight = 30
 
 +++
