@@ -36,7 +36,7 @@ The concepts covered in this module are:
     - <a href="../discretesignalprocessing_transforms_ztransform_main">Z-transform</a>
 <br></br>
 
-5. <a href="../discretesignalprocessing_analysis_main">Transform analysis of discrete-time systems</a> - Similarly to discrete-time signals, also systems can be characterized in different domains. Usually this allows for better insight in the system and simplified calculations.
+5. **Transform analysis of discrete-time systems** - Similarly to discrete-time signals, also systems can be characterized in different domains. Usually this allows for better insight in the system and simplified calculations.
     - <a href="../discretesignalprocessing_analysis_fir_main">Frequency response FIR</a>
     - <a href="../discretesignalprocessing_analysis_lti_main">Frequency response LTI</a>
 <br></br>

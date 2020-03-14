@@ -378,7 +378,7 @@ In this section several exercises are available, including their answers. The ex
 
 
 ### Answers
-Download the answers <a href="/../files/3.Exercises/Answers/2.SPAFS-answers.pdf">here</a>.
+Download the answers <a href="/../files/3.Exercises/Answers/FourierSeriesAnswers.pdf">here</a>.
 
 ### Pencast videos
 <div class="video-container">
