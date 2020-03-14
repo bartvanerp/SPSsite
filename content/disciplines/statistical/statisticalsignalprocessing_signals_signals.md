@@ -17,6 +17,7 @@ type = "docs"  # Do not modify.
 
 This section will provide you with the tools to put all theory into practice when dealing with random signals. The link between random variables and discrete-time signals is stated and all statistical characteristics of a signal are covered.
 
+<br></br>
 ## Representation of a random signal
 First it is important to elaborate on the definition of a random signal. Suppose there is a transmitter which transmits a signal $f(t)$. This signals is attenuated over the transmission path, leading to an attenuated signal at the receiver $s(t) = \alpha \cdot f(t)$, where $\alpha$ indicates the degree of attenuation and which is bounded by $0 \leq |\alpha| \leq 1$. Now at the output of the receiver, this received signal $s(t)$ will also be corrupted by noise from the electrical components in the receiver and from other unwanted signals that are received. Let us capture all this noise in a single term called $n(t)$. The signal at the output of the receiver $x(t)$ can now be written as
 \begin{equation}
@@ -175,7 +176,7 @@ When dealing with real-valued signals, this property can be simplified to $r_X[l
 When a signal is stationary, the exact calculation of the expected value operators is usually still cumbersome, because it requires knowledge of the entire random process. In practices we usually only have a limited amount of sample of one realization of the random process. If a random process is ergodic then this means that the statistical properties of the entire random process can be inferred from just a limited amount of samples of a single realization. In order for a signal to be ergodic it has to be stationary. Ergodicity is usually a big assumption that cannot always be confirmed, however, without this assumption the signal statistics could not be approximated.
 
 
-
+<br></br>
 ## Special case: zero-mean white noise
 There is one really important case of the auto-correlation function that is often used in the field of signal processing. Namely the auto-correlation function of zero-mean white noise.
 The auto-correlation function of a zero-mean white noise process can be determined as
