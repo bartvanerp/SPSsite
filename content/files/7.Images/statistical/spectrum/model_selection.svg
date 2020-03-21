@@ -1,0 +1,112 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 813.769 304.376">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: blue;
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-4 {
+        stroke: #000;
+      }
+
+      .cls-3 {
+        font-size: 18px;
+      }
+
+      .cls-3, .cls-5 {
+        font-family: TimesNewRomanPSMT, Times New Roman;
+      }
+
+      .cls-4 {
+        fill: red;
+        stroke-width: 0.5px;
+      }
+
+      .cls-5 {
+        font-size: 23px;
+      }
+    </style>
+  </defs>
+  <title>model_selection</title>
+  <g>
+    <line class="cls-1" x1="26.269" y1="170.281" x2="229.269" y2="84.281"/>
+    <g>
+      <polyline class="cls-2" points="222.593 276.781 20.769 276.781 20.769 44.956"/>
+      <polygon points="221.134 271.795 229.769 276.78 221.134 281.767 221.134 271.795"/>
+      <polygon points="25.755 46.415 20.77 37.781 15.783 46.415 25.755 46.415"/>
+    </g>
+    <text class="cls-3" transform="translate(0 160.857)">y</text>
+    <text class="cls-3" transform="translate(120 295.857)">x</text>
+    <rect class="cls-4" x="34.269" y="200.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="161.269" y="76.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="132.269" y="81.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="96.269" y="80.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="116.269" y="104.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="221.269" y="131.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="81.269" y="135.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="40.269" y="160.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="64.269" y="170.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="208.269" y="116.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="194.269" y="112.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="205.269" y="102.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="174.269" y="103.281" width="4" height="4" rx="2" ry="2"/>
+  </g>
+  <g>
+    <g>
+      <polyline class="cls-2" points="514.593 276.781 312.769 276.781 312.769 44.956"/>
+      <polygon points="513.134 271.795 521.769 276.78 513.134 281.767 513.134 271.795"/>
+      <polygon points="317.755 46.415 312.77 37.781 307.783 46.415 317.755 46.415"/>
+    </g>
+    <text class="cls-3" transform="translate(292 160.857)">y</text>
+    <text class="cls-3" transform="translate(412 295.857)">x</text>
+    <rect class="cls-4" x="326.269" y="200.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="453.269" y="76.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="424.269" y="81.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="388.269" y="80.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="408.269" y="104.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="513.269" y="131.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="373.269" y="135.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="332.269" y="160.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="356.269" y="170.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="500.269" y="116.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="486.269" y="112.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="497.269" y="102.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="466.269" y="103.281" width="4" height="4" rx="2" ry="2"/>
+    <path class="cls-1" d="M577.5,406.5c7-77,77-142,115-142,45,0,88.515,46.788,91,50" transform="translate(-258.731 -175.719)"/>
+  </g>
+  <g>
+    <path class="cls-1" d="M865.5,385.5c3.584.073,11-1,13-4,2.987-4.481,3-38,7-41,5.12-3.84,14.463,11.829,24,10,8.06-1.546,11.317-14.08,17-35,9.409-34.634,9.84-54.486,15-55,6.251-.622,11.694,27.674,19,27,6.063-.559,3.665-20.175,17-30,9.428-6.947,25.18-7.864,32-1,7.9,7.951-1.3,21.2,8,31,4.291,4.524,11.747,7.5,18,6,7.894-1.892,10.86-10.189,14-9,2.961,1.121.616,8.614,4,16,3.275,7.147,10.414,10.921,16,13" transform="translate(-258.731 -175.719)"/>
+    <g>
+      <polyline class="cls-2" points="806.593 279.781 604.769 279.781 604.769 47.956"/>
+      <polygon points="805.134 274.795 813.769 279.78 805.134 284.767 805.134 274.795"/>
+      <polygon points="609.755 49.415 604.77 40.781 599.783 49.415 609.755 49.415"/>
+    </g>
+    <text class="cls-3" transform="translate(584 163.857)">y</text>
+    <text class="cls-3" transform="translate(704 298.857)">x</text>
+    <rect class="cls-4" x="618.269" y="203.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="745.269" y="79.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="716.269" y="84.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="680.269" y="83.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="700.269" y="107.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="805.269" y="134.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="665.269" y="138.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="624.269" y="163.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="648.269" y="173.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="792.269" y="119.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="778.269" y="115.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="789.269" y="105.281" width="4" height="4" rx="2" ry="2"/>
+    <rect class="cls-4" x="758.269" y="106.281" width="4" height="4" rx="2" ry="2"/>
+  </g>
+  <text class="cls-5" transform="translate(74.269 19.114)">underfitting</text>
+  <text class="cls-5" transform="translate(388.269 19.114)">good fit</text>
+  <text class="cls-5" transform="translate(665.269 19.114)">overfitting</text>
+</svg>
