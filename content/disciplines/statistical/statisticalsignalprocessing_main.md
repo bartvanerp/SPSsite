@@ -2,7 +2,7 @@
 title = "Statistical signal processing"         # name of webpage
 
 # date = {{ .Date }}
-lastmod = 2019-05-28
+lastmod = 2020-03-14
 
 draft = false  # Is this a draft? true/false
 toc = false  # Show table of contents? true/false
@@ -27,4 +27,4 @@ The concepts covered in this module are:
 
 4. <a href="../statisticalsignalprocessing_rational_main">Rational signal models</a> - With this notion of uncertainty, it is actually possible to create a signal with a desired frequency spectrum by just filtering noise.
 
-5. <a href="../statisticalsignalprocessing_spectrum_main">Spectrum estimation</a> - With the approximations made in from the Fourier transform for continuous-time signals to the fast Fourier transform, accuracy will inevitably be lost, leading to noisy spectral estimates. This module will explore ways to model the frequency spectrum.
+5. <a href="../statisticalsignalprocessing_spectrum_main">Spectrum estimation</a> - With the approximations made in going from the Fourier transform for continuous-time signals to the fast Fourier transform, accuracy will inevitably be lost, leading to noisy spectral estimates. This module will explore ways to model the frequency spectrum.
