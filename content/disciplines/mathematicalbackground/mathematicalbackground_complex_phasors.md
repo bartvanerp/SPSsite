@@ -45,10 +45,10 @@ Such time depending complex exponential, which is depicted as a time depending c
 The projection of the phasor on the real axis behaves like a cosine signal, while the projection on the imaginary axis behaves like a sine function.
 In other words we can generalize a time depending sinusoidal signal by a phasor, since it describes both a sine and cosine function at the same time.
 Alternatively we write the cosine and sine function in phasor notation as follows using the <a href="../mathematicalbackground_complex_euler">Euler equations</a>:
-$$ \begin{eqnarray}
+$$ \begin{eqnarray*}
 && A \cos (\omega_o t +\phi) = \Re e \\{ A  e^{j(\omega_o t +\phi)} \\} = \frac{A e^{j(\omega_o t +\phi)} + A e^{-j(\omega_o t +\phi)}}{2}  \newline
 && A \sin (\omega_o t +\phi) = \Im m \\{ A e^{j(\omega_o t +\phi)} \\} = \frac{A e^{j(\omega_o t +\phi)} - A e^{-j(\omega_o t +\phi)}}{2 j}
-\end{eqnarray} $$
+\end{eqnarray*} $$
 
 <br></br>
 
@@ -84,18 +84,18 @@ This phasor addition example is depicted in Fig. 2.
 
 We can use this property when a signal $x(t)$ consists of the sum of two sinusoidal signals, both with the same frequency $\omega_0$, which goes as follows:
 
-$$ \begin{eqnarray}
+$$ \begin{eqnarray*}
 x(t) &=& A_1 \cos (\omega_0 t + \phi_1) + A_2 \cos (\omega_0 t + \phi_2) \newline
 &=& \left ( \frac{A_1}{2} e^{j\phi_1} + \frac{A_2}{2} e^{j\phi_2} \right ) \cdot e^{j\omega_0 t} + \left( \frac{A_1}{2} e^{-j\phi_1} + \frac{A_2}{2} e^{-j\phi_2} \right ) \cdot e^{-j\omega_0 t}
-\end{eqnarray}$$
+\end{eqnarray*}$$
 
 By defining
 $$ A e^{j\phi} = A_1 e^{j\phi_1} + A_2 e^{j\phi_2} $$
 we obtain:
-$$\begin{eqnarray}
+$$\begin{eqnarray*}
 x(t) &=& \left ( \frac{A}{2} e^{j\phi} \right )  \cdot e^{j\omega_0 t} +
 \left ( \frac{A}{2} e^{-j\phi} \right )  \cdot e^{-j\omega_0 t} = A \cos (\omega_0 t + \phi)
-\end{eqnarray}$$
+\end{eqnarray*}$$
 
 Thus the amplitude $A$ and phase $\phi$ of the resulting sinusoidal signal $x(t)$ are found by complex addition of the amplitude and phase of the individual sinusoidal components.
 \\
@@ -125,11 +125,11 @@ $$ x(t) = \Re e \{5 e^{j(\omega_0 t + \frac{3}{2}\pi)} \}+\Re e \{4 e^{j(\omega_
 The phasor component ($e^{j\omega_0 t}$) can be separated:
 $$ x(t) = \Re e \{ e^{j\omega_0 t} \cdot \left ( 5e^{j\frac{3\pi}{2}}+4e^{j\frac{2\pi}		{3}}+4e^{j\frac{\pi}{3}} \right ) \}$$
 The complex numbers, containing the amplitude and phase of the 3 individual sinusoidal signals, can be added together by using complex addition rules. Since we have to add complex numbers it is easiest to rewrite these complex numbers in Cartesian notation:
-$$\begin{eqnarray}
+$$\begin{eqnarray*}
 x(t)&=& \Re e \{ e^{j\omega_0 t} \cdot \left(- j 5 + 4 (- \frac{1}{2} + j \frac{1}{2} \sqrt{3}) + 4 (\frac{1}{2} + j \frac{1}{2} \sqrt{3}) \right) \newline
 &=& \Re e \{ e^{j\omega_0 t} \cdot \left ( (4 \sqrt{3} -5) j \right ) \} =  \Re e \{ e^{j\omega_0 t} \cdot \left ( (4 \sqrt{3} -5) e^{j\frac{\pi}{2}} \right ) \} \newline
 &=& \Re e \{ (4 \sqrt{3} -5) e^{j\omega_0 t + \frac{\pi}{2}} \}
-\end{eqnarray}$$
+\end{eqnarray*}$$
 Now this answer can be written as the final answer:
 $$ x(t) = (4\sqrt{3}-5)\cos\left(\omega_0 t +\frac{\pi}{2}\right)$$
 </div>

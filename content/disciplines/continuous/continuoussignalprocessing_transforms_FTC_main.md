@@ -34,38 +34,38 @@ That's why we will introduce a tool for representing non-periodic signals, known
 
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 X(f)=\int\_{-\infty}^{\infty} x(t) e^{-j2 \pi f t}  \text{d} t
 & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
 x(t) = \int\_{-\infty}^{\infty} X(f) e^{j2 \pi f t} \text{d} f
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 X(\omega) = \int\_{-\infty}^{\infty} x(t) e^{-j\omega t}  \text{d} t
 & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
 x(t) = \frac{1}{2\pi} \int\_{-\infty}^{\infty} X(\omega) e^{j\omega t} \text{d} \omega
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 <br>
 <b><u>Existence and convergence FTC</u></b>
-\begin{eqnarray}
+\begin{eqnarray*}
 \left | X(f) \right | < \infty & \leftrightarrow &
 \int_{-\infty}^{\infty} \left | x(t) \right | \text{d} t < \infty
-\end{eqnarray}
+\end{eqnarray*}
 
 <br>
 <b><u>General Phasor Integral property (GPI)</u></b>
-\begin{eqnarray}
+\begin{eqnarray*}
 \int_{-\infty}^{\infty}  e^{-j2 \pi (f \pm f\_0) t} \text{d} t
 &\overset{\text{GPI}}{=}& \delta(f \pm f\_0)
-\end{eqnarray}
+\end{eqnarray*}
 
 <br>
 <b><u>Basic Fourier transform pairs</u></b>
-\begin{eqnarray}
+\begin{eqnarray*}
 x(t)= \delta(t) &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& X(f)=1 \hspace{2mm} \forall f \newline
 x(t)=1 \hspace{2mm} \forall t &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& X(f)=\delta(f) \newline
 x(t) = \begin{cases}
@@ -80,7 +80,7 @@ X(f) = \begin{cases}
 \end{cases}\newline
 x(t) = \cos (2 \pi F_0 t) &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& X(f)=\frac{1}{2} \delta(f-F_0) + \frac{1}{2} \delta(f+F_0) \newline
 x(t)=\sum\_{n=-\infty}^{\infty} \delta(t - n \cdot T) &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& X(f)=\frac{1}{T} \sum\_{n=-\infty}^{\infty} \delta (f - \frac{n}{T} )
-\end{eqnarray}
+\end{eqnarray*}
 
 <br>
 <b><u> Main properties </u></b>
@@ -101,9 +101,9 @@ x(t)=\sum\_{n=-\infty}^{\infty} \delta(t - n \cdot T) &\circ  \hspace{-1.7mm} - 
 
 <br>
 <b><u>Main "rules of thumb" </u></b>
-\begin{eqnarray}
+\begin{eqnarray*}
 \text{Shrinking} &\leftrightarrow& \text{Stretching} \newline
 \text{Multiplication} &\leftrightarrow& \text{Convolution}\newline
 \text{Modulation} &\leftrightarrow& \text{Shifting}\newline
 \text{Energy} &\leftrightarrow& \text{Energy}
-\end{eqnarray}
+\end{eqnarray*}
