@@ -55,11 +55,11 @@ The upper bound $U$ of the integral in the left hand figure equals $3 T_0/8$ and
 This GPI-FS property leads to the Fourier Series as given in the following equation:
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 \alpha\_{k} = \frac{1}{T_0} \int\_{-T\_0/2}^{T\_0/2} x\_p(t) e^{-j2 \pi  k F\_0 t} \text{d}t
 &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ&
 x\_p(t) = \sum\_{k=- \infty}^{\infty} \alpha\_k e^{j2 \pi k F\_0 t}
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 By multiplying a periodic signal $x_p(t)$ with a phasor with frequency $k \cdot F_0$ and taking the integral over one period $T_0$, the result of the GPI-FS property  is that only the frequency $k \cdot F_0$ of the periodic signal $x_p(t)$ is triggered. In case the frequency $k \cdot F_0$ is present, the integral results in a measure $\alpha_k$, representing the frequency content of the periodic signal $x_p(t)$ at frequency $k \cdot F_0$. When this particular frequency $k \cdot F_0$ is not present in the periodic signal $x_p(t)$ the value of $\alpha_k$ will result in zero.
 This implies that a periodic signal can only have discrete (related) frequencies $k \cdot F_0$, which leads to the general expression of a periodic signal $x_p(t)$ which writes as a, possibly infinite, sum of weighted phasors.
@@ -85,11 +85,11 @@ An example of a periodic signal $x_p(t)$, with fundamental period $T_0=1/F_0$, a
 The FTC and Inverse FTC are defined as follows:
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 X(f)=\mathcal{F}\\{x(t)\\} = \int\_{-\infty}^{\infty} x(t) e^{-j2 \pi f t}  \text{d} t
 & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
 x(t) =\mathcal{F}^{-1}\\{X(f)\\}= \int\_{-\infty}^{\infty} X(f) e^{j2 \pi f t} \text{d} f
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 In contrast to the Fourier Series the FTC equations are:
 <ul>
@@ -120,11 +120,11 @@ x(t)=\mathcal{F}^{-1}\\{X(f)\\} \overset{\text{def}}{=}
 $$
 As follows from Figure 3, the value of the product $X(k \Delta F) \Delta F$ (in blue) represents an approximation of the surface of the frequency distribution $X(f)$ at frequency $f= k \cdot \Delta F$.  When comparing the resulting infinite sum of weighted phasors to the Fourier Series expression of a periodic signal, it follows that the surface $X(k \Delta F) \Delta F$ represent the weight $\alpha\_k$ of the Fourier Series expression.
 On the other hand, when using the Fourier Series expression for these weights, multiplied by $\Delta T$,  we obtain the Fourier Series integral within the boundaries $-\Delta T/2$ until $+\Delta T/2$ as given in the following equation:
-\begin{eqnarray}
+\begin{eqnarray*}
 \left (X(k \Delta F) \Delta F\right ) \cdot \Delta T & \widehat{=} \ &\alpha\_k \cdot \Delta T
-\overset{\text{FS}}{=} \int_{-\Delta T/2}^{\Delta T/2} x\_p(t) e^{-j2 \pi (k \Delta F) t} \text{d} t   \\
+\overset{\text{FS}}{=} \int_{-\Delta T/2}^{\Delta T/2} x\_p(t) e^{-j2 \pi (k \Delta F) t} \text{d} t   \newline
 & \overset{k \Delta F \rightarrow f}{\approx} & \int\_{-\infty}^{\infty} x(t) e^{-j2 \pi f t} \text{d} t \overset{\text{def}}{=} X(f)
-\end{eqnarray}
+\end{eqnarray*}
 When the length $\Delta T$ goes to infinite, or equivalently when $\Delta F$ goes to zero and $k \Delta F$ becomes close to the continuous frequency $f$, the non-periodic signal $x(t)$ can be viewed as the limiting case of the periodic signal $x_p(t)$  and the result is FTC equation.
 
 As mentioned before we should realise that the given development of the FTC equations is not completely rigorous. Instead it is plausible which suggests the correct form of the FTC equations and it provides a useful interpretation.
@@ -155,20 +155,20 @@ $$
 x(t) = \lim_{T_0 \rightarrow \infty} x_p(t)
 $$
 From this it follows that the FTC of the non-periodic signal $x(t)$ can be viewed as a reasonable approximation of the Fourier Series of the periodic signal $x_p(t)$. The weights $\alpha_k$ multiplied by $T_0$ of the periodic signal $x_p(t)$ can be evaluated via the following Fourier Series:
-\begin{eqnarray}
+\begin{eqnarray*}
 \alpha_{k} = \frac{1}{T_0} \int_{-T_0/2}^{T_0/2} x_p(t) e^{-j2 \pi  k F_0 t} \text{d}t
 &\overset{\text{FS}}{\quad\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ\quad}&
 x_p(t) = \sum_{k=- \infty}^{\infty} \alpha_{k} e^{j2 \pi k F_0 t}
-\end{eqnarray}
+\end{eqnarray*}
 The block signal $x_p(t)$ equals 1 within the boundaries $-\Delta T/2$ and $+\Delta T/2$, which leads to the following result:
-\begin{eqnarray}
+\begin{eqnarray*}
 \alpha_{k} \cdot T_0 &=& \int_{-\Delta T/2}^{\Delta T/2} 1 e^{-j2 \pi  k F_0 t} \text{d}t
  =
 \frac{1}{-j 2 \pi k F_0}  e^{-j2 \pi k F_0 t} \Big|_{-\Delta T/2}^{\Delta T/2}
 \newline
 &=& \frac{e^{-j2 \pi k F_0 \Delta T/2}- e^{j2 \pi k F_0 \Delta T/2}}{-j 2 \pi k F_0} =
 \Delta T \cdot \frac{\sin (\pi k F_0 \Delta T)}{\pi k F_0 \Delta T}
-\end{eqnarray}
+\end{eqnarray*}
 With $F_0=1/T_0$ and for the limiting case $F_0 \rightarrow 0$ and $k F_0 \rightarrow f$ we obtain:
 $$
 \Rightarrow \hspace{2mm}
@@ -194,11 +194,11 @@ When increasing $T\_0$ we see that the values of the weights $\alpha\_k$ multipl
 Until now we have discussed the FTC equations as a function of frequency $f$ in [Hz]. In literature we also find the same FTC equations as a function of the radian frequency $\omega$ in [rad/sec] as defined in the following equation:
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 X(\omega) = \int\_{-\infty}^{\infty} x(t) e^{-j\omega t}  \text{d} t
 & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
 x(t) = \frac{1}{2\pi} \int\_{-\infty}^{\infty} X(\omega) e^{j\omega t} \text{d} \omega
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 With $\omega = 2 \pi f$, the replacement of the integral variable $f$ by $\omega$, in the Inverse FTC equation, results in the pre-multiplication factor of $1/ 2\pi$ in this case.
 <br></br>
@@ -206,15 +206,15 @@ With $\omega = 2 \pi f$, the replacement of the integral variable $f$ by $\omega
 ### Existence and convergence FTC
 
 Not every function $x(t)$ has an FTC representation. So it would be helpful to be able to determine whether the FTC exists or not. As a simple condition for convergence of the FTC integral, we can check the magnitude $|X(f)|$. By first using the fact that the absolute value of an integral is smaller or equal than the integral of the absolute value and then that the absolute value of the given phasor equals one, we obtain the resulting integral.
-\begin{eqnarray}
+\begin{eqnarray*}
 \left | X(f) \right | &=& \left |\int\_{-\infty}^{\infty} x(t) e^{-j2 \pi f t}  \text{d} t \right | \\
 &\leq & \int\_{-\infty}^{\infty} \left | x(t) e^{-j2 \pi f t} \right |  \text{d} t
 = \int\_{-\infty}^{\infty} \left | x(t) \right | \text{d} t
-\end{eqnarray}
+\end{eqnarray*}
 
-\begin{eqnarray}
+\begin{eqnarray*}
 \Rightarrow \hspace{3mm} \left | X(f) \right | < \infty & \leftrightarrow &
 \int_{-\infty}^{\infty} \left | x(t) \right | \text{d} t < \infty
-\end{eqnarray}
+\end{eqnarray*}
 
 This implies that a sufficient, but not necessary, condition to check the existence of the FTC of a signal $x(t)$ is to evaluate the integral of the absolute value of $x(t)$ and verifying if the result is bounded.

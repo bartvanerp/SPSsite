@@ -44,10 +44,10 @@ Thus a delta pulse $\delta(f)$ in frequency domain is the result of integrating 
 By replacing the frequency $f$ by $f \pm f\_0$ we obtain the following so called General Phasor Integral (GPI):
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 \int\_{-\infty}^{\infty}  e^{-j2 \pi (f \pm f\_0) t} \text{d} t
 &\overset{\text{GPI}}{=}& \delta(f \pm f\_0)
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 
 <br></br>
@@ -64,13 +64,13 @@ x(t) =
 \end{cases}
 $$
 Evaluating the FTC of this block signal results into the following:
-\begin{eqnarray}
+\begin{eqnarray*}
 X(f) &=& \int\_{-\infty}^{\infty} x(t) \cdot e^{-j2 \pi f t} \text{d} t =
 \int\_{-T\_0/2}^{T\_0/2} 1 \cdot e^{-j2 \pi f t} \text{d} t  \newline
 &=&\frac{1}{-2j \pi f} e^{-j2 \pi f t} \left . \right |\_{-T\_0/2}^{T\_0/2} =
 \frac{e^{-j2 \pi f T_0/2}- e^{j2 \pi f T\_0/2} }{-2j \pi f}  \newline
 &=& T\_0 \frac{\sin(\pi f T\_0)}{\pi f T_0} = T\_0 \ \text{sinc}(\pi f T\_0)
-\end{eqnarray}
+\end{eqnarray*}
 
 <div style="max-width: 800px; margin: auto">
   <figure>
@@ -96,13 +96,13 @@ X(f) =
 $$
 and depicted in Fig. 7.
 The evaluation of the IFTC is as follows:
-\begin{eqnarray}
+\begin{eqnarray*}
 x(t) &=& \int\_{-\infty}^{\infty} X(f) \cdot e^{j2 \pi f t} \text{d} f =
 \int_{-F\_c}^{F\_c} 1 \cdot e^{j2 \pi f t \text{d} f}
 = \frac{1}{2j \pi t} e^{j2 \pi f t} \left . \right |\_{-F\_c}^{F\_c}  \newline
 &=& \frac{e^{j2 \pi F\_c t}- e^{-j2 \pi F\_c t} }{2j \pi t}
 = 2 F\_c \frac{\sin(2\pi F\_c t)}{2\pi F\_c t} = 2 F\_c \ \text{sinc}(2\pi F\_c t)
-\end{eqnarray}
+\end{eqnarray*}
 
 <div style="max-width: 800px; margin: auto">
   <figure>
@@ -122,14 +122,14 @@ In other words: The IFTC of a block-function in frequency domain is a sinc-funct
 
 ## FTC Sinusoidal
 The following derivations describe the evaluation of the FTC of a sinuoidal function:
-\begin{eqnarray}
+\begin{eqnarray*}
 && x(t) = \cos (2 \pi F\_0 t)
 = \frac{1}{2} e^{j2 \pi F\_0 t} + \frac{1}{2} e^{-j2 \pi F\_0 t} \newline
 && \mathcal{F}\\{e^{j2 \pi F_0 t}\\}
 = \int\_{-\infty}^{\infty} e^{-j2 \pi (f-F\_0) t} \text{d} t \overset{\color{red}{\text{GPI}}}{=} \delta(f-F\_0) \newline
 && \mathcal{F}\\{e^{-j2 \pi F_0 t}\\}
 = \int\_{-\infty}^{\infty} e^{-j2 \pi (f+F\_0) t} \text{d} t \overset{\color{red}{\text{GPI}}}{=} \delta(f+F\_0) \newline
-\end{eqnarray}
+\end{eqnarray*}
 $$
 \Rightarrow \quad \mathcal{F}\\{\cos (2 \pi F\_0 t)\\}= \frac{1}{2} \delta(f-F\_0) + \frac{1}{2} \delta(f+F\_0)
 $$
@@ -157,14 +157,14 @@ We have shown that a sufficient condition for the FTC to exist is that the integ
 
 ### Comparison with FS Sinusoidal
 When viewing the sinusoidal signal $x(t)$ as a periodic signal $x\_p(t)$, we can evaluate the frequency content by applying the Fourier Series of one period. The first steps of these derivations are as follows:
-\begin{eqnarray}
+\begin{eqnarray*}
 \alpha\_{k} &=& \frac{1}{T\_0} \int\_{-T\_0/2}^{T\_0/2} x\_p(t) e^{-j2 \pi k F\_0 t} \text{d}t  =
 \frac{1}{T\_0} \int\_{-T\_0/2}^{T\_0/2} \cos (2 \pi F\_0 t) e^{-j2 \pi k F\_0 t} \text{d}t  \newline
 &=& \frac{1}{T\_0} \int\_{-T\_0/2}^{T\_0/2}
 \left ( \frac{1}{2} e^{j2 \pi F\_0 t} + \frac{1}{2} e^{-j2 \pi F\_0 t} \right )  e^{-j2 \pi k F\_0 t} \text{d}t  \newline
 &=& \frac{1}{2 T\_0} \int\_{-T\_0/2}^{T\_0/2} e^{-j2 \pi (k-1) F\_0 t} \text{d}t +
 \frac{1}{2 T\_0} \int\_{-T\_0/2}^{T\_0/2} e^{-j2 \pi (k+1) F\_0 t} \text{d}t
-\end{eqnarray}
+\end{eqnarray*}
 Using the General Phasor Integral Property for Fourier Series GPI-FS, it follows that the result is zero except for frequencies $\pm F\_0$. For these frequencies the result is finite, namely 1/2 as denoted in the following equation:
 $$
 \Rightarrow \quad \alpha\_{k} \overset{\text{GPI-FS}}{=}
@@ -220,7 +220,7 @@ $$
 x(t)=\sum\_{n=-\infty}^{\infty} \delta(t - n \cdot T) \widehat{=} \frac{1}{T} \sum\_{n=-\infty}^{\infty} e^{j2 \pi \frac{1}{T} n t}
 $$
 In other words the FTC of the infinite train of delta pulses can be evaluated by applying the FTC of the infinite sum of phasors which results in the following derivation:
-\begin{eqnarray}
+\begin{eqnarray*}
 \mathcal{F}\\{x(t)\\} &=&
 \int\_{-\infty}^{\infty} \left ( \sum\_{n=-\infty}^{\infty} \delta(t - n \cdot T)
 \right ) e^{-j2 \pi f t} \text{d}t  \newline
@@ -231,15 +231,15 @@ e^{j2 \pi \frac{1}{T} n t} e^{-j2 \pi f t} \text{d}t \right )  \newline
 e^{-j2 \pi (f - \frac{n}{T}) t} \text{d}t \right )
 \overset{\text{GPI}}{=}
 \frac{1}{T} \sum\_{n=-\infty}^{\infty} \delta (f - \frac{n}{T} )
-\end{eqnarray}
+\end{eqnarray*}
 
 First we changed the order of integration and summation and then we combined the two phasors. After that we used the GPI property which results in an infinite train of delta pulses in frequency domain as denoted in the following equation and depicted in Fig. 11.
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 \sum\_{n=-\infty}^{\infty} \delta(t - n \cdot T) & \overset{\text{FTC}}{\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ} &
 \frac{1}{T} \sum\_{n=-\infty}^{\infty} \delta (f - \frac{n}{T} )
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 <div style="max-width: 800px; margin: auto">
   <figure>

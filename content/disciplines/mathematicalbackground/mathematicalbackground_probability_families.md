@@ -716,14 +716,14 @@ The discrete uniform distribution is a discrete probability distribution that mo
 </div>
 
 [^11]
-[^11]: Sum of consecutive integers: \begin{equation} \begin{split}
+[^11]: Sum of consecutive integers: \begin{equation*} \begin{split}
     \sum_{n=k}^l n
     &= \frac{1}{2} \left[ \sum_{n=k}^l n + {\color{Gray} \sum_{n=k}^l n} \right] \newline
     &= \frac{1}{2}\left[k + (k+1) + \ldots + (l-1) + l + {\color{Gray} k + (k+1) + \ldots + (l-1) + l}\right] \newline
     &= \frac{1}{2} \underbrace{\left[ (k + {\color{Gray} l}) + (k + {\color{Gray} l}) + \ldots + (k + {\color{Gray} l}) + (k + {\color{Gray} l})  \right]}_{l-k+1 \text{ terms}} \newline
     &= \frac{1}{2} (k+l)(l-k+1)
 \end{split}
-\end{equation}
+\end{equation*}
 
 
 <div class="example">

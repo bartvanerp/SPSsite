@@ -239,10 +239,10 @@ $$</li>
 $\boxed{|z| = \sqrt{z \cdot z^* }} \qquad \text{real and } \geq 0 $</li>
 <li><i>It is the easiest to use Cartesian notation for addition and subtraction, and polar notation for multiplication and division.</i></li>
 <li> Phasor representation of sinusoidal signals:
-$$ \begin{eqnarray}
+$$ \begin{eqnarray*}
 A \cos (\omega_o t +\phi) &=& \Re e \{ A e^{j(\omega_o t +\phi)} \} = \frac{A e^{j(\omega_o t +\phi)} + A e^{-j(\omega_o t +\phi)}}{2}   \newline
 A \sin (\omega_o t +\phi) &=& \Im m \{ A e^{j(\omega_o t +\phi)} \} = \frac{A e^{j(\omega_o t +\phi)} - A e^{-j(\omega_o t +\phi)}}{2 j}
-\end{eqnarray}$$</li>
+\end{eqnarray*}$$</li>
 <li> The sum of original sinusoidal signals, all with the same radian frequency $\omega_0$, results in one sinusoidal signal with the same radian frequency $\omega_0$. Amplitude and phase of this resulting signal can be found by adding the complex representation of amplitude and phase of the individual original sinusoidal signals.
 $$
 \boxed{
