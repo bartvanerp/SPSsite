@@ -29,10 +29,10 @@ In this section the new symbol $x[n] \mapsto y[n]$ will be used with the followi
 
 ## Linear systems
 When a system results into the following mappings: $x_1[n] \mapsto y_1[n]$ and $x_2[n] \mapsto y_2[n]$, then such a system is Linear if for any linear combination of input sequences $x_1[n]$ and $x_2[n]$ the system maps this linear combination to the same linear combination of output sequences $y_1[n]$ and $y_2[n]$. With scalars $\alpha$ and $\beta$, this definition can mathematically be described as follows:
-\begin{equation}
+\begin{equation*}
 \boxed{
 x[n]= \alpha x_1[n] + \beta x_2[n] \mapsto y[n]= \alpha y_1[n] + \beta y_2[n]}
-\end{equation}
+\end{equation*}
 A visualisation of this definition is depicted in Fig. 1.
 
 <div style="max-width: 800px; margin: auto">
@@ -70,10 +70,10 @@ Since $w[n] \neq y[n]$ it follows that the system $y[n]= ( x[n])^2$ is non-linea
 ## Time Invariant systems
 When a system results into the following mapping: $x[n] \mapsto y[n]$ then a system is Time Invariant
 if a delayed sequence of input samples $x[n-n_0]$ is mapped by the system to a sequence of output samples $y[n-n_0]$, which is delayed by the same amount of samples. With integer delay $n_0$, this definition can mathematically be described as follows:
-\begin{equation}
+\begin{equation*}
 \boxed{
 x[n] \mapsto y[n] \hspace{3mm} \Rightarrow \hspace{3mm} x[n-n_0] \mapsto y[n-n_0]}
-\end{equation}
+\end{equation*}
 A visualisation of this definition is depicted in Fig. 2.
 <div style="max-width: 600px; margin: auto">
   <figure>
@@ -107,11 +107,11 @@ The system $y[n]= ( x[n])^2$ is Time Invariant since $w[n]=y[n-n_0]$.
 ### Convolution sum as result of LTI
 When a system is LTI then the sequence of output samples $y[n]$ can be expressed as a convolution sum of the sequence of input samples $x[n]$ with the impulse response $h[n]$ of the LTI system, thus $y[n]=x[n] \star h[n]$. The proof of this property is as follows:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 \delta[n] \mapsto h[n] & \Rightarrow & \delta[n-k] \overset{\text{TI}}{\mapsto} h[n-k] \text{ for any } k\newline
 & \Rightarrow & x[k] \delta[n-k] \overset{\text{L}}{\mapsto} x[k] h[n-k] \text{ for any } k \newline
 & \Rightarrow & \sum\_k x[k] \delta[n-k] \overset{\text{L}}{\mapsto} y[n] = \sum\_k x[k] h[n-k] = x[n] \star h[n]
-\end{eqnarray}
+\end{eqnarray*}
 $$
 Note that in general for an LTI system the summation index $k$ of the convolution sum runs from $k=-\infty$ to $k=+\infty$, while for an FIR filter this range is automatically limited because of the finite length of the impulse response.
 
@@ -128,21 +128,21 @@ y[n]=h[n] \star x[n] = x[n] \star h[n]}
 $$
 <i> Proof:</i>
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 y[n] &=& h[n] \star x[n] = \sum\_{k = - \infty}^{\infty} h[k] x[n-k] \newline
 &\overset{p=n-k}{=}& \sum\_{p = +\infty}^{-\infty} h[n-p] x[p]= \sum\_{p = - \infty}^{\infty} x[p] h[n-p]= x[n] \star h[n]
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 Note that for an FIR filter the range of the convolution sum is automatically limited by the finite length of the impulse response.
 Thus in case of an FIR filter the commutative property of the convolution sum operator results on the one hand into:
-\begin{equation}
+\begin{equation*}
 y[n] = h[n] \star x[n] = \sum\_{k=-\infty}^{\infty} h[k] x[n-k] \overset{\text{FIR}}{=}\sum\_{k=0}^{M-1} h[k] x[n-k]
-\end{equation}
+\end{equation*}
 where we used the fact that $h[n]=0$ for $n<0$ and $n>M$. On the other hand we have:
-\begin{equation}
+\begin{equation*}
 y[n]= x[n] \star h[n] = \sum\_{k=-\infty}^{\infty} x[k] h[n-k] \overset{\text{FIR}}{=} \sum\_{k=n-(M-1)}^{n} x[k] h[n-k]
-\end{equation}
+\end{equation*}
 where we used the finite length of an FIR as follows:
 $$
 h[n-k] =0 \text{ for }

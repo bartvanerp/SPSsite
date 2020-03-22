@@ -191,11 +191,11 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
 <b><u> Relationship impulse response and frequency response:</u></b>
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 \text{Time domain} & \circ  \hspace{-2.3mm} - \hspace{-1.1mm}  \circ & \text{Frequency domain} \newline
 h[n]= \sum\_{k=0}^{M-1} h[k] \delta[n-k] & \circ  \hspace{-2.3mm} - \hspace{-1.1mm}  \circ &
 H(e^{j{\theta}})= \sum\_{k=0}^{M-1} h[k] e^{-j{\theta k}}   
-\end{eqnarray}
+\end{eqnarray*}
 }
 $$
 
@@ -216,10 +216,10 @@ $$
 <b><u> Properties frequency response </u></b>
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 \text{Periodic } & : & H(e^{j\theta})  =  H(e^{j(\theta + l \cdot 2 \pi)}) \newline
 \text{Complex conjugated } & : & H(e^{-j\theta})  = (H(e^{j\theta}))^\ast
-\end{eqnarray}
+\end{eqnarray*}
 }
 $$
 

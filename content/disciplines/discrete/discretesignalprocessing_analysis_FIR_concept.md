@@ -110,10 +110,10 @@ $$
 Thus we can split the result as a product of a complex quantity (in blue) multiplied with the phasor description of the input signal (in red). The complex quantity (in blue) only depends on the FIR impulse response $h[n]$ and the phasor frequency $\theta_1$ of the input signal.
 Because of the fact that we can use any frequency for the frequency $\theta_1$, we can generalize this complex quantity as a function of $\theta$ which leads to the following definition:
 
-\begin{equation}
+\begin{equation*}
 \textbf{Frequency Response of FIR:} \hspace{6mm}
 \boxed{H(e^{j\theta})= \sum_{k=0}^{M-1} h[k] e^{-j\theta k}}
-\end{equation}
+\end{equation*}
 Here we denote the (discrete) impulse response with a small letter $h$, square brackets $[\cdot]$ and it is a function of discrete time function variable $n$. The frequency response is denoted by a capital letter $H$, round brackets $(\cdot)$ and it is a function of the continuous frequency variable $\theta$.
 In fact we could denote the frequency response as $H(\theta)$. The reason that it is denoted as $H(e^{j\theta})$ will be explained in one of the following sections.
 
@@ -139,9 +139,9 @@ First calculate the Frequency response $H(e^{j\theta})$ of the FIR filter with i
 <button class="collapsible">Show solution</button>
 <div class="content">
 With the given impulse response $h[n]$ we obtain from the definition of the frequency response the following expression:
-\begin{equation}
+\begin{equation*}
 H(e^{j\theta})= 1 \cdot e^{-j0 \cdot \theta} + 2 \cdot e^{-j\color{red}{1} \cdot \theta} + 1 \cdot e^{-j\color{blue}{2} \cdot \theta}  = 1 +2 e^{-j\theta} + e^{-j2 \theta}.
-\end{equation}
+\end{equation*}
 With the input signal $x[n]= \color{red}{e^{j(\frac{\pi}{3} n + \frac{\pi}{4})}}$ the resulting output signal can be found as follows:
 \begin{eqnarray*}
 y[n]&=& x[n] + 2 x[n-1] + x[n-2] \\

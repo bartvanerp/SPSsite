@@ -30,17 +30,17 @@ The purpose of this subsection is to derive a Fourier transform, the DFT, that c
 
 In a previous module we have seen that the FTC calculates the frequency distribution of a continuous time signal $x(t)$. In other words the FTC calculates for any frequency $\omega$, the frequency content of the signal $x(t)$ at that particular frequency $\omega$.
 The FTC and its inverse, are mathematically defined as:
-\begin{eqnarray}
+\begin{eqnarray*}
 X(f)=\int\_{-\infty}^{\infty} x(t) e^{-j2 \pi f t}  \text{d} t
 & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
 x(t) = \int\_{-\infty}^{\infty} X(f) e^{j2 \pi f t} \text{d} f
-\end{eqnarray}
+\end{eqnarray*}
 with absolute frequency $f$ in Hertz, or as a function of $\omega=2 \pi f$ in radians per second:
-\begin{eqnarray}
+\begin{eqnarray*}
 X(\omega) = \int\_{-\infty}^{\infty} x(t) e^{-j\omega t}  \text{d} t
 & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
 x(t) = \frac{1}{2\pi} \int\_{-\infty}^{\infty} X(\omega) e^{j\omega t} \text{d} \omega
-\end{eqnarray}
+\end{eqnarray*}
 The top figure of Fig. 1 shows an example of such a frequency distribution of $x(t)$, from which the maximum frequency is denoted by $\omega_m$. From the mathematical definition of the FTC it is obvious that we can't evaluate this equation on a computer, since both time- and frequency- variables are continuous.
 Because both time and frequency variables are continuous, we cannot calculate the FTC as such on a computer. In the following steps we will convert both continuous variables into discrete variables. During these steps we will see that the following general rule of thumb will play a very important role:
 
@@ -78,11 +78,11 @@ As a result of this sampling process we can apply the general rule of thumb, whi
 This implies that the repetitions are inversely related to the inter sample distance $T_s$. In other words when increasing the inter sample distance $T_s$, thus taking less samples per second, the repetitions in frequency domain come closer to each other. This behavior is described by the sampling theorem, which states that in order to prevent the repeated frequency content from overlapping, we have to choose the sampling frequency $f_s=1/T_s$ in such a way that the maximum frequency $\omega_m < \pi/ T_s$. In case this is not true the repeated spectra will overlap which is called aliasing. Furthermore, because of the repetitions, we only need one of the repeated intervals. Typically we choose this interval in the range $- \pi/T_s$ until $+\pi/T_s$ and this interval is denoted as the Fundamental Interval, abbreviated with FI.
 
 In many cases, when working on a computer, we do not need explicit knowledge of the inter sample distance $T_s$. In time domain we simply denote the samples by $x[n]$, in which $n$ is an integer variable which can range from $-\infty$ until $+ \infty$. In frequency domain this results in a normalization of the absolute frequency $f$ with the sampling frequency $f_s$. We  denote the resulting, so called relative frequency, by the continuous variable $\theta$ which equals $2 \pi f/f_s$. This step is depicted in the third figure of Fig. 1. One period of the relative frequency content has a width of $2\pi$ and typically the FI is chosen in the range $-\pi$ until $+\pi$. Furthermore it follows from the sampling theorem that in order not to obtain overlapped spectra or aliasing, we have to choose the sampling frequency $f_s > 2 f_m$. This follows from the figure since the frequency content does not overlap when $f_m < f_s/2$. The Fourier transformation that we obtain in such a way is the so called Fourier Transform for Discrete-time signals (abbreviated as FTD). The FTD and its inverse are mathematically defined as:
-\begin{eqnarray}
+\begin{eqnarray*}
 X(e^{j\theta})=\sum\_{n=-\infty}^{\infty} x[n] e^{-jn \theta}
 & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
 x[n] = \frac{1}{2\pi} \int\_{-\pi}^{\pi} X(e^{j\theta}) e^{jn \theta} \text{d} \theta
-\end{eqnarray}
+\end{eqnarray*}
 Because $\theta$ is a continuous variable, we cannot calculate the FTD as such with a computer. Thus we need to convert this variable also into a discrete variable, which leads to the following step.
 
 In order to uniquely describe the function $X(e^{j\theta})$ we only need one period of width $2\pi$  Thus we can 'sample' the continuous frequency variable $\theta$ at $N$ equidistant positions with an inter frequency 'sampling' distance of $\frac{2\pi}{N}$, in which $N$ is an integer number. This step is depicted at the right hand side of the bottom figure of Fig. 1. Because of this sampling procedure we can apply again the general rule of thumb which leads to the following:

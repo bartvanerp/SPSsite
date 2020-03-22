@@ -46,10 +46,10 @@ In the FTD module we have seen that the linear convolution $y[n]=x[n] \star h [n
   </figure>
 </div>
 Fig. 2 shows an example of the linear convolution of $x[n]$ and $h[n]$, which are defined as follows:
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n]&=&\delta[n]+ \delta[n-1] + \delta[n-2] + \frac{1}{2} \delta[n-3] \\
 h[n]&=&\delta[n]+ \frac{3}{4} \delta[n-1] + \frac{1}{2}\delta[n-2] + \frac{1}{4} \delta[n-3]
-\end{eqnarray}
+\end{eqnarray*}
 The result $y[n]=x[n] \star h[n]$ has finite duration of $N=N_1 + N_2 -1=7$ samples:
 $$
 y[n]=\delta[n]+ \frac{7}{4} \delta[n-1] + \frac{9}{4}\delta[n-2] + 2 \delta[n-3]+
@@ -95,37 +95,37 @@ In one of the following sections we will show that the DFT can be implemented ve
 <h4> Example </h4>
 <hr>
 Given two finite duration signals:
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n] =\delta[n] + \delta[n-1] & \text{and} & h[n]=\delta[n-1] + \delta[n-2]
-\end{eqnarray}
+\end{eqnarray*}
 Calculate the linear convolution result $y[n]= x[n] \star h[n]$ and show how you can obtain this result by using a circular convolution of the periodic extended signals.
 Finally show that this result can be achieved via the DFT domain.
 <button class="collapsible">Show solution</button>
 <div class="content">
 The linear convolution result is $y[n] = \delta[n-1] + 2 \delta[n-2] + \delta[n-3]$.
 The 3-point circular convolution result of the periodic extended signals
-\begin{eqnarray}
+\begin{eqnarray*}
 x_p[n] &=& \delta[n \text{mod}(3)] + \delta[(n-1)\text{mod}(3)] \\
 h_p[n] &=& \delta[(n-1) \text{mod}(3)] + \delta[(n-2)\text{mod}(3)]
-\end{eqnarray}
+\end{eqnarray*}
 results in $y_p[n]= \delta[n \text{mod}(3)]+\delta[(n-1) \text{mod}(3)] + 2 \delta[(n-2)\text{mod}(3)]$, which is not the same as the linear convolution result.
 Because of the fact that the length of the linear convolution result $y[n]$ is 4 samples long, we need to pad the periodic extended signals up to length 4, thus:
-\begin{eqnarray}
+\begin{eqnarray*}
 x_p[n] &=& \delta[n \text{mod}(4)] + \delta[(n-1)\text{mod}(4)] \\
 h_p[n] &=& \delta[(n-1) \text{mod}(4)] + \delta[(n-2)\text{mod}(4)]
-\end{eqnarray}
+\end{eqnarray*}
 The resulting circular convolution
 $$
 y_p[n] = \delta[(n-1) \text{mod}(4)] + 2 \delta[(n-2)\text{mod}(4)] + \delta[(n-3) \text{mod}(4)]
 $$
 which is, within the FP, the same result as the linear convolution $y[n]$.
 Via the 4-point DFT we can obtain the same result. For simplicity reasons we calculate the 4-point DFT and IDFT results for indices within the FI and FP respectively, so we can skip the modulo notation:
-\begin{eqnarray}
+\begin{eqnarray*}
 X_p[k] &=& 1 + e^{-j\frac{2\pi}{4} k} \\
 H_p[k] &=& e^{-j\frac{2\pi}{4} k} + e^{-j\frac{2\pi}{4} 2k}\\
 Y_p[k] &=& X_p[k] \cdot H_p[k] = e^{-j\frac{2\pi}{4} k} + 2e^{-j\frac{2\pi}{4} 2k} + e^{-j\frac{2\pi}{4} 3k} \\
 y_p[k] &=& IDFT \{ Y_p[k] \} = \delta[n-1] + 2 \delta[n-2] + \delta[n-3]
-\end{eqnarray}
+\end{eqnarray*}
 </div>
 </div>
 

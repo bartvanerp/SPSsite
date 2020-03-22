@@ -119,11 +119,11 @@ From the DPP property it follows that the FTD of the first phasor results in $2\
 \overset{\text{DPP}}{=} 2 \pi \delta(\theta + \theta_0)
 \end{eqnarray*}
 From this it follows that the FTD of the sinusoidal function with frequency $\theta = \theta_0$  results in two delta functions at frequencies $\theta = \pm \theta_0$
-\begin{eqnarray}
+\begin{eqnarray*}
 \Rightarrow \text{ } \mathcal{F} \{ \cos(n \theta_0) \} &=&
 \mathcal{F} \left\{ \frac{1}{2} e^{jn \theta_0} \right\} + \mathcal{F} \left\{ \frac{1}{2} e^{-jn \theta_0} \right\} \nonumber \\
 &=& \pi \delta(\theta - \theta_0) + \pi \delta(\theta + \theta_0)
-\end{eqnarray}
+\end{eqnarray*}
 which is represented in Fig. 3.</div>
 </div>
 
@@ -147,12 +147,12 @@ In this example we will calculate the FTD $X(e^{j\theta})$ of a discrete time ex
 <button class="collapsible">Show solution</button>
 <div class="content">
 The FTD can be calculated as given in the following equations:
-\begin{eqnarray}
+\begin{eqnarray*}
 X(e^{j\theta}) &=& \sum_{n=-\infty}^{\infty} x[n] e^{-jn \theta}
 = \sum_{n=-\infty}^{\infty} a^n {\color{red}u[n]} e^{-jn \theta}= \sum_{n={\color{red}0}}^{\infty} a^n  e^{-jn \theta} \nonumber \\
 &=& \sum_{n=0}^{\infty} \left( a e^{-j\theta} \right) ^n
 = \frac{1}{1 - a e^{-j\theta}} \hspace{3mm} |a| < 1
-\end{eqnarray}
+\end{eqnarray*}
 Because of the unit step function $u[n]$, the summation starts at index $n=0$.  Combining the parameter $a$ and the exponent results in the argument of a summation from which the running index $n$ ranges from zero to infinity. The argument of the summation is taken to a power of $n$. This is a well known geometric series which writes as  one divided by 1 minus the
 argument of the summation.  The geometric series do only converge when the absolute value of the argument is smaller than 1. Otherwise the geometric series will diverge. Because of the fact that the amplitude of the complex exponent equals one, this implies that the absolute value of the parameter $a$ has to be smaller than 1.
 A plot of a discrete time exponential decaying function $x[n]=a^n u[n]$, with $u[n]$ the unit step function and positive real parameter $a$ ($0 < a < 1$) is depicted at the left-hand side of the figure below.
@@ -220,11 +220,11 @@ $$
 x[n] =\frac{1}{2 \pi j n } \int_{-\theta_c}^{\theta_c} e^{jn\theta} \text{d} (j n \theta)
 $$
 Using the boundaries and  combining the two phasors in the numerator as a sinusoidal, results in an expression  which is a so called Sinc-function:
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n] &=& \frac{1}{2 \pi j n} e^{jn\theta}\mid_{- \theta_c}^{\theta_c}
 = \frac{1}{2 \pi j n} \left( e^{jn\theta_c} - e^{-jn\theta_c} \right)
 = \frac{\theta_c}{\pi} \cdot \frac{\sin(\theta_c n)}{\theta_c n}
-\end{eqnarray}
+\end{eqnarray*}
 Such a Sinc-function is infinite long, which is caused by the fact that the frequency function $X(e^{j\theta})$ has infinite steep drops for $\theta= \pm \theta_c$.
 For the case $\theta_c=\frac{\pi}{2}$ the IFTD result is depicted at the left-hand side of Fig. 4. For this case the samples are zero for all even values of the time index, except for $n=0$.
 </div>

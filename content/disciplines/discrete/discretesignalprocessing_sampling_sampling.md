@@ -157,11 +157,11 @@ $$ x[n] = \left ( \frac{A}{2} e^{j\phi} \right ) \cdot e^{j\theta n} + \left ( \
 By using the fact that the number $1$ can be written as a complex exponent as
 $$ 1 = 1^n = \left( e^{j2 \pi} \right)^n = \left( e^{-j2 \pi} \right)^n = e^{\pm j2 \pi n} \qquad \mbox{with integer } n ,$$
 we can change the mathematical representation of the sequence of samples $x[n]$ as
-$$\begin{eqnarray}
+$$\begin{eqnarray*}
 x[n] &=& \left( \frac{A}{2} e^{j\phi} \right) \cdot e^{j\theta n} \cdot 1 + \left(\frac{A}{2} e^{-j\phi} \right ) \cdot e^{-j\theta n} \cdot 1  \newline
 &=& \left( \frac{A}{2} e^{j\phi} \right) \cdot e^{j\theta n} \cdot e^{j2\pi n} + \left( \frac{A}{2} e^{-j\phi} \right) \cdot e^{-j\theta n} \cdot e^{-j2 \pi n} \newline
 &=& \left( \frac{A}{2} e^{j\phi} \right) \cdot e^{j(\theta + 2 \pi) n} + \left( \frac{A}{2} e^{-j\phi} \right) \cdot e^{-j(\theta + 2 \pi) n}
-\end{eqnarray}$$
+\end{eqnarray*}$$
 From this equation it follows that the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">spectral representation</a> of $x[n]$ consists again of the same two bars, but now at the relative frequencies $\theta + 2 \pi$ and $-(\theta + 2 \pi)$.
 So we have found two different ways to represent the spectral information of the same sequence of samples $x[n]$. Moreover we can find an infinite amount of different <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">spectral representations</a>, just by adding or subtraction an integer times $2\pi$ to the relative frequency $\theta$. Thus the same relative <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">spectral content</a> is repeated every $2\pi$.
 
@@ -184,12 +184,12 @@ $$
 x[n] = e^{j{\color{red}{(2.4 \pi n + \frac{\pi}{4})}}} + e^{-j{\color{blue}{(2.4 \pi n + \frac{\pi}{4})}}} \mbox{ } \left( = 2\cos \left(2.4 \pi n + \frac{\pi}{4} \right) \right)
 $$
 $0.4 \pi - 2 \pi = - 1.6 \pi$
-\begin{eqnarray}
+\begin{eqnarray*}
 \Rightarrow \mbox{ }
 x[n] &=& e^{j{\color{red}{(-1.6 \pi n + \frac{\pi}{4})}}} + e^{-j{\color{blue}{(-1.6 \pi n + \frac{\pi}{4})}}} \newline
 &=& e^{j{\color{blue}{(1.6 \pi n - \frac{\pi}{4})}}} + e^{-j{\color{red}{(1.6 \pi n - \frac{\pi}{4})}}}
 \mbox{ } \left( = 2\cos \left(1.6 \pi n - \frac{\pi}{4}\right) \right)
-\end{eqnarray}
+\end{eqnarray*}
 Note that for this last case the phase has changed from sign.
 All these possibilities are depicted in the Figure below.
 From this Figure it follows that the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">spectral representation</a> of $x[n]$ is indeed repeated every $2\pi$ outside the period $-\pi < \theta < \pi$.
@@ -219,12 +219,12 @@ In this example we convert two different continuous-time signals $x_1(t)=\cos (4
 <button class="collapsible">Show solution</button>
 <div class="content">
 The converted signals are as follows:
-\begin{eqnarray}
+\begin{eqnarray*}
 x_1[n] &=& \cos \left( 400 \pi \cdot \frac{1}{1000} n \right)\newline
  &=& \cos (0.4 \pi n ) = {\color{blue} {\ldots, 1, 0.3, -0.8, -0.8, 0.3, 1, \ldots }}\newline
 x_2[n] &=& \cos \left( 2400 \pi \cdot \frac{1}{1000} n \right) \newline
 &=& \cos (2.4 \pi n) = {\color{blue}{\ldots, 1, 0.3, -0.8, -0.8, 0.3, 1, \ldots }}
-\end{eqnarray}
+\end{eqnarray*}
 Thus the samples which result from the C-to-D conversion of the two different continuous-time signals $x_1(t)$ and ${\color{red}{x_2(t)}}$ result in the same sequence of samples $x_1[n]=x_2[n]=x[n]={\color{blue}{\ldots, 1, 0.3, -0.8, -0.8, 0.3, 1, \ldots }}$.
 <br>
 The Figure below shows a plot with two periods of the two different continuous-time $x_1(t)$ (in black) and ${\color{red}{x_2(t)}}$ (in red) and the resulting discrete-time signal samples $x[n]={\color{blue}{\ldots, 1, 0.3, -0.8, -0.8, 0.3, 1, \ldots }}$ (in blue).
@@ -286,12 +286,12 @@ The spectral components of the continuous-time domain signal $x(t)$ are depicted
 This Figure also shows that frequencies smaller than 300 [Hz] map into the FI.
 So the result of the C-to-D conversion of $x_1(t)$ is as follows:
 $x_1(t)= 4 \cos\left(400 \pi t + \frac{\pi}{4}\right)$ $\Rightarrow$
-\begin{eqnarray}
+\begin{eqnarray*}
 x_1[n]&=& 4 \cos \left(\frac{2 \pi}{3}n + \frac{\pi}{4}\right) = \left( 2 e^{j\frac{\pi}{4}} \right ) e^{j\frac{2 \pi}{3}n} + \left( 2 e^{-j\frac{\pi}{4}} \right) e^{-j\frac{2 \pi}{3}n}
-\end{eqnarray}
+\end{eqnarray*}
 Furthermore the  result of the C-to-D conversion of $x_2(t)$ is as follows:
 $x_2(t)= 2 \sin \left(1000 \pi t - \frac{\pi}{3}\right)$ $\Rightarrow$
-\begin{eqnarray}
+\begin{eqnarray*}
 x_2[n]&=& 2 \sin\left(\frac{5 \pi}{3} n - \frac{\pi}{3} \right) \newline
 &=& \left( {\color{red}{\frac{1}{j} e^{-j\frac{\pi}{3}}} }\right) e^{j\frac{5 \pi}{3} n}  + \left( {\color{blue}{\frac{-1}{j} e^{j\frac{\pi}{3}}}} \right) e^{-j\frac{5 \pi}{3} n} \newline
 &=& \left( {\color{red}{\frac{1}{j} e^{-j\frac{\pi}{3}}}} \right ) e^{-j\frac{\pi}{3} n}  +
@@ -300,7 +300,7 @@ x_2[n]&=& 2 \sin\left(\frac{5 \pi}{3} n - \frac{\pi}{3} \right) \newline
 \left({\color{blue}{\frac{1}{j} e^{j\frac{\pi}{3}}}} \right) e^{j\frac{\pi}{3} n} +
 \left( {\color{red}{\frac{-1}{j} e^{-j\frac{\pi}{3}}}} \right) e^{-j\frac{\pi}{3} n} \right) \newline
 &=& - 2 \sin\left(\frac{\pi}{3} n + \frac{\pi}{3} \right)
-\end{eqnarray}
+\end{eqnarray*}
 Thus the frequency component of $x_2(t)$ is converted outside the FI into relative frequency $\frac{5 \pi}{3}$. When mapping this component back inside the FI it results in the relative frequency $\frac{\pi}{3}$ and the phase changes from sign.
 The lower part of the Figure below shows the spectral components.
 The components outside the FI, which are periodic components, are denoted in dashed lines.

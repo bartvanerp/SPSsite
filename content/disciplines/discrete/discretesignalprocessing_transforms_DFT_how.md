@@ -60,12 +60,12 @@ the periodic extended notations as follows:
 
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 \text{DFT: } X_p[k] = \sum\_{n=0}^{N-1} x_p[n] e^{-j\frac{2 \pi}{N} k n}
 \hspace{3mm} {\color{red}\bf \forall k}
 \qquad
 \text{IDFT: } x_p[n] = \frac{1}{N} \sum\_{k=0}^{N-1} X_p[k] e^{j\frac{2 \pi}{N} k n} \hspace{3mm} {\color{red}\bf \forall n}
-\end{eqnarray}
+\end{eqnarray*}
 }
 $$
 In this definition the indices $n$ and $k$ range from $-\infty$ to $+\infty$. However we only need one period which is typically chosen in the index range from $0$ until $N-1$. In time domain this range of $N$ samples is the FP, representing the original $N$ signal samples of $x[n]$ which have been used for the DFT operation. In frequency domain this range of $N$ samples is the FI, which represents relative frequencies $\theta$ in the range $0$ until $2\pi$.
@@ -79,7 +79,7 @@ Give an expression for the 4-point periodic extended signal $x_p[n]$ of $x[n]=\d
 <button class="collapsible">Show solution</button>
 <div class="content">
 The periodic extended signal writes as $x_p[n]= \delta[(n-1)\text{mod}(4)]$. Some values are:
-\begin{eqnarray}
+\begin{eqnarray*}
 x_p[-4]&=& \delta[(-5)\text{mod}(4)]=0 \text{ ; }
 x_p[-3]= \delta[(-4)\text{mod}(4)]=1 \\
 x_p[-2]&=& \delta[(-3)\text{mod}(4)]=0 \text{ ; }
@@ -92,17 +92,17 @@ x_p[4]&=& \delta[(3)\text{mod}(4)]=0 \text{ ; }
 x_p[5]= \delta[(4)\text{mod}(4)]=1 \\
 x_p[6]&=& \delta[(5)\text{mod}(4)]=0 \text{ ; }
 x_p[7]= \delta[(6)\text{mod}(4)]=0
-\end{eqnarray}
+\end{eqnarray*}
 The 4-point DFT writes as:
 $$
 X_p[k] = \sum_{n=0}^{3} x_p[n] e^{-j\frac{2 \pi}{4} k n}= e^{-j\frac{2 \pi}{4} k} = (-j)^k
 $$
 Some values are:
-\begin{eqnarray}
+\begin{eqnarray*}
 & X_p[-4]= 1 \text{ ; } X_p[-3]= -j \text{ ; } X_p[-2] = -1 \text{ ; } X_p[-1]= j & \\
 & X_p[0]= 1 \text{ ; } X_p[1]= -j \text{ ; } X_p[2] = -1 \text{ ; } X_p[3]= j & \\
 & X_p[4]= 1 \text{ ; } X_p[5]= -j \text{ ; } X_p[6] = -1 \text{ ; } X_p[7]= j &
-\end{eqnarray}
+\end{eqnarray*}
 </div>
 </div>
 
@@ -115,12 +115,12 @@ $$
 which adds ,for each index $k$, $N$ terms of a discrete time phasor with relative frequency $\theta = k \cdot \frac{2\pi}{N}$.
 For this evaluation we shown that $S[k]$ is periodic with period $N$. With $\lambda$ a positive or negative integer this can be proven as follows:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 S[k + \lambda \cdot N ] &=& \sum\_{n=0}^{N-1} \left \\{ e^{j\frac{2 \pi}{N} (k + \lambda \cdot N)} \right \\} ^n
 = \sum\_{n=0}^{N-1} \left \\{ e^{j\frac{2 \pi}{N} k} \cdot  e^{j\frac{2 \pi}{N} \lambda \cdot N} \right \\} ^n \newline
 &=& \left \\{ e^{j\frac{2 \pi}{N} k} \cdot  e^{j2 \pi \lambda } \right \\} ^n =
 \left \\{ e^{j\frac{2 \pi}{N} k} \cdot  1  \right \\} ^n = S[k]
-\end{eqnarray}
+\end{eqnarray*}
 $$
 Because of this periodic behavior, we only need to evaluate $S[k]$ for one period, e.g. for $k=0, 1, \cdots , N-1$. For $k=0$ the result is:
 $$
@@ -132,21 +132,21 @@ $$
 $$
 which results into the following:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 S[k]|\_{k\neq0}&=& \sum\_{n=0}^{N-1} \\{ e^{j\frac{2 \pi}{N} k} \\} ^n =
 \frac{1-e^{j\frac{2 \pi}{N} k N}}{1-e^{j\frac{2 \pi}{N} k}}
 = \frac{1-e^{j2 \pi k}}{1-e^{j\frac{2 \pi}{N} k}} =
 \frac{1-1}{1-e^{j\frac{2 \pi}{N} k}}=0
-\end{eqnarray}
+\end{eqnarray*}
 $$
 This leads to the following basic DFT summation or orthogonality property:
 
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 S[k]= \sum\_{n=0}^{{\color{red}N}-1} \left \\{ W\_{{\color{red}N}}^k \right \\} ^n =
 \sum\_{n=0}^{{\color{red}N}-1} \left \\{ \text{e}^{j \frac{2\pi}{{\color{red}N}} k } \right \\} ^n = {\color{red}N}  \delta [{\color{blue} k} \text{ mod}({\color{red}N})]
-\end{eqnarray}
+\end{eqnarray*}
 }
 $$
 
@@ -159,7 +159,7 @@ Thus, the summation $S[k]$ is always equal to zero, except for the cases that th
 Calculate the values of $S[k]$ for $N=4$ and $k=-1,0,1,2,3,4$ explicitly.
 <button class="collapsible">Show solution</button>
 <div class="content">
-\begin{eqnarray}
+\begin{eqnarray*}
 S[-1] &=& \sum_{n=0}^{3} \left (e^{j\frac{\pi}{2} \cdot -1}\right )^n = \sum_{n=0}^{3} \left (e^{-j\frac{\pi}{2} \cdot 1}\right )^n = 1 - j - 1 +j =0 \\
 S[0] &=& \sum_{n=0}^{3} \left (e^{j\frac{\pi}{2} \cdot 0}\right )^n =
 \sum_{n=0}^{3} \left (1 \right )^n = 1 + 1 + 1 + 1 = 4 \\
@@ -169,7 +169,7 @@ S[3] &=& \sum_{n=0}^{3} \left (e^{j\frac{\pi}{2} \cdot 3}\right )^n = 1 - j -1 +
 S[4] &=& \sum_{n=0}^{3} \left (e^{j\frac{\pi}{2} \cdot 4}\right )^n =
 \sum_{n=0}^{3} \left (e^{j2 \pi }\right )^n =
 \sum_{n=0}^{3} \left (1 \right )^n = 1 + 1 + 1 + 1 = 4
-\end{eqnarray}
+\end{eqnarray*}
 </div>
 </div>
 
@@ -179,14 +179,14 @@ S[4] &=& \sum_{n=0}^{3} \left (e^{j\frac{\pi}{2} \cdot 4}\right )^n =
 Give a mathematical expression in terms of a delta pulse of $A[k]=\sum_{n=0}^{7} e^{j\frac{2\pi}{4} \cdot n \cdot k}$ and calculate $A[k]$ for for $k=-8,-7, \cdots, 14, 15$.
 <button class="collapsible">Show solution</button>
 <div class="content">
-\begin{eqnarray}
+\begin{eqnarray*}
 A[k]&=\sum_{n=0}^{7} e^{j\frac{2\pi}{4} \cdot n \cdot k}  \\
 &= \sum_{n=0}^{7} \left\{ e^{j\frac{2\pi}{8} 2k} \right\}^n \\
 &= 8 \cdot \delta[2k \text{mod}(8)]
-\end{eqnarray}
+\end{eqnarray*}
 Explicit evaluation of $A[k]$ are as follows:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 &
 A[-8]=8 \text{ ; }
 A[-7]=0 \text{ ; }
@@ -223,7 +223,7 @@ A[13]=0 \text{ ; }
 A[14]=0 \text{ ; }
 A[15]=0 \text{ ; }
 &
-\end{eqnarray}
+\end{eqnarray*}
 $$
 From these values it follows that we can write the result as follows:
 $A[k] = 8 \delta[k \text{mod}(4)]$.
@@ -242,12 +242,12 @@ X[k] = \sum\_{n=0}^{3} x[n] e^{-j\frac{2\pi}{4} k n}
 $$
 By using Euler, we can split the cosine into two discrete-time phasors, split the summation into two separate summations and combine in each of these summations the complex exponents:
 
-\begin{eqnarray}
+\begin{eqnarray*}
 X[k]&=& \sum\_{n=0}^{3} \frac{1}{2} \cdot \left ( e^{j\frac{\pi}{2} n} +  e^{-j\frac{\pi}{2} n} \right ) e^{-j\frac{\pi}{2} k n} \newline
 &=& \frac{1}{2} \sum\_{n=0}^{3} \left ( e^{j\frac{\pi}{2} n}  \right ) e^{-j\frac{\pi}{2} k n} +
 \frac{1}{2} \sum\_{n=0}^{3} \left ( e^{-j\frac{\pi}{2} n}  \right ) e^{-j\frac{\pi}{2} k n} \newline
 &=& \frac{1}{2} \sum\_{n=0}^{3} e^{-j\frac{\pi}{2} (k-1) n} + \frac{1}{2} \sum\_{n=0}^{3} e^{-j\frac{\pi}{2} (k+1) n}
-\end{eqnarray}
+\end{eqnarray*}
 
 Now we can use for each of these individual summations the previous described basic DFT summation property. The first summation will always result into zero except for the case when the DFT frequency index $k-1$ is a 4-fold, thus for $k=1$ or $k=5$ or $k=-3$ etc. Mathematically this can be described by a delta function from which the index contains a modulo-4 operation as given in the first part of the following result:
 $$
@@ -278,7 +278,7 @@ $$
 <button class="collapsible">Show solution</button>
 <div class="content">
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 x_p[n] &=& \frac{1}{16} \sum_{k=0}^{15} \left \{ 2 \delta[(k-1) \text{mod}(16)] + \delta[(k-3) \text{mod}(16)] + \right .\\
 & & \left . + \delta[(k-13) \text{mod}(16)] + 2 \delta[(k-15) \text{mod}(16)] \right \} e^{j\frac{2\pi}{16} k n}\\
 &=& \frac{1}{16} \left \{
@@ -287,7 +287,7 @@ x_p[n] &=& \frac{1}{16} \sum_{k=0}^{15} \left \{ 2 \delta[(k-1) \text{mod}(16)] 
 2 e^{j\frac{\pi}{8} n} + e^{j\frac{\pi}{8} 3n} + e^{-j\frac{\pi}{8} 3n} +2 e^{-j\frac{\pi}{8} n} \right \} \\
 &=& \frac{1}{16} \left \{ 4 \cos (\frac{\pi}{8} n) + 2 \cos (\frac{\pi}{8} 3n)
 \right \} = \frac{1}{4} \cos (\frac{\pi}{8} n) + \frac{1}{8} \cos (\frac{3\pi}{8} n)
-\end{eqnarray}
+\end{eqnarray*}
 $$
 </div>
 </div>

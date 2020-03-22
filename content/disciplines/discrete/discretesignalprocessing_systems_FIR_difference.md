@@ -246,7 +246,7 @@ which is also depicted in the figure below.
 
 From the definition of the impulse response it follows that the impulse response $h[n]$ of an FIR filter, from which the realization scheme is depicted in Fig. 3, has the following weights:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 \vdots & &  \newline
 y[-1]=h[-1] &=& 0 \newline
 y[0]=h[0] &=& b\_0 \newline
@@ -254,7 +254,7 @@ y[1]=h[1] &=& b\_1 \newline
 \vdots & &  \newline
 y[M-1]=h[M-1] &=& b\_{M-1} \newline
 \vdots & &
-\end{eqnarray}
+\end{eqnarray*}
 $$
 Thus the impulse response $h[n]$ of an FIR filter equals:
 

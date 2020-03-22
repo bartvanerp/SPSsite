@@ -20,7 +20,7 @@ type = "docs"  # Do not modify.
 
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 X(e^{j\theta})
 \overset{\mathcal{F}\left\\{x[n]\right\\}}{=\\! =}
 \sum\_{n=- \infty}^{\infty} x[n] e^{-jn\theta}
@@ -28,7 +28,7 @@ X(e^{j\theta})
 x[n]
 \overset{\mathcal{F}^{-1}\\{X(e^{j\theta})\\}}{=\\! =\\! =\\! =\\! =\\!}
 \frac{1}{2 \pi} \int\_{-\pi}^{\pi} X(e^{j\theta}) e^{jn\theta} \mathrm{d} \theta
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 
 <b><u> Main differences with continuous-time Fourier transforms: </u></b>
@@ -83,7 +83,7 @@ $$
 
 <b><u> Most important FTD properties:</u></b>
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 x^\ast[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & X^\ast(e^{-j\theta}) \newline
 x[-n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & X(e^{-j\theta})\newline
 x[n-n_0] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & e^{-jn_0 \theta} \cdot X(e^{j\theta})\newline
@@ -91,5 +91,5 @@ e^{jn \theta_0} \cdot x[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & X
 x[n] \star y[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & X(e^{j\theta}) \cdot Y(e^{j\theta})\newline
 x[n] \cdot y[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & X(e^{j\theta}) \star Y(e^{j\theta}) \newline
 \sum\_{n=-\infty}^{\infty} |x[n]|^2 &=& \frac{1}{2 \pi} \int\_{\theta = - \pi}^{\pi} |X(e^{j\theta}) |^2 \mathrm{d} \theta
-\end{eqnarray}
+\end{eqnarray*}
 $$

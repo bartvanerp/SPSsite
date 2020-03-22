@@ -52,16 +52,16 @@ $$
 
 which results into a symmetric magnitude and an anti-symmetric phase response:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 |X(e^{j\theta})|= |X(e^{-j\theta})| & \quad : \quad & \textbf{Magnitude response symmetric} \newline
 \angle \{ X(e^{j\theta})\}=- \angle \{ X(e^{-j\theta})\}  & \quad : \quad & \textbf{Phase response anti-symmetric}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 This special property can be shown by the following simple example in which we calculate the FTD of a delta pulse which is shifted over two samples:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n] = \delta[n-2] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & X(e^{j\theta}) = \sum\_{n=-\infty}^{\infty} \delta[n-2] e^{-jn \theta} = e^{-j2 \theta}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 Thus the FTD of a delta pulse at time index $n=2$ results in a complex exponential function $e^{-j2 \theta}$.  In other words the magnitude response is flat (a straight line), while the phase response has a negative angle $-2 \theta$. The symmetry and anti-symmetry properties are clearly shown as depicted at the right hand side of Fig. 1.
 
@@ -81,19 +81,19 @@ Thus the FTD of a delta pulse at time index $n=2$ results in a complex exponenti
 In this subsection we will show the following time reversal property:
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 x[-n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & X(e^{-j\theta})
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>Reversing in time domain implies mirroring in the frequency domain.</i></div>
 
 
 For the proof we first substitute the negative index $-n$  by a new index $p$ and reverse the summation which leads to the final result:
-\begin{eqnarray}
+\begin{eqnarray*}
 y[n]=x[-n]  &\hspace{-2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & \hspace{-2mm} Y(e^{j\theta}) = \sum\_{n=-\infty}^{\infty} x[-n] e^{-jn\theta}
 \overset{{\color{red}p=-n}}{=} \sum\_{p=-\infty}^{\infty} x[p] e^{jp \theta} = X(e^{-j\theta})
-\end{eqnarray}
+\end{eqnarray*}
 As an example we reverse the signal $x[n]=\delta[n-2]$ as discussed in the previous subsection. The resulting reversed signal $y[n]$ is a delta pulse at time index $n=-2$.
 By applying the time reversal property it follows that the frequency representation is equal the complex exponential function $e^{j2 \theta}$.  The plots of the magnitude and phase response, as depicted at the right hand side of Fig. 2, show the effect of the time reversal in frequency domain.
 
@@ -113,9 +113,9 @@ By applying the time reversal property it follows that the frequency representat
 In this subsection we will show the following shift property:
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n-n_0] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & e^{-jn_0 \theta} \cdot X(e^{j\theta})
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>A shift in time domain results in a multiplication with a complex exponential function in frequency domain.</i></div>
@@ -137,28 +137,28 @@ In this subsection we will show the following modulation property:
 
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 e^{jn \theta_0} \cdot x[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & X(e^{j(\theta - \theta_0)})
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>Multiplication with a complex exponential function in time domain results in a shift in frequency domain.</i></div>
 
 The proof is as follows:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 e^{jn \theta_0} \cdot x[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
 \sum\_{n=-\infty}^{\infty} \left( e^{jn \theta_0} \cdot x[n] \right) e^{-jn \theta} \newline
 && = \sum\_{n=-\infty}^{\infty} x[n] e^{-jn (\theta- \theta_0)} = X(e^{j(\theta - \theta_0)})
-\end{eqnarray}
+\end{eqnarray*}
 $$
 When combining this property for a positive and negative exponent  it follows that the modulation of signal $x[n]$ with a sinusoidal frequency $\theta_0$ results in a frequency representation which consists of two shifted versions of the original frequency representation $X(e^{j\theta})$. This property can be shown as follows:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 e^{jn \theta_0} \cdot x[n] + e^{-jn \theta_0} \cdot x[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
 X(e^{j(\theta - \theta_0)}) + X(e^{j(\theta + \theta_0)}) \nonumber \newline
 \Rightarrow \text{ } \cos (n \theta_0) \cdot x[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & \frac{1}{2} X(e^{j(\theta + \theta_0)}) + \frac{1}{2} X(e^{j(\theta - \theta_0)})
-\end{eqnarray}
+\end{eqnarray*}
 $$
 In one of the following subsections we will give an example of this modulation property.
 
@@ -167,9 +167,9 @@ In this subsection we will show the following convolution property:
 
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n] \ast y[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & X(e^{j\theta}) \cdot Y(e^{j\theta})
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>Convolution in time domain can be performed as a multiplication in frequency domain.</i></div>
@@ -196,22 +196,22 @@ In this subsection we will show the dual property of the previous subsection:
 
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n] \cdot y[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & X(e^{j\theta}) \star Y(e^{j\theta}) =
 \frac{1}{2 \pi} \int_{\psi = - \pi}^{\pi} X(e^{j\psi}) Y(e^{j(\theta - \psi)}) \text{d}\psi
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>Multiplication in time domain can be performed by a convolution in frequency domain.</i></div>
 
 In the first step of the proof  we replace $x[n]$ as the inverse of its frequency representation, which results in an equation with a summation and an integral:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 \mathcal{F} \left\\{ x[n] \cdot y[n] \right\\} &=& \sum\_{n=-\infty}^{\infty}  x[n] \cdot y[n] e^{-jn \theta}
 = \sum\_{n=-\infty}^{\infty} \left(
 \mathcal{F}^{-1} \left\\{ X(e^{j\psi}) \right\\} \right) \cdot y[n] e^{-jn \theta} \newline
 &=& \sum\_{n=-\infty}^{\infty}  \left( \frac{1}{2\pi} \int_{-\pi}^{\pi} X(e^{j\psi}) e^{jn \psi} \text{d} \psi \right) \cdot y[n] e^{-jn \theta}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 Since both summation and integral operations are linear, we may interchange the order:
@@ -306,9 +306,9 @@ Parceval has shown following FTD property:
 
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 \sum\_{n=-\infty}^{\infty} |x[n]|^2 &=& \frac{1}{2 \pi} \int_{\theta = - \pi}^{\pi} |X(e^{j\theta}) |^2 \text{d} \theta
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>The FTD preserves energy.</i></div>
@@ -369,12 +369,12 @@ On the other hand we have shown before that the frequency representation of the 
 
 So by using the Parceval property it is easier to calculate the energy in frequency domain  which goes as follows:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 E &=& \sum\_{n=-\infty}^{\infty} | x[n]|^2
 = \sum\_{n=-\infty}^{\infty} \left | \frac{1}{2} \frac{\sin(\frac{\pi}{2} n)}{\frac{\pi}{2}}\right |^2 \nonumber \newline
 &\overset{\text{Parceval}}{=}&
 \frac{1}{2 \pi} \int\_{-\pi}^{\pi} \left |X(e^{j\theta}) \right |^2 \mathrm{d} \theta
 = \frac{1}{2 \pi} \int\_{-\pi/2}^{\pi/2} \left | 1 \right |^2 \mathrm{d} \theta
 = \frac{1}{2}
-\end{eqnarray}
+\end{eqnarray*}
 $$

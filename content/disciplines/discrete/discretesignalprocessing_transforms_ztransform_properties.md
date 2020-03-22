@@ -31,10 +31,10 @@ Finally, the so called one-sides ZT will be introduce, which is useful for solvi
 Assume the ZT of the sequences $x[n]$ and $y[n]$ are given by $X(z)$ and $Y(z)$ and their ROC by $R_x$ and $R_y$ respectively.
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n] \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \text{ } X(z) \text{ with ROC } R_x & \quad\text{and} \quad&
 y[n] \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \text{ } Y(z) \text{ with ROC } R_y
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 <br></br>
@@ -90,13 +90,13 @@ The proof of this property is as follows:
 If a sequence $x[n]$ is multiplied by a complex exponential $a^n$ the resulting ZT $Y(z)$ can be obtained by first combining the parameter $a^{-1}$ and the variable $z$  resulting in a scaled version of $X(z)$:
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 y[n] = a^n x[n] \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ
 \text{ } &Y(z)&
 = \sum_{n=-\infty}^{\infty} a^n x[n] z^{-n}
 =\sum_{n=-\infty}^{\infty}  x[n] (a^{-1} \cdot z)^{-n}\newline
 & & = X(a^{-1} z) \quad\text{ with ROC } R_y= |a|R_x
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 The resulting ROC is also scaled by the parameter $a$.
@@ -106,10 +106,10 @@ The resulting ROC is also scaled by the parameter $a$.
   <hr>
   The ZT and ROC of the unit step function $x[n]=u[n]$ is as follows:
   $$
-  \begin{eqnarray}
+  \begin{eqnarray*}
   x[n]=u[n] &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& X(z)= \sum_{n=0}^{\infty}  z^{-n}
   \overset{{\color{red}{|z|>1}}}{=} \frac{1}{1- z^{-1}} \hspace{2mm} \text{ } {\color{red}{{R_x: |z|>1}}}
-  \end{eqnarray}
+  \end{eqnarray*}
   $$
   Calculate the ZT and its ROC of the scaled version $y[n]=a^n u[n]$ of the unit step function.
   <button class="collapsible">Show solution</button>
@@ -148,28 +148,28 @@ The proof of this property is shown in the following steps:
 First write out the convolution sum and transform to the $z$-domain.
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 w[n]= x[n] \ast y[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & W(z) =
 \sum_{n=-\infty}^{\infty}\left ( \sum_{p=-\infty}^{\infty} x[p] y[n-p] \right ) z^{-n}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 In the next step change the order of the two summations  and then add an extra exponent $z^{-p}$ in the first summation  which has to be compensated this in the second summation:
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 W(z) &=& \sum\_{p=-\infty}^{\infty} x[p] \left\\{ \sum\_{n=-\infty}^{\infty} y[n-p] z^{-n} \right\\} \newline
 &=& \sum\_{p=-\infty}^{\infty} x[p] z^{-p} \cdot \left\\{
 \sum\_{n=-\infty}^{\infty} y[n-p] z^{-(n-p)}  \right\\}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 The first summation is the ZT of the sequence $x[n]$ and the second summation between large brackets is the ZT of the sequence $y[n]$ , which finalizes the proof.
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 W(z)&=& X(z) \cdot Y(z) \hspace{3mm} \text{with } R_w=R_x \cap R_y
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 The ROC of the result $W(z)$ of the convolution property includes the intersection of the ROC's of $X(z)$ and $Y(z)$. However, the ROC $R_w$ may be larger, if there is a pole-zero cancellation in the product $X(z) \cdot Y(z)$.
@@ -179,34 +179,34 @@ The ROC of the result $W(z)$ of the convolution property includes the intersecti
   <hr>
   Calculate the convolution result of the two finite length sequences:
   $$
-  \begin{eqnarray}
+  \begin{eqnarray*}
   x[n]= \delta[n] + 2 \delta[n-1] & \text{and} & y[n]=\delta[n] + \delta[n-1]
-  \end{eqnarray}
+  \end{eqnarray*}
   $$
   Calculate first the result via the convolution procedure and verify this result via the convolution property of the ZT.
   <button class="collapsible">Show solution</button>
   <div class="content">
     Both $x$ and $y$ are finite length sequences  and the convolution result $w[n]$ is a finite length sequence which consists of 3 delta pulse with coefficients ${\bf 1}$, ${\color{red}{3}}$ and ${\color{green}{2}}$ respectively.
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     w[n]=x[n] \ast y[n] &=&= {\bf 1} \delta[n] + {\color{red}{{\bf 3}}} \delta[n-1] + {\color{green}{{\bf 2}}} \delta[n-3]
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
     The ZT of the two sequences is as follows:
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     x[n]= \delta[n] + 2 \delta[n-1] &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& X(z) = 1 + 2z^{-1}\newline
     y[n]=\delta[n] + \delta[n-1] &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& Y(z)=1 + z^{-1}
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
     Multiplying these two polynomials results in a finite length polynomial with
     coefficients ${\bf 1}$, ${\color{red}{3}}$ and ${\color{green}{2}}$, which is indeed the ZT of the convolution result $w[n]$.
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     W(z)=X(z) \cdot Y(z) &=&
     = (1 + 2z^{-1}) \cdot (1 + z^{-1})
     = {\bf 1} + {\color{red}{\bf 3}} z^{-1} + {\color{green}{\bf 2}} z^{-2}
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
     Finally the ROC of the result $W(z)$ of the convolution theorem includes the intersection of the ROC's of $X(z)$ and $Y(z)$.
   </div>
@@ -219,17 +219,17 @@ The ROC of the result $W(z)$ of the convolution property includes the intersecti
   <button class="collapsible">Show solution</button>
   <div class="content">
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     x[n]= a^n u[n] &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& X(z) = \frac{1}{1 - a z^{-1}} \hspace{3mm} \text{with }R_x \text{ : }|z| > |a|\\
     y[n]=\delta[n] - a \delta[n-1] &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& Y(z) = 1 - a z^{-1} \hspace{3mm} \text{with }R_y \text{ : }|z| > 0
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
     In this example the ZT $X(z)$ of the infinite length exponential decaying sequence $x[n]$ has one pole at $z=a$ and the ROC contains all complex variables $z$ outside a circle with radius $a$. The ZT $Y(z)$ of the finite length sequence $y[n]$ has one zero at $z=a$ and the ROC contains all complex variables $z$ except $z=0$.
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     W(z) = X(z) \cdot Y(z) = \frac{1}{1 - a z^{-1}} \cdot (1 - a z^{-1} ) = 1
     \hspace{3mm} \text{with }R_w \text{ : all } z
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
     The ZT of the convolution of $x[n]$ with $y[n]$ is $W(z)=X(z) \cdot Y(z)$, which, due to the pole-zero cancellation, has a ROC that is the entire $z$-plane.
   </div>
@@ -246,13 +246,13 @@ The proof of the conjugation property goes as follows:
 
 The ZT  of the complex conjugate of the sequence $x[n]$  can be rewritten by taking the complex conjugation operation outside the brackets and interchange in the exponents of the variable $z$  which leads to the final result.
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 y[n] = x^\ast[n]
 \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \text{ } & Y(z)& = \sum_{n=-\infty}^{\infty} x^\ast[n] z^{-n}
 = \left ( \sum_{n=-\infty}^{\infty} x[n] \{z^{-n}\}^{\ast} \right )^\ast\newline
 &&= \left ( \sum_{n=-\infty}^{\infty} x[n] \{z^{\ast}\}^{-n} \right )^\ast
 = X^\ast(z^\ast) \text{ ; } R_y=R_x
-\end{eqnarray}
+\end{eqnarray*}
 $$
 The ROC is not influenced by the complex operation.
 
@@ -264,18 +264,18 @@ The ROC is not influenced by the complex operation.
   <div class="content">
     From the table with ZT-pairs it follows that $a^n u[n] \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ 1/(1-az^{-1})$ $\rightarrow$:
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     x[n]= \left ( e^{j\theta_0}\right )^n u[n]
     & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & X(z) = \frac{1}{1 - e^{j\theta_0} z^{-1} }
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
     With $y[n]=x^\ast[n]$ ,we can find the result $Y(z)$ by using the conjugation property as follows:
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     Y(z)=X^\ast(z^\ast)&=& \left \{ \frac{1}{1 - e^{j\theta_0} (z^\ast)^{-1} } \right \}^\ast
     =\left \{ \frac{1}{1 - e^{j\theta_0} (z^{-1})^{\ast} } \right \}^\ast \newline
     &=& \frac{1}{1 - e^{-j\theta_0} z^{-1} }
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
   </div>
 </div>
@@ -291,19 +291,19 @@ The proof of this property goes as follows:
 
 The ZT  of the sequence $n \cdot x[n]$  can be pre-multiplied with $z$, which has to be compensated inside the summation:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 y[n] = n \cdot x[n] &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & Y(z)=\sum\_{n=-\infty}^{\infty} n \cdot x[n]  z^{-n}
 =z \sum\_{n=-\infty}^{\infty} \left\\{ n \cdot x[n] z^{-n-1} \right\\}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 The function in between brackets can be rewritten as a differentiation, which can be taken outside the summation, because of linearity, which leads to the final result:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 Y(z)& =&
 =z  \sum_{n=-\infty}^{\infty}\left\\{ -\frac{\text{d}}{\text{d} z}  x[n] z^{-n} \right\\}
 =-z \frac{\text{d}}{\text{d} z} \left( \sum_{n=-\infty}^{\infty}x[n] z^{-n} \right)
 = -z \frac{\text{d}}{\text{d} z} X(z)
-\end{eqnarray}
+\end{eqnarray*}
 $$
 The ROC is not influenced.
 
@@ -315,12 +315,12 @@ The ROC is not influenced.
   <div class="content">
     The sequence $y[n]$ is $n$ times the exponential decaying sequence $a^n u[n]$.  From the derivative property it follows that we can find the ZT $Y(z)$ of $y[n]$ as follows:
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     Y(z) & =& -z \frac{\text{d}}{\text{d} z} \left(
     \frac{1}{1-a z^{-1}}\right)
     = -z \left\{ \frac{- a z^{-2}}{(1-a z^{-1})^2} \right\}
     = \frac{a z^{-1}}{(1-a z^{-1})^2}
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
   </div>
 </div>
@@ -333,13 +333,13 @@ $$
 $$
 The proof goes as follows with $x[n]=0$ for $n<0$:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 \lim_{z \rightarrow \infty} \left\\{ X(z) \right\\}
 &=& \lim_{z \rightarrow \infty}  \left\\{ \sum\_{n=-\infty}^{\infty} x[n] z^{-n} \right\\} \newline
 &=&\lim_{z \rightarrow \infty} \left\\{
 \cdots x[-1] z  + x[0] + x[1] z^{-1} + \cdots \right\\}\newline
 &=& \lim_{z \rightarrow \infty} \left\\{ 0 + x[0] + x[1] z^{-1} + \cdots \right\\} =x[0]
-\end{eqnarray}
+\end{eqnarray*}
 $$
 This initial value property can be shown in the following example:
 
@@ -351,11 +351,11 @@ This initial value property can be shown in the following example:
   <div class="content">
     The given ZT $X(z)$  is related to the exponential decaying function $x[n]$  from which it is clear that the initial value $x[0]=1$.
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     X(z) = \frac{1}{1-az^{-1}}
     & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & x[n] = a^n u[n]
     \quad \rightarrow \quad x[0]=1
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
     The same result can be found via the initial value property as follows:
     $$
@@ -368,9 +368,9 @@ This initial value property can be shown in the following example:
 
 ## One sided Z-Transform
 The ZT $X(z)$ of the sequence $x[n]$, as discussed before, is the two-sided ZT.  The one-sided ZT $\tilde{X}(z)$ is defined by the given equation in which the summation index $n$ does not start from $n=-\infty$ but from $n=0$.
-\begin{equation}
+\begin{equation*}
 \boxed{\tilde{X}(z)=\sum_{{\color{red}{n=0}}}^{\infty} x[n] z^{-n}}
-\end{equation}
+\end{equation*}
 Most of the properties of the one-sided ZT are the same as the properties of the two-sided ZT. One that is different, however, is the shift property.
 Specifically, if the sequence $x[n]$ has a one-sided ZT $\tilde{X}(z)$, the difference of the one-sided ZT of the shifted sequence $x[n-k]$ is represented in red in the following shift property of the one-sided ZT:
 $$
@@ -378,12 +378,12 @@ $$
 $$
 For the proof of this property we apply the one-sided ZT to the shifted sequence $x[n-k]$ and then substitute a new variable $p$ for $n-k$, which finalizes the proof:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n-k] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & \sum_{n=0}^{\infty} x[n-k] z^{-n}
 \overset{p=n-k}{=\\!=\\!=\\!=}
 \sum_{p=-k}^{\infty} x[p] z^{-(p+k)} \newline
 & & = {\color{red}{\sum_{p=-k}^{-1} x[p] z^{-(p+k)}}}  +  z^{-k} \cdot \left( \sum_{p=0}^{\infty} x[p] z^{-p} \right)
-\end{eqnarray}
+\end{eqnarray*}
 $$
 It is this shifting property that makes the one-sided ZT useful for solving Difference Equations with initial conditions, as can be shown by the following example.
 
@@ -397,35 +397,35 @@ It is this shifting property that makes the one-sided ZT useful for solving Diff
     <p></p>
     In case the initial conditions are zero, we can use the usual ZT.  Together with the ZT  of $x[n]=\delta[n-1]$  this leads to the given fraction. This fraction can be expanded as a sum of two terms  which are related to the given sum of two exponential decaying sequences.
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     Y(z) &=& \frac{1}{4} z^{-2} \cdot Y(z) + X(z)
     \hspace{5mm} \text{ with} \hspace{5mm} X(z)=z^{-1} \quad \rightarrow
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     Y(z)= \frac{z^{-1}}{1 - \frac{1}{4} z^{-2}} =
     \frac{1}{1-\frac{1}{2} z^{-1}} - \frac{1}{1+\frac{1}{2} z^{-1}} &&\newline
     \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \text{ }
     y[n]=  \left (\left ( \frac{1}{2} \right )^n - \left ( -\frac{1}{2} \right )^n \right ) \cdot u[n] &&
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
     <p></p>
     $\bullet \underline{{\color{blue}{\text{Case $y[-2]=y[-1]=1$}}}} \rightarrow \textbf{ Use one-sided ZT:}$
     <p></p>
     In case the initial conditions are nonzero, for example $y[-2]=y[-1]=1$ we have to use the one-sided ZT to solve the Difference Equation.  The one-sided ZT $\tilde{X}(z)$ of $x[n]=\delta[n-1]$ is the same as the ZT $X(z)$ which is equal to $Z^{-1}$.  Using this together with the shift property of the one-sided ZT  results in the given fraction,  which can be expanded as a sum of two terms which are related to the given sum of two weighted exponential decaying sequences.
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     \tilde{Y}(z) & =&  \frac{1}{4}\cdot \left ( {\color{red}y[-2] + y[-1] z^{-1}} + z^{-2} \cdot \tilde{Y}(z) \right ) + \tilde{X}(z)
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
     $$
-    \begin{eqnarray}
+    \begin{eqnarray*}
     \rightarrow \hspace{2mm}
     \tilde{Y}(z) &=& \frac{\frac{1}{4} + \frac{5}{4} z^{-1}}{1 - \frac{1}{4} z^{-2}}= \frac{\frac{11}{8}}{1-\frac{1}{2} z^{-1}} - \frac{\frac{9}{8}}{1+\frac{1}{2} z^{-1}} \newline
     \tilde{Y}(z)& \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
     y[n]=  \left ( {\color{red}{\frac{11}{8}}} \left( \frac{1}{2} \right )^n - {\color{red}{\frac{9}{8}}} \left ( -\frac{1}{2} \right )^n \right ) \cdot u[n]
-    \end{eqnarray}
+    \end{eqnarray*}
     $$
     The influence of the initial conditions is reflected by the two weights denoted in red.
   </div>

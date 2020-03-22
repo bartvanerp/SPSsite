@@ -87,18 +87,18 @@ $$
 Y[k]= \sum_{n=0}^{N-1} x_p[n-n_0] e^{-j\frac{2\pi}{N} k n}.
 $$
 Now we can use the indexing as discussed above: Split the indices in a red and blue part. The red part contains the samples which are at the right end side of the FP and the blue part contains samples that are shifted outside the FP at the right end side and entering the FP again at the left end side:
-\begin{eqnarray}
+\begin{eqnarray*}
 Y[k]
 &=& \sum_{\in {\color{red}{\bf -}}} \color{red}{x_p[n-n_0 + \lambda N]} e^{-j\frac{2\pi}{N} k n}
 + \sum_{\in {\color{blue}{\bf -}}} \color{blue}{x_p[n-n_0 + \lambda N -N ]} e^{-j\frac{2\pi}{N} k n}
-\end{eqnarray}
+\end{eqnarray*}
 Substitute a new index $m$ and replace the index $n$ with this new index in the complex exponent of both summations:
 $$
 Y[k]= \sum_{m \in {\color{red}{\bf -}}} \color{red}{x_p[m]} e^{-j\frac{2\pi}{N} k (m+n_0 - \lambda N)}
 + \sum_{m \in {\color{blue}{\bf -}}} \color{blue}{x_p[m]} e^{-j\frac{2\pi}{N} k (m+n_0 - \lambda N + N)}
 $$
 The complex exponent with index $n_0$ can be taken outside brackets:
-\begin{eqnarray}
+\begin{eqnarray*}
 Y[k] &=&\left (
 \sum_{m \in {\color{red}{\bf -}}} {\color{red}x_p[m]} e^{-j\frac{2\pi}{N} k m } e^{j\frac{2\pi}{N}k \lambda N}
 + \sum_{m \in {\color{blue}{\bf -}}} {\color{blue}x_p[m]} e^{-j\frac{2\pi}{N} k m}
@@ -108,7 +108,7 @@ e^{j\frac{2\pi}{N} k (\lambda -1) N}
 \left ( \sum_{m \in {\color{red}{\bf -}}} {\color{red}x_p[m]} e^{-j\frac{2\pi}{N} k m } +
 \sum_{m \in {\color{blue}{\bf -}}} {\color{blue}x_p[m]} e^{-j\frac{2\pi}{N} k m}
   \right ) \cdot e^{-j\frac{2\pi}{N} k n_0}
-\end{eqnarray}
+\end{eqnarray*}
 The resulting two summations are the same but each of the indices run over a different part of the FP.  When concatenating these two summations  the result between brackets writes as the DFT result $X_p[k]$, which end the proof:
 $$
 Y[k]= \left ( \sum_{m \in \text{ FP}} x_p[m] e^{-j\frac{2\pi}{N} k m} \right ) \cdot e^{-j\frac{2\pi}{N} k n_0} = X_p[k] \cdot e^{-j\frac{2\pi}{N} k n_0}
@@ -139,10 +139,10 @@ A new signal is defined as $y_p[n] = W_5^{-2n} x_p[n]$, with twiddle factor $W_5
 <button class="collapsible">Show solution</button>
 <div class="content">
 According to the shift property we obtain:
-\begin{eqnarray}
+\begin{eqnarray*}
 y_p[n] = e^{-j\frac{2\pi}{5}2n} \cdot x_p[n] & \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
 Y_p[k] = X_p[k+2]]
-\end{eqnarray}
+\end{eqnarray*}
 resulting into the following values with the FI:
 $$
 Y_p[k]= \begin{cases}
@@ -188,10 +188,10 @@ is depicted in Fig. 3.
 </div>
 
 Within the FP these Periodic Extended signals are defined as:
-\begin{eqnarray}
+\begin{eqnarray*}
 x\_p[n]&=&\delta[n]+ \delta[n-1] + \delta[n-2] + \frac{1}{2} \delta[n-3] \newline
 h\_p[n]&=&\delta[n]+ \frac{3}{4} \delta[n-1] + \frac{1}{2}\delta[n-2] + \frac{1}{4} \delta[n-3]
-\end{eqnarray}
+\end{eqnarray*}
 resulting in:
 $$
 y\_{p} [n] = x\_{p}[n] \circledast h\_{p}[n] =
@@ -206,12 +206,13 @@ $$
 <h4> Example </h4>
 <hr>
 Compute $y_p[n]=x_p[n] \circledast h_{p}[n]$ with
-\begin{eqnarray}
+\begin{eqnarray*}
 x_p[n] &=& \delta[n \text{mod}(4)] + 2\delta[(n-1) \text{mod}(4)] + \delta[(n-2) \text{mod}(4)] - \delta[(n-3) \text{mod}(4)] \newline
 h_p[n] &=& \frac{1}{3} \delta[(n-1) \text{mod}(4)] -\frac{1}{3} \delta[(n-2) \text{mod}(4)] +\frac{1}{3} \delta[(n-3) \text{mod}(4)]
-\end{eqnarray}
+\end{eqnarray*}
 <button class="collapsible">Show solution</button>
 <div class="content">
+A matlab animation is to be added.
 <!-- TODO:
 \centerline{\em SHOW SOLUTION}
 Show solution step by step with Matlab animation.m. Result:
@@ -234,10 +235,10 @@ $$
 <button class="collapsible">Show proof</button>
 <div class="content">
 For the proof of this property we first apply  the DFT operation to the circular convolution  and then switch the order of the two summations:
-\begin{eqnarray}
+\begin{eqnarray*}
 Y[k]&=& \text{DFT}\left \{ x_p[n] \circledast h_p[n]\right \} =\sum_{n=0}^{N-1} \left (\sum_{i=0}^{N-1} x_p[i] h_p[n-i] \right ) e^{-j(2 \pi/N) k n}\\
 &=&\sum_{i=0}^{N-1} x_p[i] \cdot \left \{ \sum_{n=0}^{N-1} h_p[n-i] e^{-j(2 \pi/N) k n} \right \}
-\end{eqnarray}
+\end{eqnarray*}
 In between brackets we recognize the DFT of $h_p[n]$ which has been shifted in time domain.  As shown in the previous subsection the time domain shift results in a multiplication with a complex exponent in frequency domain:
 $$
 Y[k]= \sum_{i=0}^{N-1} x_p[i] \cdot \left \{ H_p[k] \cdot e^{-j(2 \pi/N) k i} \right \}
@@ -261,10 +262,10 @@ $$
 <h4> Example </h4>
 <hr>
 Given the same 4-point periodic extended signals as in the previous example:
-\begin{eqnarray}
+\begin{eqnarray*}
 x_p[n] &=& \delta[n \text{mod}(4)] + 2\delta[(n-1) \text{mod}(4)] + \delta[(n-2) \text{mod}(4)] - \delta[(n-3) \text{mod}(4)] \\
 h_p[n] &=& \frac{1}{3} \delta[(n-1) \text{mod}(4)] -\frac{1}{3} \delta[(n-2) \text{mod}(4)] +\frac{1}{3} \delta[(n-3) \text{mod}(4)]
-\end{eqnarray}
+\end{eqnarray*}
 Furthermore we have the following 4-point DFT's: $X_p[k] \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ x_p[n]$ and  $H_p[k] \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ h_p[n]$. Calculate $Y_p[k] = X_p[k] \cdot H_p[k]$
 <button class="collapsible">Show solution</button>
 <div class="content">
@@ -278,10 +279,10 @@ $$
 Y_p[k] = \text{DFT} \{ \delta[(n-1)\text{mod}(4)] \} = e^{-j\frac{2\pi}{4} k}.
 $$
 Another way to find the solution is to write out the product of the two 4-point DFT's:
-\begin{eqnarray}
+\begin{eqnarray*}
 X_p[k] &=& 1 + 2 e^{-j\frac{2\pi}{4} k} + e^{-j\frac{2\pi}{4} 2k} - e^{-j\frac{2\pi}{4} 3k} \\
 H_p[k] &=& \frac{1}{3} \left \{e^{-j\frac{2\pi}{4} k} -e^{-j\frac{2\pi}{4} 2k} + e^{-j\frac{2\pi}{4} 3k} \right \}
-\end{eqnarray}
+\end{eqnarray*}
 resulting in $Y_p[k] = X_p[k] \cdot H_p[k]= e^{-j\frac{2\pi}{4} k}$.
 </div>
 </div>
@@ -298,7 +299,7 @@ $$
 <hr>
 <button class="collapsible">Show proof</button>
 <div class="content">
-In the first step  of the proof we apply the DFT operation to the complex conjugated samples and take the the complex operation outside the brackets and  multiply with 1:
+In the first step  of the proof we apply the DFT operation to the complex conjugated samples and take the complex operation outside the brackets and  multiply with 1:
 $$
 Y[k] = \sum_{n=0}^{N-1} x^\ast_p[n] e^{-j\frac{2 \pi}{N}kn} =
 \left ( \sum_{n=0}^{N-1} x_p[n] e^{j\frac{2 \pi}{N}kn} \right )^\ast
@@ -358,11 +359,11 @@ Calculate $x_p[n]$ the $N$-point IDFT. The answer should be a formula for $x_p[n
 <button class="collapsible">Show solution</button>
 <div class="content">
 The resulting signal $x_p[n]$ will be real since $X_p[k]=X_p^\ast[N-k]$ and can be expressed as follows:
-\begin{eqnarray}
+\begin{eqnarray*}
 x_p[n] &=& e^{j\theta_0} \cdot e^{j\frac{2\pi}{N} n} + e^{-j\theta_0} \cdot e^{j\frac{2\pi}{N}(N-1) n} \\
 &=& e^{j\theta_0} \cdot e^{j\frac{2\pi}{N} n} + e^{-j\theta_0} \cdot e^{-j\frac{2\pi}{N} n} =
 2 \cos (\frac{2\pi}{N} n + \theta_0)
-\end{eqnarray}
+\end{eqnarray*}
 </div>
 </div>
 
@@ -413,10 +414,10 @@ X_p[k] = \sum_{n=0}^{3} x_p[n] e^{-j\frac{2\pi}{4} kn} = \sum_{n=0}^{3} e^{-j\fr
 4 \delta[k \text{mod}(4)]
 $$
 The energy in time- and frequency domain can be calculated as follows:
-\begin{eqnarray}
+\begin{eqnarray*}
 \text{Time} &:& \sum_{n=0}^{3} |x_p[n]|^2 = (1^2 + 1^2 + 1^2 + 1^2)=4 \\
 \text{Frequency} &:& \frac{1}{4} \sum_{k=0}^{3} |X_p[k]|^2 = \frac{1}{4} ( 4^2 ) = 4
-\end{eqnarray}
+\end{eqnarray*}
 which proves that the Parceval relation is indeed correct.
 </div>
 </div>
