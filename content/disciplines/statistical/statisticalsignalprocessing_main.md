@@ -25,6 +25,6 @@ The concepts covered in this module are:
 
 3. **Linear prediction** - Is it possible to foresee the future? This module will try to predict future observations from past observations.
 
-4. <a href="../statisticalsignalprocessing_rational_main">Rational signal models</a> - With this notion of uncertainty, it is actually possible to create a signal with a desired frequency spectrum by just filtering noise.
+4. **Rational signal models** - With this notion of uncertainty, it is actually possible to create a signal with a desired frequency spectrum by just filtering noise.
 
 5. <a href="../statisticalsignalprocessing_spectrum_main">Spectrum estimation</a> - With the approximations made in going from the Fourier transform for continuous-time signals to the fast Fourier transform, accuracy will inevitably be lost, leading to noisy spectral estimates. This module will explore ways to model the frequency spectrum.
