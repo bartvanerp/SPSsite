@@ -24,19 +24,19 @@ type = "docs"  # Do not modify.
 In the previous section, we found the following relation between the impulse response description in time domain $h[n]$ and the frequency response description in frequency domain $H(e^{j\theta})$:
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 \text{Time domain} & \circ  \hspace{-2.3mm} - \hspace{-1.1mm}  \circ & \text{Frequency domain} \newline
 h[n]= \sum\_{k=0}^{M-1} h[k] \delta[n-k] & \circ  \hspace{-2.3mm} - \hspace{-1.1mm}  \circ &
 H(e^{j\theta})= \sum\_{k=0}^{M-1} h[k] e^{-j\theta k}
-\end{eqnarray} }
+\end{eqnarray*} }
 $$
 
 The first important property of the Frequency response $H(e^{j\theta})$, is that it is a periodic function with period $2 \pi$. This can be verified by adding an integer number $l$ times $2\pi$ to the frequency $\theta$, which result into:
-\begin{eqnarray}
+\begin{eqnarray*}
 H(e^{j(\theta + l \cdot 2 \pi)})&=& \sum\_{k=0}^{M-1} h[k] e^{-j(\theta   + l \cdot 2 \pi )\cdot k} =
 \sum\_{k=0}^{M-1} h[k] e^{-j\theta k } \cdot e^{-jl \cdot k \cdot 2 \pi} \newline
 &=& \sum\_{k=0}^{M-1} h[k] e^{-j\theta k } \cdot 1 = H(e^{j\theta}).
-\end{eqnarray}
+\end{eqnarray*}
 The fact that the frequency response is a periodic function of $\theta$, with period $2\pi$, is the main reason that we do not denote this function as $H(\theta)$, but in a special way, namely by $H(e^{j\theta})$.
 
 The second important property is that the Frequency response of a real impulse response $h[n]$ is a conjugate symmetric function, thus:
@@ -55,10 +55,10 @@ $$
 Concluding the two most important properties of the frequency response of an FIR filter with real coefficients are:
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 \text{Periodic } & : & H(e^{j\theta})  =  H(e^{j(\theta + l \cdot 2 \pi}) \newline
 \text{Complex conjugated } & : & H(e^{-j\theta})  = (H(e^{j\theta}))^\ast
-\end{eqnarray} }
+\end{eqnarray*} }
 $$
 
 
@@ -109,9 +109,9 @@ H(e^{-j\theta}) &=& -1  + 3 e^{j\theta} - e^{j2\theta} = -1 + 3 (e^{-j\theta})^\
 ## Graphical Representation
 
 In the module Complex Numbers And Phasors (CNAP) we have seen that a complex number can be represented as a vector in the complex plane. Such a complex vector can be represented either in the Cartesian way or in the Polar way. In order to represent the frequency response $H(e^{j\theta})$, we often choose the Polar representation. For this reason, we write the frequency response as:
-\begin{equation}
+\begin{equation*}
 H(e^{j\theta}) = |H(e^{j\theta})| \cdot e^{j\angle{H(e^{j\theta})}}.
-\end{equation}
+\end{equation*}
 To represent the frequency response graphically, we can make two plots: One representing the magnitude response $|H(e^{j\theta})|$ and the other representing the phase response $\angle{H(e^{j\theta})}$, both as a function of frequency $\theta$.
 
 In most signal processing software, like Matlab, the plot of the phase response is restricted to the range $-\pi \leq \angle{H(e^{j\theta})} \leq \pi$. This is allowed because we may add or subtract $2 \pi$ to the phase without changing the result, thus:
@@ -205,27 +205,27 @@ y[n] = \frac{1}{L} \sum\_{k=0}^{L-1} x[n-k]
 $$
 From this we obtain the frequency response using the geometric series $\sum\_{k=0}^{L-1} a^k = \frac{1 - a^L}{1-a}$ as:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 H(e^{j\theta}) &=& \frac{1}{L} \sum\_{k=0}^{L-1} e^{-jk \theta} = \frac{1}{L} \frac{1 - e^{-jL \theta}}{1 - e^{-j\theta}} = \frac{1}{L} \frac{e^{jL \frac{\theta}{2}} - e^{-jL \frac{\theta}{2}}}{e^{j\frac{\theta}{2}} - e^{-j\frac{\theta}{2}}} \cdot \frac{e^{-jL \frac{\theta}{2}}}{e^{-j\frac{\theta}{2}}} \newline
 &=& \color{red}{\frac{\sin (L \frac{\theta}{2})}{L \sin (\frac{\theta}{2})}} \cdot
 e^{-j\color{blue}{(L-1) \frac{\theta}{2}}}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 Thus the magnitude- and phase-response of a moving average filter are given by the following expressions:
-\begin{eqnarray}
+\begin{eqnarray*}
 |H(e^{j\theta})| &=& \left | \color{red}{\frac{\sin (L \frac{\theta}{2})}{L \sin (\frac{\theta}{2})}}
 \right | \newline
 \angle{H(e^{j\theta})} &=& \color{blue}{-(L-1) \frac{\theta}{2}}.
-\end{eqnarray}
-An important value of the magnitude-response is the value for $\theta=0$. This value can be found  by approximate the sin-functions by the first component of its taylor expansion, meaning that for small values of $x$ the value of $\sin(x)$ can be approximated by its first term of the geometric series: $\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} + \cdots$. Thus for small values of $x$ we can approximate the fraction $\frac{\sin(L x)}{L sin(x)}$ by $\frac{(L x)}{L (x)} =1 $.
-\begin{eqnarray}
+\end{eqnarray*}
+An important value of the magnitude-response is the value for $\theta=0$. This value can be found  by approximate the sin-functions by the first component of its Taylor expansion, meaning that for small values of $x$ the value of $\sin(x)$ can be approximated by its first term of the geometric series: $\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} + \cdots$. Thus for small values of $x$ we can approximate the fraction $\frac{\sin(L x)}{L sin(x)}$ by $\frac{(L x)}{L (x)} =1 $.
+\begin{eqnarray*}
 \frac{\sin (L \frac{\theta}{2})}{L \sin (\frac{\theta}{2})}\mid\_{\theta=0} &=& \lim_{\theta \rightarrow 0} \left\\{ \frac{\sin(L \theta)}{L \sin(\theta)} \right\\} = 1 .
-\end{eqnarray}
+\end{eqnarray*}
 The other important values of the phase-response are the zero-crossings, because at these frequencies we will find phase jumps of $\pm \pi$ in the phase-response plot.
 These zero-crossing can be found for those frequencies for which $|H(e^{j\theta})|$ is zero. Because the frequency of the numerator of $|H(e^{j\theta})|$ increases $L$ times faster than the frequency of the denominator, we can find these zero crossings by evaluating those frequencies for which the numerator is zero. Besides $\theta=0$ these values can be found as follows:
-\begin{eqnarray}
+\begin{eqnarray*}
 \sin (L \frac{\theta}{2}) = 0 & \Leftrightarrow & L \frac{\theta}{2} = k \pi \quad \Rightarrow \quad \theta=\frac{2\pi}{L} .
-\end{eqnarray}
+\end{eqnarray*}
 An example is shown in Fig. 1, which is the graphical representation of the magnitude- and phase-response of an 11-point averaging filter.
 
 <div style="max-width: 400px; margin: auto">

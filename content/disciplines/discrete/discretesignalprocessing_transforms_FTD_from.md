@@ -144,18 +144,18 @@ Both FTC and FTD have similarities but are different. That is why the most impor
 
 Based on absolute frequency $f$ in Hertz, the FTC and IFTC equations are:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 {\bf FTC:} \quad X(f) = \int\_{-\infty}^{\infty} x(t) e^{-j2 \pi f t}  \mathrm{d} t
 & \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm} & x(t) = \int\_{-\infty}^{\infty} X(f) e^{j2 \pi f t} \mathrm{d} f
-\end{eqnarray}
+\end{eqnarray*}
 $$
 which alternatively can be expressed based on the absolute radian frequency $\omega$ in radians per second as follows:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 {\bf FTC:} \quad X(\omega) = \int\_{-\infty}^{\infty} x(t) e^{-j\omega t}  \mathrm{d} t
 & \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm} &
 x(t) = \frac{1}{2\pi} \int\_{-\infty}^{\infty} X(\omega) e^{j\omega t} \mathrm{d} \omega
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 Important aspects of these transforms are:
@@ -171,10 +171,10 @@ $$ </li>
 
 The FTD and IFTD equations are as follows:
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 {\bf FTD:} \quad X(e^{j\theta}) = \sum\_{n=-\infty}^{\infty} x[n] e^{-jn \theta}
 & \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm} & x[n] = \frac{1}{2 \pi} \int\_{-\pi}^{\pi} X(e^{j\theta}) e^{jn \theta} \mathrm{d} \theta
-\end{eqnarray}
+\end{eqnarray*}
 $$
 Important aspects of these transforms, which differ from the FTC and IFTC equations, are:
 <ul>

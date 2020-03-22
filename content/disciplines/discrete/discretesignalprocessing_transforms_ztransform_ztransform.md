@@ -31,16 +31,16 @@ Finally, it is important to note that the 'time'-domain representation is the do
 
 ## Definition of the $Z$-Transform (ZT)
 The <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> of a sequence $x[n]$ is defined as follows:
-\begin{equation}\label{eq:FTD}
+\begin{equation*}\label{eq:FTD}
 X(e^{j\theta}) = \sum_{n=-\infty}^{\infty} x[n] e^{-jn \theta}
-\end{equation}
+\end{equation*}
 However, in order for this series to converge, it is necessary that the sequence $x[n]$  be absolutely sumable. Unfortunately, many of the signals that we would like to consider are not absolutely sumable and, therefore, do not have a <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a>.  An example is the sequence $x[n]=2^n[n]$ which is not absolute summable and thus the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> does not exist.
 
 The $Z$-transform is a generalization of <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> that allows one to deal with such not absolutely sumable sequences and is defined as follows:
 
-\begin{equation}
+\begin{equation*}
 \boxed{X(z) = \sum_{n=-\infty}^{\infty} x[n] z^{-n}} \label{eq:ZT}
-\end{equation}
+\end{equation*}
 
 in which $z$ is a complex variable.  When comparing this equation with the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> it follows that we can obtain the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> from the $Z$-transform by replacing the complex variable $z$ by $e^{j\theta}$.  In other words:
 The <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> can be viewed as the evaluation of the ZT on the unit circle $z=e^{j\theta}$:
@@ -67,18 +67,18 @@ and as such the ZT is a generalization of the <a href="../../../disciplines/disc
 From the definition of the ZT it follows that the ZT of a delta function $x[n]=\delta[n]$  equals 1  and the ZT of a shifted delta function $x[n]=\delta[n-1]$ is equal to $z^{-1}$:
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n]=\delta[n] &\quad {\overset{\color{red}{\text{ZT}}}{\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ}} \quad& X(z)=\sum\_{n=-\infty}^{\infty} \delta[n] z^{-n}= 1\cdot z^0 = 1 \newline
 x[n]=\delta[n-{\color{green}{1}}] &{\overset{\color{red}{\text{ZT}}}{\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ}} & X(z)=\sum\_{n=-\infty}^{\infty} \delta[n-{\color{green}{1}}] z^{-n}= {\color{green}{z^{-1}}} \quad \leftrightarrow \textbf{Delay}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 In general when $x[n]=\delta[n-p]$ its ZT is $z^{-p}$:
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n]=\delta[n-p] & \quad {\overset{\color{red}{\text{ZT}}}{\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ}} \quad& X(z)=\sum\_{n=-\infty}^{\infty} \delta[n-p] z^{-n}=z^{-p}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 As a result a causal sequence will result is a $Z$-transform represented by a polynomial of $z$ from which the powers are $\leq 0$. On the other hand, the $Z$-transform of a non-causal sequence results in a polynomial of $z$ from which the powers are $> 0$.
@@ -86,21 +86,21 @@ As a result a causal sequence will result is a $Z$-transform represented by a po
 An example of the ZT $X(z)$ of a causal sequence $x[n]$ consisting of a sum of 11 delta pulses $\delta[n]$ until $\delta[n-10]$ is as follows:
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n]=\sum_{p=0}^{10} \delta[n-p]
 &\quad {\overset{\color{red}{\text{ZT}}}{\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ}} \quad&
 X(z) = \sum_{n=0}^{10} z^{-n}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 The summation over a finite number of elements can be written as a fraction of two polynomials:
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 x[n]=\sum_{p=0}^{10} \delta[n-p]
 &\quad {\overset{\color{red}{\text{ZT}}}{\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ}} \quad&
 X(z) =\frac{1 - z^{-11}}{1-z^{-1}}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 By multiplying both numerator and denominator with $z^{11}$
@@ -108,18 +108,18 @@ the 11-th order polynomial of the numerator
 can be written as a product of 11 first order polynomials:
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 X(z) &=& \frac{z^{11} -1}{z^{10} \cdot (z-1)}
 = \frac{\Pi_{{\color{red}{k=0}}}^{10} (z - e^{-j\frac{2\pi}{11} k})}{z^{10}\cdot {\color{red}{(z-1)}}}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 The first term (for $k=0$) of the numerator writes as $z-1$. Because of the fact that the denominator also contains a term $z-1$,  the ZT writes as a numerator, which is the product of 10 first order polynomials, and a denominator which is equal to $z^{10}$:
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 X(z) &=&  \frac{\Pi_{{\color{red}{k=1}}}^{10} (z - e^{-j\frac{2\pi}{11} k})}{z^{10}}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 Because of the fact that the denominator also contains a term $z-1$,  the ZT writes as a numerator, which is the product of 10 first order polynomials, and a denominator which is equal to $z^{10}$.
@@ -164,20 +164,20 @@ $$
 In the following example we calculate the ROC of the right sided sequence $x_1[n]= a^n u[n]$.
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 x_1[n]= a^n u[n] &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ&
 X_1(z) = \sum_{p=0}^{\infty} (a z^{-1})^p
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 Applying the ZT results in the given expression of $X_1(z)$ as an infinite summation.  In case the absolute value of the argument of this summation, $a z^{-1}$, is smaller than 1, the infinite summation converges to $\frac{1}{1-a z^{-1}}$:
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 x_1[n]= a^n u[n] &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ&
 X_1(z) = \sum_{p=0}^{\infty} (a z^{-1})^p
 \overset{|a z^{-1}| < 1}{=\\! =\\! =\\! =\\! =} \frac{1}{1 - a z^{-1}}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 From this we can compute the ROC for this example as follows:
@@ -199,27 +199,27 @@ FTD $\equiv$ ZT for $|z|=1$ only when the unit circle is in the ROC
 In this subsection we will show that without knowledge of the ROC there is no unique relationship between a sequence $x[n]$ and its ZT $X(z)$.  As a first example we compute the ZT of the following left sided sequence $x_2[n]$:
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 x_2[n]=-(a)^n {\color{red}u[-n-1]} &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ & X_2(z)
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 First substitute the variable  $-n$ with $p$, and taking the summation from $p=0$ instead of $p=1$:
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 X_2(z) &=& -\sum_{{\color{red}{n=-\infty}}}^{{\color{red}{-1}}} (a)^n z^{-n} \overset{p=-n}{=\\! = \\! =} -\sum_{p=1}^{\infty} (a^{-1} z)^p
 =- \left ( \sum_{p={\color{green}{0}}}^{\infty} (a^{-1} z)^p {\color{green}{-1}} \right )
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 The infinite summation can be replaced by $\frac{1}{1 -a^{-1} z }$ when the absolute value of the argument of the summation $a^{-1}z$ is smaller than one.
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 X_2(z) &
 \overset{|a^{-1} z|<1}{=\\!=\\!=\\!=}&- \left ( \frac{1}{1 -a^{-1} z } -1 \right )=\frac{1}{1 - a z^{-1}}
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 This last expression can be rewritten from which the ROC is given by all values of the complex variable $z$ inside a circle with radius $a$.

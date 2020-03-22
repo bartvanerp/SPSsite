@@ -22,12 +22,12 @@ type = "docs"  # Do not modify.
 <b><u> Definition: </u></b>
 $$
 \boxed{
-\begin{eqnarray}
+\begin{eqnarray*}
 \text{DFT: } X\_p[k] = \sum\_{n=0}^{N-1} x\_p[n] e^{-j\frac{2 \pi}{N} k n}
 \hspace{3mm} \color{red}{\bf \forall k}
 \qquad
 \text{IDFT: } x\_p[n] = \frac{1}{N} \sum\_{k=0}^{N-1} X\_p[k] e^{j\frac{2 \pi}{N} k n} \hspace{3mm} \color{red}{\bf \forall n}
-\end{eqnarray}}
+\end{eqnarray*}}
 $$
 
 <ul>
@@ -52,10 +52,10 @@ a x_{p,1}[n]+bx_{p,2}[n] \hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  
 $$
 </li>
 <li> <u> Circular shift: </u>
-\begin{eqnarray}
+\begin{eqnarray*}
 \text{Time shift:} \hspace{8.5mm} x_p[n-n_0] &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& e^{-j\frac{2 \pi}{N} k n_0} \cdot X_p [k] \newline
 \text{Frequency shift:} \hspace{3mm} e^{j\frac{2 \pi}{N} n k_0} \cdot x_p[n] &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& X_p[k-k_0]
-\end{eqnarray}
+\end{eqnarray*}
 </li>
 <li> <u> Circular convolution: </u>
 $$

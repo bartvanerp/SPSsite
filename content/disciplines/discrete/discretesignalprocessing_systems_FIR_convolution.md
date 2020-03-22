@@ -54,9 +54,9 @@ This equation performs the so called <b>convolution sum</b> operation: It descri
 </div>
 
 In literature the symbol $\star$ is used to describe the convolution sum, thus:
-\begin{equation}
+\begin{equation*}
 y[n] =  \sum_{k=0}^{M-1} h[k] x[n-k] \equiv h[n] \star x[n]
-\end{equation}
+\end{equation*}
 
 
 <div class="example">

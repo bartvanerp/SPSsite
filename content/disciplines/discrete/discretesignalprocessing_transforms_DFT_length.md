@@ -214,13 +214,13 @@ $$
 In a similar way it follows that the second summation is always zero except for the case when the frequency index $2+k$ modulo 12 is equal to zero. Thus within the Fundamental Interval the second summation is equal to zero for all frequency indices $k$ except for $k=-2+12=10$. For this index the result is  $\frac{1}{2} \cdot 12 = 6$, as indicated in the resulting equation above.
 Concluding it follows that the 12-point DFT of the periodic sinusoidal signal $x[n]=\cos(\frac{2\pi}{6}n)$ results into two peaks at frequency indices $k=2$ and $k=10$ respectively, which is indeed the same result as shown at the right hand side of Fig. 4.
 Applying similar steps for the evaluation of a 16-point DFT of the same periodic sinusoidal signal $x[n]=\cos(\frac{2\pi}{6}n)$ the result is as follows:
-\begin{eqnarray}
+\begin{eqnarray*}
 X[k]&=&\sum_{n=0}^{\color{red}{16}-1} \cos (\frac{2\pi}{\color{purple}{6}}n) e^{-j(\frac{2\pi}{\color{red}{16}})k n} =\frac{1}{2} \sum_{n=0}^{\color{red}{16}-1} \left \{ e^{j\frac{2\pi}{\color{brown}{6}} n}
 +  e^{-j\frac{2\pi}{\color{brown}{6}} n}  \right \}
 e^{-j\frac{2 \pi}{\color{red}{16}}k n} \nonumber \\
 &=& \frac{1}{2} \sum_{n=0}^{\color{red}{16}-1} \left \{e^{j\frac{2\pi}{16} \color{yellow}{(\frac{16}{6} - k)}n} +
 e^{-j\frac{2\pi}{16}\color{orange}{(\frac{16}{6} + k)}}n \right \}
-\end{eqnarray}
+\end{eqnarray*}
 However when trying to apply the basic DFT summation property it follows that in the first summation the frequency index $k$ should be equal to $\frac{16}{6} \approx 2.7$, which is not an integer value. In other words the basic DFT summation property can not be applied to the first summation and the result of this summation will add up to a non zero value for all frequency indices $k$. A similar reasoning follows for the second summation: The frequency index $k$ should be equal to $-\frac{16}{6}$, which becomes $-\frac{16}{6}+ 16 \approx 13.3$ when taking into account modulo 16 calculation. This implies that the 16-point DFT result of the sinusoidal signal $x[n]=\cos(\frac{2\pi}{6}n)$ results in two <b> smeared out</b> peaks around integer indices $k$ which are close to the values 2.7 and 13.3, which is shown in the 16-point DFT plot of Fig. 5.
 </div>
 </div>
@@ -343,7 +343,7 @@ In this subsection we will show that the $N$-point DFT of a signal of infinite d
 An exponential decaying function which starts at time index $n=0$. The first samples of $x[n]$ are depicted at the left hand side of Fig. 6.
 The FTD of this function is obtained as follows:
 $$
-X(e^{j\theta} = \sum\_{n=-\infty}^{\infty} x[n] e^{-j\theta n}
+X(e^{j\theta}) = \sum\_{n=-\infty}^{\infty} x[n] e^{-j\theta n}
 = \sum\_{n=0}^{\infty} \left ( 0.7 \right )^n e^{-j\theta n} =
 \sum\_{n=0}^{\infty} \left ( 0.7   e^{-j\theta } \right )^n =
 \frac{1}{1 - 0.7 e^{-j\theta }}
@@ -400,13 +400,13 @@ From these samples we clearly see that the samples are not exactly the same as t
 
 It is obvious that we can improve the result by using more samples of signal $x[n]$, that is increasing the length $N$ of the DFT. In the plots of Fig. 7 the DFT length $N$ is increased to $N=6$. In general however, the DFT will always be an approximation of the FTD when the signal has infinite length.
 In general the use of a length $N$ DFT for a signal of infinite duration causes aliasing in time domain. This can be proven as follows, for $k,n = 0,1, \cdots, N-1$:
-\begin{eqnarray}
+\begin{eqnarray*}
 &Y[k]= X(e^{j\theta})|\_{\theta = k \cdot \frac{2 \pi}{N}} =
 \sum\_{l=-\infty}^{\infty} x[l] e^{-j\frac{2 \pi}{N} kl}& \newline
 &\hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm}& \newline  
 &y[n]=\frac{1}{N} \sum\_{k=0}^{N-1} Y[k] e^{j2 \pi nk/N} =
 \sum\_{m=-\infty}^{\infty} x[n-m N]&
-\end{eqnarray}
+\end{eqnarray*}
 
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>The DFT of an infinite duration discrete time signal is always an approximation. Exact spectral content can only be obtained by an FTD.</i></div>
 
