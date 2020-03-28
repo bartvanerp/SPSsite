@@ -11,14 +11,14 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Reconstruction of sinusoidal signals"
-  weight = 22
+  weight = 2
   parent = "Basics of sampling and reconstruction"
 
 +++
 
 In this section we will describe the reconstruction process of the D-to-C convertor which converts the sequence of discrete-time samples $x[n]$ into the continuous-time signal $x(t)$.
 
-## Conceptual video
+## Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yOi0SIJGnIA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

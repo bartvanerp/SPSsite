@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "Sampling of sinusoidal signals"
-  weight = 21
+  weight = 1
   parent = "Basics of sampling and reconstruction"
 
 +++
@@ -106,14 +106,14 @@ and the frequency variables have the following dimensions:
 
 For a continuous-time sinusoidal signal $x(t)$ we have seen before that a representation of the spectral content of such a signal can be found easily by using <a href="../../../disciplines/mathematicalbackground/mathematicalbackground_complex_euler">Euler</a>, that is by rewriting $x(t)$ in terms of <a href="../../../disciplines/mathematicalbackground/mathematicalbackground_complex_phasors">phasors</a>. The weights of these <a href="../../../disciplines/mathematicalbackground/mathematicalbackground_complex_phasors">phasors</a> represent the spectral content of $x(t)$.
 
-In a similar way we can use <a href="../../../disciplines/mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> to find a representation of the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">spectral content</a> of a discrete-time sinusoidal signal $x[n]$. Such a description is only valid if the sequence of samples $x[n]$ is periodic. This is true if there exists an integer number $N$ for which $x[n]=x[n+N]$, leading to:
+In a similar way we can use <a href="../../../disciplines/mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> to find a representation of the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum_main">spectral content</a> of a discrete-time sinusoidal signal $x[n]$. Such a description is only valid if the sequence of samples $x[n]$ is periodic. This is true if there exists an integer number $N$ for which $x[n]=x[n+N]$, leading to:
 $A \cos \left(2 \pi \frac{f}{f_s} n + \phi\right) = A \cos \left(2 \pi \frac{f}{f_s} (n+N) + \phi\right)$
 or equivalently:
 $2 \pi \frac{f}{f_s} \cdot N = \lambda \cdot 2 \pi \mbox{ with integer } \lambda$, which is similar to  $\frac{f}{f_s} = \frac{\lambda}{N}$, or in other words the fraction $\frac{f}{f_s}$ must be a rational number.
 
-The <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">spectral content</a> of $x[n]$ can be determined by rewriting $x[n]$ as
+The <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum_main">spectral content</a> of $x[n]$ can be determined by rewriting $x[n]$ as
 $$ x[n] = \left ( \frac{A}{2} e^{j\phi} \right ) \cdot e^{j\theta n} + \left ( \frac{A}{2} e^{-j\phi} \right ) \cdot e^{-j\theta n} $$
-From this equation it follows that the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">spectral representation</a> of the discrete-time sinusoidal signal $x[n]$ contains two frequency components: One with the complex value $\left( \frac{A}{2} e^{j\phi} \right)$ for the relative frequency $+ \theta$ and another one with the complex value $\left( \frac{A}{2} e^{-j\phi} \right)$ for relative frequency $ - \theta$.
+From this equation it follows that the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum_main">spectral representation</a> of the discrete-time sinusoidal signal $x[n]$ contains two frequency components: One with the complex value $\left( \frac{A}{2} e^{j\phi} \right)$ for the relative frequency $+ \theta$ and another one with the complex value $\left( \frac{A}{2} e^{-j\phi} \right)$ for relative frequency $ - \theta$.
 
 <div class="example">
 <h4> Example </h4>
@@ -162,8 +162,8 @@ x[n] &=& \left( \frac{A}{2} e^{j\phi} \right) \cdot e^{j\theta n} \cdot 1 + \lef
 &=& \left( \frac{A}{2} e^{j\phi} \right) \cdot e^{j\theta n} \cdot e^{j2\pi n} + \left( \frac{A}{2} e^{-j\phi} \right) \cdot e^{-j\theta n} \cdot e^{-j2 \pi n} \newline
 &=& \left( \frac{A}{2} e^{j\phi} \right) \cdot e^{j(\theta + 2 \pi) n} + \left( \frac{A}{2} e^{-j\phi} \right) \cdot e^{-j(\theta + 2 \pi) n}
 \end{eqnarray*}$$
-From this equation it follows that the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">spectral representation</a> of $x[n]$ consists again of the same two bars, but now at the relative frequencies $\theta + 2 \pi$ and $-(\theta + 2 \pi)$.
-So we have found two different ways to represent the spectral information of the same sequence of samples $x[n]$. Moreover we can find an infinite amount of different <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">spectral representations</a>, just by adding or subtraction an integer times $2\pi$ to the relative frequency $\theta$. Thus the same relative <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">spectral content</a> is repeated every $2\pi$.
+From this equation it follows that the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum_main">spectral representation</a> of $x[n]$ consists again of the same two bars, but now at the relative frequencies $\theta + 2 \pi$ and $-(\theta + 2 \pi)$.
+So we have found two different ways to represent the spectral information of the same sequence of samples $x[n]$. Moreover we can find an infinite amount of different <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum_main">spectral representations</a>, just by adding or subtraction an integer times $2\pi$ to the relative frequency $\theta$. Thus the same relative <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum_main">spectral content</a> is repeated every $2\pi$.
 
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>The spectral representation of a discrete-time signal $x[n]$ is not unique. The relative frequency representation is periodic with period $2\pi$.</i></div>
 
@@ -171,7 +171,7 @@ So we have found two different ways to represent the spectral information of the
 <div class="example">
 <h4> Example </h4>
 <hr>
-Plot the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">spectral representation</a> of the sequence of samples which are represented by $x[n]=2 \cos(0.4 \pi n + \frac{\pi}{4})$ in the range $-3 \pi < \theta < 3 \pi$.
+Plot the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum_main">spectral representation</a> of the sequence of samples which are represented by $x[n]=2 \cos(0.4 \pi n + \frac{\pi}{4})$ in the range $-3 \pi < \theta < 3 \pi$.
 <button class="collapsible">Show solution</button>
 <div class="content">
 By using <a href="../../../disciplines/mathematicalbackground/mathematicalbackground_complex_euler">Euler</a> we can write $x[n]$ as
@@ -192,7 +192,7 @@ x[n] &=& e^{j{\color{red}{(-1.6 \pi n + \frac{\pi}{4})}}} + e^{-j{\color{blue}{(
 \end{eqnarray*}
 Note that for this last case the phase has changed from sign.
 All these possibilities are depicted in the Figure below.
-From this Figure it follows that the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">spectral representation</a> of $x[n]$ is indeed repeated every $2\pi$ outside the period $-\pi < \theta < \pi$.
+From this Figure it follows that the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum_main">spectral representation</a> of $x[n]$ is indeed repeated every $2\pi$ outside the period $-\pi < \theta < \pi$.
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
@@ -244,7 +244,7 @@ The Figure below shows a plot with two periods of the two different continuous-t
 
 
 ### The Fundamental Interval (FI)
-We have seen that the relative frequency representation of a discrete-time signal is periodic with period $2\pi$. So in general only one interval of width $2\pi$ is of importance. In most cases we will use the interval of relative frequencies $-\pi < \theta \leq \pi$. This interval is called the Fundamental Interval (FI). Furthermore from the definition of the <a href="../../../disciplines/discretesignalprocessing_sampling_sampling/#absolute-and-relative-frequency">relative frequency</a>
+We have seen that the relative frequency representation of a discrete-time signal is periodic with period $2\pi$. So in general only one interval of width $2\pi$ is of importance. In most cases we will use the interval of relative frequencies $-\pi < \theta \leq \pi$. This interval is called the Fundamental Interval (FI). Furthermore from the definition of the <a href="../../../disciplines/discrete/discretesignalprocessing_sampling_sampling/#absolute-and-relative-frequency">relative frequency</a>
  $\theta=2 \pi \frac{f}{f_s}$, the boundaries $\pm \pi$ of relative frequencies of the FI are related to the absolute frequencies $\pm \frac{f_s}{2}$.
 <div style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px"><i>The Fundamental Interval is given for the following frequencies as:</i>
 <table style="width:100%">
@@ -279,7 +279,7 @@ In this example we convert the continuous-time signal $x(t) = x_1(t) + x_2(t)$, 
 $$
 x_1(t)= 4 \cos(400 \pi t + \frac{\pi}{4}) \mbox{  and  } x_2(t)= 2 \sin (1000 \pi t - \frac{\pi}{3}),
 $$
-to the discrete-time domain samples $x[n]=x_1[n]+x_2[n]$, by an ideal C-to-D convertor which runs at a sample rate of $f_s=600$ [samples/sec]. Give a plot of the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">frequency representation</a> of the continuous-time signal $x(t)$ and give also a plot of the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum">frequency representation</a> of the discrete-time signal $x[n]$ in the Fundamental Interval (FI).
+to the discrete-time domain samples $x[n]=x_1[n]+x_2[n]$, by an ideal C-to-D convertor which runs at a sample rate of $f_s=600$ [samples/sec]. Give a plot of the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum_main">frequency representation</a> of the continuous-time signal $x(t)$ and give also a plot of the <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_spectrum_main">frequency representation</a> of the discrete-time signal $x[n]$ in the Fundamental Interval (FI).
 <button class="collapsible">Show solution</button>
 <div class="content">
 The spectral components of the continuous-time domain signal $x(t)$ are depicted in the upper part of the Figure below.
