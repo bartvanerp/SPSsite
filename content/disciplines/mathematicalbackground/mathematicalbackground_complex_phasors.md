@@ -15,13 +15,13 @@ type = "docs"       # Do not modify.
   weight = 14
 
 +++
-
-## Introduction to phasors
+## ⯈ Screencast video
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/IS3LOzP5cqk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <br></br>
 
+## Introduction to phasors
 Many real world signals can be described by a time depending sinusoidal signals such as:
 $$ x(t) = A \cos (\omega_o t +\phi) $$
 In this equation is $A$ represents the amplitude, from which the dimension is equal to the dimension of the signal $x(t)$, $\omega_0$ [rad/sec] the radian (or angular) frequency and $\phi$ [rad] the phase.
