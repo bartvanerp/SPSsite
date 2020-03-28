@@ -26,9 +26,9 @@ The concepts covered in this module are:
 2. **Continuous-time systems** (to be added) - When a continuous-time signal passes through a system it is interesting to know what the expected output signal will be. In order to make these predictions, it is desired to characterize a system and determine its properties.
 
 3. **Continuous-time transforms** - Continuous-time signals are usually represented in the time-domain. However, for many applications it is usually more convenient to transform this signal first to another domain, such as the frequency domain, in order to perform calculations.
-    - <a href="../continuoussignalprocessing_transforms_spectrum_main">Spectrum of sinusoidal signals</a>
-    - <a href="../continuoussignalprocessing_transforms_fourier_main">Fourier series (FS)</a>
-    - <a href="../continuoussignalprocessing_transforms_ftc_main">Fourier transform for continuous-time signals (FTC)</a>
+    - <a href="../continuoussignalprocessing_transforms_spectrum_main">Transforms I: Spectrum of sinusoidal signals</a>
+    - <a href="../continuoussignalprocessing_transforms_fourier_main">Transforms II: Fourier series (FS)</a>
+    - <a href="../continuoussignalprocessing_transforms_ftc_main">Transforms III: Fourier transform for continuous-time signals (FTC)</a>
     <br></br>
 
 4. **Transform analysis of continuous-time systems** (to be added) - Similarly to continuous-time signals, also systems can be characterized in different domains. Usually this allows for better insight in the system and simplified calculations.
