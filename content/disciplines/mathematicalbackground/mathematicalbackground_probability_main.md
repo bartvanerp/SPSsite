@@ -34,3 +34,5 @@ The concepts covered in this module are:
 3. <a href="../mathematicalbackground_probability_functions">Functions and pairs of random variables</a> - Random variables are often not present in their simplest form. Problems usually involve functions of random variables and/or multiple random variables.
 
 4. <a href="../mathematicalbackground_probability_families">Families of random variables</a> - Some processes can be described by random variables following very specific and well-known functions. These common functions and their characteristics are called the families of random variables.
+
+5. <a href="../mathematicalbackground_probability_vectors">Random vectors</a> - Usually a random process involves multiple parameters. Multiple random variables can be concatenated into a single random vector, which greatly simplifies the notation and allows for more exotic operations.
