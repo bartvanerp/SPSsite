@@ -17,13 +17,15 @@ type = "docs"  # Do not modify.
 
 In this section we will discuss the FTC of some basic signals. As such we will discuss the FTC and IFTC of a delta pulse, a block signal, a sinusoidal signal and finally a pulse train.
 
+
+## Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jWRR689o1zs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br></br>
 
-## (I)FTC delta pulse and General Phasor Integral (GPI)
+## (I)FTC of delta pulse and General Phasor Integral (GPI)
 The FTC of a delta pulse $\delta(t)$ can be found as follows:
 $$
 X(f) = \mathcal{F}\\{x(t)\\}=\mathcal{F}\\{\delta(t)\\}=\int\_{-\infty}^{\infty} \delta(t) e^{-j2 \pi f t} \text{d} t = 1
@@ -52,7 +54,7 @@ $$
 
 <br></br>
 
-## (I)FTC of block
+## (I)FTC of block signal
 Before we have approximated the FTC of a block signal by viewing it as an approximation of a periodic block signal. By doing so we could evaluate the FTC of a block signal as an approximation of the Fourier Series of a periodic block signal. The following derivations show that the result is the same by applying the FTC equation.
 
 The block signal $x(t)$ is shown in Fig. 6 and defined as:
@@ -120,8 +122,8 @@ In other words: The IFTC of a block-function in frequency domain is a sinc-funct
 
 <br></br>
 
-## FTC Sinusoidal
-The following derivations describe the evaluation of the FTC of a sinuoidal function:
+## FTC of sinusoidal signal
+The following derivations describe the evaluation of the FTC of a sinusoidal function:
 \begin{eqnarray*}
 && x(t) = \cos (2 \pi F\_0 t)
 = \frac{1}{2} e^{j2 \pi F\_0 t} + \frac{1}{2} e^{-j2 \pi F\_0 t} \newline
@@ -155,7 +157,7 @@ We have shown that a sufficient condition for the FTC to exist is that the integ
 
 <br></br>
 
-### Comparison with FS Sinusoidal
+### Comparison with FS of sinusoidal signal
 When viewing the sinusoidal signal $x(t)$ as a periodic signal $x\_p(t)$, we can evaluate the frequency content by applying the Fourier Series of one period. The first steps of these derivations are as follows:
 \begin{eqnarray*}
 \alpha\_{k} &=& \frac{1}{T\_0} \int\_{-T\_0/2}^{T\_0/2} x\_p(t) e^{-j2 \pi k F\_0 t} \text{d}t  =
@@ -191,7 +193,7 @@ From this result it follows that the main difference between the FTC and FS of a
 
 <br></br>
 
-## FTC Deltas
+## FTC of delta pulse train
 As a final example we will evaluate the FTC of an infinite train of delta pulses in time domain as depicted in Fig. 10.
 <div style="max-width: 600px; margin: auto">
   <figure>

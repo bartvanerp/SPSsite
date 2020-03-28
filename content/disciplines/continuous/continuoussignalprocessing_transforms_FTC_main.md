@@ -20,11 +20,19 @@ type = "docs"  # Do not modify.
 The <a href="../continuoussignalprocessing_transforms_fourier_main">Fourier Series (FS)</a> representation is an extremely useful signal representation. Unfortunately, this signal representation can only be used for periodic signals.
 That's why we will introduce a tool for representing non-periodic signals, known as the <b>F</b>ourier <b>T</b>ransform for <b>C</b>ontinuous time signals, abbreviated as FTC. One might wonder if we can somehow use the Fourier Series to develop a representation for non-periodic signals. As it turns out, this is possible. By viewing a non-periodic as a periodic signal with an infinitely large period, we can use the Fourier Series to develop a more general signal representation that can be used in the non-periodic case. By doing so we should realise that the development of the FTC is not completely rigorous. Instead it is plausible which suggests the correct form of the FTC equations and it provides a useful interpretation.
 
+### Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/r1_Dotj41L4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+<br></br>
 
+## Module overview
+This module covers the following topics:
+
+1. <a href="../continuoussignalprocessing_transforms_ftc_limit">FTC as limit of the FS</a> - We will show that the FTC is obtained as an extension of the Fourier series when the period goes to infinity.
+2. <a href="../continuoussignalprocessing_transforms_ftc_examples">FTC examples</a> - Several examples are covered to get the reader acquainted with the FTC. The examples discussed are elementary signals and can therefore be used in combination with the properties of the FTC for more complex signals.
+3. <a href="../continuoussignalprocessing_transforms_ftc_properties">FTC properties</a> - The definition of the FTC inherently leads to many different properties which can be used to simplify notations.
 
 <br></br>
 
