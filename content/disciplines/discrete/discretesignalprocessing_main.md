@@ -27,8 +27,6 @@ The concepts covered in this discipline are:
 2. <a href="../discretesignalprocessing_signals_main">Discrete-time signals</a> - There exist infinitely many signals. These signals can be characterized by certain properties that tell us something about the signal. Within the set of all possible signals, some elementary signals are used very often due to their simplicity and their descriptive power.
 
 3. **Discrete-time systems** - When a discrete-time signal passes through a system it is interesting to know what the expected output signal will be. In order to make these predictions, it is desired to characterize a system and determine its properties.
-    - <a href="../discretesignalprocessing_systems_fir_main">Finite impulse response (FIR) filters</a>
-<br></br>
 
 4. **Discrete-time transforms** - Discrete-time signals are usually represented in the time-domain. However, for many applications it is usually more convenient to transform this signal first to another domain, such as the frequency domain, in order to perform calculations.
     - <a href="../discretesignalprocessing_transforms_ftd_main">Fourier transform for discrete-time signals (FTD)</a>
@@ -43,7 +41,9 @@ The concepts covered in this discipline are:
 
 6. <a href="../discretesignalprocessing_multirate_main">Sampling, reconstruction and multirate signal processing</a> - The sample rate of a signal is a fixed characteristic of the measurement device. Sometimes it is desired to reduce or increase this rate after the measurement itself. This will lead to certain consequences.
 
-7. **Filter structures** (to be added) - Some filter structures behave in a very distinct way. Because of their characteristics and consequences it is worth discussing them.
+7. **Filter structures** - Some filter structures behave in a very distinct way. Because of their characteristics and consequences it is worth discussing them.
+    - <a href="../discretesignalprocessing_filters_fir_main">Filter stuctures I: Finite impulse response (FIR) filters</a>
+<br></br>
 
 8. **Filter design** (to be added) - The analysis of a filter gives insight into the operations of a filter. However, it is also important to use this knowledge in order to design a filter.
 

@@ -12,10 +12,10 @@ type = "docs"  # Do not modify.
 [menu.discrete]
   name = "Convolution sum"
   weight = 2
-  parent = "Systems I: Finite impulse response (FIR) filter"
+  parent = "Filter structures I: Finite impulse response (FIR) filter"
 +++
 
-## Screencast video
+## Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7Q8w8XkYmHk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

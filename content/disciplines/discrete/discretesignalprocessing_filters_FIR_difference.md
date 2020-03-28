@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 [menu.discrete]
   name = "Difference equation"
   weight = 1
-  parent = "Systems I: Finite impulse response (FIR) filter"
+  parent = "Filter structures I: Finite impulse response (FIR) filter"
 +++
 
 An example of a filter operation is the calculation of the running average of a sequence of samples. The general expression for an $M$-point running average filter equals
@@ -187,7 +187,7 @@ and by substituting these DE's into each other, we obtain:
 
 ## The impulse response
 
-### Screencast video
+### Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/20j0M8b_pu4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
