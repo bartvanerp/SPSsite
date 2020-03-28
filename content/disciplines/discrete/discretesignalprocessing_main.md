@@ -20,7 +20,7 @@ The signal processing field deals with the analysis and manipulation of signals.
 Signals that are observed in everyday life are continuous-time signals, which are not yet converted to the digital domain.
 Understanding the basics that are related to the signal and system behavior in the continuous-time domain allows for a better understanding on how to process these signals in the digital domain. This module therefore covers the basics of signals and systems in the continuous-time domain.
 
-The concepts covered in this module are:
+The concepts covered in this discipline are:
 
 1. <a href="../discretesignalprocessing_sampling_main">Basics of sampling and reconstruction</a> - Continuous-time signals are impractical to work with on computers. Therefore the conversion to the discrete-time domain is required in order to perform calculations on them. The conversion between the continuous- and discrete-time domain can have implications for the reconstructed signal.
 

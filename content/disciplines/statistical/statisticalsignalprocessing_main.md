@@ -17,7 +17,7 @@ type = "docs"  # Do not modify.
 
 When processing and analyzing signals, the noise component makes it more difficult to draw meaningful conclusions on specific signal samples. In order to cope adequately with the uncertainty involved, deterministic signals can better be regarded as random signals, where the exact outcome in time is unknown, but where conclusions can be drawn from the statistical properties of the signal.
 
-The concepts covered in this module are:
+The concepts covered in this discipline are:
 
 1. <a href="../statisticalsignalprocessing_signals_main">Stochastic or random signals</a> - In this module the deterministic signals as we are familiar to will be extended to also contain a certain degree of uncertainty. Furthermore, tools will be provided to deal with this uncertainty.
 
