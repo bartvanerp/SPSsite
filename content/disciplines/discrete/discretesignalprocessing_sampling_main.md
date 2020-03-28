@@ -15,7 +15,9 @@ type = "docs"  # Do not modify.
 
 +++
 
-## Conceptual video
+## Introduction
+
+### Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/GhZ0H8nQKLY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -27,13 +29,7 @@ This module will cover one of the most fundamental aspects in signal processing,
 
 1. <a href="../discretesignalprocessing_sampling_sampling">Sampling of sinusoidal signals</a> - First the concept of sampling is discussed, which represents the conversion from the continuous-time to discrete-time domain. The frequency of the sampled signal is better to be described by a relative frequency, because of the effect of the sampling process. Through the sampling there can also be a loss of spectral information, known as aliasing. This is caused by the uniqueness issue.
 2. <a href="../discretesignalprocessing_sampling_reconstruction">Reconstruction of sinusoidal signals</a> - Similarly to the sampling, the signal can also be converted back from the discrete-time domain to the continuous-time domain. In order to prevent aliasing the sampling theorem has to be satisfied.
-
-<br></br>
-
-## Examples
-<div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/WRWZTm2MWc0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+3. <a href="../discretesignalprocessing_sampling_examples">Examples</a> - In order to get the reader more acquainted with the sampling procedure, this section includes a screencast video with several examples.
 
 <br></br>
 
@@ -180,7 +176,7 @@ In this section several exercises are available, including their answers. The ex
 ### Answers
 Download the answers <a href="/../files/3.Exercises/Answers/3.SAA-answers.pdf">here</a>.
 
-### Pencast videos
+### Pencast videos [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPHjRcAglKEybG4eE5b9MtdP" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -199,10 +195,11 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
     </embed>
 </object>
 
-### MATLAB demo
+### MATLAB demo [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xk942JXSNxg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
 <br></br>
 
 ## Summary
