@@ -10,11 +10,22 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Systems I: Finite impulse response (FIR) filter"
-  weight = 41
+  name = "Filter structures I: Finite impulse response (FIR) filter"
+  weight = 91
 
 +++
+## Introduction
+Finite impulse response filters are the most basic types of filters. They simply weigh different delayed inputs in order to calculate the output. Because of this simplicity, this filter structure allows for a thorough analysis.
 
+<br></br>
+## Module overview
+This module will cover the following topics:
+
+1. <a href="../discretesignalprocessing_filters_fir_difference">Difference equation</a> - The difference equation is the mathematical description of an FIR filter. It describes the relationship between the input and output samples.
+2. <a href="../discretesignalprocessing_filters_fir_convolution">Convolution</a> - The output of an FIR filter can be calculated using the convolution operation.
+3. <a href="../discretesignalprocessing_filters_fir_lti">Linear time invariant</a> - The FIR filter, as described in the previous sections, belongs to a general class of systems that is used very often in practice.
+
+<br></br>
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
 
@@ -175,7 +186,7 @@ Calculate the output of this system for the given input.
 ### Answers
 Download the answers <a href="/../files/3.Exercises/Answers/4.FIR-answers.pdf">here</a>.
 
-### Pencast videos
+### Pencast videos [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPF8wIM4ys_57Vz18_18VQKJ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -193,7 +204,7 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
     </embed>
 </object>
 
-### MATLAB demo
+### MATLAB demo [⯈]
 <div class="video-container">
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/GLhOpGsN0F8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
