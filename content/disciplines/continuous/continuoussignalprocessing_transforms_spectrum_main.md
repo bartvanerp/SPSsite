@@ -15,7 +15,6 @@ type = "docs"  # Do not modify.
 
 +++
 
-<br></br>
 ## Introduction
 Many practical signals can be described as a set of sinusoidal signals. In this module we will first show how such a set can be rewritten as a set of weighted phasor components. From this description it follows that these weights represent the spectral information of the signal.
 
