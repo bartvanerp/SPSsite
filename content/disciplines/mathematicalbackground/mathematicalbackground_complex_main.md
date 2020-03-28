@@ -14,7 +14,10 @@ type = "docs"       # Do not modify.
 
 +++
 
-## ⯈ Introductory video
+## Introduction
+In addition to the set of real numbers that everyone is used to working with, a whole new dimension is introduced by complex numbers. These complex numbers can be used to describe sinusoidal signals through phasors, which has proven to be useful in many applications.
+
+### Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/Wu3nZuq0SLY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
@@ -23,8 +26,7 @@ type = "docs"       # Do not modify.
 <br></br>
 
 ## Module overview
-In addition to the set of real numbers that everyone is used to working with, a whole new dimension is introduced by complex numbers. These complex numbers can be used to describe sinusoidal signals through phasors, which has proven to be useful in many applications.
-This module concerns the following topics:
+This module covers the following topics:
 
 1. <a href="../mathematicalbackground_complex_numbersets">Number sets</a> - This section covers the inevitable need for complex numbers for engineering practices.
 2. <a href="../mathematicalbackground_complex_euler">Euler equations</a> - Through the use of Taylor expansions, we are allowed to rewrite sinusoids in terms of complex exponentials.
@@ -180,7 +182,7 @@ In this section several exercises are available, including their answers. The ex
 ### Answers
 Download the answers <a href="/../files/3.Exercises/Answers/1.CNAP-answers.pdf">here</a>.
 
-### Pencast videos
+### Pencast videos [⯈]
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPGbXXJZZ2DtsIvvg1X2xqhB" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 _The above video player contains a playlist of all pencast videos which can be expanded by clicking the playlist icon in the upper-right corner._
@@ -197,7 +199,7 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
     </embed>
 </object>
 
-### MATLAB demo
+### MATLAB demo [⯈]
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/4lThore8Lp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br></br>
