@@ -29,11 +29,8 @@ Many practical signals can be described as a set of sinusoidal signals. In this 
 This module covers the following topics:
 
 1. <a href="../continuoussignalprocessing_transforms_spectrum_sum">Real signal as sum of phasors</a> - This section will show that every real signal can be decomposed in the sum of complex phasors.
-
 2. <a href="../continuoussignalprocessing_transforms_spectrum_spectral">Spectral plot</a> - Since a signal can be decomposed in a sum of phasors with different frequencies, it is also possible to represent this graphically in a spectral plot.
-
 3. <a href="../continuoussignalprocessing_transforms_spectrum_product">Product versus sum of sinusoids</a> - Summing sinusoidal signals will simply results in a spectrum composed out of the combined original spectral components. However, the multiplication of two sinusoidal signals (better known as modulation) will have different consequences for the spectrum.
-
 4. <a href="../continuoussignalprocessing_transforms_spectrum_special">Special cases</a> - This module will end with a brief section in which several special spectra are discussed.
 
 
