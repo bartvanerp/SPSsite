@@ -19,7 +19,7 @@ The signal processing field deals with the analysis and manipulation of data.
 In order to perform operations on this data, a mathematical maturity is required.
 This module concerns several elementary but vital mathematical concepts, which are commonly used in the signal processing field.
 
-The concepts covered in this module are:
+The concepts covered in this discipline are:
 
 1. <a href="../mathematicalbackground_complex_main">Complex numbers and phasors</a> - In addition to the set of real numbers that everyone is used to working with, a whole new dimension is introduced by complex numbers. These complex numbers can be used to describe sinusoidal signals through phasors, which has proven to be useful in many applications.
 

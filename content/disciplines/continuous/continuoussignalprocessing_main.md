@@ -19,7 +19,7 @@ The signal processing field deals with the analysis and manipulation of signals.
 Signals that are observed in everyday life are continuous-time signals, which are not yet converted to the digital domain.
 Understanding the basics that are related to the signal and system behavior in the continuous-time domain allows for a better understanding on how to process these signals in the digital domain. This module therefore covers the basics of signals and systems in the continuous-time domain.
 
-The concepts covered in this module are:
+The concepts covered in this discipline are:
 
 1. **Continuous-time signals** (to be added) - There exist infinitely many signals. These signals can be characterized by certain properties that tell us something about the signal. Within the set of all possible signals, some elementary signals are used very often due to their simplicity and their descriptive power.
 
