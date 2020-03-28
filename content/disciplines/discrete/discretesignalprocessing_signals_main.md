@@ -14,6 +14,13 @@ type = "docs"  # Do not modify.
   weight = 30
 
 +++
+## Introduction
+### Screencast video [⯈]
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ijIeC5lSPRA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br></br>
 
 ## Module overview
 This module will cover some very basic characteristics and examples of signals in the discrete-time domain.
@@ -24,12 +31,6 @@ This module will cover some very basic characteristics and examples of signals i
 4. <a href="../discretesignalprocessing_signals_periodicity">Periodicity</a> - A discrete-time signal may always be classified as either periodic or aperiodic, which refers to whether the signal repeats itself.
 5. <a href="../discretesignalprocessing_signals_symmetry">Symmetry</a> - A discrete-time signal will often possess some form of symmetry that may be exploited in solving problems.
 6. <a href="../discretesignalprocessing_signals_manipulations">Signal manipulations</a> - Signal manipulations are generally decomposed of a few basic transformations.
-
-<br></br>
-## Screencast video
-<div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ijIeC5lSPRA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
 
 <br></br>
 ## Summary
