@@ -26,7 +26,7 @@ The concepts covered in this discipline are:
 
 2. <a href="../discretesignalprocessing_signals_main">Discrete-time signals</a> - There exist infinitely many signals. These signals can be characterized by certain properties that tell us something about the signal. Within the set of all possible signals, some elementary signals are used very often due to their simplicity and their descriptive power.
 
-3. **Discrete-time systems** - When a discrete-time signal passes through a system it is interesting to know what the expected output signal will be. In order to make these predictions, it is desired to characterize a system and determine its properties.
+3. <a href="../discretesignalprocessing_systems_main">Discrete-time systems</a> - When a discrete-time signal passes through a system it is interesting to know what the expected output signal will be. In order to make these predictions, it is desired to characterize a system and determine its properties.
 
 4. **Discrete-time transforms** - Discrete-time signals are usually represented in the time-domain. However, for many applications it is usually more convenient to transform this signal first to another domain, such as the frequency domain, in order to perform calculations.
     - <a href="../discretesignalprocessing_transforms_ftd_main">Transforms I: Fourier transform for discrete-time signals (FTD)</a>
