@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Properties"
+  name = "Z-transform properties"
   weight = 2
   parent = "Transforms IV: Z-transform"
 
