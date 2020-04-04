@@ -16,7 +16,28 @@ type = "docs"  # Do not modify.
 
 +++
 
+## Introduction
+The <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd_main/">Fourier Transform for Discrete-time signals and systems (FTD)</a>, is a complex function of the angular frequency $\theta$. It provides a frequency domain representation of discrete-time signals and LTI-systems. Moreover, because of the convergence conditions, in many cases the FTD of a sequence may not exist, and as a result, it is not possible to make use of such frequency domain characterization in these cases.
 
+A generalization of the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd_main/">FTD</a> leads to the Z-transform, abbreviated as ZT, which is a function of the complex variable $z$. It can exist for many sequences for which the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd_main/">FTD</a> does not exist. Also, the use of ZT techniques permits simple algebraic manipulations. Consequently, the ZT has become an important tool in the analysis and design of digital filters and it can be viewed as the discrete-time counterpart of the Laplace transform for continuous-time signals and systems.
+
+Finally, it is important to note that the 'time'-domain representation is the domain where the signals are generated and processed, and where the implementation of the filters takes place. On the other hand, the frequency domain has physical significance when analyzing frequencies, while the $z$-domain exist primarily for its convenience in mathematical analysis and synthesis.
+
+### Screencast video [⯈]
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/k3HJyYWm6yI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br></br>
+## Module overview
+This module covers the following topics:
+
+1. <a href="../discretesignalprocessing_transforms_ztransform_ztransform">Z-transform</a> - This section will explain what the Z-transform actually does and how it relates to other transforms.
+2. <a href="../discretesignalprocessing_transforms_ztransform_properties">Properties</a> - As with all other transforms, there are some commonly used properties which ease the calculations. This section will discuss the properties of the Z-transform in more detail.
+3. <a href="../discretesignalprocessing_transforms_ztransform_inverse">Inverse Z-transform</a> - This section will describe the inverse Z-transform. The formal calculation rule is relatively difficult, however, there exist several other methods that can ease the calculation.
+
+
+<br></br>
 ## Summary
 <ul>
   <li>

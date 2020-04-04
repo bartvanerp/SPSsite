@@ -26,6 +26,7 @@ Before deriving an expression of the formal definition of the Inverse Z-Transfor
 
 
 ## IZT Method 1: Table Lookup
+### Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yId3JnwpgyQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -166,6 +167,7 @@ Together with these ZT pairs and ZT properties, most IZT of interest may easily 
 </div>
 
 ## IZT Method 2: Long tail division
+### Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hjX3bM6khdA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -335,6 +337,7 @@ The IZT now results in the sequence $x[n]$,  which is a left sided sequence whic
 
 
 ## IZT Method 3: Partial fraction
+### Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZkFAgD2aGIs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -531,6 +534,7 @@ which leads to the same result as with the coefficient matching approach as disc
 
 
 ## IZT Formal method
+### Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/XJ8iA4y29yg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

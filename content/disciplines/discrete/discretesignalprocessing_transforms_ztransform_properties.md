@@ -18,7 +18,7 @@ type = "docs"  # Do not modify.
 +++
 
 
-## Conceptual video
+## Screencast video [⯈]
 
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-PwKgv0qdsg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

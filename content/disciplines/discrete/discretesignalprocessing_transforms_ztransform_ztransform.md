@@ -17,40 +17,28 @@ type = "docs"  # Do not modify.
 
 +++
 
-## Conceptual video
-<div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/k3HJyYWm6yI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<br></br>
-
-The <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">Fourier Transform for Discrete-time signals and systems (FTD)</a>, is a complex function of the angular frequency $\theta$. It provides a frequency domain representation of discrete-time signals and LTI-systems. Moreover, because of the convergence conditions, in many cases the FTD of a sequence may not exist, and as a result, it is not possible to make use of such frequency domain characterization in these cases.
-
-A generalization of the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> leads to the Z-transform, abbreviated as ZT, which is a function of the complex variable $z$. It can exist for many sequences for which the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> does not exist. Also, the use of ZT techniques permits simple algebraic manipulations. Consequently, the ZT has become an important tool in the analysis and design of digital filters and it can be viewed as the discrete-time counterpart of the Laplace transform for continuous-time signals and systems.
-
-Finally, it is important to note that the 'time'-domain representation is the domain where the signals are generated and processed, and where the implementation of the filters takes place. On the other hand, the frequency domain has physical significance when analyzing frequencies, while the $z$-domain exist primarily for its convenience in mathematical analysis and synthesis.
-
 ## Definition of the $Z$-Transform (ZT)
-The <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> of a sequence $x[n]$ is defined as follows:
+The <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd_main/">FTD</a> of a sequence $x[n]$ is defined as follows:
 \begin{equation*}\label{eq:FTD}
 X(e^{j\theta}) = \sum_{n=-\infty}^{\infty} x[n] e^{-jn \theta}
 \end{equation*}
-However, in order for this series to converge, it is necessary that the sequence $x[n]$  be absolutely sumable. Unfortunately, many of the signals that we would like to consider are not absolutely sumable and, therefore, do not have a <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a>.  An example is the sequence $x[n]=2^n[n]$ which is not absolute summable and thus the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> does not exist.
+However, in order for this series to converge, it is necessary that the sequence $x[n]$  be absolutely sumable. Unfortunately, many of the signals that we would like to consider are not absolutely sumable and, therefore, do not have a <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd_main/">FTD</a>.  An example is the sequence $x[n]=2^n[n]$ which is not absolute summable and thus the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd_main/">FTD</a> does not exist.
 
-The $Z$-transform is a generalization of <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> that allows one to deal with such not absolutely sumable sequences and is defined as follows:
+The $Z$-transform is a generalization of <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd_main/">FTD</a> that allows one to deal with such not absolutely sumable sequences and is defined as follows:
 
 \begin{equation*}
 \boxed{X(z) = \sum_{n=-\infty}^{\infty} x[n] z^{-n}} \label{eq:ZT}
 \end{equation*}
 
-in which $z$ is a complex variable.  When comparing this equation with the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> it follows that we can obtain the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> from the $Z$-transform by replacing the complex variable $z$ by $e^{j\theta}$.  In other words:
-The <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> can be viewed as the evaluation of the ZT on the unit circle $z=e^{j\theta}$:
+in which $z$ is a complex variable.  When comparing this equation with the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd_main/">FTD</a> it follows that we can obtain the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd_main/">FTD</a> from the $Z$-transform by replacing the complex variable $z$ by $e^{j\theta}$.  In other words:
+The <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd_main/">FTD</a> can be viewed as the evaluation of the ZT on the unit circle $z=e^{j\theta}$:
 
 $$
 \boxed{
 X(z)\bigg\vert_{z=e^{j\theta}} \equiv X(e^{j\theta})}
 $$
 
-and as such the ZT is a generalization of the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd/">FTD</a> as depicted in Fig. 1.
+and as such the ZT is a generalization of the <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd_main/">FTD</a> as depicted in Fig. 1.
 
 <div style="max-width: 800px; margin: auto">
   <figure>
