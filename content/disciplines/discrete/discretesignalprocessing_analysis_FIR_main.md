@@ -15,7 +15,22 @@ type = "docs"  # Do not modify.
 
 +++
 
+## Introduction
+Besides the impulse response, denoted by $h[n]$, and the Difference Equation (DE) we will see that the frequency response is an alternative description of an FIR filter. Obviously all these different descriptions are related to each other and each of the descriptions has its own advantage. The advantage of the frequency response description is that we can fairly easily see the response of the FIR to frequencies.
 
+### Screencast video [⯈]
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/-p2D03X31uk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br></br>
+
+## Module overview
+This module covers the following topics:
+
+1. <a href="../discretesignalprocessing_analysis_fir_concept">Frequency response</a> - This section will introduce the frequency response and will derive the frequency response of an arbitrary FIR filter.
+2. <a href="../discretesignalprocessing_analysis_fir_properties">Properties</a> - As will all other transforms, the frequency response has some properties which ease the calculations.
+
+<br></br>
 ## Exercises
 In this section several exercises are available, including their answers. The exercises marked in <span style="color:blue">*blue*</span> are explained by means of more extensive pencast videos.
 
@@ -160,7 +175,7 @@ In this section several exercises are available, including their answers. The ex
 ### Answers
 Download the answers <a href="/../files/3.Exercises/Answers/5.FREQ-answers.pdf">here</a>.
 
-### Pencast videos
+### Pencast videos [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PL2LT3LoI-pPHIiIx4l49DwPs8v4f0wptO" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -179,14 +194,14 @@ Accompanied to this modules are some exercises in MATLAB, which will test your k
     </embed>
 </object>
 
-### MATLAB demo
+### MATLAB demo [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7oas6xLIYhc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br></br>
 
-## Summary frequency response of FIR filters
+## Summary
 
 <b><u> Relationship impulse response and frequency response:</u></b>
 $$
