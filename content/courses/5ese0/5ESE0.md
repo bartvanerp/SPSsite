@@ -56,7 +56,7 @@ The available material consists out of:
 
 For the final examination only knowledge of the reading material and a good understanding of the homework exercises is required. However, all the other material will complement the learning process significantly.
 
-The (sub)modules on this website that are covered in this course are:
+The modules on this website that are covered in this course are:
 <!--
 <ol>
   <li>  <a href="../../disciplines/mathematicalbackground/mathematicalbackground_complex_main">Complex numbers and phasors</a> </li>
@@ -92,12 +92,12 @@ The (sub)modules on this website that are covered in this course are:
 -->
 <ol>
   <li><a href="../mathematicalbackground_complex_main">Complex numbers and phasors</a></li>
-  <li>  <a href="../continuoussignalprocessing_transforms_spectrum_main">Spectrum of sinusoidal signals</a> </li>
-  <li>  <a href="../continuoussignalprocessing_transforms_fourier_main">Fourier series</a> </li>
+  <li>  <a href="../continuoussignalprocessing_transforms_spectrum_main">Transforms I: Spectrum of sinusoidal signals</a> </li>
+  <li>  <a href="../continuoussignalprocessing_transforms_fourier_main">Transforms II: Fourier series</a> </li>
   <li>  <a href="../discretesignalprocessing_sampling_main">Sampling and reconstruction</a></li>
   <li>  <a href="../discretesignalprocessing_signals_main">Discrete-time signals</a></li>
-  <li>  <a href="../discretesignalprocessing_systems_fir_main">Finite impulse response filters</a> </li>
-  <li>  <a href="../discretesignalprocessing_analysis_frequency_main">Frequency response of finite impulse response filters</a> </li>
+  <li>  <a href="../discretesignalprocessing_filters_fir_main">Filter structures I: Finite impulse response filters</a> </li>
+  <li>  <a href="../discretesignalprocessing_analysis_fir_main">Analysis I: Frequency response of finite impulse response filters</a> </li>
 </ol>
 
 <!--
@@ -119,7 +119,7 @@ The material covered in this course is based on the first six chapters of the bo
 
 <br></br>
 
-## Lecture recordings
+## Lecture recordings [⯈]
 
 The below table provides the links to the lecture recordings of the course. The lectures were recorded in the academic year 2016/2017 and are available for students of the TU/e through the following links.
 
