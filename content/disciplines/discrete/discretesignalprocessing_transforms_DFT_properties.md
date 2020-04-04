@@ -16,10 +16,11 @@ type = "docs"  # Do not modify.
 
 +++
 
-
+## Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0yRxU3HQWto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<br></br>
 
 In this section we will discuss the main DFT properties. We will see that most of these properties look similar to the properties of other Fourier transforms however there are some important differences which are caused by the fact that the DFT is a periodic, or circular, operation.
 

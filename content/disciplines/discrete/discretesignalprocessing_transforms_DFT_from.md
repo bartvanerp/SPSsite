@@ -17,14 +17,6 @@ type = "docs"  # Do not modify.
 +++
 
 
-## DFT Concept
-<div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/SAq9y5t6FfY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<br></br>
-In previous modules have seen that a Fourier transform can be used to calculate the frequency distribution of a signal. Various Fourier transforms have been discussed, each for a different type signal. In this section we will introduce again another Fourier transform: The Discrete Fourier Transform (DFT). The main advantage of the DFT is that this transform, in contrast to almost all other Fourier transforms, can be calculated on a computer. In this section we will give  a conceptual view of the DFT. In the first subsection we show how the DFT equation can be related, in different intermediate steps, to the Fourier Transform for Continuous time signals (FTC). In the second subsection we will discuss the periodic behaviour of the DFT. In order to calculate the frequency distribution on a computer, we will explain in the last subsection how the DFT can extract frequencies of a signal.
-
-<br></br>
 ## From FTC via FTD to DFT
 The purpose of this subsection is to derive a Fourier transform, the DFT, that can be calculated on a computer. So we have to find a transform whose variables are discrete in both time and frequency domain.
 
