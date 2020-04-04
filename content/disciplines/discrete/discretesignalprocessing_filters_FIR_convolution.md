@@ -25,7 +25,7 @@ type = "docs"  # Do not modify.
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/FIR.svg"
+      src="/../files/7.Images/discrete/filters/FIR/FIR.svg"
       alt="Realization scheme of a finite impulse response filter."
     />
     <figcaption class="numbered">
@@ -85,7 +85,7 @@ which is depicted at the lower right corner of the figure below.
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/exconvolution.svg"
+      src="/../files/7.Images/discrete/filters/FIR/exconvolution.svg"
       alt="Example of convolution sum procedure."
     />
     <figcaption>

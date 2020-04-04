@@ -57,7 +57,7 @@ which is depicted in the figure below.
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/3pointaverage.svg"
+      src="/../files/7.Images/discrete/filters/FIR/3pointaverage.svg"
       alt="Example of a 3-point running average operation."
     />
     <figcaption>
@@ -74,7 +74,7 @@ Fig. 1 shows the effect of an $M$-point running average filter for increasing va
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/trendincosine.svg"
+      src="/../files/7.Images/discrete/filters/FIR/trendincosine.svg"
       alt="Result of averaging operation: For larger $M$ less fluctuations."
     />
     <figcaption class="numbered">
@@ -100,7 +100,7 @@ When realizing or implementing a discrete-time filter, it follows from the gener
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/basicbuildingblocks.svg"
+      src="/../files/7.Images/discrete/filters/FIR/basicbuildingblocks.svg"
       alt="Basic building blocks of discrete-time filters."
     />
     <figcaption class="numbered">
@@ -120,7 +120,7 @@ The realization scheme is depicted in the figure below. This scheme consists of 
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/implementationexample.svg"
+      src="/../files/7.Images/discrete/filters/FIR/implementationexample.svg"
       alt="Implementation scheme (signal flow graph) of a simple discrete-time filter."
     />
     <figcaption>
@@ -138,7 +138,7 @@ From the DE of an FIR filter it follows that a general realization scheme of an 
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/FIR.svg"
+      src="/../files/7.Images/discrete/filters/FIR/FIR.svg"
       alt="Realization scheme of a finite impulse response filter."
     />
     <figcaption class="numbered">
@@ -158,7 +158,7 @@ Give the difference equation of the system as depicted in the following figure:
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/transpose2ndord.svg"
+      src="/../files/7.Images/discrete/filters/FIR/transpose2ndord.svg"
       alt="Implementation scheme (signal flow graph) of a simple discrete-time filter."
     />
     <figcaption>
@@ -199,7 +199,7 @@ In the previous section we have seen that the DE describes the input-output rela
 <div style="max-width: 500px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/impulseresponse.svg"
+      src="/../files/7.Images/discrete/filters/FIR/impulseresponse.svg"
       alt="Impulse response ${\color{red}{h[n]}}$ of a system."
     />
     <figcaption class="numbered">
@@ -233,7 +233,7 @@ which is also depicted in the figure below.
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/imprespexample.svg"
+      src="/../files/7.Images/discrete/filters/FIR/imprespexample.svg"
       alt="Example of an impulse response ${\color{red}{h[n]}}$ of a system."
     />
     <figcaption>

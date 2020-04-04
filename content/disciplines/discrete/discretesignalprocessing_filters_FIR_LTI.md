@@ -38,7 +38,7 @@ A visualisation of this definition is depicted in Fig. 1.
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/linear.svg"
+      src="/../files/7.Images/discrete/filters/FIR/linear.svg"
       alt="Example of a linear system."
     />
     <figcaption class="numbered">
@@ -78,7 +78,7 @@ A visualisation of this definition is depicted in Fig. 2.
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/timeinv.svg"
+      src="/../files/7.Images/discrete/filters/FIR/timeinv.svg"
       alt="Example of a time-invariant system."
     />
     <figcaption class="numbered">
@@ -187,7 +187,7 @@ The upper left hand figure of Fig. 3 shows the cascading of two LTI systems, one
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/cascadeequiv.svg"
+      src="/../files/7.Images/discrete/filters/FIR/cascadeequiv.svg"
       alt="Equivalence of cascading LTI filters."
     />
     <figcaption class="numbered">
@@ -220,7 +220,7 @@ The cascading of two LTI systems is depicted in the figure below. Give an expres
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/examplecascade.svg"
+      src="/../files/7.Images/discrete/filters/FIR/examplecascade.svg"
       alt="Example of cascading two LTI systems."
     />
     <figcaption>
