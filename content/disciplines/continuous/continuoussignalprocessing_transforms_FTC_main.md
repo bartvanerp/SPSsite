@@ -67,8 +67,8 @@ $$
 <br>
 <b><u>General Phasor Integral property (GPI)</u></b>
 \begin{eqnarray*}
-\int_{-\infty}^{\infty}  e^{-j2 \pi (f \pm f\_0) t} \text{d} t
-&\overset{\text{GPI}}{=}& \delta(f \pm f\_0)
+\int_{-\infty}^{\infty}  e^{-j2 \pi (f \pm f_0) t} \text{d} t
+&\overset{\text{GPI}}{=}& \delta(f \pm f_0)
 \end{eqnarray*}
 
 <br>
@@ -87,7 +87,7 @@ X(f) = \begin{cases}
 0 & \text{elsewhere}
 \end{cases}\newline
 x(t) = \cos (2 \pi F_0 t) &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& X(f)=\frac{1}{2} \delta(f-F_0) + \frac{1}{2} \delta(f+F_0) \newline
-x(t)=\sum\_{n=-\infty}^{\infty} \delta(t - n \cdot T) &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& X(f)=\frac{1}{T} \sum\_{n=-\infty}^{\infty} \delta (f - \frac{n}{T} )
+x(t)=\sum_{n=-\infty}^{\infty} \delta(t - n \cdot T) &\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ& X(f)=\frac{1}{T} \sum_{n=-\infty}^{\infty} \delta (f - \frac{n}{T} )
 \end{eqnarray*}
 
 <br>
@@ -99,12 +99,12 @@ x(t)=\sum\_{n=-\infty}^{\infty} \delta(t - n \cdot T) &\circ  \hspace{-1.7mm} - 
 <li> Time domain shift: $x(t-t_0) \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \text{ } e^{-j2 \pi f t_0} X(f)$ </li>
 <li> Frequency domain shift: $e^{j2 \pi f_0 t} x(t) \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ
 \text{ } X(f-f_0)$ </li>
-<li> Modulation: $2 \cos(2 \pi f_0 t) \cdot x(t) \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \text{ } X(f-f\_0) + X(f+f\_0)$ </li>
+<li> Modulation: $2 \cos(2 \pi f_0 t) \cdot x(t) \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \text{ } X(f-f_0) + X(f+f_0)$ </li>
 <li> Time domain convolution: $x(t) \star y(t) \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \text{ } X(f) \cdot Y(f)$ </li>
-<li> Frequency domain convolution: $x(t \cdot y(t) \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \text{ } X(f) \star Y(f)$ </li>
+<li> Frequency domain convolution: $x(t) \cdot y(t) \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \text{ } X(f) \star Y(f)$ </li>
 <li> Time domain differentiation: $\frac{\text{d} }{\text{d} t} x(t) \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \text{ } j \omega X(f)$ </li>
 <li> Frequency domain differentiation: $t x(t)  \text{ } \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \text{ } \frac{j}{2 \pi} \frac{\text{d}}{\text{d} f} X(f)$ </li>
-<li> Theorem of Parseval: $\int\_{-\infty}^{\infty} |x(t)|^2 \text{d} t = \int\_{-\infty}^{\infty} |X(f)|^2 \text{d}f$ </li>
+<li> Theorem of Parseval: $\int_{-\infty}^{\infty} |x(t)|^2 \text{d} t = \int_{-\infty}^{\infty} |X(f)|^2 \text{d}f$ </li>
 </ul>
 
 <br>
