@@ -29,9 +29,9 @@ The concepts covered in this discipline are:
 3. **Discrete-time systems** - When a discrete-time signal passes through a system it is interesting to know what the expected output signal will be. In order to make these predictions, it is desired to characterize a system and determine its properties.
 
 4. **Discrete-time transforms** - Discrete-time signals are usually represented in the time-domain. However, for many applications it is usually more convenient to transform this signal first to another domain, such as the frequency domain, in order to perform calculations.
-    - <a href="../discretesignalprocessing_transforms_ftd_main">Fourier transform for discrete-time signals (FTD)</a>
-    - <a href="../discretesignalprocessing_transforms_dft_main">Discrete Fourier transform (DFT)</a>
-    - <a href="../discretesignalprocessing_transforms_ztransform_main">Z-transform</a>
+    - <a href="../discretesignalprocessing_transforms_ftd_main">Transforms I: Fourier transform for discrete-time signals (FTD)</a>
+    - <a href="../discretesignalprocessing_transforms_dft_main">Transforms II: Discrete Fourier transform (DFT)</a>
+    - <a href="../discretesignalprocessing_transforms_ztransform_main">Transforms IV: Z-transform</a>
 <br></br>
 
 5. **Transform analysis of discrete-time systems** - Similarly to discrete-time signals, also systems can be characterized in different domains. Usually this allows for better insight in the system and simplified calculations.
