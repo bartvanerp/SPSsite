@@ -35,8 +35,8 @@ The concepts covered in this discipline are:
 <br></br>
 
 5. **Transform analysis of discrete-time systems** - Similarly to discrete-time signals, also systems can be characterized in different domains. Usually this allows for better insight in the system and simplified calculations.
-    - <a href="../discretesignalprocessing_analysis_fir_main">Frequency response FIR</a>
-    - <a href="../discretesignalprocessing_analysis_lti_main">Frequency response LTI</a>
+    - <a href="../discretesignalprocessing_analysis_fir_main">Analysis I: Frequency response FIR</a>
+    - <a href="../discretesignalprocessing_analysis_lti_main">Analysis II: Frequency response LTI</a>
 <br></br>
 
 6. <a href="../discretesignalprocessing_multirate_main">Sampling, reconstruction and multirate signal processing</a> - The sample rate of a signal is a fixed characteristic of the measurement device. Sometimes it is desired to reduce or increase this rate after the measurement itself. This will lead to certain consequences.
