@@ -1,5 +1,5 @@
 +++
-title = "Frequency response FIR: conceptual view"
+title = "Frequency response"
 
 # date = {{ .Date }}
 lastmod = 2019-10-13
@@ -10,22 +10,15 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Concept"
+  name = "Frequency response FIR"
   weight = 1
   parent = "Analysis I: Frequency response FIR"
 +++
 
 
-## Frequency response FIR
-Besides the impulse response, denoted by $h[n]$, and the Difference Equation (DE) we will see that the frequency response is an alternative description of an FIR filter. Obviously all these different descriptions are related to each other and each of the descriptions has its own advantage. The advantage of the frequency response description is that we can fairly easily see the response of the FIR to frequencies.
 
-### Conceptual video
-<div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/-p2D03X31uk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<br></br>
 
-### Response FIR to phasor with single frequency
+## Response FIR to phasor with single frequency
 Since each single frequency can be viewed as the sum of two phasor components, we will first study the response of a very simple FIR filter, a delay, as a result of an input signal $x[n]$ which consists of one phasor frequency $\theta_1$, amplitude $A$ and phase $\phi$, thus $x[n]=\color{red}{ A e^{j(\theta_1 n + \phi)}}$. This is depicted in Fig. 1.
 
 <div style="max-width: 400px; margin: auto">
@@ -165,8 +158,8 @@ Thus, the output signal $y[n]$ is also a phasor with the same frequency $\theta=
 
 
 
-
-### Response FIR to sinusoidal signal with single frequency
+<br></br>
+## Response FIR to sinusoidal signal with single frequency
 Using the result of the previous subsection we can now find in a few steps,
 as depicted in Fig. 3, the response of an FIR filter to a sinusoidal signal with a single frequency $x[n]=\color{red}{A \cos (\theta_1 n + \phi)}$.
 

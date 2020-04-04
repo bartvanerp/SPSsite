@@ -10,12 +10,12 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Propterties"
+  name = "Frequency response FIR properties"
   weight = 2
   parent = "Analysis I: Frequency response FIR"
 +++
 
-### Screencast video
+## Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NfUhwbn5ANU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
