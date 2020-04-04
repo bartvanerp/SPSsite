@@ -145,7 +145,7 @@ Calculate the output of this system for the given input.
   <div style="max-width: 600px; margin: auto">
     <figure>
       <img
-        src="/../files/7.Images/discrete/systems/FIR/quiz/question5.PNG"
+        src="/../files/7.Images/discrete/filters/FIR/quiz/question5.PNG"
         alt="FIR filter, question 5."
       />
     </figure>
@@ -234,7 +234,7 @@ $$
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/discrete/systems/FIR/FIR.svg"
+      src="/../files/7.Images/discrete/filters/FIR/FIR.svg"
       alt="Realization scheme of a finite impulse response filter."
     />
     <figcaption>
