@@ -82,7 +82,7 @@
 ######################## MACHINE LEARNING ##############################
 [[main]]
   name = "Machine learning (to be added)"
-  url = "/disciplines/machinelearning/machinelearning_main (to be added)"
+  url = "/disciplines/machinelearning/machinelearning_main"
   parent = "Disciplines"
   weight = 29
 
