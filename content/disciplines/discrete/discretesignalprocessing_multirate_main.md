@@ -16,12 +16,13 @@ type = "docs"  # Do not modify.
 
 +++
 
+## Introduction
 Discrete-time signals are often processed in the discrete time domain. However, many more of these domains exist, which offer more insight in the signals. One of the most famous domains is the frequency domain, where the signal is expressed in terms of its frequency components. As an example, high-pitched sounds have a strong frequency content in the high frequency range, whereas low bass tones populate the lower frequency range. This modules covers several continuous-time transforms, where the time domain signal is mapped to another domain.
 
+
+## Module overview
 The concepts covered in this module are:
 
 1. <a href="../discretesignalprocessing_multirate_math">Mathematical description sampling process</a> (in progress) - In order to obtain full understanding of the theory
-
 2. <a href="../discretesignalprocessing_multirate_blocks">Basic building blocks of multirate signal processing</a> (in progress) - The conversion of a sample frequency can give rise to several undesired artifacts. The correct filtering of the signal is therefore of crucial importance.
-
 3. <a href="../discretesignalprocessing_multirate_tool">The DFT modulated Filterbank</a> (to be added)
