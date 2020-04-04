@@ -16,6 +16,26 @@ type = "docs"  # Do not modify.
 
 +++
 
+
+## Introduction
+In <a href="../../continuous/continuoussignalprocessing_transforms_ftc_main">a previous module</a> we have seen how we can describe a continuous-time signal in frequency domain with the <a href="../../continuous/continuoussignalprocessing_transforms_ftc_main">Fourier Transform for Continuous-time signals (FTC)</a>. A similar approach is also possible for discrete-time signals if we take into account the specific property that such a signal is defined only at discrete instances of time and not in between.
+The resulting description in frequency domain is the so called Fourier Transform for Discrete-time signals (FTD). Most of the derivations are not formal but have an intuitive character based on physical insight.
+
+### Screencast video [⯈]
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Av5_OuNjB4o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+<br></br>
+## Module overview
+This module will cover the following topics:
+
+1. <a href="../discretesignalprocessing_transforms_ftd_from">From FTC to FTD</a> - This section will describe the process of deriving the FTD starting from the FTC. From this derivation it is now possible to derive the relative frequency spectrum of a sampled discrete-time signal.
+2. <a href="../discretesignalprocessing_transforms_ftd_examples">FTD examples</a> - After a proper foundation of the involved mathematics, it is beneficial to apply the FTD in practice. Through several examples the FTD will be applied to get the reader more familiar with this transform.
+3. <a href="../discretesignalprocessing_transforms_ftd_properties">FTD properties</a> - Just like with the FTC, there are several properties which greatly simply calculations. These properties will be derived in this section.
+
+<br></br>
 ## Summary
 
 $$
