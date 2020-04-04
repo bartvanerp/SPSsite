@@ -16,7 +16,7 @@ type = "docs"  # Do not modify.
 
 +++
 
-
+## Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2kIrvAyID-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -25,6 +25,7 @@ As shown before the frequency representation $X(e^{j\theta})$ is periodic, which
 Furthermore because of the fact that integral in the FTD is a linear operator, it is straightforward to show that the FTD is also linear.
 In this section we will show how conjugation and time reversal influence the frequency representation.  Furthermore we will prove that a shift in time domain results in modulation in frequency domain  and vice versa. Such duality also holds for convolution and multiplication: Convolution in time domain results in multiplication in frequency domain  and vice versa.  Finally we will show that the FTD preserves energy, which was shown by Parceval.
 
+<br></br>
 ## Conjugation
 In this subsection we will show the following conjugation property:
 $$
@@ -109,6 +110,8 @@ By applying the time reversal property it follows that the frequency representat
   </figure>
 </div>
 
+
+<br></br>
 ## Shifting
 In this subsection we will show the following shift property:
 $$
@@ -162,6 +165,8 @@ X(e^{j(\theta - \theta_0)}) + X(e^{j(\theta + \theta_0)}) \nonumber \newline
 $$
 In one of the following subsections we will give an example of this modulation property.
 
+
+<br></br>
 ## Convolution
 In this subsection we will show the following convolution property:
 
@@ -191,6 +196,8 @@ $$
 $$
 which finalizes the proof.
 
+
+<br></br>
 ## Multiplication
 In this subsection we will show the dual property of the previous subsection:
 
@@ -301,6 +308,8 @@ Finally the figure at the left hand side of the lower figure in Fig. 4 shows the
 $s[n]$ with $w[n]$. The figure at the right hand side shows the FTD $S_w(e^{j\theta})$ of this finite length signal $s_w[n]$. The FTD $S_w(e^{j\theta})$ can be constructed by using the property: _"multiplication in time domain is equivalent to a convolution in frequency domain"_.
 So in practice the two original, infinite small, delta pulses at frequencies $\pm \theta_0$ of the infinite long sinusoidal function are smeared out depending on the with of the main lobe of the Dirichlet function: The more samples $N$ we take, the smaller the two peaks will be and the result looks closely to the infinite length (theoretical) result. While on the other hand when using only a small number of samples $N$ of the sinusoidal functions will results into two peaks that are smeared out in frequency domain.
 
+
+<br></br>
 ## Parceval: Preservation of energy
 Parceval has shown following FTD property:
 

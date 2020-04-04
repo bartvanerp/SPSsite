@@ -16,7 +16,7 @@ type = "docs"  # Do not modify.
 
 +++
 
-
+## Screencast video [⯈]
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3yPFxOeVN9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -24,6 +24,7 @@ type = "docs"  # Do not modify.
 This section discusses some important examples of the FTD and IFTD.
 To gain more skill with this transformation, it is useful to first elaborate some of these examples yourself.
 
+<br></br>
 ## FTD and IFTD Delta function
 One of the signals that is used most often is the discrete-time delta function $x[n]=\delta[n]$.
 Because of the fact that this function is only 1 for index $n=0$ and zero for all other indices, the FTD results into 1 as shown in the following equation:
@@ -74,6 +75,7 @@ s(t)=\sum\_{n=-\infty}^{\infty} \delta(t - n \cdot T_s) \hat{=} \frac{1}{T_s} \s
 $$
 Based on the result above we will derive in the following subsection the counterpart of such a continuous-time pulse train for the discrete-time case.
 
+<br></br>
 ## Discrete Phasor Property (DPP)
 From the result of the previous subsection it follows that the IFTD  of $2\pi \delta(\theta)$ results in an infinite train of discrete-time delta functions
 $$
@@ -96,6 +98,7 @@ $$
 $$
 This DPP equation shows that we can express a non converging summation, at the left-hand side, into an infinite sum of delta pulses, at the right-hand side.
 
+<br></br>
 ## FTD of discrete-time sinusoidal
 
 <div class="example">
@@ -139,6 +142,7 @@ which is represented in Fig. 3.</div>
   </figure>
 </div>
 
+<br></br>
 ## FTD of exponential decaying function
 <div class="example">
 <h4> Example </h4>
@@ -184,7 +188,7 @@ the figure below. The speed of fluctuations in this second sequence of samples w
 </div>
 </div>
 
-
+<br></br>
 ## IFTD Block function
 One of the filters which is used in many practical situations is a Low Pass Filter (LPF). Mathematically we can represent such an ideal LPF with a block function with a cut off frequency $\theta_c$. In the pass area the value of the frequency function is equal to 1, and in the attenuation area the value is zero. An example with $\theta_c=\frac{\pi}{2}$ is depicted at the right-hand side of Fig. 4.
 
@@ -230,6 +234,7 @@ For the case $\theta_c=\frac{\pi}{2}$ the IFTD result is depicted at the left-ha
 </div>
 </div>
 
+<br></br>
 ## FTD discrete-time Block function
 When processing a signal it is often useful of even necessary to use or select only a part of the signal. This selection process is typically achieved by multiplying the signal with a window function. Although there are many different window functions, the most common one is the rectangular- or block- function. The left hand side of Fig. 5 gives an example of a discrete time block function of length $N=21$, which is equal to 1 for time index $n=0$ up to $n=20$.
 

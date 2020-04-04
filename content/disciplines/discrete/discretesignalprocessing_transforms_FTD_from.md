@@ -2,7 +2,7 @@
 title = "Transforms I: Fourier transform for discrete-time signals"
 
 # date = {{ .Date }}
-lastmod = 2019-06-23
+lastmod = 2020-04-04
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -15,15 +15,6 @@ type = "docs"  # Do not modify.
   parent = "Transforms I: Fourier transform for discrete-time signals"
 
 +++
-
-
-## Conceptual video
-<div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Av5_OuNjB4o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-In <a href="../../continuous/continuoussignalprocessing_transforms_ftc">a previous module</a> we have seen how we can describe a continuous-time signal in frequency domain with the <a href="../../continuous/continuoussignalprocessing_transforms_ftc">Fourier Transform for Continuous-time signals (FTC)</a>. A similar approach is also possible for discrete-time signals if we take into account the specific property that such a signal is defined only at discrete instances of time and not in between.
-The resulting description in frequency domain is the so called Fourier Transform for Discrete-time signals (FTD). Most of the derivations are not formal but have an intuitive character based on physical insight.
 
 ## Alternative expression pulse train
 In the module sampling and reconstruction we have seen that the continuous time signal $x(t)$ can be represented by samples $x[n]$ when these samples are obtained by using an ideal <a href="../../discrete/discretesignalprocessing_sampling_samplingprocess">C-to-D convertor</a> which runs at a sampling frequency $f\_s$ which is larger than 2 times the maximum frequency $f_\text{max}$ of the continuous time signal $x(t)$. Here we will assume that this is the case, so there is no <a href="../../discrete/discretesignalprocessing_sampling_uniqueness">aliasing</a>.
