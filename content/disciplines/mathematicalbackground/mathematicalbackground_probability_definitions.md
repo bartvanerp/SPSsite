@@ -121,7 +121,7 @@ From the previous axioms, several consequences can be determined. These include:
     <li style="margin-top:10px;"> It holds that $\Pr [A^C] = 1 - \Pr [A]$. </li>
     <li style="margin-top:10px;"> For any events $A$ and $B$ it holds that $\Pr[A\cup B] = \Pr[A] + \Pr[B] -\Pr[A\cap B]$. </li>
     <li style="margin-top:10px;"> If $A \subset B$ it holds that $\Pr[A] \leq \Pr[B]$. </li>
-    <li style="margin-top:10px;"> For any event $A$ and event space $\{B_1, B_2, \ldots, B_m\}$ it holds that  $\Pr[A] = \sum\_{i=1}^{m}\Pr[A\cap B_i] = \sum\_{i=1}^{m}\Pr[AB_i]$. </li>
+    <li style="margin-top:10px;"> For any event $A$ and event space $\{B_1, B_2, \ldots, B_m\}$ it holds that  $\Pr[A] = \sum_{i=1}^{m}\Pr[A\cap B_i] = \sum_{i=1}^{m}\Pr[AB_i]$. </li>
 </ol>
 
 The first consequence is rather straightforward. The probability of observing an outcome that is in our null event equals 0, because it reflects the chance that we observe nothing. This is not the case, since our observations are inevitably in the sample space.
