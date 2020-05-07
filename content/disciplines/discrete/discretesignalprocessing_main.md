@@ -43,6 +43,7 @@ The concepts covered in this discipline are:
 
 7. **Filter structures** - Some filter structures behave in a very distinct way. Because of their characteristics and consequences it is worth discussing them.
     - <a href="../discretesignalprocessing_filters_fir_main">Filter stuctures I: Finite impulse response (FIR) filters</a>
+    - <a href="../discretesignalprocessing_filters_general_main">Filter stuctures II: General filter structures</a>
 <br></br>
 
 8. **Filter design** (to be added) - The analysis of a filter gives insight into the operations of a filter. However, it is also important to use this knowledge in order to design a filter.
