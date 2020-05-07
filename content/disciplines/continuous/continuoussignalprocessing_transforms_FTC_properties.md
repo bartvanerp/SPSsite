@@ -173,8 +173,8 @@ Y(f) \overset{\tau =k \cdot t}{=} \int_{-\infty}^{\infty} x(\tau) e^{-j2\pi f \f
 $$
 For $k<0$ we follow the same procedure. But now the boundaries of the integral are changed. Changing these boundaries causes an extra minus sign. As a last step we take the absolute value of $k$ which combines the negative sign together with the negative value of $k$.
 \begin{eqnarray*}
-Y(f) &\overset{\tau =k \cdot t}{=}& \int_{{\color{red}+\infty}}^{{\color{red}-\infty}} x(\tau) e^{-j2\pi f \frac{1}{k} \tau} \cdot \frac{1}{k} \text{d} \tau  \\
-&=& \frac{{\color{red}-1}}{k} \int_{{\color{red}-\infty}}^{{\color{red}+\infty}} x(\tau) e^{-j2\pi f \frac{1}{k} \tau} \text{d} \tau = \frac{1}{|k|} X(\frac{f}{k})
+Y(f) &\overset{\tau =k \cdot t}{=}& \int_{\color{red}{+\infty}}^{\color{red}{-\infty}} x(\tau) e^{-j2\pi f \frac{1}{k} \tau} \cdot \frac{1}{k} \text{d} \tau  \\
+&=& \frac{\color{red}{-1}}{k} \int_{\color{red}{-\infty}}^{\color{red}{+\infty}} x(\tau) e^{-j2\pi f \frac{1}{k} \tau} \text{d} \tau = \frac{1}{|k|} X\left(\frac{f}{k}\right)
 \end{eqnarray*}
 </div>
 </div>
