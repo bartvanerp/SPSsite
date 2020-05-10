@@ -109,7 +109,11 @@
   parent = "Courses"
   weight = 41
 
-
+[[main]]
+  name = "5CTA0 - Statistical signal processing"
+  url = "/courses/5cta0/5cta0"
+  parent = "Courses"
+  weight = 42
 
 
 ############################## CONTACT ##################################
