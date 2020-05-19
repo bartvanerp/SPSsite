@@ -1,5 +1,5 @@
 +++
-title = "Probability theory"
+title = "Module 1: Random variables and random processes"
 
 # date = {{ .Date }}
 lastmod = 2020-05-10
@@ -13,7 +13,7 @@ duplicated_page = "disciplines/mathematicalbackground/mathematicalbackground_pro
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "Probability theory"
+name = "Probability and random variables"
 weight = 20
 
 +++
