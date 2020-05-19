@@ -11,7 +11,7 @@ type = "docs"       # Do not modify.
 # Add menu entry to sidebar.
 [menu.mathematicalbackground]
   name = "Definitions of probability"
-  parent = "Probability theory"
+  parent = "Probability and random variables"
   weight = 51
 
 +++

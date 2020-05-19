@@ -1,5 +1,5 @@
 +++
-title = "Probability theory"
+title = "Probability and random variables"
 
 # date = {{ .Date }}
 lastmod = 2019-12-30
@@ -10,7 +10,7 @@ type = "docs"       # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.mathematicalbackground]
-  name = "Probability theory"
+  name = "Probability and random variables"
   weight = 50
 
 +++
