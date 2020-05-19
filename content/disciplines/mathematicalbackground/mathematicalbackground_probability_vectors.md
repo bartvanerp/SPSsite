@@ -11,7 +11,7 @@ type = "docs"                       # Do not modify.
 # Add menu entry to sidebar.
 [menu.mathematicalbackground]       # Do not modify
   name = "Random vectors"           
-  parent = "Probability theory"
+  parent = "Probability and random variables"
   weight = 55
 
 +++
