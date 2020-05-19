@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 [menu.statistical]                       # name of menu section (main module)
   name = "Random signals"        # name of this item in that menu
   weight = 1                           # location in that menu
-  parent = "Stochastic or random signals"
+  parent = "Stochastic processes and random signals"
 +++
 
 This section will provide you with the tools to put all theory into practice when dealing with random signals. The link between random variables and discrete-time signals is stated and all statistical characteristics of a signal are covered.

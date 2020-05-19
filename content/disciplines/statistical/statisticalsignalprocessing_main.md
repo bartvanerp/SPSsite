@@ -19,12 +19,10 @@ When processing and analyzing signals, the noise component makes it more difficu
 
 The concepts covered in this discipline are:
 
-1. <a href="../statisticalsignalprocessing_signals_main">Stochastic or random signals</a> - In this module the deterministic signals as we are familiar to will be extended to also contain a certain degree of uncertainty. Furthermore, tools will be provided to deal with this uncertainty.
-
+1. <a href="../statisticalsignalprocessing_signals_main">Stochastic processes and random signals</a> - In this module the deterministic signals as we are familiar to will be extended to also contain a certain degree of uncertainty. Furthermore, tools will be provided to deal with this uncertainty.
 2. **Optimal (Wiener) filtering** - When the observed signal contains uncertainty, how can it be filtered in an optimal way? This will be discussed in this module, where the Wiener filter will provide the solution to this question.
-
 3. **Linear prediction** - Is it possible to foresee the future? This module will try to predict future observations from past observations.
-
-4. **Rational signal models** - With this notion of uncertainty, it is actually possible to create a signal with a desired frequency spectrum by just filtering noise.
-
-5. <a href="../statisticalsignalprocessing_spectrum_main">Spectrum estimation</a> - With the approximations made in going from the Fourier transform for continuous-time signals to the fast Fourier transform, accuracy will inevitably be lost, leading to noisy spectral estimates. This module will explore ways to model the frequency spectrum.
+4. <a href="../statisticalsignalprocessing_rational_main">Rational signal models</a> - With this notion of uncertainty, it is actually possible to create a signal with a desired frequency spectrum by just filtering noise.
+5. **Estimation theory** - 
+6. <a href="../statisticalsignalprocessing_spectrum_main">Spectrum estimation</a> - With the approximations made in going from the Fourier transform for continuous-time signals to the fast Fourier transform, accuracy will inevitably be lost, leading to noisy spectral estimates. This module will explore ways to model the frequency spectrum.
+7. **Detection theory** -

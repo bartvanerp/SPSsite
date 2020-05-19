@@ -1,8 +1,8 @@
 +++
-title = "Second moment analysis"         # name of webpage
+title = "Power spectral density"         # name of webpage
 
 # date = {{ .Date }}
-lastmod = 2020-03-14
+lastmod = 2020-05-19
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -10,9 +10,10 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.statistical]                       # name of menu section (main module)
-  name = "Second moment analysis"        # name of this item in that menu
+  name = "Power spectral density"        # name of this item in that menu
   weight = 3                           # location in that menu
-  parent = "Stochastic or random signals"
+  parent = "Stochastic processes and random signals" 
+
 +++
 
 
