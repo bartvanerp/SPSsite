@@ -1,8 +1,8 @@
 +++
-title = "Stochastic or random signals"         # name of webpage
+title = "Stochastic processes and random signals"         # name of webpage
 
 # date = {{ .Date }}
-lastmod = 2019-05-19
+lastmod = 2019-05-20
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
