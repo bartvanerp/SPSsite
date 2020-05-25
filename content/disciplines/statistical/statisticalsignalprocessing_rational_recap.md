@@ -17,7 +17,7 @@ type = "docs"  # Do not modify.
 
 +++
 
-This section contains a selection of the material from the module on <a href="../discretesignalprocessing_systems_main">discrete-time systems</a>, which provides a brief recap of the general form and properties of linear time-invariant systems.
+This section contains a selection of the material from the module on <a href="../../discrete/discretesignalprocessing_systems_main">discrete-time systems</a>, which provides a brief recap of the general form and properties of linear time-invariant systems.
 
 <br></br>
 
@@ -59,7 +59,7 @@ where $n_0$ represents the temporal shift.
 
 ### System architecture
 
-A general LTI system can be represented using a so-called signal flow diagram as in Fig. 1. The system is driven by an input signal $x[n]$ and outputs the signal $y[n]$. The output is obtained by the addition of two main branches. The upper branch, which is connected to the input signal, transforms the input and delayed inputs into an output. This branch is also called the moving-average part of the system. The lower branch, which is connected to the output signal, transforms delayed outputs into a new output. This branch is also called the auto-regressive part of the system. A more detailed explanation of the individual building blocks can be found <a href="../discretesignalprocessing_systems_visualization">here</a>.
+A general LTI system can be represented using a so-called signal flow diagram as in Fig. 1. The system is driven by an input signal $x[n]$ and outputs the signal $y[n]$. The output is obtained by the addition of two main branches. The upper branch, which is connected to the input signal, transforms the input and delayed inputs into an output. This branch is also called the moving-average part of the system. The lower branch, which is connected to the output signal, transforms delayed outputs into a new output. This branch is also called the auto-regressive part of the system. A more detailed explanation of the individual building blocks can be found <a href="../../discrete/discretesignalprocessing_systems_visualization">here</a>.
 
 <div style="max-width: 800px; margin: auto">
   <figure>
@@ -114,7 +114,7 @@ The impulse response can be metaphorically compared with a tuning fork. A tuning
 
 From the representation of the general LTI system, two different types of systems can be distinguished between. These two types are finite impulse response (FIR) filters and infinite impulse response (IIR) filters. As the name indicates, the distinction is based on the length of the impulse response.
 
-FIR filters are discussed in more detail <a href="../discretesignalprocessing_analysis_fir_main">here</a>. FIR filters are the class of filters in which all auto-regressive coefficients $a_k$ are equal to zero. These filters effectively only contain the upper branch of the signal flow diagram in Fig. 1. If this class of filters is excited by an impulse, this signal will pass through the upper branch and is delayed a total of $M-1$ times. Besides that, a weighted version of the signal is also directed to the output of the system. Mathematically, the impulse response of an FIR filter can be determined by substituting $\delta[n]$ for $x[n]$ in \eqref{eq:DE} and by setting all auto-regressive coefficients $a_k$ to zero as
+FIR filters are discussed in more detail <a href="../../discrete/discretesignalprocessing_analysis_fir_main">here</a>. FIR filters are the class of filters in which all auto-regressive coefficients $a_k$ are equal to zero. These filters effectively only contain the upper branch of the signal flow diagram in Fig. 1. If this class of filters is excited by an impulse, this signal will pass through the upper branch and is delayed a total of $M-1$ times. Besides that, a weighted version of the signal is also directed to the output of the system. Mathematically, the impulse response of an FIR filter can be determined by substituting $\delta[n]$ for $x[n]$ in \eqref{eq:DE} and by setting all auto-regressive coefficients $a_k$ to zero as
 \begin{equation}
     \begin{split}
         h[n]
