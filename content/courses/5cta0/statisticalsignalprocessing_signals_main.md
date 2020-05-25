@@ -14,7 +14,7 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_signals_m
 
 # Add menu entry to sidebar.
 [menu.5cta0]                       # name of menu section (main module)
-  name = "Stochastic processes and random signals"        # name of this item in that menu
+  name = "1.2 Stochastic processes and random signals"        # name of this item in that menu
   weight = 120                           # location in that menu
 
 +++

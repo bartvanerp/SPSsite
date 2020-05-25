@@ -15,7 +15,7 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_rational_
 # Add menu entry to sidebar.
 
 [menu.5cta0]                       # name of menu section (main module)
-  name = "Rational signal models"        # name of this item in that menu
+  name = "1.3 Rational signal models"        # name of this item in that menu
   weight = 130                           # location in that menu
 
 +++
