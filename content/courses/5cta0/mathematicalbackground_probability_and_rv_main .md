@@ -13,7 +13,7 @@ duplicated_page = "disciplines/mathematicalbackground/mathematicalbackground_pro
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "Probability and random variables"
+name = "1.1 Probability and random variables"
 weight = 110
 
 +++

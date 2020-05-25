@@ -15,7 +15,7 @@ duplicated_page = "disciplines/mathematicalbackground/mathematicalbackground_pro
 [menu.5cta0]
 name = "Definitions of probability"
 weight = 111
-parent = "Probability and random variables"
+parent = "1.1 Probability and random variables"
 
 +++
 

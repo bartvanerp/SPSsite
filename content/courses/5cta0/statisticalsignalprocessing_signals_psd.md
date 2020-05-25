@@ -17,7 +17,7 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_signals_p
 [menu.5cta0]                       # name of menu section (main module)
   name = "Power spectral density"        # name of this item in that menu
   weight = 133                           # location in that menu
-  parent = "Stochastic processes and random signals" 
+  parent = "1.2 Stochastic processes and random signals" 
 
 +++
 

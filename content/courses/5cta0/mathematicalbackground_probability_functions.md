@@ -15,7 +15,7 @@ duplicated_page = "disciplines/mathematicalbackground/mathematicalbackground_pro
 [menu.5cta0]
 name = "Functions and pairs of random variables"
 weight = 113
-parent = "Probability and random variables"
+parent = "1.1 Probability and random variables"
 +++
 
 {{% content duplicate="disciplines/mathematicalbackground/mathematicalbackground_probability_functions.md" %}}
