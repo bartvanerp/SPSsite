@@ -14,7 +14,7 @@ responsibleteacher = "StatisticalSignalProcessing@groups.tue.nl"
 # Add menu entry to sidebar.
 [menu.5cta0]
 name = "5CTA0 - Statistical signal processing"
-weight = 10
+weight = 1
 
 +++
 
@@ -23,19 +23,18 @@ weight = 10
 
 ## Introduction
 
-As variability and noise affect all measurements, all signals are  inherently a stochastic variable. Deterministic approaches to signal  processing are thus inadequate for many real-world applications. Be it a radar signal to detect a plane, an electrocardiogram to diagnose  hearth conditions, or a GPS signal to guide an autonomous car, virtually every engineer deal with real-world signals, affected by several  sources of noise and interference. Understanding how to handle and  process signals in the presence of uncertainty, e.g., “random” signals,  is thus fundamental for every student aiming at becoming an engineer.  This course provides the basic tools necessary for accurate and reliable processing of random signals. 
+As variability and noise affect all measurements, all signals are inherently a stochastic variable. Deterministic approaches to signal  processing are thus inadequate for many real-world applications. Be it a radar signal to detect a airplane, an electrocardiogram to diagnose hearth conditions, or a GPS signal to guide an autonomous car, virtually every engineer deals with real-world signals, affected by several sources of noise and interference. Understanding how to handle and process signals in the presence of uncertainty, e.g., “random” signals, is thus fundamental for every student aiming at becoming an engineer. This course provides the basic tools necessary for accurate and reliable processing of random signals.
 
-The course is divided in three modules and it includes a blend of reading  and video materials, quizzes, and assignments. The first module cover  topics of probability, random variables and random processes and is a  pre-requisite for the following modules. The second modules dives into estimation theory and estimation methods including least-square, maximum likelihood and Bayesian estimation; the application of estimation  theory in the context of spectral analysis is also discussed. The final module covers hypothesis testing and detection theory, with applications for detecting a deterministic signal in noise. 
+The course is divided in three modules and it includes a blend of reading and video materials, quizzes, and assignments. The first module cover topics of probability, random variables and random processes and is a pre-requisite for the following modules. The second modules dives into estimation theory and estimation methods including least-square, maximum likelihood and Bayesian estimation; the application of estimation  theory in the context of spectral analysis is also discussed. The final module covers hypothesis testing and detection theory, with applications for detecting a deterministic signal in noise.
 
 ## Learning goals
 
-At the end of the course, you will be able to: 
+At the end of the course, you will be able to:
 
 <ul>
     <li>Explain the difference between deterministic and stochastic signals providing examples in the context of signal processing. </li>
     <li>Understand the implications of the central limit theorem in the context of signal acquisition and analysis. </li>
     <li>Characterize probability distributions using expected value, variance, and moments. </li>
-    <li>Characterize random signals by computing first and second order statistics. </li>
     <li>Characterize random signals by computing first and second order statistics. </li>
     <li>Analyze the performance of an estimator in terms of bias and variance. </li>
     <li>Apply least-square, maximum-likelihood and Bayesian estimation to real-world problems.</li>
@@ -47,9 +46,8 @@ At the end of the course, you will be able to:
 <br></br>
 
 ## Study material
-The study material of this course has been split into several <i>modules</i>.
-Each of these modules covers a specific topic corresponding to the learning goals of the course.
-The available material consists out of:
+
+The available material consists of:
 
 <ul>
   <li> <b>Reading material</b> - This includes all study material for the course and is available under the below specified modules on this platform. </li>
@@ -60,20 +58,7 @@ The available material consists out of:
   <li> <b>MATLAB labs</b> - Mandatory labs are available to apply the learned material using MATLAB. </li>
   <li> <b>MATLAB demos</b> - Matlab live scripts to play with, to further enhance your learning experience</li>
 </ul>
-
-
 For the final examination only knowledge of the reading material and a good understanding of the homework exercises is required. However, all the other material will complement the learning process significantly.
-
-The course is divided in three modules:
-
-Module 1 reviews basic probability theory, and introduces concepts of random  variables, random signals and stochastic processes. Module 2 covers  estimation theory and estimation methods including least-square, maximum likelihood and Bayesian estimation; the application of estimation  theory in the context of spectral analysis is also discussed. Module 3  introduces hypothesis testing and detection theory, with applications  for detecting a deterministic signal in noise. 
-
- 
-
-<ol>
-
-
-
 
 ### Additional reading material
 The material covered in this course is based on:
@@ -87,13 +72,137 @@ The material covered in this course is based on:
 
 We also suggest the following websites:
 
-
+tbc
 
 <br></br>
 
 ## Planning
-<i>No planning is available</i>
 
+<table>
+<thead>
+  <tr>
+    <th>Week</th>
+    <th>Lecture </th>
+    <th>Instructions </th>
+    <th>Topics</th>
+    <th>Homework</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td><br>31/08/20 <br><br>10.30-11.30</td>
+    <td><br>03/09/20<br><br>13.30-15.30</td>
+    <td>1.1 Probability and random variables<br>1.2 Random processes and random signals <br>1.3 Linear random signal models</td>
+    <td>Exercises 1.1 - 1.10<br>Quiz Module 1<br>MATLAB demo CLT</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Review and exercise for exam</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
 <br></br>
 
 ## Contact
