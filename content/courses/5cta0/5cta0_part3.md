@@ -1,5 +1,5 @@
 +++
-title = "Module 3: Detection theory"
+title = "Part 3: Detection theory"
 
 # date = {{ .Date }}
 lastmod = 2020-05-26
