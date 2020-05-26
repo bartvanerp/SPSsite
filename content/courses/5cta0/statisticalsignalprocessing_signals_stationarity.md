@@ -19,6 +19,9 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_signals_s
   weight = 132                           # location in that menu
   parent = "1.2 Stochastic processes and random signals"
 
+
+
+
 +++
 
 {{% content duplicate="disciplines/statistical/statisticalsignalprocessing_signals_stationarity.md" %}}
