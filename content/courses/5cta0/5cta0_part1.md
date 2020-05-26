@@ -1,8 +1,8 @@
 +++
-title = "Module 1: Random variables and random signals"
+title = "Part 1: Random variables and random signals"
 
 # date = {{ .Date }}
-lastmod = 2020-05-10
+lastmod = 2020-05-26
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "Module 1: Random variables and random signals"
+name = "Part 1: Random variables and random signals"
 weight = 100
 
 +++
