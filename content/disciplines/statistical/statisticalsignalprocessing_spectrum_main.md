@@ -1,5 +1,5 @@
 +++
-title = "Spectrum estimation"         # name of webpage
+title = "Spectral estimation"         # name of webpage
 
 # date = {{ .Date }}
 lastmod = 2020-03-21
@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.statistical]                       # name of menu section (main module)
-  name = "Spectrum estimation"        # name of this item in that menu
+  name = "Spectral estimation"        # name of this item in that menu
   weight = 60                           # location in that menu
 
 +++
