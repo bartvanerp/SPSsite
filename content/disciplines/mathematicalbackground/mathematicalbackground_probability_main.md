@@ -2,7 +2,7 @@
 title = "Probability and random variables"
 
 # date = {{ .Date }}
-lastmod = 2019-12-30
+lastmod = 2020-05-20
 
 draft = false       # Is this a draft? true/false
 toc = true         # Show table of contents? true/false
@@ -22,7 +22,7 @@ Uncertainty is almost always present in the world around us. A very simple examp
 
 In signal processing we deal with measured signals which are often not ideal. Usually the signals are corrupted by noise and the exact values of this noise at certain moment in time cannot be determined. A common source of noise is thermal noise, originating from the electronic components in the measurement equipment. Electronic components inevitably generate noise, because of the free electrons in the materials. These electrons have a certain energy, which is related to the temperature of the material. A higher temperature means that the electrons have a higher energy content. This energy is usually in the form of kinetic energy, meaning that the free electrons have a certain velocity associated with them. Only at a temperature of 0 Kelvin the electrons do not have kinetic energy and therefore they do not move. This random electron movement occurring at non-zero temperatures leads to small local voltage differences, which distorts the signal that is being measured and is commonly known as thermal noise.
 
-Probability theory provides us with the tools in order to still make sense of signals with a random component. This module will discuss the main concepts behind probability theory that we need in order to process these signals.
+Probability theory provides us with the tools to handle signals with a random component. This module will discuss the main concepts behind probability theory that we need in order to process these signals.
 
 ## Module overview
 The concepts covered in this module are:
