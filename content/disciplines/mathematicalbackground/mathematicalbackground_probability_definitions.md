@@ -58,7 +58,7 @@ which is written in the set notation as will be discussed shortly. Let us define
 
 ## Sets of outcomes
 
-In the last section we already saw that we could write our events as sets of outcomes. A set can be regarded as a group or collection of elements. A set is denoted with curly brackets $\\{\cdot\\}$ which enclose all elements in that particular set. These sets can also be visually represented and their relationships are shown in the Venn diagrams as shown in Fig. 1. The sample space $\mathcal{S}$ containing all possible outcomes is represented by a square. The event $A$ represents a set of possible outcomes and is a subset of the sample space.
+In the last section, we already saw that we could write our events as sets of outcomes. A set can be regarded as a group or collection of elements. A set is denoted with curly brackets $\\{\cdot\\}$ which enclose all elements in that particular set. These sets can also be visually represented in the form of Venn diagrams, as shown in Fig. 1. The sample space $\mathcal{S}$ containing all possible outcomes is represented by a square. The event $A$ represents a set of possible outcomes and is a subset of the sample space.
 
 <div style="max-width: 700px; margin: auto">
   <figure>
@@ -77,10 +77,45 @@ Fig. 1 introduces several set operators. The <b>complement</b> of a set $A$ is d
 
 <br></br>
 
+<div class="example">
+<h4> Example </h4>
+<hr>
+Ricardo's offers customers two kinds of pizza crust, Roman ($R$) and Neapolitan ($N$). All pizza's have cheese but not all pizza's have tomato sauce. Roman pizza's can have tomato sauce or they can be white ($W$); Neapolitan pizza's always have tomato sauce. It is possible to order a Roman pizza with mushrooms ($M$) added. A neapolitan pizza can contain mushrooms or onions ($O$) or both, in addition to the tomato sauce and cheese. Draw a Venn diagram that shows the relationship among the ingredients $N$, $M$, $O$, $T$, and $W$ in the menu of Ricardo's pizzeria.
+<button class="collapsible">Show solution</button>
+<div class="content">
+At Ricardo's, the pizza crust is either Roman ($R$) or Neapolitan ($N$). To draw the Venn diagram as shown below, we make the following observations:
+<ul>
+<li style="margin-top:10px;">  The set ${ R,N}$ is a partition so we can draw the Venn diagram with this partition.
+<li style="margin-top:10px;">  Only Roman Pizza's can be white. Hence $ W \subset R$. </li>
+<li style="margin-top:10px;">  Only a Neapolitan pizza can have onions. Hence $O \subset N$. </li>
+<li style="margin-top:10px;">  Both Neapolitan and Roman pizza's can have mushrooms so that event $M$ straddles the ${R,N}$ partition. </li>
+<li style="margin-top:10px;">  The Neapolitan pizza can have both mushrooms and onions so $M \cap O$ cannot be empty. </li>
+<li style="margin-top:10px;">  The problem statement does not preclude putting mushrooms on a white Roman pizza. Hence the intersection $W \cap M$ should not be empty. </li>
+</ul>
+
+
+
+<div style="max-width: 700px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/math/probability/solution_exercise_venndiagrams.svg"
+      alt="Solution to the exercise in the form of a Venn diagram."
+    />
+    <figcaption>
+Solution to the exercise in the form of a Venn diagram.
+    </figcaption>
+  </figure>
+</div>
+</div>
+
+
+
 ## Definition of probability
 
 ### Probability and frequency
-The concept of probability is related to chance. There are two main definitions of probability. The first definition of probability is the <i>frequentist</i> definition of probability, also known as <i>relative probability</i>, by which a probability is calculated based on how often an event occurs. The relative frequency of an event is given by
+The concept of probability is related to randomness, or chance. Often we relate probability to what we do not know. Taking the example of flipping a coin, if we had all possible information about this experiment, such as the position of the coin, the force applied to the coin, the wind condition, the weight of the coin, the angle between the coin and our finger, the distance between the hand and the landing surface, the smoothness of the landing surface, the turbulence of the air etc., we might be able to predict the outcome of the coin flip. When we talk about a random experiment, we mean that our knowledge about the experiment is limited and therefore we cannot predict with absolute certainty its outcome. Probability theory provides us with a framework to describe and analyze random phenomena.
+
+There are two main definitions of probability. The first is the <i>frequentist</i> definition of probability, also known as <i>relative probability</i>, by which a probability is calculated based on how often an event occurs. The relative frequency of an event is given by
 
 \begin{equation}
     f_A = \frac{\text{number of occurrences of event }A}{\text{total number of observations}} = \frac{\text{N}(A)}{\text{N}},
@@ -94,13 +129,14 @@ where N($\cdot$) denotes the number of occurrences of a certain event and N the 
 
 The second definition is the <i>Bayesian</i> interpretation. This interpretation does not rely on the relative frequency of an event, but reflects a certain degree of belief that an event occurs. This probability is associated with a state-of-knowledge, influenced by a prior probability, which reflects the belief before an event actually takes place. An example will clarify this difference.
 
-### Example
+### Frequentist vs Bayesian perspective: Example
+
 Let us consider an extravagant example by calculating the probability of finding extraterrestrial life (aliens). From a frequentist perspective the probability of finding extraterrestrial life equals 0, because extraterrestrial life has not (yet) been observed. This provides us with a simple but limited answer to our question.
 
 Now consider the Bayesian perspective. From scientific research we may conclude that extraterrestrial life is possible under the right circumstances. Combining this information with the immense number of planets, we could definitely argue for a non-zero probability of finding extraterrestrial life. This probability is regarded as the prior probability as it is determined without performing any observations. Even after performing many unsuccessful attempts at finding extraterrestrial life, there still is a (very small) probability of finding extraterrestrial life. The discrepancy in the probabilities is an example of the difference between both definitions.
 
-
 ### Probability axioms
+
 From the definition of probability, three important probability axioms can be determined. Axioms are statements that are regarded as true and can therefore be used to prove other statements. These probability axioms include:
 <ol>
     <li style="margin-top:10px;"> For any event $A$, it holds that $0\leq\Pr[A]\leq 1$. </li>
@@ -115,6 +151,7 @@ The second axiom tells us that the probability of observing an outcome that is i
 The third axiom tells us that we may add the probabilities of separate events if we want to calculate the probability of the union of these events, under the constraint that the sets are disjoint to each other. Fig. 1 gives an intuitive explanation to why this holds. When the union is calculated of multiple disjoint events, there is no overlap (meaning no common outcomes) between these events. Therefore the total probability does not need to be compensated for overlap and we can simply add the probabilities of the separate events.
 
 ### Consequences of the probability axioms
+
 From the previous axioms, several consequences can be determined. These include:
 <ol>
     <li style="margin-top:10px;"> It holds that $\Pr [\emptyset] = 0$. </li>
@@ -146,10 +183,31 @@ The last consequence can be explained with the help of Fig. 2. The event $A$ can
     </figcaption>
   </figure>
 </div>
-
 <br></br>
 
+### Calculating probabilities
+
+If we have enough information on an experiment and its associated sample space, we can calculate the probability of an event by using the probability axioms.
+
+### Example
+
+Let us take the example of rolling a dice twice and the event of obtaining both times head, i.e., $\mathcal{A} =\\{hh\\}$. From fig xx, we already know that the probability of this event should be 0.25. How can we reach the same conclusion without having to repeat the experiment hundreds of times? First, we gather the information we have on the experiment. We know that the sample space is given by $\mathcal{S} = \\{ hh, ht, th, tt\\}$. We also know the all the events in the sample space are disjoint and have equal probability. Thus, we can use the axiom of probability to write
+
+\begin{eqnarray*}
+  1 &= &\Pr[ \mathcal{S} ] \newline
+   &= &\Pr[\\{ hh \\},  \\{ ht \\}, \\{ th \\}, \\{ tt \\}]  \newline
+   &= &\Pr[\\{ hh \\}] + \Pr[\\{ ht \\}]+ \Pr[\\{ th \\}] + \Pr[\\{ tt \\}]   \newline
+   &= &4 \Pr[\mathcal{A}]  
+\end{eqnarray*}
+
+Thus,
+
+\begin{equation*}
+ \Pr[\\{ hh \\}] = \frac{1}{4} = 0.25.
+\end{equation*}
+
 ## Conditional probability
+
 Conditional probabilities describe our knowledge about an event, given the knowledge that another event has happened. As an example we could compare two situations. Suppose it is sunny outside and we want to know the probability that it starts raining. This probability is relatively low, whereas this probability would be a lot higher if it were cloudy. From this example, we may conclude that our knowledge of the weather at this moment, influences our prediction of raining in the near future.
 
 ### A priori and a posteriori probability
