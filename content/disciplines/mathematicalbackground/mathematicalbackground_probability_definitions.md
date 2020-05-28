@@ -121,13 +121,25 @@ There are two main definitions of probability. The first is the <i>frequentist</
     f_A = \frac{\text{number of occurrences of event }A}{\text{total number of observations}} = \frac{\text{N}(A)}{\text{N}},
 \end{equation}
 
-where N($\cdot$) denotes the number of occurrences of a certain event and N the total number of observations. The relative frequency can be understood as how often event $A$ occurs relative to all observations. One can see that a low number of total observations does not give a good estimate of the true underlying probability of an event occurring. Therefore an infinitely large number of observations is needed to obtain the true probability. This leads to the frequentist definition of probability, given by
+where N($\cdot$) denotes the number of occurrences of a certain event and N the total number of observations. The relative frequency can be understood as how often event $A$ occurs relative to all observations. One can see that a low number of total observations does not give a good estimate of the true underlying probability of an event occurring. This is shown in the animation in Fig. 2, where we simulate the experiment of flipping two coins and we observe the number of times that each of the possible outcomes occurs. If we think about the probability of getting twice a head, we can already intuitevely guess that it should be $1/4$. However, as shown in the right plot, we need about 500 trials to get an accurate estimatation of this probability. Theoretically, an infinitely large number of observations is needed to obtain the true probability. This leads to the frequentist definition of probability, given by
 
 \begin{equation}
     \Pr [A] = \lim\_{\text{N}\to\infty}f_A =\lim\_{\text{N}\to\infty}\frac{\text{N}(A)}{\text{N}}.
 \end{equation}
 
 The second definition is the <i>Bayesian</i> interpretation. This interpretation does not rely on the relative frequency of an event, but reflects a certain degree of belief that an event occurs. This probability is associated with a state-of-knowledge, influenced by a prior probability, which reflects the belief before an event actually takes place. An example will clarify this difference.
+
+<div style="max-width: 700px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/math/probability/frequentist_prob.gif"
+      alt="Simulation of double toin coss."
+    />
+    <figcaption class="numbered">
+Simulation of an experiment consisting of flipping two coins. On the left, we observe the number of times that each of the outcomes occurs. On the right, we apply the freuquentist definition to estimate the probability of event $A = \{ hh \}$ at each trial. Only after about 500 coin tosses, the estimated probability converges to $1/4$.
+    </figcaption>
+  </figure>
+</div>
 
 ### Frequentist vs Bayesian perspective: Example
 
@@ -169,7 +181,7 @@ Consequence 3 is a generalization of axiom 3 and holds for all events, so not on
 
 The fourth consequence specifies that the probability of an event $A$ is smaller or equal to the probability of an event $B$ when $A$ is a subset of $B$. This is an immediate result of the definition of a subset, where the event $A$ contains a part of the outcomes of event $B$. Equality only occurs if the sets are equal.
 
-The last consequence can be explained with the help of Fig. 2. The event $A$ can be split up in multiple subsets each in a separate region of the event space, denoted by the intersection between event $A$ and the subset $B_i$. Adding all different segments of $A$ gives the full event $A$, because the event space always covers the entire sample space and must therefore include the entire set of $A$.
+The last consequence can be explained with the help of Fig. 3. The event $A$ can be split up in multiple subsets each in a separate region of the event space, denoted by the intersection between event $A$ and the subset $B_i$. Adding all different segments of $A$ gives the full event $A$, because the event space always covers the entire sample space and must therefore include the entire set of $A$.
 
 
 <div style="max-width: 500px; margin: auto">
@@ -191,19 +203,19 @@ If we have enough information on an experiment and its associated sample space, 
 
 ### Example
 
-Let us take the example of rolling a dice twice and the event of obtaining both times head, i.e., $\mathcal{A} =\\{hh\\}$. From fig xx, we already know that the probability of this event should be 0.25. How can we reach the same conclusion without having to repeat the experiment hundreds of times? First, we gather the information we have on the experiment. We know that the sample space is given by $\mathcal{S} = \\{ hh, ht, th, tt\\}$. We also know the all the events in the sample space are disjoint and have equal probability. Thus, we can use the axiom of probability to write
+Let us take the example of rolling a dice twice and the event of obtaining both times head, i.e., $A=\\{hh\\}$. From Fig. 2, we already know that the probability of this event should be 0.25. How can we reach the same conclusion without having to repeat the experiment hundreds of times? First, we gather the information we have on the experiment. We know that the sample space is given by $\mathcal{S} = \\{ hh, ht, th, tt\\}$. We also know the all the events in the sample space are disjoint and have equal probability. Thus, we can use the axiom of probability to write
 
 \begin{eqnarray*}
   1 &= &\Pr[ \mathcal{S} ] \newline
    &= &\Pr[\\{ hh \\},  \\{ ht \\}, \\{ th \\}, \\{ tt \\}]  \newline
    &= &\Pr[\\{ hh \\}] + \Pr[\\{ ht \\}]+ \Pr[\\{ th \\}] + \Pr[\\{ tt \\}]   \newline
-   &= &4 \Pr[\mathcal{A}]  
+   &= &4 \Pr[A],
 \end{eqnarray*}
 
-Thus,
+from which can conclude that
 
 \begin{equation*}
- \Pr[\\{ hh \\}] = \frac{1}{4} = 0.25.
+ \Pr[A] = \frac{1}{4} = 0.25.
 \end{equation*}
 
 ## Conditional probability
