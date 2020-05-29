@@ -243,7 +243,27 @@ The first and third properties are direct consequences of the probability axioms
 
 #### Example
 
-[add problem 2 from here https://www.probabilitycourse.com/chapter1/1_4_5_solved3.php, with appropriate changes to recall previous example]
+Let us consider again the experiment of flipping a coin twice, but this time we would like to calculate the probability of flipping two heads if we obtain a head in the first toss. Let $A_2$ be the event that you observe two heads, and $A_1$ be the event that you observe a head in the first toss. Using Eq. (4), we can write
+
+\begin{equation*}
+\Pr[A_2|A_1] = \frac{\Pr[A_1 A_2]}{\Pr[A_1]},
+\end{equation*}
+
+To calculate $\Pr[A_1 A_2]$, we can observe that the event space of the intersection $A_1 \cap A_2 = \\{hh\\}$, that is the only outcome for which $A_1$ and $A_2$ both occurr, while the event space of $A_1$ is $A_1= \\{hh, ht\\}$. Thus, we can write
+
+\begin{equation*}
+\Pr[A_1 A_2] = 0.25
+\end{equation*}
+
+\begin{equation*}
+\Pr[A_1] = 0.5
+\end{equation*}
+
+\begin{equation*}
+\Pr[A_2|A_1] = \frac{\Pr[A_1 A_2]}{\Pr[A_1]} = \frac{0.25}{0.5} = 0.5
+\end{equation*}
+
+Not surprisingly, the _posterior_ probability of observing two heads ($\Pr[A_2|A_1]$) is different than its _prior_ probability ($\Pr[A_2]$) due to the observation of an event that influences the final outcome.
 
 ### Law of total probability
 Similarly to the fifth consequence of the axioms of probability, a new expression can be determined using conditional probabilities. This is called the law of total probability and states that for an event space $\\{ B_1, B_2, \ldots, B_M \\}$ with $\Pr[B_i] > 0$ for all $i$, it holds that
