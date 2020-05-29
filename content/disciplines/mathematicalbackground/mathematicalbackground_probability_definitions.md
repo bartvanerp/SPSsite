@@ -78,7 +78,7 @@ Fig. 1 introduces several set operators. The <b>complement</b> of a set $A$ is d
 <br></br>
 
 <div class="example">
-<h4> Example </h4>
+<h4> Exercise </h4>
 <hr>
 Ricardo's offers customers two kinds of pizza crust, Roman ($R$) and Neapolitan ($N$). All pizza's have cheese but not all pizza's have tomato sauce. Roman pizza's can have tomato sauce or they can be white ($W$); Neapolitan pizza's always have tomato sauce. It is possible to order a Roman pizza with mushrooms ($M$) added. A neapolitan pizza can contain mushrooms or onions ($O$) or both, in addition to the tomato sauce and cheese. Draw a Venn diagram that shows the relationship among the ingredients $N$, $M$, $O$, $T$, and $W$ in the menu of Ricardo's pizzeria.
 <button class="collapsible">Show solution</button>
@@ -141,7 +141,7 @@ Simulation of an experiment consisting of flipping two coins. On the left, we ob
   </figure>
 </div>
 
-### Frequentist vs Bayesian perspective: Example
+### Example: Frequentist vs Bayesian perspective
 
 Let us consider an extravagant example by calculating the probability of finding extraterrestrial life (aliens). From a frequentist perspective the probability of finding extraterrestrial life equals 0, because extraterrestrial life has not (yet) been observed. This provides us with a simple but limited answer to our question.
 
@@ -201,7 +201,7 @@ The last consequence can be explained with the help of Fig. 3. The event $A$ can
 
 If we have enough information on an experiment and its associated sample space, we can calculate the probability of an event by using the probability axioms.
 
-### Example
+#### Example
 
 Let us take look again at the experiment of rolling a dice twice and the event of obtaining both times head, i.e., $A=\\{hh\\}$. From the simulation in Fig. 2, we already know that the probability of this event should be 0.25. How can we reach the same conclusion without having to repeat the experiment hundreds of times? First, we gather the information we have on the experiment. We know that the sample space is given by $\mathcal{S} = \\{ hh, ht, th, tt\\}$. We also know the all the events in the sample space are disjoint and have equal probability. Thus, we can use the axiom of probability to write
 
@@ -240,6 +240,8 @@ From the definition of this conditional probability, three properties can be ded
     <li style="margin-top:10px;"> For a set of disjoint events $A = \{ A_1, A_2, \ldots, A_M\}$ it holds that $\Pr[A|B] = \Pr[A_1|B] + \Pr[A_2|B] + \ldots + \Pr[A_M|B]$. </li>
 </ol>
 The first and third properties are direct consequences of the probability axioms. The second property is trivial; it simply states that "the probability of having observed an event $B$ after having observed an event $B$ equals 1".
+
+#### Example
 
 [add problem 2 from here https://www.probabilitycourse.com/chapter1/1_4_5_solved3.php, with appropriate changes to recall previous example]
 
@@ -293,9 +295,12 @@ The definition of independence of two sets can be extended to multiple sets. Mul
 
 From this we may automatically conclude that pairwise independence (constraint 1) does not immediately lead to the independence of multiple events, since the second constraint still needs to be satisfied.
 
-### Example
+#### Example
 
-Let us come back once more to the example of tossing a coin twice and the event $A_2=\\{hh\\}$. How can we use the notion of indipendence to come to calculate $\Pr[A_2]$? We know that the probability of flipping one head in a single toin coss is $Pr[A_1=\\{h\\}] = 0.5$. Then, assuming that the two coin tosses are independent (no reason to think otherwise) we can use Eq. (9) to calculate
+Let us come back once more to the example of tossing a coin twice and the event $A_2=\\{hh\\}$. How can we use the notion of indipendence to come to calculate $\Pr[A_2]$?
+
+We know that the probability of flipping one head in a single toin coss is $\Pr[A_1=\\{h\\}] = 0.5$.
+Then, assuming that the two coin tosses are independent (no reason to think otherwise) we can use Eq. (9) to calculate
 
 \begin{equation*}
 \Pr[A_2] = \Pr[A_1] \Pr[A_1] = 0.5 \cdot 0.5 = 0.25.
