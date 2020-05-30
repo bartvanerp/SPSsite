@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Difference equation"
+  name = "Difference equation [⯈]"
   weight = 1
   parent = "Filter structures I: Finite impulse response (FIR) filter"
 +++

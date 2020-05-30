@@ -10,7 +10,7 @@ type = "docs"       # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.mathematicalbackground]
-  name = "Phasors"
+  name = "Phasors [⯈]"
   parent = "Complex numbers and phasors"
   weight = 14
 

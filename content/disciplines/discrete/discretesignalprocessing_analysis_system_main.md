@@ -35,7 +35,7 @@ These first order terms define the poles and zeros of the system. We will see ho
 This module will cover the following topics:
 
 1. <a href="../discretesignalprocessing_analysis_system_lti">System function rational LTI</a> - Here the system function of a rational LTI system will be determined.
-2. <a href="../discretesignalprocessing_analysis_system_stability">Stability and causality</a> - From the system function the system stability of the system can be determined. This is shown in this section.  
+2. <a href="../discretesignalprocessing_analysis_system_stability">Stability and causality</a> - From the system function the system stability of the system can be determined. This is shown in this section.
 3. <a href="../discretesignalprocessing_analysis_system_pz">Poles and zeros</a> - In this section the poles and zeros of the system function are determined.
 4. <a href="../discretesignalprocessing_analysis_system_frequency">Frequency response from system function</a> - Here an alternative simplified way to find the frequency response of such an LTI system is discussed.
 

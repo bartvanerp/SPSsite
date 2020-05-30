@@ -33,8 +33,8 @@ Finally, it is important to note that the 'time'-domain representation is the do
 This module covers the following topics:
 
 1. <a href="../discretesignalprocessing_transforms_ztransform_ztransform">Z-transform</a> - This section will explain what the Z-transform actually does and how it relates to other transforms.
-2. <a href="../discretesignalprocessing_transforms_ztransform_properties">Properties</a> - As with all other transforms, there are some commonly used properties which ease the calculations. This section will discuss the properties of the Z-transform in more detail.
-3. <a href="../discretesignalprocessing_transforms_ztransform_inverse">Inverse Z-transform</a> - This section will describe the inverse Z-transform. The formal calculation rule is relatively difficult, however, there exist several other methods that can ease the calculation.
+2. <a href="../discretesignalprocessing_transforms_ztransform_properties">Properties</a> [⯈] - As with all other transforms, there are some commonly used properties which ease the calculations. This section will discuss the properties of the Z-transform in more detail.
+3. <a href="../discretesignalprocessing_transforms_ztransform_inverse">Inverse Z-transform</a> [⯈] - This section will describe the inverse Z-transform. The formal calculation rule is relatively difficult, however, there exist several other methods that can ease the calculation.
 
 
 <br></br>

@@ -28,8 +28,8 @@ type = "docs"  # Do not modify.
 This module will cover one of the most fundamental aspects in signal processing, namely the principle behind converting a continuous-time signal into a discrete-time signal in order to process it with the help of computers.
 
 1. <a href="../discretesignalprocessing_sampling_sampling">Sampling of sinusoidal signals</a> - First the concept of sampling is discussed, which represents the conversion from the continuous-time to discrete-time domain. The frequency of the sampled signal is better to be described by a relative frequency, because of the effect of the sampling process. Through the sampling there can also be a loss of spectral information, known as aliasing. This is caused by the uniqueness issue.
-2. <a href="../discretesignalprocessing_sampling_reconstruction">Reconstruction of sinusoidal signals</a> - Similarly to the sampling, the signal can also be converted back from the discrete-time domain to the continuous-time domain. In order to prevent aliasing the sampling theorem has to be satisfied.
-3. <a href="../discretesignalprocessing_sampling_examples">Examples</a> - In order to get the reader more acquainted with the sampling procedure, this section includes a screencast video with several examples.
+2. <a href="../discretesignalprocessing_sampling_reconstruction">Reconstruction of sinusoidal signals</a> [⯈] - Similarly to the sampling, the signal can also be converted back from the discrete-time domain to the continuous-time domain. In order to prevent aliasing the sampling theorem has to be satisfied.
+3. <a href="../discretesignalprocessing_sampling_examples">Examples</a> [⯈] - In order to get the reader more acquainted with the sampling procedure, this section includes a screencast video with several examples.
 
 <br></br>
 
@@ -65,7 +65,7 @@ In this section several exercises are available, including their answers. The ex
         <label for="answer1">$\alpha=3$</label><br/>
     <input type="radio"  name="question1">
         <label>$\alpha=6$</label><br/>
-    <input type="radio"  name="question1">       
+    <input type="radio"  name="question1">
         <label>$\alpha=3\pi$</label><br/>
     <input type="radio"  name="question1">
         <label>None of the answers is correct.</label><br/>
@@ -93,7 +93,7 @@ In this section several exercises are available, including their answers. The ex
     <input type="radio" name="question2">
       <label>$f_s > 750$ Hz</label><br/>
     <input type="radio"  name="question2">
-      <label>$f_s > 1400$ Hz</label><br/>    
+      <label>$f_s > 1400$ Hz</label><br/>
     <input type="radio" id="answer2"  name="question2">
       <label for="answer2">$f_s > 1500$ Hz</label><br/>
     <input type="radio" name="question2">
