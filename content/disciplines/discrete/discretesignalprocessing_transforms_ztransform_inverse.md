@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Inverse Z-transform"
+  name = "Inverse Z-transform [⯈]"
   weight = 3
   parent = "Transforms IV: Z-transform"
 

@@ -30,8 +30,8 @@ This module covers the following topics:
 
 1. <a href="../mathematicalbackground_complex_numbersets">Number sets</a> - This section covers the inevitable need for complex numbers for engineering practices.
 2. <a href="../mathematicalbackground_complex_euler">Euler equations</a> - Through the use of Taylor expansions, we are allowed to rewrite sinusoids in terms of complex exponentials.
-3. <a href="../mathematicalbackground_complex_notation">Complex numbers</a> - This section elaborates more on the notation of complex numbers and introduces mathematical operations on these complex numbers.
-4. <a href="../mathematicalbackground_complex_phasors">Phasors</a> - This section introduces sinusoidal signals in terms of time varying complex exponentials.
+3. <a href="../mathematicalbackground_complex_notation">Complex numbers</a> [⯈] - This section elaborates more on the notation of complex numbers and introduces mathematical operations on these complex numbers.
+4. <a href="../mathematicalbackground_complex_phasors">Phasors</a> [⯈] - This section introduces sinusoidal signals in terms of time varying complex exponentials.
 
 
 <br></br>

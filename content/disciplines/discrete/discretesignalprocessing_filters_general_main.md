@@ -31,7 +31,7 @@ This module will cover the following topics:
 1. <a href="../discretesignalprocessing_filters_general_nonrecursive">Structures of non-recursive systems</a> - First a general overview of a non-recursive system is explained.
 2. <a href="../discretesignalprocessing_filters_general_recursive">Structures of recursive systems</a> - Afterwards this class of filters is extented to also include recursive filters.
 3. <a href="../discretesignalprocessing_filters_general_transposition">Transposition theorem</a> - Here a method is discussed to change the structure of a filter.
-4. <a href="../discretesignalprocessing_filters_general_special">Special structures</a> - Finally the theory is put into practice and some very common examples of filter structures are discussed.
+4. <a href="../discretesignalprocessing_filters_general_special">Special structures</a> [⯈] - Finally the theory is put into practice and some very common examples of filter structures are discussed.
 
 <br></br>
 ## Summary

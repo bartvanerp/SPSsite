@@ -29,10 +29,10 @@ In previous modules have seen that a Fourier transform can be used to calculate 
 This module will cover the following topics:
 
 1. <a href="../discretesignalprocessing_transforms_dft_main">From FTC to DFT</a> - This section will describe the process of deriving the DFT starting from the FTC. From this derivation it is now possible to derive the frequency distribution of a sampled discrete-time signal.
-2. <a href="../discretesignalprocessing_transforms_dft_how">The DFT<a> - This section will go into more depth and describe how the DFT actually extract frequencies.
-3. <a href="../discretesignalprocessing_transforms_dft_properties">DFT properties</a> - Just like with the FTC, there are several properties which greatly simply calculations. These properties will be derived in this section.
+2. <a href="../discretesignalprocessing_transforms_dft_how">The DFT<a> [⯈] - This section will go into more depth and describe how the DFT actually extract frequencies.
+3. <a href="../discretesignalprocessing_transforms_dft_properties">DFT properties</a> [⯈] - Just like with the FTC, there are several properties which greatly simply calculations. These properties will be derived in this section.
 4. <a href="../discretesignalprocessing_transforms_dft_convolution">Convolution implementation</a> - The DFT can be implemented using a simple convolution operation, which means that an FIR-filter can extract the frequency distribution of a signal.
-5. <a href="../discretesignalprocessing_transforms_dft_length">Length of the DFT</a> - The resolution of the frequency distribution depends on the length of the signal. However, by appending zeros to the signal, this resolution can be increased.
+5. <a href="../discretesignalprocessing_transforms_dft_length">Length of the DFT</a> [⯈] - The resolution of the frequency distribution depends on the length of the signal. However, by appending zeros to the signal, this resolution can be increased.
 6. <a href="../discretesignalprocessing_transforms_dft_continuous">DFT for continuous signals</a> - In practice the DFT, or its efficient version the FFT, is often used to calculate the frequency content of (non periodic) continuous time signals. This will always result in an approximation from which the various causes of errors are shown in this section.
 
 

@@ -21,9 +21,9 @@ Finite impulse response filters are the most basic types of filters. They simply
 ## Module overview
 This module will cover the following topics:
 
-1. <a href="../discretesignalprocessing_filters_fir_difference">Difference equation</a> - The difference equation is the mathematical description of an FIR filter. It describes the relationship between the input and output samples.
-2. <a href="../discretesignalprocessing_filters_fir_convolution">Convolution</a> - The output of an FIR filter can be calculated using the convolution operation.
-3. <a href="../discretesignalprocessing_filters_fir_lti">Linear time invariant</a> - The FIR filter, as described in the previous sections, belongs to a general class of systems that is used very often in practice.
+1. <a href="../discretesignalprocessing_filters_fir_difference">Difference equation</a> [⯈] - The difference equation is the mathematical description of an FIR filter. It describes the relationship between the input and output samples.
+2. <a href="../discretesignalprocessing_filters_fir_convolution">Convolution</a> [⯈] - The output of an FIR filter can be calculated using the convolution operation.
+3. <a href="../discretesignalprocessing_filters_fir_lti">Linear time invariant</a> [⯈] - The FIR filter, as described in the previous sections, belongs to a general class of systems that is used very often in practice.
 
 <br></br>
 ## Exercises
@@ -51,11 +51,11 @@ In this section several exercises are available, including their answers. The ex
         <label for="answer1">$x[n] = \begin{cases}1 & \text{for } n \text{ even} \\ 2 &\text{for } n \text{ odd}\end{cases}$ </label><br/>
     <input type="radio"  name="question1">
         <label>$x[n] = \begin{cases}-1 & \text{for } n \text{ even} \\ 2 &\text{for } n \text{ odd}\end{cases}$ </label><br/>
-    <input type="radio"  name="question1">       
+    <input type="radio"  name="question1">
         <label>$x[n] = \begin{cases}-1 & \text{for } n \text{ even} \\ -2 &\text{for } n \text{ odd}\end{cases}$ </label><br/>
-    <input type="radio"  name="question1">       
+    <input type="radio"  name="question1">
         <label>$x[n] = \begin{cases}1 & \text{for } n \text{ even} \\ 0 &\text{for } n \text{ odd}\end{cases}$ </label><br/>
-    <input type="radio"  name="question1">       
+    <input type="radio"  name="question1">
         <label>$x[n] = \begin{cases}1 & \text{for } n \text{ even} \\ -2 &\text{for } n \text{ odd}\end{cases}$ </label><br/>
     <input type="radio"  name="question1">
         <label>None of the answers is correct.</label><br/>
@@ -78,7 +78,7 @@ Calculate the output of this system for the given input.
     <input type="radio" name="question2">
       <label>$y[n] = \delta[n] + \delta[n-1] - \delta[n-2]$</label><br/>
     <input type="radio"  name="question2">
-      <label>$y[n] = \delta[n] + 2\delta[n-1] - \delta[n-2]$</label><br/>    
+      <label>$y[n] = \delta[n] + 2\delta[n-1] - \delta[n-2]$</label><br/>
     <input type="radio"  name="question2">
       <label>$y[n] = \delta[n] + 2\delta[n-1] + \delta[n-2]$</label><br/>
     <input type="radio" id="answer2" name="question2">
