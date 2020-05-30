@@ -82,7 +82,7 @@ preserveTaxonomyNames = true
   lineNos = false
   lineNumbersInTable = true
   noClasses = true
-  style = "monokai"
+  style = "monokailight"
   tabWidth = 4
 [markup.tableOfContents]
   endLevel = 4
