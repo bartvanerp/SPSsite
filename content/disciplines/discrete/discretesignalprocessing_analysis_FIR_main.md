@@ -28,7 +28,7 @@ Besides the impulse response, denoted by $h[n]$, and the Difference Equation (DE
 This module covers the following topics:
 
 1. <a href="../discretesignalprocessing_analysis_fir_concept">Frequency response</a> - This section will introduce the frequency response and will derive the frequency response of an arbitrary FIR filter.
-2. <a href="../discretesignalprocessing_analysis_fir_properties">Properties</a> - As will all other transforms, the frequency response has some properties which ease the calculations.
+2. <a href="../discretesignalprocessing_analysis_fir_properties">Properties</a> [⯈] - As will all other transforms, the frequency response has some properties which ease the calculations.
 
 <br></br>
 ## Exercises
@@ -50,7 +50,7 @@ In this section several exercises are available, including their answers. The ex
         <label>$y[n] = 2$</label><br/>
     <input type="radio"  id="answer1" name="question1">
         <label for="answer1">$y[n] = 2\cos(0.5\pi n)$</label><br/>
-    <input type="radio"  name="question1">       
+    <input type="radio"  name="question1">
         <label>$y[n] = 2\cos(0.5\pi n + 0.5\pi)$</label><br/>
     <input type="radio"  name="question1">
         <label>None of the answers is correct.</label><br/>
@@ -69,7 +69,7 @@ In this section several exercises are available, including their answers. The ex
         />
       </figure>
     </div>
-    Signal $x[n]$ consists out of two frequencies $\theta_1 = \frac{\pi}{3}$ and $\theta_2=\pi$. Which frequencies does the output signal $y[n]$ contain?  
+    Signal $x[n]$ consists out of two frequencies $\theta_1 = \frac{\pi}{3}$ and $\theta_2=\pi$. Which frequencies does the output signal $y[n]$ contain?
 <br>
 </br>
     <input type="radio" name="question2">
@@ -77,7 +77,7 @@ In this section several exercises are available, including their answers. The ex
     <input type="radio" name="question2">
       <label>Both frequencies get cancelled out.</label><br/>
     <input type="radio" id="answer2" name="question2">
-      <label for="answer2">Only $\theta=\frac{\pi}{3}$ remains.</label><br/>    
+      <label for="answer2">Only $\theta=\frac{\pi}{3}$ remains.</label><br/>
     <input type="radio"  name="question2">
       <label>Only $\theta=\pi$ remains.</label><br/>
     <input type="radio" name="question2">
@@ -209,7 +209,7 @@ $$
 \begin{eqnarray*}
 \text{Time domain} & \circ  \hspace{-2.3mm} - \hspace{-1.1mm}  \circ & \text{Frequency domain} \newline
 h[n]= \sum\_{k=0}^{M-1} h[k] \delta[n-k] & \circ  \hspace{-2.3mm} - \hspace{-1.1mm}  \circ &
-H(e^{j{\theta}})= \sum\_{k=0}^{M-1} h[k] e^{-j{\theta k}}   
+H(e^{j{\theta}})= \sum\_{k=0}^{M-1} h[k] e^{-j{\theta k}}
 \end{eqnarray*}
 }
 $$

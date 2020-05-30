@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Reconstruction of sinusoidal signals"
+  name = "Reconstruction of sinusoidal signals [⯈]"
   weight = 2
   parent = "Basics of sampling and reconstruction"
 

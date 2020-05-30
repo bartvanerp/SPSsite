@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "DFT properties"
+  name = "DFT properties [⯈]"
   weight = 3
   parent = "Transforms II: Discrete Fourier transform"
 

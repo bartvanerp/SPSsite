@@ -31,7 +31,7 @@ This module covers the following topics:
 1. <a href="../continuoussignalprocessing_transforms_fourier_periodic">Periodic signals</a> - Signals can have a repetitive structure which is inherently related to the frequency structure of the signal. This section will discuss when a signal is periodic and how this period can be determined from its frequency content.
 2. <a href="../continuoussignalprocessing_transforms_fourier_synthesis">Fourier series synthesis</a> - This section will give the representation of the Fourier series, which is a weighted sum of harmonic related phasor components.
 3. <a href="../continuoussignalprocessing_transforms_fourier_analysis">Fourier series analysis</a> - Similarly, a signal can be decomposed into these harmonic related phasor components. This section will describe the procedure for calculating the corresponding weights.
-4. <a href="../continuoussignalprocessing_transforms_fourier_examples">Examples</a> - In order to make sure that the reader gets properly acquainted with the topic, some additional examples are provided.
+4. <a href="../continuoussignalprocessing_transforms_fourier_examples">Examples</a> [⯈] - In order to make sure that the reader gets properly acquainted with the topic, some additional examples are provided.
 
 <br></br>
 

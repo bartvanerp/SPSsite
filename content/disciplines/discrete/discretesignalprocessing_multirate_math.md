@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Mathematical description sampling process"
+  name = "Mathematical description sampling process [⯈]"
   weight = 81
   parent = "Sampling, reconstruction and multirate signal processing"
 
