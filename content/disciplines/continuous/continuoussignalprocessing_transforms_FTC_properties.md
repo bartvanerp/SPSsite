@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.continuous]
-  name = "FTC properties"
+  name = "FTC properties [⯈]"
   weight = 3
   parent = "Transforms III: Fourier transform for continuous-time signals"
 +++

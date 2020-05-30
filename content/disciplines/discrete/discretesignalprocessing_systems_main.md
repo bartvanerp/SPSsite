@@ -32,7 +32,7 @@ This module will cover the following topics:
 3. <a href="../discretesignalprocessing_systems_impulse">Impulse response</a> - A system can be characterized by its impulse response, which represents the output of the first when a short pulse is applied to its input.
 4. <a href="../discretesignalprocessing_systems_convolution">Convolution</a> - The operation performed by the filter can be denoted mathematically using the convolution operation.
 5. <a href="../discretesignalprocessing_systems_cascading">Cascading systems</a> - When a signal is passed through multiple systems, these signals may be combined, such that the signal is passing to another single filter.
-6. <a href="../discretesignalprocessing_systems_special">Special convolutions</a> - When dealing with real-time signals or when having limited memory, the convolution operation might not be ideal, therefore some special convolution operations are introduced that solve these problems.
+6. <a href="../discretesignalprocessing_systems_special">Special convolutions</a> [⯈] - When dealing with real-time signals or when having limited memory, the convolution operation might not be ideal, therefore some special convolution operations are introduced that solve these problems.
 
 <br></br>
 ## Summary
@@ -120,7 +120,7 @@ $$
 
 
 
-### Overlap-add
+### Special convolutions
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img
@@ -136,7 +136,6 @@ $$
   <li> Mainly used for fixed filters. </li>
 </ol>
 
-### Overlap-save
 <div style="max-width: 800px; margin: auto">
   <figure>
     <img

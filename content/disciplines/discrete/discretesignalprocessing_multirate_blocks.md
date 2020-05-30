@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Basic building blocks of multirate signal processing"
+  name = "Basic building blocks of multirate signal processing [⯈]"
   weight = 82
   parent = "Sampling, reconstruction and multirate signal processing"
 
