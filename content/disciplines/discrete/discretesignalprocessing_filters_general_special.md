@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Special structures"
+  name = "Special structures [⯈]"
   weight = 4
   parent = "Filter structures II: General filter structures"
 +++

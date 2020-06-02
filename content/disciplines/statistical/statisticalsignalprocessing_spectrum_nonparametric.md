@@ -96,7 +96,7 @@ The proof is beyond the scope of this reader, since it has dependencies on the f
 Similar conclusions can be obtained for the correlogram.
 
 <br></br>
-## Periodogram (direct method)}
+## Periodogram (direct method)
 When the power spectral density is estimated using the squared Fourier transform of the signal, it is referred to as a periodogram. There exist different methods to improve the "raw" periodogram, which will be discussed hereafter.
 
 

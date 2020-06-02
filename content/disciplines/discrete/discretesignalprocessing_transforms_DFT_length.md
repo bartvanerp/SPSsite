@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Length of DFT"
+  name = "Length of DFT [⯈]"
   weight = 5
   parent = "Transforms II: Discrete Fourier transform"
 
@@ -403,7 +403,7 @@ In general the use of a length $N$ DFT for a signal of infinite duration causes 
 \begin{eqnarray*}
 &Y[k]= X(e^{j\theta})|\_{\theta = k \cdot \frac{2 \pi}{N}} =
 \sum\_{l=-\infty}^{\infty} x[l] e^{-j\frac{2 \pi}{N} kl}& \newline
-&\hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm}& \newline  
+&\hspace{2mm} \circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ \hspace{2mm}& \newline
 &y[n]=\frac{1}{N} \sum\_{k=0}^{N-1} Y[k] e^{j2 \pi nk/N} =
 \sum\_{m=-\infty}^{\infty} x[n-m N]&
 \end{eqnarray*}

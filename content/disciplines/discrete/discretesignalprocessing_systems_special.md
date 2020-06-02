@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Special convolutions"
+  name = "Special convolutions [⯈]"
   weight = 6
   parent = "Discrete-time systems"
 +++

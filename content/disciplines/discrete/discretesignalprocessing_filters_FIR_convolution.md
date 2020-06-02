@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Convolution sum"
+  name = "Convolution sum [⯈]"
   weight = 2
   parent = "Filter structures I: Finite impulse response (FIR) filter"
 +++
