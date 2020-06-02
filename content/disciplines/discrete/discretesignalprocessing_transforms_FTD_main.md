@@ -32,8 +32,8 @@ The resulting description in frequency domain is the so called Fourier Transform
 This module will cover the following topics:
 
 1. <a href="../discretesignalprocessing_transforms_ftd_from">From FTC to FTD</a> - This section will describe the process of deriving the FTD starting from the FTC. From this derivation it is now possible to derive the relative frequency spectrum of a sampled discrete-time signal.
-2. <a href="../discretesignalprocessing_transforms_ftd_examples">FTD examples</a> - After a proper foundation of the involved mathematics, it is beneficial to apply the FTD in practice. Through several examples the FTD will be applied to get the reader more familiar with this transform.
-3. <a href="../discretesignalprocessing_transforms_ftd_properties">FTD properties</a> - Just like with the FTC, there are several properties which greatly simply calculations. These properties will be derived in this section.
+2. <a href="../discretesignalprocessing_transforms_ftd_examples">FTD examples</a> [⯈] - After a proper foundation of the involved mathematics, it is beneficial to apply the FTD in practice. Through several examples the FTD will be applied to get the reader more familiar with this transform.
+3. <a href="../discretesignalprocessing_transforms_ftd_properties">FTD properties</a> [⯈] - Just like with the FTC, there are several properties which greatly simply calculations. These properties will be derived in this section.
 
 <br></br>
 ## Summary
@@ -44,7 +44,7 @@ $$
 X(e^{j\theta})
 \overset{\mathcal{F}\left\\{x[n]\right\\}}{=\\! =}
 \sum\_{n=- \infty}^{\infty} x[n] e^{-jn\theta}
-&\\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &  
+&\\circ  \hspace{-1.7mm} - \hspace{-1.7mm}  \circ &
 x[n]
 \overset{\mathcal{F}^{-1}\\{X(e^{j\theta})\\}}{=\\! =\\! =\\! =\\! =\\!}
 \frac{1}{2 \pi} \int\_{-\pi}^{\pi} X(e^{j\theta}) e^{jn\theta} \mathrm{d} \theta

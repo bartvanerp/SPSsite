@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Frequency response FIR properties"
+  name = "Frequency response FIR properties [⯈]"
   weight = 2
   parent = "Analysis I: Frequency response FIR"
 +++

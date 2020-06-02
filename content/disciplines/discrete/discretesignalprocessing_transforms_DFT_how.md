@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "The DFT"
+  name = "The DFT [⯈]"
   weight = 2
   parent = "Transforms II: Discrete Fourier transform"
 

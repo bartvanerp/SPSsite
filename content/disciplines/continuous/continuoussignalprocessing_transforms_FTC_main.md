@@ -31,8 +31,8 @@ That's why we will introduce a tool for representing non-periodic signals, known
 This module covers the following topics:
 
 1. <a href="../continuoussignalprocessing_transforms_ftc_limit">FTC as limit of the FS</a> - We will show that the FTC is obtained as an extension of the Fourier series when the period goes to infinity.
-2. <a href="../continuoussignalprocessing_transforms_ftc_examples">FTC examples</a> - Several examples are covered to get the reader acquainted with the FTC. The examples discussed are elementary signals and can therefore be used in combination with the properties of the FTC for more complex signals.
-3. <a href="../continuoussignalprocessing_transforms_ftc_properties">FTC properties</a> - The definition of the FTC inherently leads to many different properties which can be used to simplify notations.
+2. <a href="../continuoussignalprocessing_transforms_ftc_examples">FTC examples</a> [⯈] - Several examples are covered to get the reader acquainted with the FTC. The examples discussed are elementary signals and can therefore be used in combination with the properties of the FTC for more complex signals.
+3. <a href="../continuoussignalprocessing_transforms_ftc_properties">FTC properties</a> [⯈] - The definition of the FTC inherently leads to many different properties which can be used to simplify notations.
 
 <br></br>
 

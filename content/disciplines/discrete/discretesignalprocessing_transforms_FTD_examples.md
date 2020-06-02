@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "FTD examples"
+  name = "FTD examples [⯈]"
   weight = 2
   parent = "Transforms I: Fourier transform for discrete-time signals"
 

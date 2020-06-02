@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Linear time invariant (LTI)"
+  name = "Linear time invariant (LTI) [⯈]"
   weight = 3
   parent = "Filter structures I: Finite impulse response (FIR) filter"
 +++
@@ -236,7 +236,7 @@ $$
 h_1[n] =
 \begin{cases}
 1 & 0 \leq n \leq 2 \newline
-0 & \text{elsewhere}   
+0 & \text{elsewhere}
 \end{cases}
 $$
 and
