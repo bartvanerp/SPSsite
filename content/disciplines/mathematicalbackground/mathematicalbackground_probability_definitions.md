@@ -279,8 +279,6 @@ Similarly to the fifth consequence of the axioms of probability, a new expressio
 \end{equation}
 This law inevitably follows from substituting the definition of the conditional probability as $\Pr[AB_i] = \Pr[A|B_i]\Pr[B_i]$ in the fifth consequence of the probability axioms.
 
-[ADD EXERCISE]
-
 ### Bayes' theorem
 One of the most important rules in probability theory is Bayes' rule, which is obtained from the definition of the conditional probability. This conditional probability can be rewritten as
 \begin{equation}
@@ -296,7 +294,7 @@ Why is this particular notation so useful? The answer requires you to think in a
 Bayes' theorem originates from a thought experiment, in which Bayes imagines to be sitting with his back at a perflectly flat, square table and he asks his assistant to throw ball onto the table. The ball can land anywhere on the table, but Bayes wanted to guess where the ball was without looking at it. Then, he would ask the assistant to throw another ball on the table, and asked him whether the second ball fell to the left, right, up or down compared to the first one; he would note this down. Then, he would repeat this a number of times, and by doing so he could keep updating his belif on where the first ball was. Although he could never be completely certain, with each piece of evidence, he would a more accurate answer on the position of the first ball.
 Bayes' theorem was in fact never meant as a static formula to be used once and put aside, but rather as a tool to keep updating our estimate as our knowledge about the experiment grows.
 
-for a better undestandin Take a look at the example below and try to solve the e
+For a better undestanding of Bayes' rule, you may take a look at the example below and try to solve the following exercise.
 
 ### Example
 A common example of Bayes' rule is positioned in the medical field. Suppose we have an event $A$, which indicates that a patient has a lung disease, and an underlying event $B$, which indicates that the patient smokes. Research has been conducted in a clinic and it has been found that among patients with a lung disease, 30% of the patients smoke. Furthermore, 20% of the people in the clinic smoke and only 10% of the people in the clinic have a lung disease. Let's suppose that we are interested in the probability that a patient who smokes actually has a lung disease.
@@ -306,8 +304,43 @@ If we convert the given information into mathematical notation we can find that 
     \Pr[A|B] = \frac{\Pr[B|A]\Pr[A]}{\Pr[B]} = \frac{0.3\cdot 0.1}{0.2} = 0.15
 \end{equation}
 Please note that the order of $A$ and $B$ is the opposite of in the above equation, because $\Pr[B|A]$ is observed and therefore the nomenclature changes.
-[ADD TEXT on MESSAGE of BAYES THEOREM - repeated use, not static formula]
-[ADD EXERCISE]
+
+
+<div class="example">
+<h4> Exercise </h4>
+<hr>
+Suppose that for the general population, 1 in 5000 people carries the human immunodeficiency virus (HIV). A test for the presence of HIV yields either a positive (+) or negative (-) response. Suppose the test gives the correct answer 99% of the time. (a) What is $\text{Pr}[H|+]$, the conditional probability that a person has the HIV virus, given that the person tests positive? (b) What is $\text{Pr}[H|++]$, the conditional probability that same person has the HIV virus, if he/she repeats the test and tests positive a second time?
+<button class="collapsible">Show solution</button>
+<div class="content">
+(a) The probability that a person who has tested positive for HIV actually has the disease is
+\begin{equation*}
+	\text{Pr}[H|+] = \frac{\text{Pr}[+,H]}{\text{Pr}[+]}=\frac{\text{Pr}[+,H]}{\text{Pr}[+,H]+\text{Pr}[+,H^c]},
+\end{equation*}
+where $H^c$ represents the complement of $H$.
+We can use Bayes' formula to evaluate these joint probabilities.
+\begin{equation*}
+	\begin{split}
+		\text{Pr}[H|+] &= \frac{\text{Pr}[+|H]\text{Pr}[H]}{\text{Pr}[+|H]\text{Pr}[H]+\text{Pr}[+|H^c]\text{Pr}[H^c]} \\
+				  &=\frac{(0.99)(0.0002)}{(0.99)(0.0002)+(0.01)(0.9998)} \\
+				  &= 0.0194.
+	\end{split}
+\end{equation*}
+Note that we have used the law of total probability to calculate $\Pr[+]$ in the denominator. Even though the test is correct 99% of the time, the probability that a random person who tests positive actually has HIV is less than 2%. The reason this probability is so low is that the a priori probability that a person has HIV is very small.
+
+(b) When the person performs the second test, we can use again Bayes' formula to calculate the probability that he/she has the disease, but this time we need to update the prior probability and the evidence according to what we caluclated in the previous step. Since the two tests are independent, and the sensitivity of the test does not change, then $\Pr[++|H] = \Pr[+|H]$. However, now the posterior calculated in (a) becomes the new prior
+
+\begin{equation*}
+	\begin{split}
+		\text{Pr}[H|++] &= \frac{\text{Pr}[++|H]\text{Pr}[H]}{\text{Pr}[++|H]\text{Pr}[H]+\text{Pr}[++|H^c]\text{Pr}[H^c]} \\
+				  &=\frac{(0.99)(0.0194)}{(0.99)(0.0194)+(0.01)(0.9998)} \\
+				  &= 0.6576.
+	\end{split}
+\end{equation*}
+
+Now the probability is more than 65%. This example shows how through Bayes' thorem, we were able to update our belief about the person having HIV as our knowledge about the test grew.
+</div>
+
+
 
 ### Independence
 Besides the definitions encountered throughout the reader, there is one other important definition in the field of probability theory called independence. Two events $A$ and $B$ are independent <i>if and only if</i> the following holds
