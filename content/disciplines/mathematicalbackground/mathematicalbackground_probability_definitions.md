@@ -15,6 +15,11 @@ type = "docs"       # Do not modify.
   weight = 51
 
 +++
+## Introduction
+
+<blockquote class="embedly-card"><h4><a href="https://youtu.be/uzkc-qNVoOk">Probability explained | Independent and dependent events | Probability and Statistics | Khan Academy</a></h4><p>We give you an introduction to probability through the example of flipping a quarter and rolling a die. Practice this lesson yourself on KhanAcademy.org righ...</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
 
 ## Definitions
 
@@ -136,10 +141,12 @@ The second definition is the <i>Bayesian</i> interpretation. This interpretation
       alt="Simulation of double toin coss."
     />
     <figcaption class="numbered">
-Simulation of an experiment consisting of flipping two coins. On the left, we observe the number of times that each of the outcomes occurs. On the right, we apply the freuquentist definition to estimate the probability of event $A = \{ hh \}$ at each trial. Only after about 500 coin tosses, the estimated probability converges to $1/4$.
+Simulation of an experiment consisting of flipping two coins. On the left, we observe the number of times that each of the outcomes occurs. On the right, we apply the frequentist definition to estimate the probability of event $A = \{ hh \}$ at each trial. Only after about 500 coin tosses, the estimated probability converges to $1/4$.
     </figcaption>
   </figure>
 </div>
+
+
 
 ### Example: Frequentist vs Bayesian perspective
 
@@ -274,7 +281,7 @@ This law inevitably follows from substituting the definition of the conditional 
 
 [ADD EXERCISE]
 
-### Bayes' rule
+### Bayes' theorem
 One of the most important rules in probability theory is Bayes' rule, which is obtained from the definition of the conditional probability. This conditional probability can be rewritten as
 \begin{equation}
     \Pr[A|B]\Pr[B] = \Pr[AB] = \Pr[BA] = \Pr[B|A]\Pr[A].
@@ -285,6 +292,11 @@ Equality of the middle two terms is obtained because these terms represent the s
 \end{equation}
 
 Why is this particular notation so useful? The answer requires you to think in a certain context. Think of a context where an observation of an event $A$ is related to a (non-observable) underlying event $B$. An example of this context is where $A$ resembles the observed data and $B$ the model parameters creating this data. In the signal processing field we would like to obtain the model parameters to draw conclusions about the underlying process (for example in medical diagnostics). We would like to estimate these parameters after observing some data. Therefore we are interested in the probability $\Pr[B|A]$. However, we cannot determine this immediately and therefore we need Bayes' rule. The initial (prior) probability of the model parameters is denoted by $\Pr[B]$ and is determined as an initial guess in terms of probability for the model parameters of the underlying process without having seen the data. The term $\Pr[A|B]$ represents the likelihood of the observed data <i>under the assumed model parameters</i>. Both these terms can be calculated relatively easily. The last term $\Pr[A]$ represents the evidence, which is the probability of observing some data. This last term is usually more difficult to calculate and is therefore usually calculated by using of the law of total probability.
+
+Bayes' theorem originates from a thought experiment, in which Bayes imagines to be sitting with his back at a perflectly flat, square table and he asks his assistant to throw ball onto the table. The ball can land anywhere on the table, but Bayes wanted to guess where the ball was without looking at it. Then, he would ask the assistant to throw another ball on the table, and asked him whether the second ball fell to the left, right, up or down compared to the first one; he would note this down. Then, he would repeat this a number of times, and by doing so he could keep updating his belif on where the first ball was. Although he could never be completely certain, with each piece of evidence, he would a more accurate answer on the position of the first ball.
+Bayes' theorem was in fact never meant as a static formula to be used once and put aside, but rather as a tool to keep updating our estimate as our knowledge about the experiment grows.
+
+for a better undestandin Take a look at the example below and try to solve the e
 
 ### Example
 A common example of Bayes' rule is positioned in the medical field. Suppose we have an event $A$, which indicates that a patient has a lung disease, and an underlying event $B$, which indicates that the patient smokes. Research has been conducted in a clinic and it has been found that among patients with a lung disease, 30% of the patients smoke. Furthermore, 20% of the people in the clinic smoke and only 10% of the people in the clinic have a lung disease. Let's suppose that we are interested in the probability that a patient who smokes actually has a lung disease.
