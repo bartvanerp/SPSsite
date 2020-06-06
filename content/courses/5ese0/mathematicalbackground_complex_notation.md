@@ -13,7 +13,7 @@ duplicated_page = "disciplines/mathematicalbackground/mathematicalbackground_com
 
 # Add menu entry to sidebar.
 [menu.5ese0]
-name = "Complex numbers"
+name = "Complex numbers [⯈]"
 weight = 23
 parent = "Complex numbers and phasors"
 

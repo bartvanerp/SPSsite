@@ -13,7 +13,7 @@ duplicated_page = "disciplines/discrete/discretesignalprocessing_filters_FIR_con
 
 # Add menu entry to sidebar.
 [menu.5ese0]
-name = "Convolution sum"
+name = "Convolution sum [⯈]"
 weight = 72
 parent = "Filter structures I: Finite impulse response (FIR) filter"
 +++
