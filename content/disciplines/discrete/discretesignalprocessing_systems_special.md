@@ -127,7 +127,7 @@ $$
 
 <br></br>
 ## Overlap-save method
-The second approach, which is called overlap-save, is based on {\color{red}partial convolution} of two blocks.
+The second approach, which is called overlap-save, is based on the $\color{red}{\text{partial convolution}}$ of two blocks.
 <div style="max-width: 400px; margin: auto">
   <figure>
     <img
