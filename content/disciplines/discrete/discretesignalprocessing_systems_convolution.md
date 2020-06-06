@@ -10,12 +10,16 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Convolution"
+  name = "Convolution [⯈]"
   weight = 4
   parent = "Discrete-time systems"
 +++
 
-
+## Screencast video [⯈]
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/7Q8w8XkYmHk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br></br>
 
 ## Convolution sum operation
 One of the most important consequences of an LTI system is that the output $y[n]$ can be described by applying the so called convolution sum procedure between the input $x[n]$ and  the impulse response $h[n]$.

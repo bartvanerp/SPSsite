@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.discrete]
-  name = "Impulse response"
+  name = "Impulse response [⯈]"
   weight = 3
   parent = "Discrete-time systems"
 +++
@@ -37,7 +37,12 @@ For an LTI system BIBO stability and causality are easily checked by its impulse
 Finally, in general we can distinguish the following two types of impulse responses:
 
 <br></br>
-## Finite Impulse Response (FIR) case
+## Finite Impulse Response (FIR) case [⯈]
+
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/20j0M8b_pu4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br></br>
 In case all feedback coefficients are zero, the LTI system represents a Finite Impulse Response Filter, abbreviated as FIR.  The Difference Equation is a finite sum of weighted and delayed input samples.  As a result of the definition, by substituting $x[n]=\delta[n]$ we obtain an expression for the impulse response $h[n]$, which has finite length. Moreover the $M$ impulse response values $h[0]$ until $h[M-1]$ are the same as the $M$ filter coefficients $b_0$ until $b_{M-1}$ for the FIR case.
 <div class="example">
 <h4> Example </h4>
@@ -80,7 +85,7 @@ A realization scheme is depicted at the left hand side of Fig. 2.
     <img
       src="/../files/7.Images/discrete/systems/expdecay.svg"
       alt="Signal flow diagram and impulse response of a simple IIR filter."
-    />    
+    />
     <figcaption class="numbered">
       Signal flow diagram and impulse response of a simple IIR filter.
     </figcaption>
