@@ -108,7 +108,7 @@ $$
 ### Convolution sum properties
 \begin{eqnarray*}
 \text{Commutative} &:& h[n] \star x[n] = x[n] \star h[n] \newline
-\text{Ass ociative} &:& \\{ x[n] \ast h_1[n] \\} \ast h_2[n] = x[n] \ast \\{ h_1[n] \ast h_2[n] \\} \newline
+\text{Associative} &:& \\{ x[n] \ast h_1[n] \\} \ast h_2[n] = x[n] \ast \\{ h_1[n] \ast h_2[n] \\} \newline
 \text{Distributive} &:& x[n] \ast h_1[n] + x[n] \ast h_2[n] = x[n] \ast \\{ h_1[n] + h_2[n] \\}
 \end{eqnarray*}
 
@@ -119,7 +119,7 @@ $$
 </ul>
 
 
-
+<!--
 ### Special convolutions
 <div style="max-width: 800px; margin: auto">
   <figure>
@@ -150,3 +150,4 @@ $$
   <li> Based on partial convolution of overlapping blocks. </li>
   <li> Mainly used for adaptive filters. </li>
 </ol>
+-->

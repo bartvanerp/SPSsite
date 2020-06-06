@@ -13,7 +13,7 @@ duplicated_page = "disciplines/discrete/discretesignalprocessing_sampling_recons
 
 # Add menu entry to sidebar.
 [menu.5ese0]
-name = "Reconstruction of sinusoidal signals"
+name = "Reconstruction of sinusoidal signals [⯈]"
 weight = 2
 parent = "Basics of sampling and reconstruction"
 

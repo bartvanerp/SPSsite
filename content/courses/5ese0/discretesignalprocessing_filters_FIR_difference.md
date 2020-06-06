@@ -13,7 +13,7 @@ duplicated_page = "disciplines/discrete/discretesignalprocessing_filters_FIR_dif
 
 # Add menu entry to sidebar.
 [menu.5ese0]
-name = "Difference equation"
+name = "Difference equation [⯈]"
 weight = 71
 parent = "Filter structures I: Finite impulse response (FIR) filter"
 +++
