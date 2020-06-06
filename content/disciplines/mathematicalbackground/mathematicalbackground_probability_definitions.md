@@ -17,9 +17,9 @@ type = "docs"       # Do not modify.
 +++
 ## Introduction
 
-<blockquote class="embedly-card"><h4><a href="https://youtu.be/uzkc-qNVoOk">Probability explained | Independent and dependent events | Probability and Statistics | Khan Academy</a></h4><p>We give you an introduction to probability through the example of flipping a quarter and rolling a die. Practice this lesson yourself on KhanAcademy.org righ...</p></blockquote>
-<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-
+<div class="video-container">
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/uzkc-qNVoOk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
 
 ## Definitions
 
@@ -80,7 +80,6 @@ In the last section, we already saw that we could write our events as sets of ou
 Fig. 1 introduces several set operators. The <b>complement</b> of a set $A$ is denoted by $A^C$ and is a set containing all outcomes of the sample space excluding the outcomes in  $A$. The <b>intersection</b> operator $\cap$ denotes the intersection between two sets. In $A \cap B$ the intersection contains all outcomes that are both in set $A$ and $B$. The <b>union</b> operator $\cup$ denotes the union between two sets. In $A \cup B$ the union contains all outcomes that are in $A$, $B$ and both $A$ and $B$. A <b>subset</b>, which contains a part of a larger set, is denoted as $B \subset A$ (read $B$ is a subset of $A$). Lastly, as defined previously, two events are <b>disjoint</b> if these sets of outcomes do not have common outcomes.
 
 
-<br></br>
 
 <div class="example">
 <h4> Exercise </h4>
@@ -106,14 +105,15 @@ At Ricardo's, the pizza crust is either Roman ($R$) or Neapolitan ($N$). To draw
       src="/../files/7.Images/math/probability/solution_exercise_venndiagrams.svg"
       alt="Solution to the exercise in the form of a Venn diagram."
     />
-    <figcaption>
+    <figcaption style="text-align:center">
 Solution to the exercise in the form of a Venn diagram.
     </figcaption>
   </figure>
 </div>
 </div>
+</div>
 
-
+<br></br>
 
 ## Definition of probability
 
@@ -225,6 +225,9 @@ from which can conclude that
  \Pr[A] = \frac{1}{4} = 0.25.
 \end{equation*}
 
+
+<br></br>
+
 ## Conditional probability
 
 Conditional probabilities describe our knowledge about an event, given the knowledge that another event has happened. As an intuitive example we could compare two situations. Suppose it is sunny outside and we want to know the probability that it starts raining. This probability is relatively low, whereas this probability would be a lot higher if it were cloudy. From this example, we may conclude that our knowledge of the weather at this moment, influences our prediction of raining in the near future.
@@ -331,15 +334,15 @@ Note that we have used the law of total probability to calculate $\Pr[+]$ in the
 
 \begin{equation*}
 	\begin{split}
-		\text{Pr}[H|++] &= \frac{\text{Pr}[++|H]\text{Pr}[H]}{\text{Pr}[++|H]\text{Pr}[H]+\text{Pr}[++|H^c]\text{Pr}[H^c]} \\
-				  &=\frac{(0.99)(0.0194)}{(0.99)(0.0194)+(0.01)(0.9998)} \\
+		\text{Pr}[H|++] &= \frac{\text{Pr}[++|H]\text{Pr}[H]}{\text{Pr}[++|H]\text{Pr}[H]+\text{Pr}[++|H^c]\text{Pr}[H^c]} \newline
+				  &=\frac{(0.99)(0.0194)}{(0.99)(0.0194)+(0.01)(0.9998)} \newline
 				  &= 0.6576.
 	\end{split}
 \end{equation*}
 
 Now the probability is more than 65%. This example shows how through Bayes' thorem, we were able to update our belief about the person having HIV as our knowledge about the test grew.
 </div>
-
+</div>
 
 
 ### Independence
