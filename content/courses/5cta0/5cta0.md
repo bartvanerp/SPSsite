@@ -9,7 +9,7 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Responsible teacher (email)
-responsibleteacher = "StatisticalSignalProcessing@groups.tue.nl"
+responsibleteacher = "s.turco@tue.nl; r.f.tigrek@tue.nl"
 
 # Add menu entry to sidebar.
 [menu.5cta0]
