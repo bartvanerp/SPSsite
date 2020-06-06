@@ -9,9 +9,9 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
-[menu.information]                       # name of menu section (main module)
+[menu.statistical]                       # name of menu section (main module)
   name = "Statistical tests"        # name of this item in that menu
-  weight = 23                          # location in that menu
+  weight = 83                          # location in that menu
   parent = "Detection theory"
 
 +++
