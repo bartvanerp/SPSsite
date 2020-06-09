@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 [menu.statistical]                       # name of menu section (main module)
   name = "Non-parametric methods"        # name of this item in that menu
   weight = 4                      # location in that menu
-  parent = "Spectrum estimation"
+  parent = "Spectral estimation"
 +++
 
 This section will discuss several techniques to perform power spectral density estimation. Some methods aim at improving the periodogram, which was the direct method to estimate the power spectral density, while other apply to the correlogram. But first it is important to note what problems arise when estimating the power spectral density.

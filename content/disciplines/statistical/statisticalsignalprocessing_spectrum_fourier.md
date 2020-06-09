@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 [menu.statistical]                       # name of menu section (main module)
   name = "Recap: Fourier transforms"        # name of this item in that menu
   weight = 1                          # location in that menu
-  parent = "Spectrum estimation"
+  parent = "Spectral estimation"
 +++
 
 Before diving deeper into spectral estimation, a good understanding of the Fourier transform and its variants is desired. This section will describe the Fourier transforms starting with the analytically ideal transform and ending with its practical computational implementation.

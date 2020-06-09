@@ -14,8 +14,8 @@ duplicated_page = "disciplines/mathematicalbackground/mathematicalbackground_pro
 # Add menu entry to sidebar.
 [menu.5cta0]
 name = "Random variables"
-weight = 2
-parent = "Probability theory"
+weight = 112
+parent = "1.1 Probability and random variables"
 +++
 
 {{% content duplicate="disciplines/mathematicalbackground/mathematicalbackground_probability_variables.md" %}}

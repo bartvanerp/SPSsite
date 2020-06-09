@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 [menu.statistical]                       # name of menu section (main module)
   name = "Spectral distributions"        # name of this item in that menu
   weight = 2                      # location in that menu
-  parent = "Spectrum estimation"
+  parent = "Spectral estimation"
 +++
 
 This section will describe the main methods used to calculate the energy and power spectrum of a discrete-time signal. Initially, we will assume that the signal is infinitely long, has zero-mean and is stationary. However, since this is usually not the case, we will later analyze the consequences of these non-ideal conditions.
