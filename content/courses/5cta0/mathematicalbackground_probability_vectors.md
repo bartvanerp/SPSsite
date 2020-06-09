@@ -14,8 +14,8 @@ duplicated_page = "disciplines/mathematicalbackground/mathematicalbackground_pro
 # Add menu entry to sidebar.
 [menu.5cta0]
 name = "Random vectors"
-weight = 5
-parent = "Probability theory"
+weight = 115
+parent = "1.1 Probability and random variables"
 +++
 
 {{% content duplicate="disciplines/mathematicalbackground/mathematicalbackground_probability_vectors.md" %}}

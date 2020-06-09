@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 [menu.statistical]                       # name of menu section (main module)
   name = "Windowing"        # name of this item in that menu
   weight = 3                      # location in that menu
-  parent = "Spectrum estimation"
+  parent = "Spectral estimation"
 +++
 
 

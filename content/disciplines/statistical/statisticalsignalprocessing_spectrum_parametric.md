@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 [menu.statistical]                       # name of menu section (main module)
   name = "Parametric methods"        # name of this item in that menu
   weight = 5                      # location in that menu
-  parent = "Spectrum estimation"
+  parent = "Spectral estimation"
 +++
 
 
