@@ -4,11 +4,12 @@
 
 ### GitHub
 The SPS education platform is fully available on GitHub. The standard Git workflow applies. Git can be accessed through the command prompt, or more easily for beginners through `https://desktop.github.com/`. The basic workflow here will be making use of Github Desktop:
-1. Install Github Desktop from `https://desktop.github.com/`
-2. Open the application and log in
-3. (Follow a short git tutorial to get acquainted with all the different terms)
-4. Go to `File -> Clone repository` and select the SPS site repository.
-5. Specify a path to the location where you want to save the files and click `clone`.
+1. Install Git from `https://git-scm.com/`
+2. Install Github Desktop from `https://desktop.github.com/`
+3. Open the application and log in
+4. (Follow a short git tutorial to get acquainted with all the different terms)
+5. Go to `File -> Clone repository` and select the SPS site repository.
+6. Specify a path to the location where you want to save the files and click `clone`.
 
 The files should now have been added to your PC.
 
