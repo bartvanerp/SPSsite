@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.discrete]
   name = "FIR filter design [⯈]"
-  weight = 1
+  weight = 2
   parent = "Filter design"
 +++
 
