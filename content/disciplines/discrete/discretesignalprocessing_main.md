@@ -47,6 +47,6 @@ The concepts covered in this discipline are:
     - <a href="../discretesignalprocessing_filters_general_main">Filter stuctures II: General filter structures</a>
 <br></br>
 
-8. <a href="../discretesignalprocessing_wordlength_main">Finite wordlength effects</a> - Sampling signals is the process of converting a continuous-time signal into bits. More available bits allow for a higher resolution in the signal. This also means that there is an inevitable quantization error, which has an effect on the signal.
+8. <a href="../discretesignalprocessing_wordlength_main">Finite word length effects</a> - Sampling signals is the process of converting a continuous-time signal into bits. More available bits allow for a higher resolution in the signal. This also means that there is an inevitable quantization error, which has an effect on the signal.
 
 9. <a href="../discretesignalprocessing_design_main">Filter design</a> - The analysis of a filter gives insight into the operations of a filter. However, it is also important to use this knowledge in order to design a filter.
