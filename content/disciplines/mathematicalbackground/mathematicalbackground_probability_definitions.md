@@ -47,7 +47,8 @@ A set of important definitions in probability theory are given below.
 
 In order to get some intuition about the practical meaning of these definitions we turn to the following example.
 
-### Example
+<div class = "example">
+<h4> Example </h4>
 
 Suppose we are flipping two coins and observing which sides of the coins land on top. The <i>experiment</i> is in this case the flipping of the two coins, where the top side of both coins is observed. The underlying model behind the experiment is based on the fact that we assume fair coins, meaning that the probability of a coin landing heads is equal to the probability of a coin landing tails.
 
@@ -60,6 +61,8 @@ The <i>sample space</i> for this particular experiment is defined as
 which is written in the set notation as will be discussed shortly. Let us define an <i>event</i> $A$, which is the set of all possible outcomes where the first coin is heads, and an event $B$,  which is the set of all possible outcomes where the second coin is tails. Both events can be written in the set notation as $A = \\{hh, ht\\}$ and $B=\\{ ht, tt\\}$. The events $A$ and $B$ are not <i>disjoint</i>, because both share the outcome $ht$. An example of a <i>null set</i> for this experiment is the event when a coin lands with a blank side facing upwards. This face is not defined in our experiment and therefore this outcome cannot be observed, leading to an empty set. A possible event space is the set given by the events $A$ and $B$, where $A$ resembles the event that the first coin lands head and where $B$ resembles the event that the first coin lands tails. Both events do not contain similar outcomes, i.e. $A=\\{hh, ht\\}$ and $B=\\{tt, th\\}$, but together they form the entire sample space.
 
 <br></br>
+</div>
+</div>
 
 ## Sets of outcomes
 
@@ -147,8 +150,8 @@ Simulation of an experiment consisting of flipping two coins. On the left, we ob
 </div>
 
 
+<h4>Example: Frequentist vs Bayesian perspective</h4>
 
-### Example: Frequentist vs Bayesian perspective
 
 Let us consider an extravagant example by calculating the probability of finding extraterrestrial life (aliens). From a frequentist perspective the probability of finding extraterrestrial life equals 0, because extraterrestrial life has not (yet) been observed. This provides us with a simple but limited answer to our question.
 
@@ -208,7 +211,8 @@ The last consequence can be explained with the help of Fig. 3. The event $A$ can
 
 If we have enough information on an experiment and its associated sample space, we can calculate the probability of an event by using the probability axioms.
 
-#### Example
+<h4>Example</h4>
+
 
 Let us take look again at the experiment of rolling a dice twice and the event of obtaining both times head, i.e., $A=\\{hh\\}$. From the simulation in Fig. 2, we already know that the probability of this event should be 0.25. How can we reach the same conclusion without having to repeat the experiment hundreds of times? First, we gather the information we have on the experiment. We know that the sample space is given by $\mathcal{S} = \\{ hh, ht, th, tt\\}$. We also know the all the events in the sample space are disjoint and have equal probability. Thus, we can use the axiom of probability to write
 
@@ -251,7 +255,8 @@ From the definition of this conditional probability, three properties can be ded
 </ol>
 The first and third properties are direct consequences of the probability axioms. The second property is trivial; it simply states that "the probability of having observed an event $B$ after having observed an event $B$ equals 1".
 
-#### Example
+<h4>Example: Frequentist vs Bayesian perspective</h4>
+
 
 Let us consider again the experiment of flipping a coin twice, but this time we would like to calculate the probability of flipping two heads if we obtain a head in the first toss. Let $A_2$ be the event that you observe two heads, and $A_1$ be the event that you observe a head in the first toss. Using Eq. (4), we can write
 
@@ -299,7 +304,15 @@ Bayes' theorem was in fact never meant as a static formula to be used once and p
 
 For a better undestanding of Bayes' rule, you may take a look at the example below and try to solve the following exercise.
 
-### Example
+<div class="video-container">
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/OqmJhPQYRc8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
+
+
+
+<div class="example">
+<h4> Example</h4>
+
 A common example of Bayes' rule is positioned in the medical field. Suppose we have an event $A$, which indicates that a patient has a lung disease, and an underlying event $B$, which indicates that the patient smokes. Research has been conducted in a clinic and it has been found that among patients with a lung disease, 30% of the patients smoke. Furthermore, 20% of the people in the clinic smoke and only 10% of the people in the clinic have a lung disease. Let's suppose that we are interested in the probability that a patient who smokes actually has a lung disease.
 
 If we convert the given information into mathematical notation we can find that the prior probability (a patient with a lung disease) is $\Pr[A]=0.1$. Furthermore the evidence (a patient who smokes) is $\Pr[B] = 0.2$. Lastly we find the likelihood (a patient with a lung disease smoking) as $\Pr[B|A] = 0.3$. From this we can determine the posterior $\Pr[A|B]$ (a patient who smokes having a lung disease) as
@@ -307,7 +320,8 @@ If we convert the given information into mathematical notation we can find that 
     \Pr[A|B] = \frac{\Pr[B|A]\Pr[A]}{\Pr[B]} = \frac{0.3\cdot 0.1}{0.2} = 0.15
 \end{equation}
 Please note that the order of $A$ and $B$ is the opposite of in the above equation, because $\Pr[B|A]$ is observed and therefore the nomenclature changes.
-
+</div>
+</div>
 
 <div class="example">
 <h4> Exercise </h4>
@@ -363,7 +377,8 @@ The definition of independence of two sets can be extended to multiple sets. Mul
 
 From this we may automatically conclude that pairwise independence (constraint 1) does not immediately lead to the independence of multiple events, since the second constraint still needs to be satisfied.
 
-#### Example
+<div class="example">
+<h4> Example</h4>
 
 Let us come back once more to the example of tossing a coin twice and the event $A_2=\\{hh\\}$. How can we use the notion of indipendence to come to calculate $\Pr[A_2]$?
 
@@ -373,3 +388,6 @@ Then, assuming that the two coin tosses are independent (no reason to think othe
 \begin{equation*}
 \Pr[A_2] = \Pr[A_1] \Pr[A_1] = 0.5 \cdot 0.5 = 0.25.
 \end{equation*}
+
+</div>
+</div>
