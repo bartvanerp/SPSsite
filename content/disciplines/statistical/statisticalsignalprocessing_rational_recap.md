@@ -193,3 +193,139 @@ Based on the value of $a_1^n$ the impulse response will have a different shape. 
 
 </div>
 </div>
+
+## System invertibility
+
+A system $H(z)$ is invertible if the output $y[n] (n=(-\infty, \infty))$ can be used to uniquely define the input $x[n] (n=(-\infty, \infty))$. This is only possible if every unique value in $x[n]$ maps to a unique value in $y[n]$. This is called one-to-one mapping. Obtaining the inverse for any system is very difficult. However, if the system is linear time-invariant with an impulse response $h[n]$, the inverse $h_{inv}[n]$ can be defined as follows
+
+\begin{equation*}
+\begin{split}
+    x[n] \ast h[n] &= y[n]\newline
+    y[n] \ast h_{inv}[n] &= x[n]\newline
+    x[n] &= (x[n]\ast h[n])\ast h_{inv}[n]
+\end{split}
+\end{equation*}
+This can be simplified by utilizing the z-transform.
+\begin{equation*}
+\begin{split}
+    X(z) H(z) &= Y(z)\newline
+    Y(z) H_{inv}(z) &= X(z)\newline
+    X(z) &= X(z) H(z) H_{inv}(z)\newline
+    H_{inv}(z) &= \frac{1}{H(z)}
+\end{split}
+\end{equation*}
+If the systems consists of poles and zeros, than it can be split into its denominator and numerator.
+\begin{equation*}
+\begin{split}
+    H(z) = \frac{N(z)}{D(z)}\newline
+    H_{inv}(z) = \frac{D(z)}{N(z)}
+\end{split}
+\end{equation*}
+
+Thus, the poles of the system become zeros in its inverse and vice versa.
+However the inverse is not always uniquely defined for every system, as shown by the following example.
+
+<div class="example">
+<h4> Example </h4>
+Consider a system with the impulse response $h[n] = \delta[n]-\frac{1}{4}\delta[n-1]$. By performing the z-transform we end up with $H(z)=1-\frac{1}{4}z^{-1}$. Therefore, the inverse is equal to $H_{inv}(z)= \frac{1}{1-\frac{1}{4}z^{-1}}$, which has one pole at $z=\frac{1}{4}$.
+
+If we choose the region of convergence (ROC) as $|z| > \frac{1}{4}$, the inverse system is causal and stable, and
+
+\begin{equation*}
+    h_{inv}[n] = (\frac{1}{4})^n u[n]
+\end{equation*}
+However, if we choose the ROC as $|z| < \frac{1}{4}$, the inverse system is noncausal and unstable
+\begin{equation*}
+    h_{inv}[n] = -(\frac{1}{4})^n u[-n-1]
+\end{equation*}
+
+
+
+</div>
+</div>
+
+## All-pass filter
+An all-pass filter passes all frequency with the same magnification factor, that is the magnitude of the frequency response is  constant
+$$
+| H_{ap}(e^{j\theta})| = 1 \hspace{3mm} \forall \theta
+$$
+This unit magnitude constraint constrains poles and zeros of a rational system function to occur in mirrored pairs. Thus if $H(z)$ has a pole $z=\alpha_k$, $H(z)$ must also have a zero at the mirrored location $z=1/\alpha^\ast_k$.
+\begin{eqnarray*}
+\text{Complex } h[n] &:& H_{ap}(z) = \prod_{k=1}^{p} \frac{z^{-1}-\alpha_k^\ast}{1 - \alpha_k z^{-1}} \newline
+\text{Real } h[n] &:& H_{ap}(z) = \prod_{k=1}^{N_s}
+\frac{|\alpha_{k}|^2 - 2 \Re e \\{ \alpha_k \\} z^{-1}+  z^{-2}}{1 - 2 \Re e \\{ \alpha_k \\} z^{-1}+ |\alpha_{k}|^2 z^{-2}}
+\end{eqnarray*}
+The poles of a stable and causal all pass filter $H(z)$ lie inside the unit circle, that is all $|\alpha_k|<1$.
+If the impulse response $h[n]$ is real-valued, the complex roots occur in conjugate pairs, and these conjugate pairs can be combined to form second-order factors from which all coefficients are real, as shown in the equation.
+
+<div class="example">
+<h4> Example </h4>
+<hr>
+Show that the following system is all pass:
+$$
+H(e^{j\theta})=\frac{\frac{1}{2} - e^{-j\theta} + e^{-j2 \theta}}{1 - e^{-j\theta} + \frac{1}{2} e^{-j2\theta}}
+$$
+Give the pole zero plot and a rough sketch of the magnitude and phase response plots.
+<button class="collapsible">Show solution</button>
+<div class="content">
+By replacing $e^{-j\theta}$ with the complex variable $z^{-1}$ we obtain the following system function:
+$$
+H(z)= \frac{\frac{1}{2} - z^{-1} + z^{-2}}{1 - z^{-1} + \frac{1}{2} z^{-2}}
+$$
+Because of the special structure of this equation, the absolute value results in:
+\begin{eqnarray*}
+|H(z)| &=&\sqrt{H(z) \cdot (H(z))^*}= \sqrt{H(z) \cdot H^*(z^{-1})}\\
+&=& \sqrt{
+\left ( \frac{\frac{1}{2} - z^{-1} + z^{-2}}{1 - z^{-1} + \frac{1}{2} z^{-2}} \right ) \cdot
+\left ( \frac{\frac{1}{2} - z + z^{2}}{1 - z + \frac{1}{2} z^{2}} \right )} \\
+&=& \sqrt{\left ( \frac{z^{-2} \left ( \frac{1}{2}z^2 - z + 1 \right )}{z^{-2} \left ( z^2 - z + \frac{1}{2} \right )} \right ) \cdot
+\left ( \frac{\frac{1}{2} - z + z^{2}}{1 - z + \frac{1}{2} z^{2}} \right )} = 1 \\
+\Rightarrow & & |H(e^{j\theta})| = \vert H(z)\vert_{|z|=1} =1
+\end{eqnarray*}
+The pole and zeros are:
+$$
+H(z) = \frac{(\frac{1}{2} \sqrt{2}- e^{j\frac{\pi}{4}}z^{-1}) (\frac{1}{2} \sqrt{2}- e^{-j\frac{\pi}{4}}z^{-1})}{(1- \frac{1}{2} \sqrt{2} e^{j\frac{\pi}{4}}z^{-1})(1- \frac{1}{2} \sqrt{2} e^{j\frac{\pi}{4}}z^{-1})}
+$$
+as shown at the left hand side of the following plot:
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/discrete/filters/general/AllpassPZ.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/discrete/filters/general/AllpassAmplPhase.svg"
+    style="width:100%">
+  </div>
+</div>
+</figure>
+A sketch of the magnitude and phase response is depicted at the right hand side of the figure.
+</div>
+</div>
+
+## Minimum phase systems
+
+The simple example above illustrates that the knowledge of the impulse response of a LTI system does not uniquely specify its inverse. Additional information such
+as causality and stability would be helpful in many cases. This leads us to the concept of minimum-phase systems.
+
+A minimum phase system is a system in which the system and its inverse are both stable and causal. To understand what this means we first need to know the conditions for stability and causality.
+
+<ul>
+
+<li style="margin-top:10px;"> <b>Stability</b>, in a stable system the ROC contains the unit circle. </li>
+
+<li style="margin-top:10px;"> <b>Causal</b>, in a causal system the ROC is defined as going outward from a circle, with a radius larger than the largest pole in the system (excluding poles at infinity). </li>
+
+<li style="margin-top:10px;"> <b>Anti-causal</b>, in an anti-causal system the ROC is defined as going inward from a circle, with a radius smaller than the smallest pole (excluding poles at zero). </li>
+
+</ul>
+
+Therefore, if a systems is minimum phase, its poles and zeros have the following properties. The ROC extends outwards from a circle with a radius larger than the largest pole, since the system needs to be causal. The system also needs to be stable. Therefore, the ROC includes the unit circle. Thus, the largest pole, and therefore all poles, need to be within the unit circle. The zeros need to be within the unit circle as well, since these rules also apply to the inverse.
+
+Using these rules we can also define a maximum phase system in which the system and its inverse are stable and anti-causal. In this system all poles and zeros need to be outside of the unit circle.
+
+### Minimum phase and all-pass decomposition
+
+Now with the knowledge that we have about minimum phase and all-pass systems, we are able to show that you can decompose any causal poles and zeros system (without poles or zeros on the unit circle) using these two system types.  
+
+Let $H(z)$ be a non-minimum phase system with one zero $z=\frac{1}{a}, |a|<1$, outside the unit circle and all other poles and zeros on the inside of the unit circle.
