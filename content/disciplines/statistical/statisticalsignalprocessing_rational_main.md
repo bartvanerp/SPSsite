@@ -27,7 +27,7 @@ We often assume a model to be parametric, i. e., a function completely defined b
 This module covers the following topics:
 
 1. <a href="../statisticalsignalprocessing_rational_recap">Recap: LTI systems </a>- This section provides a brief review of fundamental concepts including linear time-invariant systems, stabitlity, invertibility and minimum-phase.
-3. **Spectral factorization and innovation representation** - Can we obtain any random signal by simply filtering white noise? In this section, we describe how this can be achieved by the innovation representation.
+3. <a href="../statisticalsignalprocessing_rational_spectral_factorization">Spectral factorization and innovation representation </a>- Can we obtain any random signal by simply filtering white noise? In this section, we describe how this can be achieved by the innovation representation.
 3. **Auto-regressive moving average (ARMA) signal models** - This section describes an efficient representation of (stationary) random signals in terms of two polynomials, one accounting for the "autoregressive" part and the other for the "moving-average" part.
 
 <br></br>
