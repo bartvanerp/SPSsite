@@ -363,8 +363,74 @@ When mirroring all zeros of a stable and causal minimum phase system we obtain a
 
 Fig. 4. shows the magnitude and phase response of a maximum phase system with three zeros outside the unit circle as depicted in the pole zero plot. These zeros are obtained by mirroring all three zeros of the previous minimum phase system.
 
+{{% alert note %}}
+<ul>
+  <li> Mirroring a zero with respect to the unit circle does not change the shape of the magnitude response. Thus both minimum and maximum phase systems have, besides a constant factor, the same shape of the magnitude response characteristic. </li>
+  <li> The phase of a minimum phase system has less variations compared to the phase variations of a maximum phase system. </li>
+  <li> The group delay is defined as:
+  $$
+  \tau (\theta) = - \frac{\text{d} \varphi \{ H(e^{j\theta}) \}}{\text{d} \theta},
+  $$
+  The group delay of a minimum phase system is minimal. </li>
+</ul>
+{{% /alert %}}
+
 ### Minimum phase and all-pass decomposition
 
-Now with the knowledge that we have about minimum phase and all-pass systems, we are able to show that you can decompose any causal poles and zeros system (without poles or zeros on the unit circle) using these two system types.  
+With the knowledge that we have about minimum phase and all-pass systems, we are able to show that any causal poles and zeros system with system function $H(z)$ (without poles or zeros on the unit circle) can be decomposed as the product of an all-pass and a minimum phase system.  
 
-Let $H(z)$ be a non-minimum phase system with one zero $z=\frac{1}{a}, |a|<1$, outside the unit circle and all other poles and zeros on the inside of the unit circle.
+Let $H(z)$ be a non-minimum phase system with one zero $z=\frac{1}{a}, |a|<1$, outside the unit circle and all other poles and zeros on the inside of the unit circle. To decompose the system the steps to follow are:
+
+<ol>
+  <li> Factorize out all poles and zeros outside of the unit circle to create a minimum phase and maximum phase system. For our example $H(z)$ can be rewritten as:
+    \begin{equation*}
+        H(z) = H_{1}(z)(a-z^{-1}),
+    \end{equation*}
+    where $H_{1}$ is minimum phase.</li>
+
+
+  <li> Create all the conjugate reciprocals of all poles and zeros that were factorized out. However, you cannot just add poles and zeros to a system for free. You will also need to add a zero on the same spot for every pole you add and vice versa. In our example, this becomes
+  \begin{equation*}
+    H(z) = H_{1}(z)(a-z^{-1}) \frac{1-a^\ast z^{-1}}{1-a^\ast z^{-1}}
+  \end{equation*}
+    </li>
+
+  <li> Match all the factored out poles and zeros with their conjugate reciprocal to obtain the all-pass part, and add the remaining poles and zeros the minimum phase system part. Finally, we obtain
+  \begin{equation*}
+   \begin{split}
+       H(z) &= [H_{1}(z)(1-a^\ast z^{-1})]\frac{a-z^{-1}}{1-a^\ast z^{-1}} \\
+       H(z) &= H_{min}(z)H_{ap}(z)
+   \end{split}
+   \end{equation*} </li>
+</ol>
+
+In the following exercise, you can try for yourself to apply these steps and obtain a minimum-phase all-pass decomposition. 
+<div class="example">
+<h4> Example </h4>
+<hr>
+Factor the following system function as the product of a minimum phase system and an all-pass system:
+$$
+H(z) = \frac{1 - 2 z^{-1}}{1 - 0.9 z^{-1}}
+$$
+<button class="collapsible">Show solution</button>
+<div class="content">
+This can be shown as follows:
+\begin{eqnarray*}
+H(z) &=& \frac{1 - \color{green}{2} z^{-1}}{1 - 0.9 z^{-1}}
+\cdot \frac{1 - \color{red}{\frac{1}{2} z^{-1}}}{1 - \color{blue}{\frac{1}{2} z^{-1}}}
+= \frac{1 - \color{red}{\frac{1}{2}} z^{-1}}{1 - 0.9 z^{-1}}  \cdot
+\frac{1 - \color{green}{2} z^{-1}}{1 - \color{blue}{\frac{1}{2}} z^{-1}} \newline
+&=& H_{min}(z) \cdot H_{ap}(z)
+\end{eqnarray*}
+First create a zero by we mirroring the zero, which results in a new zero at $z=0.5$. This new zero has to be compensated by a new pole at the same position $z=0.5$. Then rearrange all old and new poles and zeros of $H(z)$ into two factors. The first factor contains the old pole and the new zero, which are both inside the unit circle and so this factor is minimum phase. The second factor contains the old zero and new pole which are each others mirrored versions and so this factor is all pass.
+<div style="max-width: 600px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/discrete/filters/general/ExampleFact.svg"
+      alt="Example fortorization."
+    />
+  </figure>
+</div>
+These steps can be applied to any filter $H(z)$
+</div>
+</div>
