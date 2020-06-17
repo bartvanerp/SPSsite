@@ -312,17 +312,56 @@ A minimum phase system is a system in which the system and its inverse are both 
 
 <ul>
 
-<li style="margin-top:10px;"> <b>Stability</b>, in a stable system the ROC contains the unit circle. </li>
+<li style="margin-top:10px;"> In a <b>stable</b> system the ROC contains the unit circle. </li>
 
-<li style="margin-top:10px;"> <b>Causal</b>, in a causal system the ROC is defined as going outward from a circle, with a radius larger than the largest pole in the system (excluding poles at infinity). </li>
+<li style="margin-top:10px;"> In a <b>causal</b> system the ROC is defined as going outward from a circle, with a radius larger than the largest pole in the system (excluding poles at infinity). </li>
 
-<li style="margin-top:10px;"> <b>Anti-causal</b>, in an anti-causal system the ROC is defined as going inward from a circle, with a radius smaller than the smallest pole (excluding poles at zero). </li>
+<li style="margin-top:10px;">In a <b>anti-causal</b> system the ROC is defined as going inward from a circle, with a radius smaller than the smallest pole (excluding poles at zero). </li>
 
 </ul>
 
 Therefore, if a systems is minimum phase, its poles and zeros have the following properties. The ROC extends outwards from a circle with a radius larger than the largest pole, since the system needs to be causal. The system also needs to be stable. Therefore, the ROC includes the unit circle. Thus, the largest pole, and therefore all poles, need to be within the unit circle. The zeros need to be within the unit circle as well, since these rules also apply to the inverse.
 
-Using these rules we can also define a maximum phase system in which the system and its inverse are stable and anti-causal. In this system all poles and zeros need to be outside of the unit circle.
+A stable and causal LTI system has all its poles inside the unit circle. The zeros, however may lie anywhere in the $z$-plane. In order to obtain a minimum phase system, it is necessary to constraint the system $H(z)$ so that its inverse $G(z)=1/H(z)$ is also stable and causal. This requires that the zeros of $H(z)$ lie also inside the unit circle.
+
+In other words, a stable and causal filter that has a stable and causal inverse is said to have minimum phase and so a minimum phase system has all of its poles and zeros inside the unit circle, as shown in Fig. 3.
+
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/discrete/filters/general/pzminphase.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/discrete/filters/general/magphaseminphase.svg"
+    style="width:100%">
+  </div>
+  <figcaption class="numbered">
+    Pole-zero plot and magnitude- and phase-response of minimum phase system.
+  </figcaption>
+</div>
+</figure>
+The magnitude and phase response of a minimum phase system with three zeros inside the unit circle is depicted in Fig. 3.
+
+When mirroring all zeros of a stable and causal minimum phase system we obtain a maximum phase system; thus, a maximum phase system has all of its poles inside and its zeros outside the unit circle, as shown in Fig. 4.
+
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/discrete/filters/general/pzmaxphase.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/discrete/filters/general/magphasemaxphase.svg"
+    style="width:100%">
+  </div>
+  <figcaption class="numbered">
+    Pole-zero plot and magnitude- and phase-response of maximum phase system.
+  </figcaption>
+</div>
+</figure>
+
+Fig. 4. shows the magnitude and phase response of a maximum phase system with three zeros outside the unit circle as depicted in the pole zero plot. These zeros are obtained by mirroring all three zeros of the previous minimum phase system.
 
 ### Minimum phase and all-pass decomposition
 
