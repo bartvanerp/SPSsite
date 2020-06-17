@@ -456,8 +456,8 @@ When mirroring all zeros of a stable and causal minimum phase system we obtain a
   </figcaption>
 </div>
 </figure>
-The magnitude and phase response of a minimum phase system with three zeros inside the unit circle is depicted in Fig. 4.
-The plots show the magnitude and phase response of a maximum phase system with three zeros outside the unit circle as depicted in the pole zero plot. These zeros are obtained by mirroring all three zeros of the previous minimum phase system.
+
+Fig. 4. shows the magnitude and phase response of a maximum phase system with three zeros outside the unit circle as depicted in the pole zero plot. These zeros are obtained by mirroring all three zeros of the previous minimum phase system.
 
 
 {{% alert note %}}
