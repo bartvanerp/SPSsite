@@ -17,7 +17,10 @@ type = "docs"  # Do not modify.
 
 +++
 
-One important question we might ask is whether we can determine $H(z)$ given $r_y[l]$ or $R_y(e^{j\theta})$, given that the input is white noise. However, we only know the magnitude response $|H(e^{j\theta})|^2=P_y(e^{j\theta})$. Therefore, there is no unique answer to this question, as seen in the following example.
+Signal modeling is closely related to *spectral factorization* which states that most random processes with a continuous power spectral density (PSD) can be generated as the output of a causal filter driven by white noise, the so-called innovation representation of the random process.
+
+In the module Power spectral density, we have seen that the PSD and the AC of a random signals are Fourier pairs. Consider a system depicted in Fig., with input $x[n]$ and output $y[n]$. Can we determine $H(z)$ by knowledge of $r_y[l]$ (or equivalently $P_y(e^{j\theta})$), and that the input is white noise with given $\sigma_x^2$? Unfortunately, there is no unique answer to this question. In fact, knowledge of $P_y(e^{j\theta})$ provides us only with the magnitude response of the system, i.e. $|H(z)|$, since we know that $P_y(e^{j\theta})$ = $\sigma_x^2$  $|H(z)|^2$ . This can be show by the following example.
+
 \begin{equation*}
 \begin{split}
     P_y(e^{j\theta}) &=& \sigma_i^2|H(e^{j\theta})|^2 = \frac{5}{4}-cos(\theta)\newline
