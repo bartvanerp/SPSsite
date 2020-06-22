@@ -21,7 +21,7 @@ Signal modeling is closely related to *spectral factorization* which states that
 
 ## Innovation representation
 
-## Spectral factorization
+## Spectral factorization: problem
 In the module <a href="../statisticalsignalprocessing_signals_psd">Power spectral density</a>, we have seen that the PSD and the AC of a random signals are Fourier pairs. Consider a system depicted in Fig., with input $x[n]$ and output $y[n]$.
 
 Spectral factorization tackles the following questions: Can we determine $H(z)$ knowing that the input $x[n]$ is white noise, and given the second-order statistics ($r_y[l]$  or equivalently $P_y(e^{j\theta})$) of the output signal $y[n]$? In principle, there is no unique answer to this question. We can understand this by looking at the following example.
@@ -77,6 +77,7 @@ This choice gives the same output $P_y(e^{j\theta})$, as proven below:
 
 Consequently more constraints are needed to uniquely define $H(z)$ which gives $r_y[l]$ or $P_y(e^{j\theta})$.
 
+## Spectral factorization: definition
 Spectral factorization is defined as the determination of a minimum-phase system from its magnitude response or from its auto correlation function. If $P(z)$ is rational, it can be factorized in the following form $\sigma_i^2 L(z)L(z^{-1})$, in which so-called "innovation filter" $L(z)$ is minimum-phase, and $\sigma^2_i$ is chosen such that $l[0]=1$.
 
 In the example above, we therefore need to choose $H(z) = 1-\frac{1}{2}z^{-1}$, as it is the minimum-phase choice.
