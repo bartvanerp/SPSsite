@@ -381,32 +381,68 @@ With the knowledge that we have about minimum phase and all-pass systems, we are
 
 Let $H(z)$ be a non-minimum phase system with one zero $z=\frac{1}{a}, |a|<1$, outside the unit circle and all other poles and zeros on the inside of the unit circle. To decompose the system the steps to follow are:
 
+
 <ol>
   <li> Factorize out all poles and zeros outside of the unit circle to create a minimum phase and maximum phase system. For our example $H(z)$ can be rewritten as:
     \begin{equation*}
-        H(z) = H_{1}(z)(a-z^{-1}),
+        H(z) = H_{min1}(z)(a-z^{-1}) = H_{min1}(z)H_{max}(z),
     \end{equation*}
-    where $H_{1}$ is minimum phase.</li>
+    where $H_{1}$ is minimum phase.
+    <div style="max-width: 700px; margin: auto">
+      <figure>
+        <img
+          src="/../files/7.Images/statistical/signals/minallpass_1.svg"
+          alt="Pole-zero plot of H(z)."
+        />
+        <figcaption class="numbered">
+        Pole zero plot of $ H(z)$, decomposed as a cascade of a minimum phase and a maximum phase systems.
+        </figcaption>
+      </figure>
+    </div>
+    </li>
 
 
   <li> Create all the conjugate reciprocals of all poles and zeros that were factorized out. However, you cannot just add poles and zeros to a system for free. You will also need to add a zero on the same spot for every pole you add and vice versa. In our example, this becomes
   \begin{equation*}
-    H(z) = H_{1}(z)(a-z^{-1}) \frac{1-a^\ast z^{-1}}{1-a^\ast z^{-1}}
+    H(z) = H_{min1}(z)(a-z^{-1}) \frac{1-a^\ast z^{-1}}{1-a^\ast z^{-1}} = H_{min1}(z)H_{mix}(z)
   \end{equation*}
+  <div style="max-width: 700px; margin: auto">
+    <figure>
+      <img
+        src="/../files/7.Images/statistical/signals/minallpass_2.svg"
+        alt="Pole-zero plot of H(z)."
+      />
+      <figcaption class="numbered">
+        Pole zero plot of $ H(z)$, decomposed as a cascade of a minimum phase and a mixed phase systems.
+      </figcaption>
+    </figure>
+  </div>
     </li>
 
   <li> Match all the factored out poles and zeros with their conjugate reciprocal to obtain the all-pass part, and add the remaining poles and zeros the minimum phase system part. Finally, we obtain
   \begin{equation*}
    \begin{split}
-       H(z) &= [H_{1}(z)(1-a^\ast z^{-1})]\frac{a-z^{-1}}{1-a^\ast z^{-1}} \\
+       H(z) &= [H_{min1}(z)(1-a^\ast z^{-1})]\frac{a-z^{-1}}{1-a^\ast z^{-1}} \\
        H(z) &= H_{min}(z)H_{ap}(z)
    \end{split}
-   \end{equation*} </li>
+   \end{equation*}
+   <div style="max-width: 700px; margin: auto">
+     <figure>
+       <img
+         src="/../files/7.Images/statistical/signals/minallpass_3.svg"
+         alt="Pole-zero plot of H(z)."
+       />
+       <figcaption class="numbered">
+        Pole zero plot of $ H(z)$, decomposed as a cascade of a minimum phase and an all-pass systems.
+       </figcaption>
+     </figure>
+   </div>
+   </li>
 </ol>
 
-In the following exercise, you can try for yourself to apply these steps and obtain a minimum-phase all-pass decomposition. 
+In the following exercise, you can try for yourself to apply these steps and obtain a minimum-phase all-pass decomposition.
 <div class="example">
-<h4> Example </h4>
+<h4> Exercise </h4>
 <hr>
 Factor the following system function as the product of a minimum phase system and an all-pass system:
 $$
@@ -427,7 +463,7 @@ First create a zero by we mirroring the zero, which results in a new zero at $z=
   <figure>
     <img
       src="/../files/7.Images/discrete/filters/general/ExampleFact.svg"
-      alt="Example fortorization."
+      alt="Exercise factorization."
     />
   </figure>
 </div>
