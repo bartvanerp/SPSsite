@@ -19,7 +19,31 @@ type = "docs"  # Do not modify.
 
 Signal modeling is closely related to *spectral factorization* which states that most random processes with a continuous power spectral density (PSD) can be generated as the output of a causal filter driven by white noise, the so-called innovation representation of the random process.
 
-In the module Power spectral density, we have seen that the PSD and the AC of a random signals are Fourier pairs. Consider a system depicted in Fig., with input $x[n]$ and output $y[n]$. Can we determine $H(z)$ by knowledge of $r_y[l]$ (or equivalently $P_y(e^{j\theta})$), and that the input is white noise with given $\sigma_x^2$? Unfortunately, there is no unique answer to this question. In fact, knowledge of $P_y(e^{j\theta})$ provides us only with the magnitude response of the system, i.e. $|H(z)|$, since we know that $P_y(e^{j\theta})$ = $\sigma_x^2$  $|H(z)|^2$ . This can be show by the following example.
+In the module Power spectral density, we have seen that the PSD and the AC of a random signals are Fourier pairs. Consider a system depicted in Fig., with input $x[n]$ and output $y[n]$.
+
+Spectral factorization tackles the following questions: Can we determine $H(z)$ knowing that the input $x[n]$ is white noise, and given the second-order statistics ($r_y[l]$  or equivalently $P_y(e^{j\theta})$) of the output signal $y[n]$? In principle, there is no unique answer to this question. We can understand this by looking at the following example.
+
+<div style="max-width: 700px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/statistical/signals/spectfact_1.bmp"
+      alt="Spectral factorization"
+    />
+    <figcaption class="numbered">
+     Spectral factorization problem: determining $H(z)$ knowing that the input $x[n]$ is white noise, and given the second-order statistics of the output signal $y[n]$.
+    </figcaption>
+  </figure>
+</div>
+
+Suppose we are given the PSD of $y[n]$. Since we know that $P_y(e^{j\theta})$ = $\sigma_x^2$  $|H(z)|^2$, we can write:
+\begin{equation*}
+\begin{split}
+    P_y(e^{j\theta}) &=& \sigma_i^2|H(e^{j\theta})|^2 = \frac{5}{4}-cos(\theta)\newline
+    \sigma_i^2|H(z)|^2 &=& \sigma_i^2H(z)H(z^{-1}) = \frac{5}{4}-\frac{z+z^{-1}}{2}\newline
+\end{split}
+\end{equation*}
+
+In fact, knowledge of $P_y(e^{j\theta})$ provides us only with the magnitude response of the system, i.e. $|H(z)|$, since we know that $P_y(e^{j\theta})$ = $\sigma_x^2$  $|H(z)|^2$. This can be show by the following example.
 
 \begin{equation*}
 \begin{split}
