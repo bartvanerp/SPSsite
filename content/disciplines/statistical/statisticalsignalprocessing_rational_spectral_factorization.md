@@ -80,4 +80,10 @@ Consequently more constraints are needed to uniquely define $H(z)$ which gives $
 ## Spectral factorization: definition
 Spectral factorization is defined as the determination of a minimum-phase system from its magnitude response or from its auto correlation function. If $P(z)$ is rational, it can be factorized in the following form $\sigma_i^2 L(z)L(z^{-1})$, in which so-called "innovation filter" $L(z)$ is minimum-phase, and $\sigma^2_i$ is chosen such that $l[0]=1$.
 
+One practical method to solve the spectral factorization problem is referred to as the *root method*. The basic principles are:
+<ol>
+<li> For every rational PSD, that is a PSD that can be expressed as a fraction between two polynomials in $e^{-j\omega}$ (or equivalently in $z$), there exist a unique minimum-phase factorization within a scale factor.  </li>
+<li> For a PSD expressed as a rational polynomials, with a numerator of order Q and a denominator of order P, there are $2^{P+Q}$ possible rational systems which provide this PSD. </li>
+<li> Not all possible rational systems are valid, since for a valid PSD the roots should appear in mirrored pairs, that is if $z_k$ is a root also $1/z^\ast_k$. </li>
+<ol>
 In the example above, we therefore need to choose $H(z) = 1-\frac{1}{2}z^{-1}$, as it is the minimum-phase choice.
