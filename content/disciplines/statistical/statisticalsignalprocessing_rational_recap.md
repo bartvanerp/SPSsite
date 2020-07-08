@@ -18,7 +18,6 @@ type = "docs"  # Do not modify.
 +++
 
 This section contains a selection of the material from the module on <a href="../../discrete/discretesignalprocessing_systems_main">discrete-time systems</a>, which provides a brief recap of the general form and properties of linear time-invariant systems.
-
 <br></br>
 
 ## Linearity and time-invariance
