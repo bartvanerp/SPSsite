@@ -22,9 +22,9 @@ Signal modeling is closely related to *spectral factorization* which states that
 ## Innovation representation
 
 ## Spectral factorization: problem
-In the module <a href="../statisticalsignalprocessing_signals_psd">Power spectral density</a>, we have seen that the PSD and the AC of a random signals are Fourier pairs. Consider a system depicted in Fig., with input $x[n]$ and output $y[n]$.
+In the module <a href="../statisticalsignalprocessing_signals_psd">Power spectral density</a>, we have seen that the PSD and the AC of a random signals are Fourier pairs. Consider a system depicted in Figure 1, with input $x[n]$ and output $y[n]$.
 
-Spectral factorization tackles the following questions: Can we determine $H(z)$ knowing that the input $x[n]$ is white noise, and given the second-order statistics ($r_y[l]$  or equivalently $P_y(e^{j\theta})$) of the output signal $y[n]$? In principle, there is no unique answer to this question. We can understand this by looking at the following example.
+Spectral factorization tackles the following question: Can we determine $H(z)$ knowing that the input $x[n]$ is white noise, and given the second-order statistics ($r_y[l]$  or equivalently $P_y(e^{j\theta})$) of the output signal $y[n]$? In principle, there is no unique answer to this question. We can understand this by considering the following example.
 
 <div style="max-width: 700px; margin: auto">
   <figure>
@@ -38,7 +38,7 @@ Spectral factorization tackles the following questions: Can we determine $H(z)$ 
   </figure>
 </div>
 
-Suppose we are given the PSD of $y[n]$. Since we know that $P_y(e^{j\theta})$ = $\sigma_x^2$  $|H(z)|^2$, we can write:
+Suppose we are given the PSD of $y[n]$ as $P_y(e^{j\theta}) =\frac{5}{4}-cos(\theta)$ and we know that $y[n]$ is the output of an LTI system driven by white noise, with zero  mean and variance $\sigma_i^2$.Then, we can write:
 \begin{equation*}
 \begin{split}
     P_y(e^{j\theta}) &=& \sigma_i^2|H(e^{j\theta})|^2 = \frac{5}{4}-cos(\theta)\newline
@@ -75,7 +75,7 @@ This choice gives the same output $P_y(e^{j\theta})$, as proven below:
 </li>
 </ol>
 
-Consequently more constraints are needed to uniquely define $H(z)$ which gives $r_y[l]$ or $P_y(e^{j\theta})$.
+Therefore, more constraints are needed to uniquely define $H(z)$ which gives $r_y[l]$ or $P_y(e^{j\theta})$.
 
 ## Spectral factorization: definition
 Spectral factorization is defined as the determination of a minimum-phase system from its magnitude response or from its auto correlation function. If $P(z)$ is rational, it can be factorized in the following form $\sigma_i^2 L(z)L(z^{-1})$, in which so-called "innovation filter" $L(z)$ is minimum-phase, and $\sigma^2_i$ is chosen such that $l[0]=1$.
@@ -84,6 +84,29 @@ One practical method to solve the spectral factorization problem is referred to 
 <ol>
 <li> For every rational PSD, that is a PSD that can be expressed as a fraction between two polynomials in $e^{-j\omega}$ (or equivalently in $z$), there exist a unique minimum-phase factorization within a scale factor.  </li>
 <li> For a PSD expressed as a rational polynomials, with a numerator of order Q and a denominator of order P, there are $2^{P+Q}$ possible rational systems which provide this PSD. </li>
-<li> Not all possible rational systems are valid, since for a valid PSD the roots should appear in mirrored pairs, that is if $z_k$ is a root also $1/z^\ast_k$. </li>
-<ol>
+<li> Not all possible rational systems are valid, since for a valid PSD the roots should appear in mirrored pairs, which means that if $z_k$ is a root, then also $1/z^\ast_k$ is a root. </li>
+<\ol>
+
 In the example above, we therefore need to choose $H(z) = 1-\frac{1}{2}z^{-1}$, as it is the minimum-phase choice.
+
+### Pencast video [⯈]
+In the following pencast, you may see how to solve the find spectral factorization of a random signal by the root method.
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/1005mzc40js" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+In the following exercise you can try for yourself how to solve the spectral factorization problem by the root method.
+<div class="example">
+<h4> Exercise </h4>
+<hr>
+Apply spectral factorization to the following psd:
+\begin{equation*}
+	P(e^{j\theta}) = \frac{5-4 \cos(\theta)}{10-6 \cos(\theta)}
+\end{equation*}
+Give an expression for the innovation filter $L(z)$ and the variance $\sigma^2_i$ of the innovation signal.
+
+<button class="collapsible">Show solution</button>
+<div class="content">
+text
+</div>
+</div>
