@@ -189,7 +189,7 @@ The second consequence can be understood again through Fig. 1, where the definit
 
 Consequence 3 is a generalization of axiom 3 and holds for all events, so not only for disjoint events. The axiom can be understood by analyzing Fig. 1. The union of two overlapping events can be written as their sum whilst compensating for the overlapping set of outcomes, denoted by the intersection of events. Therefore, the probability of the union of events $A$ and $B$ can be written as the sum of the individual probabilities minus the probability of the overlapping event. Axiom 3 is a special case of this axiom, where two events are disjoint and therefore the intersection between the two events equals 0.
 
-The fourth consequence specifies that the probability of an event $A$ is smaller or equal to the probability of an event $B$ when $A$ is a subset of $B$. This is an immediate condequence of the definition of a subset, where the event $A$ contains a part of the outcomes of event $B$. Equality only occurs if the sets are equal.
+The fourth consequence specifies that the probability of an event $A$ is smaller or equal to the probability of an event $B$ when $A$ is a subset of $B$. This is an immediate consequence of the definition of a subset, where the event $A$ contains a part of the outcomes of event $B$. Equality only occurs if the sets are equal.
 
 The last consequence can be explained with the help of Fig. 3. The event $A$ can be split in multiple subsets, each in a separate region of the event space, denoted by the intersection between event $A$ and the subset $B_i$. Adding all different segments of $A$ gives the full event $A$, because the event space always covers the entire sample space and must therefore include the entire set of $A$.
 
