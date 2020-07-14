@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 
 [menu.statistical]                       # name of menu section (main module)
   name = "Spectral factorization"        # name of this item in that menu
-  weight = 2                           # location in that menu
+  weight = 3                           # location in that menu
   parent = "Rational signal models"
 
 +++
@@ -92,21 +92,49 @@ In the example above, we therefore need to choose $H(z) = 1-\frac{1}{2}z^{-1}$, 
 ### Pencast video [⯈]
 In the following pencast, you may see how to solve the find spectral factorization of a random signal by the root method.
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/1005mzc40js" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xo6m7Pweh2Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 In the following exercise you can try for yourself how to solve the spectral factorization problem by the root method.
 <div class="example">
 <h4> Exercise </h4>
 <hr>
-Apply spectral factorization to the following psd:
+Apply spectral factorization to the following PSD:
 \begin{equation*}
 	P(e^{j\theta}) = \frac{5-4 \cos(\theta)}{10-6 \cos(\theta)}
 \end{equation*}
 Give an expression for the innovation filter $L(z)$ and the variance $\sigma^2_i$ of the innovation signal.
-
 <button class="collapsible">Show solution</button>
 <div class="content">
-text
+\begin{equation*}
+P(z) = \frac{5 - 2(z^{-1} + z)}{10 - 3(z^{-1} + z)}=
+\frac{c_n}{c_d} \cdot \frac{1 - a z^{-1}}{1-bz^{-1}} \cdot \frac{1 - a z}{1-bz}
+= \sigma_{i}^{2} \cdot L(z) \cdot L(z^{-1})
+\end{equation*}
+with constants $c_n, c_d, a$ and $b$; mind that $|a|<1$ and $|b|<1$. In this way the innovation filter $L(z)$ is always minimum phase and the first coefficient of the innovation filter ($l_0$) equals one, thus $L(z)= 1 + \cdot  z^{-1} + \cdots $.
+
+From above, we obtain the following set of equation:
+\begin{equation*}
+\begin{split}
+c_n (1-a z^{-1}) (1-az) &=& 9 -2(z^{-1}+z) \mbox{ } \newline
+&\Rightarrow &
+(a=\frac{1}{2} \mbox{ and } c_n =4) \mbox{ or } (a=2 \mbox{ and } c_n =1) \newline
+c_d (1-b z^{-1}) (1-b z) &=& 10 -3(z^{-1}+z) \mbox{ } \newline
+&\Rightarrow &
+(b=\frac{1}{3} \mbox{ and } c_d =9) \mbox{ or } (b=3 \mbox{ and } c_d =1)
+\end{split}
+\end{equation*}
+Since we need to choose that solution which results in a minimum phase innovation filter, this results in:
+\begin{equation*}
+P(z) = \frac{4}{9} \cdot
+\left (
+\frac{1- \frac{1}{2} z^{-1}}{1- \frac{1}{3} z^{-1}}
+\right )
+\cdot
+\left (
+\frac{1- \frac{1}{2} z}{1- \frac{1}{3} z}
+\right ) = \sigma_{i}^{2} \cdot L(z) \cdot L(z^{-1})
+\end{equation*}
+Thus $L(z) = (1- \frac{1}{2} z^{-1})/(1- \frac{1}{3} z^{-1})$ and $\sigma_{i}^{2} = 4/9$.
 </div>
 </div>
