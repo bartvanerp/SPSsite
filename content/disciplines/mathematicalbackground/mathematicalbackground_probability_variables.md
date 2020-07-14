@@ -30,7 +30,7 @@ In order to perform calculations with these random processes, there is a need to
         4, & \text{for } s=\heartsuit
     \end{cases}
 \end{equation}
-however, different definitions are also allowed.
+However, different definitions are also allowed.
 A visualization of this mapping can be found in Fig. 1, where all elements in the sample space are mapped to the real line.
 
 <div style="max-width: 500px; margin: auto">
