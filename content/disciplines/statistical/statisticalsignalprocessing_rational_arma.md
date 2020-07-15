@@ -1,8 +1,8 @@
 +++
-title = "Auto-regressive moving-average signal models "         # name of webpage
+title = "Auto-regressive moving-average models "         # name of webpage
 
 # date = {{ .Date }}
-lastmod = 2020-07-14
+lastmod = 2020-07-15
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -11,224 +11,344 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 
 [menu.statistical]                       # name of menu section (main module)
-  name = "ARMA signal models"        # name of this item in that menu
-  weight = 2                           # location in that menu
+  name = "ARMA models"        # name of this item in that menu
+  weight = 3                           # location in that menu
   parent = "Rational signal models"
 
 +++
 A stochastic processes may be represented by a stochastic model with given order and parameters, which is able to generate a random signal characterized by well-defined spectral properties. In fact, although a stochastic model and process are in principle two different entities, they are sometimes used interchangeably.
-Stochastic models are fundamental in many applied fields of science, including engineering, economics and medicine. Among stochastic models, a special class of models known as auto-regressive moving-average (ARMA) is widely used. In this section, we first explain how the statistical properties of a random signal are affected when filtering by LTI; then we discuss random signals with rational spectra and an important representation of a random signal known as the *innovation representation*; finally we provide a more detailed overview of ARMA models.
+Stochastic models are fundamental in many applied fields of science, including engineering, economics and medicine. Among stochastic models, a special class of models known as auto-regressive moving-average (ARMA) is widely used. In the section
+<a href="../statisticalsignalprocessing_rational_spectral_factorization">Spectral factorization</a> we saw how any  wide-sense stationary random signal can be described as LTI system driven by white noise. The system, also referred to as innovation filter, has a rational spectrum. It turns out that this is equivalent to modeling the random process generating the signal as an ARMA($p$, $q$) model, which provide a parsimonious description of a WSS stochastic process in terms of a rational polynomial. The numerator of order $q$ represents the moving-average part, while the denominator of order $p$ represents auto-regressive part.
 
-## LTI with random inputs
+The ARMA model is based on the observation the stochastic time series often have a dependence on previous time points. This can be described by the auto-regressive part of an ARMA model, which permits modeling a "memory" that decades with time. The moving- average part takes into account for the new information (innovation) by a linear combination of the present and previous samples.
 
-When a random signal is filtered by an LTI system, its statistical properties are changed. Focusing on the second-order statistics, here we show the transformation that a discrete random *power* signal undergoes when processed
-by a discrete-time LTI system. The difference between *power* and *energy* signal is discussed in the section <a href="../statisticalsignalprocessing_signals_psd">Power Spectral Density</a>.
-
-### Time-domain analysis
-The input-output relationship of an LTI system is described using the following convolution
-\begin{equation}
-\begin{split}
-    y[n] = \sum_{k=-\infty}^{\infty} h[k] x[n-k].
-    \label{eq::1}
-\end{split}
-\end{equation}
-Here $x[n]$ is a random stationary signal. Output $y[n]$ converges and is stationary if the system represented by the impulse response $h[k]$ is stable. The condition for stability is that $\sum_{-\infty}^{\infty}|h[k]|<\infty$.
-
-The exact output $y[n]$ can not be calculated, since $y[n]$ is a stochastic process. However, certain statistical properties of $y[n]$ can be determined from knowledge of the statistical properties of the input and the characteristics of the system.
-
-The **mean value** of output $y[n]$ can be determined by taking the expected value from both sides of equation (1) as
-\begin{equation}
-\begin{split}
-    \mu_y = \sum_{k=-\infty}^{\infty}h[k]E\{{x[n-k]}\} = \mu_x \sum_{k=-\infty}^{\infty} h[k] = \mu_x H(e^{j0}).
-\end{split}
-\end{equation}
-Note that the filter coefficients are deterministic, and thus $E\\{h[k]\\} = h[k]$.
-
-The **input-output correlation** can also be calculated without knowing the exact output. The input-output correlation is defined as $r_{xy}[l] = E\\{ x[n+l]y^\ast[n]\\}$. Therefore, to calculate this correlation, we take the complex conjugate of (1) and multiply it with $x[n+l]$ before taking the expected value.
-
-\begin{equation}
-\begin{split}
-    r_{xy}[l] &= E\{ x[n+l]y^\ast[n]\} = \sum_{k=-\infty}^{\infty} h^\ast[k] E\{x[n+l]x^\ast[n-k]\}\newline
-    r_{xy}[l] &= \sum_{k=-\infty}^{\infty} h^\ast[k] r_{xx}[l+k] = \sum_{m=-\infty}^{\infty} h^\ast[-m] r_{xx}[l-m]\newline
-    r_{xy}[l] &= h^\ast[-l]\star r_{xx}[l]\newline
-    r_{yx}[l] &= h^\ast[l]\star r_{xx}[l].\newline
-\end{split}
-\end{equation}
-
-The **output correlation** can be calculated by multiplying with $y^\ast[n-l]$ and taking the expectation.
-\begin{equation}
-\begin{split}
-    r_{yy}[l] &= E\{y[n]y^\ast[n-l]\} = \sum_{k=-\infty}^{\infty} h[k]E\{x[n-l] y^\ast[n-l]\}\newline
-    r_{yy}[l] &= \sum_{k=-\infty}^{\infty} h[k] r_{xy}[l-k] = h[l]\star r_{xy}[l].
-\end{split}
-\end{equation}
-
-By combining this result with $r_{xy}[l] = h^\ast[-l]\star r_{xx}[l]$ we obtain
-\begin{equation}
-\begin{split}
-    r_y[l] &= h[l]\star h^\ast[-l]\star r_x[l]\newline
-    r_y[l] &= r_h[l]\star r_x[l].
-\end{split}
-\end{equation}
-
-The **output signal power** is equal to $P_y=E\{|y[n]|^2\}=r_y[0]$, which can be calculated using the previous equations,
-\begin{equation}
-\begin{split}
-    P_y&=E\{|y[n]|^2\}=r_y[0]\newline
-    &=r_h[l]\star r_x[l=0] = \sum_{k=-\infty}^{\infty} h[k] h^\ast[-k] r_{x}[k],\newline
-\end{split}
-\end{equation}
-
-where $r_h[l]$ is the autocorrelation of the LTI system with inmpulse response $h[n]$.
-
-Figure 1 describes schematically what the input-output relationship of an LTI system in the time domain and in the "correlation" domain.
-
-<div style="max-width: 900px; margin: auto">
-  <figure>
-    <img
-      src="/../files/7.Images/statistical/signalmodels/scheme_LTI_AC.bmp"
-      alt="LTI with random input"
-    />
-    <figcaption class="numbered">
-     LTI with impulse response h[n], random input $x[n]$ and random output $y[n]$. Input-output relationship in the time and "correlation" domains.
-    </figcaption>
-  </figure>
-</div>
-
-### Transform-domain analysis
-
-The relationships found above in the time domain can be easily transformed in the frequency- and z-domains. Let us first recall some properties of the z-transform.
-Given a complex sequence $x[n]$, with z-transform $X(z)$, the following properties apply
-\begin{equation}
-\begin{split}
-    x^\ast[n] \Longleftrightarrow & X^\ast(z^\ast) \newline
-    x[n] \Longleftrightarrow & X(1/z) \newline
-    x^\ast[-n] \Longleftrightarrow & X^\ast(1/z^\ast) \newline
-\end{split}
-\end{equation}
-
-Since we are dealing with autocorrelation functions and power spectral densities of mostly real signals, it is also useful to recall that
+Thanks to their ability to model a wide variety of stochastic processes, ARMA models are useful for:
 <ul>
-<li> if $x[n]$ is real, then
-\begin{equation}
-    x[n] = x^\ast[n] \Longleftrightarrow X(z) = X^\ast(z^\ast);  
-\end{equation} </li>
-<li> if $x[n]$ has even symmetry around the time origin, then
-\begin{equation}
-    x[n] = x[-n] \Longleftrightarrow X(z) = X(1/z);  
-\end{equation}</li>
-<li> if $x[n]$ is both real and even, then
-\begin{equation}
-    x[n] = x^\ast[-n] \Longleftrightarrow X(z) = X^\ast(z^\ast) = X(1/z) = X^\ast(1/z^\ast).  
-\end{equation}</li>
-</ul>
+<li> understanding the nature of a stochastic process by detecting the mechanism that builds memory into the signal;</li>
+<li> forecasting future values of a signal based on the past values;</li>
+<li> removing from the signal the imprint of some known process, so as to
+get a more random residual signal to be further analyzed and interpreted (pre-whitening);</li>
+<li> finding a spectral estimate from a random signal. More on this in the section <a href="../statisticalsignalprocessing_spectrum_parametric">Parametric spectral estimation</a>. </li>
+</ul>  
 
-From the equation above, we can easily the input-output relationships for an LTI system  in the frequency and z-domain,  which are provided in the following table.
-
-| Time Domain                    | Frequency domain                                            | z-domain                          |
-|--------------------------------|-------------------------------------------------------------|-----------------------------------|
-| $y[n]=h[n]\star x[n]$               | $Y(e^{j\theta})=H(e^{j\theta})X(e^{j\theta})$               | $Y(z)=H(z)X(z)$                   |
-| $r_{yx}[l]=h[l]\star r_x[l]$        | $P_{yx}(e^{j\theta})=H(e^{j\theta})R_{x}(e^{j\theta})$      | $P_{yx}(z)=H(z)R_{x}(z)$          |
-| $r_{xy}[l]=h^*[-l]\star r_x[l]$     | $P_{xy}(e^{j\theta})=H^*(e^{j\theta})R_{x}(e^{j\theta})$    | $P_{xy}(z)=H^*(1/z^*)P_{x}(z)$    |
-| $r_{y}[l]=h[l]\star r_{xy}[l]$      | $P_{y}(e^{j\theta})=H(e^{j\theta})R_{xy}(e^{j\theta})$      | $P_{y}(z)=H(z)R_{xy}(z)$          |
-| $r_{y}[l]=h[l]\star h^*[-l]\star r_x[l]$ | $P_{y}(e^{j\theta})=\|H(e^{j\theta})\|^2R_{x}(e^{j\theta})$ | $P_{y}(z)=H(z)H^*(1/z^*)R_{x}(z)$ |
-
-## Innovation representation of a random signal
-
-A rational spectrum is a ratio of two rational functions containing $e^{j\theta}$.
+## Auto-regressive model, AR($p$)
+An auto-regressive process is a special type of ARMA model for which $q= 0$.
+The AR model is therefore an all-pole filter with the following transfer function
 \begin{equation}
 \begin{split}
-    P(e^{j\theta}) = P(z) = \frac{\sum_{q=-Q}^{Q} r_x[n] e^{-j\theta q}}{\sum_{p=-P}^{P} r_y[n] e^{-j\theta p}}
+    H(z) = \frac{1}{1+\sum_{p=1}^{P} a_p z^{-p}} = \frac{1}{A(z)}.
 \end{split}
 \end{equation}
 
-Here $r_x$ and $r_y$ are the auto-correlation sequences of two real signals. The rational spectrum is actually derived from the *Wold's decomposition* or *representation theorem*, a very general signal decomposition theorem, which states that every wide sense stationary (WSS) signal can be written as a sum of two components, one deterministic and one stochastic, as given below
+The input to this system is white noise, thus an AR random process can be described by the following difference equation
+\begin{equation}
+    x[n] = i[n] - a_1 x[n-1] - a_2 x[n-2] - \ldots - a_p x[n-p].
+\end{equation}
+
+where $i[n]$ is the input white noise and $a_i$ are the filter coefficients. The order of the filter gives an indication on how many previous noise samples are used to form a new output.
+
+<h3>Example</h3>
+One of the first stochastic models was a AR model proposed by Yule in 1927 to describe the motion of pendulum in a viscous medium. Yule expressed the amplitude $s[n]$ of the oscillation using the following homogeneous difference equation
 \begin{equation}
 \begin{split}
-    x[n] = \sum_{k=0}^{\infty}h[k]i[n-k] + \hat{x}[n],
+    s[n] + a_1 s[n-1] + a_2 s[n-2] = 0, \qquad n=0, 1, 2, ...
 \end{split}
 \end{equation}
-
-where $h[k]$ represents a infinite-length sequence of weights; $i[n]$ is a white noise sequence, often referred to as *innovations*; $\hat{x}[n]$ is deterministic, thus exactly predictable from the past values. The deterministic part can be subtracted from this signal since it is exactly predictable. This will result in a purely random zero-mean WSS signal as
+However, the measured values of $s[n]$ are affected by noise. Therefore, Yule proposed to use noise as an external driving force determining the pendulum's behavior, resulting in
 \begin{equation}
 \begin{split}
-    x[n] = \sum_{k=0}^{\infty}h[k] i[n-k] = \sum_{k=-\infty}^{n}h[n-k] i[k].
+    s[n] + a_1 s[n-1] + a_2 s[n-2] = i[n], \qquad n=0, 1, 2, ...,\newline
+    s[n] = i[n] - a_1 s[n-1] - a_2 s[n-2], \qquad n=0, 1, 2, ...
 \end{split}
 \end{equation}
+which is a 2$^{nd}$ order AR model.
 
-From here it becomes clear that $x[n]$ can be considered as the outcome of filtering white noise by a stable LTI system, with a rational transfer function in the form of
+### Autocorrelation of a AR($p$) process
+
+The auto-correlation function of an AR process can be determined by the definition of the auto-correlation function
 \begin{equation}
-\begin{split}
-    H(z) = \frac{B(z)}{A(z)},
-\end{split}
+    r_x[l] = \mathrm{E}\left\\{x[n]x^\ast[n-l]\right\\},
 \end{equation}
-with
+where we will make use of two properties. First the auto-correlation function of the independent white Gaussian input noise is defined as
 \begin{equation}
-\begin{split}\label{#eq:AB}
-    A(z) = 1 + a_1z^{-1}+ ... + a_pz^{-p}x,\newline
-    B(z) = 1 + b_1z^{-1}+ ... + b_qz^{-q}.
-\end{split}
+    r_i[l] = \mathrm{E}\left\\{i[n]i^\ast[n-l]\right\\} = \sigma^2_i\delta[l]
 \end{equation}
-In equation (15), we assume that $a_0 =  1$  and  $b_0 = 1$.
-
-Combining equation (12) with the right-end side of equation (13), where we have reversed the summation, we can also rewrite (13) to obtain a "new" sample of the random signal $x[n]$ as
-
+and secondly we use the fact that the signal is real, meaning that $x[n] = x^\ast[n]$. Before the auto-correlation function of $x[n]$ can be calculated, first the cross-correlation function between the white Gaussian noise input $i[n]$ and the AR-process $x[n]$ has to be determined as
 \begin{equation}
-\begin{split}
-    x[n+1] =  \underbrace{\sum_{k=-\infty}^{n}h[n+1-k] x[k]}\_{\color{red}{\begin{subarray}{c}\text{Predictable part: linear}\newline
-    \text{combination of past information}\end{subarray}}} + \underbrace{i[n+1]}\_{\color{blue}{\begin{subarray}{c}\text{New information}\newline
-    \text{(innovation)}\end{subarray}}}.
-\end{split}
+    \begin{split}
+        r_{i,x}[l]
+        &= \mathrm{E}\left\\{i[n]x^\ast[n-l]\right\\}, \newline
+        &= \mathrm{E}\left\\{i[n]^\ast\left(i[n-l] - a_1 x^\ast[n-1-l]  - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
+        &= \mathrm{E}\left\\{i[n]i^\ast[n-l]\right\\} + \mathrm{E}\left\\{i[n]\left(- a_1 x^\ast[n-1-l] - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
+        &= \sigma_i^2\delta[l] -a_1\mathrm{E}\left\\{i[n] x^\ast[n-1-l]\right\\} - \ldots - a_p\mathrm{E}\left\\{i[n]x^\ast[n-p-l]\right\\}, \newline
+        &= \sigma_i^2\delta[l]
+    \end{split}
 \end{equation}
-The interpretation of  equation (16) is that any new sample of the random signal $x[n]$ is composed of a predictable part obtained by a linear combination of previous samples of $x[n]$ (filtering by LTI), and of an unpredictable  part, which is called innovation (Figure 2).
+where the simplification in the last line requires further clarification. Because the noise is independently distributed, only the expected value of two identically lagged signals $i[n]$ is non-zero. In the latter terms in the equation, the lagged signals $x[n-1-l],\ldots ,x[n-p-l]$ only depend on lagged values of the noise $i[n-1-l],\ldots ,i[n-p-l]$, which means that this always returns zero, because the white Gaussian noise signals are not calculated at the same lag.
 
-<div style="max-width: 750px; margin: auto">
-  <figure>
-    <img
-      src="/../files/7.Images/statistical/signalmodels/innovation_representation.bmp"
-      alt="LTI with random input"
-    />
-    <figcaption class="numbered">
-    A random signal $x[n]$ can be described by the combination of a predictable part obtained by filtering previous samples and an unpredictable part, which is called innovation.
-    </figcaption>
-  </figure>
+Calculation of the auto-correlation function of the output $x[n]$ now gives
+\begin{equation}
+    \begin{split}
+        r_x[l]
+        &= \mathrm{E}\left\\{x[n]x^\ast[n-l]\right\\}, \newline
+        &= \mathrm{E}\left\\{x[n]\left(i^\ast[n-l] - a_1 x^\ast[n-1-l] - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
+        &= \mathrm{E}\left\\{x[n]i^\ast[n-l]\right\\} - a_1 \mathrm{E}\left\\{x[n]x^\ast[n-1-l]\right\\} - \ldots - a_p \mathrm{E}\left\\{x[n]x^\ast[n-p-l]\right\\}, \newline
+        &= r_{i,x}[l] - a_1 r_{x}[l-1] - \ldots - a_p r_{x}[l-p], \newline
+        &= \sigma_i^2\delta[l] - a_1 r_{x}[l-1] - \ldots - a_p r_{x}[l-p],
+    \end{split}
+\end{equation}
+which can rewritten as
+\begin{equation}
+    \sigma_i^2\delta[l] = \sum_{k=0}^p a_k r_x[l-k],
+\end{equation}
+where the newly introduced coefficient $a_0$ equals 1.
+
+It is now possible to estimate the desired AR coefficients. When a windowed signal is observed and the auto-correlation function is estimated as $\hat{r}_x[l]$ the following relationship needs to be solved
+\begin{equation}
+     \hat{r}_x[l] + \hat{a}_1 \hat{r}_x[l-1] + \ldots + \hat{a}_p \hat{r}_x[l-p] = \hat{\sigma}_i^2\delta[l].
+\end{equation}
+The parameters $\hat{a}_1$ up to $\hat{a}_p$ and $\hat{\sigma}_i^2$ need to be estimated, using auto-correlation estimated from the data at lags $0,1, ..., p$. This equality has $p+1$ unknowns, and thus we require $p+1$ equations to solve this. These $p+1$ equation can be obtained by evaluating the auto-correlation for different lags. The system of equations that follows from this approach is called the *Yule-Walker equations*, which can be written in matrix notation as
+\begin{equation}
+    \begin{bmatrix}
+        \hat{r}_x[0]    & \hat{r}_x[1]      & \hat{r}_x[2]  & \cdots    & \hat{r}_x[p]      \newline
+        \hat{r}_x[1]    & \hat{r}_x[0]      & \hat{r}_x[1]  & \cdots    & \hat{r}_x[p-1]    \newline
+        \hat{r}_x[2]    & \hat{r}_x[1]      & \hat{r}_x[0]  & \cdots    & \hat{r}_x[p-2]    \newline
+        \vdots          & \vdots            & \vdots        & \ddots    & \vdots            \newline
+        \hat{r}_x[p]    & \hat{r}_x[p-1]    & \hat{r}_x[p-2]& \vdots    & \hat{r}_x[0]
+    \end{bmatrix}
+    \begin{bmatrix}
+        1               \newline \hat{a}_1   \newline \hat{a}_2     \newline \vdots   \newline \hat{a}_p
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        \hat{\sigma}_i^2      \newline 0                \newline 0            \newline \vdots    \newline 0
+    \end{bmatrix}
+\end{equation}
+
+where the signal $x[n]$ is real, leading to a symmetric auto-correlation function which is shown as $\hat{r}_x[l] = \hat{r}_x[-l]$. Solving this system of equations, the unknown filter coefficient $\hat{a}_1, ..., \hat{a}_p$, and unknown variance of the input noise in the model,  $\hat{\sigma}_i^2$, can be estimated by least-square linear estimation.
+
+<div class="example">
+<h3> Example: AR(1) process </h3>
+The output of an AR(1) process is given by the following difference equation
+\begin{equation*}
+    x[n] = i[n] - a_1 x[n-1].
+\end{equation*}
+Find the auto-correlation function.
+<button class="collapsible">Show solution</button>
+<div class="content">
+The corresponding auto-correlation function can be found as
+\begin{equation*}
+    \begin{split}
+        r_x[l]
+        &= \mathrm{E}\left\{x[n]x^\ast[n-l]\right\}, \newline
+        &= \mathrm{E}\left\{x[n]\left(i[n-l] - a_1 x[n-1-l]\right)\right\}, \newline
+        &= \mathrm{E}\left\{ x[n]i[n-l]\right\} - a_1\mathrm{E}\left\{x[n]x[n-1-l]\right\}, \newline
+        &= \sigma_i^2 \delta[l] - a_1 r_x[l+1].
+    \end{split}
+\end{equation*}
+Evaluating the equation for the lags $0$ and $1$ gives
+\begin{equation*}
+    r_x[0] = \sigma_i^2 - a_1 r_x[1]
+\end{equation*}
+and
+\begin{equation*}
+    r_x[1] = r_x[-1] = -a_1 r_x[0]
+\end{equation*}
+respectively, where the auto-correlation function is assumed to be symmetric. From these two equations, we can determine the unknown filter coefficient and the noise variance. This approach will show how the unknown auto-correlation function can be determined. By combining the equations by the substitution of $r_x[1]$ of the second equation into the first gives
+\begin{equation*}
+    r_x[0] = \sigma_i^2 - a_1(-a_1r_x[0]),
+\end{equation*}
+from which, rearranging the terms, the value of $r_x[0]$ can be determined as
+\begin{equation*}
+    r_x[0] = \frac{\sigma_i^2}{1-a_i^2}
+\end{equation*}
+and from this $r_x[1]$ can be determined as
+\begin{equation*}
+    r_x[1] = -a_1 \frac{\sigma_i^2}{1-a_i^2}.
+\end{equation*}
+This recursion can be extended to all lags, leading to the final description of the auto-correlation function as
+\begin{equation*}
+    r_x[l] = \frac{\sigma_i^2}{1-a_1^2}(-a_1)^{|l|}
+\end{equation*}
+
+Similarly the Yuke-Walker equations can be determined as
+\begin{equation*}
+    \begin{bmatrix}
+        r_x[0]  & r_x[l] \newline
+        r_x[1]  & r_x[0]
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 \newline a_1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        \sigma_i^2 \newline 0
+    \end{bmatrix},
+\end{equation*}
+which is similar to the system of equations determined above.
+</div>
 </div>
 
-In summary, the power spectrum of a WSS random signal can be approximated by a rational polynomial; this is equivalent to describing the signal as the output of a LTI filter, whose input is a zero-mean white noise sequence. If the filter has transfer function $H(z) = B(z)/H(z)$, then the signal can be rewritten as
-\begin{equation}
-\begin{split}
-    x[n] = -\sum_{p=1}^{p}a_p x[n-p] + \sum_{q=0}^{Q}b_q i[n-q].
-\end{split}
+It can be observed that the auto-correlation function of the AR process is recursive. This is caused by the fact that a noise signal that enters the filter will appear at the output and will in this way always be somehow involved in the filter. Because the filter also processes previous outputs, every noise input signal will always be present in this feedback loop.
+
+### Power spectral density of an AR($p$) process
+Suppose that we have succeeded in determining the most optimal parameters for the AR process and we want to find the power spectral density estimate of our signal. Filtering an input signal with a filter with transfer function $H(e^{j\theta})$ relates the input and output power spectral densities ($P_I(e^{j\theta})$ and $P_X(e^{j\theta})$ respectively) through
+\begin{equation}\label{eq:psd_inout}
+    P_X(e^{j\theta}) = |H(e^{j\theta})|^2 P_I(e^{j\theta}) = H(e^{j\theta})H^\ast(e^{j\theta}) P_I(e^{j\theta}).
 \end{equation}
-From the rational transfer function, the power spectrum of the random signal can be calculated as
+Note that the transfer function depends on the filter coefficients. This relationship can be determined by calculating the transfer function of the filter. The transfer function $H(e^{j\theta})$ of the filter can be determined by taking the Fourier transform of the equation as
 \begin{equation}
-\begin{split}
-    P_{x}(e^{j\omega}) = \sigma_i \frac{|B(e^{j\omega})|^2}{|A(e^{j\omega})|^2} = \sigma_i |H(e^{j\omega})|^2,
-\end{split}
+    X(e^{j\theta}) = I(e^{j\theta}) - a_1X(e^{j\theta})e^{-j\theta}  - a_2 X(e^{j\theta})e^{-j2\theta} - \ldots - a_p X(e^{j\theta})e^{-jp\theta},
 \end{equation}
-where
+where $X(e^{j\theta})$ and $I(e^{j\theta})$ are the Fourier transforms of the desired signal and the white Gaussian process respectively. The terms can be separated as
+\begin{equation}
+    I(e^{j\theta}) = X(e^{j\theta}) (1+a_1 e^{-j\theta}  + a_2 e^{-j2\theta} + \ldots + a_p e^{-jp\theta}).
+\end{equation}
+From this the transfer function of the system can be determined by the fraction of the output spectrum over the input spectrum as
+\begin{equation}
+    H(e^{j\theta}) = \frac{X(e^{j\theta})}{I(e^{j\theta})} = \frac{1}{1+a_1 e^{-j\theta}  + a_2 e^{-j2\theta} + \ldots + a_p e^{-jp\theta}}.
+\end{equation}
+If we combine the result of this derivation with the fact that the power spectral density of a white Gaussian processes with variance $\sigma_i^2$ is given as $P_I(e^{j\theta}) = \sigma_i^2$, we finally obtain using (\ref{eq:psd_inout}) that
+\begin{equation}\label{eq:psd_AR}
+    P_X(e^{j\theta}) =  \frac{\sigma_i^2}{|1+a_1 e^{-j\theta}  + a_2 e^{-j2\theta} + \ldots + a_p e^{-jp\theta}|^2}
+\end{equation}
+
+## Moving-average model, MA($q$)
+A moving-average process is a special type of ARMA model for which $p= 0$.
+The MA model is therefore an all-zero filter, with the following transfer function
 \begin{equation}
 \begin{split}
-    A(e^{j\omega}) = 1 + a_1e^{-j\omega} + ... + a_p e^{-j \omega p},  \newline
-    B(e^{j\omega}) = 1 + b_1e^{-j\omega} + ... + b_q e^{-j \omega p}.
+    H(z) = 1+\sum_{q=1}^{Q} b_q z^{-q} = B(z).
 \end{split}
 \end{equation}
 
-As we shall see in the following section, this means viewing an observed random signal as a stochastic process modeled by an auto-regressive moving-average (ARMA) process, whose rational  spectrum contains the model parameters.
+The name moving average can be somewhat misleading. In fact, to actually perform a moving average the coefficient of the filters should be all positive and sum up to unity. However, none of this conditions are valid for a general MA model.
 
-## Auto-regressive (AR) models
-Jenkins in
-1970 (see Box et al. 2008). The ARMA model was created as a tool for
-• detecting, from a finite-length data record, the characteristics of the underlying
-random process and thus understanding its nature by revealing something about
-the mechanism that builds persistence into the series;
-• forecasting future values of the series on the basis of past values;
-• if desired, removing from the signal the imprint of some known process, so as to
-get a more random residual signal to which statistical methods, such as methods
-of spectral estimation, can be applied more pertinently (pre-whitening);
-• finally, and more interestingly for our purposes, getting a kind of spectral estimate
-derived directly from the stochastic model that best fits the signal, etc.
-These goals are tackled exploiting and modeling the persistence exhibited by the
-series. Autocorrelated process have memory, that can be long- or short-term, depending
-on the rate at which absolute AC decreases as the lag between pairs of signal
-samples increases, i.e., depending on the persistence of the AC.4
+The difference equation of a $q^\text{th}$-order MA filter is given by
+\begin{equation}
+    x[n] = i[n] + b_1 i[n-1] + b_2 i[n-2] - \ldots - b_q i[n-q].
+\end{equation}
+where $i[n]$ is the input white noise and $b_i$ are the filter coefficients. The filter order determines how many past samples are combined to form a new sample.
+
+### Autocorrelation of a MA($q$) process
+While the auto-correlation of the AR process is recursive, this is not the case  for MA processes. Each sample of the input noise will only be memorized during the time that is present in the filter, determined by the filter length. Therefore, after a certain time, a noise sample will not be present anymore in the output signal. This also leads to the fact that the auto-correlation function will only be non-zero for a certain number of lags, which is a function of the filter length. There is no correlation for lags exceeding the length of the filter. In order to demonstrate this behavior, the auto-correlation function is calculated for several lags.
+
+At $l=0$ it can be found that
+\begin{equation}
+    \begin{split}
+        r_x[0]
+        &= \mathrm{E}\left\\{(i[n] + b_1i[n-1] + b_2i[n-2] + \ldots + b_qi[n-q])^2\right\\}, \newline
+        &= \mathrm{E}\left\\{i^2[n]\right\\} + \mathrm{E}\left\\{b_1^2 i^2[n-1]\right\\} + \mathrm{E}\left\\{b_2^2 i^2[n-2]\right\\} + \ldots + \mathrm{E}\left\\{b_q^2 i^2[n-q]\right\\}, \newline
+        &= \sigma_i^2 (1 + b_1^2 + b_2^2 + \ldots + b_q^2) = \sigma_i^2 \sum_{k=0}^{q}b_k^2,
+    \end{split}
+\end{equation}
+where the terms including the noise signal that were not identically lagged were not shown, because these are zero. Furthermore, the coefficient $b_0$ is defined as 1. Similarly at $l=1$ the auto-correlation function can be determined as
+\begin{equation}
+    \begin{split}
+        r_x[1]
+        &= \mathrm{E}\big\\{(i[n] + b_1i[n-1]  + \ldots + b_qi[n-q]) \newline
+        &\qquad\qquad \cdot(i[n-1] + b_1i[n-2]  + \ldots + b_qi[n-q-1])\big\\}, \newline
+        &= b_1\mathrm{E}\left\\{i^2[n-1]\right\\} + b_1b_2\mathrm{E}\left\\{ i^2[n-2]\right\\} + b_2b_3\mathrm{E}\left\\{i^2[n-3]\right\\} \newline
+        &\qquad\qquad + \ldots + b_{q-1}b_{q}\mathrm{E}\left\\{ i^2[n-q]\right\\}, \newline
+        &= \sigma_i^2 (b_1 + b_1b_2 + b_2b_3 + \ldots + b_{q-1}b_q) = \sigma_i^2 \sum\_{k=1}^{q}b_kb_{k-1},
+    \end{split}
+\end{equation}
+Please note how the lag has affected the above terms. Furthermore, the number of terms has decreased. The auto-correlation for $l=2$ can be determined as
+\begin{equation}
+    \begin{split}
+        r_x[2]
+        &= \mathrm{E}\big\\{(i[n] + b_1i[n-1]  + \ldots + b_qi[n-q]) \newline
+        &\qquad\qquad \cdot(i[n-2] + b_1i[n-3]  + \ldots + b_qi[n-q-2])\big\\}, \newline
+        &= b_2\mathrm{E}\left\\{i^2[n-2]\right\\} + b_1b_3\mathrm{E}\left\\{ i^2[n-3]\right\\} + b_2b_4\mathrm{E}\left\\{i^2[n-4]\right\\} \newline
+        &\qquad\qquad + \ldots + b_{q-2}b_{q}\mathrm{E}\left\\{ i^2[n-q]\right\\}, \newline
+        &= \sigma_i^2 (b_2 + b_1b_3 + b_2b_4 + \ldots + b_{q-2}b_q) = \sigma_i^2 \sum\_{k=2}^{q}b_kb_{k-2}.
+    \end{split}
+\end{equation}
+
+This methodology can be extended for multiple lags, but a pattern should become noticeable, revealing the mathematical structure of the auto-correlation function. The mathematical description of the auto-correlation function can therefore be described as
+\begin{equation}
+    r_x[l] =
+    \begin{cases}
+        \sigma_i^2 \sum\_{k=|l|}^q b_{k}b_{k-|l|},       & \text{for } 0\leq |l|  \leq q \newline
+        0.                                                  & \text{otherwise}
+    \end{cases}
+\end{equation}
+
+While the auto-correlation function for an AR process results in a set of linear equations which can be easily solved by a matrix  inversion, this is not the case for the MA process, as can be observed from equation (22).
+
+### Power spectral density of an MA($q$) process
+
+From the definition of the difference equation, the Fourier equivalent can be determined as
+\begin{equation}
+    X(e^{j\theta}) = I(e^{j\theta}) + b_1 I(e^{j\theta}) e^{-j\theta} + \ldots + b_q I(e^{j\theta})e^{-jq\theta},
+\end{equation}
+from which the transfer function can be determined as
+\begin{equation}
+    H(e^{j\theta}) = \frac{X(e^{j\theta})}{I(e^{j\theta})} = 1 + b_1 e^{-j\theta} + \ldots + b_q e^{-jq\theta}.
+\end{equation}
+Using a similar approach as in the derivation of the AR(p) power spectral density function, we can find that the power spectral density function of an MA(q) process is given as
+\begin{equation}\label{eq:psd_MA}
+    P_x(e^{j\theta}) = P_I(e^{j\theta})H(e^{j\theta})H^\ast(e^{j\theta}) = \sigma_i^2 |1 + b_1 e^{-j\theta} + \ldots + b_q e^{-jq\theta}|^2.
+\end{equation}
+
+## Auto-regressive moving-average model, ARMA($p,q$)
+The  general ARMA model is a mixture of a AR and a MA models, and therefore has both poles and zeros. The resulting transfer function is given by
+\begin{equation}
+\begin{split}
+    H(z) = \frac{1+\sum_{q=1}^{Q} b_q z^{-q}}{1+\sum_{p=1}^{P} a_p z^{-p}} = \frac{B(z)}{A(z)}.
+\end{split}
+\end{equation}
+Therefore, the power spectrum from innovation is defined as follows,
+\begin{equation}
+\begin{split}
+    P(\theta) = \sigma_i^2\frac{|B(e^{j\theta})|^2}{|A(e^{j\theta})|^2}.
+\end{split}
+\end{equation}
+
+The input to this system is white noise, thus an ARMA random process can be described by the following difference equation
+\begin{equation}
+\begin{split}
+    x[n] = i[n] + b_1 i[n-1] + b_2 i[n-2] + \ldots + b_q i[n-q]&\newline
+    - a_1 x[n-1] - a_2 x[n-2] - \ldots - a_p x[n-p]&.
+    \end{split}
+\end{equation}
+where $i[n]$ is the input white noise, $a_i$ are the filter coefficients for the AR part, and $b_i$ are the filter coefficients for the MA part.
+
+### The auto-correlation function of an ARMA($p,q$) process
+
+As we have seen so far, the ARMA process is a combination of a AR and MA process. This also becomes apparent in the auto-correlation function. The derivation is lengthy and will not be shown, but an intuitive description is given.
+The general form of the Yule-walker equations can be used to express the relationship between the parameters of the transfer function and the auto-correlation function of an ARMA($p,q$) process
+
+\begin{equation}
+    r_x[l] =
+    \begin{cases}
+        \sigma_i^2 \sum_{k=|l|}^q \beta_{k}\beta_{k-|l|} - \sum_{k=1}^p \alpha_k r_x[|l|-k],  &\text{for }0 \leq |l| \leq q \newline
+        - \sum_{k=1}^p \alpha_k r_x[|l|-k].  &\text{for }|l| > q \\
+    \end{cases}
+\end{equation}
+
+This expression may seem complicated, but it is easily explained by comparison with the auto-correlation function of the AR and MA process. The value of the auto-correlation function is a combination of both AR and MA auto-correlation functions. As with the AR process, the auto-correlation function has a recursive structure as can be seen from the terms with the $a_i$ coefficients. For smaller lags, there is not only an effect of an AR process, but there is also the effect of the MA process. In other words, the ARMA process and its auto-correlation function can be interpreted as the super-imposition of the AR and MA processes.
+
+### Power spectral density of an ARMA($p,q$) process
+From the definition of the difference equation the Fourier equivalent can be determined as
+
+\begin{equation}
+    \begin{split}
+        X(e^{j\theta}) = I(e^{j\theta}) + b_1 I(e^{j\theta})  e^{-j\theta}+ \ldots + b_q I(e^{j\theta})e^{-jq\theta} &\newline  - a_1X(e^{j\theta})e^{-j\theta}  - \ldots - a_p X(e^{j\theta})e^{-jp\theta}&,
+    \end{split}
+\end{equation}
+from which the transfer function can be determined as
+\begin{equation}
+    H(e^{j\theta}) = \frac{X(e^{j\theta})}{I(e^{j\theta})} = \frac{1 + b_1 e^{-j\theta} + \ldots + b_q e^{-jq\theta}}{1 + a_1e^{-j\theta}  + \ldots + a_p e^{-jp\theta}}.
+\end{equation}
+
+Using a similar approach as in the derivation of the AR(p) and MA(q) power spectral density functions, we can find that the power spectral density function of an ARMA(p,q) process is given as
+\begin{equation}\label{eq:psd_ARMA}
+    P_x(e^{j\theta}) = P_I(e^{j\theta})H(e^{j\theta})H^\ast(e^{j\theta}) = \sigma_i^2 \frac{|1 + b_1 e^{-j\theta} + \ldots + b_q e^{-jq\theta}|^2}{|1 + a_1e^{-j\theta}  + \ldots + a_p e^{-jp\theta}|^2}.
+\end{equation}
+
+<h3>Example</h3>
+Suppose you are a lightbulb manufacturer and you need to estimate each month how many light bulbs to produce for the next month.
+https://www.youtube.com/watch?v=HhvTlaN06AM
+
+## Special random processes
