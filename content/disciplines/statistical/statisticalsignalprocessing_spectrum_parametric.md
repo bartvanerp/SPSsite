@@ -1,5 +1,5 @@
 +++
-title = "Parameteric methods"         # name of webpage
+title = "Parametric methods"         # name of webpage
 
 # date = {{ .Date }}
 lastmod = 2020-03-21
