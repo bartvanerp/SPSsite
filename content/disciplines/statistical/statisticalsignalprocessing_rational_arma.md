@@ -298,12 +298,6 @@ The  general ARMA model is a mixture of a AR and a MA models, and therefore has 
     H(z) = \frac{1+\sum_{q=1}^{Q} b_q z^{-q}}{1+\sum_{p=1}^{P} a_p z^{-p}} = \frac{B(z)}{A(z)}.
 \end{split}
 \end{equation}
-Therefore, the power spectrum from innovation is defined as follows,
-\begin{equation}
-\begin{split}
-    P(\theta) = \sigma_i^2\frac{|B(e^{j\theta})|^2}{|A(e^{j\theta})|^2}.
-\end{split}
-\end{equation}
 
 The input to this system is white noise, thus an ARMA random process can be described by the following difference equation
 \begin{equation}
