@@ -2,7 +2,7 @@
 title = "Rational signal models"         # name of webpage
 
 # date = {{ .Date }}
-lastmod = 2020-05-19
+lastmod = 2020-07-15
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -28,12 +28,9 @@ This module covers the following topics:
 
 1. <a href="../statisticalsignalprocessing_rational_recap">Recap: LTI systems </a>- This section provides a brief review of fundamental concepts including linear time-invariant systems, stabitlity, invertibility and minimum-phase.
 
+3. <a href="../statisticalsignalprocessing_rational_spectral_factorization">Spectral factorization </a>- Can we obtain any random signal by simply filtering white noise? In this section, we describe how this can be achieved by the innovation representation.
+
 2. <a href="../statisticalsignalprocessing_rational_arma">Auto-regressive moving-average (ARMA) signal models  </a>- This section describes an efficient representation of (stationary) random signals in terms of two polynomials, one accounting for the "autoregressive" part and the other for the "moving-average" part.
-
-3. <a href="../statisticalsignalprocessing_rational_spectral_factorization">Spectral factorization and innovation representation </a>- Can we obtain any random signal by simply filtering white noise? In this section, we describe how this can be achieved by the innovation representation.
-
-
-
 
 
 
