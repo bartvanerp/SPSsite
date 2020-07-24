@@ -55,3 +55,47 @@ When linking to a page in a **different** folder: use absolute urls
 
 ### Latex
 Latex is largely supported on the website, although sometimes the notation is a tiny bit different. Some special characters need to be escaped by adding another `\` and specialized packages are not supported.
+
+<br>
+
+## Content overview (last updated 22-07-2020)
+
+- Mathematical background
+  - Complex numbers and phasors (reader, videos, exercises, pencasts, lab)
+    - [⯈] Overview module
+    - [⯈] Calculation rules
+    - [⯈] Phasors
+  - Probability and random variables (Reader)
+- Basics of continuous-time signals and systems
+  - Spectrum of sinusoidal signals (reader, videos, exercises, pencasts, lab)
+    - [⯈] Overview module
+    - [⯈] Special cases
+  - Fourier series (reader, videos, exercises, pencasts, lab)
+    - [⯈] Overview module
+    - [⯈] Examples
+  - Fourier transform for continuous-time signals (reader, videos, exercises, pencasts, lab)
+    - [⯈] Overview module
+    - [⯈] Examples
+    - [⯈] Properties
+- Discrete-time signal processing basics
+  - Basics of sampling and reconstruction
+  - Discrete-time signals
+  - Discrete-time systems
+  - Fourier transform for discrete-time signals
+  - Discrete Fourier transform
+  - Z-transform
+  - Frequency response FIR
+  - Frequency response LTI
+  - System function
+  - Sampling, reconstruction and multirate signal processing
+  - Finite impulse response filter
+  - General filter structures
+  - Finite word length effects
+  - Filter design
+- Statistical signal processing
+  - Stochastic processes and random signals
+  - Spectral estimation
+  - Detection theory
+- Optimal and adaptive signal processing
+  - Optimal Wiener filters
+  - Adaptive filters
