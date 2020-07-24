@@ -61,41 +61,82 @@ Latex is largely supported on the website, although sometimes the notation is a 
 ## Content overview (last updated 22-07-2020)
 
 - Mathematical background
-  - Complex numbers and phasors (reader, videos, exercises, pencasts, lab)
+  - Complex numbers and phasors <i>(reader, videos, exercises, pencasts, lab)</i>
     - [⯈] Overview module
     - [⯈] Calculation rules
     - [⯈] Phasors
-  - Probability and random variables (Reader)
+  - Probability and random variables <i>(reader)</i>
 - Basics of continuous-time signals and systems
-  - Spectrum of sinusoidal signals (reader, videos, exercises, pencasts, lab)
+  - Spectrum of sinusoidal signals <i>(reader, videos, exercises, pencasts, lab)</i>
     - [⯈] Overview module
     - [⯈] Special cases
-  - Fourier series (reader, videos, exercises, pencasts, lab)
+  - Fourier series <i>(reader, videos, exercises, pencasts, lab)</i>
     - [⯈] Overview module
     - [⯈] Examples
-  - Fourier transform for continuous-time signals (reader, videos, exercises, pencasts, lab)
+  - Fourier transform for continuous-time signals <i>(reader, videos, exercises, pencasts, lab)</i>
     - [⯈] Overview module
     - [⯈] Examples
     - [⯈] Properties
 - Discrete-time signal processing basics
-  - Basics of sampling and reconstruction
-  - Discrete-time signals
-  - Discrete-time systems
-  - Fourier transform for discrete-time signals
-  - Discrete Fourier transform
-  - Z-transform
-  - Frequency response FIR
-  - Frequency response LTI
-  - System function
-  - Sampling, reconstruction and multirate signal processing
-  - Finite impulse response filter
-  - General filter structures
-  - Finite word length effects
-  - Filter design
+  - Basics of sampling and reconstruction <i>(reader, videos, exercises, pencasts, lab)</i>
+    - [⯈] Overview module
+    - [⯈] Reconstruction
+    - [⯈] Examples
+  - Discrete-time signals <i>(reader, videos)</i>
+    - [⯈] Overview module
+  - Discrete-time systems <i>(reader, videos)</i>
+    - [⯈] Overview module
+    - [⯈] Special convolution procedures
+  - Fourier transform for discrete-time signals <i>(reader, videos)</i>
+    - [⯈] Overview module
+    - [⯈] Examples
+    - [⯈] Properties
+  - Discrete Fourier transform <i>(reader, videos)</i>
+    - [⯈] From FTC to DFT
+    - [⯈] How does it work
+    - [⯈] Properties
+    - [⯈] DFT length
+  - Z-transform <i>(reader, videos)</i>
+    - [⯈] Overview module
+    - [⯈] Properties
+    - [⯈] Inverse Z-transform: look-up table
+    - [⯈] Inverse Z-transform: long-tail division
+    - [⯈] Inverse Z-transform: partial fraction expansion
+  - Frequency response FIR <i>(reader, videos, exercises, pencasts, lab)</i>
+    - [⯈] Overview module
+    - [⯈] Properties
+  - Frequency response LTI <i>(reader, videos)</i>
+    - [⯈] Overview module
+  - System function <i>(reader, videos)</i>
+    - [⯈] Overview module
+  - Sampling, reconstruction and multirate signal processing <i>(reader, videos)</i>
+    - [⯈] Mathematical description sampling process
+    - [⯈] Building blocks of multirate signal processing
+  - Finite impulse response filter <i>(reader, videos, exercises, pencasts, lab)</i>
+    - [⯈] Impulse response
+    - [⯈] Convolution sum
+    - [⯈] Linear time invariant
+  - General filter structures <i>(reader, videos)</i>
+    - [⯈] Overview module
+    - [⯈] Special filter structures
+  - Finite word length effects <i>(reader, videos)</i>
+    - [⯈] Overview module
+  - Filter design <i>(reader, videos)</i>
+    - [⯈] Overview module
+    - [⯈] FIR filter design
+    - [⯈] IIR filter design
 - Statistical signal processing
-  - Stochastic processes and random signals
-  - Spectral estimation
-  - Detection theory
+  - Stochastic processes and random signals <i>(reader, videos)</i>
+    - [⯈] Overview module
+  - Rational signal models
+  - Spectral estimation <i>(reader)</i>
+  - Estimation theory
+  - Detection theory <i>(reader)</i>
 - Optimal and adaptive signal processing
-  - Optimal Wiener filters
-  - Adaptive filters
+  - Optimal Wiener filters <i>(videos)</i>
+    - [⯈] Overview module
+    - [⯈] FIR case
+  - Adaptive filters <i>(videos)</i>
+    - [⯈] Steepest gradient descent algorithm
+    - [⯈] Least mean squares algorithm
+    -
