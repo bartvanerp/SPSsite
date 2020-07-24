@@ -27,19 +27,20 @@ by a discrete-time LTI system. The difference between *power* and *energy* signa
 ### Time-domain analysis
 The input-output relationship of an LTI system is described using the following convolution
 \begin{equation}
+\label{eq:inoutlti}
 \begin{split}
     y[n] = \sum_{k=-\infty}^{\infty} h[k] x[n-k].
-    \label{eq::1}
+
 \end{split}
 \end{equation}
 Here $x[n]$ is a random stationary signal. Output $y[n]$ converges and is stationary if the system represented by the impulse response $h[k]$ is stable. The condition for stability is that $\sum_{-\infty}^{\infty}|h[k]|<\infty$.
 
-The exact output $y[n]$ can not be calculated, since $y[n]$ is a stochastic process. However, certain statistical properties of $y[n]$ can be determined from knowledge of the statistical properties of the input and the characteristics of the system.
+The exact output $y[n]$ cannot be calculated, since $y[n]$ is a stochastic process. However, certain statistical properties of $y[n]$ can be determined from knowledge of the statistical properties of the input and the characteristics of the system.
 
-The **mean value** of output $y[n]$ can be determined by taking the expected value from both sides of equation (1) as
+The **mean value** of output $y[n]$ can be determined by taking the expected value from both sides of equation \ref{eq:inoutlti} as
 \begin{equation}
 \begin{split}
-    \mu_y = \sum_{k=-\infty}^{\infty}h[k]E\{{x[n-k]}\} = \mu_x \sum_{k=-\infty}^{\infty} h[k] = \mu_x H(e^{j0}).
+    \mu_y = \sum_{k=-\infty}^{\infty}h[k]E\\{{x[n-k]}\\} = \mu_x \sum_{k=-\infty}^{\infty} h[k] = \mu_x H(e^{j0}).
 \end{split}
 \end{equation}
 Note that the filter coefficients are deterministic, and thus $E\\{h[k]\\} = h[k]$.

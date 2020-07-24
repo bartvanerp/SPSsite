@@ -35,8 +35,3 @@ This module covers the following topics:
 
 
 <br></br>
-
-
-## Summary
-
-This module ...
