@@ -26,18 +26,14 @@ by a discrete-time LTI system. The difference between *power* and *energy* signa
 
 ### Time-domain analysis
 The input-output relationship of an LTI system is described using the following convolution
-\begin{equation}
-\label{eq:inoutlti}
-\begin{split}
+\begin{equation}\label{eq:1}
     y[n] = \sum_{k=-\infty}^{\infty} h[k] x[n-k].
-
-\end{split}
 \end{equation}
 Here $x[n]$ is a random stationary signal. Output $y[n]$ converges and is stationary if the system represented by the impulse response $h[k]$ is stable. The condition for stability is that $\sum_{-\infty}^{\infty}|h[k]|<\infty$.
 
 The exact output $y[n]$ cannot be calculated, since $y[n]$ is a stochastic process. However, certain statistical properties of $y[n]$ can be determined from knowledge of the statistical properties of the input and the characteristics of the system.
 
-The **mean value** of output $y[n]$ can be determined by taking the expected value from both sides of equation \ref{eq:inoutlti} as
+The **mean value** of output $y[n]$ can be determined by taking the expected value from both sides of equation (\ref{eq:1}) as
 \begin{equation}
 \begin{split}
     \mu_y = \sum_{k=-\infty}^{\infty}h[k]E\\{{x[n-k]}\\} = \mu_x \sum_{k=-\infty}^{\infty} h[k] = \mu_x H(e^{j0}).
@@ -45,11 +41,11 @@ The **mean value** of output $y[n]$ can be determined by taking the expected val
 \end{equation}
 Note that the filter coefficients are deterministic, and thus $E\\{h[k]\\} = h[k]$.
 
-The **input-output correlation** can also be calculated without knowing the exact output. The input-output correlation is defined as $r_{xy}[l] = E\\{ x[n+l]y^\ast[n]\\}$. Therefore, to calculate this correlation, we take the complex conjugate of (1) and multiply it with $x[n+l]$ before taking the expected value.
+The **input-output correlation** can also be calculated without knowing the exact output. The input-output correlation is defined as $r_{xy}[l] = E\\{ x[n+l]y^\ast[n]\\}$. Therefore, to calculate this correlation, we take the complex conjugate of (\ref{eq:1}) and multiply it with $x[n+l]$ before taking the expected value.
 
 \begin{equation}
 \begin{split}
-    r_{xy}[l] &= E\{ x[n+l]y^\ast[n]\} = \sum_{k=-\infty}^{\infty} h^\ast[k] E\{x[n+l]x^\ast[n-k]\}\newline
+    r_{xy}[l] &= E\\{ x[n+l]y^\ast[n]\\} = \sum_{k=-\infty}^{\infty} h^\ast[k] E\\{x[n+l]x^\ast[n-k]\\}\newline
     r_{xy}[l] &= \sum_{k=-\infty}^{\infty} h^\ast[k] r_{xx}[l+k] = \sum_{m=-\infty}^{\infty} h^\ast[-m] r_{xx}[l-m]\newline
     r_{xy}[l] &= h^\ast[-l]\star r_{xx}[l]\newline
     r_{yx}[l] &= h^\ast[l]\star r_{xx}[l].\newline
@@ -59,7 +55,7 @@ The **input-output correlation** can also be calculated without knowing the exac
 The **output correlation** can be calculated by multiplying with $y^\ast[n-l]$ and taking the expectation.
 \begin{equation}
 \begin{split}
-    r_{yy}[l] &= E\{y[n]y^\ast[n-l]\} = \sum_{k=-\infty}^{\infty} h[k]E\{x[n-l] y^\ast[n-l]\}\newline
+    r_{yy}[l] &= E\\{y[n]y^\ast[n-l]\\} = \sum_{k=-\infty}^{\infty} h[k]E\\{x[n-l] y^\ast[n-l]\\}\newline
     r_{yy}[l] &= \sum_{k=-\infty}^{\infty} h[k] r_{xy}[l-k] = h[l]\star r_{xy}[l].
 \end{split}
 \end{equation}
@@ -68,19 +64,18 @@ By combining this result with $r_{xy}[l] = h^\ast[-l]\star r_{xx}[l]$ we obtain
 \begin{equation}
 \begin{split}
     r_y[l] &= h[l]\star h^\ast[-l]\star r_x[l]\newline
-    r_y[l] &= r_h[l]\star r_x[l].
+    r_y[l] &= r_h[l]\star r_x[l],
 \end{split}
 \end{equation}
+where $r_h[l]$ is the autocorrelation of the LTI system with inmpulse response $h[n]$.
 
 The **output signal power** is equal to $P_y=E\{|y[n]|^2\}=r_y[0]$, which can be calculated using the previous equations,
 \begin{equation}
 \begin{split}
     P_y&=E\{|y[n]|^2\}=r_y[0]\newline
-    &=r_h[l]\star r_x[l=0] = \sum_{k=-\infty}^{\infty} h[k] h^\ast[-k] r_{x}[k],\newline
+    &=r_h[l]\star r_x[l=0] = \sum_{k=-\infty}^{\infty} h[k] h^\ast[-k] r_{x}[k].
 \end{split}
 \end{equation}
-
-where $r_h[l]$ is the autocorrelation of the LTI system with inmpulse response $h[n]$.
 
 Figure 1 describes schematically what the input-output relationship of an LTI system in the time domain and in the "correlation" domain.
 
@@ -91,7 +86,7 @@ Figure 1 describes schematically what the input-output relationship of an LTI sy
       alt="LTI with random input"
     />
     <figcaption class="numbered">
-     LTI with impulse response h[n], random input $x[n]$ and random output $y[n]$. Input-output relationship in the time and "correlation" domains.
+     LTI with impulse response h[n], random input $x[n]$ and random output $y[n]$. Input-output relationships in the time and "correlation" domains.
     </figcaption>
   </figure>
 </div>
@@ -103,7 +98,7 @@ Given a complex sequence $x[n]$, with z-transform $X(z)$, the following properti
 \begin{equation}
 \begin{split}
     x^\ast[n] \Longleftrightarrow & X^\ast(z^\ast) \newline
-    x[n] \Longleftrightarrow & X(1/z) \newline
+    x[-n] \Longleftrightarrow & X(1/z) \newline
     x^\ast[-n] \Longleftrightarrow & X^\ast(1/z^\ast) \newline
 \end{split}
 \end{equation}
@@ -124,15 +119,15 @@ Since we are dealing with autocorrelation functions and power spectral densities
 \end{equation}</li>
 </ul>
 
-From the equation above, we can easily the input-output relationships for an LTI system  in the frequency and z-domain,  which are provided in the following table.
+Using the above properties, we can easily calculate the input-output relationships for an LTI system in the frequency and z-domain,  which are provided in the following table.
 
 | Time Domain                    | Frequency domain                                            | z-domain                          |
 |--------------------------------|-------------------------------------------------------------|-----------------------------------|
 | $y[n]=h[n]\star x[n]$               | $Y(e^{j\theta})=H(e^{j\theta})X(e^{j\theta})$               | $Y(z)=H(z)X(z)$                   |
-| $r_{yx}[l]=h[l]\star r_x[l]$        | $P_{yx}(e^{j\theta})=H(e^{j\theta})R_{x}(e^{j\theta})$      | $P_{yx}(z)=H(z)R_{x}(z)$          |
-| $r_{xy}[l]=h^*[-l]\star r_x[l]$     | $P_{xy}(e^{j\theta})=H^*(e^{j\theta})R_{x}(e^{j\theta})$    | $P_{xy}(z)=H^*(1/z^*)P_{x}(z)$    |
-| $r_{y}[l]=h[l]\star r_{xy}[l]$      | $P_{y}(e^{j\theta})=H(e^{j\theta})R_{xy}(e^{j\theta})$      | $P_{y}(z)=H(z)R_{xy}(z)$          |
-| $r_{y}[l]=h[l]\star h^*[-l]\star r_x[l]$ | $P_{y}(e^{j\theta})=\|H(e^{j\theta})\|^2R_{x}(e^{j\theta})$ | $P_{y}(z)=H(z)H^*(1/z^*)R_{x}(z)$ |
+| $r_{yx}[l]=h[l]\star r_x[l]$        | $P_{yx}(e^{j\theta})=H(e^{j\theta})P_{x}(e^{j\theta})$      | $P_{yx}(z)=H(z)P_{x}(z)$          |
+| $r_{xy}[l]=h^*[-l]\star r_x[l]$     | $P_{xy}(e^{j\theta})=H^*(e^{j\theta})P_{x}(e^{j\theta})$    | $P_{xy}(z)=H^*(1/z^*)P_{x}(z)$    |
+| $r_{y}[l]=h[l]\star r_{xy}[l]$      | $P_{y}(e^{j\theta})=H(e^{j\theta})P_{xy}(e^{j\theta})$      | $P_{y}(z)=H(z)P_{xy}(z)$          |
+| $r_{y}[l]=h[l]\star h^*[-l]\star r_x[l]$ | $P_{y}(e^{j\theta})=\|H(e^{j\theta})\|^2P_{x}(e^{j\theta})$ | $P_{y}(z)=H(z)H^*(1/z^*)P_{x}(z)$ |
 
 ## Innovation representation of a random signal
 
@@ -143,18 +138,14 @@ A rational spectrum is a ratio of two rational functions containing $e^{j\theta}
 \end{split}
 \end{equation}
 
-Here $r_x$ and $r_y$ are the auto-correlation sequences of two real signals. The rational spectrum is actually derived from the *Wold's decomposition* or *representation theorem*, a very general signal decomposition theorem, which states that every wide sense stationary (WSS) signal can be written as a sum of two components, one deterministic and one stochastic, as given below
-\begin{equation}
-\begin{split}
+Here $r_x$ and $r_y$ are the auto-correlation sequences of two real signals. The rational spectrum is actually derived from the *Wold's decomposition* or *representation theorem*, a very general signal decomposition theorem, which states that every wide sense stationary (WSS) signal can be written as the sum of two components, one deterministic and one stochastic, as given below
+\begin{equation}\label{eq:xnlti}
     x[n] = \sum_{k=0}^{\infty}h[k]i[n-k] + \hat{x}[n],
-\end{split}
 \end{equation}
 
 where $h[k]$ represents a infinite-length sequence of weights; $i[n]$ is a white noise sequence, often referred to as *innovations*; $\hat{x}[n]$ is deterministic, thus exactly predictable from the past values. The deterministic part can be subtracted from this signal since it is exactly predictable. This will result in a purely random zero-mean WSS signal as
-\begin{equation}
-\begin{split}
+\begin{equation}\label{eq:reversesum}
     x[n] = \sum_{k=0}^{\infty}h[k] i[n-k] = \sum_{k=-\infty}^{n}h[n-k] i[k].
-\end{split}
 \end{equation}
 
 From here it becomes clear that $x[n]$ can be considered as the outcome of filtering white noise by a stable LTI system, with a rational transfer function in the form of
@@ -164,24 +155,20 @@ From here it becomes clear that $x[n]$ can be considered as the outcome of filte
 \end{split}
 \end{equation}
 with
-\begin{equation}
-\begin{split}\label{#eq:AB}
-    A(z) = 1 + a_1z^{-1}+ ... + a_pz^{-p}x,\newline
-    B(z) = 1 + b_1z^{-1}+ ... + b_qz^{-q}.
-\end{split}
-\end{equation}
-In equation (15), we assume that $a_0 =  1$  and  $b_0 = 1$.
+\begin{eqnarray}\label{#eq:AB}
+    A(z) &=& 1 + a_1z^{-1}+ ... + a_pz^{-p}x,\newline
+    B(z) &=& 1 + b_1z^{-1}+ ... + b_qz^{-q} \nonumber.
+\end{eqnarray}
+In equation (\ref{#eq:AB}), we assume that $a_0 =  1$  and  $b_0 = 1$.
 
-Combining equation (12) with the right-end side of equation (13), where we have reversed the summation, we can also rewrite (13) to obtain a "new" sample of the random signal $x[n]$ as
+Combining equation (\ref{eq:xnlti}) with the right-end side of equation (\ref{eq:reversesum}), where we have reversed the summation, we can also rewrite (\ref{eq:reversesum}) to obtain a "new" sample of the random signal $x[n]$ as
 
-\begin{equation}
-\begin{split}
+\begin{equation}\label{eq:innovation}
     x[n+1] =  \underbrace{\sum_{k=-\infty}^{n}h[n+1-k] x[k]}\_{\color{red}{\begin{subarray}{c}\text{Predictable part: linear}\newline
     \text{combination of past information}\end{subarray}}} + \underbrace{i[n+1]}\_{\color{blue}{\begin{subarray}{c}\text{New information}\newline
     \text{(innovation)}\end{subarray}}}.
-\end{split}
 \end{equation}
-The interpretation of  equation (16) is that any new sample of the random signal $x[n]$ is composed of a predictable part obtained by a linear combination of previous samples of $x[n]$ (filtering by LTI), and of an unpredictable  part, which is called innovation (Figure 2).
+The interpretation of equation (\ref{eq:innovation}) is that any new sample of the random signal $x[n]$ is composed of a predictable part obtained by a linear combination of previous samples of $x[n]$ (filtering by LTI), and of an unpredictable  part, which is called innovation (Figure 2).
 
 <div style="max-width: 750px; margin: auto">
   <figure>
@@ -202,10 +189,8 @@ In summary, the power spectrum of a WSS random signal can be approximated by a r
 \end{split}
 \end{equation}
 From the rational transfer function, the power spectrum of the random signal can be calculated as
-\begin{equation}
-\begin{split}
+\begin{equation}\label{eq:psdlti}
     P_{x}(e^{j\omega}) = \sigma_i \frac{|B(e^{j\omega})|^2}{|A(e^{j\omega})|^2} = \sigma_i |H(e^{j\omega})|^2,
-\end{split}
 \end{equation}
 where
 \begin{equation}
@@ -218,9 +203,9 @@ where
 As we shall see in the section <a href="../statisticalsignalprocessing_rational_arma">Auto-regressive moving-average (ARMA) signal models  </a>, this means viewing an observed random signal as a stochastic process modeled by an auto-regressive moving-average (ARMA) process, whose rational  spectrum contains the model parameters.
 
 ## Spectral factorization
-In the module <a href="../statisticalsignalprocessing_signals_psd">Power spectral density</a>, we have seen that the PSD and the AC of a random signals are Fourier pairs. Consider a system depicted in Figure 1, with input $x[n]$ and output $y[n]$.
+In the module <a href="../statisticalsignalprocessing_signals_psd">Power spectral density</a>, we have seen that the PSD and the AC of a random signals are Fourier pairs. Consider the system depicted in Figure 1, with input $x[n]$ and output $y[n]$.
 
-Spectral factorization tackles the following question: Can we determine $H(z)$ knowing that the input $x[n]$ is white noise, and given the second-order statistics ($r_y[l]$  or equivalently $P_y(e^{j\theta})$) of the output signal $y[n]$? In principle, there is no unique answer to this question. We can understand this by considering the following example.
+Spectral factorization tackles the following question: Can we determine $H(z)$ knowing that the input $x[n]$ is white noise, and given the second-order statistics ($r_y[l]$  or equivalently $P_y(e^{j\theta})$) of the output signal $y[n]$? In principle, there is no unique answer to this question. We can see this by considering the following example.
 
 <div style="max-width: 700px; margin: auto">
   <figure>
@@ -234,7 +219,7 @@ Spectral factorization tackles the following question: Can we determine $H(z)$ k
   </figure>
 </div>
 
-Suppose we are given the PSD of $y[n]$ as $P_y(e^{j\theta}) =\frac{5}{4}-cos(\theta)$ and we know that $y[n]$ is the output of an LTI system driven by white noise, with zero  mean and variance $\sigma_i^2$.Then, we can write:
+Suppose we are given the PSD of $y[n]$ as $P_y(e^{j\theta}) =\frac{5}{4}-cos(\theta)$ and we know that $y[n]$ is the output of an LTI system driven by white noise, with zero  mean and variance $\sigma_i^2$. Based on equation (\ref{eq:psdlti}), we can write:
 \begin{equation*}
 \begin{split}
     P_y(e^{j\theta}) &=& \sigma_i^2|H(e^{j\theta})|^2 = \frac{5}{4}-cos(\theta)\newline
@@ -246,12 +231,12 @@ Knowledge of $P_y(e^{j\theta})$ provides us with the magnitude response of the s
 <ol>
 <li> In the first case, we can define $H(z)$ and the input noise variance as:
 \begin{equation*}
-    H(z) = 1-\frac{1}{2}z^{-1}, \quad \text{with} \quad \sigma_x^2=1.
+    H(z) = 1-\frac{1}{2}z^{-1}, \quad \text{with} \quad \sigma_i^2=1.
 \end{equation*}
 This choice gives as output $P_y(e^{j\theta})$, as proven below:
 \begin{equation*}
 \begin{split}
-    \sigma_x^2 H(z)H(z^{-1})&=& (1-\frac{1}{2}z^{-1})(1-\frac{1}{2}z)\newline
+    \sigma_i^2 H(z)H(z^{-1})&=& (1-\frac{1}{2}z^{-1})(1-\frac{1}{2}z)\newline
     & =& 1-\frac{z+z^{-1}}{2}+\frac{1}{4} = \frac{5}{4}-\frac{z+z^{-1}}{2}\newline
 \end{split}
 \end{equation*}
@@ -259,12 +244,12 @@ This choice gives as output $P_y(e^{j\theta})$, as proven below:
 
 <li> Alternatively, we can define $H(z)$ and the input noise variance as:
 \begin{equation*}
-  H(z) = 1-2z^{-1}, \quad \text{with} \quad \sigma_x^2=\frac{1}{4}.
+  H(z) = 1-2z^{-1}, \quad \text{with} \quad \sigma_i^2=\frac{1}{4}.
 \end{equation*}
 This choice gives the same output $P_y(e^{j\theta})$, as proven below:
 \begin{equation*}
 \begin{split}
-    \sigma_x^2 H(z)H(z^{-1})&=& \frac{1}{4}(1-2z^{-1})(1-2z)\newline
+    \sigma_i^2 H(z)H(z^{-1})&=& \frac{1}{4}(1-2z^{-1})(1-2z)\newline
     & = &\frac{1}{4}-\frac{z+z^{-1}}{2}+1 = \frac{5}{4}-\frac{z+z^{-1}}{2}\newline
 \end{split}
 \end{equation*}
@@ -274,22 +259,22 @@ This choice gives the same output $P_y(e^{j\theta})$, as proven below:
 Therefore, more constraints are needed to uniquely define $H(z)$ which gives $r_y[l]$ or $P_y(e^{j\theta})$.
 
 {{% alert note %}}
-Spectral factorization is defined as the determination of a minimum-phase system from its magnitude response or from its auto correlation function. If $P(z)$ is rational, it can be factorized in the following form $\sigma_i^2 L(z)L(z^{-1})$, in which so-called "innovation filter" $L(z)$ is minimum-phase, and $\sigma^2_i$ is chosen such that $l[0]=1$.
+Spectral factorization is defined as the determination of a minimum-phase system from its magnitude response or from its auto correlation function. If $P(z)$ is rational, it can be factorized in the following form $\sigma_i^2 L(z)L(z^{-1})$, in which the so-called "innovation filter" $L(z)$ is minimum-phase, and $\sigma^2_i$ is chosen such that $l[0]=1$.
 {{% /alert %}}
 
 One practical method to solve the spectral factorization problem is referred to as the *root method*. The basic principles are:
 <ol>
-<li> For every rational PSD, that is a PSD that can be expressed as a fraction between two polynomials in $e^{-j\omega}$ (or equivalently in $z$), there exist a unique minimum-phase factorization within a scale factor.  </li>
-<li> For a PSD expressed as a rational polynomials, with a numerator of order Q and a denominator of order P, there are $2^{P+Q}$ possible rational systems which provide this PSD. </li>
+<li> For every rational PSD, that is a PSD that can be expressed as a fraction between two polynomials in $e^{j\omega}$ (or equivalently in $z$), there exist a unique minimum-phase factorization within a scale factor.  </li>
+<li> For a PSD expressed as a rational polynomial, with a numerator of order Q and a denominator of order P, there are $2^{P+Q}$ possible rational systems which provide this PSD. </li>
 <li> Not all possible rational systems are valid, since for a valid PSD the roots should appear in mirrored pairs, which means that if $z_k$ is a root, then also $1/z^\ast_k$ is a root. </li>
 </ol>
 
-In the example above, we therefore need to choose $H(z) = 1-\frac{1}{2}z^{-1}$, as it is the minimum-phase choice.
+In the example above, we therefore need to choose $H(z) = 1-\frac{1}{2}z^{-1}$ because it is the minimum-phase choice.
 
 ### Pencast video [⯈]
-In the following pencast, you may see how to find spectral factorization of a random signal by the root method.
+In the following pencast, you may see how to find the spectral factorization of a random signal by the root method.
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xo6m7Pweh2Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/cIlkfWoKnw4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 In the following exercise, you can try using the root method to find the spectral  factorization of a random signal.
