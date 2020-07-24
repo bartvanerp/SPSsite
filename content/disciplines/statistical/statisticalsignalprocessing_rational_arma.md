@@ -308,6 +308,31 @@ The input to this system is white noise, thus an ARMA random process can be desc
 \end{equation}
 where $i[n]$ is the input white noise, $a_i$ are the filter coefficients for the AR part, and $b_i$ are the filter coefficients for the MA part.
 
+<div class="example">
+<h3>Example: ARMA(1,1) process</h3>
+Suppose you have been hired by Signify to manage lightbulb production. You are asked to estimate each month how many light bulbs to produce next month. Last month the estimation was $l[m-1] = 2500$ and the number of lightbulbs left in stock were $\epsilon[m-1] = 310$. Modeling the production as an ARMA(1,1), and knowing that you  would like to produce 10% more of the needed lightbulbs to avoid running out of stock, provide an estimate $\hat{l}[m]$ of the lightbulb to be produced for this month.
+<button class="collapsible">Show solution</button>
+<div class="content">
+To lightbulb production can be modeled use the following ARMA(1,1) process
+\begin{equation*}
+        l[m] =  \underbrace{a_0+ a_1 l[m-1]}_{\text{AR}(1)} + \underbrace{b_1 \epsilon[m-1] + \epsilon[m]}_{\text{MA}(1)}.
+\end{equation*}
+In this model, the AR(1) part is a function of the previous month, while the MA(1) incorporates the error to make a new prediction. For both parts, we only look at data from this month and last month's production because we chose order $p=1$ and $q=1$.
+
+Since the error for this month cannot be known in advance, we can estimate the number of lightbulb needed this month as
+\begin{equation*}
+        \hat{l}[m] =  a_0 + a_1 l[m-1] + b_1 \epsilon[m-1].
+\end{equation*}
+To estimate the parameters $a_0, a_1, b_1$, we can use information we have from previous month, and the fact that we want to produce 10% more of the needed light bulb. With this information in mind, we can write
+\begin{equation*}
+        a_0 + a_1 l[m-1] + b_1 \epsilon[m-1] = 1.1(l[m-1] - \epsilon[m-1]).
+\end{equation*}
+Although the solution is not unique, equating the coefficients on the left and right  hand side of the above equation leads to $a_0=0$, $a_1 = 1.1$, and  $b_1 = - 1.1$, from which we obtain
+\begin{equation*}
+        \hat{l}[m] = 1.1 \cdot 2500 - 1.1\cdot 310 = 2409.
+\end{equation*}
+</div>
+
 ### The auto-correlation function of an ARMA($p,q$) process
 
 As we have seen so far, the ARMA process is a combination of a AR and MA process. This also becomes apparent in the auto-correlation function. The derivation is lengthy and will not be shown, but an intuitive description is given.
@@ -340,9 +365,3 @@ Using a similar approach as in the derivation of the AR(p) and MA(q) power spect
 \begin{equation}\label{eq:psd_ARMA}
     P_x(e^{j\theta}) = P_I(e^{j\theta})H(e^{j\theta})H^\ast(e^{j\theta}) = \sigma_i^2 \frac{|1 + b_1 e^{-j\theta} + \ldots + b_q e^{-jq\theta}|^2}{|1 + a_1e^{-j\theta}  + \ldots + a_p e^{-jp\theta}|^2}.
 \end{equation}
-
-<h3>Example</h3>
-Suppose you are a lightbulb manufacturer and you need to estimate each month how many light bulbs to produce for the next month.
-https://www.youtube.com/watch?v=HhvTlaN06AM
-
-## Special random processes
