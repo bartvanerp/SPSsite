@@ -313,7 +313,7 @@ where $i[n]$ is the input white noise, $a_i$ are the filter coefficients for the
 Suppose you have been hired by Signify to manage lightbulb production. You are asked to estimate each month how many light bulbs to produce next month. Last month the estimation was $l[m-1] = 2500$ and the number of lightbulbs left in stock were $\epsilon[m-1] = 310$. Modeling the production as an ARMA(1,1), and knowing that you  would like to produce 10% more of the needed lightbulbs to avoid running out of stock, provide an estimate $\hat{l}[m]$ of the lightbulb to be produced for this month.
 <button class="collapsible">Show solution</button>
 <div class="content">
-To lightbulb production can be modeled use the following ARMA(1,1) process
+The lightbulb production can be modeled use the following ARMA(1,1) process
 \begin{equation*}
         l[m] =  \underbrace{a_0+ a_1 l[m-1]}_{\text{AR}(1)} + \underbrace{b_1 \epsilon[m-1] + \epsilon[m]}_{\text{MA}(1)}.
 \end{equation*}
@@ -327,7 +327,7 @@ To estimate the parameters $a_0, a_1, b_1$, we can use information we have from 
 \begin{equation*}
         a_0 + a_1 l[m-1] + b_1 \epsilon[m-1] = 1.1(l[m-1] - \epsilon[m-1]).
 \end{equation*}
-Although the solution is not unique, equating the coefficients on the left and right  hand side of the above equation leads to $a_0=0$, $a_1 = 1.1$, and  $b_1 = - 1.1$, from which we obtain
+Although the solution is not unique, equating the coefficients on the left and right  hand sides of the above equation leads to $a_0=0$, $a_1 = 1.1$, and  $b_1 = - 1.1$, from which we obtain
 \begin{equation*}
         \hat{l}[m] = 1.1 \cdot 2500 - 1.1\cdot 310 = 2409.
 \end{equation*}
