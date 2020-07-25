@@ -80,7 +80,7 @@ where $l$ represents the lag between the signal $x[n]$ and its shifted version $
 
 <div class="example">
 <h4> Example </h4>
-Given the signal $x[n] = a^n \cdot u[n]$, where $u[n]$ represents the unit step function and $|a|<1$. Calculate the frequency spectrum, auto-correlation function, energy spectral density and signal energy of $x[n]$.
+Given the signal $x[n] = a^n \cdot u[n]$, where $u[n]$ represents the unit step function and $|a|<1$, calculate the frequency spectrum, auto-correlation function, energy spectral density and signal energy of $x[n]$.
 <button class="collapsible">Show solution</button>
 <div class="content">
 The frequency spectrum $X(e^{j\theta})$ can be calculated as
@@ -99,7 +99,7 @@ The auto-correlation function can be determined as
         &= \frac{a^l}{1-a^2}.
     \end{split}
 \end{equation*}
-Here only the case where $l\leq 0$ holds is discussed. Because the signal $x[n]$ is a real signal (i.e. $x[n] = x^\ast[n]$) the auto-correlation function is symmetric around $l=0$ and is therefore fully given as
+Here only the case where $l\geq 0$ is discussed. Because the signal $x[n]$ is a real signal (i.e. $x[n] = x^\ast[n]$) the auto-correlation function is symmetric around $l=0$ and is therefore fully given as
 \begin{equation*}
     r_x[l] = \frac{a^{|l|}}{1-a^2}.
 \end{equation*}
