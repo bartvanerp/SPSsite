@@ -14,6 +14,6 @@ subtitle = "Where does this come from?"
 
 +++
 
-In the past couple of years, the Signal Processing Systems (SPS) group of the Electrical Engineering department at the Eindhoven University of Technology (TU/e) has been developing new methods of education in order to fulfill the needs of the increasing influx of new students.
+Over the past couple of years, the Signal Processing Systems (SPS) group of the Electrical Engineering department at the Eindhoven University of Technology (TU/e) has been developing new methods of education in order to fulfill the needs of the increasing influx of new students.
 The *Blended Learning* approach that was implemented in 2017 was appreciated by the students and therefore more material is made available for self-study.
 For the optimal distribution of this material this site is developed, where you can find all information ***bundled in one single place***.

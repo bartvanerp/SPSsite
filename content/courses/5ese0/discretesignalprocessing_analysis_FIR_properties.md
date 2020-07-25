@@ -13,7 +13,7 @@ duplicated_page = "disciplines/discrete/discretesignalprocessing_analysis_FIR_pr
 
 # Add menu entry to sidebar.
 [menu.5ese0]
-name = "Frequency response FIR properties"
+name = "Frequency response FIR properties [⯈]"
 weight = 82
 parent = "Analysis I: Frequency response FIR"
 +++
