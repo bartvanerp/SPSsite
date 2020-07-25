@@ -17,8 +17,10 @@ type = "docs"  # Do not modify.
 
 
 The signal processing field deals with the analysis and manipulation of signals.
-Signals that are observed in everyday life are continuous-time signals, which are not yet converted to the digital domain.
-Understanding the basics that are related to the signal and system behavior in the continuous-time domain allows for a better understanding on how to process these signals in the digital domain. This module therefore covers the basics of signals and systems in the continuous-time domain.
+These signals are usually processed on computers and chips which require the signal to be stored in memory.
+This memory requirement leads to discretized signals, sampled at specific moments in time.
+This approximation of continuous-time signals has several effect on the signal and its spectrum.
+This module therefore covers the basics of signals and systems in the discrete-time domain.
 
 The concepts covered in this discipline are:
 
@@ -47,6 +49,6 @@ The concepts covered in this discipline are:
     - <a href="../discretesignalprocessing_filters_general_main">Filter stuctures II: General filter structures</a>
 <br></br>
 
-8. <a href="../discretesignalprocessing_wordlength_main">Finite wordlength effects</a> - Sampling signals is the process of converting a continuous-time signal into bits. More available bits allow for a higher resolution in the signal. This also means that there is an inevitable quantization error, which has an effect on the signal.
+8. <a href="../discretesignalprocessing_wordlength_main">Finite word length effects</a> - Sampling signals is the process of converting a continuous-time signal into bits. More available bits allow for a higher resolution in the signal. This also means that there is an inevitable quantization error, which has an effect on the signal.
 
 9. <a href="../discretesignalprocessing_design_main">Filter design</a> - The analysis of a filter gives insight into the operations of a filter. However, it is also important to use this knowledge in order to design a filter.

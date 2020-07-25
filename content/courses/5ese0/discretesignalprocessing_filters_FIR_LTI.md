@@ -13,7 +13,7 @@ duplicated_page = "disciplines/discrete/discretesignalprocessing_filters_FIR_LTI
 
 # Add menu entry to sidebar.
 [menu.5ese0]
-name = "Linear time invariant"
+name = "Linear time invariant [⯈]"
 weight = 73
 parent = "Filter structures I: Finite impulse response (FIR) filter"
 +++

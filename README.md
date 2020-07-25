@@ -4,11 +4,12 @@
 
 ### GitHub
 The SPS education platform is fully available on GitHub. The standard Git workflow applies. Git can be accessed through the command prompt, or more easily for beginners through `https://desktop.github.com/`. The basic workflow here will be making use of Github Desktop:
-1. Install Github Desktop from `https://desktop.github.com/`
-2. Open the application and log in
-3. (Follow a short git tutorial to get acquainted with all the different terms)
-4. Go to `File -> Clone repository` and select the SPS site repository.
-5. Specify a path to the location where you want to save the files and click `clone`.
+1. Install Git from `https://git-scm.com/`
+2. Install Github Desktop from `https://desktop.github.com/`
+3. Open the application and log in
+4. (Follow a short git tutorial to get acquainted with all the different terms)
+5. Go to `File -> Clone repository` and select the SPS site repository.
+6. Specify a path to the location where you want to save the files and click `clone`.
 
 The files should now have been added to your PC.
 
@@ -54,3 +55,88 @@ When linking to a page in a **different** folder: use absolute urls
 
 ### Latex
 Latex is largely supported on the website, although sometimes the notation is a tiny bit different. Some special characters need to be escaped by adding another `\` and specialized packages are not supported.
+
+<br>
+
+## Content overview (last updated 22-07-2020)
+
+- Mathematical background
+  - Complex numbers and phasors <i>(reader, videos, exercises, pencasts, lab)</i>
+    - [⯈] Overview module
+    - [⯈] Calculation rules
+    - [⯈] Phasors
+  - Probability and random variables <i>(reader)</i>
+- Basics of continuous-time signals and systems
+  - Spectrum of sinusoidal signals <i>(reader, videos, exercises, pencasts, lab)</i>
+    - [⯈] Overview module
+    - [⯈] Special cases
+  - Fourier series <i>(reader, videos, exercises, pencasts, lab)</i>
+    - [⯈] Overview module
+    - [⯈] Examples
+  - Fourier transform for continuous-time signals <i>(reader, videos, exercises, pencasts, lab)</i>
+    - [⯈] Overview module
+    - [⯈] Examples
+    - [⯈] Properties
+- Discrete-time signal processing basics
+  - Basics of sampling and reconstruction <i>(reader, videos, exercises, pencasts, lab)</i>
+    - [⯈] Overview module
+    - [⯈] Reconstruction
+    - [⯈] Examples
+  - Discrete-time signals <i>(reader, videos)</i>
+    - [⯈] Overview module
+  - Discrete-time systems <i>(reader, videos)</i>
+    - [⯈] Overview module
+    - [⯈] Special convolution procedures
+  - Fourier transform for discrete-time signals <i>(reader, videos)</i>
+    - [⯈] Overview module
+    - [⯈] Examples
+    - [⯈] Properties
+  - Discrete Fourier transform <i>(reader, videos)</i>
+    - [⯈] From FTC to DFT
+    - [⯈] How does it work
+    - [⯈] Properties
+    - [⯈] DFT length
+  - Z-transform <i>(reader, videos)</i>
+    - [⯈] Overview module
+    - [⯈] Properties
+    - [⯈] Inverse Z-transform: look-up table
+    - [⯈] Inverse Z-transform: long-tail division
+    - [⯈] Inverse Z-transform: partial fraction expansion
+  - Frequency response FIR <i>(reader, videos, exercises, pencasts, lab)</i>
+    - [⯈] Overview module
+    - [⯈] Properties
+  - Frequency response LTI <i>(reader, videos)</i>
+    - [⯈] Overview module
+  - System function <i>(reader, videos)</i>
+    - [⯈] Overview module
+  - Sampling, reconstruction and multirate signal processing <i>(reader, videos)</i>
+    - [⯈] Mathematical description sampling process
+    - [⯈] Building blocks of multirate signal processing
+  - Finite impulse response filter <i>(reader, videos, exercises, pencasts, lab)</i>
+    - [⯈] Impulse response
+    - [⯈] Convolution sum
+    - [⯈] Linear time invariant
+  - General filter structures <i>(reader, videos)</i>
+    - [⯈] Overview module
+    - [⯈] Special filter structures
+  - Finite word length effects <i>(reader, videos)</i>
+    - [⯈] Overview module
+  - Filter design <i>(reader, videos)</i>
+    - [⯈] Overview module
+    - [⯈] FIR filter design
+    - [⯈] IIR filter design
+- Statistical signal processing
+  - Stochastic processes and random signals <i>(reader, videos)</i>
+    - [⯈] Overview module
+  - Rational signal models
+  - Spectral estimation <i>(reader)</i>
+  - Estimation theory
+  - Detection theory <i>(reader)</i>
+- Optimal and adaptive signal processing
+  - Optimal Wiener filters <i>(videos)</i>
+    - [⯈] Overview module
+    - [⯈] FIR case
+  - Adaptive filters <i>(videos)</i>
+    - [⯈] Steepest gradient descent algorithm
+    - [⯈] Least mean squares algorithm
+    -
