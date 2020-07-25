@@ -18,9 +18,9 @@ type = "docs"  # Do not modify.
 +++
 A stochastic processes may be represented by a stochastic model with given order and parameters, which is able to generate a random signal characterized by well-defined spectral properties. In fact, although a stochastic model and process are in principle two different entities, they are sometimes used interchangeably.
 Stochastic models are fundamental in many applied fields of science, including engineering, economics and medicine. Among stochastic models, a special class of models known as auto-regressive moving-average (ARMA) is widely used. In the section
-<a href="../statisticalsignalprocessing_rational_spectral_factorization">Spectral factorization</a> we saw how any  wide-sense stationary random signal can be described as LTI system driven by white noise. The system, also referred to as innovation filter, has a rational spectrum. It turns out that this is equivalent to modeling the random process generating the signal as an ARMA($p$, $q$) model, which provide a parsimonious description of a WSS stochastic process in terms of a rational polynomial. The numerator of order $q$ represents the moving-average part, while the denominator of order $p$ represents auto-regressive part.
+<a href="../statisticalsignalprocessing_rational_spectral_factorization">Spectral factorization</a> we saw how any  wide-sense stationary random signal can be described as an LTI system driven by white noise. The system, also referred to as innovation filter, has a rational spectrum. It turns out that this is equivalent to modeling the random process generating the signal as an ARMA($p$, $q$) model, which provide a parsimonious description of a WSS stochastic process in terms of a rational polynomial. The numerator of order $q$ represents the moving-average part, while the denominator of order $p$ represents the auto-regressive part.
 
-The ARMA model is based on the observation the stochastic time series often have a dependence on previous time points. This can be described by the auto-regressive part of an ARMA model, which permits modeling a "memory" that decades with time. The moving- average part takes into account for the new information (innovation) by a linear combination of the present and previous samples.
+The ARMA model is based on the observation that stochastic time series often have a dependence on previous time points. This can be described by the auto-regressive part of an ARMA model, which permits modeling a "memory" that decades with time. The moving- average part takes into account for the new information (innovation) by a linear combination of the present and previous samples.
 
 Thanks to their ability to model a wide variety of stochastic processes, ARMA models are useful for:
 <ul>
@@ -45,10 +45,10 @@ The input to this system is white noise, thus an AR random process can be descri
     x[n] = i[n] - a_1 x[n-1] - a_2 x[n-2] - \ldots - a_p x[n-p].
 \end{equation}
 
-where $i[n]$ is the input white noise and $a_i$ are the filter coefficients. The order of the filter gives an indication on how many previous noise samples are used to form a new output.
+where $i[n]$ is the input white noise and $a_i$ are the filter coefficients. The order of the filter gives an indication on how many previous signal samples are used to form a new output.
 
 <h3>Example</h3>
-One of the first stochastic models was a AR model proposed by Yule in 1927 to describe the motion of pendulum in a viscous medium. Yule expressed the amplitude $s[n]$ of the oscillation using the following homogeneous difference equation
+One of the first stochastic models was a AR model proposed by Yule in 1927 to describe the motion of a pendulum in a viscous medium. Yule expressed the amplitude $s[n]$ of the oscillation using the following homogeneous difference equation
 \begin{equation}
 \begin{split}
     s[n] + a_1 s[n-1] + a_2 s[n-2] = 0, \qquad n=0, 1, 2, ...
@@ -76,7 +76,7 @@ where we will make use of two properties. First the auto-correlation function of
 and secondly we use the fact that the signal is real, meaning that $x[n] = x^\ast[n]$. Before the auto-correlation function of $x[n]$ can be calculated, first the cross-correlation function between the white Gaussian noise input $i[n]$ and the AR-process $x[n]$ has to be determined as
 \begin{equation}
     \begin{split}
-        r_{i,x}[l]
+        r_{ix}[l]
         &= \mathrm{E}\left\\{i[n]x^\ast[n-l]\right\\}, \newline
         &= \mathrm{E}\left\\{i[n]^\ast\left(i[n-l] - a_1 x^\ast[n-1-l]  - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
         &= \mathrm{E}\left\\{i[n]i^\ast[n-l]\right\\} + \mathrm{E}\left\\{i[n]\left(- a_1 x^\ast[n-1-l] - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
@@ -107,7 +107,7 @@ It is now possible to estimate the desired AR coefficients. When a windowed sign
 \begin{equation}
      \hat{r}_x[l] + \hat{a}_1 \hat{r}_x[l-1] + \ldots + \hat{a}_p \hat{r}_x[l-p] = \hat{\sigma}_i^2\delta[l].
 \end{equation}
-The parameters $\hat{a}_1$ up to $\hat{a}_p$ and $\hat{\sigma}_i^2$ need to be estimated, using auto-correlation estimated from the data at lags $0,1, ..., p$. This equality has $p+1$ unknowns, and thus we require $p+1$ equations to solve this. These $p+1$ equation can be obtained by evaluating the auto-correlation for different lags. The system of equations that follows from this approach is called the *Yule-Walker equations*, which can be written in matrix notation as
+In the equation above, we assume to know the correlation samples $  \hat{r}_x[l], ...,\hat{r}_x[l-p]$ (estimated from the observed signal), while the parameters $\hat{a}_1$,..., $\hat{a}_p$ and $\hat{\sigma}_i^2$ need to be estimated. This equality has $p+1$ unknowns, and thus we require $p+1$ equations to solve it. These $p+1$ equations can be obtained by evaluating the auto-correlation for different lags. The system of equations that follows from this approach is called the *Yule-Walker equations*, which can be written in matrix notation as
 \begin{equation}
     \begin{bmatrix}
         \hat{r}_x[0]    & \hat{r}_x[1]      & \hat{r}_x[2]  & \cdots    & \hat{r}_x[p]      \newline
@@ -192,7 +192,7 @@ which is similar to the system of equations determined above.
 It can be observed that the auto-correlation function of the AR process is recursive. This is caused by the fact that a noise signal that enters the filter will appear at the output and will in this way always be somehow involved in the filter. Because the filter also processes previous outputs, every noise input signal will always be present in this feedback loop.
 
 ### Power spectral density of an AR($p$) process
-Suppose that we have succeeded in determining the most optimal parameters for the AR process and we want to find the power spectral density estimate of our signal. Filtering an input signal with a filter with transfer function $H(e^{j\theta})$ relates the input and output power spectral densities ($P_I(e^{j\theta})$ and $P_X(e^{j\theta})$ respectively) through
+Suppose that we have succeeded in determining the most optimal parameters for the AR process and we want to find the power spectral density estimate of our signal. Filtering an input signal with a filter with transfer function $H(e^{j\theta})$ relates the input and output power spectral densities ($P_I(e^{j\theta})$ and $P_X(e^{j\theta})$, respectively) through
 \begin{equation}\label{eq:psd_inout}
     P_X(e^{j\theta}) = |H(e^{j\theta})|^2 P_I(e^{j\theta}) = H(e^{j\theta})H^\ast(e^{j\theta}) P_I(e^{j\theta}).
 \end{equation}
@@ -228,10 +228,10 @@ The difference equation of a $q^\text{th}$-order MA filter is given by
 \begin{equation}
     x[n] = i[n] + b_1 i[n-1] + b_2 i[n-2] - \ldots - b_q i[n-q].
 \end{equation}
-where $i[n]$ is the input white noise and $b_i$ are the filter coefficients. The filter order determines how many past samples are combined to form a new sample.
+where $i[n]$ is the input white noise and $b_i$ are the filter coefficients. The filter order determines how many noise samples are combined to form a new sample.
 
 ### Autocorrelation of a MA($q$) process
-While the auto-correlation of the AR process is recursive, this is not the case  for MA processes. Each sample of the input noise will only be memorized during the time that is present in the filter, determined by the filter length. Therefore, after a certain time, a noise sample will not be present anymore in the output signal. This also leads to the fact that the auto-correlation function will only be non-zero for a certain number of lags, which is a function of the filter length. There is no correlation for lags exceeding the length of the filter. In order to demonstrate this behavior, the auto-correlation function is calculated for several lags.
+While the auto-correlation of the AR process is recursive, this is not the case for MA processes. Each sample of the input noise will only be memorized during the time that is present in the filter, determined by the filter length. Therefore, after a certain time, a noise sample will not be present anymore in the output signal. This also leads to the fact that the auto-correlation function will only be non-zero for a certain number of lags, which is a function of the filter length. There is no correlation for lags exceeding the length of the filter. In order to demonstrate this behavior, the auto-correlation function is calculated for several lags.
 
 At $l=0$ it can be found that
 \begin{equation}
@@ -266,7 +266,7 @@ Please note how the lag has affected the above terms. Furthermore, the number of
 \end{equation}
 
 This methodology can be extended for multiple lags, but a pattern should become noticeable, revealing the mathematical structure of the auto-correlation function. The mathematical description of the auto-correlation function can therefore be described as
-\begin{equation}
+\begin{equation}\label{eq:MAac}
     r_x[l] =
     \begin{cases}
         \sigma_i^2 \sum\_{k=|l|}^q b_{k}b_{k-|l|},       & \text{for } 0\leq |l|  \leq q \newline
@@ -274,7 +274,7 @@ This methodology can be extended for multiple lags, but a pattern should become 
     \end{cases}
 \end{equation}
 
-While the auto-correlation function for an AR process results in a set of linear equations which can be easily solved by a matrix  inversion, this is not the case for the MA process, as can be observed from equation (22).
+While the auto-correlation function for an AR process results in a set of linear equations which can be easily solved by a matrix  inversion, this is not the case for the MA process, as can be observed from equation (\ref{eq:MAac}).
 
 ### Power spectral density of an MA($q$) process
 
@@ -286,13 +286,13 @@ from which the transfer function can be determined as
 \begin{equation}
     H(e^{j\theta}) = \frac{X(e^{j\theta})}{I(e^{j\theta})} = 1 + b_1 e^{-j\theta} + \ldots + b_q e^{-jq\theta}.
 \end{equation}
-Using a similar approach as in the derivation of the AR(p) power spectral density function, we can find that the power spectral density function of an MA(q) process is given as
+Using a similar approach as in the derivation of the AR($p$) power spectral density, we can find that the power spectral density of an MA($q$) process is given as
 \begin{equation}\label{eq:psd_MA}
     P_x(e^{j\theta}) = P_I(e^{j\theta})H(e^{j\theta})H^\ast(e^{j\theta}) = \sigma_i^2 |1 + b_1 e^{-j\theta} + \ldots + b_q e^{-jq\theta}|^2.
 \end{equation}
 
 ## Auto-regressive moving-average model, ARMA($p,q$)
-The  general ARMA model is a mixture of a AR and a MA models, and therefore has both poles and zeros. The resulting transfer function is given by
+The  general ARMA model is a mixture of a AR($p$) and a MA($q$) models, and therefore has both poles and zeros. The resulting transfer function is given by
 \begin{equation}
 \begin{split}
     H(z) = \frac{1+\sum_{q=1}^{Q} b_q z^{-q}}{1+\sum_{p=1}^{P} a_p z^{-p}} = \frac{B(z)}{A(z)}.
@@ -341,12 +341,12 @@ The general form of the Yule-walker equations can be used to express the relatio
 \begin{equation}
     r_x[l] =
     \begin{cases}
-        \sigma_i^2 \sum_{k=|l|}^q \beta_{k}\beta_{k-|l|} - \sum_{k=1}^p \alpha_k r_x[|l|-k],  &\text{for }0 \leq |l| \leq q \newline
-        - \sum_{k=1}^p \alpha_k r_x[|l|-k].  &\text{for }|l| > q \\
+        \sigma_i^2 \sum_{k=|l|}^q b_{k}b_{k-|l|} - \sum_{k=1}^p a_k r_x[|l|-k],  &\text{for }0 \leq |l| \leq q \newline
+        - \sum_{k=1}^p a_k r_x[|l|-k].  &\text{for }|l| > q \\
     \end{cases}
 \end{equation}
 
-This expression may seem complicated, but it is easily explained by comparison with the auto-correlation function of the AR and MA process. The value of the auto-correlation function is a combination of both AR and MA auto-correlation functions. As with the AR process, the auto-correlation function has a recursive structure as can be seen from the terms with the $a_i$ coefficients. For smaller lags, there is not only an effect of an AR process, but there is also the effect of the MA process. In other words, the ARMA process and its auto-correlation function can be interpreted as the super-imposition of the AR and MA processes.
+This expression may seem complicated, but it is easily explained by comparison with the auto-correlation function of the AR and MA process. The value of the auto-correlation function is a combination of both AR and MA auto-correlation functions. As with the AR process, the auto-correlation function has a recursive structure as can be seen from the terms with the $a_i$ coefficients. For smaller lags, there is not only an effect of an AR process, but there is also the effect of the MA process. In other words, the ARMA process and its auto-correlation function can be interpreted as the super-imposition of the AR and MA processes. For lags larger than $q$, the MA part does not contribute anymore to the autocorrelation function and thus only the AR part is present.
 
 ### Power spectral density of an ARMA($p,q$) process
 From the definition of the difference equation the Fourier equivalent can be determined as
