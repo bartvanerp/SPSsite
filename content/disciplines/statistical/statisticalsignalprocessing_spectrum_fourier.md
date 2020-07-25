@@ -17,9 +17,9 @@ type = "docs"  # Do not modify.
 
 Before diving deeper into spectral estimation, a good understanding of the Fourier transform and its variants is desired. This section will describe the Fourier transforms starting with the analytically ideal transform and ending with its practical computational implementation.
 
-The Fourier transform is the operation that converts a signal from the time-domain representation into the frequency-domain representation. The inverse transforms does the opposite. Many types of Fourier transforms exist, however, the "main" Fourier transform usually refers to the Fourier transform for continuous-time signals. However, in practice, the fast Fourier transform is most commonly used, which is a computationally efficient variant of the discrete-time Fourier transform.
+The Fourier transform is the operation that converts a signal from the time-domain representation into the frequency-domain representation. The inverse transforms does the opposite. Many types of Fourier transforms exist, although the "main" Fourier transform usually refers to the Fourier transform for continuous-time signals. However, in practice, the fast Fourier transform is most commonly used, which is a computationally efficient variant of the discrete-time Fourier transform.
 
-The summary below should point out the main differences between the different Fourier transforms. A more detailed explanation is beyond the scope of this module, but can be found in their respective modules as refered to below.
+The summary below should point out the main differences between the different Fourier transforms. A more detailed explanation is beyond the scope of this module, but can be found in their respective modules as referenced below.
 
 <br></br>
 ## Fourier series (FS)
