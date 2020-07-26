@@ -19,9 +19,9 @@ Non-parametric spectral estimation methods are based on two major assumptions. F
 
 It would be nice to extrapolate the auto-correlation function for larger lags, because this would increase the resolution of the estimated power spectral density. With extrapolation we are referring to the process where additional values are estimated or predicted based on the already available information. In other words, the auto-correlation function can be extended or extrapolated by finding a pattern in the available auto-correlation function and by filling the unknown values with the expected values from this pattern.
 
-This pattern or <i>signal model</i> requires us to have some prior information about the signal generating process, otherwise it is impossible to determine an accurate signal model that would correspond with the obtained auto-correlation function. After the signal model has been identified, it needs to be fitted to the available auto-correlation function. This means that the unknown parameters of the signal model are estimated according to the available auto-correlation function, and once the parameters are estimated, the signal model can be used to estimate the entire auto-correlation function.
+This pattern or <i>signal model</i> requires us to have some prior information about the signal generating process, otherwise it is impossible to determine an accurate signal model that would correspond to the obtained auto-correlation function. After the signal model has been identified, it needs to be fitted to the available auto-correlation function. This means that the unknown parameters of the signal model are estimated according to the available auto-correlation function, and once the parameters are estimated, the signal model can be used to estimate the entire auto-correlation function.
 
-This approach is very different from the non-parametric methods and it is usually refer to as <i>parametric method</i>, by which parameters of a signal model are estimated such that signal and auto-correlation function can be described by such a model. The parametric approach roughly consists out of three steps. First, a signal model needs to be defined. This step is usually the hardest since it would ideally require prior knowledge of the process. If this knowledge is not available, then several models can be fitted to the data after which the most optimal one is chosen. The definition of optimal depends on the evaluation criterion. Second, once the model is defined, the parameters can be estimated and the power spectral density can be obtained using the signal model.
+This approach is very different from the non-parametric methods and it is usually refer to as <i>parametric method</i>, by which parameters of a signal model are estimated such that signal and auto-correlation function can be described by such a model. The parametric approach roughly consists of three steps. First, a signal model needs to be defined. This step is usually the hardest since it would ideally require prior knowledge on the random process. If this knowledge is not available, then several models can be fitted to the data after which the most optimal is chosen. The definition of optimal depends on the evaluation criterion. Finally, once the model is defined, the parameters can be estimated and the power spectral density can be obtained using the signal model.
 
 <br></br>
 ## Rational signal models
@@ -54,7 +54,7 @@ or equivalently
 r[l] = - \sum_{k=1}^p \alpha_k r_x[|l|-k].
 \end{equation}
 
-When a windowed signal is observed and the auto-correlation function is estimated as $\hat{r}_x[l]$, the Yule-Walker equations can be used to estimate parameters $\hat{a}_1$ up to $\hat{a}_p$ and $\hat{\sigma}_i^2$. Since there are $p+1$ unknowns, and we require $p+1$ equations to solve the Yule-walker equations, which is equaivalent to using $p+1$ estimated correlation lags. The Yule-Walker equations for an AR process are linear, and thus can be written in a matrix form as
+When a windowed signal is observed and the auto-correlation function is estimated as $\hat{r}_x[l]$, the Yule-Walker equations can be used to estimate parameters $\hat{a}_1$,..., $\hat{a}_p$ and $\hat{\sigma}_i^2$. Since there are $p+1$ unknowns, we require $p+1$ equations to solve the Yule-walker equations, which is equivalent to using $p+1$ estimated correlation lags. The Yule-Walker equations for an AR process are linear, and thus can be written in a matrix form as
 
 \begin{equation}
     \begin{bmatrix}
@@ -81,9 +81,9 @@ Finally, the power spectral density of an AR process is given by
 \end{equation}
 
 ### Estimation of an AR(p) spectrum
-In order to estimate the spectrum of an AR(p) process the first step is to write down the Yule-Walker equation for a certain model order $p$. This model order can be freely chosen, but its performance can be measured using the metrics that will be discussed later on. For this Yule-Walker equation first the auto-correlation function of the signal should be estimated for lags $|l| \leq p$. Once the Yule-Walker equation has been established, the AR coefficients $\hat{\alpha}_i$ and the innovation variance $\hat{\sigma}^2_i$ can be calculated. With these parameters the analytical AR power spectral density can be estimated using (\ref{eq:psd_AR}). For practical implementations, however, the power spectral density is calculated using the DFT, zero-padded to length $L$, through
+In order to estimate the spectrum of an AR(p) process the first step is to write down the Yule-Walker equation for a certain model order $p$. This model order can be freely chosen, but its performance can be measured using the metrics that will be discussed later on. To obtain the Yule-Walker equation first the auto-correlation function of the signal should be estimated for lags $|l| \leq p$. Once the Yule-Walker equation has been established, the AR coefficients $\hat{a}_i$ and the innovation variance $\hat{\sigma}^2_i$ can be calculated. With these parameters the analytical AR power spectral density can be estimated using (\ref{eq:psd_AR}). For practical implementations, however, the power spectral density is often calculated using the DFT, zero-padded to length $L$, through
 \begin{equation}
-    \hat{P}[k] = \frac{\hat{\sigma}_i^2}{\left| \sum\_{i=0}^p \hat{\alpha}_ie^{-jik\frac{2\pi}{L}}\right|^2}.
+    \hat{P}[k] = \frac{\hat{\sigma}_i^2}{\left| \sum\_{i=0}^p \hat{a}_ie^{-jik\frac{2\pi}{L}}\right|^2}.
 \end{equation}
 ## MA($q$) spectral estimation
 
@@ -127,7 +127,7 @@ First, the windowed estimated auto-correlation function can be used to estimate 
 \end{equation}
 This description can be compared with the Blackman-Tukey method of the previous section using a rectangular window of length $2q+1$. It should also be noted that care should be taken whilst performing this estimation, because model mismatch can lead to a negative power spectral density at some relative frequencies, which should not be possible by the definition of the power spectral density.
 
-Secondly, from the estimated auto-correlation function of the signal, it is also possible to estimate the model parameters $\hat{\beta}_i$ and the innovation variance $\hat{\sigma}_i^2$. This estimation is a non-linear estimation problem. However, once the parameters have been obtained and the power spectral density is calculated using (\ref{eq:psd_MA}), the power spectral density is guaranteed to be non-negative.
+Secondly, from the estimated auto-correlation function of the signal, it is also possible to estimate the model parameters $\hat{b}_i$ and the innovation variance $\hat{\sigma}_i^2$. This estimation is a non-linear estimation problem. However, once the parameters have been obtained and the power spectral density is calculated using (\ref{eq:psd_MA}), the power spectral density is guaranteed to be non-negative.
 
 A third approach is aimed more specifically at the practical implementation of the above mentioned methods. Here the analytical description of the power spectral density is approximated using (a zero-padded version of) the DFT or FFT.
 
@@ -155,7 +155,7 @@ The auto-correlation function is given by
 \begin{equation}
     r_x[l] =
     \begin{cases}
-        \sigma_i^2 \sum_{k=|l|}^q \beta_{k}\beta_{k-|l|} - \sum_{k=1}^p \alpha_k r_x[|l|-k],  &\text{for }0 \leq |l| \leq q \newline
+        \sigma_i^2 \sum_{k=|l|}^q b_{k}b_{k-|l|} - \sum_{k=1}^p \alpha_k r_x[|l|-k],  &\text{for }0 \leq |l| \leq q \newline
         - \sum_{k=1}^p \alpha_k r_x[|l|-k].  &\text{for }|l| > q \\
     \end{cases}
 \end{equation}
