@@ -24,7 +24,7 @@ Here we briefly recap the direct and indirect methods of calculating the power s
 
 The periodogram estimate of the power spectral density is obtained as
 \begin{equation}
-    \hat{P}_\N (e^{j\theta}) =\frac{1}{N}\left|\sum_{n=0}^{N-1} x[n]e^{-jn\theta}\right|^2.
+    \hat{P}\_N (e^{j\theta}) =\frac{1}{N}\left|\sum\_{n=0}^{N-1} x[n]e^{-jn\theta}\right|^2.
 \end{equation}
 which is the normalized squared magnitude of the spectrum of the windowed signal. The subscript $N$ indicates that the PSD estimate is calculated on $N$ samples of the infinite-length signal $x[n]$.
 
@@ -33,14 +33,14 @@ The correlogram estimate of the power spectral density is obtained as
 \begin{equation}
     \hat{P}_N(e^{j\theta})= \sum\_{l=-(N-1)}^{N-1} \hat{r}_x[l]e^{-jl\theta}.
 \end{equation}
-Recalling the Wiener-Khintchine relationship as
+whichm, recalling the Wiener-Khintchine relationship as
 \begin{equation}\label{eq:wiener_k}
     P(e^{j\theta}) = \sum\_{l=-\infty}^\infty r[l] e^{-jl\theta},
 \end{equation}
-The correlagram is interpreted as the Fourier transform of the estimated auto-correlation function, but applied to an *estimated* auto-correlation function.
+is interpreted as the Fourier transform of the auto-correlation, but applied to an *estimated* auto-correlation function.
 
 ## Performance of the "raw" estimators
-The periodogram and correlogram are equivalent methods to calculate an estimate $\hat{P}(e^{j\theta})$. Since this is an estimate, we can calculate the expected value and variance to assess the estimator performance. In the following, we mostly focus on the correlogram, but same conclusions can be found for the periodogram.
+The periodogram and correlogram are equivalent methods to calculate a PSD estimate $\hat{P}(e^{j\theta})$. Since this is an estimate, we can calculate the expected value and variance to assess the estimator performance. In the following, we mostly focus on the correlogram, but same conclusions can be found for the periodogram.
 
 ### Biased and unbiased estimators of the autocorrelation function
 
@@ -68,12 +68,12 @@ From equation (\ref{eq:autocorr_est}), it is easy to understand that in order to
   \hat{r}\_{ub}[l]=\frac{1}{N-|l|}\sum_{n=0}^{N-1-|l|} x[n]x^\ast[n-l].
 \end{equation}
 
-Note that in both eqs. (\ref{eq:ac_biased}) and (\ref{eq:ac_unbiased}), we assume that the autocorrelation is zero for lags outside of the summation. Although we do not prove it here, while there is a large variance for lags $l$ close to $N$, for both the biased and unbiased estimators the variance goes to zero asymptotically with $N$.
+Note that in both eqs. (\ref{eq:ac_biased}) and (\ref{eq:ac_unbiased}), we assume that the autocorrelation is zero for lags outside of the summation. While there is a large variance for lags $l$ close to $N$, for both the biased and unbiased estimators the variance goes to zero asymptotically with $N$. This is proven this for the biased estimator by equation (\ref{eq:autocorr_est})).
 
 An alternative way to look at this is to rewrite eqs. (\ref{eq:ac_biased}) and (\ref{eq:ac_unbiased}) as
 
 \begin{equation}\label{eq:ac_biased2}
-  \hat{r}\_b[l]=  r[l] \cdot  w_T[n],
+  \hat{r}\_b[l]=  r[l] \cdot  w_R[n],
 \end{equation}
 
 \begin{equation}\label{eq:ac_unbiased2}
@@ -137,7 +137,9 @@ For a  triangular window, we  obtain
 which is a squared sinc function. The proof of (\ref{eq:ft_triang}) is beyond the scope of this reader, but it can easily be found by regarding the Bartlett window as a convolution between two rectangular windows and following the multiplication-convolution property
 
 Since $W_R(e^{j\theta})$ can have negative values, it may lead to an invalid power spectral density function, which by definition is always non-negative. For a triangular window we instead obtain a squared sinc, which is a non-negative function.
-This explains why we typically use the biased estimate of the autocorrelation function $r_b[l]$ given in (\ref{eq:ac_biased}). In fact, although unbiased, using $r_{ub}[l]$ to estimate the PSD by the correlogram method might lead to invalid PSD.
+This explains why we typically use the biased estimate of the autocorrelation function $r_b[l]$ given in (\ref{eq:ac_biased}). In fact, although unbiased, using $r_{ub}[l]$ to estimate the PSD by the correlogram method might lead to an invalid PSD.
+
+>As a rule of thumb, it is good to use at least 50 samples and use the biased estimator calculate on lags up to a quarter of the number of samples.
 
 A key aspect here is that the window is applied directly to the autocorrelation rather than to the signal. Thus, to obtain the PSD estimate, we simply take the transform of the windowed autocorrelation (correlogram), while if we were to calculate the PSD estimate from the signal, we would need to calculate the modulus squared of the transform (periodogram).
 
@@ -153,16 +155,7 @@ Schematic representation of the PSD estimation by the correlogram method using t
   </figure>
 </div>
 
-Finally, although we use a biased estimator of the autocorrelation function, a closer examination of its expected value as
-\begin{equation}
-\begin{split}
-\mathrm{E}\left[\hat{r}\_b[l]\right] &= \mathrm{E}\left[\frac{1}{N}\sum_{n=0}^{N-1-|l|}x[n]x^\ast[n-|l|]\right], \newline
-&=\frac{1}{N}\sum_{n=0}^{N-1-|l|}\mathrm{E}\left[x[n]x^\ast[n-|l|]\right], \newline
-&= \frac{N-|l|}{N}r\_x[l],
-\end{split}
-\end{equation}
-shows that $r_b[l]$ is asymptotically unbiased. The difference between the expected value of the estimator and the true value disappears as $N\rightarrow \infty$. Because of this, the estimated power spectral density function is then also asymptotically unbiased.
->As a rule of thumb, it is good to use at least 50 samples and use the biased estimator calculate on lags up to a quarter of the number of samples.
+
 
 ### Loss of resolution and spectral leakage
 
@@ -187,7 +180,7 @@ we can rewrite equation (\ref{eq:exp_p}) as
 \hat{P}(e^{j\theta}) = \underbrace{P(e^{j\theta})\ast_{2\pi} W_{ML}(e^{j\theta})}_{\text{Loss of resolution}} + \underbrace{P(e^{j\theta})\ast_{2\pi} W_{SL}(e^{j\theta})}_{\text{Spectral leakage}}
 \end{equation}
 
-From equation (\ref{res_leakage}), we can easily separate the contribution of the main lobe, which causes loss in spectral resolution, from the contribution of the side lobes, which causez spectral leakage, that is the appearance of spurious spectral peaks at the location of the side lobes.
+From equation (\ref{res_leakage}), we can easily separate the contribution of the main lobe, which causes loss in spectral resolution, from the contribution of the side lobes, which cause spectral leakage, that is the appearance of spurious spectral peaks at the location of the side lobes.
 
 
 #### Calculation of the biased auto-correlation function using the DFT
@@ -223,7 +216,7 @@ Although the proof is beyond the scope of this reader, a general trend for the v
     \text{Var}\left[\hat{P}_{AR1}(e^{j\theta})\right] \approx  (P(e^{j\theta}))^2,
 \end{equation}
 
-From this it can be seen that $\hat{P}(e^{j\theta})$ is not a consistent estimator, since the variance does not converge to zero.
+From this it can be seen that $\hat{P}(e^{j\theta})$ is not a consistent estimator, since the variance does not converge to zero for increasing $N$.
 
 <br></br>
 ## Periodogram improvements
@@ -277,7 +270,7 @@ which proves that the variance indeed decreases for an increase in number of sig
 
 
 ### Welch's overlapped segment averaging (WOSA) method
-A similar method is Welch's method, also known as Welch's overlapped segment averaging (WOSA) spectral density estimation. In this method, the signal is also split in different segments but now allowing overlapping between the segments (typically with 50\% or 75\% overlap); then these segments are windowed before calculating the individual periodograms, and then averaged, similarly to Bartlett's method. Fig. 3 shows a graphical visualisation of this method. The consequence of this overlap is that the individual segments are now no longer independent, which results in (\ref{eq:bartlett}) not being valid anymore. When applying this method the variance is still decreased, but with to a smaller extent compared to Bartlett's method. On the other hand, since the segments are now longer due to the overlap, the bias does not increase as much as with Bartlett's method.
+A similar method is Welch's method, also known as Welch's overlapped segment averaging (WOSA) spectral density estimation. In this method, the signal is also split in different segments but now allowing overlapping between the segments (typically with 50\% or 75\% overlap); then these segments are windowed before calculating the individual periodograms, and then averaged, similarly to Bartlett's method. Fig. 3 shows a graphical visualisation of this method. The consequence of this overlap is that the individual segments are now no longer independent, which results in (\ref{eq:bartlett}) not being valid anymore. When applying this method the variance is still decreased, but to a smaller extent compared to Bartlett's method. On the other hand, since the segments are now longer due to the overlap, the bias does not increase as much as with Bartlett's method.
 
 <br></br>
 ## Correlogram improvements
@@ -288,7 +281,7 @@ The basic idea of The Blackman-Tukey correlogram is to apply a symmetric window 
 \begin{equation}
     \hat{P}\_{BT}(e^{j\theta}) = \sum\_{l=-(L-1)}^{L-1} w\_L[l]\hat{r}[l]e^{-jl\theta}.
 \end{equation}
-Here the estimated auto-correlation function is windowed. Note that window is additional to the triangular window which is inherent in the biased estimation of the autocorrelation function. The reason to include an extra window is due to the fact that estimated auto-correlation is very uncertain at the edges of the observation window, since at these lags it is calculated using a very limited number of samples. Whereas in the center of the window, $\hat{r}[l]$ is computed with almost all samples available. Therefore, by using a suitable window, we can reduce the weight of the auto-correlation lags at the edges of the window, were only few samples are available. In the frequency domain, the Blackman-Tukey estimator can be interpreted as the convolution between the spectrum of the window and the estimated power spectral density as
+Here the estimated auto-correlation function is windowed. Note that window is additional to the triangular window which is inherent in the biased estimation of the autocorrelation function. The reason to include an extra window is due to the fact that the estimated auto-correlation is very uncertain at the edges of the observation window, since at these lags it is calculated using a very limited number of samples. Whereas in the center of the window $\hat{r}[l]$ is computed with almost all samples available. Therefore, by using a suitable window, we can reduce the weight of the auto-correlation lags at the edges of the window, were only few samples are available. In the frequency domain, the Blackman-Tukey estimator can be interpreted as the convolution between the spectrum of the window and the estimated power spectral density as
 \begin{equation}
     \hat{P}\_{BT}(e^{j\theta}) = \frac{1}{2\pi} \hat{P}(e^{j\theta})\ast W_L(e^{j\theta}).
 \end{equation}
@@ -320,7 +313,7 @@ The variance of the Blackman-Tukey estimator can be found as
 \begin{equation}
     \text{Var}\left[\hat{P}\_{BT}(e^{j\theta})\right] \approx \frac{P(e^{j\theta})^2}{N}\left(\sum_{l=-(L-1)}^{L-1} w_L^2[l]\right),
 \end{equation}
-which shows that the estimator is consistent when $N \rightarrow \infty$. There is a compromise made for the length of the Blackman-Tukey window function $L$. A large value of $L$ will namely decrease the bias of the estimator, since the spectrum of the window will approach a delta pulse, and the variance of the estimator will increase, because of the longer summation.
+which shows that the estimator is consistent when $N \rightarrow \infty$. There is a compromise made for the length of the Blackman-Tukey window function $L$. A large value of $L$ will namely decrease the bias of the estimator, since the spectrum of the window will approach a delta pulse, and the variance of the estimator will increase, because of the longer summation, including more lags at the edges (more uncertain).
 
 <br></br>
 ## Methods summary
