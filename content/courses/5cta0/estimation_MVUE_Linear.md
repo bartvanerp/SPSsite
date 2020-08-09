@@ -13,9 +13,8 @@ responsibleteacher = "StatisticalSignalProcessing@groups.tue.nl"
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "MVUE for Linear Models"
-weight = 40
-parent = "Estimation"
+name = "2.4 MVUE for Linear Models"
+weight = 240
 
 +++
 ## Introduction

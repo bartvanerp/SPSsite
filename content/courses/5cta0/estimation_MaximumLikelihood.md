@@ -13,9 +13,9 @@ responsibleteacher = "StatisticalSignalProcessing@groups.tue.nl"
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "Maximum Likelihood Estimator"
-weight = 20
-parent = "Estimation"
+name = "2.2 Maximum Likelihood Estimator"
+weight = 220
+
 
 +++
 

@@ -13,9 +13,9 @@ responsibleteacher = "StatisticalSignalProcessing@groups.tue.nl"
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "Bayesian Estimator"
-weight = 50
-parent = "Estimation"
+name = "2.5 Bayesian Estimator"
+weight = 250
+
 
 +++
 ## Introduction
