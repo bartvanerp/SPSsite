@@ -13,9 +13,9 @@ responsibleteacher = "StatisticalSignalProcessing@groups.tue.nl"
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "Bias, Variance, Cramer-Rao Lower Bound"
-weight = 30
-parent = "Estimation"
+name = "2.3 Bias, Variance, Cramer-Rao Lower Bound"
+weight = 230
+
 
 +++
 ## Introduction
