@@ -20,8 +20,9 @@ weight = 1
 
 ## News
 <ul>
-<li> 19/08/2020: To ease communications, we have created a *Discord* channel. You are welcome to join <a href=https://discord.gg/fRVNXuK >here</a>. All official communications, however, will be always given on <a href=https://canvas.tue.nl/courses/15713>Canvas</a>.  </li>
 <li> 20/08/2020: Due to the COVID-19 situation, the 2020-21 edition of the course will be given fully online. If the situation allows, on campus instructions will be planned on the second half of the course.  </li>
+
+<li> 19/08/2020: To ease communications, we have created a <i>Discord</i> channel. You are welcome to join <a href=https://discord.gg/fRVNXuK >here</a>. All official communications, however, will be always given on <a href=https://canvas.tue.nl/courses/15713>Canvas</a>.  </li>
 </ul>
 
 ## Introduction
