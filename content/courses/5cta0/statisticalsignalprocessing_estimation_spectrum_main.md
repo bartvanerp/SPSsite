@@ -14,7 +14,7 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_spctrum_m
 
 # Add menu entry to sidebar.
 [menu.5cta0]                       # name of menu section (main module)
-  name = "2.8 Spectral estimation"        # name of this item in that menu
+  name = "2.7 Spectral estimation"        # name of this item in that menu
   weight = 280                          # location in that menu
 
 +++

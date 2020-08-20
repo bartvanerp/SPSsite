@@ -17,7 +17,7 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_spectrum_
 [menu.5cta0]                       # name of menu section (main module)
   name = "Spectral Distribution"        # name of this item in that menu
   weight = 282                           # location in that menu
-  parent = "2.8 Spectral estimation"
+  parent = "2.7 Spectral estimation"
 
 
 
