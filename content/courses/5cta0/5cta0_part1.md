@@ -22,5 +22,5 @@ This part of the course provides the basic tools necessary to answer this questi
 The topics covered in this part are:
 <ul>
 <li><a href="../mathematicalbackground_probability_and_rv_main">Probability and random variables:</a> The term "stochastic" comes from the Greek word for chance. In order to understand stochastic signals, a review of probability theory is necessary.
-<li><a href="../signals_main">Random processes and random signals:</a> When coping with uncertainty, a deterministic signal can better be treated as a random signal. Here we discuss the statistical tools to characterize random signals.
-<li><a href="../rational_main">Rational signal models:</a> Can we generate signals with desired statistical properties? Rational signal models provide an efficient representation for suitable types of random signals.
+<li><a href="../statisticalsignalprocessing_signals_main">Random processes and random signals:</a> When coping with uncertainty, a deterministic signal can better be treated as a random signal. Here we discuss the statistical tools to characterize random signals.
+<li><a href="../statisticalsignalprocessing_rational_main">Rational signal models:</a> Can we generate signals with desired statistical properties? Rational signal models provide an efficient representation for suitable types of random signals.
