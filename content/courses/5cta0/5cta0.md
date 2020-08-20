@@ -76,7 +76,7 @@ The available material consists of:
   <li> <b>Exercises</b> - Homework exercises to help you fully understand the subject matter. Some exercises are mandatory for the tutorial sessions. </li>
   <li> <b>Pencast videos</b> - Of some homework exercises, pencast videos are available that walk through the entire exercise. </li>
   <li> <b>MATLAB labs</b> - Mandatory labs are available to apply the learned material using MATLAB. </li>
-  <li> <b>MATLAB demos</b> - Matlab live scripts to play with, to further enhance your learning experience</li>
+  <li> <b>MATLAB demos</b> - Matlab live scripts to put theoretical knowledge into practice and further enhance your learning experience</li>
 </ul>
 For the final examination only knowledge of the reading material and a good understanding of the homework exercises is required. However, all the other material will complement the learning process significantly.
 
