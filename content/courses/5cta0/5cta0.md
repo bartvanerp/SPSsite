@@ -19,7 +19,10 @@ weight = 1
 +++
 
 ## News
-<i> No news is available </i>
+<ul>
+<li> 19/08/2020: To ease communications, we have created a *Discord* channel. You are welcome to join <a href=https://discord.gg/fRVNXuK >here</a>. All official communications, however, will be always given on <a href=https://canvas.tue.nl/courses/15713>Canvas</a>.  </li>
+<li> 20/08/2020: Due to the COVID-19 situation, the 2020-21 edition of the course will be given fully online. If the situation allows, on campus instructions will be planned on the second half of the course.  </li>
+</ul>
 
 ## Introduction
 
@@ -32,15 +35,31 @@ The course is divided in three modules and it includes a blend of reading and vi
 At the end of the course, you will be able to:
 
 <ul>
-    <li>Explain the difference between deterministic and stochastic signals providing examples in the context of signal processing. </li>
-    <li>Understand the implications of the central limit theorem in the context of signal acquisition and analysis. </li>
-    <li>Characterize probability distributions using expected value, variance, and moments. </li>
-    <li>Characterize random signals by computing first and second order statistics. </li>
-    <li>Analyze the performance of an estimator in terms of bias and variance. </li>
-    <li>Apply least-square, maximum-likelihood and Bayesian estimation to real-world problems.</li>
-    <li>Apply binary hypothesis testing to solve detection problems.</li>
-    <li>Explain how student-t test is used for hypothesis testing.</li>
-    <li>Apply parametric and non-parametric approaches to compute the power spectrum of a random signal.</li>
+<li>Understand the basic principles of probability including probability axioms, independence, conditional probability, Bayes theorem and use these principles in solving problems.  </li>
+
+<li>Explain the difference between deterministic and stochastic signals providing examples in the context of signal processing.  </li>
+
+<li>Understand and reflect on the implications of the central limit theorem in the context of signal acquisition and analysis.  </li>
+
+<li>Characterize random variables using probability distributions, expected value, variance, and moments.  </li>
+
+<li>Characterize random signals by computing first and second order statistics.  </li>
+
+<li>Calculate the Cramer-Rao lower bound for the variance of an estimator, given the noise statistics.  </li>
+
+<li>Calculate the bias and variance of an estimator, given the noise statistics.  </li>
+
+<li>Apply the least squares, maximum likelihood and Bayesian estimations methods to solve problems concerning the estimation of signal model parameters.  </li>
+
+<li>Decide which estimation method to use to solve an estimation problem based on the signal model and availability of noise statistics.  </li>
+
+<li>Apply numerical solution methods to obtain the least squares and maximum likelihood estimates for problems with nonlinear signal models.  </li>
+
+<li>Calculate the threshold to achieve a desired false alarm probability and the resulting detection probability based on Neyman-Pearson theorem when given signal statistics for two different hypotheses. </li>
+
+<li>Plot receiver operating characteristic curves to show the performance of a Neyman-Pearson detector, given signal statistics for two different hypotheses. </li>
+
+<li>Explain how the Student’s t test is applied to hypothesis testing.</li>
 </ul>
 
 <br></br>
@@ -67,143 +86,21 @@ The material covered in this course is based on:
   <li> Steven M. Kay, "Fundamentals of Statistical Signal Processing, Volume I - Estimation Theory" . </li>
   <li> Steven M. Kay, "Fundamentals of Statistical Signal Processing, Volume II - Detection Theory"  </li>
   <li> Dimitris G. Manolakis et al. "Statistical and adaptive signal processing"</li>
-  <li> Peter M. Clarkson "Optimal and Adaptive Signal Processing" </li>
+  <li> Peter M. Clarkson, "Optimal and Adaptive Signal Processing" </li>
+  <li>  Silvia Maria Alessio, "Digital Signal Processing and Spectral Analysis for Scientists - Concepts and Applications" </li>
 </ul>
 
 We also suggest the following websites:
 
-tbc
+<ul>
+<li><a href=https://seeing-theory.brown.edu/#firstPage >Seeing theory by Brwon University</a> </li>
+</ul>
 
 <br></br>
 
 ## Planning
 
-<table>
-<thead>
-  <tr>
-    <th>Week</th>
-    <th>Lecture </th>
-    <th>Instructions </th>
-    <th>Topics</th>
-    <th>Homework</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>1</td>
-    <td><br>31/08/20 <br><br>10.30-11.30</td>
-    <td><br>03/09/20<br><br>13.30-15.30</td>
-    <td>1.1 Probability and random variables<br>1.2 Random processes and random signals <br>1.3 Linear random signal models</td>
-    <td>Exercises 1.1 - 1.10<br>Quiz Module 1<br>MATLAB demo CLT</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>Review and exercise for exam</td>
-    <td></td>
-  </tr>
-</tbody>
-</table>
-<br></br>
+A detailed planning for tha academic year 2020-21 can be found <a href=https://canvas.tue.nl/courses/15713/assignments/syllabus >here.</a>
 
 ## Contact
 In case any of the above material is unclear, please contact the responsible teacher of this course, dr. S. Turco (s.turco@tue.nl) and dr. R.F. Tigrek (r.f.tigrek@tue.nl). If there are any problems with the platform or with the material on the platform, please put the mail address sps.education@tue.nl in the CC of your email, or simply click <a href="mailto:{{< param responsibleteacher >}}?cc=sps.education@tue.nl&subject=[5CTA0]%20platform:%20{specify problem here}">here</a>. This will help us keep the platform up-to-date.
