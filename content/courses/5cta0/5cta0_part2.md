@@ -42,4 +42,4 @@ The topics covered in this part are
 <li><a href="../estimation_bayes">Bayesian Estimators:</a> For all estimation techniques so far, the parameter to be estimated is assumed to be deterministic but unknown. Bayesian estimators consider the parameter also as a random variable and utilized the Bayes' Theorem to estimate it.
 <li><a href="../estimation_numerical_methods">Numerical Solution Methods:</a> Not all estimators have closed forms; numerical methods that iteratively estimate the parameters are indispensible tools for implementing estimators.
 <li><a href="../estimation_spectral_estimation">Spectral Estimation:</a>
-</ul>The power spectrum provides important information on the stochastic process generating the data; in this module we discuss methods to estimate the power spectrum when only a short segment of a random signal is available.
+The power spectrum provides important information on the stochastic process generating the data; in this module we discuss methods to estimate the power spectrum when only a short segment of a random signal is available.</ul>
