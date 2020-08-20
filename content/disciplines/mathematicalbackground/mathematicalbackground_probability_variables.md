@@ -18,6 +18,11 @@ type = "docs"       # Do not modify.
 
 
 ## Introduction
+
+<div class="video-container">
+<iframe width="100%"; height="100%"; rc="https://www.youtube.com/embed/TJrKH_HAhDg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
+
 In the field of probability theory, processes that involve uncertainty and therefore have a random outcome are called <i>random processes</i>. These processes have outcomes that can be both numerical as categorical. An example of a numerical outcome can be the voltage measured over a noisy circuit, whereas an example of a categorical outcome can be the suit of the card drawn from a card deck. The latter can produce a card of any of the four suits: spades ($\spadesuit$), clubs ($\clubsuit$), diamonds ($\diamondsuit$) and hearts ($\heartsuit$).
 
 In order to perform calculations with these random processes, there is a need to introduce <i>random variables</i>. Random variables map all possible outcomes in the sample space $\mathcal{S}$ to numbers on the real line and are usually denoted by a capital letter.  While an event can be both numerical as categorical, random variables are always numerical. In the case of a numerical sample space, the mapping through a random variable usually happens directly. A random variable $X$ for the previous categorical example can be found by assigning four distinct numbers $\\{ 1,2,3,4\\}$ to the four suits of cards $s$. This random variable $X(s)$ can be defined as
@@ -66,6 +71,12 @@ As briefly mentioned before, random variables are denoted by a capital letter, s
 Random variables are described by probability distributions. Two distinct categories of probability distributions exist for both discrete as continuous random variables.
 
 ### Discrete random variables
+
+<div class="video-container">
+<iframe width="100%"; height="100%"; rc="https://www.youtube.com/embed/TJrKH_HAhDg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
+
+
 The probability that a discrete random variable $X$ takes on the value $x$ can be expressed by the <i>probability mass function</i> (PMF) as
 
 \begin{equation}
