@@ -342,6 +342,18 @@ One could apply the axiom of total probability to all marginalized and condition
 <br></br>
 
 ## Central limit theorem
+
+### Screencast video [⯈]
+
+<div class="video-container">
+<iframe width="100%"; height="100%";  src="https://www.youtube.com/embed/3KASsi7eyYE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
+
+
+<br></br>
+
+
+
 We have briefly discussed what happens with the signal statistics, especially the mean and variance, when a random variable is linearly transformed.
 Now let us focus on the specific situation where we take the sum of $N$ independent continuous random variables. We will define a random variable $Y$ as
 \begin{equation}
