@@ -23,6 +23,13 @@ When processing and analyzing signals, the noise component makes it more difficu
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/khNZllCtP-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/yaZmrQy-wkA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
 <br></br>
 ## Module overview
 This module will cover the following topics:
