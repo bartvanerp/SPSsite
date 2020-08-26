@@ -18,6 +18,7 @@ type = "docs"  # Do not modify.
 This section will provide you with the tools to put all theory into practice when dealing with random signals. The link between random variables and discrete-time signals is stated and all statistical characteristics of a signal are covered.
 
 <br></br>
+
 ## Representation of a random signal
 First it is important to elaborate on the definition of a random signal. Suppose there is a transmitter which transmits a signal $f(t)$. This signals is attenuated over the transmission path, leading to an attenuated signal at the receiver $s(t) = \alpha \cdot f(t)$, where $\alpha$ indicates the degree of attenuation and which is bounded by $0 \leq |\alpha| \leq 1$. Now at the output of the receiver, this received signal $s(t)$ will also be corrupted by noise from the electrical components in the receiver and from other unwanted signals that are received. Let us capture all this noise in a single term called $n(t)$. The signal at the output of the receiver $x(t)$ can now be written as
 \begin{equation}
@@ -44,6 +45,14 @@ The random noise $n(t)$ that is part of the random signal $s(t)$ can be describe
 <br></br>
 ## Discrete-time stochastic processes
 Suppose we would like to measure a random or stochastic signal. Using multiple identical receivers we will sample the received signal at the exact same time instances. We can denote each discrete-time signal sample as $x[n,\xi_k]$, where $n$ corresponds to the discrete-time index or sample number and where $\xi_k$ corresponds to the receiving element $k$. The noise that is present on the signal results in different sample values for each of the receiving elements.
+
+### Screencast video [⯈]
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/khNZllCtP-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br></br>
+
 
 ### Ensemble
 The <i>ensemble</i> is defined as the set of all possible sequences of $x[n,\xi_k]$, which defines the entire stochastic process. Each signal sample for each receiver is affected by the noise that is present on the deterministic signal. This ensemble is therefore defined by the deterministic signal and the probability distribution of the random noise component.
@@ -113,5 +122,3 @@ Given the random variables $X[n]$ and $Y[n]$ corresponding to individual samples
 </table>
 
 <br></br>
-
-

@@ -19,11 +19,13 @@ type = "docs"  # Do not modify.
 When processing and analyzing signals, the noise component makes it more difficult to draw meaningful conclusions on specific signal samples. In order to cope adequately with the uncertainty involved, deterministic signals can better be regarded as random signals, where the exact outcome in time is unknown, but where conclusions can be drawn from the statistical properties of the signal.
 
 ### Screencast video [⯈]
+
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/khNZllCtP-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/yaZmrQy-wkA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br></br>
+
 ## Module overview
 This module will cover the following topics:
 

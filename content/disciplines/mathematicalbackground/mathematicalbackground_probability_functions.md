@@ -143,7 +143,17 @@ So to conclude the probability density function of $Y$ can be written as
 <br></br>
 
 ## Pairs of random variables
+
 So far this module has only focused on events that produce a single outcome and therefore can only have a single random variable. However, it is also possible for an event to return multiple random variables.
+<br></br>
+
+### Screencast video [⯈]
+
+<div class="video-container">
+<iframe width="100%"; height="100%";  src="https://www.youtube.com/embed/cijeXJYNttM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
+<br></br>
+
 
 #### Example
 Suppose we have an experiment in which we throw 2 dices consecutively and we collect the total amount of eyes after the first and second dice are thrown. Assuming normal dices, the total amount of eyes observed after the first throw should be an integer between 1 and 6. But how can we now describe the total amount of eyes after throwing the second dice? It will be clear that this second observation will be between 2 and 12 eyes. However, we do need to keep in mind that the second observation depends greatly on the first observation. It is for example impossible to first observe a total of 5 eyes after throwing the first dice and then to observe a total of 4 eyes after throwing the second dice.
@@ -332,6 +342,18 @@ One could apply the axiom of total probability to all marginalized and condition
 <br></br>
 
 ## Central limit theorem
+
+### Screencast video [⯈]
+
+<div class="video-container">
+<iframe width="100%"; height="100%";  src="https://www.youtube.com/embed/3KASsi7eyYE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
+
+
+<br></br>
+
+
+
 We have briefly discussed what happens with the signal statistics, especially the mean and variance, when a random variable is linearly transformed.
 Now let us focus on the specific situation where we take the sum of $N$ independent continuous random variables. We will define a random variable $Y$ as
 \begin{equation}
