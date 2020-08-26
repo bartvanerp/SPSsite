@@ -17,12 +17,13 @@ type = "docs"       # Do not modify.
 +++
 ## Introduction
 
+### Screencast video [⯈]
+
 <div class="video-container">
-<iframe width="100%"; height="100%"; rc="https://www.youtube.com/embed/SDf4aQ2J6uo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+<iframe width="100%"; height="100%";  src="https://www.youtube.com/embed/SDf4aQ2J6uo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
 
-## Definitions
-
+<br></br>
 A set of important definitions in probability theory are given below.
 
 <ul>

@@ -30,6 +30,13 @@ In order to indicate that a random variable $X$ is distributed according to a ce
 
 ## Families of discrete random variables
 
+### Screencast video [⯈]
+<div class="video-container">
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/v-ElE7vsXHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
+
+
+/v-ElE7vsXHU
 ### The Bernoulli(p) distribution
 The Bernoulli distribution is a discrete probability distribution that models an experiment where only 2 outcomes are possible. The probability distribution of flipping a coin is an example of a Bernoulli distribution. These outcomes are mapped to 0 and 1, whose probabilities are $1-p$ and $p$ respectively. The distribution is fully characterized by the parameter $p$, which is the probability of success ($\Pr[X = 1]$).
 
@@ -927,6 +934,10 @@ The Poisson distribution is a discrete probability distribution that models the 
 
 ## Families of continuous random variables
 
+### Screencast video [⯈]
+<div class="video-container">
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/mgHfvZgXTXI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
 <br></br>
 
 ### The Exponential($\lambda$) distribution

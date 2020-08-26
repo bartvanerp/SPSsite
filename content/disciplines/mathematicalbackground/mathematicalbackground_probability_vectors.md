@@ -19,6 +19,14 @@ type = "docs"                       # Do not modify.
 ## Introduction
 Previously we saw how we could grasp this notion of uncertainty in probability functions and we saw what happened when our outcome was conditioned. Finally, a brief discussion was provided for the case when multiple random variables were involved. In these examples, only the situation where we had 2 random variables was discussed. This module will generalize this theory for multiple random variables. In this case an outcome of an experiment comprises $N$ observed quantities. An example of such an observation is a noisy electroencephalography (EEG) measurement, which resembles the electrical activity of the brain and is measured over several channels.
 
+<br></br>
+
+### Screencast video [⯈]
+
+<div class="video-container">
+<iframe width="100%"; height="100%";  src="https://www.youtube.com/embed/EnUvlJrRRtE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
+
 
 <br></br>
 
