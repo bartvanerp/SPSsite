@@ -16,7 +16,7 @@ type = "docs"  # Do not modify.
   parent = "Rational signal models"
 
 +++
-A stochastic processes may be represented by a stochastic model with given order and parameters, which is able to generate a random signal characterized by well-defined spectral properties. Signal modeling is closely related to *spectral factorization* which states that most random processes with a continuous power spectral density (PSD) can be generated as the output of a causal filter driven by white noise, the so-called innovation representation of the random process.
+A stochastic process may be represented by a stochastic model with given order and parameters, which is able to generate a random signal characterized by well-defined spectral properties. Signal modeling is closely related to *spectral factorization* which states that most random processes with a continuous power spectral density (PSD) can be generated as the output of a causal filter driven by white noise, the so-called innovation representation of the random process.
 In this section, we first explain how the statistical properties of a random signal are affected when filtering by a LTI system; then we discuss random signals with rational spectra and an important representation of a random signal known as the *innovation representation*; finally we explain how spectral factorization can be used to provide the innovation representation of a random signal.
 
 ## LTI with random inputs
@@ -190,7 +190,7 @@ The interpretation of equation (\ref{eq:innovation}) is that any new sample of t
   </figure>
 </div>
 
-In summary, the power spectrum of a WSS random signal can be approximated by a rational polynomial; this is equivalent to describing the signal as the output of a LTI filter, whose input is a zero-mean white noise sequence. If the filter has transfer function $H(z) = B(z)/H(z)$, then the signal can be rewritten as
+In summary, the power spectrum of a WSS random signal can be approximated by a rational polynomial; this is equivalent to describing the signal as the output of a LTI filter, whose input is a zero-mean white noise sequence. If the filter has transfer function $H(z) = B(z)/A(z)$, then the signal can be rewritten as
 \begin{equation}
 \begin{split}
     x[n] = -\sum_{p=1}^{p}a_p x[n-p] + \sum_{q=0}^{Q}b_q i[n-q].
@@ -211,7 +211,7 @@ where
 As we shall see in the section <a href="../statisticalsignalprocessing_rational_arma">Auto-regressive moving-average (ARMA) signal models  </a>, this means viewing an observed random signal as a stochastic process modeled by an auto-regressive moving-average (ARMA) process, whose rational  spectrum contains the model parameters.
 
 ## Spectral factorization
-In the module <a href="../statisticalsignalprocessing_signals_psd">Power spectral density</a>, we have seen that the PSD and the AC of a random signals are Fourier pairs. Consider the system depicted in Figure 1, with input $x[n]$ and output $y[n]$.
+In the module <a href="../statisticalsignalprocessing_signals_psd">Power spectral density</a>, we have seen that the PSD and the AC of a random signal are Fourier pairs. Consider the system depicted in Figure 1, with input $x[n]$ and output $y[n]$.
 
 Spectral factorization tackles the following question: Can we determine $H(z)$ knowing that the input $x[n]$ is white noise, and given the second-order statistics ($r_y[l]$  or equivalently $P_y(e^{j\theta})$) of the output signal $y[n]$? In principle, there is no unique answer to this question. We can see this by considering the following example.
 
@@ -272,7 +272,7 @@ Spectral factorization is defined as the determination of a minimum-phase system
 
 One practical method to solve the spectral factorization problem is referred to as the *root method*. The basic principles are:
 <ol>
-<li> For every rational PSD, that is a PSD that can be expressed as a fraction between two polynomials in $e^{j\omega}$ (or equivalently in $z$), there exist a unique minimum-phase factorization within a scale factor.  </li>
+<li> For every rational PSD, that is a PSD that can be expressed as a fraction between two polynomials in $e^{j\omega}$ (or equivalently in $z$), there exists a unique minimum-phase factorization within a scale factor.  </li>
 <li> For a PSD expressed as a rational polynomial, with a numerator of order Q and a denominator of order P, there are $2^{P+Q}$ possible rational systems which provide this PSD. </li>
 <li> Not all possible rational systems are valid, since for a valid PSD the roots should appear in mirrored pairs, which means that if $z_k$ is a root, then also $1/z^\ast_k$ is a root. </li>
 </ol>

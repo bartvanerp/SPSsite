@@ -34,7 +34,7 @@ We often assume a model to be parametric, i. e., a function completely defined b
 ## Module overview
 This module covers the following topics:
 
-1. <a href="../statisticalsignalprocessing_rational_recap">Recap: LTI systems </a>- This section provides a brief review of fundamental concepts including linear time-invariant systems, stabitlity, invertibility and minimum-phase.
+1. <a href="../statisticalsignalprocessing_rational_recap">Recap: LTI systems </a>- This section provides a brief review of fundamental concepts including linear time-invariant systems, stability, invertibility and minimum-phase.
 
 3. <a href="../statisticalsignalprocessing_rational_spectral_factorization">Spectral factorization </a>- Can we obtain any random signal by simply filtering white noise? In this section, we describe how this can be achieved by the innovation representation.
 
