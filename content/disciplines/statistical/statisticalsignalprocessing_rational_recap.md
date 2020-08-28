@@ -224,6 +224,8 @@ If the systems consists of poles and zeros, than it can be split into its denomi
 Thus, the poles of the system become zeros in its inverse and vice versa.
 However the inverse is not always uniquely defined for every system, as shown by the following example.
 
+Take a look at the relative pages for a refresher on the <a href="../../discrete/discretesignalprocessing_transforms_ztransform_main">Z-transform</a> and <a href="../../discrete/discretesignalprocessing_analysis_system_main">system function</a>.
+
 <div class="example">
 <h4> Example </h4>
 Consider a system with the impulse response $h[n] = \delta[n]-\frac{1}{4}\delta[n-1]$. By performing the z-transform we end up with $H(z)=1-\frac{1}{4}z^{-1}$. Therefore, the inverse is equal to $H_{inv}(z)= \frac{1}{1-\frac{1}{4}z^{-1}}$, which has one pole at $z=\frac{1}{4}$.

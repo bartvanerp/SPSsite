@@ -26,7 +26,7 @@ A random process is called stationary if its statistical properties do not chang
 \end{equation}
 where it is possible to drop the indexing if there is no effect on the distribution.
 
-If a signal is not stationary, the signal usually may be approximated as stationary for windowed sequences of the signal. The provides the foundation for the short-time Fourier transform.
+If a signal is not stationary, the signal usually may be approximated as stationary for windowed sequences of the signal. This provides the foundation for the short-time Fourier transform.
 
 ### $N^\text{th}$-order stationarity
 
@@ -58,7 +58,7 @@ and similarly
     </figcaption>
   </figure>
 </div>
-### Stationarity and the covariance and correlation functions
+### Stationarity and second orders statistics
 
 It is also important to consider the consequences of (wide-sense) stationarity for the covariance and correlation functions. From the definitions in the above table these properties depend on the two time indices $n_1$ and $n_2$. From the definition of the stationarity it can be concluded that for the example of the auto-covariance $\gamma_X[n_1,n_2] = \gamma_X[n_1+k, n_2+k]$ holds. This leads to the observation that the value of the covariance and correlation only depend on the difference between the two time indices. This time difference is called the <i>lag</i> and is defined as
 \begin{equation}
@@ -80,7 +80,7 @@ When dealing with real-valued signals, this property can be simplified to $r_X[l
 
 ## Ergodicity
 
-When a signal is stationary, the exact calculation of the expected value operators is usually still cumbersome, because it requires knowledge of the entire random process. In practices we usually only have a limited amount of sample of one realization of the random process. If a random process is ergodic then this means that the statistical properties of the entire random process can be inferred from just a limited amount of samples of a single realization. In order for a signal to be ergodic it has to be stationary. Ergodicity is usually a big assumption that cannot always be confirmed, however, without this assumption the signal statistics could not be approximated.
+When a signal is stationary, the exact calculation of the expected value operators is usually still cumbersome, because it requires knowledge of the entire random process. In practice we usually only have a limited amount of sample of one realization of the random process. If a random process is ergodic then this means that the statistical properties of the entire random process can be inferred from just a limited amount of samples of a single realization. In order for a signal to be ergodic it has to be stationary. Ergodicity is usually a big assumption that cannot always be confirmed, however, without this assumption the signal statistics could not be approximated.
 
 
 <br></br>
@@ -99,11 +99,11 @@ The auto-correlation function of a zero-mean white noise process can be determin
 
 Let us break this definition down. So for a lag of $0$, the auto-correlation function reduces to the variance minus the squared mean. Since the mean is $0$, only the variance remains. Intuitively one could also regard the zero lag as multiplying each signal sample with itself, leading always to positive contributions, since the multiplication of equal signs always returns a positive number.
 
-Now for all the other cases, we actually need to make use of the fact that the signal is white. However, the power spectrum is not yet introduced. Therefore an intuitive explanation is given, where the assumption is made that the noise is symmetrically distributed with zero-mean and is completely random. This means that each sample only depends on itself and has no dependence on the samples before of after it. If we were to introduce a certain lag $l$, each sample would be multiplied with another completely random sample at a distance $l$. This sample has a random sign and magnitude. Because of the zero-mean property we are half as likely to get a random number with a positive sign as a negative sign. The result  of the multiplication therefore is equally likely to result in a positive as negative contribution. Because of the random magnitudes that are symmetrically distributed around zero, in general we may intuitively understand that in total the total positive and negative contributions for the auto-correlation will cancel each other out, leading to a zero auto-correlation.
+Now for all the other cases, we actually need to make use of the fact that the signal is white. However, the power spectrum is not yet introduced. Therefore an intuitive explanation is given, where the assumption is made that the noise is symmetrically distributed with zero-mean and is completely random. This means that each sample only depends on itself and has no dependence on the samples before or after it. If we were to introduce a certain lag $l$, each sample would be multiplied with another completely random sample at a distance $l$. This sample has a random sign and magnitude. Because of the zero-mean property we are half as likely to get a random number with a positive sign as a negative sign. The result of the multiplication therefore is equally likely to result in a positive or a negative contribution. Because of the random magnitudes that are symmetrically distributed around zero, in general we may intuitively understand that in total the total positive and negative contributions for the auto-correlation will cancel each other out, leading to a zero auto-correlation.
 
 ## Approximate first-order statistics
 
-For ergodic random processes the signal statistics that are defined in the table of <a href="../statisticalsignalprocessing_signals_signals/#ideal-signal-statistics">the previous section</a> can be approximated by time-averaging. The expected value operator will then be replace by time-averaging over a sequence of length $N$ according to
+For ergodic random processes the signal statistics that are defined in the table of <a href="../statisticalsignalprocessing_signals_signals/#ideal-signal-statistics">the previous section</a> can be approximated by time-averaging. The expected value operator will then be replaced by time-averaging over a sequence of length $N$ according to
 \begin{equation}
     \mathrm{E}[\cdot] \quad \rightarrow \quad \frac{1}{N}\sum_{n=0}^{N-1}[\cdot].
 \end{equation}
@@ -111,7 +111,7 @@ Please note that the averaging takes place over the individual realizations $x[n
 
 By applying this time-averaging care should be taken for the calculation of the covariance and correlation functions. These functions need to be calculated for a certain lag $l$. When this lag $l$ reaches the length of the sequences $N$, then there is a very limited number of samples to average over. Therefore in the calculation of the covariance and correlation functions the lag $l$ is limited by a certain upper-lag $L$, which is significantly smaller than $N$.
 
-The approximated signal statistics are denoted by a $\hat{\cdot}$ identifier. These approximate signal statistics are defined in the following table. It should be noted that the definitions of $\hat{r}$ and $\hat{\gamma}$ are biased, meaning that they are calculating by normalizing for $N$ values, whereas not always $N$ values are summed over, because of the effect of the lags.
+The approximated signal statistics are denoted by a $\hat{\cdot}$ identifier. These approximate signal statistics are defined in the following table. It should be noted that the definitions of $\hat{r}$ and $\hat{\gamma}$ are biased, meaning that they are calculated by normalizing for $N$ values, whereas not always $N$ values are summed over, because of the effect of the lags.
 
 <table>
     <tr>
