@@ -16,7 +16,7 @@ weight = 100
 +++
 
 Compared to <i>deterministic</i> signals, which can be described univocally by a mathematical formula or a well-defined rule, <i>stochastic</i> signals cannot be predicted with certainty at any given time. The uncertainty may come from several different sources; it may be due to measurement noise, interference  or artefacts; or sometimes a mathematical description may exist but it is so complex that is not practically useful.  
-Although the difference between deterministic and stochastic signal may be subtle at times, due to measurement or numeric noise, almost any real-world or synthetic signal can be actually considered a random signal. The question may then arise: how do we processes such signals?
+Although the difference between deterministic and stochastic signal may be subtle at times, due to measurement or numeric noise, almost any real-world or synthetic signal can be actually considered a random signal. The question may then arise: how do we process such signals?
 This part of the course provides the basic tools necessary to answer this question.
 
 The topics covered in this part are:
