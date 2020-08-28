@@ -16,11 +16,11 @@ type = "docs"  # Do not modify.
   parent = "Rational signal models"
 
 +++
-A stochastic processes may be represented by a stochastic model with given order and parameters, which is able to generate a random signal characterized by well-defined spectral properties. In fact, although a stochastic model and process are in principle two different entities, they are sometimes used interchangeably.
+A stochastic process may be represented by a stochastic model with given order and parameters, which is able to generate a random signal characterized by well-defined spectral properties. In fact, although a stochastic model and process are in principle two different entities, they are sometimes used interchangeably.
 Stochastic models are fundamental in many applied fields of science, including engineering, economics and medicine. Among stochastic models, a special class of models known as auto-regressive moving-average (ARMA) is widely used. In the section
 <a href="../statisticalsignalprocessing_rational_spectral_factorization">Spectral factorization</a> we saw how any  wide-sense stationary random signal can be described as an LTI system driven by white noise. The system, also referred to as innovation filter, has a rational spectrum. It turns out that this is equivalent to modeling the random process generating the signal as an ARMA($p$, $q$) model, which provide a parsimonious description of a WSS stochastic process in terms of a rational polynomial. The numerator of order $q$ represents the moving-average part, while the denominator of order $p$ represents the auto-regressive part.
 
-The ARMA model is based on the observation that stochastic time series often have a dependence on previous time points. This can be described by the auto-regressive part of an ARMA model, which permits modeling a "memory" that decades with time. The moving- average part takes into account for the new information (innovation) by a linear combination of the present and previous samples.
+The ARMA model is based on the observation that stochastic time series often have a dependence on previous time points. This can be described by the auto-regressive part of an ARMA model, which permits modeling a "memory" that decades with time. The moving- average part takes into account the new information (innovation) by a linear combination of the present and previous samples.
 
 Thanks to their ability to model a wide variety of stochastic processes, ARMA models are useful for:
 <ul>
@@ -222,7 +222,7 @@ The MA model is therefore an all-zero filter, with the following transfer functi
 \end{split}
 \end{equation}
 
-The name moving average can be somewhat misleading. In fact, to actually perform a moving average the coefficient of the filters should be all positive and sum up to unity. However, none of this conditions are valid for a general MA model.
+The name moving average can be somewhat misleading. In fact, to actually perform a moving average the coefficient of the filters should be all positive and sum up to unity. However, none of these conditions are valid for a general MA model.
 
 The difference equation of a $q^\text{th}$-order MA filter is given by
 \begin{equation}

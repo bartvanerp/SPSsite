@@ -154,7 +154,7 @@ and for a continuous random vector as
 \end{equation}
 
 ### Covariance
-Previously, we have introduce the variance of a univariate random variables as the variance. While the variance denotes the spread in the univariate case, it has a different meaning in the multivariate case. Have a look at Fig. 1, where two contour plots are shown for two distinct multivariate Gaussian probability density functions. The exact mathematical description of a multivariate Gaussian probability density function is introduced <a href="../mathematicalbackground_probability_families/#the-normal-or-gaussian-mathcalnmu-sigma2-distribution">here</a>.
+Previously, we have introduced the variance of a univariate random variable as the variance. While the variance denotes the spread in the univariate case, it has a different meaning in the multivariate case. Have a look at Fig. 1, where two contour plots are shown for two distinct multivariate Gaussian probability density functions. The exact mathematical description of a multivariate Gaussian probability density function is introduced <a href="../mathematicalbackground_probability_families/#the-normal-or-gaussian-mathcalnmu-sigma2-distribution">here</a>.
 
 <div style="max-width: 900px; margin: auto">
   <figure>
@@ -288,7 +288,7 @@ For the special case that ${\bf{X}} = {\bf{Y}}$, the cross-correlation matrix is
 
 
 ## Linear transformations of random vectors
-In the previous reader some calculation rules where determined for the mean and variance of a linearly transformed random variable. This subsection will continue with this line of thought, but now for random vectors. We will define an invertible transformation matrix $\bf{A}$, with dimensions $(N\times N)$, which will linearly map a random vector $\bf{X}$ of length $N$ to a random vector $\bf{Y}$ again with length $N$ after adding an equally long column vector $\bf{b}$ through
+In the previous reader some calculation rules were determined for the mean and variance of a linearly transformed random variable. This subsection will continue with this line of thought, but now for random vectors. We will define an invertible transformation matrix $\bf{A}$, with dimensions $(N\times N)$, which will linearly map a random vector $\bf{X}$ of length $N$ to a random vector $\bf{Y}$ again with length $N$ after adding an equally long column vector $\bf{b}$ through
 \begin{equation}
     {\bf{Y}} = g({\bf{X}}) = {\bf{AX}} + {\bf{b}}.
 \end{equation}
