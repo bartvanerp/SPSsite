@@ -178,7 +178,7 @@ The Bernoulli distribution is a discrete probability distribution that models an
 <br></br>
 
 ### The Geometric(p) distribution
-The Geometric distribution is a discrete probability distribution that models an experiment with probability of success $p$. The Geometric distribution gives the probability that the first success is observed at the $x^{th}$ independent trial. The distribution is fully characterized by the parameter $p$, which is the probability of a success.
+The Geometric distribution is a discrete probability distribution that models an experiment with probability of success $p$. The Geometric distribution gives the probability that the first success is observed at the $x^{th}$ independent trial. The distribution is fully characterized by the parameter $p$, which is the probability of success.
 
 <figure>
 <div class="rowimg2">
@@ -476,7 +476,7 @@ The Binomial distribution is a discrete probability distribution that models an 
 
 
 ### The Pascal(k,p) distribution
-The Pascal distribution is a probability distribution that is also known as the negative Binomial distribution. The Pascal distribution gives the probability of observing the $k^{th}$ success at the $x^{th}$ trial. The distribution is fully characterized by the parameters $k$ and $p$. The parameter $k$ denotes the desired amount of successes and the parameter $p$ denotes the chance of a success on an individual trial.
+The Pascal distribution is a probability distribution that is also known as the negative Binomial distribution. The Pascal distribution gives the probability of observing the $k^{th}$ success at the $x^{th}$ trial. The distribution is fully characterized by the parameters $k$ and $p$. The parameter $k$ denotes the desired amount of successes and the parameter $p$ denotes the chance of success in an individual trial.
 
 <figure>
 <div class="rowimg2">
@@ -1266,7 +1266,7 @@ To indicate that a $k$-dimensional random vector $\bf{X}$ is Gaussian distribute
 \begin{equation}
     p_{\bf{X}}({\bf{x}}) = \frac{1}{\sqrt{(2\pi)^k|\bf{\Sigma}|}}\exp \left\\{-\frac{1}{2} ({\bf{x}}-\bf{\mu})^\top \bf{\Sigma}^{-1}({\bf{x}}-\bf{\mu})\right\\},
 \end{equation}
-where $|\bf{\Sigma}|$ is the determinant of the covariance matrix. Please note the similarities between the univariate Gaussian distribution and the multivariate distribution. The inverse covariance matrix $\bf{\Sigma}^{-1}$ is often also called the <i>precision matrix</i> and is denoted by $\bf{\Lambda}$, because a low variance (i.e. low spread) relates to a high precision and vice versa.
+where $|\bf{\Sigma}|$ is the determinant of the covariance matrix. Please note the similarities between the univariate Gaussian distribution and the multivariate distribution. The inverse covariance matrix $\bf{\Sigma}^{-1}$ is often also called the <i>precision matrix</i> and is denoted by $\bf{\Lambda}$, because a low variance (i.e. low spread) relates to high precision and vice versa.
 
 #### The covariance matrix of a multivariate Gaussian distribution
 The probability density function of a Gaussian distribution is fully determined by its mean $\bf{\mu}$ and its covariance matrix $\bf{\Sigma}$. In order to give some intuition on how the mean and covariance matrix structure influence the final distribution, we jump forward to Fig. 2 in <a href="../mathematicalbackground_probability_vectors/#correlation-coefficient">the next section</a> where three multivariate distributions have been plotted. The covariance matrices that were used to plot these distributions in the figure are from left to right:

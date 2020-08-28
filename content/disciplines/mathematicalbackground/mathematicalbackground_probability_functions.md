@@ -82,11 +82,11 @@ The definition of the Dirac delta pulse function allows us to extract values fro
 
 
 #### Discrete to continuous probability functions
-With the introduction of the Dirac delta pulse, we are now also capable of transforming a discrete probability mass function into a continuous probability density distribution. Each of the values of the probability mass function can be represented as delta pulse multiplied with the corresponding value. As an example, the probability mass function of the discrete Bernoulli(p) distribution can be written as a probability density function as
+With the introduction of the Dirac delta pulse, we are now also capable of transforming a discrete probability mass function into a continuous probability density distribution. Each of the values of the probability mass function can be represented as a delta pulse multiplied with the corresponding value. As an example, the probability mass function of the discrete Bernoulli(p) distribution can be written as a probability density function as
 \begin{equation}
     p_X(x) = (1-p)\cdot \delta(x) + p\cdot \delta(x-1).
 \end{equation}
-Similarly all other discrete probability mass functions can be rewritten as continuous probability density functions.
+Similarly all other discrete probability mass functions can be rewritten as continuous probability density functions. For more details about the Bernoulli distribution, check the section  <a href="../mathematicalbackground_probability_families">Families of random variables</a>.
 
 #### Unit step function
 It is also possible that a probability density function is zero up to a threshold $x_0$, after which it nicely follows a known distribution $p_X(x)$. The mathematical description of this piece-wise probability density function can be determined using the unit step function, which is defined as
@@ -180,7 +180,7 @@ The first axiom is a consequence of the total probability axiom, where a probabi
 
 A total probability of 1 only occurs when both $X\leq x$ and $Y\leq y$ are always satisfied, which is the case for $P_{X,Y}(\infty, \infty)$. Similarly, there is by definition no event where $x\leq -\infty$ or $y\leq -\infty$ and therefore this (cumulative) probability is always 0.
 
-When one of the conditions $X\leq x$ and $Y\leq y$ is always satisfied, the cumulative distribution does not depend on that variable anymore and therefore that variable can be removed from the equation, leaving a distribution that now depends on one single random variable. This process is called marginalization and will be discussed in later on.
+When one of the conditions $X\leq x$ and $Y\leq y$ is always satisfied, the cumulative distribution does not depend on that variable anymore and therefore that variable can be removed from the equation, leaving a distribution that now depends on one single random variable. This process is called marginalization and will be discussed later on.
 
 Finally as seen previously the cumulative distribution is a sum or integral over an ever-increasing domain with non-negative values, leading to a non-decreasing function.
 
@@ -359,9 +359,9 @@ Now let us focus on the specific situation where we take the sum of $N$ independ
 \begin{equation}
     Y = \frac{X_1 + X_2 + \ldots + X_N}{N}
 \end{equation}
-and have a look at what the probability density functions of $Y$ looks like.
+and have a look at what the probability density function of $Y$ looks like.
 
-In Fig. 1,  100000 samples are generated  from three different probability distributions and the resulting histograms are plotted. This is repeated for an increasing number $N$, and the histogram are plotted after averaging $N$ similarly generated sets of data. It can be noted that after averaging multiple realizations of a random variable generated from the same (arbitrary) distribution, the distribution of the averaged random variables converges to a Gaussian distribution. This result is known as the <i>central limit theorem (CLT)</i>.
+In Fig. 1,  100000 samples are generated  from three different probability distributions and the resulting histograms are plotted. This is repeated for an increasing number $N$, and the histograms are plotted after averaging $N$ similarly generated sets of data. It can be noted that after averaging multiple realizations of a random variable generated from the same (arbitrary) distribution, the distribution of the averaged random variables converges to a Gaussian distribution. This result is known as the <i>central limit theorem (CLT)</i>.
 
 <div style="max-width: 900px; margin: auto">
   <figure>
@@ -387,7 +387,7 @@ Under certain conditions, the CLT can be extended for the sum of random variable
 \begin{equation}
     \mathrm{E}[Y] = \frac{1}{N} \sum_{i=1}^N \mathrm{E}[X_i],
 \end{equation}
-which is simply than the average value of all individual expected values. Similarly the variance can be determined as
+which is simply the average value of all individual expected values. Similarly the variance can be determined as
 \begin{equation}
     \text{Var}[Y] = \sigma_Y^2 = \frac{1}{N^2} \sum_{i=1}^N \sigma^2_{X_i} = \frac{1}{N^2} \sum_{i=1}^N \text{Var}[X_i].
 \end{equation}
@@ -396,4 +396,4 @@ Similarly the random variable $Z$, which is the sum over normalized random varia
 \begin{equation}
     Z = \frac{1}{N}\sum_{i=1}^N \frac{X_i-\mathrm{E}[X_i]}{\sigma_{X_i}}.
 \end{equation}
-Through the central limit theorem it follows that the probability density function of the random variable $Z$ converges the the normalized Gaussian distribution $\mathcal{N}(0,1)$.
+Through the central limit theorem it follows that the probability density function of the random variable $Z$ converges to the normalized Gaussian distribution $\mathcal{N}(0,1)$.

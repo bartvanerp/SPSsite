@@ -20,7 +20,7 @@ This section will provide you with the tools to put all theory into practice whe
 <br></br>
 
 ## Representation of a random signal
-First it is important to elaborate on the definition of a random signal. Suppose there is a transmitter which transmits a signal $f(t)$. This signals is attenuated over the transmission path, leading to an attenuated signal at the receiver $s(t) = \alpha \cdot f(t)$, where $\alpha$ indicates the degree of attenuation and which is bounded by $0 \leq |\alpha| \leq 1$. Now at the output of the receiver, this received signal $s(t)$ will also be corrupted by noise from the electrical components in the receiver and from other unwanted signals that are received. Let us capture all this noise in a single term called $n(t)$. The signal at the output of the receiver $x(t)$ can now be written as
+First it is important to elaborate on the definition of a random signal. Suppose there is a transmitter which transmits a signal $f(t)$. This signal is attenuated over the transmission path, leading to an attenuated signal at the receiver $s(t) = \alpha \cdot f(t)$, where $\alpha$ indicates the degree of attenuation and which is bounded by $0 \leq |\alpha| \leq 1$. Now at the output of the receiver, this received signal $s(t)$ will also be corrupted by noise from the electrical components in the receiver and from other unwanted signals that are received. Let us capture all this noise in a single term called $n(t)$. The signal at the output of the receiver $x(t)$ can now be written as
 \begin{equation}
     x(t) = s(t) + n(t).
 \end{equation}

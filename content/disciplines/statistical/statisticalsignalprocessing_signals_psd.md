@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 [menu.statistical]                       # name of menu section (main module)
   name = "Power spectral density"        # name of this item in that menu
   weight = 3                           # location in that menu
-  parent = "Stochastic processes and random signals" 
+  parent = "Stochastic processes and random signals"
 
 +++
 
@@ -51,7 +51,7 @@ The average signal power $P_s$ is the average signal energy per sample and is si
 \end{equation}
 where a total of $N$ samples are averaged over.
 
-If an infinitely long signal has a finite signal energy it is called an <i>energy signal</i>. Since the energy is finite and the time duration infinite, the average signal power is zero. An example of an energy signal is a short pulse that is transmitted only once.
+If an infinitely long signal has finite signal energy it is called an <i>energy signal</i>. Since the energy is finite and the time duration infinite, the average signal power is zero. An example of an energy signal is a short pulse that is transmitted only once.
 An infinitely long signal that has a finite average signal power is called a <i>power signal</i>. Because of the finite power that the signal carries over an infinitely long time, the total signal energy is also infinity. Any non-zero bounded signal that is infinitely-long can be regarded as a power signal.
 
 <br></br>
