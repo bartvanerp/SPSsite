@@ -236,7 +236,53 @@ Fig. 2 shows realizations of three different probability distributions with nega
   </figure>
 </div>
 
-
+<div class="example">
+<h4> Exercise </h4>
+<hr>
+$X$ and $Y$ are identically distributed random variables with $\mathrm{E}[X] = \mathrm{E}[Y] = 0$ and covariance $\mathrm{Cov}[X,Y] = 3$ and correlation coefficient $\rho_{X,Y} = 1/2$. For nonzero constants $a$ and $b$, $U=aX$ and $V=bY$.
+<ol type="a">
+    <li> Find $\mathrm{Cov}[U,V]$. </li>
+    <li>Find the correlation coefficient $\rho_{U,V}$.</li>
+    <li>Let $W = U + V$. For what values of $a$ and $b$ are $X$ and $W$ uncorrelated?</li>
+</ol>
+<button class="collapsible">Show solution</button>
+<div class="content">
+<ol type="a">
+    <li> Since $X$ and $Y$ have zero expected value, $\mathrm{Cov}[X,Y] = \text{E}[XY] = 3$, $\text{E}[U] = a\text{E}[X]=0$ and $\text{E}[V] = b\text{E}[Y]=0$. It follows that
+    \begin{equation*}
+        \begin{split}
+            \mathrm{Cov}[U,V] &= \mathrm{E}[UV]\\
+            &=\mathrm{E}[abXY]\\
+            &=ab\mathrm{E}[XY]=ab\mathrm{Cov}[X,Y]=3ab.
+        \end{split}
+    \end{equation*} </li>
+    <li> We start by observing that $\text{Var}[U]=a^2 \text{Var}[X]$ and $\text{Var}[V]=b^2 \text{Var}[Y]$.
+    It follows that
+    \begin{equation*}
+        \begin{split}
+            \rho_{U,V} &= \frac{\mathrm{Cov}[U,V]}{\sqrt{\mathrm{Var}[U]\mathrm{Var}[V]}}\\
+            &= \frac{ab\mathrm{Cov}[X,Y]}{\sqrt{a^2\mathrm{Var}[X]b^2\mathrm{Var}[Y]}} = \frac{ab}{\sqrt{a^2 b^2}}\rho_{X,Y} = \frac{1}{2} \frac{ab}{|ab|}.
+        \end{split}
+    \end{equation*}
+    Not that $ab/|ab|$ is 1 if $a$ and $b$ have the same sign or is -1 if they have opposite signs.</li>
+    <li>Since $\mathrm{E}[X] = 0$,
+    \begin{equation*}
+        \begin{split}
+            \mathrm{Cov}[X,W] &= \mathrm{E}[XW]-\mathrm{E}[X]\mathrm{E}[U]\\
+            &= \mathrm{E}[XW]\\
+            &= \mathrm{E}[X(aX+bY)]\\
+            &= a\mathrm{E}[X^2] + b\mathrm{E}[XY]\\
+            &= a\mathrm{Var}[X] + b\mathrm{Cov}[X,Y].
+        \end{split}
+    \end{equation*}
+    Since $X$ and $Y$ are identically distributed, $\mathrm{Var}[X] = \mathrm{Var}[Y]$ and
+    \begin{equation*}
+        \frac{1}{2} = \rho_{X,Y} = \frac{\mathrm{Cov}[X,Y]}{\sqrt{\mathrm{Var}[X]\mathrm{Var}[Y]}} = \frac{\mathrm{Cov}[X,Y]}{\mathrm{Var}[X]} = \frac{3}{\mathrm{Var}[X]}.
+    \end{equation*}
+    This implies $\mathrm{Var}[X] = 6$. From (3), $\mathrm{Cov}[X,W]=6a+3b=0$, or $b = -2a$.</li>
+</ol>
+</div>
+</div>
 
 ### Cross-covariance matrix
 We previously discussed how we could determine the covariance of two random variables. Let us turn now to the covariance of two random vectors ${\bf{X}} = [X_1, X_2,\ldots,X_N]^\top$ and ${\bf{Y}}=[Y_1,Y_2,\ldots,Y_N]^\top$. Intuitively, one might say that this covariance cannot be described by a single number, because there are more than one combinations of random variables of which we want to calculate the covariance. As an example, we could determine the covariances of $X_1$ and $Y_1$, $X_1$ and $Y_{23}$ and $X_N$ and $Y_1$. In order to facilitate for all these possible combinations, there is a need to introduce the <i>cross-covariance matrix</i> $\bf{\Gamma_{XY}}$, which contains the covariance of all the possible combinations of the random variables in random vectors $\bf{X}$ and $\bf{Y}$.
@@ -260,6 +306,82 @@ The transpose operator in the first equation creates a matrix from the two colum
 
 <h4> Auto-covariance matrix of a random vector </h4>
 For the special case that ${\bf{X}} = {\bf{Y}}$, the cross-covariance matrix is called the <i>auto-covariance matrix</i>, which calculates the covariances between all random variables in $\bf{X}$. The definition is the same as the definition of the covariance matrix, where $\bf{\Gamma_{XX}}$ is often simplified as $\bf{\Gamma_X}$.
+
+<div class="example">
+<h4> Exercise </h4>
+<hr>
+An $n$-dimensional Gaussian vector $\mathbf{W}$ has a block diagonal covariance matrix
+\begin{equation}
+    \mathbf{C_W} =
+    \begin{bmatrix}
+        \mathbf{C_X} & \mathbf{0}\\
+        \mathbf{0} & \mathbf{C_Y}
+    \end{bmatrix},
+\end{equation}
+where $\mathbf{C_X}$ is $m \times m$, $\mathbf{C_Y}$ is $(n-m) \times (n-m)$. Show that $\mathbf{W}$ can be written in terms of component vectors $\mathbf{X}$ and $\mathbf{Y}$ in the form
+\begin{equation}
+    \mathbf{W} =
+    \begin{bmatrix}
+        \mathbf{X} \\
+        \mathbf{Y}
+    \end{bmatrix},
+\end{equation}
+such that $\mathbf{X}$ and $\mathbf{Y}$ are independent Gaussian random vectors.
+<button class="collapsible">Show solution</button>
+<div class="content">
+As given in the problem statement, we define the $m$-dimensional vector $\mathbf{X}$, the $n$-dimensional vector $\mathbf{Y}$ and $\mathbf{W} = \begin{bmatrix}
+                    \mathbf{X'} \newline
+                    \mathbf{Y'}
+              \end{bmatrix}'
+$. Note that $\mathbf{W}$ has expected value
+\begin{equation*}
+   \overline{\mu_W} = \mathrm{E}[\mathbf{W}] = \mathrm{E} \begin{bmatrix}
+        \mathbf{X} \newline
+        \mathbf{Y}
+    \end{bmatrix}
+    = \begin{bmatrix}
+        \mathrm{E}[\mathbf{X}] \newline
+        \mathrm{E}[\mathbf{Y}]
+    \end{bmatrix}
+    =\begin{bmatrix}
+        \overline{\mu_X} \newline
+        \overline{\mu_Y}
+    \end{bmatrix}.
+\end{equation*}
+The covariance matrix of $\mathbf{W}$ is
+\begin{equation*}
+\begin{split}
+        \mathbf{C_W} = &\mathrm{E}[(\mathbf{W}-\mu_W)(\mathbf{W}-\mu_W)']=\newline   
+       			& = \mathrm{E}\left[
+       			\begin{bmatrix}
+       			\mathbf{X} - \overline{\mu_X} \newline \mathbf{Y}- \overline{\mu_Y}
+       			\end{bmatrix}
+			[ (\mathbf{X}-\overline{\mu_X})' \quad (\mathbf{Y}-\overline{\mu_Y})']\right]
+			\newline
+    &= \begin{bmatrix}
+            \mathrm{E}[(\mathbf{X}-\overline{\mu_X})(\mathbf{X}-\overline{\mu_X})']   &\mathrm{E}[(\mathbf{X}-\overline{\mu_X})(\mathbf{Y}-\overline{\mu_Y})'] \newline
+            \mathrm{E}[(\mathbf{Y}-\overline{\mu_Y})(\mathbf{X}-\overline{\mu_X})']  &\mathrm{E}[(\mathbf{Y}-\overline{\mu_Y})(\mathbf{Y}-\overline{\mu_Y})']
+    \end{bmatrix}\newline
+    &= \begin{bmatrix}
+        \mathbf{C_X} & \mathbf{C_{XY}} \newline
+        \mathbf{C_{YX}} & \mathbf{C_Y}
+    \end{bmatrix}.
+\end{split}
+\end{equation*}
+The assumption that $\mathbf{X}$ and $\mathbf{Y}$ are independent implies that
+\begin{equation*}
+    \mathbf{C_{XY}} = \mathrm{E}[(\mathbf{X}-\overline{\mu_X})(\mathbf{Y'}-\overline{\mu_Y}')] = \mathrm{E}[(\mathbf{X}-\overline{\mu_X})] \mathrm{E}[(\mathbf{Y}-\overline{\mu_Y})'] = \mathbf{0}.
+\end{equation*}
+This also implies that $\mathbf{C_{YX}} = \mathbf{C_{XY}'} = \mathbf{0}$. Thus
+\begin{equation*}
+    \mathbf{C_W} =
+    \begin{bmatrix}
+        \mathbf{C_X} & \mathbf{0}\\
+        \mathbf{0} & \mathbf{C_Y}
+    \end{bmatrix},
+\end{equation*}
+</div>
+</div>
 
 
 ### Cross-correlation matrix

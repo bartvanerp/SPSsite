@@ -94,6 +94,44 @@ Using the above equation the power spectral density can be determined as
 \end{equation}
 
 <br></br>
+
+<div class="example">
+<h4> Exercise </h4>
+<hr>
+Given the following autocorrelation sequences. Find the PSD and verify that this function is real and nonnegative
+<ol type="a">
+	<li> $\rho[\tau]=3-|\tau|$ for $|\tau| \leq3$ and $\rho[\tau]=0$ elsewhere.</li>
+	<li> $\rho[\tau]=2(-0.6)^{|\tau}|+\delta [\tau]$.</li>
+</ol>
+<button class="collapsible">Show solution</button>
+<div class="content">
+<ol type="a">
+	<li>
+  \begin{equation*}
+\begin{split}
+    P(\mbox{e}^{\mbox{j} \theta}) &= \sum_{\tau = - \infty}^{\infty} \rho[\tau ] \mbox{e}^{-\mbox{j} \tau \theta}\\
+    &= \sum_{\tau = - 3}^{3} (3-|\tau|) \mbox{e}^{-\mbox{j} \tau \theta}\\
+    &= \sum_{\tau = - 3}^{-1} (3+\tau) \mbox{e}^{-\mbox{j} \tau \theta} + \sum_{\tau = 1}^{3} (3-\tau) \mbox{e}^{-\mbox{j} \tau \theta} + (3-0)\mbox{e}^{-\mbox{j} 0 \theta}\\
+    &= \mbox{e}^{\mbox{j} 2 \theta} + 2\mbox{e}^{\mbox{j} \theta} + 2\mbox{e}^{-\mbox{j} \theta} + \mbox{e}^{-\mbox{j} 2 \theta} + 3\\
+    &=3 + 4 \cos (\theta) + 2 \cos ( 2\theta )\\
+\end{split}
+\end{equation*}</li>
+	<li>
+  \begin{equation*}
+\begin{split}
+    P(\mbox{e}^{\mbox{j} \theta}) &= \sum_{\tau = - \infty}^{\infty} \rho[\tau ] \mbox{e}^{-\mbox{j} \tau \theta}\\
+    &= \sum_{\tau = - \infty}^{\infty} \delta[\tau] \mbox{e}^{-\mbox{j} \tau \theta} + 2\sum_{\tau = - \infty}^{\infty} (-0.6)^{|\tau|} \mbox{e}^{-\mbox{j} \tau \theta}\\
+    &= 1 + 2\left( \sum_{\tau = - \infty}^{0} (-0.6)^{-\tau} \mbox{e}^{-\mbox{j} \tau \theta} + \sum_{\tau = 0}^{\infty} (-0.6)^{\tau} \mbox{e}^{-\mbox{j} \tau \theta} - 1 \right)\\
+    &= 1 + 2\left( \sum_{\tau = 0}^{\infty} (-0.6)^{\tau} \mbox{e}^{\mbox{j} \tau \theta} + \sum_{\tau = 0}^{\infty} (-0.6)^{\tau} \mbox{e}^{-\mbox{j} \tau \theta} - 1 \right)\\
+    &= 1 + 2\left( \frac{1}{1+0.6 \mbox{e}^{\mbox{j} \theta}} + \frac{1}{1+0.6 \mbox{e}^{\mbox{-j} \theta}} - 1\right)\\
+    &= 1 + 2\left( \frac{0.64}{1.36 - 1.2 \cos (\theta)}\right) = 1 +  \frac{1.28}{1.36 - 1.2 \cos (\theta)}
+\end{split}
+\end{equation*}
+Both functions of (a) and (b) are indeed real and $\geq 0$.</li>
+</ol>
+</div>
+</div>
+
 ## Cross-power spectral density
 The power spectral density as discussed up until now was just the auto power spectral density, since it corresponded with the auto-correlation function. Similarly the cross-power spectral density of two random processes can be defined, showing the relationship between two random processes in the frequency domain as
 \begin{equation}
