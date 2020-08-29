@@ -285,6 +285,7 @@ In the following pencast, you may see how to find the spectral factorization of 
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/cIlkfWoKnw4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+<br></br>
 In the following exercise, you can try using the root method to find the spectral  factorization of a random signal.
 
 <div class="example">
