@@ -210,6 +210,52 @@ The last consequence can be explained with the help of Fig. 3. The event $A$ can
 </div>
 <br></br>
 
+<div class="example">
+<h4> Exercise </h4>
+A company has a model of telephone usage. It classifies all calls as either long ($\textit{l}$), if they last more than three minutes, or brief $\textit{b}$). It also observes whether calls carry voice ($\textit{v}$), data ($\textit{d}$), or fax ($\textit{f}$). This model implies an experiment in which the procedure is to monitor a call and the observation consists of the type of call, $\textit{v, d}$, or $\textit{f}$ , and the length, $\textit{l}$ or $\textit{b}$. The sample space has six outcomes S = $\{lv, bv, ld, bd, lf, bf\}$. In this problem, each call is classifed in two ways: by length and by type. Using L for the event that a call is long and B for the event that a call is brief, ${L, B}$ is an event space. Similarly, the voice (V), data (D) and fax (F) classification is an event space ${V, D, F}$. The sample space can be represented by a table in which the rows and columns are labeled by events and the intersection of each row and column event contains a single outcome. The corresponding table entry is the probability of that outcome. Given the sample space representade by the table below,
+
+<table
+style="width:100px"
+align="center" >
+<thead>
+  <tr>
+    <th></th>
+    <th>V</th>
+    <th>D</th>
+    <th>F</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>L</td>
+    <td>0.3</td>
+    <td>0.12</td>
+    <td>0.15</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>0.2</td>
+    <td>0.08</td>
+    <td>0.15</td>
+  </tr>
+</tbody>
+</table>
+Find the probability of a long call Pr[L].
+<button class="collapsible">Show solution</button>
+<div class="content">
+As a consequence of probability axioms
+\begin{equation*}
+\textrm{Pr}[A]=\sum_{i=1}^{m}\textrm{Pr}[A\cap B_i].
+\end{equation*}
+Thus we can apply the Theorem in
+the above equation to find the probability of a long call as
+\begin{equation*}
+\textrm{Pr}[L]=\textrm{Pr[LV]+Pr[LD]+Pr[LF]}=0.57.
+\end{equation*}
+</div>
+</div>
+
+
 ### Calculating probabilities
 
 If we have enough information on an experiment and its associated sample space, we can calculate the probability of an event by using the probability axioms.

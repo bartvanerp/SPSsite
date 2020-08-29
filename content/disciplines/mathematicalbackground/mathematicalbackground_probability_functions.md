@@ -289,9 +289,16 @@ for the joint random variables case. If we substitute the given joint probabilit
 From this follows that $C=\frac{1}{2}$.
 
 
-[^1][^2]
+[^1][^2][^3]
 [^1]: Integration by parts: $$ \int_a^b f(x)g'(x) \mathrm{d}x = \left[ f(x)g(x)\right]\_a^b - \int\_a^b f'(x)g(x) \mathrm{d}x$$
 [^2]: Growth property of exponentials: $$ \lim_{x\to \infty} x^ae^{-x} = 0 $$
+[^3]: Proof that $\mathrm{Var}[X+Y] = \mathrm{Var}[X] + \mathrm{Var}[Y] + 2 \mathrm{E}[(X-\mu_X)(Y-\mu_Y)]$: \begin{equation}
+    \begin{split}
+        \mathrm{Var}[Y] &= \mathrm{E}[(X+Y-(\mu_X+\mu_Y))^2]\newline
+        &= \mathrm{E}[((X-\mu_X)+(Y-\mu_Y))^2]\newline
+        &= \mathrm{E}[(X-\mu_X)^2+2(X-\mu_X)(Y-\mu_Y)+(Y-\mu_Y))^2]
+    \end{split}
+\end{equation}
 
 In order to calculate $p\_X(x)$ we will marginalize $p\_{X,Y}(x,y)$ over $Y$ as
 \begin{equation}
@@ -340,6 +347,59 @@ Now finally we can use our previous results in order to determine the conditiona
 One could apply the axiom of total probability to all marginalized and conditional probability density functions over their domain and should note that the axiom is satisfied.
 
 <br></br>
+<div class="example">
+<h4> Exercise </h4>
+<hr>
+Random variables $X$ and $Y$ have joint PDF
+\begin{equation*}
+    f_{X,Y}(x,y) =
+	\begin{cases}
+			5x^2/2 & -1 \leq x \leq 1; 0 \leq y \leq x^2, \\
+			0 & \text{otherwise.}
+	\end{cases}
+\end{equation*}
+Answer the following questions:
+<ol type="a">
+<li> What are E[$X$] and Var[$X$]? </li>
+<li> What are E[$Y$] and Var[$Y$]?</li>
+<li> What is E[$X+Y$]?</li>
+<li> What is Var[$X+Y$]?</li>
+</ol>
+<button class="collapsible">Show solution</button>
+<div class="content">
+<ol type="a">
+<li> The first moment of $X$ is
+\begin{equation*}
+    \mathrm{E}[X] = \int^1_{-1} \int^{x^2}\_0 x \frac{5x^2}{2}dydx = \int^1_{-1}\frac{5x^5}{2}dx = \frac{5x^6}{12}\biggr\rvert^1_{-1}  = 0.
+\end{equation*}
+Since $\mathrm{E}[X] = 0$, the variance of $X$ and the second moment are both
+\begin{equation*}
+    \mathrm{Var}[X] = \mathrm{E}[X^2] =  \int^1_{-1} \int^{x^2}\_0 x^2 \frac{5x^2}{2}dydx =  \frac{5x^7}{14}\biggr\rvert^1_{-1}  = \frac{10}{14}.
+\end{equation*} </li>
+<li> The first and second moments of $Y$ are
+\begin{equation*}
+  \mathrm{E}[Y] = \int^1_{-1} \int^{x^2}_0 y \frac{5x^2}{2}dydx =  \frac{5}{14},   
+\end{equation*}
+\begin{equation*}
+   \mathrm{E}[Y^2] = \int^1_{-1} \int^{x^2}_0 y^2 \frac{5x^2}{2}dydx =  \frac{5}{26}.      
+\end{equation*}
+Therefore, $\mathrm{Var}[Y] = 5/26 - (5/14)^2 = .0576$.</li>
+<li> The expected value of the sum $X + Y$ is
+\begin{equation*}
+    \mathrm{E}[X + Y] = \mathrm{E}[X] + \mathrm{E}[Y] = \frac{5}{14}.
+\end{equation*}</li>
+<li> The variance of $X + Y$ is
+\begin{equation*}
+    \begin{split}
+        \mathrm{Var}[X+Y] &\overset{\href{./#fn:3}{3}}{=}  \mathrm{Var}[X] + \mathrm{Var}[Y] + 2 \mathrm{E}[(X-\mu_X)(Y-\mu_Y)]\\
+        &= 5/7 + 0.0576 = 0.7719
+    \end{split}
+\end{equation*}</li>
+</ol>
+</div>
+</div>
+
+
 
 ## Central limit theorem
 
