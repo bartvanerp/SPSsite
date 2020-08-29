@@ -47,6 +47,7 @@ and similarly
     \text{Var}\Big[X[n]\Big] = \sigma_X^2[n] = \sigma_X^2.
 \end{equation}
 
+
 <div style="max-width: 1100px; margin: auto">
   <figure>
     <img
@@ -58,6 +59,8 @@ and similarly
     </figcaption>
   </figure>
 </div>
+
+
 ### Stationarity and second orders statistics
 
 It is also important to consider the consequences of (wide-sense) stationarity for the covariance and correlation functions. From the definitions in the above table these properties depend on the two time indices $n_1$ and $n_2$. From the definition of the stationarity it can be concluded that for the example of the auto-covariance $\gamma_X[n_1,n_2] = \gamma_X[n_1+k, n_2+k]$ holds. This leads to the observation that the value of the covariance and correlation only depend on the difference between the two time indices. This time difference is called the <i>lag</i> and is defined as
@@ -77,6 +80,42 @@ and it can be shown that this correlation value is (one of) the largest auto-cor
     r_X^\ast[-l] = r_X[l].
 \end{equation}
 When dealing with real-valued signals, this property can be simplified to $r_X[l] = r_X[-l]$.
+
+<div class="example">
+<h4> Exercise </h4>
+<hr>
+$X(t)$ and $Y(t)$ are independent wide sense stationary processes with expected values $\mu_X$ and $\mu_Y$ and auto-correlation functions $R_x(\tau)$ and $R_y(\tau)$, respectively. Let $W(t) = X(t)Y(t)$.
+<ol type ="a">
+    <li> Find $E[W(t)]$ and $R_W(t,\tau)$ and show that $W(t)$ is wide sense stationary. </li>
+    <li> Are $W(t)$ and $X(t)$ jointly wide sense stationary?</li>
+</ol>
+<button class="collapsible">Show solution</button>
+<div class="content">
+<ol type ="a">
+<li> Since $X(t)$ and $Y(t)$ are independent processes,
+    \begin{equation*}
+        E[W(t)] = E[X(t)Y(t)]=E[X(t)]E[Y(t)] = \mu_X \mu_Y.
+    \end{equation*}
+    In addition,
+    \begin{equation*}
+    \begin{split}
+       R_W(t,\tau) = R_X(\tau)R_Y(\tau).
+    \end{split}
+    \end{equation*}   
+    We can conclude that $W(t)$ is wide sense stationary. </li>
+<li> To examine whether $W(t)$ and $X(t)$ are jointly wide sense stationary, we calculate
+    \begin{equation*}
+        R_{WX}(t,\tau) = E[W(t)X(t+\tau)] = E[X(t)Y(t)X(t+\tau)].
+    \end{equation*}
+    By independence of $X(t)$ and $Y(t)$,
+    \begin{equation*}
+        R_{WX}(t,\tau) = E[X(t)X(t+\tau)]E[Y(t)] = \mu_Y R_X(\tau).
+    \end{equation*}
+    Since $W(t)$ and $X(t)$ are both wide sense stationary and since $R_{WX}(t,\tau)$ depends only on the time difference $\tau$, we can conclude that $W(t)$ and $X(t)$ are jointly wide sense stationary.</li>
+</ol>    
+</div>
+</div>
+
 
 ## Ergodicity
 
@@ -100,6 +139,42 @@ The auto-correlation function of a zero-mean white noise process can be determin
 Let us break this definition down. So for a lag of $0$, the auto-correlation function reduces to the variance minus the squared mean. Since the mean is $0$, only the variance remains. Intuitively one could also regard the zero lag as multiplying each signal sample with itself, leading always to positive contributions, since the multiplication of equal signs always returns a positive number.
 
 Now for all the other cases, we actually need to make use of the fact that the signal is white. However, the power spectrum is not yet introduced. Therefore an intuitive explanation is given, where the assumption is made that the noise is symmetrically distributed with zero-mean and is completely random. This means that each sample only depends on itself and has no dependence on the samples before or after it. If we were to introduce a certain lag $l$, each sample would be multiplied with another completely random sample at a distance $l$. This sample has a random sign and magnitude. Because of the zero-mean property we are half as likely to get a random number with a positive sign as a negative sign. The result of the multiplication therefore is equally likely to result in a positive or a negative contribution. Because of the random magnitudes that are symmetrically distributed around zero, in general we may intuitively understand that in total the total positive and negative contributions for the auto-correlation will cancel each other out, leading to a zero auto-correlation.
+
+<div class="example">
+<h4> Exercise </h4>
+<hr>
+Let $w[n]$ be a zero-mean, uncorrelated Gaussian random sequence with variance $\sigma^2[n]=1.$
+<ol type="a">
+<li> Characterize the random sequence  $w[n]$.</li>
+<li> Define $x[n] = w[n] + w[n-1]$, $-\infty < n < \infty$. Determine the mean and autocorrelation of $x[n]$. Also characterize $x[n]$.</li>
+</ol>
+<button class="collapsible">Show solution</button>
+<div class="content">
+<ol type="a">
+<li> Since uncorrelatedness implies independence for Gaussian random variables, $w[n]$ is an independent random sequence. Since its mean and variance are constants, it is at least stationary in the first order. Furthermore, we have
+\begin{equation*}
+r_w[n_1,n_2]=\sigma^2\delta[n_1-n_2]=\delta[n_1-n_2].
+\end{equation*}
+Hence $w[n]$ is also a WSS random process.</li>
+<li> The mean of $x[n]$ is zero for all $n$ since $w[n]$ is a zero-mean process. Consider
+\begin{equation*}
+\begin{split}
+r_w[n_1,n_2]&=E{x[n_1]x[n_2]}=E{(w[n_1]+w[n_1-1])(w[n_2]+w[n_2-1])}=\\
+&=r_w[n_1,n_2]+r_w[n_1,n_2-1]+r_w[n_1-1,n_2]+r_w[n_1-1,n_2-1]\\
+&=\sigma^2\delta[n_1-n_2]+\sigma^2\delta[n_1-n_2+1]+\sigma^2\delta[n_1-n_2+1]+\sigma^2\delta[n_1-1-n_2+1]\\
+&=2\delta[n_1-n_2]+\delta[n_1-n_2+1]+\delta[n_1-n_2-1].\\
+\end{split}
+\end{equation*}
+Clearly, $r_w[n_1,n_2]$ is a function of $n1-n2$. Hence
+\begin{equation*}
+\begin{split}
+r_w[l]=2\delta[l]+\delta[l+1]+\delta[l-1].\\
+\end{split}
+\end{equation*}
+Therefore, $x[n]$ is a WSS sequence. However, it is not an independent random sequence since both $x[n]$ and $x[n+1]$ depend on $w[n]$.</li>
+</ol>
+</div>
+</div>
 
 ## Approximate first-order statistics
 
