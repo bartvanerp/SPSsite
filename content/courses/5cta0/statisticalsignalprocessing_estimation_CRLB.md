@@ -74,7 +74,6 @@ The class of estimators for which the mean squared error can be minimized is cal
 \underset{N\to\infty}{\lim}E[(\hat\theta-\theta)^2]=0.
 \end{equation}
 
-**refer to live scripts to explore further** 
 
 ## The Cramer-Rao Lower Bound and the MVUE
 
@@ -100,7 +99,7 @@ Only the MVUE achieves this bound, and an estimator $\hat\theta=f(\mathbf{x})$ i
 
 The result on the existence of MVUE will be used in the module on <a href="../estimation_mvue_linear">MVUE for Linear Models</a>.
 
-The Cramer-Rao lower bound can be found for an estimator provided that the distribution for the data is available. This distribution, in turn, is based on the noise distribution and the signal model. Hence, to be able to come up with a measure of accuracy for our estimation, we need to know about the noise in the process. A Matlab live script that features the Cramer-Rao lower bound for the sinusoidal frequency estimation problem can be found in **INSERT LINK HERE**.
+The Cramer-Rao lower bound can be found for an estimator provided that the distribution for the data is available. This distribution, in turn, is based on the noise distribution and the signal model. Hence, to be able to come up with a measure of accuracy for our estimation, we need to know about the noise in the process.
 
 The rest of this section covers the fundamental concepts that give rise to the CRLB. The extension of the CRLB to vector parameter $\Theta$ is given at the end of this section.
 
@@ -186,7 +185,7 @@ Note that the expression above concerns the scalar parameter $\theta$, which yie
 where $k$ is the row index and $l$ is the column index.
 
 
-### The CRLB for Vector Parameters
+## The CRLB for Vector Parameters
 
 The CRLB for scalar parameter $\theta$ is the lower bound for the variance of the estimate $\hat\theta$. For vector parameter $\Theta$, we need to consider the <a href="../mathematicalbackground_probability_vectors/#covariance">**covariance matrix**</a> for the estimate $\hat\Theta$. Consider the structure of the covariance matrix: The diagonal elements are the variances of the corresponding entries of $\hat\Theta$, and the off-diagonal elements show the correlation between the corresponding pairs of random variables. For a set of uncorrelated or independent random variables, the covariance matrix consists of non-zero entries only along its diagonal.
 
