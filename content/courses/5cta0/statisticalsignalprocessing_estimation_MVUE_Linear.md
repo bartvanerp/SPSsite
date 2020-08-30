@@ -46,11 +46,6 @@ The complete signal model is written in vector form by introducing the noise vec
 The equation tells that the data points are the result of a linear combination of controlling parameters with additive noise.
 
 
----
-<b>Example:</b>
-
----
-
 ## MVUE for Additive White Gaussian Noise (AWGN)
 
 In this section we will derive the MVUE for linear signal model with additive white Gaussian noise, which is 
@@ -99,9 +94,6 @@ Because the variance of the estimate $\hat\Theta$ is equal to the CRLB for MVUE,
 \begin{equation}
 \Gamma_\hat\Theta=\mathcal{I}^{-1}(\Theta)=\sigma^2(\mathbf{H}^T\mathbf{H})^{-1}.
 \end{equation}
-
-The derivation is also available as pencast in **INSERT LINK HERE**.
-
 
 ## MVUE for Colored Gaussian Noise
 Rather than deriving the MVUE for colored Gaussian noise, we will adopt *whitening* by a filter such that
