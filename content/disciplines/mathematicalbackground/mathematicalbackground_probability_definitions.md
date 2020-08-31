@@ -395,7 +395,7 @@ Note that we have used the law of total probability to calculate $\Pr[+]$ in the
 
 \begin{equation*}
 	\begin{split}
-		\text{Pr}[H|++] &= \frac{\text{Pr}[++|H]\text{Pr}[H|+]}{\text{Pr}[++|H]\text{Pr}[H]+\text{Pr}[++|H^c]\text{Pr}[H^c|+]} \newline
+		\text{Pr}[H|++] &= \frac{\text{Pr}[++|H]\text{Pr}[H|+]}{\text{Pr}[++|H]\text{Pr}[H|+]+\text{Pr}[++|H^c]\text{Pr}[H^c|+]} \newline
 				  &=\frac{(0.99)(0.0194)}{(0.99)(0.0194)+(0.01)(0.9806)} \newline
 				  &= 0.6620.
 	\end{split}
