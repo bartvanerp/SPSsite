@@ -99,7 +99,7 @@ This function equals the sum of the probabilities of all values in the range of 
 <div class="video-container">
 <iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/oiHWycihZRI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
-https://youtu.be/oiHWycihZRI
+
 <br></br>
 Similarly for the continuous random variables the cumulative distribution function can be defined as
 
