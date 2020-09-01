@@ -74,7 +74,7 @@ under the constraint
 \end{equation}
 where $0^-$ and $0^+$ are the limits towards $0$ from below and above respectively.
 
-#### Sifting property
+#### Shifting property
 The definition of the Dirac delta pulse function allows us to extract values from a function by simply multiplying with the delta pulse and integrating over the domain. This delta pulse can be shifted on its domain, allowing for the extraction at any point on the function. This process can be regarded as sampling. This is known as the sifting property and is defined as
 \begin{equation}
     \int\_{-\infty}^{\infty}g(x)\delta(x-x_0)\mathrm{d}x = \int\_{x_0^-}^{x_0^+}g(x)\delta(x-x_0)\mathrm{d}x = g(x_0).
@@ -370,11 +370,11 @@ Answer the following questions:
 <ol type="a">
 <li> The first moment of $X$ is
 \begin{equation*}
-    \mathrm{E}[X] = \int^1_{-1} \int^{x^2}\_0 x \frac{5x^2}{2}dydx = \int^1_{-1}\frac{5x^5}{2}dx = \frac{5x^6}{12}\biggr\rvert^1_{-1}  = 0.
+    \mathrm{E}[X] = \int^1_{-1} \int_0^{x^2} x \frac{5x^2}{2}dydx = \int^1_{-1}\frac{5x^5}{2}dx = \frac{5x^6}{12}\biggr\rvert^1_{-1}  = 0.
 \end{equation*}
 Since $\mathrm{E}[X] = 0$, the variance of $X$ and the second moment are both
 \begin{equation*}
-    \mathrm{Var}[X] = \mathrm{E}[X^2] =  \int^1_{-1} \int^{x^2}\_0 x^2 \frac{5x^2}{2}dydx =  \frac{5x^7}{14}\biggr\rvert^1_{-1}  = \frac{10}{14}.
+    \mathrm{Var}[X] = \mathrm{E}[X^2] =  \int^1_{-1} \int_0^{x^2} x^2 \frac{5x^2}{2}dydx =  \frac{5x^7}{14}\biggr\rvert^1_{-1}  = \frac{10}{14}.
 \end{equation*} </li>
 <li> The first and second moments of $Y$ are
 \begin{equation*}
@@ -383,7 +383,7 @@ Since $\mathrm{E}[X] = 0$, the variance of $X$ and the second moment are both
 \begin{equation*}
    \mathrm{E}[Y^2] = \int^1_{-1} \int^{x^2}_0 y^2 \frac{5x^2}{2}dydx =  \frac{5}{26}.      
 \end{equation*}
-Therefore, $\mathrm{Var}[Y] = 5/26 - (5/14)^2 = .0576$.</li>
+Therefore, $\mathrm{Var}[Y] = 5/26 - (5/14)^2 = .0648$.</li>
 <li> The expected value of the sum $X + Y$ is
 \begin{equation*}
     \mathrm{E}[X + Y] = \mathrm{E}[X] + \mathrm{E}[Y] = \frac{5}{14}.
