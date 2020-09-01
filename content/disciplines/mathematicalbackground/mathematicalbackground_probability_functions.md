@@ -392,7 +392,7 @@ Therefore, $\mathrm{Var}[Y] = 5/26 - (5/14)^2 = .0648$.</li>
 \begin{equation*}
     \begin{split}
         \mathrm{Var}[X+Y] &\overset{\href{./#fn:3}{3}}{=}  \mathrm{Var}[X] + \mathrm{Var}[Y] + 2 \mathrm{E}[(X-\mu_X)(Y-\mu_Y)]\\
-        &= 5/7 + 0.0576 = 0.7719
+        &= 5/7 + 0.0648 = 0.7791
     \end{split}
 \end{equation*}</li>
 </ol>
