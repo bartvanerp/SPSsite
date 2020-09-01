@@ -375,7 +375,7 @@ The Binomial distribution is a discrete probability distribution that models an 
     \begin{equation}
         \begin{split}
             P_X(x)
-            &= \sum_{m=-\infty}^x \begin{pmatrix} n \\ m\end{pmatrix}p^m(1-p)^{n-m}.
+            &= \sum_{m=0}^x \begin{pmatrix} n \\ m\end{pmatrix}p^m(1-p)^{n-m}.
         \end{split}
     \end{equation}
     <!---->
