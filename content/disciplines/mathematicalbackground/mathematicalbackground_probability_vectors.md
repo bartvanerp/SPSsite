@@ -72,7 +72,7 @@ From these definitions several multivariate joint probability axioms can be dete
         </ol> </li>
     <li style="margin-top:10px;"> The probability of an event $A$ can be determined as
         <ol>
-            <li> $$\Pr[A] = \sum_{{\bf{X}}\in A} p_{X_1, \ldots, X_N}(x_1, \ldots, x_N) $$ for discrete random variables and </li>
+            <li> $$\Pr[A] = \sum_{{\bf{X}}\in S} p_{X_1, \ldots, X_N}(x_1, \ldots, x_N) $$ for discrete random variables and </li>
             <li> $$\Pr[A] = \underset{A}{\int \cdots \int} p_{X_1, \ldots, X_N}(x_1, \ldots, x_N)\ \mathrm{d}x_1 \ldots \mathrm{d}x_N$$ for continuous random variables. </li>
         </ol> </li>
 </ol>
