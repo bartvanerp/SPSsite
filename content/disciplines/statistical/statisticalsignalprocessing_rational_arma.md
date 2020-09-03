@@ -336,12 +336,12 @@ Although the solution is not unique, equating the coefficients on the left and r
 ### The auto-correlation function of an ARMA($p,q$) process
 
 As we have seen so far, the ARMA process is a combination of a AR and MA process. This also becomes apparent in the auto-correlation function. The derivation is lengthy and will not be shown, but an intuitive description is given.
-The general form of the Yule-walker equations can be used to express the relationship between the parameters of the transfer function and the auto-correlation function of an ARMA($p,q$) process
+The modified Yule-walker equations can be used to express the relationship between the parameters of the transfer function and the auto-correlation function of an ARMA($p,q$) process
 
 \begin{equation}
     r_x[l] =
     \begin{cases}
-        \sigma_i^2 \sum_{k=|l|}^q b_{k}b_{k-|l|} - \sum_{k=1}^p a_k r_x[|l|-k],  &\text{for }0 \leq |l| \leq q \newline
+        \sigma_i^2 \sum_{k=|l|}^q b_{k}h[k-|l|] - \sum_{k=1}^p a_k r_x[|l|-k],  &\text{for }0 \leq |l| \leq q \newline
         - \sum_{k=1}^p a_k r_x[|l|-k].  &\text{for }|l| > q \\
     \end{cases}
 \end{equation}
