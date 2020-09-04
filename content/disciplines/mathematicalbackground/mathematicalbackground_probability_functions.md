@@ -381,9 +381,9 @@ Since $\mathrm{E}[X] = 0$, the variance of $X$ and the second moment are both
   \mathrm{E}[Y] = \int^1_{-1} \int^{x^2}_0 y \frac{5x^2}{2}dydx =  \frac{5}{14},   
 \end{equation*}
 \begin{equation*}
-   \mathrm{E}[Y^2] = \int^1_{-1} \int^{x^2}_0 y^2 \frac{5x^2}{2}dydx =  \frac{5}{26}.      
+   \mathrm{E}[Y^2] = \int^1_{-1} \int^{x^2}_0 y^2 \frac{5x^2}{2}dydx =  \frac{5}{27}.      
 \end{equation*}
-Therefore, $\mathrm{Var}[Y] = 5/26 - (5/14)^2 = .0648$.</li>
+Therefore, $\mathrm{Var}[Y] = 5/27 - (5/14)^2 = .0576$.</li>
 <li> The expected value of the sum $X + Y$ is
 \begin{equation*}
     \mathrm{E}[X + Y] = \mathrm{E}[X] + \mathrm{E}[Y] = \frac{5}{14}.
@@ -392,7 +392,7 @@ Therefore, $\mathrm{Var}[Y] = 5/26 - (5/14)^2 = .0648$.</li>
 \begin{equation*}
     \begin{split}
         \mathrm{Var}[X+Y] &\overset{\href{./#fn:3}{3}}{=}  \mathrm{Var}[X] + \mathrm{Var}[Y] + 2 \mathrm{E}[(X-\mu_X)(Y-\mu_Y)]\\
-        &= 5/7 + 0.0648 = 0.7791
+        &= 5/7 + 0.0576 = 0.7719
     \end{split}
 \end{equation*}</li>
 </ol>
