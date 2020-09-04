@@ -211,16 +211,6 @@ where
 As we shall see in the section <a href="../statisticalsignalprocessing_rational_arma">Auto-regressive moving-average (ARMA) signal models  </a>, this means viewing an observed random signal as a stochastic process modeled by an auto-regressive moving-average (ARMA) process, whose rational  spectrum contains the model parameters.
 
 ## Spectral factorization
-
-### Screencast video [⯈]
-
-<div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HXeT5WexXPs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<br></br>
-
-
 In the module <a href="../statisticalsignalprocessing_signals_psd">Power spectral density</a>, we have seen that the PSD and the AC of a random signal are Fourier pairs. Consider the system depicted in Figure 1, with input $x[n]$ and output $y[n]$.
 
 Spectral factorization tackles the following question: Can we determine $H(z)$ knowing that the input $x[n]$ is white noise, and given the second-order statistics ($r_y[l]$  or equivalently $P_y(e^{j\theta})$) of the output signal $y[n]$? In principle, there is no unique answer to this question. We can see this by considering the following example.
@@ -228,7 +218,7 @@ Spectral factorization tackles the following question: Can we determine $H(z)$ k
 <div style="max-width: 700px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/statistical/signals/spectralfactorization.bmp"
+      src="/../files/7.Images/statistical/signalmodels/innovation_representation.bmp"
       alt="Spectral factorization"
     />
     <figcaption class="numbered">
