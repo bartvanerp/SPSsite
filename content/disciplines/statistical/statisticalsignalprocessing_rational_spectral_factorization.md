@@ -218,7 +218,7 @@ Spectral factorization tackles the following question: Can we determine $H(z)$ k
 <div style="max-width: 700px; margin: auto">
   <figure>
     <img
-      src="/../files/7.Images/statistical/signals/spectfact_1.bmp"
+      src="/../files/7.Images/statistical/signals/spectralfactorization.bmp"
       alt="Spectral factorization"
     />
     <figcaption class="numbered">
