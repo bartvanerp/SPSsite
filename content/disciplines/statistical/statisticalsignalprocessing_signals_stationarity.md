@@ -2,7 +2,7 @@
 title = "Stationarity and ergodicity"         # name of webpage
 
 # date = {{ .Date }}
-lastmod = 2020-05-20
+lastmod = 2020-09-07
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -153,15 +153,15 @@ Let $w[n]$ be a zero-mean, uncorrelated Gaussian random sequence with variance $
 <ol type="a">
 <li> Since uncorrelatedness implies independence for Gaussian random variables, $w[n]$ is an independent random sequence. Since its mean and variance are constants, it is at least stationary in the first order. Furthermore, we have
 \begin{equation*}
-r_w[n_1,n_2]=\sigma^2\delta[n_1-n_2]=\delta[n_1-n_2].
+r_x[n_1,n_2]=\sigma^2\delta[n_1-n_2]=\delta[n_1-n_2].
 \end{equation*}
 Hence $w[n]$ is also a WSS random process.</li>
 <li> The mean of $x[n]$ is zero for all $n$ since $w[n]$ is a zero-mean process. Consider
 \begin{equation*}
 \begin{split}
-r_w[n_1,n_2]&=E{x[n_1]x[n_2]}=E{(w[n_1]+w[n_1-1])(w[n_2]+w[n_2-1])}=\\
+r_x[n_1,n_2]&=E\{x[n_1]x[n_2]\}=E\{(w[n_1]+w[n_1-1])(w[n_2]+w[n_2-1])\}=\\
 &=r_w[n_1,n_2]+r_w[n_1,n_2-1]+r_w[n_1-1,n_2]+r_w[n_1-1,n_2-1]\\
-&=\sigma^2\delta[n_1-n_2]+\sigma^2\delta[n_1-n_2+1]+\sigma^2\delta[n_1-n_2+1]+\sigma^2\delta[n_1-1-n_2+1]\\
+&=\sigma^2\delta[n_1-n_2]+\sigma^2\delta[n_1-n_2+1]+\sigma^2\delta[n_1-n_2-1]+\sigma^2\delta[n_1-1-n_2+1]\\
 &=2\delta[n_1-n_2]+\delta[n_1-n_2+1]+\delta[n_1-n_2-1].\\
 \end{split}
 \end{equation*}
