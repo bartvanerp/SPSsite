@@ -2,7 +2,7 @@
 title = "5CTA0 - Statistical signal processing"
 
 # date = {{ .Date }}
-lastmod = 2020-05-10
+lastmod = 2020-08-20
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
