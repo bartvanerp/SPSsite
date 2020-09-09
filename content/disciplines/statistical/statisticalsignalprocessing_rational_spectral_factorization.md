@@ -22,7 +22,7 @@ In this section, we first explain how the statistical properties of a random sig
 ## LTI with random inputs
 
 When a random signal is filtered by an LTI system, its statistical properties are changed. Focusing on the second-order statistics, here we show the transformation that a discrete random *power* signal undergoes when processed
-by a discrete-time LTI system. The difference between *power* and *energy* signal is discussed in the section <a href="../statisticalsignalprocessing_signals_psd">Power Spectral Density</a>.
+by a discrete-time LTI system. The difference between *power* and *energy* signal is discussed in the section <a href="..\statisticalsignalprocessing_signals_psd">Power Spectral Density</a>.
 
 ### Screencast video [⯈]
 
