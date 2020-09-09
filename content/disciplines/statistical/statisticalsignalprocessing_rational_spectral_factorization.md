@@ -142,11 +142,11 @@ Using the above properties, we can easily calculate the input-output relationshi
 A rational spectrum is a ratio of two rational functions containing $e^{j\theta}$.
 \begin{equation}
 \begin{split}
-    P(e^{j\theta}) = P(z) = \frac{\sum_{q=-Q}^{Q} r_x[n] e^{-j\theta q}}{\sum_{p=-P}^{P} r_y[n] e^{-j\theta p}}
+    P(e^{j\theta}) = P(z) = \frac{\sum_{q=-Q}^{Q} \gamma_1[q] e^{-j\theta q}}{\sum_{p=-P}^{P} \gamma_2[p] e^{-j\theta p}}
 \end{split}
 \end{equation}
 
-Here $r_x$ and $r_y$ are the auto-correlation sequences of two real signals. The rational spectrum is actually derived from the *Wold's decomposition* or *representation theorem*, a very general signal decomposition theorem, which states that every wide sense stationary (WSS) signal can be written as the sum of two components, one deterministic and one stochastic, as given below
+Here $\gamma_1[q]$ and $\gamma_2[p]$ are two series with even symmetry, similarly to the auto-correlation sequences of  real signals. The rational spectrum is actually derived from the *Wold's decomposition* or *representation theorem*, a very general signal decomposition theorem, which states that every wide sense stationary (WSS) signal can be written as the sum of two components, one deterministic and one stochastic, as given below
 \begin{equation}\label{eq:xnlti}
     x[n] = \sum_{k=0}^{\infty}h[k]i[n-k] + \hat{x}[n],
 \end{equation}
