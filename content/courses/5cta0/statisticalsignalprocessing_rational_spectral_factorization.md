@@ -2,7 +2,7 @@
 title = "Spectral factorization"         # name of webpage
 
 # date = {{ .Date }}
-lastmod = 2020-07-25
+lastmod = 2020-09-07
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
