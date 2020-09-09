@@ -18,7 +18,7 @@ type = "docs"  # Do not modify.
 +++
 A stochastic process may be represented by a stochastic model with given order and parameters, which is able to generate a random signal characterized by well-defined spectral properties. In fact, although a stochastic model and process are in principle two different entities, they are sometimes used interchangeably.
 Stochastic models are fundamental in many applied fields of science, including engineering, economics and medicine. Among stochastic models, a special class of models known as auto-regressive moving-average (ARMA) is widely used. In the section
-<a href="../statisticalsignalprocessing_rational_spectral_factorization">Spectral factorization</a> we saw how any  wide-sense stationary random signal can be described as an LTI system driven by white noise. The system, also referred to as innovation filter, has a rational spectrum. It turns out that this is equivalent to modeling the random process generating the signal as an ARMA($p$, $q$) model, which provide a parsimonious description of a WSS stochastic process in terms of a rational polynomial. The numerator of order $q$ represents the moving-average part, while the denominator of order $p$ represents the auto-regressive part.
+<a href="..\statisticalsignalprocessing_rational_spectral_factorization">Spectral factorization</a> we saw how any  wide-sense stationary random signal can be described as an LTI system driven by white noise. The system, also referred to as innovation filter, has a rational spectrum. It turns out that this is equivalent to modeling the random process generating the signal as an ARMA($p$, $q$) model, which provide a parsimonious description of a WSS stochastic process in terms of a rational polynomial. The numerator of order $q$ represents the moving-average part, while the denominator of order $p$ represents the auto-regressive part.
 
 The ARMA model is based on the observation that stochastic time series often have a dependence on previous time points. This can be described by the auto-regressive part of an ARMA model, which permits modeling a "memory" that decades with time. The moving- average part takes into account the new information (innovation) by a linear combination of the present and previous samples.
 
@@ -28,7 +28,7 @@ Thanks to their ability to model a wide variety of stochastic processes, ARMA mo
 <li> forecasting future values of a signal based on the past values;</li>
 <li> removing from the signal the imprint of some known process, so as to
 get a more random residual signal to be further analyzed and interpreted (pre-whitening);</li>
-<li> finding a spectral estimate from a random signal. More on this in the section <a href="../statisticalsignalprocessing_spectrum_parametric">Parametric spectral estimation</a>. </li>
+<li> finding a spectral estimate from a random signal. More on this in the section <a href="..\statisticalsignalprocessing_spectrum_parametric">Parametric spectral estimation</a>. </li>
 </ul>  
 
 ## Auto-regressive model, AR($p$)
