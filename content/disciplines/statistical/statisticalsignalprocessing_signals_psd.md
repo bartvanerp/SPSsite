@@ -21,7 +21,7 @@ We previously saw that the auto-correlation function of a zero-mean white noise 
 
 <br></br>
 ## The Fourier transform for discrete-time signals
-First it is important to give a quick recap of the Fourier transform for discrete-time signals. A more detailed description of this transform can be found <a href="..\..\discrete\discretesignalprocessing_transforms_ftd_main">here</a>.
+First it is important to give a quick recap of the Fourier transform for discrete-time signals. A more detailed description of this transform can be found <a href="..\..\..\disciplines\discrete\discretesignalprocessing_transforms_ftd_main">here</a>.
 
 The <i>Fourier transform for discrete-time signals</i> (FTD) is a mathematical operation to calculate the continuous spectrum of a discrete-time signal. This spectrum is periodic because of the uniqueness issue caused by the sampling procedure. Which reflects that we lose high-frequency spectral information due to a sampling rate that is below the Nyquist rate.
 
