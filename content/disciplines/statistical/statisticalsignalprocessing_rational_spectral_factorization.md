@@ -148,10 +148,10 @@ A rational spectrum is a ratio of two rational functions containing $e^{j\theta}
 
 Here $\gamma_1[q]$ and $\gamma_2[p]$ are two series with even symmetry, similarly to the auto-correlation sequences of  real signals. The rational spectrum is actually derived from the *Wold's decomposition* or *representation theorem*, a very general signal decomposition theorem, which states that every wide sense stationary (WSS) signal can be written as the sum of two components, one deterministic and one stochastic, as given below
 \begin{equation}\label{eq:xnlti}
-    x[n] = \sum_{k=0}^{\infty}h[k]i[n-k] + \hat{x}[n],
+    x[n] = \sum_{k=0}^{\infty}h[k]w[n-k] + y[n],
 \end{equation}
 
-where $h[k]$ represents a infinite-length sequence of weights; $i[n]$ is a white noise sequence, often referred to as *innovations*; $\hat{x}[n]$ is deterministic, thus exactly predictable from the past values. The deterministic part can be subtracted from this signal since it is exactly predictable. This will result in a purely random zero-mean WSS signal as
+where $h[k]$ represents a infinite-length sequence of weights; $w[n]$ is a white noise sequence, often referred to as *innovations*; $y[n]$ is deterministic, thus exactly predictable from the past values. The deterministic part can be subtracted from this signal since it is exactly predictable. This will result in a purely random zero-mean WSS signal as
 \begin{equation}\label{eq:reversesum}
     x[n] = \sum_{k=0}^{\infty}h[k] i[n-k] = \sum_{k=-\infty}^{n}h[n-k] i[k].
 \end{equation}
