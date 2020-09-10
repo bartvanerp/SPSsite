@@ -318,7 +318,7 @@ with constants $c_n, c_d, a$ and $b$; mind that $|a|<1$ and $|b|<1$. In this way
 From above, we obtain the following set of equation:
 \begin{equation*}
 \begin{split}
-c_n (1-a z^{-1}) (1-az) &=& 9 -2(z^{-1}+z) \mbox{ } \newline
+c_n (1-a z^{-1}) (1-az) &=& 5 -2(z^{-1}+z) \mbox{ } \newline
 &\Rightarrow &
 (a=\frac{1}{2} \mbox{ and } c_n =4) \mbox{ or } (a=2 \mbox{ and } c_n =1) \newline
 c_d (1-b z^{-1}) (1-b z) &=& 10 -3(z^{-1}+z) \mbox{ } \newline
