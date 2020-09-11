@@ -176,7 +176,7 @@ Therefore, $x[n]$ is a WSS sequence. However, it is not an independent random se
 </div>
 </div>
 
-## Approximate first-order statistics
+## Approximate statistics
 
 For ergodic random processes the signal statistics that are defined in the table of <a href="../statisticalsignalprocessing_signals_signals/#ideal-signal-statistics">the previous section</a> can be approximated by time-averaging. The expected value operator will then be replaced by time-averaging over a sequence of length $N$ according to
 \begin{equation}
@@ -236,7 +236,7 @@ The approximated signal statistics are denoted by a $\hat{\cdot}$ identifier. Th
 </table>
 
 <br></br>
-## Approximate second-order statistics
+
 Before we saw that the value of the covariance and correlation only depends on the lag $l$ for stationary signals. For ergodic processes the covariances and correlations could be approximated from the time series by averaging. By approximating the definitions of the cross-covariance and cross-correlation matrices and by generalizing the definitions for the auto-covariance and -correlation matrices, the following approximated covariance and correlation matrices can be determined for the random signal sequences $\bf{X}$ and $\bf{Y}$ of length $N$. The approximated cross-covariance matrix can be defined using the definitions in the above table as
 
 
