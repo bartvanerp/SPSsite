@@ -325,7 +325,7 @@ Therefore, if a systems is minimum phase, its poles and zeros have the following
 
 A stable and causal LTI system has all its poles inside the unit circle. The zeros, however may lie anywhere in the $z$-plane. In order to obtain a minimum phase system, it is necessary to constraint the system $H(z)$ so that its inverse $G(z)=1/H(z)$ is also stable and causal. This requires that the zeros of $H(z)$ lie also inside the unit circle.
 
-In other words, a stable and causal filter that has a stable and causal inverse is said to have minimum phase and so a minimum phase system has all of its poles and zeros inside the unit circle, as shown in Fig. 3.
+In other words, a stable and causal filter that has a stable and causal inverse is said to have minimum phase and so a minimum phase system has all of its poles and zeros inside the unit circle, as shown in Fig. 2.
 
 <figure>
 <div class="rowimg2">
@@ -342,9 +342,9 @@ In other words, a stable and causal filter that has a stable and causal inverse 
   </figcaption>
 </div>
 </figure>
-The magnitude and phase response of a minimum phase system with three zeros inside the unit circle is depicted in Fig. 3.
+The magnitude and phase response of a minimum phase system with three zeros inside the unit circle is depicted in Fig. 2.
 
-When mirroring all zeros of a stable and causal minimum phase system we obtain a maximum phase system; thus, a maximum phase system has all of its poles inside and its zeros outside the unit circle, as shown in Fig. 4.
+When mirroring all zeros of a stable and causal minimum phase system we obtain a maximum phase system; thus, a maximum phase system has all of its poles and zeros outside the unit circle, as shown in Fig. 3.
 
 <figure>
 <div class="rowimg2">
@@ -362,7 +362,7 @@ When mirroring all zeros of a stable and causal minimum phase system we obtain a
 </div>
 </figure>
 
-Fig. 4. shows the magnitude and phase response of a maximum phase system with three zeros outside the unit circle as depicted in the pole zero plot. These zeros are obtained by mirroring all three zeros of the previous minimum phase system.
+Fig. 3. shows the magnitude and phase response of a maximum phase system with three zeros outside the unit circle as depicted in the pole zero plot. These zeros are obtained by mirroring all three zeros of the previous minimum phase system.
 
 {{% alert note %}}
 <ul>
