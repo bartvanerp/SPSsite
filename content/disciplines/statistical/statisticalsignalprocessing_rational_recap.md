@@ -344,7 +344,7 @@ In other words, a stable and causal filter that has a stable and causal inverse 
 </figure>
 The magnitude and phase response of a minimum phase system with three zeros inside the unit circle is depicted in Fig. 2.
 
-When mirroring all zeros of a stable and causal minimum phase system we obtain a maximum phase system; thus, a maximum phase system has all of its poles and zeros outside the unit circle, as shown in Fig. 3.
+When mirroring all zeros and poles of a stable and causal minimum phase system we obtain a maximum phase system; thus, a maximum phase system has all of its poles and zeros outside the unit circle, as shown in Fig. 3.
 
 <figure>
 <div class="rowimg2">
