@@ -207,15 +207,6 @@ While the expression is pretty much the same as in the scalar case, we should re
 
 ## Conclusion
 
-The ability to analyze the bias and variance of an estimator gives us valuable insight on how to gauge the performance of estimators and find ways to improve. There are several properties we seek in an estimator, based on the tools developed in this module:
+The ability to analyze the bias and variance of an estimator gives us valuable insight on how to gauge the performance of estimators and find ways to improve. Based on the tools developed in this module, we seek an estimator that is <b>Efficient:</b> An estimator that is unbiased and attains the minimum possible variance for an estimator that is the CRLB. Such estimators are also called "optimal". 
 
-<ul>
-
-<li><b>Efficient:</b> When an estimator is unbiased and attains the minimum possible variance for an estimator that is the CRLB, that estimator is called efficient.
-<li><b>Asymptotically Efficient:</b> When the variance of an estimator decreases as the size of the data increases and reaches the minimum variance (CRLB) for infinitely long data, that estimator is called asymptotically efficient.
-<li><b>Optimal:</b> When an estimator is unbiased and efficient, then that estimator is called optimal.
-<li><b>Asymptotically Optimal:</b> When the bias of an estimator decreases as the size of the data increases and reaches zero for infinitely long data, that estimator is called asymptotically optimal.
-
-</ul>
-
-For example, the maximum likelihood estimator is asymptotically efficient and asymptotically optimal. Obviously, we cannot have infinitely long data sets. In such cases, the task is to determine the data size which gives acceptable performance, and while the best possible performance is determined through the theory explained in this module, what passes as <i>the acceptable performance</i> depends on the application. As long as new signal processing applications emerge (that is, for the forseeable future), methods to develop, analyze and improve estimators will remain indispensible.
+Sometimes the variance of an estimator decreases as the size of the data increases and reaches the minimum variance (CRLB) only for infinitely long data. Such estimators are called <b>asymptotically efficient</b>. For example, the maximum likelihood estimator is asymptotically efficient (asymptotically optimal). Obviously, we cannot have infinitely long data sets. In such cases, the task is to determine the data size which gives acceptable performance, and while the best possible performance is determined through the theory explained in this module, what passes as <i>the acceptable performance</i> depends on the application. As long as new signal processing applications emerge (that is, for the forseeable future), methods to develop, analyze and improve estimators will remain indispensible.
