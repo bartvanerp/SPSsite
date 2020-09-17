@@ -20,6 +20,8 @@ weight = 1
 
 ## News
 <ul>
+<li> 17/09/2020: From today, we will have an extra Q&A session each Thursday at 13.30. Moreover, the sessions are planned for 90 minutes instead of 45. We will end them earlier if there are no more things to discuss. Please check the updated schedule below</a>.  </li>
+
 <li> 20/08/2020: Due to the COVID-19 situation, the 2020-21 edition of the course will be given fully online. If the situation allows, on campus instructions will be planned on the second half of the course.  </li>
 
 <li> 19/08/2020: To ease communications, we have created a <i>Discord</i> channel. You are welcome to join <a href=https://discord.gg/fRVNXuK >here</a>. All official communications, however, will be always given on <a href=https://canvas.tue.nl/courses/15713>Canvas</a>.  </li>
@@ -105,16 +107,16 @@ A detailed planning for tha academic year 2020-21 is given below, and can be als
 
 
 
-| Week   |         Lecture         |                        Instruction/Labs                         | Topics                                                                   | Homework                                      |
+| Week   |         Lectures         |                        Instruction/Labs                         | Topics                                                                   | Homework                                      |
 |:------:|:-----------------------:|:---------------------------------------------------------------:|--------------------------------------------------------------------------|-----------------------------------------------|
-|   1    | 31/08/2020<br>08.45-9.30  |         No instructions<br>Labs 03/09/2020<br>15.30 - 17.20         | 1.1 Probability and random variables                                   | Quiz Week 1<br>Survey Week 1<br>MATLAB Demo 1  |
-|   2    | 07/09/2020<br>08.45-9.30  | Inst 07/09/2020<br>10.45 - 12.35<br>Labs 10/09/2020<br>15.30 - 17.20  | 1.2 Random processes and random signals<br>1.3 Rational signal models     | Quiz Week 2<br>Survey Week 2<br>MATLAB Demo 2   |
-|   3    | 14/09/2020<br>08.45-9.30  | Inst 14/09/2020<br>10.45 - 12.35<br>Labs 17/09/2020<br>15.30 - 17.20  | 2.1 Least square estimation<br>2.2 Maximum Likelihood Estimation           | Quiz Week 3<br>Survey Week 3<br>MATLAB Demo 3  |
-|   4    | 21/09/2020<br>08.45-9.30  | Inst 21/09/2020<br>10.45 - 12.35<br>Labs 24/09/2020<br>15.30 - 17.20  | 2.3 Bias, Variance, Cramer-Rao Lower Bound<br>2.4 MVUE for Linear models  | Quiz Week 4<br>Survey Week 4<br>MATLAB Demo 4  |
-|   5    | 28/09/2020<br>08.45-9.30  | Inst 28/09/2020<br>10.45 - 12.35<br>Labs 01/10/2020<br>15.30 - 17.20  | 2.5 Bayesian estimator<br>2.6 Numerical estimation methods                 | Quiz Week 5<br>Survey Week 5<br>MATLAB Demo 5   |
-|   6    | 05/10/2020<br>08.45-9.30  | Inst 05/10/2020<br>10.45 - 12.35<br>Labs 08/10/2020<br>15.30 - 17.20  | 2.7 Spectral estimation                                                  | Quiz Week 6<br>Survey Week 6<br>MATLAB Demo 6   |
-|   7    | 12/10/2020<br>08.45-9.30  | Inst 12/10/2020<br>10.45 - 12.35<br>Labs 15/10/2020<br>15.30 - 17.20  | 3.1 Hypothesis testing<br>3.2 Matched filter                               | Quiz Week 7<br>Survey Week 7<br>MATLAB Demo 7   |
-|   8    | 19/10/2020<br> 08.45-9.30  | Inst 19/10/2020<br>10.45 - 12.35<br>Labs 22/10/2020<br>15.30 - 17.20  | 3.3 Statistical tests<br>Old exams review                                  | Quiz Week 8<br>Survey Week 8<br>MATLAB Demo 8   |
+|   1    | 31/08/2020<br>08.45-9.30  |         No instructions<br><p style="color:#4E5480">Labs 03/09/2020<br>15.30 - 17.20</p>         | 1.1 Probability and random variables                                   | Quiz Week 1<br>Survey Week 1<br>MATLAB Demo 1  |
+|   2    | 07/09/2020<br>08.45-9.30  | Inst 07/09/2020<br>10.45 - 12.35<br> <p style="color:#4E5480">Labs 10/09/2020<br>15.30 - 17.20</p>   | 1.2 Random processes and random signals<br>1.3 Rational signal models     | Quiz Week 2<br>Survey Week 2<br>MATLAB Demo 2   |
+|   3    | 14/09/2020<br>08.45-9.30<br><p style="color:#4E5480">17/09/2020<br>13.30-14.30</p>   | Inst 14/09/2020<br>10.45 - 12.35<br><p style="color:#4E5480">Labs 17/09/2020<br>15.30 - 17.20</p>   | 2.1 Least square estimation<br>2.2 Maximum Likelihood Estimation           | Quiz Week 3<br>Survey Week 3<br>MATLAB Demo 3  |
+|   4    | 21/09/2020<br>08.45-10.15<br><p style="color:#4E5480">24/09/2020<br>13.30-14.30</p>   | Inst 21/09/2020<br>10.45 - 12.35<br><p style="color:#4E5480">Labs 24/09/2020<br>15.30 - 17.20</p>   | 2.3 Bias, Variance, Cramer-Rao Lower Bound<br>2.4 MVUE for Linear models  | Quiz Week 4<br>Survey Week 4<br>MATLAB Demo 4  |
+|   5    | 28/09/2020<br>08.45-10.15<br><p style="color:#4E5480">01/10/2020<br>13.30-14.30</p>   | Inst 28/09/2020<br>10.45 - 12.35<br><p style="color:#4E5480">Labs 01/10/2020<br>15.30 - 17.20</p>   | 2.5 Bayesian estimator<br>2.6 Numerical estimation methods                 | Quiz Week 5<br>Survey Week 5<br>MATLAB Demo 5   |
+|   6    | 05/10/2020<br>08.45-10.15<br><p style="color:#4E5480">08/10/2020<br>13.30-14.30</p>   | Inst 05/10/2020<br>10.45 - 12.35<br><p style="color:#4E5480">Labs 08/10/2020<br>15.30 - 17.20</p>   | 2.7 Spectral estimation                                                  | Quiz Week 6<br>Survey Week 6<br>MATLAB Demo 6   |
+|   7    | 12/10/2020<br>08.45-10.15<br><p style="color:#4E5480">15/10/2020<br>13.30-14.30</p>   | Inst 12/10/2020<br>10.45 - 12.35<br><p style="color:#4E5480">Labs 15/10/2020<br>15.30 - 17.20</p>   | 3.1 Hypothesis testing<br>3.2 Matched filter                               | Quiz Week 7<br>Survey Week 7<br>MATLAB Demo 7   |
+|   8    | 19/10/2020<br>08.45-10.15<br><p style="color:#4E5480">122/10/2020<br>13.30-14.30</p>   | Inst 19/10/2020<br>10.45 - 12.35<br><p style="color:#4E5480">Labs 22/10/2020<br>15.30 - 17.20</p>   | 3.3 Statistical tests<br>Old exams review                                  | Quiz Week 8<br>Survey Week 8<br>MATLAB Demo 8   |
 
 ## Contact
 In case any of the above material is unclear, please contact the responsible teachers of this course, dr. S. Turco (s.turco@tue.nl) and dr. R.F. Tigrek (r.f.tigrek@tue.nl). If there are any problems with the platform or with the material on the platform, please put the mail address sps.education@tue.nl in the CC of your email, or simply click <a href="mailto:{{< param responsibleteacher >}}?cc=sps.education@tue.nl&subject=[5CTA0]%20platform:%20{specify problem here}">here</a>. This will help us keep the platform up-to-date.
