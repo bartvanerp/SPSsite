@@ -22,6 +22,11 @@ weight = 230
 
 Many different estimators can be formulated to estimate the controlling parameters $\theta$ of a signal model. In fact, many different signal models can be hypothesized as the source of the data, just as the noise can have different distributions. The question naturally arises: How can we know if an estimator is the best one possible? How accurately can we estimate the controlling parameters of a signal model? How can we even compare the performances of two estimators? In this module, we are going to devise the performance measures for estimators and come up with a performance bound that marks the best performance for a broad class of estimators.
 
+
+<div class="video-container">
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/g1HX0nNL9E8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
+
 ---
 <b>Example:</b> Consider the problem of estimating the voltage level $\theta$ from the data
 \begin{equation}
