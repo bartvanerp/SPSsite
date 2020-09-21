@@ -111,7 +111,7 @@ Thus, the noise covariance matrix is decomposed such that
 
 To obtain the estimator, the whitening is applied to the data,
 \begin{equation}
-\mathbf{x}'=\mathbf{D}\mathbf{x}=\mathbf{DH}\Theta+\mathbf{Dx},
+\mathbf{x}'=\mathbf{D}\mathbf{x}=\mathbf{DH}\Theta+\mathbf{Dw},
 \end{equation}
 and processed using the MVUE for AWGN:
 \begin{equation}
@@ -141,8 +141,9 @@ E(\hat\Theta)=\mathbf{A}E(\mathbf{x})=\Theta,
 where $\mathbf{A}$ is the K by N matrix that consists of the coefficients $a_{k,n}$.
 
 The zero bias assumption leads to a linear relation between the parameter $\theta$ and the expected value of the data such that 
+
 \begin{equation}
-$E(\mathbf{x})=\mathbf{H}\Theta$.
+E(\mathbf{x})=\mathbf{H}\Theta.
 \end{equation}
 In other words, the expected value of the data is described by the linear signal model. In this case, the coefficient matrix $\mathbf{A}$ is related to the signal model as
 \begin{equation}
