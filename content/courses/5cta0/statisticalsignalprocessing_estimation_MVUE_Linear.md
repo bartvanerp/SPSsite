@@ -26,6 +26,10 @@ The performance of an estimator can be evaluated by calculating the bias and var
 </ul>
 The module begins by introducing the linear signal model and derives the MVUE according to the Gaussian noise. To be able to handle a larger class of problems, the MVUE is extended to cover colored Gaussian noise. An interesting approach, when the information on noise distribution is not complete, is to approximate the noise as Gaussian by considering only the expected value and variance for the noise. Such estimators are called best linear unbiased estimators (BLUE), which are covered at the end of the module.
 
+<div class="video-container">
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/G7iaEwnkihs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
+
 
 ## Linear Signal Model
 
