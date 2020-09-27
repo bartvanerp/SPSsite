@@ -22,14 +22,16 @@ weight = 260
 
 For each estimator we investigate in this course, we introduce the formal description and demonstrate the derivation of a closed form estimator when the signal model and noise distribution is suitable. However, the closed form solution may not be available in many situations. Moreover, the data might be following a time dependent distribution, which precludes using a single signal model for a data batch. In this module, we will see several solution methods to cover such situations. It can be said that a significant portion of the signal processing research focuses on devising solutions to problems that deviate from the standard methods described in this course. Thus, this module is far from a comprehensive investigation of all such methods. The goal of this module is to give insight on the practical side of the estimation problems.
 
+<div class="video-container">
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/e3MSavcKkiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
+
 
 ## The Gauss-Newton Method
 
 In <a href="../estimation_leastsquares">the least squares estimation (LSE)</a> module, we consider the grid search to find the minimum of the squared error term. The tricky part of the grid search is the inability to determine the exact parameter value that corresponds to the minimum. Increasing the density of the grid points reduces the error in the parameter estimate asymptotically. Numerical methods that search for the extremum are utilized to obtain estimates with smaller error. The Gauss-Newton method is a numerical method that follows the gradient to reach the extremum.
 
-The Gauss-Newton method is based on approximating a function by the first two terms of its Taylor series around a particular point. In other words, at a particular parameter value of interest, we replace the non-linear function by a line that has the same slope (i.e. the value for the first derivative) as the original function. The linear approximation is depicted in Fig. X.
-
-<b> Insert Figure Here</b>.
+The Gauss-Newton method is based on approximating a function by the first two terms of its Taylor series around a particular point. In other words, at a particular parameter value of interest, we replace the non-linear function by a line that has the same slope (i.e. the value for the first derivative) as the original function. 
 
 We demonstrate the Gauss-Newton method for the LSE by starting with the approximation of the non-linear signal model:
 \begin{equation}
@@ -71,7 +73,7 @@ Starting from an initial value $\Theta_0$, the LSE can be iteratively calculated
 
 ## The Newton-Raphson Method
 
-The Newton-Raphson method searches for the zero of a function by measuring the gradient of that function. The idea is to approximate the behavior of the function at a particular point by a tangential line passing through that point. In other words, on a specific parameter value, the function is approximated by a line with the same slope as the function on that specific parameter value. The Newton-Raphson method is depicted in Fig. X. For a generic function $f[n,\theta]$, the parameter value where the line approximating the function intercepts the parameter axis is found by
+The Newton-Raphson method searches for the zero of a function by measuring the gradient of that function. The idea is to approximate the behavior of the function at a particular point by a tangential line passing through that point. In other words, on a specific parameter value, the function is approximated by a line with the same slope as the function on that specific parameter value. For a generic function $f[n,\theta]$, the parameter value where the line approximating the function intercepts the parameter axis is found by
 \begin{equation}
 f(\theta)=(\theta_0-\theta)\frac{\partial f(\theta)}{\partial\theta}\Bigg|_{\theta=\theta_0}
 \end{equation}
@@ -80,7 +82,7 @@ Solving this equation, we obtain the parameter as
 \theta=\theta_0-f(\theta_0)\Bigg(\frac{\partial f(\theta)}{\partial\theta}\Bigg|_{\theta=\theta_0}\Bigg)^{-1}
 \end{equation}
 
-We observe in Fig. X. that, while the solution to the equation above is closer to the actual zero of the function, there is still room for improvement. The approximation can be utilized again, this time the first derivative is evaluated on the new estimate. The iterative formulation is
+While the solution to the equation above is closer to the actual zero of the function, there is still room for improvement. The approximation can be utilized again, this time the first derivative is evaluated on the new estimate. The iterative formulation is
 \begin{equation}
 \theta_{m+1}=\theta_m-f(\theta_m)\Bigg(\frac{\partial f(\theta)}{\partial\theta}\Bigg|_{\theta=\theta_m}\Bigg)^{-1}
 \end{equation}
