@@ -30,4 +30,4 @@ More topics will be added in the future. If you feel like you are missing some k
 
 
 ## test quiz
-<div id="quizContainer" file="..//files/11.Quiz/quiz1.js" class="quiz-container"></div>
+<div id="quizContainer" file="..//files/11.Quiz/test_quiz.js" class="quiz-container"></div>
