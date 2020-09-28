@@ -21,7 +21,7 @@ It would be nice to extrapolate the auto-correlation function for larger lags, b
 
 This pattern or <i>signal model</i> requires us to have some prior information about the signal generating process, otherwise it is impossible to determine an accurate signal model that would correspond to the obtained auto-correlation function. After the signal model has been identified, it needs to be fitted to the available auto-correlation function. This means that the unknown parameters of the signal model are estimated according to the available auto-correlation function, and once the parameters are estimated, the signal model can be used to estimate the entire auto-correlation function.
 
-This approach is very different from the non-parametric methods and it is usually refer to as <i>parametric method</i>, by which parameters of a signal model are estimated such that signal and auto-correlation function can be described by such a model. The parametric approach roughly consists of three steps. First, a signal model needs to be defined. This step is usually the hardest since it would ideally require prior knowledge on the random process. If this knowledge is not available, then several models can be fitted to the data after which the most optimal is chosen. The definition of optimal depends on the evaluation criterion. Finally, once the model is defined, the parameters can be estimated and the power spectral density can be obtained using the signal model.
+This approach is very different from the non-parametric methods and it is usually referred to as <i>parametric method</i>, by which parameters of a signal model are estimated such that signal and auto-correlation function can be described by such a model. The parametric approach roughly consists of three steps. First, a signal model needs to be defined. This step is usually the hardest since it would ideally require prior knowledge on the random process. If this knowledge is not available, then several models can be fitted to the data after which the most optimal is chosen. The definition of optimal depends on the evaluation criterion. Finally, once the model is defined, the parameters can be estimated and the power spectral density can be obtained using the signal model.
 
 <br></br>
 ## Rational signal models
@@ -178,7 +178,7 @@ Once the MA(q) process has been separated, the MA parameters can be determined u
 
 <br></br>
 ## Model selection
-As mentioned in the beginning of this section, choosing the right model is the hardest design choice in parametric estimation. There is an infinite number of options to explore each with a different complexity. But how can we know which model is actually the best? As an analogy we present a well-known regression example, where the goal is to describe a set of points as good as possible using a function. Fig. 1 shows three lines that were fitted to some data. Intuitively, the middle plot seems to represent the best fit; the left plot does not capture the essence of the samples (large error), while the right plot tunes to the specific data points, and hence might tune to the noise rather than the actual model generating the data. If there would be new data, which is similarly distributed as the already present data, then the fit of the right plot would be inadequate. Thus, when choosing a model it can either be too simplistic or too complex. These phenomena are respectively called <i>underfitting</i> and <i>overfitting</i>.
+As mentioned at the beginning of this section, choosing the right model is the hardest design choice in parametric estimation. There is an infinite number of options to explore each with different complexity. But how can we know which model is actually the best? As an analogy we present a well-known regression example, where the goal is to describe a set of points as good as possible using a function. Fig. 1 shows three lines that were fitted to some data. Intuitively, the middle plot seems to represent the best fit; the left plot does not capture the essence of the samples (large error), while the right plot tunes to the specific data points, and hence might tune to the noise rather than the actual model generating the data. If there would be new data, which is similarly distributed as the already present data, then the fit of the right plot would be inadequate. Thus, when choosing a model it can either be too simplistic or too complex. These phenomena are respectively called <i>underfitting</i> and <i>overfitting</i>.
 
 <div style="max-width: 900px; margin: auto">
   <figure>
@@ -223,7 +223,7 @@ This criterion, however, is very likely to lead to overfitting when the number o
 \end{equation}
 The best model order is chosen as the one that yields the lowest AIC (or AICc).
 
-Although these criteria are useful to compare similar models of the different orders, they are not suited to compare different model structure. This a much more complex task that is beyond the scope of this reader.
+Although these criteria are useful to compare similar models of different orders, they are not suited to compare different model structure. This a much more complex task that is beyond the scope of this reader.
 
 ### Example
 Given some data that can ideally be modelled as
