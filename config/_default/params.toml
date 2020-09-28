@@ -98,8 +98,8 @@ zoom = 15
 # Load CSS and JS plugins
 #   E.g. To load `/assets/css/custom.css`, set `plugins_css = ["custom"]`.
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-plugins_css = []
-plugins_js  = []
+plugins_css = ["style"]
+plugins_js  = ["libs/require", "main", "quiz/buildanswers", "quiz/pagination", "quiz/buildquiz", "quiz/parsequiz", "quiz/progressbar", "quiz/showresults", "utils/confetti", "utils/numberofoccurences", "utils/randompermutation", "utils/replaceall", "utils/searchall", "utils/shuffle", "utils/sleep"]
 
 ############################
 ## Advanced options       ##
