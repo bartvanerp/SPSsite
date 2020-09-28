@@ -19,7 +19,7 @@ This section will describe the main methods used to calculate the energy and pow
 
 <br></br>
 ## Energy signals
-If an infinitely long signal has a finite signal energy it is called an <i>energy signal</i>. Since the energy is finite and the time duration infinite, the average signal power is zero. An example of an energy signal is a short pulse that is transmitted only once. An energy signal can be characterized by its <i>energy spectral distribution</i> (ESD), which describes the energy distribution of the signal in the frequency domain. The ideal energy spectral density is denoted by $\mathcal{E}(e^{j\theta})$ and can be calculated using a direct or an indirect method.
+If an infinitely long signal has finite signal energy it is called an <i>energy signal</i>. Since the energy is finite and the time duration infinite, the average signal power is zero. An example of an energy signal is a short pulse that is transmitted only once. An energy signal can be characterized by its <i>energy spectral distribution</i> (ESD), which describes the energy distribution of the signal in the frequency domain. The ideal energy spectral density is denoted by $\mathcal{E}(e^{j\theta})$ and can be calculated using a direct or an indirect method.
 
 As described in the reader on random processes and signals, the total energy $E_s$ of an energy signal $x[n]$ can be calculated as
 \begin{equation}\label{eq:energy}
