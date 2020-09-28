@@ -124,7 +124,7 @@ When this relationship is regarded in the Fourier domain the multiplication-conv
 
 This shows that the correlogram (or periodogram) provides an estimate of the power spectral density which is a smoothed version of the true PSD (see Fig. 1). As $N\rightarrow\infty$ the spectrum of the windowing function will approach a delta pulse function and the expected value of the estimated periodogram will become the true periodogram.   
 
-From equation (\ref{eq:exp_p}) we also notice that the expected value of the PSD estimator is related to spectrum of the window function. For a rectangular window, this results in
+From equation (\ref{eq:exp_p}) we also notice that the expected value of the PSD estimator is related to the spectrum of the window function. For a rectangular window, this results in
 \begin{equation}\label{eq:ft_rect}
         W_R(e^{j\theta}) = \frac{1}{N}\left(\frac{\sin(N\theta/2)}{\sin(\theta/2)}\right),
 \end{equation}
@@ -139,7 +139,7 @@ which is a squared sinc function. The proof of (\ref{eq:ft_triang}) is beyond th
 Since $W_R(e^{j\theta})$ can have negative values, it may lead to an invalid power spectral density function, which by definition is always non-negative. For a triangular window we instead obtain a squared sinc, which is a non-negative function.
 This explains why we typically use the biased estimate of the autocorrelation function $r_b[l]$ given in (\ref{eq:ac_biased}). In fact, although unbiased, using $r_{ub}[l]$ to estimate the PSD by the correlogram method might lead to an invalid PSD.
 
->As a rule of thumb, it is good to use at least 50 samples and use the biased estimator calculate on lags up to a quarter of the number of samples.
+>As a rule of thumb, it is good to use at least 50 samples and use the biased estimator to calculate on lags up to a quarter of the number of samples.
 
 A key aspect here is that the window is applied directly to the autocorrelation rather than to the signal. Thus, to obtain the PSD estimate, we simply take the transform of the windowed autocorrelation (correlogram), while if we were to calculate the PSD estimate from the signal, we would need to calculate the modulus squared of the transform (periodogram).
 
@@ -184,8 +184,8 @@ From equation (\ref{res_leakage}), we can easily separate the contribution of th
 
 
 #### Calculation of the biased auto-correlation function using the DFT
-When dealing with windowed signals longer than 100 samples, the auto-correlation function is oftentimes more efficiently calculated using the DFT or FFT. Fig. 2 shows a schematic overview of the calculation procedure. Normally the signal is windowed using a window of length $N$. From this windowed signal the auto-correlation function of length $2N-1$ can be calculated through the definition of the auto-correlation function.
-Another way of performing this calculation is as follows. First, the signal is windowed with length $N$ and zero-padded to length $M$. The windowed signal should be at least $2N-1$ samples long. From this signal the DFT or FFT is calculated and its magnitude is squared and normalized, after which the IDFT or IFFT is calculated. From the obtained signal, the auto-correlation function can be determined by shifting the signal segments as indicated in Fig. 2.
+When dealing with windowed signals longer than 100 samples, the auto-correlation function is oftentimes more efficiently calculated using the Discrete Fourier Transform (DFT) or Fast Fourier Transform (FFT). Fig. 2 shows a schematic overview of the calculation procedure. Normally the signal is windowed using a window of length $N$. From this windowed signal the auto-correlation function of length $2N-1$ can be calculated through the definition of the auto-correlation function.
+Another way of performing this calculation is as follows. First, the signal is windowed with length $N$ and zero-padded to length $M$. The windowed signal should be at least $2N-1$ samples long. From this signal the DFT or FFT is calculated and its magnitude is squared and normalized, after which the inverse DFT (IDFT) or IFFT is calculated. From the obtained signal, the auto-correlation function can be determined by shifting the signal segments as indicated in Fig. 2.
 
 <div style="max-width: 900px; margin: auto">
   <figure>
