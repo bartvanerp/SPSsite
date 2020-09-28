@@ -123,7 +123,7 @@ Note that the LSE is actually the BLUE, so we can use the Gauss-Markov theorem t
 
 The important condition to compute both the estimate $\hat\Theta$ and its covariance is the noise being uncorrelated, which correcponds to a diagonal noise covariance matrix. Under this condition, the sequential LSE/BLUE is
 \begin{equation}
-\hat\Theta_{N}=\hat\Theta_{N-1}+\mathbf{K}_{N}\big(x[N]-\mathbf{h}^T[N]\hat\Theta_N\big)
+\hat\Theta_{N}=\hat\Theta_{N-1}+\mathbf{K}_{N}\big(x[N]-\mathbf{h}^T[N]\hat\Theta_{N-1}\big)
 \end{equation}
 where $\mathbf{h}^T[N]$ is the $N^\text{th}$ row of the observation matrix $\mathbf{H}$ when the corresponding data sample $x[N]$ is acquired. The term $x[N]-\mathbf{h}^T[N]\hat\Theta_{N-1}$ is the innovation, which is the difference between the data sample $x[N]$ and the estimate we have for that data sample, which is $\mathbf{h}^T[N]\hat\Theta_{N-1}$. Based on our estimated parameter $\hat\Theta_{N-1}$ after the $N-1^\text{th}$ data sample, we come up with an estimate for the $N^\text{th}$ sample we acquire. For BLUE, the estimate is updated according to the innovation and a gain term $\mathbf{K}_{N}$, which is calculated as
 \begin{equation}
@@ -132,9 +132,9 @@ where $\mathbf{h}^T[N]$ is the $N^\text{th}$ row of the observation matrix $\mat
 For LSE, it is possible to lack information on the noise variance altogether. Thus, we need a gain term that does not depend on the noise covariance, which is obtained by replacing the noise covariance matrix $\mathbf{C}$ in the gain expression with the identity matrix $\mathbf{I}$ of the same size.
 
 Finally, for BLUE the covariance is updated as
-\begin{equation}
+\begin{eqnarray*}
 \mathbf{C}_N=(\mathbf{I}-\mathbf{K}_N \mathbf{h}^T[N])\mathbf{C}_{N-1}
-\end{equation}
+\end{eqnarray*}
 
 The concepts of innovation, gain and sequential update for the estimate form the core of other recursive filtering techniques such as the Kalman filter. The gain term is actually quite intuitive: The weight of the innovation depends on the relation between the sample variance and the estimator variance. If the sample variance is higher than the estimator variance, then the denominator of the gain term is dominated by the noise variance and the gain is lower. For lower noise variance, the innovation term is considered more reliable and the gain is higher. 
 
