@@ -85,7 +85,7 @@ To maximize the aposteriori, the first derivative of the aposteriori has to be s
 
 The minimum mean square error is a powerful concept that allows us to analyze the error we make in our estimations. We consider the variation of the estimates for $\theta$ by stating that the squared estimation error is $(\hat\theta-\theta)^2$. The squared error is considered, because the deviation of $\hat\theta$ from $\theta$ is important rather than the sign of the deviation. The minimum mean squared error is the starting point to describe the minimum variance unbiased estimators (MVUE). **The classical mean squared error (MSE)** accounts for the randomness of the estimation by
 \begin{equation}
-mse(\hat\theta)=E[(\hat\theta=\theta)^2]=\int(\hat\theta-\theta)^2p(\mathbf{x};\theta)dx.
+mse(\hat\theta)=E[(\hat\theta-\theta)^2]=\int(\hat\theta-\theta)^2p(\mathbf{x};\theta)dx.
 \end{equation}
 where $\theta$ is considered a *deterministic* unknown variable.
 
