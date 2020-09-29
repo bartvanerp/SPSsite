@@ -49,7 +49,7 @@ Thus, the partial derivative of the signal model $\mathbf{s}(\Theta)$ with respe
 
 The approximation by Taylor series allows us to write the data as
 \begin{equation}
-\mathbf{x}\approx\mathbf{s}(\Theta_0)+\mathbf{H}(\Theta_0)\Theta_0+\mathbf{H}(\Theta_0)\Theta+\mathbf{w}.
+\mathbf{x}\approx\mathbf{s}(\Theta_0)-\mathbf{H}(\Theta_0)\Theta_0+\mathbf{H}(\Theta_0)\Theta+\mathbf{w}.
 \end{equation}
 We can write the squared error term according to the linear data model given above, which allows deriving a closed form solution. Consider the squared error term:
 \begin{equation}
@@ -75,7 +75,7 @@ Starting from an initial value $\Theta_0$, the LSE can be iteratively calculated
 
 The Newton-Raphson method searches for the zero of a function by measuring the gradient of that function. The idea is to approximate the behavior of the function at a particular point by a tangential line passing through that point. In other words, on a specific parameter value, the function is approximated by a line with the same slope as the function on that specific parameter value. For a generic function $f[n,\theta]$, the parameter value where the line approximating the function intercepts the parameter axis is found by
 \begin{equation}
-f(\theta)=(\theta_0-\theta)\frac{\partial f(\theta)}{\partial\theta}\Bigg|_{\theta=\theta_0}
+f(\theta_0)=(\theta_0-\theta)\frac{\partial f(\theta)}{\partial\theta}\Bigg|_{\theta=\theta_0}
 \end{equation}
 Solving this equation, we obtain the parameter as
 \begin{equation}
