@@ -53,11 +53,11 @@ The approximation by Taylor series allows us to write the data as
 \end{equation}
 We can write the squared error term according to the linear data model given above, which allows deriving a closed form solution. Consider the squared error term:
 \begin{equation}
-J(\Theta) = \big(\mathbf{x}-\mathbf{s}(\Theta_0)-\mathbf{H}(\Theta_0)\Theta_0-\mathbf{H}(\Theta_0)\Theta\big)^T\big(\mathbf{x}-\mathbf{s}(\Theta_0)-\mathbf{H}(\Theta_0)\Theta_0-\mathbf{H}(\Theta_0)\Theta\big)
+J(\Theta) = \big(\mathbf{x}-\mathbf{s}(\Theta_0)+\mathbf{H}(\Theta_0)\Theta_0-\mathbf{H}(\Theta_0)\Theta\big)^T\big(\mathbf{x}-\mathbf{s}(\Theta_0)+\mathbf{H}(\Theta_0)\Theta_0-\mathbf{H}(\Theta_0)\Theta\big)
 \end{equation} 
 To minimize this term, we take the partial derivative with respect to the parameter vector $\Theta$, which follows the derivative operation in linear algebraic form that is described in <a href="../estimation_leastsquares/#least-squares-estimator-for-vector-parameters">the least squares estimation (LSE)</a> module:
 \begin{equation}
-\frac{\partial J(\Theta)}{\partial\Theta}\Bigg|_{\Theta=\hat\Theta}=-2\mathbf{H}(\Theta_0)^T(\mathbf{x}-\mathbf{s}(\Theta_0)-\mathbf{H}(\Theta_0)\Theta_0)+2\mathbf{H}(\Theta_0)^T\mathbf{H}(\Theta_0)\hat\Theta=\mathbf{0}
+\frac{\partial J(\Theta)}{\partial\Theta}\Bigg|_{\Theta=\hat\Theta}=-2\mathbf{H}(\Theta_0)^T(\mathbf{x}-\mathbf{s}(\Theta_0)+\mathbf{H}(\Theta_0)\Theta_0)+2\mathbf{H}(\Theta_0)^T\mathbf{H}(\Theta_0)\hat\Theta=\mathbf{0}
 \end{equation}
 The estimate $\hat\Theta$ is
 \begin{equation}
