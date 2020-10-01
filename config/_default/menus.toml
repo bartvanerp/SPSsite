@@ -9,6 +9,11 @@
   weight = 10
 
 [[main]]
+  name = "Info"
+  url = "/info/main"
+  weight = 11
+
+[[main]]
   name = "Disciplines"
   url = "/disciplines/overview"
   weight = 20
