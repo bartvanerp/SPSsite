@@ -260,10 +260,10 @@ which proves that the variance indeed decreases for an increase in number of sig
   <figure>
     <img
       src="/../files/7.Images/statistical/spectrum/bartlett_welch.svg"
-      alt="A graphical representation of Bartlett's and Welch's method. In Bartlett's method periodograms of non-overlapping signal segment are averaged for the final periodogram and in Welch's method periodograms of overlapping windowed signal segment are averaged for the final periodogram."
+      alt="A graphical representation of Bartlett's and Welch's method. In Bartlett's method periodograms of non-overlapping signal segments are averaged for the final periodogram and in Welch's method periodograms of overlapping windowed signal segments are averaged for the final periodogram."
     />
     <figcaption class="numbered">
-      A graphical representation of Bartlett's and Welch's method. In Bartlett's method periodograms of non-overlapping signal segment are averaged for the final periodogram and in Welch's method periodograms of overlapping windowed signal segment are averaged for the final periodogram.
+      A graphical representation of Bartlett's and Welch's method. In Bartlett's method periodograms of non-overlapping signal segments are averaged for the final periodogram and in Welch's method periodograms of overlapping windowed signal segments are averaged for the final periodogram.
     </figcaption>
   </figure>
 </div>
@@ -281,7 +281,7 @@ The basic idea of The Blackman-Tukey correlogram is to apply a symmetric window 
 \begin{equation}
     \hat{P}\_{BT}(e^{j\theta}) = \sum\_{l=-(L-1)}^{L-1} w\_L[l]\hat{r}[l]e^{-jl\theta}.
 \end{equation}
-Here the estimated auto-correlation function is windowed. Note that window is additional to the triangular window which is inherent in the biased estimation of the autocorrelation function. The reason to include an extra window is due to the fact that the estimated auto-correlation is very uncertain at the edges of the observation window, since at these lags it is calculated using a very limited number of samples. Whereas in the center of the window $\hat{r}[l]$ is computed with almost all samples available. Therefore, by using a suitable window, we can reduce the weight of the auto-correlation lags at the edges of the window, were only few samples are available. In the frequency domain, the Blackman-Tukey estimator can be interpreted as the convolution between the spectrum of the window and the estimated power spectral density as
+Here the estimated auto-correlation function is windowed. Note that window is additional to the triangular window which is inherent in the biased estimation of the autocorrelation function. The reason to include an extra window is due to the fact that the estimated auto-correlation is very uncertain at the edges of the observation window, since at these lags it is calculated using a very limited number of samples. Whereas in the center of the window $\hat{r}[l]$ is computed with almost all samples available. Therefore, by using a suitable window, we can reduce the weight of the auto-correlation lags at the edges of the window, where only few samples are available. In the frequency domain, the Blackman-Tukey estimator can be interpreted as the convolution between the spectrum of the window and the estimated power spectral density as
 \begin{equation}
     \hat{P}\_{BT}(e^{j\theta}) = \frac{1}{2\pi} \hat{P}(e^{j\theta})\ast W_L(e^{j\theta}).
 \end{equation}
