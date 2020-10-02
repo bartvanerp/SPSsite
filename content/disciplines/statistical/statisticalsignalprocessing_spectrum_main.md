@@ -36,7 +36,13 @@ The simplest and most straightforward method for estimation of the signal spectr
 After more careful studying, the student comes to the realization that the operation he performed just gave him an <i>estimate</i> of the frequency content. In this specific case, the student could easily have obtained the expected frequency spectrum. The student neglected the fact that the `fft()`-operation assumes a periodic signal. In this case the signal is <i>windowed</i>, meaning that the infinitely long signal is cropped to a finite length, which is no longer periodic, leading to potentially undesirable results in the frequency domain.
 
 From this we can conclude that just calculating the spectrum of a signal, especially when it is comprised of multiple signals, is not as easy as it sounds. Since any real-world signal can be observed only for a limited amount of time, **all real-world signals are virtually windowed**. Another reason for windowing is to study non-stationary signals in short time segments, within which they can be considered stationary. Besides the effects of windowing, we cannot know in advance whether the signal is periodic or not. Because of these reasons, it is usually impossible to determine the exact spectrum of an observed random signal. Therefore we need to resort to estimation techniques for the calculation of the frequency spectrum of a finite random signal, a problem known as <i>spectral estimation</i>.
+### Screencast video [⯈]
 
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/G0uywfC6BRE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br></br>
 
 <br></br>
 ## Module overview
