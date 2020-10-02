@@ -16,6 +16,14 @@ type = "docs"  # Do not modify.
 +++
 
 This section will discuss several techniques to perform power spectral density estimation. In the section <a href="../statisticalsignalprocessing_spectrum_psd">Spectral distributions</a>, we have seen the direct and indirect methods for calculating the power spectral density, which are also referred to as *periodogram* and *correlogram*, respectively. In the following, we will start by showing the performance of these two estimators of the power spectral density in terms of bias and variance, and then we will describe methods to improve the estimation performance.
+### Screencast video [⯈]
+
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/nQFz6rbX80c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br></br>
+
 
 ## "Raw" estimators of the power spectral density
 
