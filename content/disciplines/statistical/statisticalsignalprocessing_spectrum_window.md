@@ -21,6 +21,14 @@ The methods presented in the previous section for the calculation of the power s
 
 Calculating the spectrum of signal $x[n]$ when only the windowed signal $\tilde{x}[n]$ is available leads to several issues. First of all, in most practical cases the spectrum will be calculated through the N-point discrete-time Fourier transform (DFT), which is actually a sampled version of the Fourier transform for discrete-time signals (FTD). Therefore, it is possible that important signal characteristics will get lost. Secondly, windowing causes <i>spectral leakage</i>, which means that single frequency components will be spread throughout the frequency spectrum. Finally, windowing leads to loss of <i>resolution</i>, which relates to the ability of distinguishing between different spectral components.
 
+### Screencast video [⯈]
+
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Woi2HemfAvI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br></br>
+
 <br></br>
 ## A rectangular window
 To illustrate the consequences of windowing, we will show the case of the simplest window: the rectangular window. The rectangular window $w[n]$ can be defined as
