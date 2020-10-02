@@ -18,6 +18,15 @@ type = "docs"  # Do not modify.
 This section will describe the main methods used to calculate the energy and power spectrum of a discrete-time signal. Initially, we will assume that the signal is infinitely long, has zero-mean and is stationary. However, since this is usually not the case, we will later analyze the consequences of these non-ideal conditions.
 
 <br></br>
+
+### Screencast video [⯈]
+
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/YSlmCHvJ0ek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br></br>
+
 ## Energy signals
 If an infinitely long signal has finite signal energy it is called an <i>energy signal</i>. Since the energy is finite and the time duration infinite, the average signal power is zero. An example of an energy signal is a short pulse that is transmitted only once. An energy signal can be characterized by its <i>energy spectral distribution</i> (ESD), which describes the energy distribution of the signal in the frequency domain. The ideal energy spectral density is denoted by $\mathcal{E}(e^{j\theta})$ and can be calculated using a direct or an indirect method.
 
