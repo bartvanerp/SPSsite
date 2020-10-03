@@ -16,6 +16,14 @@ type = "docs"  # Do not modify.
 +++
 
 This section will discuss several techniques to perform power spectral density estimation. In the section <a href="../statisticalsignalprocessing_spectrum_psd">Spectral distributions</a>, we have seen the direct and indirect methods for calculating the power spectral density, which are also referred to as *periodogram* and *correlogram*, respectively. In the following, we will start by showing the performance of these two estimators of the power spectral density in terms of bias and variance, and then we will describe methods to improve the estimation performance.
+### Screencast video [⯈]
+
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/nQFz6rbX80c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br></br>
+
 
 ## "Raw" estimators of the power spectral density
 
@@ -124,7 +132,7 @@ When this relationship is regarded in the Fourier domain the multiplication-conv
 
 This shows that the correlogram (or periodogram) provides an estimate of the power spectral density which is a smoothed version of the true PSD (see Fig. 1). As $N\rightarrow\infty$ the spectrum of the windowing function will approach a delta pulse function and the expected value of the estimated periodogram will become the true periodogram.   
 
-From equation (\ref{eq:exp_p}) we also notice that the expected value of the PSD estimator is related to spectrum of the window function. For a rectangular window, this results in
+From equation (\ref{eq:exp_p}) we also notice that the expected value of the PSD estimator is related to the spectrum of the window function. For a rectangular window, this results in
 \begin{equation}\label{eq:ft_rect}
         W_R(e^{j\theta}) = \frac{1}{N}\left(\frac{\sin(N\theta/2)}{\sin(\theta/2)}\right),
 \end{equation}
@@ -139,7 +147,7 @@ which is a squared sinc function. The proof of (\ref{eq:ft_triang}) is beyond th
 Since $W_R(e^{j\theta})$ can have negative values, it may lead to an invalid power spectral density function, which by definition is always non-negative. For a triangular window we instead obtain a squared sinc, which is a non-negative function.
 This explains why we typically use the biased estimate of the autocorrelation function $r_b[l]$ given in (\ref{eq:ac_biased}). In fact, although unbiased, using $r_{ub}[l]$ to estimate the PSD by the correlogram method might lead to an invalid PSD.
 
->As a rule of thumb, it is good to use at least 50 samples and use the biased estimator calculate on lags up to a quarter of the number of samples.
+>As a rule of thumb, it is good to use at least 50 samples and use the biased estimator to calculate on lags up to a quarter of the number of samples.
 
 A key aspect here is that the window is applied directly to the autocorrelation rather than to the signal. Thus, to obtain the PSD estimate, we simply take the transform of the windowed autocorrelation (correlogram), while if we were to calculate the PSD estimate from the signal, we would need to calculate the modulus squared of the transform (periodogram).
 
@@ -184,8 +192,8 @@ From equation (\ref{res_leakage}), we can easily separate the contribution of th
 
 
 #### Calculation of the biased auto-correlation function using the DFT
-When dealing with windowed signals longer than 100 samples, the auto-correlation function is oftentimes more efficiently calculated using the DFT or FFT. Fig. 2 shows a schematic overview of the calculation procedure. Normally the signal is windowed using a window of length $N$. From this windowed signal the auto-correlation function of length $2N-1$ can be calculated through the definition of the auto-correlation function.
-Another way of performing this calculation is as follows. First, the signal is windowed with length $N$ and zero-padded to length $M$. The windowed signal should be at least $2N-1$ samples long. From this signal the DFT or FFT is calculated and its magnitude is squared and normalized, after which the IDFT or IFFT is calculated. From the obtained signal, the auto-correlation function can be determined by shifting the signal segments as indicated in Fig. 2.
+When dealing with windowed signals longer than 100 samples, the auto-correlation function is oftentimes more efficiently calculated using the Discrete Fourier Transform (DFT) or Fast Fourier Transform (FFT). Fig. 2 shows a schematic overview of the calculation procedure. Normally the signal is windowed using a window of length $N$. From this windowed signal the auto-correlation function of length $2N-1$ can be calculated through the definition of the auto-correlation function.
+Another way of performing this calculation is as follows. First, the signal is windowed with length $N$ and zero-padded to length $M$. The windowed signal should be at least $2N-1$ samples long. From this signal the DFT or FFT is calculated and its magnitude is squared and normalized, after which the inverse DFT (IDFT) or IFFT is calculated. From the obtained signal, the auto-correlation function can be determined by shifting the signal segments as indicated in Fig. 2.
 
 <div style="max-width: 900px; margin: auto">
   <figure>
@@ -260,10 +268,10 @@ which proves that the variance indeed decreases for an increase in number of sig
   <figure>
     <img
       src="/../files/7.Images/statistical/spectrum/bartlett_welch.svg"
-      alt="A graphical representation of Bartlett's and Welch's method. In Bartlett's method periodograms of non-overlapping signal segment are averaged for the final periodogram and in Welch's method periodograms of overlapping windowed signal segment are averaged for the final periodogram."
+      alt="A graphical representation of Bartlett's and Welch's method. In Bartlett's method periodograms of non-overlapping signal segments are averaged for the final periodogram and in Welch's method periodograms of overlapping windowed signal segments are averaged for the final periodogram."
     />
     <figcaption class="numbered">
-      A graphical representation of Bartlett's and Welch's method. In Bartlett's method periodograms of non-overlapping signal segment are averaged for the final periodogram and in Welch's method periodograms of overlapping windowed signal segment are averaged for the final periodogram.
+      A graphical representation of Bartlett's and Welch's method. In Bartlett's method periodograms of non-overlapping signal segments are averaged for the final periodogram and in Welch's method periodograms of overlapping windowed signal segments are averaged for the final periodogram.
     </figcaption>
   </figure>
 </div>
@@ -281,7 +289,7 @@ The basic idea of The Blackman-Tukey correlogram is to apply a symmetric window 
 \begin{equation}
     \hat{P}\_{BT}(e^{j\theta}) = \sum\_{l=-(L-1)}^{L-1} w\_L[l]\hat{r}[l]e^{-jl\theta}.
 \end{equation}
-Here the estimated auto-correlation function is windowed. Note that window is additional to the triangular window which is inherent in the biased estimation of the autocorrelation function. The reason to include an extra window is due to the fact that the estimated auto-correlation is very uncertain at the edges of the observation window, since at these lags it is calculated using a very limited number of samples. Whereas in the center of the window $\hat{r}[l]$ is computed with almost all samples available. Therefore, by using a suitable window, we can reduce the weight of the auto-correlation lags at the edges of the window, were only few samples are available. In the frequency domain, the Blackman-Tukey estimator can be interpreted as the convolution between the spectrum of the window and the estimated power spectral density as
+Here the estimated auto-correlation function is windowed. Note that window is additional to the triangular window which is inherent in the biased estimation of the autocorrelation function. The reason to include an extra window is due to the fact that the estimated auto-correlation is very uncertain at the edges of the observation window, since at these lags it is calculated using a very limited number of samples. Whereas in the center of the window $\hat{r}[l]$ is computed with almost all samples available. Therefore, by using a suitable window, we can reduce the weight of the auto-correlation lags at the edges of the window, where only few samples are available. In the frequency domain, the Blackman-Tukey estimator can be interpreted as the convolution between the spectrum of the window and the estimated power spectral density as
 \begin{equation}
     \hat{P}\_{BT}(e^{j\theta}) = \frac{1}{2\pi} \hat{P}(e^{j\theta})\ast W_L(e^{j\theta}).
 \end{equation}
