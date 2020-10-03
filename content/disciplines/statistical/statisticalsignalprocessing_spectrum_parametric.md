@@ -28,6 +28,14 @@ This approach is very different from the non-parametric methods and it is usuall
 The first step in estimating the power spectral density is finding a signal model. How do we define such a signal model? One way is to use spectral factorization, i.e., filtering a white Gaussian process $i[n]$ by a linear time-invariant (LTI) filter.
 A white Gaussian process has the characteristic that the power spectral density is constant. If we transform this constant spectrum by applying filters (low-pass, high-pass etc.), it is possible to shape the power spectral density in a controlled way. In other words a constant spectrum can be filtered such that the resulting spectrum provides us with a good estimate of the power spectral density of the observed random signal.
 Of course, we cannot directly assess the accuracy of the resulting spectrum since this is unknown, but we can compare the estimated with the determined auto-correlation functions. Although in principle there is an infinite number of possibilities for the filter, we typically restrict the choice to finite impulse response (FIR) and infinite impulse response (IIR) filters.
+### Screencast video [⯈]
+
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/BNKhOEoawXA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br></br>
+
 
 Stochastic signal modeling and auto-regressive moving-average (ARMA) processes were discussed in detail in the section <a href="../statisticalsignalprocessing_rational_main">Rational signal models</a>. Here we briefly review some important concepts, which are useful for the purpose of parametric spectral estimation.
 ## AR($p$) spectral estimation
