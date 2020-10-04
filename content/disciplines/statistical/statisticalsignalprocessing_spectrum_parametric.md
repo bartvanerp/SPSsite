@@ -80,7 +80,7 @@ When a windowed signal is observed and the auto-correlation function is estimate
         \hat{\sigma}_i^2      \newline 0                \newline 0            \newline \vdots    \newline 0
     \end{bmatrix}
 \end{equation}
-where the signal $x[n]$ is real, leading to a symmetric auto-correlation function which is shown as $\hat{r}_x[l] = \hat{r}_x[-l]$. Solving this system of equations, the unknown filter coefficient $\hat{a}_1, ..., \hat{a}_p$, and unknown variance of the input noise in the model,  $\hat{\sigma}_i^2$, can be estimated by least-square linear estimation.
+where the signal $x[n]$ is real, leading to a symmetric auto-correlation function which is shown as $\hat{r}_x[l] = \hat{r}_x[-l]$. Solving this system of equations, the unknown filter coefficient $\hat{a}_1, ..., \hat{a}_p$, and unknown variance of the input noise in the model,  $\hat{\sigma}_i^2$, can be estimated by least-square linear estimation. Note that the autocorrelation matrix as Toeplitz structure, which is a Matrix with constant diagonals.
 
 Finally, the power spectral density of an AR process is given by
 
@@ -93,6 +93,100 @@ In order to estimate the spectrum of an AR(p) process the first step is to write
 \begin{equation}
     \hat{P}[k] = \frac{\hat{\sigma}_i^2}{\left| \sum\_{i=0}^p \hat{a}_ie^{-jik\frac{2\pi}{L}}\right|^2}.
 \end{equation}
+
+#### Calculation of AR parameters via 1-step linear predictor
+An alternative way to calculate the AR model parameters $a_1, a_2, ..., a_p$ and $\sigma_i^2$ is to use a 1-step linear predictor. This can be implemented as FIR Wiener filter. As shown in Fig. 1, the general goal of Wiener filters is to filter a signal $x[n]$ such to minimize the error between the filtered signal $\hat{x}[n]$ and a desired signal $d[n]$ according to the minimum mean square error (MMSE) criterion.
+
+<div style="max-width: 500px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/statistical/spectrum/wiener_general.bmp"
+      alt="General scheme of a Wiener filter."
+    />
+    <figcaption class="numbered">
+General scheme of a Wiener filter.
+    </figcaption>
+  </figure>
+</div>
+
+The general FIR solution for this Wiener filter is found by finding the set of parameters that minimizes a cost function defined as:
+\begin{equation}
+J=\mathrm{E}\left[e^2[n]\right] =\mathrm{E}\left[(d[n] - \hat{x}[n])^2\right] =\mathrm{E}\left[d[n]^2\right] - \bf{w}^T\bf{r_{dx}}-\bf{r_{dx}}^T\bf{w} + \bf{w}^T\bf{R_x}\bf{w}
+\end{equation}
+
+where $\bf{w}$ is the vector composed of the filter coefficients, $\bf{r_{dx}}$ is the cross correlation between the desired and observed signals, and $\bf{R_x}$ is the autocorrelation matrix of the observed signal.
+The optimal filter coefficients $\bf{w_{opt}}$ can be found as the solution to the following minimization problem:
+$$
+\mathbf{w_{opt}} = \arg\min_{w} (J) =\arg\min_{w} (\mathrm{E}\left[e^2[n]\right]),
+$$
+
+By setting the derivative of $J$ equal to zero, the so-called normal equations are found as
+\begin{equation}\label{eq:normaleq}
+\frac{dJ}{dw}=2(\bf{r_{dx}}-\bf{R_x}\bf{w}) = 0 \hspace{1cm} \Longrightarrow \hspace{1cm} \bf{R_x}\bf{w} = \bf{r_{dx}}.
+\end{equation}
+
+From (\ref{eq:normaleq}) the solution of the FIR Wiener filter is found as
+\begin{equation}\label{eq:wopt}
+\mathbf{w_{opt}} = \bf{R_x}^{-1}\bf{r_{dx}}.
+\end{equation}
+Moreover, the filter error can be calculated as
+\begin{equation}\label{eq:Jfir}
+J_{\text{FIR}} = r_d[0] - \sum_{i=0}^{N-1}w_{opt}[i] r_{dx}[i] = r_d[0] - \mathbf{w_{opt}}^T \mathbf{r_{dx}}.
+\end{equation}
+
+The goal of a 1-step linear predictor is to estimate the next value of the signal based on a linear combination of the past values of the signal. In this case, as schematically shown in Fig. 2, the input to the filter is a delayed version of the observed signal and the desired signal is the observed signal itself. For a 1-step linear predictor, the delay is $T=1$.
+
+<div style="max-width: 500px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/statistical/spectrum/wiener_linearpredictor.bmp"
+      alt="Wiener filter for linear prediction."
+    />
+    <figcaption class="numbered">
+Schematic representation of a Wiener filter for linear 1-step prediction.
+    </figcaption>
+  </figure>
+</div>
+
+The solution of this filter is found by using (\ref{eq:wopt}) and substituting for $\bf{R_x}$ a matrix obtained using autocorrelation lags from $0$ up to $N-2$, where $N$ is the signal length, while for $\bf{r_{dx}} = \bf{r_{x}}$ we use lags from $1$ up to $N-1$. In formulas this can be described as
+
+\begin{equation}
+\mathbf{R_x}=  \text{Toeplitz} [r_x[0], r_x[1], ..., r_x[N-2]]
+\end{equation}
+
+\begin{equation}
+\mathbf{r_{x}} = [r[1], r[2], ..., r[n-1]]^T.
+\end{equation}
+
+Moreover,  since the output of the filter error is obtained by subtracting from $x[n]$ the predictable part obtained by a linear combination of previous samples, then we are left with white noise.
+
+When we want to use this filter to estimate the AR parameters $a_1, a_2, ..., a_p$ and $\sigma_i^2$, we should bare in mind that the observed signal is actually modeled as the output of an LTI with $p$ poles and no zeros driven by white noise, as shown in Fig. 3.
+
+<div style="max-width: 600px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/statistical/spectrum/wiener_ARmodel.bmp"
+      alt="Wiener filter for AR modeling."
+    />
+    <figcaption class="numbered">
+Interpretation of a Wiener filter for 1-step linear prediction as the inverse of the innovation filter.
+    </figcaption>
+  </figure>
+</div>
+
+
+This means that the optimal filter $W(z)$ is actually the inverse of $L(z)$. In fact, $W(z)$ can be interpreted as a whitening filter that takes as input a random signal constituted by a predictable part and an unpredictable part and outputs white noise, that is the unpredictable part. Because of this, to obtain our AR model parameters, we need to invert the sign of the filter coefficients, while the input noise variance can be simply found by applying the formula for the filter error, as given below
+
+\begin{equation}
+\mathbf{w_{opt}} = [w_1, w_2,..., w_{N-1}]^T =[-\hat{a_1}, -\hat{a_2},..., -\hat{a_{p}}]^T.
+\end{equation}
+
+\begin{equation}
+J = r_x[0] - \sum_{i=0}^{N-1}w_{opt}[i] r_{x}[i] = r_x[0] - \mathbf{w_{opt}}^T \mathbf{r_{x}} = \hat{\sigma_i}^2 .
+\end{equation}
+
+Although Wiener filtering is beyond the scope of this course, we have discussed here the 1-step linear predictor as a convenient way to find the AR model parameters.
+
 ## MA($q$) spectral estimation
 
 ### MA($q$)  process
