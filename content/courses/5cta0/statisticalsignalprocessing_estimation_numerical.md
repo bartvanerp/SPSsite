@@ -129,7 +129,7 @@ where $\mathbf{h}^T[N]$ is the $N^\text{th}$ row of the observation matrix $\mat
 \begin{equation}
 \mathbf{K}_{N}=\frac{C_{N-1}\mathbf{h}[N]}{\sigma_{N}^2+\mathbf{h}^T[N]C_{N-1}\mathbf{h}[N]}
 \end{equation}
-For LSE, it is possible to lack information on the noise variance altogether. Thus, we need a gain term that does not depend on the noise covariance. It is obtained by replacing the noise covariance matrix $\mathbf{C}$ in the gain expression with the term $(\mathbf{H}^T\mathbf{H})$ and replacing the sample variance term $\sigma_N^2$ by 1. The observation matrix $\mathbf{H}$ belongs to the signal model for the $N$ data samples preceding the current data sample $x[N]$.
+For LSE, it is possible to lack information on the noise variance altogether. Thus, we need a gain term that does not depend on the noise covariance. It is obtained by replacing the noise covariance matrix $\mathbf{C}$ in the gain expression with the term $(\mathbf{H}^T\mathbf{H})^{-1}$ and replacing the sample variance term $\sigma_N^2$ by 1. The observation matrix $\mathbf{H}$ belongs to the signal model for the $N$ data samples preceding the current data sample $x[N]$.
 
 Finally, for BLUE the covariance is updated as
 \begin{eqnarray*}
