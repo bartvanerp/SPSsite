@@ -268,8 +268,8 @@ The auto-correlation function is given by
 \begin{equation}
     r_x[l] =
     \begin{cases}
-        \sigma_i^2 \sum_{k=|l|}^q b_{k}b_{k-|l|} - \sum_{k=1}^p \alpha_k r_x[|l|-k],  &\text{for }0 \leq |l| \leq q \newline
-        - \sum_{k=1}^p \alpha_k r_x[|l|-k].  &\text{for }|l| > q \\
+        \sigma_i^2 \sum_{k=|l|}^q b_{k}h[k-|l|] - \sum_{k=1}^p a_k r_x[|l|-k],  &\text{for }0 \leq |l| \leq q \newline
+        - \sum_{k=1}^p a_k r_x[|l|-k].  &\text{for }|l| > q \\
     \end{cases}
 \end{equation}
 
