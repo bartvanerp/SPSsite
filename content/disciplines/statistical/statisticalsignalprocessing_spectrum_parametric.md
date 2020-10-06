@@ -187,6 +187,17 @@ J = r_x[0] - \sum_{i=0}^{N-1}w_{opt}[i] r_{x}[i] = r_x[0] - \mathbf{w_{opt}}^T \
 
 Although Wiener filtering is beyond the scope of this course, we have discussed here the 1-step linear predictor as a convenient way to find the AR model parameters.
 
+### Pencast video [⯈]
+
+The following pencast how to practically obtain the AR model parameters from the autocorrelation function with both the Yule-Walker equation and Wiener filter approach.
+
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ajY0UCb4vR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br></br>
+
+
 ## MA($q$) spectral estimation
 
 ### MA($q$)  process
