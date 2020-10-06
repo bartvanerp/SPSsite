@@ -319,7 +319,7 @@ Combining the previous two equations leads to
 \begin{equation}
  \mathrm{E}\left[\hat{P}_{BT}(e^{j\theta})\right] \approx P(e^{j\theta}) \frac{1}{2\pi} \int_{-\pi}^\pi A\delta(\theta) \mathrm{d}\theta = w_L[0] P(e^{j\theta})
 \end{equation}
-stating that the estimator is asymptotically unbiased if $A=1$ or equivalently  $w_L[0] =1$.
+stating that the estimator is asymptotically unbiased if $A=1$ or equivalently $w_L[0] =1$.
 
 The variance of the Blackman-Tukey estimator can be found as
 \begin{equation}
