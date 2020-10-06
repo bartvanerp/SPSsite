@@ -310,16 +310,16 @@ If we now were to consider the window for an increasing length $2L-1$, we would 
 \begin{equation}\label{eq:windlim}
  \lim_{L\rightarrow\infty} W_L(e^{j\theta}) = A\delta(\theta),
 \end{equation}
-which states that the frequency spectrum of the window function converges to a delta pulse. This occurs when
+which states that the frequency spectrum of the window function converges to a delta pulse. Thus $\hat{P}_{BT}(e^{j\theta})$ is unbiased provided that $A=1$. This occurs if
 \begin{equation}
  \frac{1}{2\pi} \int_{-\pi}^\pi W_L(e^{j(\theta)})\mathrm{d}\theta =  \frac{1}{2\pi} \int_{-\pi}^\pi A\delta(\theta) \mathrm{d}\theta = 1 = w_L[0],
- where the latter passage is due to the basic properties of the Fourier transform.
 \end{equation}
+where the latter passage is due to the basic properties of the Fourier transform.
 Combining the previous two equations leads to
 \begin{equation}
  \mathrm{E}\left[\hat{P}_{BT}(e^{j\theta})\right] \approx P(e^{j\theta}) \frac{1}{2\pi} \int_{-\pi}^\pi A\delta(\theta) \mathrm{d}\theta = w_L[0] P(e^{j\theta})
 \end{equation}
-stating that the estimator is asymptotically unbiased if $A=1$ or equivalently  $w_L[0]$ =1.
+stating that the estimator is asymptotically unbiased if $A=1$ or equivalently  $w_L[0] =1$.
 
 The variance of the Blackman-Tukey estimator can be found as
 \begin{equation}
