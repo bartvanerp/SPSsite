@@ -81,11 +81,11 @@ Note that in both eqs. (\ref{eq:ac_biased}) and (\ref{eq:ac_unbiased}), we assum
 An alternative way to look at this is to rewrite eqs. (\ref{eq:ac_biased}) and (\ref{eq:ac_unbiased}) as
 
 \begin{equation}\label{eq:ac_biased2}
-  \hat{r}\_b[l]=  r[l] \cdot  w_R[n],
+  \hat{r}\_b[l]=  r[l] \cdot  w_B[n],
 \end{equation}
 
 \begin{equation}\label{eq:ac_unbiased2}
-  \hat{r}\_{ub}[l]=  r[l] \cdot  w_B[n],
+  \hat{r}\_{ub}[l]=  r[l] \cdot  w_R[n],
 \end{equation}
 
 where $r[l]$ is the true autocorrelation function, while
@@ -134,7 +134,7 @@ This shows that the correlogram (or periodogram) provides an estimate of the pow
 
 From equation (\ref{eq:exp_p}) we also notice that the expected value of the PSD estimator is related to the spectrum of the window function. For a rectangular window, this results in
 \begin{equation}\label{eq:ft_rect}
-        W_R(e^{j\theta}) = \frac{1}{N}\left(\frac{\sin(N\theta/2)}{\sin(\theta/2)}\right),
+        W_R(e^{j\theta}) = \left(\frac{\sin(N\theta/2)}{\sin(\theta/2)}\right)e^{-j\frac{N-1}{2}\theta},
 \end{equation}
 which is a sinc function.  
 
@@ -307,13 +307,17 @@ where it is assumed that the Blackman-Tukey window has a length significantly sm
      \mathrm{E}\left[\hat{P}\_{BT}(e^{j\theta})\right] \approx \frac{1}{2\pi} \int_{-\pi}^\pi P(e^{j\theta})W_L(e^{j(\theta-\phi)})\mathrm{d}\phi.
 \end{equation}
 If we now were to consider the window for an increasing length $2L-1$, we would find
-\begin{equation}
+\begin{equation}\label{eq:windlim}
  \lim_{L\rightarrow\infty} W_L(e^{j\theta}) = A\delta(\theta),
 \end{equation}
-which states that the frequency spectrum of the window function converges to a delta pulse, which is similar to the behaviour that has been shown in the previous section.
+which states that the frequency spectrum of the window function converges to a delta pulse. This occurs when
+\begin{equation}
+ \frac{1}{2\pi} \int_{-\pi}^\pi W_L(e^{j(\theta)})\mathrm{d}\theta =  \frac{1}{2\pi} \int_{-\pi}^\pi A\delta(\theta) \mathrm{d}\theta = 1 = w_L[0],
+ where the latter passage is due to the basic properties of the Fourier transform.
+\end{equation}
 Combining the previous two equations leads to
 \begin{equation}
- \mathrm{E}\left[\hat{P}_{BT}(e^{j\theta})\right] \approx (e^{j\theta})A\delta(\theta-\phi)\mathrm{d}\phi = A P(e^{j\theta})
+ \mathrm{E}\left[\hat{P}_{BT}(e^{j\theta})\right] \approx P(e^{j\theta})A\delta(\theta-\phi)\mathrm{d}\phi = A P(e^{j\theta})
 \end{equation}
 stating that the estimator is asymptotically unbiased if $A=1$.
 
