@@ -134,7 +134,7 @@ This shows that the correlogram (or periodogram) provides an estimate of the pow
 
 From equation (\ref{eq:exp_p}) we also notice that the expected value of the PSD estimator is related to the spectrum of the window function. For a rectangular window, this results in
 \begin{equation}\label{eq:ft_rect}
-        W_R(e^{j\theta}) = \frac{1}{N}\left(\frac{\sin(N\theta/2)}{\sin(\theta/2)}\right),
+        W_R(e^{j\theta}) = \left(\frac{\sin(N\theta/2)}{\sin(\theta/2)}\right)e^{-j\frac{N-1}{2}\theta},
 \end{equation}
 which is a sinc function.  
 
