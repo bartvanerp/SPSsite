@@ -189,7 +189,7 @@ Although Wiener filtering is beyond the scope of this course, we have discussed 
 
 ### Pencast video [⯈]
 
-The following pencast how to practically obtain the AR model parameters from the autocorrelation function with both the Yule-Walker equation and Wiener filter approach.
+The following pencast shows how to practically obtain the AR model parameters from the autocorrelation function with both the Yule-Walker equations and the Wiener filter approach.
 
 <div class="video-container">
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ajY0UCb4vR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
