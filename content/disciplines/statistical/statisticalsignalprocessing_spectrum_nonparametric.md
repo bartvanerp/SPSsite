@@ -81,11 +81,11 @@ Note that in both eqs. (\ref{eq:ac_biased}) and (\ref{eq:ac_unbiased}), we assum
 An alternative way to look at this is to rewrite eqs. (\ref{eq:ac_biased}) and (\ref{eq:ac_unbiased}) as
 
 \begin{equation}\label{eq:ac_biased2}
-  \hat{r}\_b[l]=  r[l] \cdot  w_R[n],
+  \hat{r}\_b[l]=  r[l] \cdot  w_B[n],
 \end{equation}
 
 \begin{equation}\label{eq:ac_unbiased2}
-  \hat{r}\_{ub}[l]=  r[l] \cdot  w_B[n],
+  \hat{r}\_{ub}[l]=  r[l] \cdot  w_R[n],
 \end{equation}
 
 where $r[l]$ is the true autocorrelation function, while
