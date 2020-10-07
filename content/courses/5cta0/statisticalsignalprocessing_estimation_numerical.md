@@ -106,7 +106,7 @@ The Fisher information does not depend on the data, while the second derivative 
 ## Sequential Least Squares and Best Linear Unbiased Estimators
 
 
-In some applications the data is streaming and parameter estimation needs to be updated in real time. Instead of running the estimator repeatedly with ever-increasing data size, it is useful to have an estimator that allows updating the estimate by using the latest data samples only. It is possible to formulate the LSE and BLUE in this manner. For LSE, we look for a relation between the estimates $\hat\Theta_N$ and $\hat\Theta_{N+1}$, which represent the estimate with $N$ data points and $N+1$ data points, respectively. In LSE we do not have a noise model, however, if we know that the noise has zero mean with some known covariance, we can formulate a BLUE estimator that updates both the estimate and covariance for the estimate sequentially.
+In some applications the data is streaming and parameter estimation needs to be updated in real time. Instead of running the estimator repeatedly with ever-increasing data size, it is useful to have an estimator that allows updating the estimate by using the latest data samples only. It is possible to formulate the LSE and BLUE in this manner. For LSE, we look for a relation between the estimates $\hat\Theta_{N-1}$ and $\hat\Theta_{N}$, which represent the estimate with $N$ data points and $N+1$ data points, respectively. In LSE we do not have a noise model, however, if we know that the noise has zero mean with some known covariance, we can formulate a BLUE estimator that updates both the estimate and covariance for the estimate sequentially.
 
 The starting point is the squared error function:
 \begin{equation}
@@ -125,11 +125,11 @@ The important condition to compute both the estimate $\hat\Theta$ and its covari
 \begin{equation}
 \hat\Theta_{N}=\hat\Theta_{N-1}+\mathbf{K}_{N}\big(x[N]-\mathbf{h}^T[N]\hat\Theta_{N-1}\big)
 \end{equation}
-where $\mathbf{h}^T[N]$ is the $N^\text{th}$ row of the observation matrix $\mathbf{H}$ when the corresponding data sample $x[N]$ is acquired. The term $x[N]-\mathbf{h}^T[N]\hat\Theta_{N-1}$ is the innovation, which is the difference between the data sample $x[N]$ and the estimate we have for that data sample, which is $\mathbf{h}^T[N]\hat\Theta_{N-1}$. Based on our estimated parameter $\hat\Theta_{N-1}$ after the $N-1^\text{th}$ data sample, we come up with an estimate for the $N^\text{th}$ sample we acquire. For BLUE, the estimate is updated according to the innovation and a gain term $\mathbf{K}_{N}$, which is calculated as
+where $\mathbf{h}^T[N]$ is the $N^\text{th}$ row of the observation matrix $\mathbf{H}$ when the corresponding data sample $x[N]$ is acquired. The term $x[N]-\mathbf{h}^T[N]\hat\Theta_{N-1}$ is the innovation, which is the difference between the data sample $x[N]$ and the estimate we have for that data sample, which is $\mathbf{h}^T[N]\hat\Theta_{N-1}$. Based on our estimated parameter $\hat\Theta_{N-1}$ after the $N^\text{th}$ data sample, we come up with an estimate for the $N+1^\text{th}$ sample we acquire. For BLUE, the estimate is updated according to the innovation and a gain term $\mathbf{K}_{N}$, which is calculated as
 \begin{equation}
 \mathbf{K}_{N}=\frac{C_{N-1}\mathbf{h}[N]}{\sigma_{N}^2+\mathbf{h}^T[N]C_{N-1}\mathbf{h}[N]}
 \end{equation}
-For LSE, it is possible to lack information on the noise variance altogether. Thus, we need a gain term that does not depend on the noise covariance, which is obtained by replacing the noise covariance matrix $\mathbf{C}$ in the gain expression with the identity matrix $\mathbf{I}$ of the same size.
+For LSE, it is possible to lack information on the noise variance altogether. Thus, we need a gain term that does not depend on the noise covariance. It is obtained by replacing the noise covariance matrix $\mathbf{C}$ in the gain expression with the term $(\mathbf{H}^T\mathbf{H})^{-1}$ and replacing the sample variance term $\sigma_N^2$ by 1. The observation matrix $\mathbf{H}$ belongs to the signal model for the $N$ data samples preceding the current data sample $x[N]$.
 
 Finally, for BLUE the covariance is updated as
 \begin{eqnarray*}
