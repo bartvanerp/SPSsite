@@ -36,17 +36,23 @@ The simplest and most straightforward method for estimation of the signal spectr
 After more careful studying, the student comes to the realization that the operation he performed just gave him an <i>estimate</i> of the frequency content. In this specific case, the student could easily have obtained the expected frequency spectrum. The student neglected the fact that the `fft()`-operation assumes a periodic signal. In this case the signal is <i>windowed</i>, meaning that the infinitely long signal is cropped to a finite length, which is no longer periodic, leading to potentially undesirable results in the frequency domain.
 
 From this we can conclude that just calculating the spectrum of a signal, especially when it is comprised of multiple signals, is not as easy as it sounds. Since any real-world signal can be observed only for a limited amount of time, **all real-world signals are virtually windowed**. Another reason for windowing is to study non-stationary signals in short time segments, within which they can be considered stationary. Besides the effects of windowing, we cannot know in advance whether the signal is periodic or not. Because of these reasons, it is usually impossible to determine the exact spectrum of an observed random signal. Therefore we need to resort to estimation techniques for the calculation of the frequency spectrum of a finite random signal, a problem known as <i>spectral estimation</i>.
+### Screencast video [⯈]
 
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/G0uywfC6BRE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br></br>
 
 <br></br>
 ## Module overview
 This module covers the following topics:
 
-1. <a href="../statisticalsignalprocessing_spectrum_fourier">Recap: Fourier transforms</a> - In order to cover the topic of spectral estimation, it is important that the reader has a sufficiently good knowledge of the existing Fourier transforms and their relations.
-2. <a href="../statisticalsignalprocessing_spectrum_psd">Spectral distributions</a> - This section will describe the main methods used to calculate the energy and power spectrum of a discrete-time signal.
-3. <a href="../statisticalsignalprocessing_spectrum_window">Windowing</a> - In practice, all real-world signals are windowed, which means that only a finite portion of the signal is considered, instead of the entire signal. This will lead to several consequences when calculating the Frequency representation.
-4. <a href="../statisticalsignalprocessing_spectrum_nonparametric">Non-parametric methods</a> - In order to improve the estimation of the spectral representation, several methods can be applied, such as combining several estimates of the spectrum.
-5. <a href="../statisticalsignalprocessing_spectrum_parametric">Parametric methods</a> - Another methodology involves the modelling of the frequency spectrum through the use of several parameters. The parameters define the shape of the spectrum and by learning these parameters, the true spectrum can be estimated.
+1. <a href="../../../disciplines/statistical/statisticalsignalprocessing_spectrum_fourier">Recap: Fourier transforms</a> - In order to cover the topic of spectral estimation, it is important that the reader has a sufficiently good knowledge of the existing Fourier transforms and their relations.
+2. <a href="../../../disciplines/statistical/statisticalsignalprocessing_spectrum_psd">Spectral distributions</a> - This section will describe the main methods used to calculate the energy and power spectrum of a discrete-time signal.
+3. <a href="../../../disciplines/statistical/statisticalsignalprocessing_spectrum_window">Windowing</a> - In practice, all real-world signals are windowed, which means that only a finite portion of the signal is considered, instead of the entire signal. This will lead to several consequences when calculating the Frequency representation.
+4. <a href="../../../disciplines/statistical/statisticalsignalprocessing_spectrum_nonparametric">Non-parametric methods</a> - In order to improve the estimation of the spectral representation, several methods can be applied, such as combining several estimates of the spectrum.
+5. <a href="../../../disciplines/statistical/statisticalsignalprocessing_spectrum_parametric">Parametric methods</a> - Another methodology involves the modelling of the frequency spectrum through the use of several parameters. The parameters define the shape of the spectrum and by learning these parameters, the true spectrum can be estimated.
 
 
 
