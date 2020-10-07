@@ -304,7 +304,7 @@ Let us now determine the performance of this method. The expected value of the e
 \end{equation}
 where it is assumed that the Blackman-Tukey window has a length significantly smaller than the length of the auto-correlation function. This assumption also results in the spectrum of the Blackman-Tukey window having wider lobes in comparison to the spectrum of the Bartlett window, which was a direct consequence in the definition of the auto-correlation estimator. Using the definition of the continuous convolution in the frequency domain, the expected value of the estimator can be rewritten as
 \begin{equation}
-     \mathrm{E}\left[\hat{P}\_{BT}(e^{j\theta})\right] \approx \frac{1}{2\pi} \int_{-\pi}^\pi P(e^{j\theta})W_L(e^{j(\theta-\phi)})\mathrm{d}\phi.
+     \mathrm{E}\left[\hat{P}\_{BT}(e^{j\theta})\right] \approx \frac{1}{2\pi} \int_{-\pi}^\pi P(e^{j\phi})W_L(e^{j(\theta-\phi)})\mathrm{d}\phi.
 \end{equation}
 If we now were to consider the window for an increasing length $2L-1$, we would find
 \begin{equation}\label{eq:windlim}
@@ -319,7 +319,7 @@ Combining the previous two equations leads to
 \begin{equation}
  \mathrm{E}\left[\hat{P}_{BT}(e^{j\theta})\right] \approx P(e^{j\theta}) \frac{1}{2\pi} \int_{-\pi}^\pi A\delta(\theta) \mathrm{d}\theta = w_L[0] P(e^{j\theta})
 \end{equation}
-stating that the estimator is asymptotically unbiased if $A=1$ or equivalently $w_L[0] =1$.
+stating that the estimator is asymptotically unbiased if $A=1$ or equivalently $w_L[0] =1$. Note that the approximation is only valid in the assumption of very large $L$. In this case the main lobe of the window is so narrow, that we can consider  $P(e^{j\theta})$ constant within the narrow main-lobe.
 
 The variance of the Blackman-Tukey estimator can be found as
 \begin{equation}
