@@ -104,7 +104,7 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 
 <br>
 
-#### nanoscience and technology
+#### Nanoscience and technology
 | Course code   | Course name                                            | 
 |---------------|--------------------------------------------------------|
 | 6E12X0        | Nanomaterials: chemistry and fabrication               |
