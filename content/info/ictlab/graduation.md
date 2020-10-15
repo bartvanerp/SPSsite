@@ -14,6 +14,6 @@ title = "Graduation"
 
 +++
 
-{{% alert note %}}
-Info about graduating in the group
-{{% /alert %}}
+At the ICT Lab, we provide you with effective guidance to strengthen your skills in a practice-based learning environment. You will be working on real-world problems side by side with leading researchers who are developing the foundations of future communications technologies.
+
+Discover some of our projects in the [**Master Project Marketplace**](https://master.ele.tue.nl/).
