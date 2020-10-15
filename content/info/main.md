@@ -4,7 +4,7 @@ type = "docs"
 # date = {{ .Date }}
 lastmod = 2020-10-01
 
-title = "Education in SPS"
+title = "Signal Processing Systems Group"
 subtitle = "How is the education in the signal processing systems group organized?"
 
 # Add menu entry to sidebar.
@@ -13,13 +13,30 @@ subtitle = "How is the education in the signal processing systems group organize
   weight = 10
 
 +++
+Welcome to the signal processing systems (SPS) group!  At SPS we focus on the study of theories and techniques to extract meaningful information from signals, images, and multivariate data sets. To this end, we combine academic excellence with a strong real-world impact in biomedical instrumentation, medical image analysis, video surveillance, autonomous vehicles, digital wireless and optical communication, hearing aids, and intelligent lighting.
 
-{{% alert note %}}
-This page could become the landing page for students from
-https://www.tue.nl/en/research/research-groups/signal-processing-systems/
-and
-https://studiegids.tue.nl/opleidingen/graduate-school/masters-programs/electrical-engineering/curriculum/specialization-electives/?L=
-{{% /alert %}}
-{{% alert note %}}
-This page could provide some very general info about the SPS group and dedirect students to the bachelor and master sections.
-{{% /alert %}}
+Get inspired by a video on **What is Signal Processing**.
+
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/watch?v=EErkgr1MWw0&feature=emb_title" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+### SPS Organization: Labs
+To facility the research activities within our group, SPS has been divided into smaller subgroups called *Labs*. Each lab focuses on specific research areas that are coherently aligned. The labs are constituted by a multidisciplinary team of leading researchers, who are supported by a enthusiastic and determined team of PhD candidates, PDEngs and technicians.
+
+<div style="max-width: 800px; margin: auto">
+  <figure>
+    <img
+      src="/../files/12.InfoFigures/Blocks_SPS.png"
+      alt="3333"
+    />
+    <figcaption class="numbered">
+      SPS Labs diagram.
+    </figcaption>
+  </figure>
+</div>
+
+### How to enroll SPS?
+Are you a student interested in doing a project with us? Our research covers an extensive range of subjects on signal processing, the courses we offer, provide you effective guidance to build up skills in a practice-based learning environment, introduce you to real-world experiences, and acquire a solid knowledge!
+
+For more information, visit our sections for the Bachelor and Master's programs.

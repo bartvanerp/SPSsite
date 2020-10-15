@@ -14,6 +14,10 @@ title = "Research focus"
 
 +++
 
-{{% alert note %}}
-General info ICT lab
-{{% /alert %}}
+The ICT Lab research focuses on data transmission and compression, modulation and error correction, multi-user information theory, information security, and sensing. We study information processing in a broad sense trying to determine fundamental limits, but also at developing the techniques that approach these limits. We use information-theoretical frameworks to model practical scenarios, and to find the optimal performance-complexity trade-offs. These scenarios result from close interaction with national and international industrial collaborators. Application areas include fiber optical communications, next-generation wireless systems, secret-key generation, and radar processing.
+
+ Get inspired by a video on **What is Information Theory**
+
+ <div class="video-container">
+ <iframe width="100%"; height="100%"; src="https://www.youtube.com/watch?v=p0ASFxKS9sg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+ </div>
