@@ -15,13 +15,13 @@ subtitle = "How is the education in the signal processing systems group organize
 +++
 
 ### General info
-Welcome to the signal processing systems (SPS) group! 
+Welcome to the signal processing systems (SPS) group!
 As the name suggests our research focusses on everything related to signal processing.
 Our fields of research include biomedical diagnostics, communication theory, surveillance, image and video processing, intelligent agents, intelligent lighting and much more.
 Our research activities tie in perfectly with model-based signal processing, data-driven signal processing and artifical intelligence.
 
 ### Organization
-In order to facility the research activities of our many researchers, our group has decentralized its activities in subgroups, called labs. 
+In order to facility the research activities of our many researchers, our group has decentralized its activities in subgroups, called labs.
 Our labs include:
 - Biomedical Diagnostics Lab (BM/d)
 - Bayesian Intelligent Autonomous Systems Lab (BIASlab)
@@ -44,7 +44,7 @@ In contrast to the other capacity groups of the department of Electrical Enginee
 
 
 ### Mentors and code of conduct
-Every lab has its own contact person whom you should contact when you have questions about elective courses, internships, graduating and graduation requirements. 
+Every lab has its own contact person whom you should contact when you have questions about elective courses, internships, graduating and graduation requirements.
 You can find the contact persons for each of the labs on their corresponding pages.
 
 During your Masters program you have to sign the code of conduct in presence of the contact person for the group in which you wish to graduate.
@@ -55,7 +55,7 @@ Instead you should contact the contact person of the lab you wish to graduate in
 ### Graduating within the SPS group
 For everyone graduating within the SPS group you need to comply with following a certain set of courses.
 
-In the first quartile (Q1) you need to select three core courses from the set enlisted [here](https://studiegids.tue.nl/opleidingen/graduate-school/masters-programs/electrical-engineering/curriculum/core-courses/). 
+In the first quartile (Q1) you need to select three core courses from the set enlisted [here](https://studiegids.tue.nl/opleidingen/graduate-school/masters-programs/electrical-engineering/curriculum/core-courses/).
 From this set of courses some are enlisted as either important or preferred by the SPS group.
 
 **Important**
@@ -90,7 +90,7 @@ The graduation projects are all centrally enlisted on the [Master marketplace](h
 On this page you can enroll easily for these projects with your TU/e account.
 In case you have a great idea for a graduation project, please contact the contact person of the lab to see what possibilities there are.
 
-Graduation projects can also be carried out in collaboration with a company. 
+Graduation projects can also be carried out in collaboration with a company.
 If you are eager to work with industry, contact your preferred lab to see what options they have available.
 Some of the options are also enlisted on the [Master marketplace](https://master.ele.tue.nl/).
 If you have found a graduation project with a company on your own, make sure to discuss this with the lab you wish to graduate in, in order to arrange suitable and qualified supervision from the lab.
