@@ -19,5 +19,5 @@ The ICT Lab research focuses on data transmission and compression, modulation an
  Get inspired by a video on **What is Information Theory**
 
  <div class="video-container">
- <iframe width="100%"; height="100%"; src="https://www.youtube.com/watch?v=p0ASFxKS9sg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/p0ASFxKS9sg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
