@@ -13,9 +13,9 @@ title = "Courses"
   columns = "1"
 
 +++
-The courses offered by ICT Lab will provide you effective guidance to build up skills in a practice-based learning environment. You will be introduced to real-world experiences, and acquire a solid knowledge of *Information and Communication theory*.
+The courses offered by ICT Lab are conceived to be an effective guide to build up skills in a practice-based learning environment. In addition, our courses introduce students to real-world experiences that help them acquire a solid knowledge of *Information and Communication theory* and engage them in the design of the yet to come theories and technologies.
 
-Find in the following overview the courses offered by the ICT Lab. If you are interested to graduate within our Lab, you might want to consider adding some of these courses to the **courses package** of your Professional Development Plan.
+Find in the following, an overview of the courses offered by the ICT Lab. If you are interested to graduate within our Lab, you might want to consider adding some of these courses to the **courses package** of your Professional Development Plan.
 
 | Course code   | Course name                                           | Level|
 |---------------|-------------------------------------------------------|-------|
