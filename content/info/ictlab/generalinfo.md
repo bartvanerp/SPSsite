@@ -14,6 +14,6 @@ title = "Research focus"
 
 +++
 
-At the ICT Lab we investigate fascinating mechanisms at the foundations of information and communication theory, with the aim to develop powerful new models and techniques to push the limits of current communication technologies.
+We investigate fascinating mechanisms at the foundations of information and communication theory, aiming to develop powerful new models and techniques to push the limits of the current communication technologies.
 
-We apply information and communication theory to different research areas including fiber optical communications, next-generation wireless system, radar processing and information security. We investigate these through the use of digital signal processing, source coding and channel coding. The scenarios that we study ideally result from close interaction with industry.
+We apply information and communication theory to different research areas, including fiber optical communications, next-generation wireless systems, radar processing, and information security. We investigate these through the use of digital signal processing, source coding, and channel coding. The scenarios that we study ideally result from close interaction with the industry.
