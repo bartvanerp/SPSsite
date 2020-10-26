@@ -13,7 +13,7 @@ subtitle = "How is the education in the signal processing systems group organize
   weight = 10
 
 +++
-Welcome to the signal processing systems (SPS) group!  At SPS we focus on the study of theories and techniques to extract meaningful information from signals, images, and multivariate data sets. To this end, we combine academic excellence with a strong real-world impact in biomedical instrumentation, medical image analysis, video surveillance, autonomous vehicles, digital wireless and optical communication, hearing aids, and intelligent lighting.
+Welcome to the Signal Processing Systems (SPS) group!  At SPS we focus on extracting meaningful information from signals, images, and multivariate data sets. To this end, we combine academic excellence with a strong real-world impact in biomedical instrumentation, medical image analysis, video surveillance, autonomous vehicles, digital wireless and optical communication, hearing aids, and intelligent lighting.
 
 Get inspired by a video on **What is Signal Processing**!
 
@@ -38,4 +38,4 @@ To facility the research activities within our group, SPS has been divided into 
 </div>
 
 ### How to enroll SPS?
-Are you a student interested in doing a project with us? Our research covers an extensive range of subjects on signal processing, and our courses provide effective guidance to build up skills in a practice-based learning environment, introduce you to real-world experiences, and acquire solid knowledge! For more information, visit the sections for the Bachelor and Master's programs.
+Are you a student interested in doing a project with us? Our research covers an extensive range of subjects on signal processing, and our courses provide excellent guidance to build up skills in a practice-based learning environment, introduce you to real-world experiences, and acquire solid knowledge! For more information depending on your study progress, visit the sections for the [Bachelor](../bachelor_main) and [Master's](../master_main) programs.

@@ -4,8 +4,7 @@ type = "docs"
 # date = {{ .Date }}
 lastmod = 2020-10-08
 
-title = "Education in SPS"
-subtitle = "How is the education in the signal processing systems group organized?"
+title = "Coherent packages"
 
 # Add menu entry to sidebar.
 [menu.info]
