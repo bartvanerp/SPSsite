@@ -4,8 +4,7 @@ type = "docs"
 # date = {{ .Date }}
 lastmod = 2020-10-01
 
-title = "Education in SPS"
-subtitle = "How is the education in the signal processing systems group organized?"
+title = "SPS in the Master program"
 
 # Add menu entry to sidebar.
 [menu.info]
@@ -28,7 +27,7 @@ Our labs include:
 - [Information and Communication Theory Lab (ICT Lab)]({{< ref "ictlab" >}})
 - Lighting and IoT Lab
 - Neu3CA
-- Mobile Perception Systems Lab
+- Mobile Perception Systems Lab (MPS)
 - Video Coding and Architectures (VCA)
 
 You have already decided that you want to graduate within the SPS group, perfect!

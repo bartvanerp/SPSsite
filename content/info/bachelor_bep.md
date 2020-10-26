@@ -4,12 +4,11 @@ type = "docs"
 # date = {{ .Date }}
 lastmod = 2020-10-01
 
-title = "Education in SPS"
-subtitle = "How is the education in the signal processing systems group organized?"
+title = "Bachelor end project"
 
 # Add menu entry to sidebar.
 [menu.info]
-  name = "Bachelor End Project"
+  name = "Bachelor end project"
   weight = 3
   parent = "Bachelor program"
 
@@ -20,7 +19,7 @@ You finish your Bachelor studies with the Bachelor End Project (BEP). BEP assign
 
 Students may start their Bachelor’s final project if they have obtained at least 120 credits, including
 - The compulsory study components of the first year of the Bachelor’s program
-- two elective study components as stated in the Program and Examination Regulations 2016-2017 for the Bachelor’s program in Electrical Engineering.
+- Two elective study components as stated in the Program and Examination Regulations 2016-2017 for the Bachelor’s program in Electrical Engineering.
 
 <br>
 
