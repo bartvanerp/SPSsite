@@ -14,16 +14,17 @@ title = "Coherent packages"
 
 +++
 
-In the Bachelor program the university offers coherent packages, which are selected groups of courses that relate to a single theme. 
+In the Bachelor program the university offers coherent packages, which are selected groups of courses that relate to a single theme.
 Below you can find an overview of the coherent packages offered by the department of electrical engineering.
-For the most up-to-date information you can visit <a href="https://studiegids.tue.nl/opleidingen/bachelor-college/majors/electrical-engineering/curriculum/electives/coherent-packages/?L=0">this website</a>. 
-The Signal Processing Systems (SPS) group also offers several courses in these packages, so if you are interested in following these courses, you might want to consider following all the courses of the coherent package.
+For the most up-to-date information you can visit <a href="https://studiegids.tue.nl/opleidingen/bachelor-college/majors/electrical-engineering/curriculum/electives/coherent-packages/?L=0">the official website</a> for the coherent packages of the Major Electrical Engineering .
+The SPS group also offers several courses in these packages, so if you are interested in following these courses, you might want to consider following all the courses of the coherent package.
+
 In the overview below the SPS specific courses are highlighted in **boldface**.
 
 <br>
 
 #### Introduction in electrical engineering
-| Course code   | Course name                             | 
+| Course code   | Course name                             |
 |---------------|-----------------------------------------|
 | 5XFA0         | Rock your baby design project           |
 | 5XIB0         | Venus exploration design project        |
@@ -32,7 +33,7 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 <br>
 
 #### Introduction in automotive
-| Course code   | Course name                                            | 
+| Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
 | 5XIA0         | Automotive design project "Energy challenge"           |
 | 5XSC0         | Automotive design project "Electronic differential"    |
@@ -41,7 +42,7 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 <br>
 
 #### Connected world
-| Course code   | Course name                                            | 
+| Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
 | 5XTA0         | Telecommunication systems                              |
 | 5XTB0         | Photonics                                              |
@@ -50,7 +51,7 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 <br>
 
 #### Care and cure
-| Course code   | Course name                                            | 
+| Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
 | 5XPC0         | Neurophysiology and neurostimulation                   |
 | 5XCB0         | Electronic and photonic components                     |
@@ -59,7 +60,7 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 <br>
 
 #### Neuroengineering
-| Course code   | Course name                                            | 
+| Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
 | 5XPC0         | Neurophysiology and neurostimulation                   |
 | 5XSH0         | Cognitive neuroscience                                 |
@@ -68,7 +69,7 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 <br>
 
 #### Smart and sustainable society
-| Course code   | Course name                                            | 
+| Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
 | 5APA0         | Power electronics                                      |
 | 5XWA0         | Power system analysis and optimization                 |
@@ -76,7 +77,7 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 <br>
 
 #### System design and analysis
-| Course code   | Course name                                            | 
+| Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
 | 2INC0         | Operating systems                                      |
 | 5XIC0         | DBL Electronic-Systems Engineering                     |
@@ -86,7 +87,7 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 <br>
 
 #### Electric and Hybrid Vehicles
-| Course code   | Course name                                            | 
+| Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
 | 5XWC0         | Energy management                                      |
 | 5XWB0         | Electric drive systems                                 |
@@ -95,7 +96,7 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 <br>
 
 #### Intelligent vehicles
-| Course code   | Course name                                            | 
+| Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
 | **5XSJ0**     | **Automotive sensing**                                 |
 | 5ETA0         | Intro telecommunications                               |
@@ -104,7 +105,7 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 <br>
 
 #### Nanoscience and technology
-| Course code   | Course name                                            | 
+| Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
 | 6E12X0        | Nanomaterials: chemistry and fabrication               |
 | 3ENX0         | Nanomaterials: physics and characterization            |
@@ -113,7 +114,7 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 <br>
 
 #### Machine learning and information processing for communications
-| Course code   | Course name                                            | 
+| Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
 | **5XSL0**     | **Fundamentals of Machine Learning**                   |
 | **5XSE0**     | **Information Theory**                                 |
