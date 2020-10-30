@@ -39,7 +39,7 @@
     {{/* See Hugo note on linking assets in styles: https://github.com/gohugoio/hugoThemes#common-permalink-issues */}}
     {{ $style = printf "%sbackground-image: %s url('%s');" $style $darken (printf "img/%s" $bg.image | relURL) }}
   {{ end }}
-  
+
 
   {{ with $st.Params.design.spacing.padding }}
     {{ $style_pad := printf "padding: %s;" (delimit . " ") }}
@@ -61,11 +61,19 @@
   {{ if in (slice "slider") $widget }}
     {{ partial $widget_path $params }}
   {{ else }}
-  <section id="{{ $hash_id }}" class="home-section {{ printf "wg-%s" (replace $widget "_" "-") }} {{if $bg.text_color_light}}dark{{end}} {{if $bg.image}}parallax{{end}} {{ with $st.Params.advanced.css_class }}{{ . }}{{ end }}" {{with $style}}style="{{. | safeCSS}}"{{end}}>
-    <div class="container">
-      {{ partial $widget_path $params }}
-    </div>
-  </section>
+    {{ if $bg.lesstop }}
+      <section id="{{ $hash_id }}" style="padding-top:110px;" class="home-section {{ printf "wg-%s" (replace $widget "_" "-") }} {{if $bg.text_color_light}}dark{{end}} {{if $bg.image}}parallax{{end}} {{ with $st.Params.advanced.css_class }}{{ . }}{{ end }}" {{with $style}}style="{{. | safeCSS}}"{{end}}>
+        <div class="container">
+          {{ partial $widget_path $params }}
+        </div>
+      </section>
+    {{ else }}
+      <section id="{{ $hash_id }}" class="home-section {{ printf "wg-%s" (replace $widget "_" "-") }} {{if $bg.text_color_light}}dark{{end}} {{if $bg.image}}parallax{{end}} {{ with $st.Params.advanced.css_class }}{{ . }}{{ end }}" {{with $style}}style="{{. | safeCSS}}"{{end}}>
+        <div class="container">
+          {{ partial $widget_path $params }}
+        </div>
+      </section>
+    {{ end }}
   {{ end }}
 {{ end }}
 
