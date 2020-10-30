@@ -17,9 +17,9 @@ The courses offered by ICT Lab are conceived to be an effective guide to build u
 
 Find in the following, an overview of the courses offered by the ICT Lab. If you are interested to graduate within our Lab, you might want to consider adding some of these courses to the **courses package** of your Professional Development Plan.
 
-| Course code   | Course name                                           | Level|
-|---------------|-------------------------------------------------------|-------|
-| 5ETB0         | [Communication Theory](https://osiris.tue.nl/osiris_student_tueprd/OnderwijsCatalogusSelect.do?selectie=cursus&collegejaar=2019&cursus=5ETB0&taal=en) |Bachelor/Advanced Mandatory  |
-| 5XSE0         | [Information Theory](https://osiris.tue.nl/osiris_student_tueprd/OnderwijsCatalogusSelect.do?selectie=cursus&collegejaar=2019&cursus=5XSE0&taal=en)|Bachelor/Advanced Elective |
-| 5LSF0         | [Applications of Information Theory](https://osiris.tue.nl/osiris_student_tueprd/OnderwijsCatalogusSelect.do?selectie=cursus&collegejaar=2019&cursus=5LSF0&taal=en)                    | Master|
-| 5LSK0         | [Digital wireless communication exploration lab](https://osiris.tue.nl/osiris_student_tueprd/OnderwijsCatalogusSelect.do?selectie=cursus&collegejaar=2019&cursus=5LSK0&taal=en)| Master|
+| Course code   | Course name                        | Level                       | Time Slot |
+|---------------|------------------------------------|-----------------------------|-----------|
+| 5LSK0         | Digital wireless communication exploration lab| Master           | Q1        |
+| 5ETB0         | Communication Theory               |Bachelor/Advanced Mandatory  | Q2        |
+| 5XSE0         | Information Theory                 |Bachelor/Advanced Elective   | Q3        |
+| 5LSF0         | Applications of Information Theory | Master                      | Q4        |
