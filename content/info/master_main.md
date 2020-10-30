@@ -14,13 +14,12 @@ title = "SPS in the Master program"
 +++
 
 ### General info
-Welcome to the signal processing systems (SPS) group!
-As the name suggests our research focusses on everything related to signal processing.
+The SPS group offers students in their Master program an amazing opportunity to collaborate on state-of-the-art research in numerous research fields.
 Our fields of research include biomedical diagnostics, communication theory, surveillance, image and video processing, intelligent agents, intelligent lighting and much more.
 Our research activities tie in perfectly with model-based signal processing, data-driven signal processing and artifical intelligence.
 
 ### Organization
-In order to facility the research activities of our many researchers, our group has decentralized its activities in subgroups, called labs.
+The decentralized structure of the SPS group stimulates students to explore our different fields of research.
 Our labs include:
 - Biomedical Diagnostics Lab (BM/d)
 - Bayesian Intelligent Autonomous Systems Lab (BIASlab)
@@ -35,7 +34,7 @@ Now you need to choose in which of the labs you would like to graduate.
 Each lab has provided a page with information about their research activities, to help you make a well-informed decision.
 > Most importantly, choose the research direction which you like the most.
 
-You can switch between different labs as you like, as long as comply with the graduation requirements of the lab that you will be graduating in.
+You can switch between different labs as you like, as long as comply with the graduation requirements of the lab that you want to be graduating in.
 
 {{% alert warning %}}
 In contrast to the other capacity groups of the department of Electrical Engineering, the signal processing systems group has organized its research activities in different labs. This leads to different procedures for contacting mentors, signing codes of conduct, internships and graduating. *Therefore please read this page carefully!*

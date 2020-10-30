@@ -16,7 +16,7 @@ title = "Courses offered by the SPS group"
 
 
 ## Major courses
-During your Bachelor program you will need to follow two major courses that are given by the SPS group
+During your Bachelor program you will need to follow two major courses that are given by the SPS group.
 
 | Course code   | Course name                             |
 |---------------|-----------------------------------------|
@@ -28,7 +28,7 @@ During your Bachelor program you will need to follow two major courses that are 
 
 
 ## Electives
-Alongside these two compulsory course, you are free to choose several elective courses that you like. Below you can find a short overview of the elective courses offered by the SPS group, sorted on the different labs
+Alongside these two compulsory course, you are free to choose several elective courses that you like. Below you can find a short overview of the elective courses offered by the SPS group, sorted on the different labs.
 
 <br>
 
