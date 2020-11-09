@@ -14,7 +14,7 @@ title = "Master Paths"
 
 +++
 
-For Master students, the ICT Lab offers guidance via **master paths**. A master path consists of a set of courses that are coherently aligned and focused on a specific research area. These areas could be for instance  *fiber optics*, *wireless communications*, *radar processing*, and *information security*. Here we provide you with a list of master paths hoping to give you insights and inspiration on how you can engage in the future of information and communication theory.
+For Master students, the ICT Lab offers you guidance via **master paths**. A master path consists of a set of courses that are coherently aligned and focused on a specific research area. These areas could be  *fiber optics*, *wireless communications*, *radar processing*, and *information security*, and many more. Here we offer you a list of master paths hoping to give you insights and inspiration on how you can engage in the future of information and communication theory.
 
 | ICT Lab Master Paths                                                                                 |
 |------------------------------------------------------------------------------------------------------|
