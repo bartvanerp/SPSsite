@@ -13,6 +13,25 @@
   url = "/info/main"
   weight = 11
 
+  [[main]]
+  name = "General info"
+  url = "/info/main"
+  weight = 12
+  parent = "Info"
+
+
+  [[main]]
+  name = "Bachelor program"
+  url = "/info/bachelor_main"
+  weight = 13
+  parent = "Info"
+
+  [[main]]
+  name = "Master program"
+  url = "/info/master_main"
+  weight = 14
+  parent = "Info"
+
 [[main]]
   name = "Disciplines"
   url = "/disciplines/overview"
