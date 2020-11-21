@@ -96,23 +96,23 @@ If you have found a graduation project with a company on your own, make sure to 
 > Good luck during your studies!
 
 ### Courses offered by our group
-| Course code   | Course name                                                   | Timeslot      | Lab         |
-|---------------|---------------------------------------------------------------|---------------|-------------|
-|    5SSD0      |   Bayesian machine learning and information processing        | TBA           | BIASlab     |
-|    5ARA0      |   Software engineering for artificial intelligence            | TBA           | BIASlab     |
-|    3MA100     |   Physics behind medical technology: equipment and physiology | TBA           | BMd         |
-|    5CRA0      |   Statistical Signal Processing                               | TBA           | BMd         |
-|    5LSC0      |   Biomedical Sensing Technology                               | TBA           | BMd         |
-|    5LSL0      |   Machine learning for signal processing                      | TBA           | BMd         |
-|    SMPE/e     |   Physics and Physiology behind Medical Technology            | TBA           | BMd         |
-|    5SSC0      |   Adaptive array signal processing                            | TBA           | BMd         |
-|    5LSF0      |   Applications of Information Theory                          | TBA           | ICTlab      |
-|    5LSK0      |   Digital wireless communication exploration lab              | TBA           | ICTlab      |
-|    5AUA0      |   Advanced sensing using deep learning                        | TBA           | MPS         |
-|    5LSE0      |   Techniques for video compression & analysis                 | TBA           | VCA         |
-|    5LSH0      |   Computer vision and 3D image processing                     | TBA           | VCA         |
-|    5LSM0      |   Convolutional neural networks for computer vision           | TBA           | VCA         |
-|    5LSJ0      |   Image analysis for health-care technologies                 | TBA           | VCA         |
+| Course code   | Course name                                                   | Timeslot      | Lab         | Type            |
+|---------------|---------------------------------------------------------------|---------------|-------------|-----------------|
+|    5CRA0      |   Statistical Signal Processing                               | TBA           | BMd         | Core            |
+|    5SSD0      |   Bayesian machine learning and information processing        | TBA           | BIASlab     | Specialization  |
+|    5SSC0      |   Adaptive array signal processing                            | TBA           | BMd         | Specialization  |
+|    5ARA0      |   Software engineering for artificial intelligence            | TBA           | BIASlab     | Elective        |
+|    3MA100     |   Physics behind medical technology: equipment and physiology | TBA           | BMd         | Elective        |
+|    5LSC0      |   Biomedical Sensing Technology                               | TBA           | BMd         | Elective        |
+|    5LSL0      |   Machine learning for signal processing                      | TBA           | BMd         | Elective        |
+|    SMPE/e     |   Physics and Physiology behind Medical Technology            | TBA           | BMd         | Elective        |
+|    5LSF0      |   Applications of Information Theory                          | TBA           | ICTlab      | Elective        |
+|    5LSK0      |   Digital wireless communication exploration lab              | TBA           | ICTlab      | Elective        |
+|    5AUA0      |   Advanced sensing using deep learning                        | TBA           | MPS         | Elective        |
+|    5LSE0      |   Techniques for video compression & analysis                 | TBA           | VCA         | Elective        |
+|    5LSH0      |   Computer vision and 3D image processing                     | TBA           | VCA         | Elective        |
+|    5LSM0      |   Convolutional neural networks for computer vision           | TBA           | VCA         | Elective        |
+|    5LSJ0      |   Image analysis for health-care technologies                 | TBA           | VCA         | Elective        |
 
 ### Contact persons
 For general questions regarding education in the SPS group, you can contact <a href="mailto:s.zinger@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Sveta Zinger</a> or <a href="mailto:a.alvarado@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Alex Alvarado</a>. For all lab-specific questions, please contact the contact person of the respective lab. In case you feel like the information on this platform is outdated or incorrect, please mail us <a href="mailto:s.zinger@tue.nl;a.alvarado@tue.nl?cc=sps.education@tue.nl&subject=[SPS Education]%20{specify question here}">here</a>.
