@@ -25,7 +25,7 @@ Students may start their Bachelor’s final project if they have obtained at lea
 
 ### How to register for a project?
 The organization of the Bachelor End Project is arranged centrally for the Electrical Engineering and Automotive programs.
-An overview of all available projects from all capacity groups can be found at [**BEP Marketplace**](https://bep.ele.tue.nl/).
+An overview of all available projects from all capacity groups can be found at the <a href="https://bep.ele.tue.nl/" target="_blank">BEP Marketplace</a>.
 There you can also find the latest information regarding the registration, deadlines and professional skills.
 
 If you would like to do a Bachelor End Project within the Signal Processing Systems groups, you can filter the list of projects on the capacity group. If you have any questions regarding one of our projects, please do not hesitate to contact the responsible person for that project.
