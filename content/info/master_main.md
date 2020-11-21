@@ -23,7 +23,7 @@ The decentralized structure of the SPS group stimulates students to explore our 
 Our labs include:
 - Biomedical Diagnostics Lab (BM/d)
 - Bayesian Intelligent Autonomous Systems Lab (BIASlab)
-- [Information and Communication Theory Lab (ICT Lab)]({{< ref "ictlab" >}})
+- [Information and Communication Theory Lab (ICT Lab)](../master_ictlab)
 - Lighting and IoT Lab
 - Neu3CA
 - Mobile Perception Systems Lab (MPS)
