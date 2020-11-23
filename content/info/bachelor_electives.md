@@ -28,7 +28,7 @@ During your Bachelor program you will need to follow two major courses that are 
 
 
 ## Electives
-Alongside these two compulsory course, you are free to choose several elective courses that you like. Below you can find a short overview of the elective courses offered by the SPS group, sorted on the different labs
+Alongside these two compulsory course, you are free to choose several elective courses that you like. Below you can find a short overview of the elective courses offered by the SPS group, sorted by labs.
 
 <br>
 
@@ -43,7 +43,7 @@ Alongside these two compulsory course, you are free to choose several elective c
 |    5XSK0      |   Data fusion and semantic interpretation | Q3          | MPS         |
 
 
-<!-- 
+<!--
 #### Bayesian Intelligent Autonomous Systems Lab
 | Course code   | Course name                             |
 |---------------|-----------------------------------------|
