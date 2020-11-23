@@ -14,9 +14,9 @@ title = "SPS in the Master program"
 +++
 
 ### General info
-The SPS group offers students in their Master program an amazing opportunity to collaborate on state-of-the-art research in numerous research fields.
-Our fields of research include biomedical diagnostics, communication theory, surveillance, image and video processing, intelligent agents, intelligent lighting and much more.
-Our research activities tie in perfectly with model-based signal processing, data-driven signal processing and artifical intelligence.
+The SPS group offers students in their master's program an excellent opportunity to collaborate on state-of-the-art research in numerous research fields.
+Our fields of research include biomedical diagnostics, communication theory, surveillance, image and video processing, intelligent agents, intelligent lighting, and much more.
+Our research activities tie in perfectly with model-based signal processing, data-driven signal processing, and artificial intelligence.
 
 ### Organization
 The decentralized structure of the SPS group stimulates students to explore our different fields of research.
@@ -29,25 +29,21 @@ Our labs include:
 - Mobile Perception Systems Lab (MPS)
 - Video Coding and Architectures (VCA)
 
-You have already decided that you want to graduate within the SPS group, perfect!
-Now you need to choose in which of the labs you would like to graduate.
-Each lab has provided a page with information about their research activities, to help you make a well-informed decision.
+If you find yourself on this page, you have probably already decided that you want to graduate within the SPS group. Perfect!
+Now you need to choose which of the labs you would like to graduate. To help you make a well-informed decision, each lab has provided a page with information about their research activities.
 > Most importantly, choose the research direction which you like the most.
 
-You can switch between different labs as you like, as long as comply with the graduation requirements of the lab that you want to be graduating in.
+You can switch between different labs as you like, as long as complying with the graduation requirements of the lab that you want to be graduating in.
 
 {{% alert warning %}}
-In contrast to the other capacity groups of the department of Electrical Engineering, the signal processing systems group has organized its research activities in different labs. This leads to different procedures for contacting mentors, signing codes of conduct, internships and graduating. *Therefore please read this page carefully!*
+In contrast to the other capacity groups of the Department of Electrical Engineering, the signal processing systems group has organized its research activities in different labs. This leads to different procedures for contacting mentors, signing codes of conduct, internships, and graduating. *Therefore please read this page carefully!*
 {{% /alert %}}
 
 
 ### Mentors and code of conduct
-Every lab has its own contact person whom you should contact when you have questions about elective courses, internships, graduating and graduation requirements.
-You can find the contact persons for each of the labs on their corresponding pages.
+Every lab has its own contact person whom you should contact when you have questions about elective courses, internships, graduating, and graduation requirements. You can find the contact persons for each of the labs on their corresponding pages.
 
-During your Masters program you have to sign the code of conduct in presence of the contact person for the group in which you wish to graduate.
-This person is **not** the contact person that is enlisted on the studyguide of the department of Electrical Engineering.
-Instead you should contact the contact person of the lab you wish to graduate in.
+During your master's program, you have to sign the code of conduct in presence of the contact person for the group in which you wish to graduate. This person is **not** the contact person that is enlisted in the study guide of the Department of Electrical Engineering. Instead, you should contact the contact person of the lab you wish to graduate in.
 
 
 ### Graduating within the SPS group
@@ -67,31 +63,24 @@ From this set of courses some are enlisted as either important or preferred by t
 
 In case you wish not to follow the important courses, because you prefer to follow others, please contact the contact person of the lab you wish to graduate in to see whether this is a problem.
 
-Nonetheless, everyone graduating withing the SPS group **has to** follow the specialization courses
+In any case, everyone graduating withing the SPS group **have to** follow the specialization courses
+
 - Adaptive array signal processing (5SSC0)
 - Bayesian machine learning and information processing (5SSD0)
 
-Each lab might impose different requirements on graduating in their lab.
-Please have a look at the different lab pages to figure out what these extra requirements are.
-If you want to make sure that your chosen elective courses are adequate for graduating within a lab, please contact their contact person.
+Each lab might impose different requirements on graduating in their lab. Please have a look at the different lab pages to find out what these extra requirements are. If you want to make sure that your chosen elective courses are adequate for graduating within a lab, please contact Its contact person.
 
+### Master marketplace
+The information of the available Graduation Projects and Internships for the department of Electrical Engineering is arranged centrally at the <a href="https://master.ele.tue.nl/" target="_blank">Master marketplace</a>. There you can also find the latest information regarding the registration, deadlines and active internships.
 
 ### Internships
-In the Masters program you need to do an internship for 15 or 20 ECTS.
-Please have a look <a href="https://master.ele.tue.nl/" target="_blank">here</a> to see which internships are being offered by the SPS group.
-The internship does not have to be with the lab that you will be graduating in, but could serve as an important introduction to your graduation project.
-In case you would like to ask about any other options for internships (such as going abroad), please contact the contact person of the corresponding lab.
+In the master's program, you need to do an internship for 15 or 20 ECTS. Please have a look at the Master marketplace to see which internships are being offered by the SPS group. The internship does not have to be with the lab that you will be graduating from but could serve as an important introduction to your graduation project. In case you would like to ask about any other options for internships (such as going abroad), please contact the contact person of the corresponding lab.
 
 
 ### Graduation project
-The graduation projects are all centrally enlisted on the <a href="https://master.ele.tue.nl/" target="_blank">Master marketplace</a>.
-On this page you can enroll easily for these projects with your TU/e account.
-In case you have a great idea for a graduation project, please contact the contact person of the lab to see what possibilities there are.
+The graduation projects are all centrally enlisted on the Master marketplace. On this page, you can enroll easily for these projects with your TU/e account. In case you have a great idea for a graduation project, please contact the contact person of the lab to see what possibilities there are.
 
-Graduation projects can also be carried out in collaboration with a company.
-If you are eager to work with industry, contact your preferred lab to see what options they have available.
-Some of the options are also enlisted on the <a href="https://master.ele.tue.nl/" target="_blank">Master marketplace</a>.
-If you have found a graduation project with a company on your own, make sure to discuss this with the lab you wish to graduate in, in order to arrange suitable and qualified supervision from the lab.
+Graduation projects can also be carried out in collaboration with a company. If you are eager to work with the industry, contact your preferred lab to see what options they have available. Some of the options are also enlisted in the Master marketplace. When you have found a graduation project with a company on your own, make sure to discuss this with the lab you wish to graduate in, in order to arrange suitable and qualified supervision from the lab.
 
 > Good luck during your studies!
 
