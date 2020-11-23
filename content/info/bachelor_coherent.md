@@ -15,7 +15,7 @@ title = "Coherent packages"
 +++
 
 In the Bachelor program the university offers coherent packages, which are selected groups of courses that relate to a single theme.
-Below you can find an overview of the coherent packages offered by the department of electrical engineering.
+Below you can find an overview of the coherent packages offered by the department of Electrical Engineering.
 For the most up-to-date information you can visit <a href="https://studiegids.tue.nl/opleidingen/bachelor-college/majors/electrical-engineering/curriculum/electives/coherent-packages/?L=0">the official website</a> for the coherent packages of the Major Electrical Engineering .
 The SPS group also offers several courses in these packages, so if you are interested in following these courses, you might want to consider following all the courses of the coherent package.
 

@@ -43,7 +43,7 @@ Alongside these two compulsory course, you are free to choose several elective c
 |    5XSK0      |   Data fusion and semantic interpretation | Q3          | MPS         |
 
 
-<!-- 
+<!--
 #### Bayesian Intelligent Autonomous Systems Lab
 | Course code   | Course name                             |
 |---------------|-----------------------------------------|

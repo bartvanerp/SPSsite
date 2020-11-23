@@ -13,7 +13,7 @@ subtitle = "How is the education in the signal processing systems group organize
   weight = 10
 
 +++
-Welcome to the Signal Processing Systems (SPS) group!  At SPS we focus on extracting meaningful information from signals, images, and multivariate data sets. To this end, we combine academic excellence with a strong real-world impact in biomedical instrumentation, medical image analysis, video surveillance, autonomous vehicles, digital wireless and optical communication, hearing aids, and intelligent lighting.
+Welcome to the TU/e’s  Signal Processing Systems (SPS) group!  At SPS we focus on extracting meaningful information from signals, images, and multivariate data sets. To this end, we combine academic excellence with a strong real-world impact in biomedical instrumentation, medical image analysis, video surveillance, autonomous vehicles, digital wireless and optical communication, hearing aids, and intelligent lighting.
 
 Get inspired by a video on **What is Signal Processing**!
 
@@ -22,8 +22,8 @@ Get inspired by a video on **What is Signal Processing**!
 </div>
 
 
-### SPS Organization: Labs
-To facility the research activities within our group, SPS has been divided into smaller subgroups called *Labs*. Each lab focuses on specific research areas that are coherently aligned. The labs are constituted by a multidisciplinary team of leading researchers, who are supported by an enthusiastic and determined team of PhD candidates, PDEngs, and technicians.
+### SPS organization: labs
+To facilitate the research activities within our group, SPS has been divided into subgroups called *Labs*. Each lab focuses on specific research areas that are coherently aligned. The labs are constituted by a multidisciplinary team of leading researchers, who are supported by an enthusiastic and hard-working team of PhD candidates, PDEngs, and technicians.
 
 <div style="max-width: 800px; margin: auto">
   <figure>
@@ -37,5 +37,5 @@ To facility the research activities within our group, SPS has been divided into 
   </figure>
 </div>
 
-### How to enroll SPS?
-Are you a student interested in doing a project with us? Our research covers an extensive range of subjects on signal processing, and our courses provide excellent guidance to build up skills in a practice-based learning environment, introduce you to real-world experiences, and acquire solid knowledge! For more information depending on your study progress, visit the sections for the [Bachelor](../bachelor_main) and [Master's](../master_main) programs.
+### How to enroll in SPS?
+Are you a student interested in doing a project with us? Our research covers an extensive range of subjects on signal processing, and our courses provide excellent guidance to build up skills in a practice-based learning environment, introduce you to real-world experiences, and acquire solid knowledge! For more information, visit the sections [Bachelor](../bachelor_main) and [Master's](../master_main) program.
