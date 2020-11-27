@@ -57,9 +57,9 @@ During your master's program, you have to sign the code of conduct in presence o
 
 
 ### Graduating within the SPS group
-Everyone graduating within the SPS group needs to comply with following a specific set of courses. In the first place, all students who want to join SPS **have to** enroll in the following specialization courses
+Everyone graduating within the SPS group needs to comply with following a specific set of courses. In the first place, all students who want to join SPS **have to** enroll in the following specialization courses.
 
-**Mandatory**
+**Specialization**
 - Adaptive array signal processing (5SSC0)
 - Bayesian machine learning and information processing (5SSD0)
 
