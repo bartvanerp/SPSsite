@@ -15,8 +15,8 @@ title = "Courses offered by the SPS group"
 +++
 
 
-## Major courses
-During your Bachelor program you will need to follow two major courses that are given by the SPS group.
+## Compulsory courses
+During your Bachelor program you will need to follow three major courses that are given by the SPS group.
 
 | Course code   | Course name                             |
 |---------------|-----------------------------------------|
@@ -28,19 +28,19 @@ During your Bachelor program you will need to follow two major courses that are 
 
 
 ## Electives
-Alongside these two compulsory course, you are free to choose several elective courses that you like. Below you can find a short overview of the elective courses offered by the SPS group, sorted on the different labs.
+Alongside these three compulsory courses, you are free to choose several elective courses that you like. Below you can find a short overview of the elective courses offered by the SPS group, together with the responsible Lab.
 
 <br>
 
-| Course code   | Course name                             | Timeslot      | Lab         |
-|---------------|-----------------------------------------|---------------|-------------|
-|    5XSD0      |   Medical Ultrasound                    | Q4            | BM/d        |
-|    5XSE0      |   Information Theory                    | Q3            | ICT lab     |
-|    5XSH0      |   Cognitive neuroscience                | Q3            | VCA         |
-|    5XSL0      |   Fundamentals of machine learning      | Q4            | VCA / BIASlab         |
-|    5XSA0      |   Introduction to medical image processing | Q4         | VCA         |
-|    5XSJ0      |   Automotive sensing                    | Q1            | MPS         |
-|    5XSK0      |   Data fusion and semantic interpretation | Q3          | MPS         |
+| Course code   | Course name                               | Timeslot      | Lab         |
+|---------------|-------------------------------------------|---------------|-------------|
+|    5XSJ0      |   Automotive sensing                      | Q1            | MPS         |
+|    5XSE0      |   Information theory                      | Q3            | ICT lab     |
+|    5XSH0      |   Cognitive neuroscience                  | Q3            | VCA         |
+|    5XSK0      |   Data fusion and semantic interpretation | Q3            | MPS         |
+|    5XSD0      |   Medical ultrasound                      | Q4            | BM/d        |
+|    5XSL0      |   Fundamentals of machine learning        | Q4            | VCA / BIASlab|
+|    5XSA0      |   Introduction to medical image processing| Q4            | BM/d         |
 
 
 <!--
