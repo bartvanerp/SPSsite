@@ -21,7 +21,7 @@ Our research activities tie in perfectly with model-based signal processing, dat
 ### Joining an SPS lab
 Students can explore our different fields of research by checking the areas each lab focuses on:
 
-- Bayesian Intelligent Autonomous Systems Lab (BIAS lab)
+- Bayesian Intelligent Autonomous Systems Lab (BIASlab)
 - Biomedical Diagnostics Lab (BM/d)
 - [Information and Communication Theory Lab](../master_ictlab) (ICT Lab)
 - Lighting and IoT Lab (L&IoT slab)
@@ -47,10 +47,10 @@ During your master's program, you have to sign the code of conduct in presence o
 
 | Lab     | Contact Person                                                                                                     |
 |---------|--------------------------------------------------------------------------------------------------------------------|
-|BIAS lab | <a href="mailto:bert.de.vries@tue.nl?subject=[SPS Education]%20{specify question here}"> Bert de Vries </a>      |
+|BIASlab  | <a href="mailto:bert.de.vries@tue.nl?subject=[SPS Education]%20{specify question here}"> Bert de Vries </a>      |
 |BMd      | <a href="mailto:m.mischi@tue.nl?subject=[SPS Education]%20{specify question here}"> Massimo Mischi</a>           |
-|ICT lab  | <a href="mailto:a.alvarado@tue.nl?subject=[SPS Education]%20{specify question here}"> Alex Alvarado</a>         |
-|L&IoT lab| <a href="mailto:j.p.linnartz@tue.nl?subject=[SPS Education]%20{specify question here}"> Jean-Paul Linnartz</a>  |
+|ICT Lab  | <a href="mailto:a.alvarado@tue.nl?subject=[SPS Education]%20{specify question here}"> Alex Alvarado</a>         |
+|L&IoT Lab| <a href="mailto:j.p.linnartz@tue.nl?subject=[SPS Education]%20{specify question here}"> Jean-Paul Linnartz</a>  |
 |Neu3CA   | <a href="mailto:s.zinger@tue.nl?subject=[SPS Education]%20{specify question here}"> Sveta Zinger</a>            |
 |MPS      | <a href="mailto:g.dubbelman@tue.nl?subject=[SPS Education]%20{specify question here}"> Gijs Dubbelman</a>       |
 |VCA      |<a href="mailto:s.zinger@tue.nl?subject=[SPS Education]%20{specify question here}"> Sveta Zinger</a>             |
