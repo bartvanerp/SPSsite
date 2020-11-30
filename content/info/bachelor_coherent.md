@@ -21,7 +21,7 @@ The SPS group also offers several courses in these packages, so if you are inter
 
 In the overview below the SPS specific courses are highlighted in **boldface**.
 
-<br>
+### Coherent packages within SPS
 
 #### Care and cure
 | Course code   | Course name                                            | Responsible SPS Lab  |
@@ -36,8 +36,8 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 | Course code   | Course name                                            | Responsible SPS Lab  |
 |---------------|--------------------------------------------------------|----------------------|
 | 5XPC0         | Neurophysiology and neurostimulation                   |                      |
-| 5XSH0         | Cognitive neuroscience                                 |                      |
-| **5XSA0**     | **Introduction to medical image processing**           |     VCA              |
+| **5XSH0**         | **Cognitive neuroscience**                                 |     VCA              |
+| **5XSA0**     | **Introduction to medical image processing**           |     BM/d              |
 
 <br>
 
@@ -55,10 +55,12 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 | Course code   | Course name                                            | Responsible SPS Lab  |
 |---------------|--------------------------------------------------------|----------------------|
 | **5XSL0**     | **Fundamentals of Machine Learning**                   |   VCA                |
-| **5XSE0**     | **Information Theory**                                 |   ICT lab            |    
+| **5XSE0**     | **Information Theory**                                 |   ICT Lab            |    
 | 5XTA0         | Telecommunication systems                              |                      |
 
 <br>
+
+### Other coherent packages
 
 #### Introduction in electrical engineering
 | Course code   | Course name                             |

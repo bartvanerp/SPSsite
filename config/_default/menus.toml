@@ -9,7 +9,7 @@
   weight = 10
 
 [[main]]
-  name = "Info"
+  name = "SPS info"
   url = "/info/main"
   weight = 11
 
@@ -17,37 +17,32 @@
   name = "General info"
   url = "/info/main"
   weight = 12
-  parent = "Info"
+  parent = "SPS info"
 
 
   [[main]]
   name = "Bachelor program"
   url = "/info/bachelor_main"
   weight = 13
-  parent = "Info"
+  parent = "SPS info"
 
   [[main]]
   name = "Master program"
   url = "/info/master_main"
   weight = 14
-  parent = "Info"
+  parent = "SPS info"
 
 [[main]]
-  name = "Disciplines"
+  name = "Study material"
   url = "/disciplines/overview"
   weight = 20
 
-# [[main]]
-#   name = "Introduction"
-#   url = "/curriculum/introduction"
-#   parent = "Curriculum"
-#   weight = 21
 
 ###################### MATHEMATICAL BACKGROUND #################################
 [[main]]
   name = "Mathematical background"
   url = "/disciplines/mathematicalbackground/mathematicalbackground_main"
-  parent = "Disciplines"
+  parent = "Study material"
   weight = 22
 
 
@@ -56,7 +51,7 @@
 [[main]]
   name = "Basics of continuous-time signals and systems"
   url = "/disciplines/continuous/continuoussignalprocessing_main"
-  parent = "Disciplines"
+  parent = "Study material"
   weight = 23
 
 
@@ -64,7 +59,7 @@
   [[main]]
     name = "Discrete-time signal processing basics"
     url = "/disciplines/discrete/discretesignalprocessing_main"
-    parent = "Disciplines"
+    parent = "Study material"
     weight = 24
 
 
@@ -72,7 +67,7 @@
 [[main]]
   name = "Statistical signal processing"
   url = "/disciplines/statistical/statisticalsignalprocessing_main"
-  parent = "Disciplines"
+  parent = "Study material"
   weight = 25
 
 
@@ -81,7 +76,7 @@
 # [[main]]
 #   name = "Multidimensional signal processing (to be added)"
 #   url = "/disciplines/multidimensional/multidimensionalsignalprocessing_main"
-#   parent = "Disciplines"
+#   parent = "Study material"
 #   weight = 26
 
 
@@ -90,7 +85,7 @@
 [[main]]
   name = "Optimal and adaptive signal processing (to be added)"
   url = "/disciplines/optimalandadaptive/optimalandadaptivesignalprocessing_main"
-  parent = "Disciplines"
+  parent = "Study material"
   weight = 27
 
 
@@ -99,7 +94,7 @@
 [[main]]
   name = "Sensor array and multichannel signal processing (to be added)"
   url = "/disciplines/sensorarrayandmultichannel/sensorarrayandmultichannelsignalprocessing_main"
-  parent = "Disciplines"
+  parent = "Study material"
   weight = 28
 
 
@@ -107,7 +102,7 @@
 [[main]]
   name = "Machine learning (to be added)"
   url = "/disciplines/machinelearning/machinelearning_main"
-  parent = "Disciplines"
+  parent = "Study material"
   weight = 29
 
 
@@ -116,7 +111,7 @@
 [[main]]
   name = "Information and communication theory (to be added)"
   url = "/disciplines/information/informationandcommunication_main"
-  parent = "Disciplines"
+  parent = "Study material"
   weight = 30
 
 

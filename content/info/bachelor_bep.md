@@ -28,4 +28,8 @@ BEP assignments are linked to the ongoing research activities of our labs. The B
 The organization of the Bachelor End Projects for the department of Electrical Engineering is arranged centrally. An overview of all available projects from all capacity groups can be found at the [**BEP Marketplace**](https://bep.ele.tue.nl/).
 There you can also find the latest information regarding the registration, deadlines and professional skills.
 
-If you would like to do a Bachelor End Project within the Signal Processing Systems groups, you can filter the list of projects on the capacity group. If you have any questions regarding one of our projects, please do not hesitate to contact the responsible person for that project.
+If you would like to do a Bachelor End Project within the Signal Processing Systems groups, you can filter the list of projects on the capacity group. In order to identify the corresponding lab, you can look up the affiliation of the responsible person for that project.
+
+
+### Contact 
+If you have any questions regarding one of our projects, please do not hesitate to contact the responsible person for that project. Do you want to do your BEP within a specific lab? Then just notify the contact person of that lab. These contacts are listed in the [Master section](../master_main#joining-an-sps-lab) under the different labs.
