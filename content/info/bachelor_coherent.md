@@ -21,13 +21,52 @@ The SPS group also offers several courses in these packages, so if you are inter
 
 In the overview below the SPS specific courses are highlighted in **boldface**.
 
+### Coherent packages within SPS
+
+#### Care and cure
+| Course code   | Course name                                            | Responsible SPS Lab  |
+|---------------|--------------------------------------------------------|----------------------|
+| 5XPC0         | Neurophysiology and neurostimulation                   |                      |
+| 5XCB0         | Electronic and photonic components                     |                      |
+| **5XSD0**     | **Medical ultrasound**                                 |      BM/d            |
+
 <br>
+
+#### Neuroengineering
+| Course code   | Course name                                            | Responsible SPS Lab  |
+|---------------|--------------------------------------------------------|----------------------|
+| 5XPC0         | Neurophysiology and neurostimulation                   |                      |
+| **5XSH0**         | **Cognitive neuroscience**                                 |     VCA              |
+| **5XSA0**     | **Introduction to medical image processing**           |     BM/d              |
+
+<br>
+
+#### Intelligent vehicles
+| Course code   | Course name                                            | Responsible SPS Lab       |
+|---------------|--------------------------------------------------------|---------------------------|
+| **5XSJ0**     | **Automotive sensing**                                 | Mobile Perception Systems |
+| 5ETA0         | Intro telecommunications                               |                           |
+| **5XSK0**     | **Data fusion and semantic interprestation**           | Mobile Perception Systems |
+
+
+<br>
+
+#### Machine learning and information processing for communications
+| Course code   | Course name                                            | Responsible SPS Lab  |
+|---------------|--------------------------------------------------------|----------------------|
+| **5XSL0**     | **Fundamentals of Machine Learning**                   |   VCA                |
+| **5XSE0**     | **Information Theory**                                 |   ICT Lab            |    
+| 5XTA0         | Telecommunication systems                              |                      |
+
+<br>
+
+### Other coherent packages
 
 #### Introduction in electrical engineering
 | Course code   | Course name                             |
 |---------------|-----------------------------------------|
 | 5XFA0         | Rock your baby design project           |
-| 5XIB0         | Venus exploration design project        |
+| 5XIB0         | Venus exploration design project        |  
 | 5XWF0         | Design project on wireless charging     |
 
 <br>
@@ -50,24 +89,6 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 
 <br>
 
-#### Care and cure
-| Course code   | Course name                                            |
-|---------------|--------------------------------------------------------|
-| 5XPC0         | Neurophysiology and neurostimulation                   |
-| 5XCB0         | Electronic and photonic components                     |
-| **5XSD0**     | **Medical ultrasound**                                 |
-
-<br>
-
-#### Neuroengineering
-| Course code   | Course name                                            |
-|---------------|--------------------------------------------------------|
-| 5XPC0         | Neurophysiology and neurostimulation                   |
-| 5XSH0         | Cognitive neuroscience                                 |
-| **5XSA0**     | **Introduction to medical image processing**           |
-
-<br>
-
 #### Smart and sustainable society
 | Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
@@ -86,24 +107,6 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 
 <br>
 
-#### Electric and Hybrid Vehicles
-| Course code   | Course name                                            |
-|---------------|--------------------------------------------------------|
-| 5XWC0         | Energy management                                      |
-| 5XWB0         | Electric drive systems                                 |
-| 5XWD0         | Project "Energy management in hybrid vehicles"         |
-
-<br>
-
-#### Intelligent vehicles
-| Course code   | Course name                                            |
-|---------------|--------------------------------------------------------|
-| **5XSJ0**     | **Automotive sensing**                                 |
-| 5ETA0         | Intro telecommunications                               |
-| **5XSK0**     | **Data fusion and semantic interprestation**           |
-
-<br>
-
 #### Nanoscience and technology
 | Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
@@ -111,11 +114,12 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 | 3ENX0         | Nanomaterials: physics and characterization            |
 | 5XPB0         | Nanomaterials: devices and integration                 |
 
+
 <br>
 
-#### Machine learning and information processing for communications
+#### Electric and Hybrid Vehicles
 | Course code   | Course name                                            |
 |---------------|--------------------------------------------------------|
-| **5XSL0**     | **Fundamentals of Machine Learning**                   |
-| **5XSE0**     | **Information Theory**                                 |
-| 5XTA0         | Telecommunication systems                              |
+| 5XWC0         | Energy management                                      |
+| 5XWB0         | Electric drive systems                                 |
+| 5XWD0         | Project "Energy management in hybrid vehicles"         |
