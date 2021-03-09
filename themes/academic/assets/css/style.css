@@ -271,13 +271,14 @@ canvas{
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: baseline;
+	align-items: center;
 	flex-wrap: wrap;
 }
 
 .company-logo-item {
 	display: block;
 	width: 200px;
+	max-height: 200px;
 	margin: 10px;
 }
 
