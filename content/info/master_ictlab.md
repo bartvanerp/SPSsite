@@ -83,3 +83,41 @@ The ICT Lab cooperates with industrial partners that frequently have internships
 
 ## Contact
 Do you have any questions regarding the information above? Please do not hesitate to contact dr. Alex Alvarado by sending him a mail at <a href="mailto:A.Alvarado@tue.nl">A.Alvarado@tue.nl</a>.
+
+<br>
+
+## Collaborative partners
+We are grateful to work with our collaborative partners:
+
+<div class="company-logo-wrapper">
+  <a href="https://google.com">
+    <div class="company-logo-item">
+      <img src="https://assets.tue.nl/fileadmin/content/Research/3_Research_Groups/Signal%20Processing%20Systems/AIIM.jpg">
+    </div>
+  </a>
+  <a href="https://google.com">
+    <div class="company-logo-item">
+      <img src="https://assets.tue.nl/fileadmin/content/Research/3_Research_Groups/Signal%20Processing%20Systems/AIIM.jpg">
+    </div>
+  </a>
+  <a href="https://google.com">
+    <div class="company-logo-item">
+      <img src="https://assets.tue.nl/fileadmin/content/Research/3_Research_Groups/Signal%20Processing%20Systems/AIIM.jpg">
+    </div>
+  </a>
+  <a href="https://google.com">
+    <div class="company-logo-item">
+      <img src="https://assets.tue.nl/fileadmin/content/Research/3_Research_Groups/Signal%20Processing%20Systems/AIIM.jpg">
+    </div>
+  </a>
+  <a href="https://google.com">
+    <div class="company-logo-item">
+      <img src="https://assets.tue.nl/fileadmin/content/Research/3_Research_Groups/Signal%20Processing%20Systems/AIIM.jpg">
+    </div>
+  </a>
+  <a href="https://google.com">
+    <div class="company-logo-item">
+      <img src="https://assets.tue.nl/fileadmin/content/Research/3_Research_Groups/Signal%20Processing%20Systems/AIIM.jpg">
+    </div>
+  </a>
+</div>
