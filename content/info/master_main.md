@@ -35,15 +35,13 @@ Now you need to choose in which of the labs you would like to graduate. To help 
 
 You can switch between different labs as you like, as long as you comply with the graduation requirements of the lab that you want to be graduating in.
 
-{{% alert warning %}}
-In contrast to the other capacity groups of the Department of Electrical Engineering, the signal processing systems group has organized its research activities in different labs. This leads to different procedures for contacting mentors, signing codes of conduct, internships, and graduating. *Therefore please read this page carefully!*
+{{% alert note %}}
+The signal processing systems group has organized its research activities in different labs. This leads to decentralized procedures for internships, and graduating. *Therefore please read this page carefully!*
 {{% /alert %}}
 
-
-### Mentors and code of conduct
+### Contact persons
 Every lab has its own contact person whom you should contact when you have questions about elective courses, internships, graduating, and graduation requirements. You can find the contact persons for each of the labs on their corresponding pages.
 
-During your master's program, you have to sign the code of conduct in presence of the contact person for the group in which you wish to graduate. This person is **not** the contact person that is listed in the study guide of the Department of Electrical Engineering. Instead, you should contact the contact person of the lab you wish to graduate in.
 
 | Lab     | Contact Person                                                                                                     |
 |---------|--------------------------------------------------------------------------------------------------------------------|
@@ -85,7 +83,7 @@ Each lab might demand extra requirements on graduating in their lab. Please have
 The information of the available Graduation Projects and Internships for the department of Electrical Engineering is arranged centrally at the <a href="https://master.ele.tue.nl/" target="_blank">Master marketplace</a>. There you can also find the latest information regarding the registration, deadlines and active internships.
 
 ### Internships
-In the master's program, you need to do an internship for 15 or 20 ECTS. Please have a look at the Master marketplace to see which internships are being offered by the SPS group. The internship does not have to be with the lab that you will be graduating from but could serve as an important introduction to your graduation project. In case you would like to ask about any other options for internships (such as going abroad), please contact the contact person of the corresponding lab.
+In the master's program, you need to do an internship for 15 ECTS, which you can optionally extend to 20 ECTS. Please have a look at the Master marketplace to see which internships are being offered by the SPS group. The internship does not have to be with the lab that you will be graduating from but could serve as an important introduction to your graduation project. In case you would like to ask about any other options for internships (such as going abroad), please contact the contact person of the corresponding lab. If you have found an internship on your own with a company or institution, try to find a well-suited SPS staff member who does research on a similar topic and who can properly supervise you during your internship.
 
 
 ### Graduation project
@@ -114,7 +112,7 @@ Graduation projects can also be carried out in collaboration with a company. If 
 |    5LSM0      |   Convolutional neural networks for computer vision           | TBA           | VCA         | Elective        |
 |    5LSJ0      |   Image analysis for health-care technologies                 | TBA           | VCA         | Elective        |
 
-### Contact persons
-For general questions regarding education in the SPS group, you can contact <a href="mailto:s.zinger@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Sveta Zinger</a> or <a href="mailto:a.alvarado@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Alex Alvarado</a>. For all lab-specific questions, please contact the responsible for the corresponding lab.
+### General questions
+For general questions regarding education in the SPS group, you can contact the mentors of our group <a href="mailto:s.zinger@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Sveta Zinger</a> or <a href="mailto:a.alvarado@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Alex Alvarado</a>. For all lab-specific questions, please contact the responsible for the corresponding lab.
 
 In case you feel like the information on this platform is outdated or incorrect, please mail us <a href="mailto:s.zinger@tue.nl;a.alvarado@tue.nl?cc=sps.education@tue.nl&subject=[SPS Education]%20{specify question here}">here</a>.
