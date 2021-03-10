@@ -83,3 +83,106 @@ The ICT Lab cooperates with industrial partners that frequently have internships
 
 ## Contact
 Do you have any questions regarding the information above? Please do not hesitate to contact dr. Alex Alvarado by sending him a mail at <a href="mailto:A.Alvarado@tue.nl">A.Alvarado@tue.nl</a>.
+
+<br>
+
+## Collaborative partners
+We are grateful to work with our collaborative partners:
+
+<div class="company-logo-wrapper">
+  <a href="https://www.chalmers.se/sv/Sidor/default.aspx" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/chalmers-avancez.png">
+    </div>
+  </a>
+  <a href="https://www.kit.edu/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/kit.png">
+    </div>
+  </a>
+  <a href="https://www.iaf.fraunhofer.de/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/fraunhofer.jpg">
+    </div>
+  </a>
+  <a href="https://www.keysight.com/nl/en/home.html" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/keysight.png">
+    </div>
+  </a>
+  <a href="https://www.nxp.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/nxp.png">
+    </div>
+  </a>
+  <a href="https://www.ericsson.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/ericsson.png">
+    </div>
+  </a>
+  <a href="https://www.gapwaves.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/gapwaves.png">
+    </div>
+  </a>
+  <a href="https://www.ums-gaas.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/ums.jpg">
+    </div>
+  </a>
+  <a href="http://www.imst.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/imst.jpg">
+    </div>
+  </a>
+  <a href="https://erc.europa.eu/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/erc.jpg">
+    </div>
+  </a>
+  <a href="https://tudelft.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/tudelft.png">
+    </div>
+  </a>
+    <a href="https://www.kuleuven.be/kuleuven/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/kuleuven.png">
+    </div>
+  </a>
+    <a href="https://www.astron.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/astron.png">
+    </div>
+  </a>
+      <a href="https://www.qamcom.se/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/qamcon.png">
+    </div>
+  </a>
+  <a href="https://saab.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/saab.png">
+    </div>
+  </a>
+  <a href="https://tno.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/tno.png">
+    </div>
+  </a>
+  <a href="https://www.nwo.nl/en" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/nwo.png">
+    </div>
+  </a>
+    <a href="https://technikon.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/technikon.png">
+    </div>
+  </a>
+    <a href="https://www.intrinsic-id.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/iid.png">
+    </div>
+  </a>
+</div>
