@@ -1,0 +1,156 @@
++++
+type = "docs"
+
+# date = {{ .Date }}
+lastmod = 2021-05-03
+
+toc = true
+
+# Add menu entry to sidebar.
+[menu.info]
+  name = "VCA"
+  weight = 1
+  parent = "Master program"
+
++++
+
+
+<div class="row">
+  <div class="col-md-6 order-md-1 text-center text-md-left" style="vertical-align: middle; display: flex; align-items: center;">
+  <div>
+    <h1 class="hero-title" itemprop="headline" style="text-shadow: 0px 0px 0px rgba(0,0,0,0.0)">
+      VCA
+    </h1>
+    <div class="hero-lead" style="text-shadow: 0px 0px 0px rgba(0,0,0,0.0)">
+      Video Coding & Architectures
+    </div>
+  </div>
+  </div>
+  <div class="col-6 mx-auto col-md-6 order-md-2 hero-media">
+    <img src="/img/VCAlogo.jpg" alt="">
+  </div>
+</div>
+
+
+## Research focus
+Our research spans areas of video analysis, image/video segmentation, object-oriented and 3D video compression that underpin systems-oriented research on video coding and architectures. This work pursues state-of-the-art video functionality at high cost-efficiency (e.g. for real-time aspects and/or mobile applications), through a combination of novel algorithms and architectures.
+
+<br>
+
+## Courses
+The courses offered by VCA Lab are are well aligned with our research and offer students content to grow in knowledge and skills to tackle real world challenges.
+
+In the following, you find an overview of the courses offered by the VCA lab.
+
+| Course code   | Course name                                | Level                 | Time Slot |
+|---------------|----------------------------------------------|---------------------|-----------|
+| 5LSE0         | Techniques for video compression & analysis  | Master elective     | Q?        |
+| 5LSH0         | Computer vision and 3D image processing      |  Master elective    | Q?        |
+| 5LSM0         | Convolutional neural networks for computer vision|Master elective  | Q?        |
+| 5LSJ0         |  Image analysis for health-care technologies | Master elective     | Q?        |
+| 5XSA0         | Introduction to medical image processing     | Bachelor elective   | Q?        |
+| 5ESC0         | DSP fundamentals                             | Bachelor mandatory  | Q1        |
+| 5XSL0         | Fundamentals of Machine Learning             | Bachelor/Advance Elective|  Q4  |
+
+<br>
+
+## Graduation
+To finish the Master studies you have to enroll in a Final Project. You can discover some of our projects in the <a href="https://master.ele.tue.nl/" target="_blank">Master marketplace</a>. There you can find the latest information regarding the registration as well as an extended description of the active projects within the ICT Lab. Just remember that once you are logged in the Marketplace portal, you can filter the list of projects by choosing the capacity group. Choose SPS in the *Research group* option, and select <a href="https://research.tue.nl/en/organisations/video-coding-architectures/persons/" target="_blank">any of  our researchers</a> as the *Responsible staff*. If you have any questions regarding one of our projects, please do not hesitate to contact the responsible for the project you are interested in.
+
+<br>
+
+## Master Projects
+The VCA lab offers master projects in three main research branches *Automotive*, *Healthcare*, and *Surveillance*. To learn more about these projects visit our <a href="http://vca.ele.tue.nl/master-projects" target="_blank">projects page</a>.  
+
+<br>
+
+## Internships
+VCA collaborates with industrial partners that often open internships available for graduate students with a background in information and communication theory. Get in touch with us if you would like to learn more about these opportunities.
+
+<br>
+
+## Contact
+Do you have any questions regarding the information above? Please do not hesitate to contact dr. Peter de With by sending him a mail at <a href="mailto:p.h.n.de.with@tue.nl ">p.h.n.de.with@tue.nl </a>.
+
+<br>
+
+## Collaborative partners
+We are grateful to work with our collaborative partners:
+
+<div class="company-logo-wrapper">
+  <a href="https://www.nxp.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/nxp.png">
+    </div>
+  </a>
+  <a href="https://tass.plm.automation.siemens.com//" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/tassinternational.png">
+    </div>
+  </a>
+  <a href="https://www.tomtom.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/TomTom-logo.jpg">
+    </div>
+  </a>
+  <a href="https://www.ibm.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/IBM_logo.png">
+    </div>
+  </a>
+  <a href="https://vinotion.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/ViNotion_logo.png">
+    </div>
+  </a>
+  <a href="https://erc.europa.eu/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/erc.jpg">
+    </div>
+  </a>
+  <a href="https://www.daf.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/daf.png">
+    </div>
+  </a>
+    <a href="https://www.ford.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/Ford_logo.png">
+    </div>
+  </a>
+    <a href="https://www.kempenhaeghe.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/kempenhaeghe.png">
+    </div>
+  </a>
+      <a href="https://www.catharinaziekenhuis.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/catharinaziekenhuis.jpeg">
+    </div>
+  </a>
+  <a href="https://www.linkedin.com/company/ninepoint-medical/about/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/ninepoint-medical.jpeg">
+    </div>
+  </a>
+  <a href="https://www.radboudumc.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/Radboudumc.png">
+    </div>
+  </a>
+  <a href="https://www.mmc.nl target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/maxima.jpeg">
+    </div>
+  </a>
+    <a href="https://www.philips.com/global" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/phillips.png">
+    </div>
+  </a>
+    <a href="https://www.uzleuven.be" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/uzleuven.jpeg">
+    </div>
+  </a>
+</div>
