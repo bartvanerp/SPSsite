@@ -2,7 +2,7 @@
 type = "docs"
 
 # date = {{ .Date }}
-lastmod = 2020-10-01
+lastmod = 2021-05-03
 
 toc = true
 
@@ -27,7 +27,7 @@ toc = true
   </div>
   </div>
   <div class="col-6 mx-auto col-md-6 order-md-2 hero-media">
-    <img src="/img/vca.jpg" alt="">
+    <img src="/img/VCAlogo.jpg" alt="">
   </div>
 </div>
 
@@ -38,16 +38,15 @@ The Video Coding and Architectures research group is part of the Signal Processi
 <br>
 
 ## Courses
-The courses offered by the BIASlab tie in perfectly with our research focus. In BIASlab we focus on Bayesian machine learning which you will learn in the specialization course of the SPS master. As a background we would highly recommend you to follow the fundamentals of machine learning course, in which we teach you the basics of the field of machine learning. As all machine learning requires proper software engineering, we also learn you how to properly write software for machine learning applications.
+The courses offered by VCA Lab are are well aligned with our research and offer students content to grow in knowledge and skills to tackle real world challenges.
+
+In the following, you find an overview of the courses offered by the VCA lab.
 
 | Course code   | Course name                                          | Level                     | Time Slot |
 |---------------|------------------------------------------------------|---------------------------|-----------|
-| 5AUA0         | Advanced Sensing using Deep Learning                 | Master Elective           | Q4        |
-| 5XSJ0         | Automotive Sensing                                   | Bachelor Advanced         | Q1        |
 | 5EIA0         | Computation I: Hardware/Software Interface           | Bachelor Introductory     | Q1        |
 | 5LSH0         | Computer Vision and 3D Image Processing              | Master Elective           | Q2        |
 | 5LSM0         | Convolutional Neural Networks for Computer Vision    | Master Elective           | Q3        |
-| 5XSK0         | Data Fusion & Semantic Interpretation                | Bachelor Advanced         | Q3        | 
 | 5LIA0         | Embedded Visual Control                              | Master Elective           | Q4        |
 | 5XSL0         | Fundamentals of Machine Learning                     | Bachelor Advanced         | Q4        |
 | 5LSJ0         | Image Analysis for Health-Care Technologies          | Master Elective           | Q3        |
@@ -61,7 +60,7 @@ The courses offered by the BIASlab tie in perfectly with our research focus. In 
 <br>
 
 ## Graduation
-To finish the Master studies you have to enroll in a Graduation Project. For graduating within the VCA lab, you can contact one of [our researchers](https://research.tue.nl/en/organisations/video-coding-architectures/persons/) to discuss what possibilities there are.
+To finish the Master studies you have to enroll in a Graduation Project. For graduating within the VCA lab, you can contact one of [our researchers](https://research.tue.nl/en/organisations/video-coding-architectures/persons/) to discuss what possibilities there are. The VCA lab offers master projects in three main research branches *Automotive*, *Healthcare*, and *Surveillance*. To learn more about these projects visit our <a href="http://vca.ele.tue.nl/master-projects" target="_blank">projects page</a>.  
 
 <br>
 
@@ -72,3 +71,86 @@ The VCA lab cooperates with industrial partners that frequently have internships
 
 ## Contact
 Do you have any questions regarding the information above? Please do not hesitate to contact one of [our researchers](https://research.tue.nl/en/organisations/video-coding-architectures/persons/).
+
+<br>
+
+## Collaborative partners
+We are grateful to work with our collaborative partners:
+
+<div class="company-logo-wrapper">
+  <a href="https://www.nxp.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/nxp.png">
+    </div>
+  </a>
+  <a href="https://tass.plm.automation.siemens.com//" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/tassinternational.png">
+    </div>
+  </a>
+  <a href="https://www.tomtom.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/TomTom-logo.jpg">
+    </div>
+  </a>
+  <a href="https://www.ibm.com/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/IBM_logo.png">
+    </div>
+  </a>
+  <a href="https://vinotion.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/ViNotion_logo.png">
+    </div>
+  </a>
+  <a href="https://erc.europa.eu/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/erc.jpg">
+    </div>
+  </a>
+  <a href="https://www.daf.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/daf.png">
+    </div>
+  </a>
+    <a href="https://www.ford.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/Ford_logo.png">
+    </div>
+  </a>
+    <a href="https://www.kempenhaeghe.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/kempenhaeghe.png">
+    </div>
+  </a>
+      <a href="https://www.catharinaziekenhuis.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/catharinaziekenhuis.jpeg">
+    </div>
+  </a>
+  <a href="https://www.linkedin.com/company/ninepoint-medical/about/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/ninepoint-medical.jpeg">
+    </div>
+  </a>
+  <a href="https://www.radboudumc.nl/" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/Radboudumc.png">
+    </div>
+  </a>
+  <a href="https://www.mmc.nl" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/maxima.jpeg">
+    </div>
+  </a>
+    <a href="https://www.philips.com/global" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/phillips.png">
+    </div>
+  </a>
+    <a href="https://www.uzleuven.be" target="blank_">
+    <div class="company-logo-item">
+      <img src="../company_logos/uzleuven.jpeg">
+    </div>
+  </a>
+</div>
