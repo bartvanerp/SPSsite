@@ -48,9 +48,9 @@ In the following, you find an overview of the courses offered by the MPS lab.
 
 | Course code   | Course name                          | Level                       | Time Slot |
 |---------------|--------------------------------------|-----------------------------|-----------|
-| 5AUA0         | Advanced sensing using deep learning | Master elective             | Q?        |
-| 5XSJ0         | Automotive sensing                   |Bachelor/Advanced Elective   | Q?        |
-| 5XSK0         | Data fusion & semantic interpretation|Bachelor/Advanced Elective   | Q?        |
+| 5AUA0         | Advanced sensing using deep learning | Master elective             | Q4        |
+| 5XSJ0         | Automotive sensing                   |Bachelor/Advanced Elective   | Q1        |
+| 5XSK0         | Data fusion & semantic interpretation|Bachelor/Advanced Elective   | Q3        |
 
 
 <br>

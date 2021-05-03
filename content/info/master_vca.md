@@ -44,12 +44,9 @@ In the following, you find an overview of the courses offered by the VCA lab.
 
 | Course code   | Course name                                          | Level                     | Time Slot |
 |---------------|------------------------------------------------------|---------------------------|-----------|
-| 5AUA0         | Advanced Sensing using Deep Learning                 | Master Elective           | Q4        |
-| 5XSJ0         | Automotive Sensing                                   | Bachelor Advanced         | Q1        |
 | 5EIA0         | Computation I: Hardware/Software Interface           | Bachelor Introductory     | Q1        |
 | 5LSH0         | Computer Vision and 3D Image Processing              | Master Elective           | Q2        |
 | 5LSM0         | Convolutional Neural Networks for Computer Vision    | Master Elective           | Q3        |
-| 5XSK0         | Data Fusion & Semantic Interpretation                | Bachelor Advanced         | Q3        | 
 | 5LIA0         | Embedded Visual Control                              | Master Elective           | Q4        |
 | 5XSL0         | Fundamentals of Machine Learning                     | Bachelor Advanced         | Q4        |
 | 5LSJ0         | Image Analysis for Health-Care Technologies          | Master Elective           | Q3        |
