@@ -138,7 +138,7 @@ We are grateful to work with our collaborative partners:
       <img src="../company_logos/Radboudumc.png">
     </div>
   </a>
-  <a href="https://www.mmc.nl target="blank_">
+  <a href="https://www.mmc.nl" target="blank_">
     <div class="company-logo-item">
       <img src="../company_logos/maxima.jpeg">
     </div>

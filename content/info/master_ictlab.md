@@ -82,7 +82,7 @@ The ICT Lab cooperates with industrial partners that frequently have internships
 <br>
 
 ## Contact
-Do you have any questions regarding the information above? Please do not hesitate to contact dr. Alex Alvarado by sending him a mail at <a href="mailto:A.Alvarado@tue.nl">A.Alvarado@tue.nl</a>.
+Do you have any questions regarding the information above? Please do not hesitate to contact Dr. Alex Alvarado by sending him a mail at <a href="mailto:A.Alvarado@tue.nl">A.Alvarado@tue.nl</a>.
 
 <br>
 
