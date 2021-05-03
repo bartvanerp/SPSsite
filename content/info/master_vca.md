@@ -70,7 +70,7 @@ VCA collaborates with industrial partners that often open internships available 
 <br>
 
 ## Contact
-Do you have any questions regarding the information above? Please do not hesitate to contact Dr. Peter de With by sending him a mail at <a href="mailto:p.h.n.de.with@tue.nl ">p.h.n.de.with@tue.nl </a>.
+Do you have any questions regarding the information above? Please do not hesitate to contact Dr. Peter de With by sending him a mail at <a href="mailto:p.h.n.de.with@tue.nl">p.h.n.de.with@tue.nl </a>.
 
 <br>
 
