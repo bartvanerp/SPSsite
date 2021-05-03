@@ -22,11 +22,11 @@ Our research activities tie in perfectly with model-based signal processing, dat
 Students can explore our different fields of research by checking the areas each lab focuses on:
 
 - [Bayesian Intelligent Autonomous Systems Lab](../master_biaslab) (BIASlab)
-- Biomedical Diagnostics Lab (BM/d)
+- [Biomedical Diagnostics Lab](../master_bmd) (BM/d)
 - [Information and Communication Theory Lab](../master_ictlab) (ICT Lab)
 - [Lighting and IoT Lab](../master_lighting) (L&IoT Lab)
-- Neu3CA
-- Mobile Perception Systems Lab (MPS)
+- [Neu3CA](../master_neu3ca)
+- [Mobile Perception Systems Lab](../mpslab) (MPS)
 - [Video Coding and Architectures](../master_vca) (VCA)
 
 If you find yourself on this page, you have probably already decided that you want to graduate within the SPS group. Perfect!
