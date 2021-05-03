@@ -47,6 +47,10 @@ where $\bar{x}$ is the sample mean, $\mu_0$ is the expected true mean under the 
 
 When observing $N$ new samples, the value calculated as $t$ provides us with information on how significantly the approximated mean value of the new samples deviates from the expected mean value under the null hypothesis.
 
+<div class="video-container">
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/sFd5d3j_3oo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+</div>
+
 ### Derivation of the t-statistic
 Recall from the reader on random variables that it was possible to normalize a random variable $Y\sim\mathcal{N}(\mu_Y, \sigma_Y^2)$ to the random variable $X\sim\mathcal{N}(0,1)$ by the definition
 \begin{equation}\label{eq:z}
@@ -135,7 +139,7 @@ The $t$-statistic can be regarded as the normalized sample mean, where the varia
 
 The probability density function of the newly defined variable $t$ can be determined as
 \begin{equation}
-    p(t|\nu) = \frac{\Gamma\left(\frac{v+1}{2}\right)}{\Gamma\left(\frac{v}{2}\right)}\frac{1}{\sqrt{\nu\pi}}\left(1+\frac{t^2}{vs}\right)^{-\frac{\nu-1}{2}},
+    p(t|\nu) = \frac{\Gamma\left(\frac{\nu+1}{2}\right)}{\Gamma\left(\frac{\nu}{2}\right)}\frac{1}{\sqrt{\nu\pi}}\left(1+\frac{t^2}{\nu}\right)^{-\frac{\nu-1}{2}},
 \end{equation}
 where $v$ is the degrees of freedom, which is equal to $N-1$, and where $\Gamma$ is the gamma function. The proof of this probability density function is beyond the scope of this reader. This distribution returns the probability that a set of samples do not belong to the distribution with mean $\mu_0$ as formulated in the null hypothesis.
 

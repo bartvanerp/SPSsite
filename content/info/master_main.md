@@ -21,7 +21,7 @@ Our research activities tie in perfectly with model-based signal processing, dat
 ### Joining an SPS lab
 Students can explore our different fields of research by checking the areas each lab focuses on:
 
-- Bayesian Intelligent Autonomous Systems Lab (BIASlab)
+- [Bayesian Intelligent Autonomous Systems Lab](../master_biaslab) (BIASlab)
 - Biomedical Diagnostics Lab (BM/d)
 - [Information and Communication Theory Lab](../master_ictlab) (ICT Lab)
 - Lighting and IoT Lab (L&IoT slab)
