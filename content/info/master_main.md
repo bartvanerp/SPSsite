@@ -94,23 +94,29 @@ Graduation projects can also be carried out in collaboration with a company. If 
 > Good luck during your studies!
 
 ### Courses offered by our group
+| Course code   | Course name                                          | Level                     | Time Slot |
+|---------------|------------------------------------------------------|---------------------------|-----------|
+| 5XSL0         | Fundamentals of Machine Learning                     | Bachelor/Advance Elective | Q4        |
+| 5SSD0         | Bayesian Machine Learning and Information Processing | Master Specialization     | Q2        |
+| 5ARA0         | Software Engineering for Artificial Intelligence     | Master Elective           | Q3        |
+
 | Course code   | Course name                                                   | Timeslot      | Lab         | Type            |
 |---------------|---------------------------------------------------------------|---------------|-------------|-----------------|
-|    5CRA0      |   Statistical Signal Processing                               | TBA           | BMd         | Core            |
-|    5SSD0      |   Bayesian machine learning and information processing        | TBA           | BIASlab     | Specialization  |
-|    5SSC0      |   Adaptive array signal processing                            | TBA           | BMd         | Specialization  |
-|    5ARA0      |   Software engineering for artificial intelligence            | TBA           | BIASlab     | Elective        |
-|    3MA100     |   Physics behind medical technology: equipment and physiology | TBA           | BMd         | Elective        |
-|    5LSC0      |   Biomedical Sensing Technology                               | TBA           | BMd         | Elective        |
-|    5LSL0      |   Machine learning for signal processing                      | TBA           | BMd         | Elective        |
-|    SMPE/e     |   Physics and Physiology behind Medical Technology            | TBA           | BMd         | Elective        |
-|    5LSF0      |   Applications of Information Theory                          | TBA           | ICTlab      | Elective        |
-|    5LSK0      |   Digital wireless communication exploration lab              | TBA           | ICTlab      | Elective        |
-|    5AUA0      |   Advanced sensing using deep learning                        | TBA           | MPS         | Elective        |
-|    5LSE0      |   Techniques for video compression & analysis                 | TBA           | VCA         | Elective        |
-|    5LSH0      |   Computer vision and 3D image processing                     | TBA           | VCA         | Elective        |
-|    5LSM0      |   Convolutional neural networks for computer vision           | TBA           | VCA         | Elective        |
-|    5LSJ0      |   Image analysis for health-care technologies                 | TBA           | VCA         | Elective        |
+|    5CRA0      |   Statistical Signal Processing                               | Q1            | BMd         | Core            |
+|    5SSD0      |   Bayesian machine learning and information processing        | Q2            | BIASlab     | Specialization  |
+|    5SSC0      |   Adaptive array signal processing                            | Q3            | BMd         | Specialization  |
+|    5ARA0      |   Software engineering for artificial intelligence            | Q3            | BIASlab/MPS | Elective        |
+|    3MA100     |   Physics behind medical technology: equipment and physiology | Q3            | BMd         | Elective        |
+|    5LSC0      |   Biomedical Sensing Technology                               | Q3            | BMd         | Elective        |
+|    5LSL0      |   Machine learning for signal processing                      | Q4            | BMd         | Elective        |
+|    SMPE/e     |   Physics and Physiology behind Medical Technology            | Q3            | BMd         | Elective        |
+|    5LSF0      |   Applications of Information Theory                          | Q4            | ICTlab      | Elective        |
+|    5LSK0      |   Digital wireless communication exploration lab              | Q1           | ICTlab      | Elective        |
+|    5AUA0      |   Advanced sensing using deep learning                        | Q4           | MPS         | Elective        |
+|    5LSE0      |   Techniques for video compression & analysis                 | Q3           | VCA         | Elective        |
+|    5LSH0      |   Computer vision and 3D image processing                     | Q2           | VCA         | Elective        |
+|    5LSM0      |   Convolutional neural networks for computer vision           | Q3           | VCA         | Elective        |
+|    5LSJ0      |   Image analysis for health-care technologies                 | Q3           | VCA         | Elective        |
 
 ### General questions
 For general questions regarding education in the SPS group, you can contact the mentors of our group <a href="mailto:s.zinger@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Sveta Zinger</a> or <a href="mailto:a.alvarado@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Alex Alvarado</a>. For all lab-specific questions, please contact the responsible for the corresponding lab.
