@@ -24,10 +24,10 @@ Students can explore our different fields of research by checking the areas each
 - [Bayesian Intelligent Autonomous Systems Lab](../master_biaslab) (BIASlab)
 - Biomedical Diagnostics Lab (BM/d)
 - [Information and Communication Theory Lab](../master_ictlab) (ICT Lab)
-- Lighting and IoT Lab (L&IoT slab)
+- [Lighting and IoT Lab](../master_lighting) (L&IoT Lab)
 - Neu3CA
 - Mobile Perception Systems Lab (MPS)
-- Video Coding and Architectures (VCA)
+- [Video Coding and Architectures](../master_vca) (VCA)
 
 If you find yourself on this page, you have probably already decided that you want to graduate within the SPS group. Perfect!
 Now you need to choose in which of the labs you would like to graduate. To help you make a well-informed decision, each lab has provided a page with information about their research activities.
