@@ -4,7 +4,7 @@ type = "docs"
 # date = {{ .Date }}
 lastmod = 2020-10-08
 
-title = "Coherent packages"
+title = "Coherent packages with SPS contribution"
 
 # Add menu entry to sidebar.
 [menu.info]
@@ -36,7 +36,7 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 | Course code   | Course name                                            | Responsible SPS Lab  |
 |---------------|--------------------------------------------------------|----------------------|
 | 5XPC0         | Neurophysiology and neurostimulation                   |                      |
-| **5XSH0**         | **Cognitive neuroscience**                                 |     VCA              |
+| **5XSH0**     | **Cognitive neuroscience**                             |     BM/d               |
 | **5XSA0**     | **Introduction to medical image processing**           |     BM/d              |
 
 <br>
@@ -54,12 +54,13 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 #### Machine learning and information processing for communications
 | Course code   | Course name                                            | Responsible SPS Lab  |
 |---------------|--------------------------------------------------------|----------------------|
-| **5XSL0**     | **Fundamentals of Machine Learning**                   |   VCA                |
+| **5XSL0**     | **Fundamentals of Machine Learning**                   |   VCA/Bias Lab       |
 | **5XSE0**     | **Information Theory**                                 |   ICT Lab            |    
 | 5XTA0         | Telecommunication systems                              |                      |
 
 <br>
 
+<!--
 ### Other coherent packages
 
 #### Introduction in electrical engineering
@@ -123,3 +124,4 @@ In the overview below the SPS specific courses are highlighted in **boldface**.
 | 5XWC0         | Energy management                                      |
 | 5XWB0         | Electric drive systems                                 |
 | 5XWD0         | Project "Energy management in hybrid vehicles"         |
+-->

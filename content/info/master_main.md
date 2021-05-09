@@ -25,7 +25,7 @@ Students can explore our different fields of research by checking the areas each
 - [Biomedical Diagnostics Lab](../master_bmd) (BM/d)
 - [Information and Communication Theory Lab](../master_ictlab) (ICT Lab)
 - [Lighting and IoT Lab](../master_lighting) (L&IoT Lab)
-- [Neu3CA](../master_neu3ca)
+- [NeuroPlatform](../master_neu3ca)
 - [Mobile Perception Systems Lab](../mpslab) (MPS)
 - [Video Coding and Architectures](../master_vca) (VCA)
 
@@ -51,7 +51,7 @@ Every lab has its own contact person whom you should contact when you have quest
 |L&IoT Lab| <a href="mailto:j.p.linnartz@tue.nl?subject=[SPS Education]%20{specify question here}"> Jean-Paul Linnartz</a>  |
 |Neu3CA   | <a href="mailto:s.zinger@tue.nl?subject=[SPS Education]%20{specify question here}"> Sveta Zinger</a>            |
 |MPS      | <a href="mailto:g.dubbelman@tue.nl?subject=[SPS Education]%20{specify question here}"> Gijs Dubbelman</a>       |
-|VCA      |<a href="mailto:s.zinger@tue.nl?subject=[SPS Education]%20{specify question here}"> Sveta Zinger</a>             |
+|VCA      |<a href="mailto:p.h.n.de.with@tue.nl?subject=[SPS Education]%20{specify question here}"> Peter de With</a>             |
 
 
 ### Graduating within the SPS group
@@ -66,18 +66,18 @@ Keep track of the quartiles these courses are offered and plan in advance by add
 In the first quartile (Q1) you need to select three core courses from the set listed <a href="https://studiegids.tue.nl/opleidingen/graduate-school/masters-programs/electrical-engineering/curriculum/core-courses/" target="_blank">here</a>.
 From this set of courses, some are labeled as either important or preferred by the SPS group.
 
-**Important**
+**Must have**
 - Statistical signal processing (5CTA0)
 - Non-linear optimization (2DME10)
 
-**Preferred**
+**Nice to have**
 - Complex Analysis (2DME30)
 - Numerical methods in Electrical Engineering (5CPA0)
 - Modeling dynamics (5CSA0)
 
 In case you wish not to follow the important courses, because you prefer to follow others, please contact the contact person of the lab you wish to graduate in to confirm whether this is a problem.
 
-Each lab might demand extra requirements on graduating in their lab. Please have a look at the different lab pages to find out what these extra requirements are. If you want to make sure that you choose elective courses that are adequate for graduating within a lab, please contact the lab contact person.
+Each lab might have extra requirements on graduating in their lab. Please have a look at the different lab pages to find out what these extra requirements are. If you want to make sure that you choose elective courses that are adequate for graduating within a lab, please contact the lab contact person.
 
 ### Master marketplace
 The information of the available Graduation Projects and Internships for the department of Electrical Engineering is arranged centrally at the <a href="https://master.ele.tue.nl/" target="_blank">Master marketplace</a>. There you can also find the latest information regarding the registration, deadlines and active internships.
@@ -93,30 +93,28 @@ Graduation projects can also be carried out in collaboration with a company. If 
 
 > Good luck during your studies!
 
-### Courses offered by our group
-| Course code   | Course name                                          | Level                     | Time Slot |
-|---------------|------------------------------------------------------|---------------------------|-----------|
-| 5XSL0         | Fundamentals of Machine Learning                     | Bachelor/Advance Elective | Q4        |
-| 5SSD0         | Bayesian Machine Learning and Information Processing | Master Specialization     | Q2        |
-| 5ARA0         | Software Engineering for Artificial Intelligence     | Master Elective           | Q3        |
+### Master courses offered by our group
 
 | Course code   | Course name                                                   | Timeslot      | Lab         | Type            |
 |---------------|---------------------------------------------------------------|---------------|-------------|-----------------|
-|    5CRA0      |   Statistical Signal Processing                               | Q1            | BMd         | Core            |
+|    5CRA0      |   Statistical Signal Processing                               | Q1            | BMd/ICTlab  | Core            |
 |    5SSD0      |   Bayesian machine learning and information processing        | Q2            | BIASlab     | Specialization  |
-|    5SSC0      |   Adaptive array signal processing                            | Q3            | BMd         | Specialization  |
+|    5SSC0      |   Adaptive array signal processing                            | Q3            | BMd         |  Specialization  |
 |    5ARA0      |   Software engineering for artificial intelligence            | Q3            | BIASlab/MPS | Elective        |
 |    3MA100     |   Physics behind medical technology: equipment and physiology | Q3            | BMd         | Elective        |
 |    5LSC0      |   Biomedical Sensing Technology                               | Q3            | BMd         | Elective        |
 |    5LSL0      |   Machine learning for signal processing                      | Q4            | BMd         | Elective        |
 |    SMPE/e     |   Physics and Physiology behind Medical Technology            | Q3            | BMd         | Elective        |
 |    5LSF0      |   Applications of Information Theory                          | Q4            | ICTlab      | Elective        |
-|    5LSK0      |   Digital wireless communication exploration lab              | Q1           | ICTlab      | Elective        |
-|    5AUA0      |   Advanced sensing using deep learning                        | Q4           | MPS         | Elective        |
-|    5LSE0      |   Techniques for video compression & analysis                 | Q3           | VCA         | Elective        |
-|    5LSH0      |   Computer vision and 3D image processing                     | Q2           | VCA         | Elective        |
-|    5LSM0      |   Convolutional neural networks for computer vision           | Q3           | VCA         | Elective        |
-|    5LSJ0      |   Image analysis for health-care technologies                 | Q3           | VCA         | Elective        |
+|    5LSK0      |   Digital wireless communication exploration lab              | Q1            | ICTlab      | Elective        |
+|    5AUA0      |   Advanced sensing using deep learning                        | Q4            | MPS         | Elective        |
+|    5LSE0      |   Techniques for video compression & analysis                 | Q3            | VCA         | Elective        |
+|    5LSH0      |   Computer vision and 3D image processing                     | Q2            | VCA         | Elective        |
+|    5LSM0      |   Convolutional neural networks for computer vision           | Q3            | VCA         | Elective        |
+|    5LSJ0      |   Image analysis for health-care technologies                 | Q3            | BMd/VCA     | Elective        |
+|    5XSL0      |   Fundamentals of Machine Learning                            | Q4            | VCA/BIASlab | Elective        |
+|    5ARA0      |   Software Engineering for Artificial Intelligence            | Q3            | BIASlab     | Elective        |
+
 
 ### General questions
 For general questions regarding education in the SPS group, you can contact the mentors of our group <a href="mailto:s.zinger@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Sveta Zinger</a> or <a href="mailto:a.alvarado@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Alex Alvarado</a>. For all lab-specific questions, please contact the responsible for the corresponding lab.

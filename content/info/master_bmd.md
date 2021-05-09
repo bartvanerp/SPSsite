@@ -77,7 +77,7 @@ Do you have any questions regarding the information above? Please do not hesitat
 
 <br>
 
-## Collaborative partners
+## Collaboration partners
 We are grateful to work with our collaborative partners:
 
 <div class="company-logo-wrapper">
