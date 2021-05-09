@@ -39,9 +39,10 @@ Alongside these three compulsory courses, you are free to choose several electiv
 |    5XSH0      |   Cognitive neuroscience                  | Q3            | VCA         |
 |    5XSK0      |   Data fusion and semantic interpretation | Q3            | MPS         |
 |    5XSD0      |   Medical ultrasound                      | Q4            | BM/d        |
-|    5XSL0      |   Fundamentals of machine learning        | Q4            | VCA / BIASlab|
-|    5XSA0      |   Introduction to medical image processing| Q4            | BM/d         |
+|    5XSL0      |   Fundamentals of machine learning        | Q4            | VCA/BIASlab |
+|    5XSA0      |   Introduction to medical image processing| Q4            | BM/d        |
 
+Visit <a href="https://tue.osiris-student.nl" target="_blank">OSIRIS</a> for a summary of contents and the steps to enroll these electives.
 
 <!--
 #### Bayesian Intelligent Autonomous Systems Lab

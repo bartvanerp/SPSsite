@@ -8,7 +8,7 @@ toc = true
 
 # Add menu entry to sidebar.
 [menu.info]
-  name = "Neu3CA"
+  name = "NeuroPlatform"
   weight = 1
   parent = "Master program"
 
@@ -19,10 +19,10 @@ toc = true
   <div class="col-md-6 order-md-1 text-center text-md-left" style="vertical-align: middle; display: flex; align-items: center;">
   <div>
     <h1 class="hero-title" itemprop="headline" style="text-shadow: 0px 0px 0px rgba(0,0,0,0.0)">
-      Neu<sup>3</sup>CA
+      NPlatform
     </h1>
     <div class="hero-lead" style="text-shadow: 0px 0px 0px rgba(0,0,0,0.0)">
-      Neurodegeneration, Neuromodulation and Neuronal networks in Cognitive Aging
+       NeuroPlatform
     </div>
   </div>
   </div>
@@ -33,7 +33,7 @@ toc = true
 
 
 ## Research focus
-At Neu<sup>3</sup>CA we study **neu**rodegeneration, **neu**romodulation and **neu**ronal networks in the field of **C**ognitive **A**geing. We have a multidisciplinary team of engineers, clinical researchers and industry partners that collaborate on translational research projects, which typically involve technologies like magnetic resonance imaging of the brain, advanced simulations of brain networks, and the application of neuromodulation. We aim to advance the scientific understanding of cognition and its decline in neuropsychiatric disorders like epilepsy, stroke and depression, and through this we aim to develop new protocols and technologies for treatment
+At NeuroPlatform we study neurodegeneration, neuromodulation and neuronal networks in the field of cognitive ageing. We have a multidisciplinary team of engineers, clinical researchers and industry partners that collaborate on translational research projects, which typically involve technologies like magnetic resonance imaging of the brain, advanced simulations of brain networks, and the application of neuromodulation. We aim to advance the scientific understanding of cognition and its decline in neuropsychiatric disorders like epilepsy, stroke and depression, and through this we aim to develop new protocols and technologies for treatment
 
 <br>
 
