@@ -15,7 +15,7 @@ type = "docs"       # Do not modify.
 
 +++
 
-The signal processing field deals with the analysis and manipulation of data.
+The signal processing field deals with the analysis and manipulation of spatiotemporal data.
 In order to perform operations on this data, a mathematical maturity is required.
 This module concerns several elementary but vital mathematical concepts, which are commonly used in the signal processing field.
 
@@ -23,10 +23,11 @@ The concepts covered in this discipline are:
 
 1. <a href="../mathematicalbackground_complex_main">Complex numbers and phasors</a> - In addition to the set of real numbers that everyone is used to working with, a whole new dimension is introduced by complex numbers. These complex numbers can be used to describe sinusoidal signals through phasors, which has proven to be useful in many applications.
 
-2. **Linear algebra** (to be added) - Mathematical operations involving multiple variables can often be sped up significantly using the parallel computational power of graphics processing units (better known as GPU's). These GPU's rely on the underlying principles of linear algebra, which allows us to perform many mathematical operations very efficiently.
+2. **Linear algebra** (to be added) - Mathematical operations involving multiple variables can often be simplified using linear algebra. It allows us to model complex systems and can be computed efficiently using the parallelism of graphics processing units (better known as GPU's).
 
-3. **Univariate calculus** (to be added) - Functions that describe the underlying principles of a data generating process can be useful in understanding the data originating from this process. These functions can be manipulated to extract important information about this data and to draw conclusions from it.
+3. **Univariate calculus** (to be added) - 
+The field of univariate calculate deals with functions involving only a single variable. They allow us to model certain processes.
 
-4. **Multivariate calculus** (to be added) - These functions usually are not only a function of a single variable, but often of multiple variables. Understanding these functions with respect to each of these variables gives insight into the underlying data generating process and allows for better understanding of the underlying process.
+4. **Multivariate calculus** (to be added) - Multivariate calculus involves functions that depend on multiple variables. These functions allow us to model processes which involve multiple variables.
 
-5. <a href="../mathematicalbackground_probability_main">Probability and random variables</a> - When uncertainty is involved in noisy signals, exact values cannot be determined. Embracing the random nature of these signals opens up a completely new field, called probability theory, which provides the analytical solution to problems where uncertainty is involved.
+5. <a href="../mathematicalbackground_probability_main">Probability and random variables</a> - When uncertainty is involved in certain processes, exact values of these processes cannot be determined. We can, however, still measure the noisy signal and process it by taking this uncertainty into account using probability theory. This allows us to explicitely model the uncertainty involved and provides an approach for processing the noisy signal.
