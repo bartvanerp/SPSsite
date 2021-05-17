@@ -19,7 +19,7 @@ toc = true
   <div class="col-md-6 order-md-1 text-center text-md-left" style="vertical-align: middle; display: flex; align-items: center;">
   <div>
     <h1 class="hero-title" itemprop="headline" style="text-shadow: 0px 0px 0px rgba(0,0,0,0.0)">
-      NPlatform
+      Neuro-Platform
     </h1>
     <div class="hero-lead" style="text-shadow: 0px 0px 0px rgba(0,0,0,0.0)">
        NeuroPlatform
