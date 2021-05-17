@@ -61,6 +61,7 @@ BIASlab cooperates with industrial partners that frequently have internships ava
 <br>
 
 ## Contact
+More information about BIASlab can be found at [our site](https://biaslab.github.io/).
 Do you have any questions regarding the information above? Please do not hesitate to contact prof. dr. ir. Bert de Vries by sending him a mail at <a href="mailto:bert.de.vries@tue.nl">bert.de.vries@tue.nl</a>.
 
 <br>

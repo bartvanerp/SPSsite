@@ -82,6 +82,7 @@ The ICT Lab cooperates with industrial partners that frequently have internships
 <br>
 
 ## Contact
+More information about the ICT lab can be found at the [TU/e site](https://www.tue.nl/en/research/research-groups/signal-processing-systems/ictlab/) or at our [site](https://www.sps.tue.nl/ictlab/).
 Do you have any questions regarding the information above? Please do not hesitate to contact Dr. Alex Alvarado by sending him a mail at <a href="mailto:A.Alvarado@tue.nl">A.Alvarado@tue.nl</a>.
 
 <br>

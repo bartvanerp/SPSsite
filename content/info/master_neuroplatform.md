@@ -50,6 +50,7 @@ We also offer the possibility of collaborating with industrial and clinical part
 <br>
 
 ## Contact
+More information can be found at our [site](https://imaginginpsychiatry.github.io/neuroplatform2/).
 Do you have any questions regarding the information above? Please do not hesitate to contact Dr. Sveta Zinger by sending her a mail at <a href="s.zinger@tue.nl">S.Zinger@tue.nl</a>, or Dr. Bas de Hon at <a href="b.p.d.hon@tue.nl">B.P.D.Hon@tue.nl</a>.
 
 <br>

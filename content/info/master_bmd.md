@@ -73,6 +73,7 @@ Given the international nature of the BM/d Research Team, several students inter
 <br>
 
 ## Contact
+More information about the BM/d lab can be found at the [TU/e website](https://www.tue.nl/en/research/research-groups/signal-processing-systems/biomedical-diagnostics-lab/).
 Do you have any questions regarding the information above? Please do not hesitate to contact Dr. Massimo Mischi by sending him a mail at <a href="mailto:A.Alvarado@tue.nl">M.Mischi@tue.nl</a>.
 
 <br>
