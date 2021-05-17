@@ -70,6 +70,7 @@ The VCA lab cooperates with industrial partners that frequently have internships
 <br>
 
 ## Contact
+More information about the VCA lab can be found at the [TU/e website](https://www.tue.nl/en/research/research-groups/signal-processing-systems/video-coding-architectures/) or our [site](http://vca.ele.tue.nl/).
 Do you have any questions regarding the information above? Please do not hesitate to contact one of [our researchers](https://research.tue.nl/en/organisations/video-coding-architectures/persons/).
 
 <br>

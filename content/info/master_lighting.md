@@ -50,4 +50,5 @@ The lighting and IoT Lab cooperates with industrial partners that frequently hav
 <br>
 
 ## Contact
+More information can be found at the [TU/e site](https://www.tue.nl/en/research/research-groups/signal-processing-systems/lighting-and-iot-lab/).
 Do you have any questions regarding the information above? Please do not hesitate to contact prof. dr. ir. Jean-Paul Linnartz by sending him a mail at <a href="mailto:j.p.linnartz@tue.nl">j.p.linnartz@tue.nl</a>.

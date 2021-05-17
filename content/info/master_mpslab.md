@@ -66,6 +66,7 @@ To learn more about these projects visit our <a href="http://www.tue-mps.org/pro
 <br>
 
 ## Contact
+More information can be found at the [TU/e site](https://www.tue.nl/en/research/research-groups/signal-processing-systems/mobile-perception-systems-lab/) or at our [site](http://www.tue-mps.org/).
 Do you have any questions regarding the information above? Please do not hesitate to contact Dr. Gijs Dubbelman by sending him a mail at <a href="mailto:g.dubbelman@tue.nl ">G.Dubbelman@tue.nl </a>.
 
 <br>
