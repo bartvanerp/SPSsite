@@ -54,6 +54,12 @@ Every lab has its own contact person whom you should contact when you have quest
 |VCA      |<a href="mailto:p.h.n.de.with@tue.nl?subject=[SPS Education]%20{specify question here}"> Peter de With</a>             |
 
 
+### General questions
+For general questions regarding education in the SPS group, you can contact the mentors of our group <a href="mailto:s.zinger@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Sveta Zinger</a> or <a href="mailto:a.alvarado@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Alex Alvarado</a>. For all lab-specific questions, please contact the responsible for the corresponding lab.
+
+In case you feel like the information on this platform is outdated or incorrect, please mail us <a href="mailto:s.zinger@tue.nl;a.alvarado@tue.nl?cc=sps.education@tue.nl&subject=[SPS Education]%20{specify question here}">here</a>.
+
+
 ### Graduating within the SPS group
 Everyone graduating within the SPS group needs to comply with following a specific set of courses. In the first place, all students who want to join SPS **have to** enroll in the following specialization courses.
 
@@ -116,7 +122,4 @@ Graduation projects can also be carried out in collaboration with a company. If 
 |    5ARA0      |   Software Engineering for Artificial Intelligence            | Q3            | BIASlab     | Elective        |
 
 
-### General questions
-For general questions regarding education in the SPS group, you can contact the mentors of our group <a href="mailto:s.zinger@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Sveta Zinger</a> or <a href="mailto:a.alvarado@tue.nl?subject=[SPS Education]%20{specify question here}">dr. Alex Alvarado</a>. For all lab-specific questions, please contact the responsible for the corresponding lab.
 
-In case you feel like the information on this platform is outdated or incorrect, please mail us <a href="mailto:s.zinger@tue.nl;a.alvarado@tue.nl?cc=sps.education@tue.nl&subject=[SPS Education]%20{specify question here}">here</a>.
