@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "Part 2: Estimation theory"
+name = "Part 2: Estimation Theory"
 weight = 200
 
 +++
