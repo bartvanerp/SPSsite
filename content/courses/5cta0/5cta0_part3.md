@@ -14,7 +14,7 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_detection
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "Part 3: Detection theory"
+name = "Part 3: Detection Theory"
 weight = 300
 
 +++
