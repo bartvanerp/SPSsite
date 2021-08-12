@@ -38,7 +38,7 @@ From this perspective, the least-squares estimator can be considered as an optim
 
 <b>Example:</b>
 
-Suppose we want to estimate the energy consumption per km of an electric car. For this purpose, we record at each recharge of the car the amount of energy charged $E$ and the distance travelled $D$. Visualizing the recordings give following picture.
+Suppose we want to estimate the energy consumption per km of an electric car. For this pupose, we record at each recharge of the car the amount of energy charged $E$ and the distance travelled $D$. Visualizing the recordings give following picture.
 <div style="max-width: 900px; margin: auto">
   <figure>
     <img
@@ -98,7 +98,7 @@ Depending on the signal model, we can distinguish between linear and nonlinear l
 \begin{equation}
 s[n,f_0] = A \cos(2\pi f_0 n)
 \end{equation}
-is nonlinear in the parameter $f_0$. The focus of this module is the linear least squares estimator. Nonlinear least squares estimators rely on numerical methods which are treated separately in the module <a href="../statisticalsignalprocessing_estimation_numerical">Numerical Methods</a>. However, for some particular nonlinear problems it is possible tor convert them either into a linear problem or to separate them into a linear and a nonlinear part. These two special cases are covered in this module.
+is nonlinear in the parameter $f_0$. The focus of this module is the linear least squares estimator. Nonlinear least squares estimators rely on numerical methods which are treated separately in the module <a href="../statisticalsignalprocessing_estimation_numerical">Numerical Methods</a>. However, for some particular nonlinear problems it is possible tor convert them either into a linear problem or to separate them into a linear and a nonlinear part. These two special cases are covered at the end of this module.
 
 ## Linear Least Squares Estimator
 A linear signal model is any model of the form
@@ -136,7 +136,7 @@ and suppose observations for $n=0,1,\dots,N-1$ are given. The corresponding obse
 
 Using the matrix notation in \eqref{eq:ls_linear}, the least-squares error criterion in \eqref{eq:ls_criterion} can be expressed as
 \begin{align}
-  J(\boldsymbol\theta)&= ||\mathbf{x}-\mathbf{H}\boldsymbol\theta||^2\nonumber\newline
+  J(\boldsymbol\theta)&= \\|\mathbf{x}-\mathbf{H}\boldsymbol\theta\\|^2\nonumber\newline
 											&=(\mathbf{x}-\mathbf{H}\boldsymbol\theta)^T(\mathbf{x}-\mathbf{H}\boldsymbol\theta)\nonumber\newline
                       &= (\mathbf{x}^T-\boldsymbol\theta^T\mathbf{H^T})(\mathbf{x}-\mathbf{H}\boldsymbol\theta) \nonumber \newline
                       &= \mathbf{x}\mathbf{x}^T - 2 \mathbf{x}^T \mathbf{H}\boldsymbol\theta +\boldsymbol\theta^T\mathbf{H}^T \mathbf{H}\boldsymbol\theta.
@@ -152,7 +152,7 @@ The minimum can be found by setting the gradient to zeros and solving for $\bold
 which is referred to as <i>normal equation</i>. Returning to the electric car example, we have the special case of a single parameter $\theta$. In this case, the observation matrix becomes a vector with the distances $D[n]$ as its entries. The expression $\mathbf{H}^T\mathbf{H} = \sum_{n=0}^{N-1}D^2[n]$. Note that $\sum_{n=0}^{N-1}D^2[n]$ is a scalar and its inverse is $1/(\sum_{n=0}^{N-1}D^2[n])$. On the other hand, the expression $\mathbf{H}^T\mathbf{x}$ is $\sum_{n=0}^{N-1}x[n]D[n]$. Combining these two expressions we obtain the least-squares estimate in \eqref{eq:electric_car}.
 
 ### Geometric Interpretation
-The previous derivation is based on minimizing the squared error term in \eqref{eq:ls_criterion}. The least-square estimation can also be derived based on geometrical interpretations. To obtain this geometrical interpretation, we assume that more observations than parameters to be estimated are available, i.e., $N>K$. With this assumption, we can interpret \eqref{eq:ls_linear} from a geometric point of view. The vector $\mathbf{s}$ and the column space of $\mathbf{H}$ have dimension $N$. However, since $K<M$, the linear combination
+The previous derivation is based on minimizing the squared error term in \eqref{eq:ls_criterion}. The least-square estimation can also be derived based on geometrical interpretations. To obtain this geometrical interpretation, we assume that more observations than parameters to be estimated are available, i.e., $N>K$. With this assumption, we can interpret \eqref{eq:ls_linear} from a geometric point of view. The vector $\mathbf{s}$ and the column space of $\mathbf{H}$ have dimension $N$. However, since $N>K$, the linear combination
 \begin{equation}
 \mathbf{s} = 	\mathbf{H}\boldsymbol\theta = \sum_{k=0}^{K-1} \theta_k \mathbf{h}_k,
 \end{equation}
@@ -227,7 +227,7 @@ Optimization problems have the property that they can be carried out in a transf
 \begin{equation}
 \boldsymbol\alpha = g(\boldsymbol\theta)
 \end{equation}
-be a functions whose inverse exists. If we can find a function $g(\boldsymbol\theta)$ for which the 
+be a functions whose inverse exists. If we can find a function $g(\boldsymbol\theta)$ for which the
 
 
 The first method of dealing with nonlinear problems can be described as finding our way back to the linear LS problem by applying an invertible transformation to the parameters to be estimated. If we can find a transformation

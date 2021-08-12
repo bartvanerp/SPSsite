@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="474.559pt" height="191.842pt" viewBox="0 0 474.559 191.842">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="474.559pt" height="201.372pt" viewBox="0 0 474.559 201.372">
 <g enable-background="new">
-<path transform="matrix(1,0,0,-1,189.882,111.187999)" d="M -9.86583 39.59004 L -179.92156 -36.64127 L 114.62547 -80.65456 L 284.6812 -4.42323 Z M 114.62547 -80.65456 " fill="#ff8080" fill-opacity=".3"/>
-<path transform="matrix(1,0,0,-1,189.882,111.187999)" stroke-width="1.99255" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M 0 0 L 75.0114 12.8179 "/>
-<path transform="matrix(.98567,-.16841,-.16841,-.98567,264.8934,98.370098)" d="M 4.38364 0 L -2.63017 3.50691 L 0 0 L -2.63017 -3.50691 "/>
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 191.842)" font-size="14.3462" font-family="CMBX12" font-weight="bold"><tspan y="-90.304" x="273.53">h</tspan></text>
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 191.842)" font-size="9.9626" font-family="CMR10"><tspan y="-88.152" x="282.496">1</tspan></text>
-<path transform="matrix(1,0,0,-1,189.882,111.187999)" stroke-width="1.99255" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M 0 0 L -10.825 -32.13512 "/>
-<path transform="matrix(-.3192,.94763,.94763,.3192,179.057,143.32312)" d="M 4.38364 0 L -2.63017 3.50691 L 0 0 L -2.63017 -3.50691 "/>
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 191.84198)" font-size="14.3462" font-family="CMBX12" font-weight="bold"><tspan y="-30.085" x="170.435">h</tspan></text>
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 191.84198)" font-size="9.9626" font-family="CMR10"><tspan y="-27.932999" x="179.401">2</tspan></text>
-<path transform="matrix(1,0,0,-1,189.882,111.187999)" stroke-width="1.99255" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M 0 0 L 86.24666 93.9475 "/>
-<path transform="matrix(.67624,-.7366,-.7366,-.67624,276.12867,17.240494)" d="M 4.38364 0 L -2.63017 3.50691 L 0 0 L -2.63017 -3.50691 "/>
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 191.842)" font-size="14.3462" font-family="CMBX12" font-weight="bold"><tspan y="-182.146" x="274.833">x</tspan></text>
+<path transform="matrix(1,0,0,-1,189.882,120.717998)" d="M -9.86583 39.59004 L -179.92156 -36.64127 L 114.62547 -80.65456 L 284.6812 -4.42323 Z M 114.62547 -80.65456 " fill="#ff8080" fill-opacity=".3"/>
+<path transform="matrix(1,0,0,-1,189.882,120.717998)" stroke-width="1.99255" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M 0 0 L 75.0114 12.8179 "/>
+<path transform="matrix(.98567,-.16841,-.16841,-.98567,264.8934,107.90009)" d="M 4.38364 0 L -2.63017 3.50691 L 0 0 L -2.63017 -3.50691 "/>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 201.372)" font-size="14.3462" font-family="CMBX12" font-weight="bold"><tspan y="-90.304" x="273.53">h</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 201.372)" font-size="9.9626" font-family="CMR10"><tspan y="-88.152" x="282.496">0</tspan></text>
+<path transform="matrix(1,0,0,-1,189.882,120.717998)" stroke-width="1.99255" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M 0 0 L -10.825 -32.13512 "/>
+<path transform="matrix(-.3192,.94763,.94763,.3192,179.057,152.85312)" d="M 4.38364 0 L -2.63017 3.50691 L 0 0 L -2.63017 -3.50691 "/>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 201.37198)" font-size="14.3462" font-family="CMBX12" font-weight="bold"><tspan y="-30.085" x="170.435">h</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 201.37198)" font-size="9.9626" font-family="CMR10"><tspan y="-27.932999" x="179.401">1</tspan></text>
+<path transform="matrix(1,0,0,-1,189.882,120.717998)" stroke-width="1.99255" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M 0 0 L 107.31813 103.6613 "/>
+<path transform="matrix(.71925,-.69473,-.69473,-.71925,297.20014,17.056694)" d="M 4.38364 0 L -2.63017 3.50691 L 0 0 L -2.63017 -3.50691 "/>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 .000030517579 201.37198)" font-size="14.3462" font-family="CMBX12" font-weight="bold"><tspan y="-191.676" x="296.093">x</tspan></text>
 </g>
 </svg>
