@@ -16,8 +16,8 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_spectrum_
 
 [menu.5cta0]                       # name of menu section (main module)
   name = "Parametric methods"        # name of this item in that menu
-  weight = 285                          # location in that menu
-  parent = "2.7 Spectral estimation"
+  weight = 350                          # location in that menu
+  parent = "Part 3: Spectral estimation"
 
 
 

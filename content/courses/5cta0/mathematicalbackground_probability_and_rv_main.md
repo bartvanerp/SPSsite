@@ -16,6 +16,7 @@ duplicated_page = "disciplines/mathematicalbackground/mathematicalbackground_pro
 name = "1.1 Probability and random variables"
 weight = 110
 
+
 +++
 
 {{% content duplicate="disciplines/mathematicalbackground/mathematicalbackground_probability_main.md" %}}
