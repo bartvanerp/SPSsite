@@ -13,8 +13,8 @@ responsibleteacher = "StatisticalSignalProcessing@groups.tue.nl"
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "2.1 Least Squares Estimation"
-weight = 210
+name = "2.4 Least Squares Estimation"
+weight = 240
 
 
 +++

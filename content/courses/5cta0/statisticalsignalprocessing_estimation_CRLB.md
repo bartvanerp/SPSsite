@@ -1,8 +1,8 @@
 +++
-title = "Bias, Variance, Cramer-Rao Lower Bound"
+title = "Cramer-Rao Lower Bound"
 
 # date = {{ .Date }}
-lastmod = 2020-06-08
+lastmod = 2021-08-17
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -13,205 +13,285 @@ responsibleteacher = "StatisticalSignalProcessing@groups.tue.nl"
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "2.3 Bias, Variance, Cramer-Rao Lower Bound"
-weight = 230
+name = "2.1 Cramer-Rao Lower Bound"
+weight = 210
 
 
 +++
 ## Introduction
 
-Many different estimators can be formulated to estimate the controlling parameters $\theta$ of a signal model. In fact, many different signal models can be hypothesized as the source of the data, just as the noise can have different distributions. The question naturally arises: How can we know if an estimator is the best one possible? How accurately can we estimate the controlling parameters of a signal model? How can we even compare the performances of two estimators? In this module, we are going to devise the performance measures for estimators and come up with a performance bound that marks the best performance for a broad class of estimators.
+Many different estimators can be formulated, as shown in the introduction. We also showed that the variance provides a tool to compare different estimators. In this module, we are going to devise a lower bound for the variance of an unbiased estimator, the so-called Cramer-Rao lower bound or short CRLB. The CRLB provides a lower bound for the variance of an estimate and provides conditions under which an estimator achieves this lower bound.
 
 
 <div class="video-container">
 <iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/g1HX0nNL9E8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
 
+
+## The Cramer-Rao Lower Bound - Single Parameter
+Given an unbiased estimator $g(\mathbf{x})$, the CRLB states that the variance of any unbiased estimator is lower bounded by
+\begin{equation}
+  \mathrm{Var}[g(\mathbf{x})] \geq \\left(\mathbb{E}\\left[\\left(\frac{\partial \ln(p(\mathbf{x};\theta))}{\partial \\theta}\\right)^2\\right]\\right)^{-1}
+  \label{eq:CR_1}
+\end{equation}
+or, equivalently, by
+\begin{equation}
+  \mathrm{Var}[g(\mathbf{x})] \geq \\left(-\mathbb{E}\\left[\frac{\partial^2 \ln(p(\mathbf{x};\theta))}{\partial \\theta^2}\\right]\\right)^{-1}.
+  \label{eq:CR_Fisher}
+\end{equation}
+The inequalities are valid if the following regularity conditions hold:
+\begin{equation}
+ \frac{d}{d \theta}\int p(\mathbf{x};\theta) d\mathbf{x} = \int\frac{\partial}{\partial \theta} p(\mathbf{x};\theta)d\mathbf{x} = 0
+\end{equation}
+and
+\begin{equation}
+\frac{d}{d \theta}\int g(\mathbf{x}) p(\mathbf{x};\theta) d\mathbf{x} = \int g(\mathbf{x})\frac{\partial}{\partial \theta}d p(\mathbf{x};\theta)d\mathbf{x} = 0.
+\end{equation}
+The regularity conditions ensure that we can interchange the order of differentiation and integration. The conditions are violated, for example, when the domain of integration depends on the parameter $\theta$. The quantity
+\begin{equation}
+  \mathcal{I}(\theta) =\mathbb{E}\\left[\\left(\frac{\partial \ln(p(\mathbf{x};\theta))}{\partial \\theta}\\right)^2\\right]= -\mathbb{E}\\left[\frac{\partial^2 \ln(p(\mathbf{x};\theta))}{\partial \\theta^2}\\right]
+\end{equation}
+is the so-called Fisher information and tells how much information random variables carrier about an unknown parameter $\theta$.
+
+
+<div class="example", style="background-color:LightGray;">
+<details>
+<summary>Proof</summary>
+
+Since we assume that our estimator is unbiased, we have that
+\begin{equation}
+  \mathbb{E}\left[g(\mathbf{x}-\theta)\right] = \int g(\mathbf{x}-\theta) p(\mathbf{x};\theta)d\mathbf{x} = 0.
+\end{equation}
+Differentiating both sides with respect to $\theta$ and using the regularity conditions, we obtain
+\begin{equation}
+    \int (g(\mathbf{x})-\theta)\frac{\partial}{\partial\theta}p(\mathbf{x};\theta)d\mathbf{x}-1=0
+\end{equation}
+or, equivalently,
+\begin{equation}
+    \int (g(\mathbf{x})-\theta)\frac{\partial}{\partial\theta}p(\mathbf{x};\theta)d\mathbf{x}=1.
+    \label{eq:CRLB_1}
+\end{equation}
+The partial derivative in \eqref{eq:CRLB_1} can be expressed as
+\begin{equation}
+  \frac{\partial}{\partial\theta}p(\mathbf{x};\theta) = p(\mathbf{x};\theta)\frac{\partial}{\partial\theta} \ln p(\mathbf{x};\theta).
+  \label{eq:partial_ln}
+\end{equation}
+Substituting \eqref{eq:partial_ln} in \eqref{eq:CRLB_1} yields
+\begin{equation}
+    \int (g(\mathbf{x})-\theta)p(\mathbf{x};\theta)\frac{\partial}{\partial\theta} \ln p(\mathbf{x};\theta)d\mathbf{x}=1.
+    \label{eq:CRLB_2}
+\end{equation}
+We can rewrite the left-hand side of \eqref{eq:CRLB_2} as
+\begin{equation}
+    \int \left[(g(\mathbf{x})-\theta)\sqrt{p(\mathbf{x};\theta)}\right]\left[\frac{\partial}{\partial\theta} \ln p(\mathbf{x};\theta)\sqrt{p(\mathbf{x};\theta)}\right]d\mathbf{x},
+\end{equation}
+which is an inner product between the two expression in the square brackets. The inner product is lower bounded by the Cauchy-Schwarz inequality given as
+\begin{multline}
+    \left(\int \left[(g(\mathbf{x})-\theta)\sqrt{p(\mathbf{x};\theta)}\right]\left[\frac{\partial}{\partial\theta} \ln p(\mathbf{x};\theta)\sqrt{p(\mathbf{x};\theta)}\right]d\mathbf{x}\right)^2\\\\\\ \leq \int (g(\mathbf{x})-\theta)^2p(\mathbf{x};\theta)d\mathbf{x}  \int \left(\frac{\partial}{\partial\theta} \ln p(\mathbf{x};\theta)\right)^2p(\mathbf{x};\theta)d\mathbf{x}. \qquad
+    \label{eq:CSineq}
+\end{multline}
+The left hand side of \eqref{eq:CSineq} is 1. But
+\begin{equation}
+\int (g(\mathbf{x})-\theta)^2p(\mathbf{x};\theta)d\mathbf{x}  = \mathrm{Var}\left[g(\mathbf{x})\right]
+\end{equation}
+and
+\begin{equation}
+\int \left(\frac{\partial}{\partial\theta} \ln p(\mathbf{x};\theta)\right)^2p(\mathbf{x};\theta)d\mathbf{x}=  \mathbb{E}\left[ \left(\frac{\partial}{\partial\theta} \ln p(\mathbf{x};\theta)\right)^2 \right]
+\end{equation}
+so that we obtaine
+\begin{equation}
+\mathrm{Var}\left[g(\mathbf{x})\right] \geq \left(\mathbb{E}\left[ \left(\frac{\partial}{\partial\theta} \ln p(\mathbf{x};\theta)\right)^2 \right]\right)^{-1}.
+\end{equation}
+To obtain the equivalent expression \eqref{eq:CR_Fisher}, we integrate \eqref{eq:partial_ln}, which gives
+\begin{equation}
+  \int p(\mathbf{x};\theta)\frac{\partial}{\partial\theta}\ln p(\mathbf{x};\theta)d\mathbf{x} = \int \frac{\partial}{\partial\theta} p(\mathbf{x};\theta)d\mathbf{x}=\frac{d}{d\theta} \int p(\mathbf{x};\theta)d\mathbf{x} = 0.
+\end{equation}
+Differentiting again with respect to $\theta$, we get
+\begin{equation}
+  \int \frac{\partial}{\partial\theta}p(\mathbf{x};\theta)\frac{\partial}{\partial\theta}\ln p(\mathbf{x};\theta)d\mathbf{x}+\int p(\mathbf{x};\theta)\frac{\partial^2}{\partial\theta^2}\ln p(\mathbf{x};\theta)d\mathbf{x} = 0,
+\end{equation}
+where we substitue \eqref{eq:partial_ln} again into the first integral to obtain
+\begin{equation}
+  \int p(\mathbf{x};\theta)\left(\frac{\partial}{\partial\theta}\ln p(\mathbf{x};\theta)\right)^2 d\mathbf{x}+\int p(\mathbf{x};\theta)\frac{\partial^2}{\partial\theta^2}\ln p(\mathbf{x};\theta)d\mathbf{x} = 0
+\end{equation}
+or
+\begin{equation}
+\mathbb{E}\left[\left(\frac{\partial}{\partial\theta}\ln p(\mathbf{x};\theta)\right)^2\right] = -\mathbb{E}\left[\frac{\partial^2}{\partial\theta^2}\ln p(\mathbf{x};\theta)\right].
+\end{equation}
+</details>
+</div>
+
+### Efficient Estimator
+An estimator that attains the lower bound is called **efficient**. In general, there is no guaranty that such an estimator exist at all. However, the Cauchy-Schwarz inequality not only provides an lower bound for the variance but also conditions for equality. If we can express  $\frac{\partial}{\partial\theta}\ln p(\mathbf{x};\theta)$ in the form
+\begin{equation}
+ \frac{\partial}{\partial\theta}\ln p(\mathbf{x};\theta)=\mathcal{I}(\theta)(g(\mathbf{x})-\theta),
+ \label{eq:efficient_est}
+\end{equation}
+we can directly determine the expression to find the efficient estimator.
+
+<div class="example", style="background-color:LightGray;">
+<details>
+<summary>Proof</summary>
+  Equality in \eqref{eq:CSineq} holds if and only if
+    \begin{equation}
+     \frac{\partial}{\partial\theta}\ln p(\mathbf{x};\theta)=a(\theta)(g(\mathbf{x})-\theta).
+    \end{equation}
+    where $a(\theta)$ is an arbitrary function solely depending on $\theta$ and not on $\mathbf{x}$. To determine the function $a(\theta)$, we note that
+    \begin{equation}
+        \frac{\partial^2}{\partial\theta^2} \ln p(\mathbf{x};\theta) = \frac{\partial}{\partial\theta}\left(a(\theta)\right)(g(\mathbf{x})-\theta) - a(\theta),
+    \end{equation}
+    and thus,
+    \begin{equation}
+      -\mathbb{E}\left[\frac{\partial^2}{\partial\theta^2}\ln p(\mathbf{x};\theta)\right] = a(\theta),
+    \end{equation}
+    i.e., the function $a(\theta)$ is the Fisher information $\mathcal{I}(\theta)$.
+
+  </details>
+</div>
+
+
 ---
-<b>Example:</b> Consider the problem of estimating the voltage level $\theta$ from the data
-\begin{equation}
-x[n]=\theta+\omega[n].
-\end{equation}
-If we acquire N data points, we can come up with an estimator by following the intuition that the value we are looking for should be the average of the data samples:
-\begin{equation}
-\hat\theta=\frac{1}{N}\sum_{n=1}^{N}x[n].
-\end{equation}
-Consider another estimator:
-\begin{equation}
-\hat\theta=\frac{1}{N-1}\sum_{n=1}^{N}x[n].
-\end{equation}
-Which estimator is more accurate? Can we find a third estimator that is better than these two?
-
----
-
-## Estimation Error
-In the module on least squares, the goal was to fit a signal model to the collected data by minimizing the squared error between the data and the model output. If the same experiment is repeated, another data set is obtained. The data is modeled as
-\begin{equation}
-x[n]=s[n,\theta]+\omega[n],
-\end{equation}
-where the function $\omega[n]$ returns noise samples that are independent random variables with a probability distribution. Whenever the experiment is repeated to collect $N$ such samples of $x[n]$, the noise contribution to the data is different. The consequence of this difference is reflected in the variation of the estimate $\hat\theta$ from one experiment to the other. In fact, the estimate $\hat\theta$ is itself a random variable, even though the underlying parameter $\theta$ is deterministic (but unknown).
-
-We consider the variation of the estimates for $\theta$ by stating that the squared estimation error is $(\hat\theta-\theta)^2$. The squared error is considered, because the deviation of $\hat\theta$ from $\theta$ is important rather than the sign of the deviation. To account for the randomness of the error the **mean squared error** is considered:
-\begin{equation}
-mse=E[(\hat\theta=\theta)^2].
-\end{equation}
-
-Obviously, we cannot calculate the error term, because the parameter $\theta$ is unknown. We can still look for ways to minimize the mean squared error term by solving the first derivative with respect to $\hat\theta$:
-\begin{equation}
-\frac{\partial}{\partial\hat\theta}E[(\hat\theta-\theta)^2]=\frac{\partial}{\partial\hat\theta}E[\hat\theta^2-2\theta\hat\theta+\theta^2].
-\end{equation}
-The problem with the expression above is the presence of the term that contains both $\theta$ and $\hat\theta$. After taking the derivative with respect to $\hat\theta$, the parameter $\theta$ still appears in the equation. However, it is possible to find a solution and minimize the mean squared error for a particular class of estimators.
-
-## Minimum Variance Unbiased Estimator
-
-To reveal the class of estimators that allow minimizing the mean squared error, we decompose the error term:
-\begin{equation}
-mse=E[\hat\theta^2-2\theta\hat\theta+\theta^2]=E[\hat\theta^2]-(E[\hat\theta])^2+(E[\hat\theta])^2-2\theta E[\hat\theta]+\theta^2,
-\end{equation}
-where we added and subtracted the term $(E[\hat\theta])^2$. This trick allows us to group the mse into two terms:
-\begin{equation}
-mse=\sigma^2_{\hat\theta}+(E[\hat\theta]-\theta)^2
-\end{equation}
-where $\sigma^2_{\hat\theta}=E[\hat\theta^2]-(E[\hat\theta])^2$ is the variance of the estimator and $E[\hat\theta]-\theta$ is the bias of the estimator. 
-
-The class of estimators for which the mean squared error can be minimized is called **minimum variance unbiased estimators (MVUE)**. The mean error term contains the square of the bias, thus, to minimize the mse we need to have an **unbiased** estimator. The mse for an unbiased estimator is minimized if the variance term $\sigma^2_{\hat\theta}$ is minimized. Ideally, we would like to have a <b>consistent estimator</b>, which means the error term approaches to zero as the number of data points increases:
-\begin{equation}
-\underset{N\to\infty}{\lim}E[(\hat\theta-\theta)^2]=0.
-\end{equation}
-
-
-## The Cramer-Rao Lower Bound and the MVUE
-
-The derivation of the MVUE in the previous section does not provide a procedure to find a MVUE. However, under the assumption of zero bias, we can still calculate the minimum variance that can be attained by an estimator. The lower bound for the variance of an estimator is called **the Cramer Rao Lower Bound (CRLB)**. The CRLB connects the variability of the data $x$ with the variability of the estimate $\hat\theta$. This connection is established by the concepts of <a href="../estimation_maximumlikelihood/#the-likelihood-function">**likelihood**</a>, **score** and **Fisher information**.
-
-Before exploring the concepts at the foundation of the CRLB, we will see the formal definition. To be able to derive the CRLB, for a scalar parameter $\theta$, the PDF of the data has to satisfy the regularity condition
-\begin{equation}
-E_x\Bigg(\frac{\partial\ln p(\mathbf{x};\theta)}{\partial\theta}\Bigg)=0 \quad for~ all~ \theta,
-\end{equation}
-where the expected value is taken with respect to $x$. When the regularity condition is satisfied, the variance of any unbiased estimator $\hat\theta$ is bounded by the Cramer-Rao lower bound
-\begin{equation}
-var(\hat\theta) > \frac{1}{\mathcal{I}(\theta)},
-\end{equation}
-where $\mathcal{I}(\theta)$ is the **Fisher information**:
-\begin{equation}
-\mathcal{I}(\theta)=-E_x\Bigg(\frac{\partial^2\ln p(\theta;\mathbf{x})}{\partial\theta^2}\Bigg).
-\end{equation}
-
-Only the MVUE achieves this bound, and an estimator $\hat\theta=f(\mathbf{x})$ is MVUE if and only if
-\begin{equation}
-\frac{\partial\ln p(\mathbf{x};\theta)}{\partial\theta}=\mathcal{I}(\theta)(f(\mathbf{x})-\theta).
-\end{equation}
-
-The result on the existence of MVUE will be used in the module on <a href="../estimation_mvue_linear">MVUE for Linear Models</a>.
-
-The Cramer-Rao lower bound can be found for an estimator provided that the distribution for the data is available. This distribution, in turn, is based on the noise distribution and the signal model. Hence, to be able to come up with a measure of accuracy for our estimation, we need to know about the noise in the process.
-
-The rest of this section covers the fundamental concepts that give rise to the CRLB. The extension of the CRLB to vector parameter $\Theta$ is given at the end of this section.
-
-### The Score
-
-The score is found on the concept of the log-likelihood function. The likelihood function is essentially the probability density function (PDF) of the data, which is parametrized by the variable $\theta$ that controls the signal model $s[n;\theta]$. The log-likelihood function is simply the logarithm of the likelihood function. 
-
-
 <b>Example:</b>
 
+Let us return to the example of estimating the DC voltage embedded in noise presented in the introduction module. We want to find the lowest attainable variance. Therefore, we start with the probability density function of our observations which is
+\begin{equation}
+ p(\mathbf{x};A) = \frac{1}{(2\pi\sigma^2)^{N/2}}\exp\\left[-\frac{1}{2\sigma^2}\sum_{n=0}^{N-1}(x[n]-A)^2\\right].
+\end{equation}
+Taking the logarithm yields
+\begin{equation}
+  \ln p(\mathbf{x};A) = -\frac{N}{2}\ln(2\pi\sigma^2) -\frac{1}{2\sigma^2}\sum_{n=0}^{N-1}(x[n]-A)^2
+\end{equation}
+and after differentiating with respect to $\theta$, we obtain
+\begin{equation}
+\frac{\partial}{\partial A} \ln p(\mathbf{x};A) = \frac{1}{\sigma^2}\sum_{n=0}^{N-1}(x[n]-A).
+\label{eq:log_ll}
+\end{equation}
+
+The CRLB can now be found by either evaluating \eqref{eq:CR_1} or \eqref{eq:CR_Fisher}. For the sake of completness, let us evaluate both expressions starting with\eqref{eq:CR_1} which is
+\begin{align}
+  \mathbb{E}\\left[ \\left(\frac{\partial}{\partial A} \ln p(\mathbf{x};A) \\right)^2 \\right] &=  \frac{1}{\sigma^4} \mathbb{E}\\left[ \\left(\sum_{n=0}^{N-1}(x[n]-A)\\right) \\left(\sum_{m=0}^{N-1}(x[m]-A)\\right) \right] \\\\\\
+  &=\frac{1}{\sigma^4} \mathbb{E}\\left[ \\left(\sum_{n=0}^{N-1}x[n]-NA\\right) \\left(\sum_{m=0}^{N-1}x[m]-NA\\right) \right]\\\\\\
+  &=\frac{1}{\sigma^4} \mathbb{E}\\left[ \sum_{n=0}^{N-1}x[n]\sum_{m=0}^{N-1}x[m]\\right]\nonumber \\\\\\ & \qquad-NA\cdot\mathbb{E}\\left[\sum_{n=0}^{N-1}x[n]+\sum_{m=0}^{N-1}x[m] \right]+  (NA)^2 \\\\\\
+  &=\frac{1}{\sigma^4} \mathbb{E}\\left[ \sum_{n=0}^{N-1}x^2[n]+\sum_{n=0}^{N-1}\sum_{\substack{m=0 \\\\\\ m\neq n}}^{N-1}x[n]x[m] \right] - \nonumber \\\\\\ &  \qquad 2(NA)^2 + (NA)^2\\\\\\
+  &=\frac{1}{\sigma^4}  \\left(N\sigma^2+NA^2 + N(N-1)A^2-2(NA)^2+  (NA)^2 \\right)\\\\\\
+  &=\frac{1}{\sigma^4} N\sigma^2\\\\\\
+  &= \frac{N}{\sigma^2}. \label{eq:CR_mean}
+\end{align}
+Evaluating \eqref{eq:CR_Fisher}, we get
+\begin{equation}
+-\mathbb{E}\\left[\frac{\partial^2}{\partial A^2} \ln p(\mathbf{x},A)\\right] = -\mathbb{E}\\left[-\frac{N}{\sigma^2}\\right] = \frac{N}{\sigma^2},
+\end{equation}
+which is equivalent to \eqref{eq:CR_mean}, and thus, we have that
+\begin{equation}
+ \mathrm{Var}\\left[g(\mathbf{x})\\right] \geq \frac{\sigma^2}{N}.
+\end{equation}
+Note that this is the variance of the sample mean estimator presented in the introduction module. This result can also be verified by checking if we can express \eqref{eq:log_ll} in the form of \eqref{eq:efficient_est}. Rewriting \eqref{eq:log_ll} as
+\begin{equation}
+\frac{\partial}{\partial A} \ln p(\mathbf{x};A) = \frac{1}{\sigma^2} \\left(\sum_{n=0}^{N-1}x[n]-NA \\right),
+\end{equation}
+which after factoring the out the Fisher information becomes
+\begin{equation}
+\frac{\partial}{\partial A} \ln p(\mathbf{x};A) =\underbrace{\frac{N}{\sigma^2}}\_{\mathcal{I}(\theta)}\\left(\underbrace{\frac{1}{N}\sum_{n=0}^{N-1}x[n]}\_{g(\mathbf{x})}-\underbrace{A}\_{\theta} \\right).
+\label{eq:log_ll_eff}
+\end{equation}
+Comparing the single quantities in \eqref{eq:log_ll_eff} with \eqref{eq:efficient_est}, we recognize the expression
+\begin{equation}
+  g(\mathbf{x}) = \frac{1}{N} \sum_{n=0}^{N-1}x[n]
+\end{equation}
+as the efficient estimator for estimating the DC level embedded in white Gaussian noise.
+
 ---
 
-For additive white Gaussian noise (AWGN) with zero mean and $\sigma^2$ variance, the data is modeled as
+### CRLB for IID Observations
+The previous example highlighted another property of the CRLB in the case of independent and identical distributed (IID) observations. Thus, for IID observations, we have that the joint probability density function factorizes as
 \begin{equation}
-\mathbf{x}=\mathbf{s}(\theta)+\mathbf{w},
+  p(\mathbf{x};\theta) = \prod_{n=0}^{N-1} p(x[n];\theta),
 \end{equation}
-where $\mathbf{x}$ is the data vector, $\mathbf{w}$ is the noise vector, $\mathbf{s}(\theta)$ is the signal model and $\theta$ is the parameter that controls the signal model. The log-likelihood function for the data $\mathbf{x}$ is
+and since the logarithm of a product is the sum of the individual logarithms, we further have that
 \begin{equation}
-\mathcal{l}(\mathbf{x};\theta)=\sum_{n=1}^N\ln p(x[n];\theta)=N\times\ln\frac{1}{\sqrt{2\pi\sigma^2}}-\sum_{n=1}^N\frac{(x[n]-s[n;\theta])^2}{2\sigma^2}.
+  \ln p(\mathbf{x};\theta) = \sum_{n=0}^{N-1}  \ln p(x[n];\theta).
 \end{equation}
-In terms of vectors, the log-likelihood function for the data with AWGN is
+Taking the second derivative and the negative expectation over the observations $\mathbf{x}$ we get
 \begin{equation}
-\mathcal{l}(\mathbf{x};\theta)=N\times\ln\frac{1}{\sqrt{2\pi\sigma^2}}-\frac{1}{2\sigma^2}(\mathbf{x}-\mathbf{s}(\theta))^T(\mathbf{x}-\mathbf{s}(\theta)).
+-\mathbb{E} \\left[\frac{\partial^2}{\partial\theta^2}\ln p(\mathbf{x};\theta)\\right] = -\sum_{n=0}^{N-1}\mathbb{E}\\left[\frac{\partial^2}{\partial\theta^2}\ln p(x[n];\theta)\\right] = -N\mathbb{E}\\left[\frac{\partial^2}{\partial\theta^2}\ln p(x[n];\theta)\\right].
+\end{equation}
+Thus, the Fisher information for all $N$ observations is $N$-times the Fisher information of a single observation given as $-\mathbb{E}\\left[\ln p(x[n];\theta)\\right]$. Consequently, the CRLB decreases as the number of observations increases.
+
+### General CRLB for Signals in White Gaussian Noise
+For the particular, and in many enigneering problems, interesting case of a signal embedded in additive white Gaussian noise. In this particular case, we can model the observations as a  
+\begin{equation}
+    x[n] = s[n;\theta] + w[n] \qquad n = 0,1,\dots,N-1,
+\end{equation}
+and the corresponding probability density function as
+\begin{equation}
+ p(\mathbf{x};\theta) = \frac{1}{(2\pi\sigma^2)^{N/2}}\exp\\left[-\frac{1}{2\sigma^2}\sum_{n=0}^{N-1}(x[n]-s[n;\theta])^2\\right].
+\end{equation}
+
+Differentiating twice yields
+\begin{equation}
+      \frac{\partial^2}{\partial \theta^2} \ln  p(\mathbf{x};\theta) = \frac{1}{\sigma^2} \sum_{n=0}^{N-1} \\left\\{(x[n]-s[n;\theta])\frac{\partial^2}{\partial \theta^2}s[n;\theta]-\\left(\frac{\partial}{\partial \theta}s[n;\theta]\\right)^2\right\\}
+\end{equation}
+Calulating the negative expectation with respect to the observation results in
+\begin{equation}
+  -\mathbb{E}\\left[ \frac{\partial^2}{\partial \theta^2} \ln  p(\mathbf{x};\theta) \\right] = \frac{1}{\sigma^2} \sum_{n=0}^{N-1}\\left(\frac{\partial}{\partial \theta}s[n;\theta]\\right)^2
+\end{equation}
+and the CRLB can be expressed as
+\begin{equation}
+  \mathrm{Var}\\left[g(\mathbf{x})\\right] \geq \frac{1}{\frac{1}{\sigma^2} \sum_{n=0}^{N-1}\\left(\frac{\partial}{\partial \theta}s[n;\theta]\\right)^2}
+\end{equation}
+
+
+## CRLB for Vector Parameter
+Let $\boldsymbol\theta = [\theta_0,\theta_1,\dots,\theta_{p-1}]^T$ be the vector holding the unknown parameters and let $\hat{\boldsymbol\theta}=g(\mathbf{x})$ be the estimate of the parameter vector. Then, for any unbiased estimator we have that
+\begin{equation}
+\mathbf{C}_{\hat{\boldsymbol\theta}} \geq \mathbf{I}^{-1}(\boldsymbol\theta),
+\label{eq:CRLB_vector}
+\end{equation}
+where $\mathbf{C}_{\hat{\boldsymbol\theta}}$ is the covariance matrix given as
+\begin{equation}
+\mathbf{C}_{\hat{\boldsymbol\theta}} = \mathbb{E}\begin{bmatrix}(g(\mathbf{x})-\boldsymbol\theta)(g(\mathbf{x})-\boldsymbol\theta)^T\end{bmatrix},
+\end{equation}
+and $\mathbf{I}(\boldsymbol\theta)$ is the so-called Fisher information matrix
+with entries
+\begin{equation}
+  \\left[\mathbf{I}(\boldsymbol\theta)\\right]_{i,j} = \mathbb{E}\\left[\frac{\partial}{\partial\theta_i}\ln p(\mathbf{x};\boldsymbol\theta) \frac{\partial}{\partial\theta_j}p(\mathbf{x};\boldsymbol\theta)\\right] = - \mathbb{E}\\left[\frac{\partial^2}{\partial\theta_i\partial\theta_j}\ln p( \mathbf{x};\boldsymbol\theta)\\right]
+\end{equation}
+The notation $\mathbf{C}_{\hat{\boldsymbol\theta}} \geq \mathbf{I}^{-1}(\boldsymbol\theta)$ in \eqref{eq:CRLB_vector} refers to the condition that the difference of the matrices is positive semi-definiteness, i.e., $\mathbf{a}^T(\mathbf{C}\_{\hat{\boldsymbol\theta}}-\mathbf{I}^{-1}(\boldsymbol\theta))\mathbf{a}\geq 0$ for arbitrary $\mathbf{a}\neq \mathbf{0}$.
+Similar to the scalar case, equality holds if and only if
+\begin{equation}
+  \frac{\partial}{\partial\boldsymbol\theta} \ln p(\mathbf{x},\boldsymbol\theta) = \mathbf{I}(\boldsymbol\theta)(g(\mathbf{x})-\boldsymbol\theta).
 \end{equation}
 
 ---
-
-<a href="../estimation_maximumlikelihood">The maximum likelihood estimator (MLE)</a> is found by setting the first derivative of the likelihood or log-likelihood function to zero and solving for the parameter $\theta$. The first derivative of the log-likelihood function is called **the score**, so actually the MLE is found by setting the score equal to zero. The score attains a special form that is very useful in developing the Cramer-Rao lower bound:
-\begin{equation}
-g(\theta)=\frac{\partial}{\partial\theta}\ln \mathcal{L}(\theta;\mathbf{x})=\frac{1}{\mathcal{L}(\theta;\mathbf{x})}\frac{\partial}{\partial\theta}\mathcal{L}(\theta;\mathbf{x}),
-\end{equation}
-which is a direct consequence of the derivative identity regarding the natural logarithm function.
-
-The usefulness of the score is revealed when considering its statistical properties. The expected value of the score is calculated as
-\begin{equation}
-E_x(g(\theta))=\int p(\mathbf{x};\theta)\frac{\partial}{\partial\theta}\ln \mathcal{L}(\theta;\mathbf{x})d\mathbf{x}
-\end{equation}
-If we apply the derivative and substitute the PDF in place of the likelihood (because they are actually the same function), we obtain
-\begin{equation}
-E_x(g(\theta))=\int\frac{\partial p(\mathbf{x};\theta)}{\partial\theta} d\mathbf{x}.
-\end{equation}
-The derivative with respect to $\theta$ and the integration with respect to $\mathbf{x}$ can switch order to yield
-\begin{equation}
-E_x(g(\theta))=\frac{\partial}{\partial\theta} \int p(\mathbf{x};\theta) d\mathbf{x},
-\end{equation}
-where the integral of the PDF over the sample space is equal to 1 and its derivative is equal to zero.  Thus, **the expected value of the score is equal to zero**. We should note that the switching of the order of the integral and the derivative is only possible if the PDF $p(\mathbf{x};\theta)$ satisfies the **regularity condition**:
-<ul>
-<li>The PDF $p(x;\theta)$ is non-zero for $x_1$ &lt $x$ &lt $x_2$, where $x_1$ and $x_2$ are independent of $\theta$,
-<li>OR the PDF $p(x;\theta)$ is non-zero for all $x$, continuously differentiable and it's integral converges for all $\theta$.
- </ul>
-
-
 <b>Example:</b>
+Suppose we want to estimate in addition to the DC voltage level of the previous example also the variance $\sigma^2$ of the noise. The required expressions are:
+\begin{align}
+\frac{\partial}{\partial A} \ln p(\mathbf{x};\boldsymbol\theta) &= \frac{1}{\sigma^2}\sum_{n=0}^{N-1}(x[n]-A)\\\\\\
+\frac{\partial}{\partial \sigma^2} \ln p(\mathbf{x};\boldsymbol\theta) &= -\frac{N}{2\sigma^2}+\frac{1}{2\sigma^4}\sum_{n=0}^{N-1}(x[n]-A)^2\\\\\\
+\frac{\partial^2}{\partial A^2} \ln p(\mathbf{x};\boldsymbol\theta) &= \frac{N}{\sigma^2}\\\\\\
+\frac{\partial^2}{\partial (\sigma^2)^2} \ln p(\mathbf{x};\boldsymbol\theta) &= \frac{N}{2\sigma^4}-\frac{1}{\sigma^6}\sum_{n=0}^{N-1}(x[n]-A)^2\\\\\\
+\frac{\partial^2}{\partial A \partial\sigma^2} \ln p(\mathbf{x};\boldsymbol\theta)&= \frac{\partial^2}{ \partial\sigma^2 \partial A} \ln p(\mathbf{x};A) = -\frac{1}{\sigma^4}\sum_{n=0}^{N-1}(x[n]-A)^2
+\end{align}
+
+The corresponding Fisher information matrix is
+\begin{equation}
+  \mathbf{I}(\boldsymbol\theta) = \begin{bmatrix} \frac{N}{\sigma^2} & 0, \\\\\\
+  0 & \frac{N}{2\sigma^4}
+  \end{bmatrix}
+\end{equation}
+and since it is a diagonal matrix we have that its inverse is simply the inverse of the main diagonal entries
+\begin{equation}
+  \mathbf{I}^{-1}(\boldsymbol\theta) = \begin{bmatrix} \frac{\sigma^2}{N} & 0 \\\\\\
+  0 & \frac{2\sigma^4}{N}.
+  \end{bmatrix}
+\end{equation}
+The individual variances are lower bounded by
+\begin{equation}
+  \mathrm{Var}[A] \geq   \frac{\sigma^2}{N},
+\end{equation}
+and
+\begin{equation}
+  \mathrm{Var}[\sigma^2] \geq   \frac{2\sigma^4}{N}.
+\end{equation}
 
 ---
-For the data model $x[n]=\theta+\omega[n]$, if the noise has uniform distribution, i.e., $\omega[n]\sim U(\omega_1,\omega_2)$, then the data will be such that $\omega_1+\theta < x[n] < \omega_2+\theta$. In this case, the regularity condition is not satisfied. 
-
----
-
-### The Fisher Information
-
-The variance of the score is also called **the Fisher Information**. Because the expected value of the score is equal to zero, the variance of the score is
-\begin{equation}
-\mathcal{I}(\theta)=E_x(g^2(\theta))=\int p(\mathbf{x};\theta)\Big(\frac{\partial}{\partial\theta}\ln \mathcal{L}(\theta;\mathbf{x})\Big)^2d\mathbf{x}=E\Bigg(\Big(\frac{\partial}{\partial\theta}\ln \mathcal{L}(\theta;\mathbf{x})\Big)^2\Bigg).
-\end{equation}
-
-If the regularity conditions are satisfied and the log-likelihood function is twice differentiable with respect to $\theta$, then the Fisher information can also be written as
-\begin{equation}
-\mathcal{I}(\theta)=-E\Big(\frac{\partial^2}{\partial\theta^2}\ln \mathcal{L}(\theta;\mathbf{x})\Big).
-\end{equation}
-
-The meaning of the Fisher information deserves more contemplation. The role it plays in the CRLB stems from the derivation of the latter, which starts with the idea that an estimator is a function of the data, $\hat\theta=f(\mathbf{x})$, where the estimate is a random variable. The idea is to measure the information in the data we acquired over the parameter to be estimated. If the estimate is sensitive to the data, then slight changes in the data results in significant changes in the estimate. In other words, the log-likelihood function is *sharp*. This sharpness can be assessed through the second derivative of the log-likelihood function. 
-
-Note, however, that the Fisher information is <i>the expected value</i> of the second derivative of the log-likelihood function. So, the intuition about the sharpness of the function gives only part of the picture. The actual relation that describes the information content of the data regarding the parameter to be estimated is the covariance of the estimate with the derivative of the log-likelihood function, which is the score.
-
-
-### The Fisher Information Matrix
-
-Note that the expression above concerns the scalar parameter $\theta$, which yields a single scalar term for the Fisher information. For the vector case, we have to consider the partial derivative with respect to each entry $\theta_k$ of the parameter vector $\Theta=[\theta_1 ~\theta_2 ~ ... ~ \theta_K]$. **The Fisher information matrix** consists of entries 
-\begin{equation}
-[\mathcal{I}(\Theta)]_{kl}=-E\Bigg(\frac{\partial^2 \ln\mathcal{L}(\Theta;\mathcal{x})}{\partial \theta_k \partial \theta_l}\Bigg),
-\end{equation}
-where $k$ is the row index and $l$ is the column index.
-
-
-## The CRLB for Vector Parameters
-
-The CRLB for scalar parameter $\theta$ is the lower bound for the variance of the estimate $\hat\theta$. For vector parameter $\Theta$, we need to consider the <a href="../mathematicalbackground_probability_vectors/#covariance">**covariance matrix**</a> for the estimate $\hat\Theta$. Consider the structure of the covariance matrix: The diagonal elements are the variances of the corresponding entries of $\hat\Theta$, and the off-diagonal elements show the correlation between the corresponding pairs of random variables. For a set of uncorrelated or independent random variables, the covariance matrix consists of non-zero entries only along its diagonal.
-
-The CRLB for the covariance matrix is not a simple magnitude comparison anymore. The relation between the covariance matrix and the Fisher information matrix is
-\begin{equation}
-cov(\hat\Theta)-\mathcal(I)^{-1}(\Theta)\geq\mathbf{0}
-\end{equation}
-which should be understood as the result of the subtraction is a positive semi-definite matrix, i.e., for every non-zero column vector $\mathbf{z}$ of real numbers with the same dimension as $\Theta$,
-\begin{equation}
-\mathbf{z}^T[cov(\hat\Theta)-\mathcal(I)^{-1}(\Theta)]\mathbf{z}\geq 0.
-\end{equation}
-For $\Theta$ with independent entries, the relation above boils down to the scalar CRLB for each parameter.
-
-As with the scalar case, only the MVUE achieves this bound, and an estimator $\hat\Theta=f(\mathbf{x})$ is MVUE if and only if
-\begin{equation}
-\frac{\partial\ln p(\mathbf{x};\Theta)}{\partial\Theta}=\mathcal{I}(\Theta)(f(\mathbf{x})-\Theta).
-\end{equation}
-While the expression is pretty much the same as in the scalar case, we should remember that the function $f(\mathbf{x})$ has as many dimensions as the size of the parameter vector $\Theta$ and $\mathcal{I}(\Theta)$ is the Fisher information matrix.
-
-## Conclusion
-
-The ability to analyze the bias and variance of an estimator gives us valuable insight on how to gauge the performance of estimators and find ways to improve. Based on the tools developed in this module, we seek an estimator that is <b>Efficient:</b> An estimator that is unbiased and attains the minimum possible variance for an estimator that is the CRLB. Such estimators are also called "optimal". 
-
-Sometimes the variance of an estimator decreases as the size of the data increases and reaches the minimum variance (CRLB) only for infinitely long data. Such estimators are called <b>asymptotically efficient</b>. For example, the maximum likelihood estimator is asymptotically efficient (asymptotically optimal). Obviously, we cannot have infinitely long data sets. In such cases, the task is to determine the data size which gives acceptable performance, and while the best possible performance is determined through the theory explained in this module, what passes as <i>the acceptable performance</i> depends on the application. As long as new signal processing applications emerge (that is, for the forseeable future), methods to develop, analyze and improve estimators will remain indispensible.

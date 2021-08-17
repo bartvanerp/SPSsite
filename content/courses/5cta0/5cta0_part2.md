@@ -80,7 +80,7 @@ The first estimator is the arithmetic mean of the observation, while the second 
 
 The estimator is a function with random variables as an input. Thus, also the estimate is a random variable. We, therefore, describe the estimator by its statistic. First of all, it is desirable that an estimator produced the true parameter on average, i.e.,
 \begin{equation}
-  \mathbb{E}[\hat\theta] = \theta
+  \mathbb{E}\\left[\hat\theta\\right] = \theta
 \end{equation}
 for all $\theta$.
 
@@ -89,9 +89,9 @@ Moreover, as we will show, the variance is lower bounded. Thus, we can not only 
 
 Returning to the three estimators. It can be shown that the indivdual variances of the estimates are:
 \begin{align}
-\mathrm{Var}[\hat{A}] &= \frac{\sigma^2}{N},\\\\\\
-\mathrm{Var}[\check{A}] &= \sigma^2,\\\\\\
-\mathrm{Var}[\tilde{A}] &= \frac{(N+6)}{(N+2)^2}\sigma^2.
+\mathrm{Var}\\left[\hat{A}\\right] &= \frac{\sigma^2}{N},\\\\\\
+\mathrm{Var}\\left[\check{A}\\right] &= \sigma^2,\\\\\\
+\mathrm{Var}\\left[\tilde{A}\\right] &= \frac{(N+6)}{(N+2)^2}\sigma^2.
 \end{align}
 
 When comparing the different variances, we see that the first estimator has the lowest variance. When compared to the second estimator, we see that the variance is N-times smaller due to the noise averaging effect of the estimator. In fact, the variance of the first estimator is the lowest possible variance attainable for this specific estimation problem.
@@ -100,10 +100,10 @@ When comparing the different variances, we see that the first estimator has the 
 The topics covered in this part are
 
 <ul>
-<li><a href="../statisticalsignalprocessing_estimation_leastsquares">Least Squares Estimator:</a> This method fits the model to data by minimizing the sum of squared difference between the data and the model.
-<li><a href="../statisticalsignalprocessing_estimation_MaximumLikelihood">Maximum Likelihood Estimator:</a> The stochastic nature of the data due to the noise is be modeled in terms of the probability density function of the noise. The parameter value that maximizes the probability of observing the data at hand is the maximum likelihood estimate.
 <li><a href="../statisticalsignalprocessing_estimation_CRLB">The Cramer-Rao Lower Bound:</a> Just as the data is stochastic, so are the parameter estimations. When the noise properties are known, the lowest possible variance for the parameter estimations can be calculated for unbiased estimators.
+<li><a href="../statisticalsignalprocessing_estimation_MaximumLikelihood">Maximum Likelihood Estimator:</a> The stochastic nature of the data due to the noise is be modeled in terms of the probability density function of the noise. The parameter value that maximizes the probability of observing the data at hand is the maximum likelihood estimate.
 <li><a href="../statisticalsignalprocessing_estimation_MVUE_linear">Minimum Variance Unbiased Estimator and Best Linear Unbiased Estimator:</a> The minimum variance unbiased estimator can be found for linear problems with Gaussian noise.
+<li><a href="../statisticalsignalprocessing_estimation_leastsquares">Least Squares Estimator:</a> This method fits the model to data by minimizing the sum of squared difference between the data and the model.
 <li><a href="../statisticalsignalprocessing_estimation_Bayes">Bayesian Estimators:</a> For all estimation techniques so far, the parameter to be estimated is assumed to be deterministic but unknown. Bayesian estimators consider the parameter also as a random variable and utilize the Bayes' Theorem to estimate it.
 <li><a href="../statisticalsignalprocessing_estimation_numerical_methods">Numerical Solution Methods:</a> Not all estimators have closed forms; numerical methods that iteratively estimate the parameters are indispensible tools for implementing estimators.
 <li><a href="../statisticalsignalprocessing_spectrum_main">Spectral Estimation:</a>
