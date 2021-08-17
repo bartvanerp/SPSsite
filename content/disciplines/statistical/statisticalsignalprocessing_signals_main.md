@@ -18,6 +18,8 @@ type = "docs"  # Do not modify.
 ## Introduction
 When processing and analyzing signals, the noise component makes it more difficult to draw meaningful conclusions on specific signal samples. In order to cope adequately with the uncertainty involved, deterministic signals can better be regarded as random signals, where the exact outcome in time is unknown, but where conclusions can be drawn from the statistical properties of the signal.
 
+The following video gives an overview of all the topics treated in the module. Starting from a couple of examples of random processes, it describes the statistical tools that we can use to describe random processes. Finally, it introduces two important properties of random processes: stationarity and ergodicity. It is recommended to watch the video before going through the module, and once again after completing the module.
+
 ### Screencast video [⯈]
 
 <div class="video-container">
