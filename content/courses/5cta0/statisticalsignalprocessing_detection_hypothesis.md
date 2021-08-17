@@ -2,7 +2,7 @@
 title = "Hypothesis testing"         # name of webpage
 
 # date = {{ .Date }}
-lastmod = 2019-05-25
+lastmod = 2021-08-17
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -14,8 +14,8 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_detection
 
 # Add menu entry to sidebar.
 [menu.5cta0]                       # name of menu section (main module)
-  name = "3.1 Hypothesis testing"        # name of this item in that menu
-  weight = 301                          # location in that menu
+  name = "4.1 Hypothesis testing"        # name of this item in that menu
+  weight = 401                          # location in that menu
 
 +++
 
