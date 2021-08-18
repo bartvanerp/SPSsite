@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.statistical]                       # name of menu section (main module)
   name = "Non-parametric methods"        # name of this item in that menu
-  weight = 4                      # location in that menu
+  weight = 5                      # location in that menu
   parent = "Spectral estimation"
 +++
 

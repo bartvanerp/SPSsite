@@ -1,8 +1,8 @@
 +++
-title = "Parametric methods"         # name of webpage
+title = "3.3 Parametric spectral estimation"         # name of webpage
 
 # date = {{ .Date }}
-lastmod = 2020-05-25
+lastmod = 2021-08-18
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -15,10 +15,8 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_spectrum_
 # Add menu entry to sidebar.
 
 [menu.5cta0]                       # name of menu section (main module)
-  name = "Parametric methods"        # name of this item in that menu
+  name = "3.3 Parametric spectral estimation"        # name of this item in that menu
   weight = 350                          # location in that menu
-  parent = "Part 3: Spectral estimation"
-
 
 
 +++
