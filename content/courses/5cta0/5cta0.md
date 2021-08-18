@@ -96,14 +96,14 @@ The material covered in this course is based on:
 We also suggest the following websites:
 
 <ul>
-<li><a href=https://seeing-theory.brown.edu/#firstPage >Seeing theory by Brwon University</a> </li>
+<li><a href=https://seeing-theory.brown.edu/#firstPage >Seeing theory by Brown University</a> </li>
 </ul>
 
 <br></br>
 
 ## Planning
 
-A detailed planning for tha academic year 2021-22 is available on Canvas <a href=https://canvas.tue.nl/courses/15713/assignments/syllabus >Canvas.</a>
+A detailed planning for tha academic year 2021-22 is available on <a href=https://canvas.tue.nl/courses/15713/assignments/syllabus >Canvas.</a>
 
 
 
