@@ -15,9 +15,9 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_spectrum_
 # Add menu entry to sidebar.
 
 [menu.5cta0]                       # name of menu section (main module)
-  name = "Recap: Fourier transforms"        # name of this item in that menu
-  weight = 281                           # location in that menu
-  parent = "2.7 Spectral estimation"
+name = "Recap: Fourier transforms"        # name of this item in that menu
+weight = 310                           # location in that menu
+parent = "Part 3: Spectral estimation"
 
 
 

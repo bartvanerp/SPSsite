@@ -13,8 +13,8 @@ responsibleteacher = "StatisticalSignalProcessing@groups.tue.nl"
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "2.4 MVUE for Linear Models"
-weight = 240
+name = "2.3 MVUE for Linear Models"
+weight = 230
 
 +++
 ## Introduction
@@ -52,7 +52,7 @@ The equation tells that the data points are the result of a linear combination o
 
 ## MVUE for Additive White Gaussian Noise (AWGN)
 
-In this section we will derive the MVUE for linear signal model with additive white Gaussian noise, which is 
+In this section we will derive the MVUE for linear signal model with additive white Gaussian noise, which is
 \begin{equation}
 \hat\Theta=(\mathbf{H}^T\mathbf{H})^{-1}\mathbf{H}^T\mathbf{x}.
 \end{equation}
@@ -61,12 +61,12 @@ This result is the same as we obtained for the least squares estimator (LSE). In
 2. We can now assess the performance of the estimator directly by the covariance of the estimate.
 
 
-The covariance of the estimate is 
+The covariance of the estimate is
 \begin{equation}
 \Gamma_\hat\Theta=\sigma^2(\mathbf{H}^T\mathbf{H})^{-1},
 \end{equation}
 
-where $\sigma^2$ is derived from the **covariance** of the **white Gaussian noise**. 
+where $\sigma^2$ is derived from the **covariance** of the **white Gaussian noise**.
 
 The derivation of the MVUE for linear signal model with additive white Gaussian noise (AWGN) is given below. The key properties are emphasized and links for detailed explanations are provided.
 
@@ -144,7 +144,7 @@ E(\hat\Theta)=\mathbf{A}E(\mathbf{x})=\Theta,
 \end{equation}
 where $\mathbf{A}$ is the K by N matrix that consists of the coefficients $a_{k,n}$.
 
-The zero bias assumption leads to a linear relation between the parameter $\theta$ and the expected value of the data such that 
+The zero bias assumption leads to a linear relation between the parameter $\theta$ and the expected value of the data such that
 
 \begin{equation}
 E(\mathbf{x})=\mathbf{H}\Theta.
