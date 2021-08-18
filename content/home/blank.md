@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 20  # Order that this section will appear.
 
 title = "Educational environment"
-subtitle = "Where does this come from?"
+subtitle = "Why this webpage?"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
@@ -14,6 +14,5 @@ subtitle = "Where does this come from?"
 
 +++
 
-Over the past couple of years, the Signal Processing Systems (SPS) group of the Electrical Engineering department at the Eindhoven University of Technology (TU/e) has been developing new methods of education in order to fulfill the needs of the increasing influx of new students.
-The *Blended Learning* approach that was implemented in 2017 was appreciated by the students and therefore more material is made available for self-study.
-For the optimal distribution of this material this site is developed, where you can find all information ***bundled in one single place***.
+Over the past years, the Signal Processing Systems (SPS) group of the Electrical Engineering department at the Eindhoven University of Technology (TU/e) has been developing new methods of education to fulfill the needs of new students. This webpage has grown over the past years to become the educational page of the SPS group. The webpage currently contains information about the educational structure within the SPS group, countless pages of self-study material, including screencast videos and exercises, and an overview of some of our courses. This website has been designed for you to find all information  ***bundled in one single place***.
+<!-- In 2017, a *Blended Learning* approach was implemented and was well-reviewed by the students. More and more material has therefore been made available for self-study. This website has been designed for you to find all information  ***bundled in one single place***. -->

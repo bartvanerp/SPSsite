@@ -13,7 +13,7 @@ responsibleteacher = "s.turco@tue.nl"
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "5CTA0 - Statistical signal processing"
+name = "5CTA0 - Statistical Signal Processing"
 weight = 1
 
 +++

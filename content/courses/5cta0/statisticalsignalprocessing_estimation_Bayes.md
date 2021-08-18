@@ -17,6 +17,7 @@ name = "2.5 Bayesian Estimator"
 weight = 250
 
 
+
 +++
 ## Introduction
 Bayesian estimator takes its name from the Bayes'Theorem, which connects the conditional probabilities involving two events:

@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 [menu.5cta0]
-name = "Part 1: Random variables and random signals"
+name = "Part 1: Random Variables and Random Signals"
 weight = 100
 
 +++
