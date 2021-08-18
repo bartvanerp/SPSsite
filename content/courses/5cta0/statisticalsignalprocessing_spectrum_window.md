@@ -17,7 +17,7 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_spectrum_
 [menu.5cta0]                       # name of menu section (main module)
   name = "Windowing"        # name of this item in that menu
   weight = 330                          # location in that menu
-  parent = "Part 3: Spectral estimation"
+  parent = "3.1 Spectral distributions and windowing"
 
 
 
