@@ -24,7 +24,7 @@ Previously we saw how we could grasp this notion of uncertainty in probability f
 ### Screencast video [⯈]
 
 <div class="video-container">
-<iframe width="100%"; height="100%";  src="https://www.youtube.com/embed/EnUvlJrRRtE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+<iframe width="100%"; height="100%";  src="https://www.youtube.com/embed/7WYMXxwwMPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
 
 
