@@ -226,7 +226,7 @@ The name moving average can be somewhat misleading. In fact, to actually perform
 
 The difference equation of a $q^\text{th}$-order MA filter is given by
 \begin{equation}
-    x[n] = i[n] + b_1 i[n-1] + b_2 i[n-2] - \ldots - b_q i[n-q].
+    x[n] = i[n] + b_1 i[n-1] + b_2 i[n-2] + \ldots + b_q i[n-q].
 \end{equation}
 where $i[n]$ is the input white noise and $b_i$ are the filter coefficients. The filter order determines how many noise samples are combined to form a new sample.
 
