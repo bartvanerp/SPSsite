@@ -78,7 +78,7 @@ and secondly we use the fact that the signal is real, meaning that $x[n] = x^\as
     \begin{split}
         r_{ix}[l]
         &= \mathrm{E}\left\\{i[n]x^\ast[n-l]\right\\}, \newline
-        &= \mathrm{E}\left\\{i[n]^\ast\left(i[n-l] - a_1 x^\ast[n-1-l]  - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
+        &= \mathrm{E}\left\\{i[n]^\ast\left(i^\ast[n-l] - a_1 x^\ast[n-1-l]  - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
         &= \mathrm{E}\left\\{i[n]i^\ast[n-l]\right\\} + \mathrm{E}\left\\{i[n]\left(- a_1 x^\ast[n-1-l] - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
         &= \sigma_i^2\delta[l] -a_1\mathrm{E}\left\\{i[n] x^\ast[n-1-l]\right\\} - \ldots - a_p\mathrm{E}\left\\{i[n]x^\ast[n-p-l]\right\\}, \newline
         &= \sigma_i^2\delta[l]
