@@ -96,7 +96,7 @@ The material covered in this course is based on:
 We also suggest the following websites:
 
 <ul>
-<li><a href=https://seeing-theory.brown.edu/#firstPage >Seeing theory by Brwon University</a> </li>
+<li><a href=https://seeing-theory.brown.edu/#firstPage >Seeing theory by Brown University</a> </li>
 </ul>
 
 <br></br>

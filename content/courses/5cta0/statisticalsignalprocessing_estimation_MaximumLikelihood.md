@@ -21,117 +21,235 @@ weight = 220
 
 ## Introduction
 
-The maximum likelihood estimation (MLE) is a popular approach to estimation problems. Many of its properties are appreciated once the other estimation methods are investigated. However, the MLE is a natural extension of the concept of <i>likelihood</i>, which has to be understood well to derive the <a href="../estimation_CRLB">Cramer-Rao lower bound (CRLB) in the follow-up module</a>. Thus, we first introduce the likelihood and then show how the MLE is obtained.
+The maximum likelihood estimator (MLE) is a popular approach to estimation problems. Firstly, if an efficient unbiased estimator exists, it is the MLE.  Secondly, even if no efficient estimator exists, the mean and the variance converges asymptotically to the real parameter and CRLB as the number of observation increases. Thus, the MLE is asymptotically unbiased and asymptotically efficient. The principle of the MLE is to maximize the so-called likelihood function, which is a known function. Another important function, in the context of the MLE, is the log-likelihood function. It reveals the fundamental connection of the MLE to the CRLB.
+Finding the maximum can be achieved for simple problems analytically. However, for more complex estimation problems, we rely on numerical methods addressed in the module on numerical methods.
+
 
 <div class="video-container">
-<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/y4v4Y9uvK7c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/FsIlTgFnK7w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-This module establishes a new paradigm over the least squares estimation (LSE): We are now taking into account the noise and its effect on the data. In the LSE we were aware of the stochastic nature of the data, in MLE we analyze this stochastic nature and include it in our estimation. This is the paradigm for all estimators except the LSE.
+## Maximum Likelihood Estimation
 
-## Formal Description of the Maximum Likelihood Estimator
+Before defining the MLE, we define the likelihood function. The likelihood function is the PDF $p(\mathbf{x},\theta)$ for a given observation $\mathbf{x}$. Since we fix the observation $\mathbf{x}$, the PDF $p(\mathbf{x},\theta)$ depends only on the unknown parameter. The value of \theta that maximizes the likelihood function is the maximum likelihood estimate $\hat{\theta}\_{\text{ML}}$, i.e., \begin{equation}
+	\hat\theta_{\text{ML}} = \underset{\theta}{\operatorname{argmax}} p(\mathbf{x};\theta).
+\end{equation}
+In other words, the maximum likelihood estimate is the value of theta that most likely caused the observation $\mathbf{x}$. Note that depending on the estimation problem, no maximum or multiple maxima exist.
 
-Even before investigating the fundamental concepts underlying the maximum likelihood estimator (MLE), we can write the formal description of the MLE and discover how the estimator is used. The starting point is the understanding that our data is stochastic, and its behavior can be modeled by a probability density function (PDF) such as $p(x[n];\theta)$. This representation describes a PDF for the random variable $x[n]$, which is also a function of the controlling parameter $\theta$ that is deterministic but unknown.
 
-After collecting the data points $\mathbf{x}=[x[1] x[2] ... x[N]]$, we can view the PDF under a new light: We can search for the value of $\theta$ that maximizes the probability of acquiring the data points $\mathbf{x}$ at hand. This gives the formal description of the MLE:
+---
+<b>Example: </b>
+
+Let $x[0],x[1],\dots,x[N-1]$ be iid and uniformly distributed random variables with PDF
 \begin{equation}
-\hat\theta=\underset{\theta}{arg \max}p(\mathbf{x};\theta)
+  p(x[i];\theta)  = \begin{cases}
+        \theta^{-1}, & 0 \leq x[i] \leq \theta,\\\\\\
+        0 & \text{else}.
+  \end{cases}
+\end{equation}
+The unknown parameter $\theta>0$ determines the length of the interval. Due to the iid assumption, we further have that
+\begin{equation}
+  p(\mathbf{x};\theta)  = \begin{cases}
+        \theta^{-N}, & \text{if } 0 < x[i] < \theta \text{ for } 0\leq i \leq N-1 \\\\\\
+        0, & \text{else}.
+  \end{cases}
 \end{equation}
 
-There is one link to identify before putting the MLE to use: How is the PDF for the data $x[n]$ or the data set $\mathbf{x}$ obtained? For this, the data model we adopt throughout this course is utilized. The data is modeled as the sum of a deterministic signal and the noise:
+The value of $\theta$ must be larger than or equal to the largest value in our observed data. Otherwise, we have zero probability of obtaining the data. Thus, we can equivalently express the PDF as
 \begin{equation}
-x[n]= s[n;\theta] + \omega[n].
+  p(\mathbf{x};\theta)  = \begin{cases}
+        \theta^{-N}, & 0 < \max(x[0],x[1],\dots,x[N-1]) < \theta \\\\\\
+        0 & \text{else}.
+  \end{cases}
+\end{equation}
+The likelihood function is strictly monotonically decreasing function and is maximized by minimizing the value of $\theta$. However, since $\theta \geq \max(x[0],x[1],\dots,x[N-1]) $, we get
+\begin{equation}
+\hat\theta_{\text{ML}} = \max(x[0],x[1],\dots,x[N-1]).
 \end{equation}
 
-The PDF for the data $\mathbf{x}$ as a function of $\theta$ is obtained by
+---
+
+Instead of maximizing the likelihood function, we can also maximize the so-called **log-likelihood** function defined as
 \begin{equation}
-p(x[n];\theta)=p_{\omega}(x[n]-s[n;\theta]),
+  l(\mathbf{x};\theta) = \ln p(\mathbf{x};\theta).
 \end{equation}
-where $p_\omega(X)$ is the PDF for the noise $\omega[n]$. Thus, the PDF of the noise is used to model the stochastic behavior of the data.
-
-At this point, it is possible to start working on examples. A pencast describing the MLE for additive white Gaussian noise is available. 
-
-<div class="video-container">
-<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/WQRoIfvZ5MA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
-</div>
-
-However, the MLE is in general not available as a closed form equation that accepts the data $\mathbf{x}$ and gives a solution $\hat\theta$. Numerical solution methods are explained in a separate module for both MLE and least squares estimation.
-
-The remainder of this module explains fundamental concepts from which the MLE is derived. These concepts are also essential for understanding the Cramer-Rao lower bound and the binary hypothesis testing that is covered in the third part of the course.
-
-## The Likelihood Function
-
-The likelihood function concept is based on the data model we adopt throughout this course, which assumes the data is the sum of a deterministic signal and the noise. In this setting, we shall consider the probability of acquiring the data points at hand. The observations are modeled as random variables that depend on the parameters to be estimated and the noise:
+Since the logarithm is a monotonically increasing function, $\ln p(\mathbf{x};\theta)$ and $p(\mathbf{x};\theta)$ have their maxima for the same value of $\theta$. If the log-likelihood function is differentiable and the maximum is at an interior point, we further have that the derivative is equal to zero a its maxima, i.e.,
 \begin{equation}
-p(x[n];\theta)=p_{\omega}(x[n]-s[n;\theta])
+\\left.\frac{\partial}{\partial \theta} l(\mathbf{x};\theta) \\right\rvert_{\theta = \hat\theta_{\text{ML}}} = 0.
+\label{eq:log_ll_max}
 \end{equation}
+The above equation is referred to as the likelihood equation. We already encountered the log-likelihood function in the module on the CRLB, which indicates its fundamental importance in estimation theory. If the log-likelihood function is not differentiable, other techniques have to be applied.
 
-The term $p_\omega(x[n]-s[n;\theta])$ corresponds to the probability density function (PDF) of the noise term $\omega[n]$. This equation tells us that the difference between the data $x[n]$ and the signal model $s[n;\theta]$ is a stochastic process with the same PDF as the noise. It is obvious that the difference $x[n]-s[n;\theta]$ depends on the parameter $\theta$, which also means the PDF $p(x[n];\theta)$ depends on $\theta$.
-
-This dependence is established by the **likelihood function**, which is still the same function as the PFD $p(x[n];\theta)$ with one significant distinction: The likelihood function is a function of $\theta$. For a set of data points $\mathbf{x}=[x[1] x[2] ... x[N]]$, the value of the likelihood function $p(x[n];\theta)$ can be calculated.
-
-### The Log-Likelihood Function
-
-Rather than the likelihood function itself, the **log-likelihood function** is considered in most applications, which is simply the natural logarithm of the likelihood function. A reason for preferring the log-likelihood is the multiplicative nature of the probability. Consider the PDF for the set of data points $\mathbf{x}$:
+We have shown that an efficient estimator can be obtained if the log-likelihood function can be expressed as
 \begin{equation}
-p(\mathbf{x};\theta)=\prod_{n=1}^N p(x[n];\theta).
+ \frac{\partial}{\partial\theta}l(\mathbf{x};\theta)=\mathcal{I}(\theta)(g(\mathbf{x})-\theta).
+ \label{eq:efficient}
 \end{equation}
-The multiplication is simplified to an addition when the natural logarithm of the likelihood function is considered:
+Combining \eqref{eq:log_ll_max} and \eqref{eq:efficient} yields
 \begin{equation}
-\ln p(\mathbf{x};\theta)=\sum_{n=1}^N \ln p(x[n];\theta).
+\\left.\mathcal{I}(\theta)(g(\mathbf{x})-\theta) \\right\rvert_{\theta = \hat\theta_{\text{ML}}} = 0.
+\label{eq:ml_efficient}
 \end{equation}
-
-A PDF has to be strictly non-negative, which allows using the natural logarithm of the PDF. The logarithm function is monotonically increasing, which means for real numbers $0\leq A < B$, $\ln A < \ln B$. This means that the MLE formulation is valid also for the log-likelihood function.
-
-In many references the likelihood function is written as $\mathcal{L}(\theta;\mathbf{X})$ and the log-likelihood function is written as $\mathcal{l}(\theta;\mathbf{x})=\ln \mathcal{L}(\theta;\mathbf{x})$.
-
-## The Maximum Likelihood Estimator for AWGN
-
-The maximum likelihood estimator is in general not in closed form, which means in most cases the MLE is not an equation that takes in the data and gives out the estimation. Numerical solution methods are an important part of the MLE. However, for the linear signal models with AWGN with known noise variance $\sigma^2$, the MLE yields a closed form solution. In this section we derive the MLE for AWGN, and obtain the closed form solution for the linear data.
-
-### MLE for the Normal Distribution
-
-The first step of deriving the maximum likelihood estimator is deriving the log-likelihood function. The reason for adopting the log-likelihood function instead of the likelihood function will become clear during this derivation. <a href="../estimation_maximumlikelihood/#the-likelihood-function">The likelihood function</a> is obtained from the PDF of the noise term. For the AWGN the noise samples are independent and have the normal distribution $\omega[n]\sim\mathcal{N}(0,\sigma)$. Accordingly, the PDF for the noise samples is
+Since the Fisher information is a strictly positive quantity $(\mathcal{I}(\theta)>0)$, we require that
 \begin{equation}
-p(\omega[n])=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(\omega[n])^2}{2\sigma^2}}.
+    g(\mathbf{x})=\hat\theta_{\text{ML}}.
 \end{equation}
-If we have an accurate model $s[n;\theta]$ with the correct parameter $\theta$, the difference between the data $x[n]$ and the signal model $s[n;\theta]$ is equal to noise; $\omega[n]=x[n]-s[n\theta]$. Based on this relation, we obtain the likelihood function for a sample of data:
-\begin{equation}
-p(x[n];\theta)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x[n]-s[n\theta])^2}{2\sigma^2}}.
-\end{equation}
-The likelihood function for the single sample is an exponential function, and we can obviously benefit from adopting the logarithm of this exponential function. But we also may want to combine multiple samples of the data in our estimator. The reason for using multiple data samples for estimation will become clear when we investigate <a href="../estimation_crlb">the bias, variance and Cramer-Rao lower bound</a> of estimators.
+Consequently, if an efficient estimator exists, then it is the MLE.
 
-When the data samples $x[n]$ are independent identically distributed, the PDF of a set of data samples is obtained by multiplying the PDF of individual samples:
+---
+<b>Example:</b>
+
+We have already seen that the sample mean is an efficient estimator for estimating the DC level in the presence of additive white Gaussian noise. Moreover, we have just shown that if an efficient estimator exists, it is the MLE, and thus the sample mean is also the MLE. We can verify this by looking at the partial derivative of the log-likelihood function, which is
 \begin{equation}
-\mathcal{L}(\mathbf{x};\theta)=p(\mathbf{x};\theta)=\prod_{n=1}^Np(x[n];\theta)=\frac{1}{(2\pi\sigma^2)^{N/2}}\prod_{n=1}^Ne^{-\frac{(x[n]-s[n\theta])^2}{2\sigma^2}}.
+  \frac{\partial}{\partial \theta} l(\mathbf{x};\theta) = \frac{1}{\sigma^2} \sum_{n=0}^{N-1}(x[n]-A).
 \end{equation}
-The log-likelihood function is obtained by taking the logarithm of the likelihood function:
+After equating with zero and solving for $A$, we have that
 \begin{equation}
-\mathcal{l}(\mathbf{x};\theta)=\sum_{n=1}^N\ln p(x[n];\theta)=N\times\ln\frac{1}{\sqrt{2\pi\sigma^2}}-\sum_{n=1}^N\frac{(x[n]-s[n;\theta])^2}{2\sigma^2}.
+\hat{A}\_{\text{ML}} = \frac{1}{N}\sum_{n=0}^{N-1}x[n],
 \end{equation}
-The MLE is found by taking the derivative of the log-likelihood function with respect to the parameter $\theta$ and setting it equal to zero. The value of $\theta=\hat\theta$ that sets the derivative of the log-likelihood function to zero is the MLE:
+which is the efficient estimator found in the module on the CRLB.
+
+---
+
+### Properties of the Maximum Likelihood Estimator
+
+The MLE has many appealing properties for large sample sizes that can be summarized as follows:
+\begin{align}
+    \mathbb{E}\\left[\hat\theta_{\text{ML}}\\right] &\rightarrow \theta\\\\\\
+    \mathrm{Var}\\left[\hat\theta_{\text{ML}}\\right]  &\rightarrow  \mathcal{I}^{-1}(\theta)
+\end{align}
+Moreover, $\hat\theta_{\text{ML}}$ is asymptotically normal. Combining these properties, we have for $N\rightarrow\infty$ that
 \begin{equation}
-\frac{\partial\mathcal{L}(\mathbf{x};\theta)}{\partial\theta}\Bigg|_\hat\theta=\frac{1}{\sigma^2}\sum_{n=1}^N\frac{\partial s[n;\theta]}{\partial\theta}(x[n]-s[n;\theta])\Bigg|_\hat\theta=0.
+  \hat\theta_{\text{ML}}\sim \mathcal{N}\\left(\theta,\mathcal{I}^{-1}(\theta)\\right),
+\end{equation}
+i.e., the MLE is asymptotically consistent and the maximum likelihood estimate is normal distributed.
+
+For some specific problems, we are interest in finding a transformed parameter $\psi(\theta)$, i.e., a parameter which depends on $\theta$. If $\psi$ is a one-to-one mapping, then the maximum likelihood estimate of $\psi$ is
+\begin{equation}
+	\hat\psi_{\text{ML}} = \psi\\left(\hat\theta_{\text{ML}}\\right)
+\end{equation}
+which is known as the invariance property of the maximum likelihood estimator.
+
+
+<!-- ---
+
+<b>Example</b>
+
+Suppose we observe $N$ samples from a signal given as
+\begin{equation}
+x[n] = A + w[n],
+\end{equation}
+where $w[n]$ is iid white Gaussian noise with zero mean and variance $A$, i.e.,
+\begin{equation}
+w[n] \sim \mathcal{N}(0,A).
+\end{equation}
+Compared to the problems studied in the CRLB module, here the unknown parameter $A$ is also reflected in the variance of the signal. Since the noise is additive, the likelihood function is given as
+\begin{equation}
+p(\mathbf{x};A) = \frac{1}{(2\pi A)^{\frac{N}{2}}} \exp\\left(-\frac{1}{2A}\sum_{n=0}^{N-1}(x[n]-A)^2\\right)
+\end{equation}
+The log-likelihood function is
+\begin{equation}
+\ln p(\mathbf{x};A)=-\frac{N}{2}\ln(2\pi A) - \frac{1}{2\pi A} \sum_{n=0}^{N-1}(x[n]-A)^2,
+\end{equation}
+and the partial derivative is
+\begin{equation}
+\frac{\partial}{\partial A} \ln p(\mathbf{x};A) = -\frac{N}{2A} + \frac{1}{A}\sum_{n=0}^{N-1}(x[n]-A) +  \frac{1}{2A^2}\sum_{n=0}^{N-1}(x[n]-A)^2.
+\label{eq:log_ll_deriv}
+\end{equation}
+To evaluate the Fisher information and the CRLB, we evaluate the second derivative which yields
+
+\begin{multline}
+\frac{\partial^2}{\partial A^2} \ln p(\mathbf{x};A) = \frac{N}{2A^2} - \frac{1}{A^2}\sum_{n=0}^{N-1}(x[n]-A)-\frac{N}{A} \\\\\\ -  \frac{1}{A^3}\sum_{n=0}^{N-1}(x[n]-A)^2 -  \frac{1}{A^2}\sum_{n=0}^{N-1}(x[n]-A).\qquad\qquad
+\end{multline}
+
+Taking the negative expectation with respect to the observations, we get
+\begin{align}
+-\mathbb{E}\\left[\frac{\partial^2}{\partial A^2}\ln p(\mathbf{x};A)\\right] & = -\frac{N}{2A^2} + \frac{1}{A^2}\sum_{n=0}^{N-1}(A-A)+\frac{N}{A}\nonumber \\\\\\ &\quad + \frac{1}{A^3}\sum_{n=0}^{N-1}(A+A^2-2A^2+A^2) +  \frac{1}{A^2}\sum_{n=0}^{N-1}(A-A)\\\\\\
+&= -\frac{N}{2A^2} +\frac{N}{A} +\frac{N}{A^2} \\\\\\
+&=  \frac{N}{2A^2} +\frac{N}{A}\\\\
+&=  \frac{N\\left(A+\frac{1}{2}\\right)}{A^2} = \mathcal{I}(A)
+\end{align}
+
+If an efficient estimator exists, we should be apple to express the derivative of the log-likelihood function \eqref{eq:log_ll_deriv} as
+\begin{equation}
+ \frac{\partial}{\partial A}\ln p(\mathbf{x};A)=\mathcal{I}(A)(g(\mathbf{x})-A),
+\end{equation}
+which is in this particular case not possible. However, we can still determine the maximum likelihood estimator by equating \eqref{eq:log_ll_deriv} to zero and solve for $A$ which yields
+\begin{align}
+ -\frac{N}{2A} + \frac{1}{A}\sum_{n=0}^{N-1}(x[n]-A) +  \frac{1}{2A^2}\sum_{n=0}^{N-1}(x[n]-A)^2 &= 0\\\\\\
+  -\frac{N}{2A} - N + \frac{1}{2A^2} \sum_{n=0}^{N-1}x^2[n] +\frac{N}{2}&=0\\\\\\
+  A^2 + NA - \frac{1}{N}\sum_{n=0}^{N-1}x^2[n] &=0
+\end{align}
+
+\begin{equation}
+  \hat{A}\_{\text{ML}}=-\frac{1}{2}  \pm \sqrt{\frac{1}{N}\sum_{n=0}^{N-1}x^2[n]+\frac{1}{4}}
 \end{equation}
 
-### MLE for a Vector Parameter
-
-The derivation of MLE for normal distribution assumes a scalar parameter $\theta$. In this section we generalize the MLE to a vector parameter $\Theta=[\theta_1~ \theta_2~ ...~ \theta_K]^T$, which is a column vector. In other words, the signal model is controlled by $K$ parameters, which are treated as a parameter vector. Without making any assumptions over the form of the signal model $\mathbf{s}[\Theta]$, the PDF for the data is actually the same as that for the scalar parameter. However, the derivative with respect to the parameter vector $\Theta$ yields $K$ different equations that have to be solved together to find the MLE.
-
-If the data is generated by a linear model such that $\mathbf{x}=\mathbf{H}\Theta+\mathbf{w}$, we can capitalize on the matrix algebraic methods to find the MLE. In this setting, the matrix $\mathbf{H}$ is called **the observation matrix**. The log-likelihood function is written as a vector multiplication according to
+Unfortunately, the estimator is biased since
 \begin{equation}
-\sum_{n=1}^N\frac{(x[n]-s[n;\theta])^2}{2\sigma^2}=\frac{1}{2\sigma^2}[\mathbf{x}-\mathbf{s}(\Theta)]^T[\mathbf{x}-\mathbf{s}(\Theta)].
+\mathbb{E}\\left[-\frac{1}{2}  + \sqrt{\frac{1}{N}\sum_{n=0}^{N-1}x^2[n]+\frac{1}{4}}\\right] < -\frac{1}{2}  + \sqrt{\frac{1}{N}\sum_{n=0}^{N-1}\mathbb{E}\\left[x^2[n]\\right]+\frac{1}{4}} = A
 \end{equation}
-The log-likelihood function is minimized by minimizing this vector multiplication, which is achieved by setting the derivative with respect to the parameter vector $\Theta$ to zero. The derivative in matrix algebra yields
+which follows from the Jensen's inequality. However, applying the law of large number, it follows that for large $N$
 \begin{equation}
-\frac{\partial\mathcal{L}(\mathbf{x};\Theta)}{\partial\Theta}=-2\mathbf{H}^T\mathbf{x}+2\mathbf{H}^T\mathbf{H}\Theta=0,
+    \frac{1}{N}\sum_{n=0}^{N-1}x^2[n] \rightarrow A +A^2,
 \end{equation}
-which yields the MLE for $\Theta$ as
+and thus,
 \begin{equation}
-\hat\Theta=(\mathbf{H}^T\mathbf{H})^{-1}\mathbf{H}^T\mathbf{x}.
+  \hat{A}\_{\text{ML}} \rightarrow A
 \end{equation}
-This result is significant, because <b>the MLE estimator for linear data model with AWGN and noise variance $\sigma^2$ turns out to be identical to the least squares (LS) estimator</b>. The missing piece in the LSE is the ability to assess the performance of the estimator. For MLE, we have not yet seen the analysis of the estimation performance. However, we now have the paradigm necessary to make the analysis, which is the stochastic nature of the data $\mathbf{x}$ arising from the noise and its connection to the stochastic nature of our estimate $\hat\theta$. 
 
-## Conclusion
 
-The MLE is a very useful estimation method that capitalizes on the **likelihood** concept. This module focuses on the likelihood and log-likelihood functions and demonstrates how the MLE is obtained once the likelihood function is available. The properties of MLE will be appreciated fully once we cover the module on <a href="../estimation_CRLB">Cramer-Rao lower bound (CRLB)</a>, which introduces the tools to assess the performance of estimators and determines their theoretical performance bounds based on the likelihood concept.
+--- -->
+
+
+## Maximum Likelihood Estimator for Vector Parameter
+The concept of the MLE can also in estimating multiple parameters. If the maximum is interior and if the partial derivative with respect to all parameters exists, then a necessary condition for the maximum is
+\begin{equation}
+  \frac{\partial}{\partial\boldsymbol\theta} l(\mathbf{x};\boldsymbol\theta) = \mathbf{0}.
+\end{equation}
+Thus, the maximum can be found by equating the gradient of the log-likelihood function with zero.
+
+### Properties of the Maximum Likelihood Estimator for Vector Parameter
+The MLE for vector parameter possesses the same asymptotical properties as the MLE for scalar parameter. We summarize the properties as follows: For $N\rightarrow \infty$, the maximum likelihood estimate is
+\begin{equation}
+\hat{\boldsymbol\theta}_{\text{ML}} \sim \mathcal{N}\\left(\boldsymbol\theta,\mathbf{I}^{-1}(\boldsymbol\theta)\\right),
+\end{equation}
+where $\mathbf{I}(\boldsymbol\theta)$ is the Fisher information matrix evaluated at the true value of the unknown parameter.
+
+
+---
+
+<b>Example </b>
+
+Consider the example of estimating the DC level and the noise variance presented in the module on the CRLB. There we already evaluated the expressions we need to evaluate the gradient given as
+\begin{align}
+\frac{\partial}{\partial A} l(\mathbf{x};\boldsymbol\theta) &= \frac{1}{\sigma^2}\sum_{n=0}^{N-1}(x[n]-A)\\\\\\
+\frac{\partial}{\partial \sigma^2} l(\mathbf{x};\boldsymbol\theta) &= -\frac{N}{2\sigma^2}+\frac{1}{2\sigma^4}\sum_{n=0}^{N-1}(x[n]-A)^2 \label{eq:variance} \\\\\\
+\end{align}
+
+We already obtained the maximum likelihood estimate for the DC level which is the sample mean
+\begin{equation}
+\hat{A} = \bar{x} = \frac{1}{N}\sum_{n=0}^{N-1}.
+\label{eq:samplemean}
+\end{equation}
+Equating \eqref{eq:variance} to zero and solving for $\sigma^2$ using $\bar{x}$ yields
+\begin{equation}
+  \frac{1}{N}\sum_{n=0}^{N-1}(x[n]-\bar{x})^2
+\end{equation}
+
+The sample mean $\bar{x}$ is a scaled sum of iid Gaussian random variables, and thus, Gaussian again with mean $A$ and variance $\sigma^2/N$, i.e.,
+\begin{equation}
+  \bar{x} \sim \mathcal{N}\\left(A,\frac{\sigma^2}{N}\\right)
+\end{equation}
+
+On the other hand, by the central limit theorem, it can be shown that
+\begin{equation}
+    \hat{\sigma^2} \sim \mathcal{N}\left(\frac{N-1}{N}\sigma^2, \frac{2(N-1)}{N^2}\sigma^4\right),
+\end{equation}
+which, for large $N$, can be approximated by
+\begin{equation}
+    \hat{\sigma^2} \sim \mathcal{N}\left(\sigma^2, \frac{2}{N}\sigma^4\right).
+\end{equation}
+Thus, we have that our estimates are asymptotically unbiased, and their variance approaches the CRLB.
+
+---
