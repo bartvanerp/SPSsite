@@ -20,7 +20,7 @@ weight = 250
 
 +++
 ## Introduction
-Bayesian estimator takes its name from the Bayes'Theorem, which connects the conditional probabilities involving two events:
+Bayesian estimator takes its name from the Bayes' Theorem, which connects the conditional probabilities involving two events:
 \begin{equation}
 P[B|A]=\frac{P[A|B]P[B]}{P[A]}.
 \end{equation}
@@ -29,7 +29,7 @@ The origin of the Bayes' Theorem is the question: "How is the belief updated aft
 The answer to this question is not only the Bayes' Theorem, but also the Bayesian approach to probability. In this module, two estimation methods will be covered: Minimum mean squared error (MMSE) and maximum aposteriori (MAP). Both methods are described in detail in the following sections. Before that, the fundamental difference of the Bayesian estimators from the other estimators covered in this part of the course is explained below.
 
 <div class="video-container">
-<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/AWVbQKiKAk8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/_QH_MbVYqck" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
 
 
