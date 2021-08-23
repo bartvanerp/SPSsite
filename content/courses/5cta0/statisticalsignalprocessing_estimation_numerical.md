@@ -23,7 +23,7 @@ weight = 260
 For each estimator we investigate in this course, we introduce the formal description and demonstrate the derivation of a closed form estimator when the signal model and noise distribution is suitable. However, the closed form solution may not be available in many situations. Moreover, the data might be following a time dependent distribution, which precludes using a single signal model for a data batch. In this module, we will see several solution methods to cover such situations. It can be said that a significant portion of the signal processing research focuses on devising solutions to problems that deviate from the standard methods described in this course. Thus, this module is far from a comprehensive investigation of all such methods. The goal of this module is to give insight on the practical side of the estimation problems.
 
 <div class="video-container">
-<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/e3MSavcKkiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/kf0seqVj_5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
 
 
@@ -31,7 +31,7 @@ For each estimator we investigate in this course, we introduce the formal descri
 
 In <a href="../estimation_leastsquares">the least squares estimation (LSE)</a> module, we consider the grid search to find the minimum of the squared error term. The tricky part of the grid search is the inability to determine the exact parameter value that corresponds to the minimum. Increasing the density of the grid points reduces the error in the parameter estimate asymptotically. Numerical methods that search for the extremum are utilized to obtain estimates with smaller error. The Gauss-Newton method is a numerical method that follows the gradient to reach the extremum.
 
-The Gauss-Newton method is based on approximating a function by the first two terms of its Taylor series around a particular point. In other words, at a particular parameter value of interest, we replace the non-linear function by a line that has the same slope (i.e. the value for the first derivative) as the original function. 
+The Gauss-Newton method is based on approximating a function by the first two terms of its Taylor series around a particular point. In other words, at a particular parameter value of interest, we replace the non-linear function by a line that has the same slope (i.e. the value for the first derivative) as the original function.
 
 We demonstrate the Gauss-Newton method for the LSE by starting with the approximation of the non-linear signal model:
 \begin{equation}
@@ -54,7 +54,7 @@ The approximation by Taylor series allows us to write the data as
 We can write the squared error term according to the linear data model given above, which allows deriving a closed form solution. Consider the squared error term:
 \begin{equation}
 J(\Theta) = \big(\mathbf{x}-\mathbf{s}(\Theta_0)+\mathbf{H}(\Theta_0)\Theta_0-\mathbf{H}(\Theta_0)\Theta\big)^T\big(\mathbf{x}-\mathbf{s}(\Theta_0)+\mathbf{H}(\Theta_0)\Theta_0-\mathbf{H}(\Theta_0)\Theta\big)
-\end{equation} 
+\end{equation}
 To minimize this term, we take the partial derivative with respect to the parameter vector $\Theta$, which follows the derivative operation in linear algebraic form that is described in <a href="../estimation_leastsquares/#least-squares-estimator-for-vector-parameters">the least squares estimation (LSE)</a> module:
 \begin{equation}
 \frac{\partial J(\Theta)}{\partial\Theta}\Bigg|_{\Theta=\hat\Theta}=-2\mathbf{H}(\Theta_0)^T(\mathbf{x}-\mathbf{s}(\Theta_0)+\mathbf{H}(\Theta_0)\Theta_0)+2\mathbf{H}(\Theta_0)^T\mathbf{H}(\Theta_0)\hat\Theta=\mathbf{0}
@@ -119,7 +119,7 @@ where $\mathbf{C}$ is the noise covariance matrix. In this case, the inverse of 
 Note that the LSE is actually the BLUE, so we can use the Gauss-Markov theorem to calculate the covariance for our estimate:
 \begin{equation}
 \mathbf{C}_{\hat\Theta}=(\mathbf{H}^T\mathbf{C}^{-1}\mathbf{H})^{-1}.
-\end{equation} 
+\end{equation}
 
 The important condition to compute both the estimate $\hat\Theta$ and its covariance is the noise being uncorrelated, which correcponds to a diagonal noise covariance matrix. Under this condition, the sequential LSE/BLUE is
 \begin{equation}
@@ -136,8 +136,8 @@ Finally, for BLUE the covariance is updated as
 \mathbf{C}_N=(\mathbf{I}-\mathbf{K}_N \mathbf{h}^T[N])\mathbf{C}_{N-1}
 \end{eqnarray*}
 
-The concepts of innovation, gain and sequential update for the estimate form the core of other recursive filtering techniques such as the Kalman filter. The gain term is actually quite intuitive: The weight of the innovation depends on the relation between the sample variance and the estimator variance. If the sample variance is higher than the estimator variance, then the denominator of the gain term is dominated by the noise variance and the gain is lower. For lower noise variance, the innovation term is considered more reliable and the gain is higher. 
+The concepts of innovation, gain and sequential update for the estimate form the core of other recursive filtering techniques such as the Kalman filter. The gain term is actually quite intuitive: The weight of the innovation depends on the relation between the sample variance and the estimator variance. If the sample variance is higher than the estimator variance, then the denominator of the gain term is dominated by the noise variance and the gain is lower. For lower noise variance, the innovation term is considered more reliable and the gain is higher.
 
 ## Conclusion
 
-When an estimation problem has no closed form, numerical solution methods are necessary to solve the estimator. There are many different iterative solution methods for various estimators and signal models. In this module, we saw two numerical solution methods that solve minimization/maximization problems by approximating the gradient of the functions. We also explored a sequential solution method, which updates the estimation as new data is obtained. 
+When an estimation problem has no closed form, numerical solution methods are necessary to solve the estimator. There are many different iterative solution methods for various estimators and signal models. In this module, we saw two numerical solution methods that solve minimization/maximization problems by approximating the gradient of the functions. We also explored a sequential solution method, which updates the estimation as new data is obtained.
