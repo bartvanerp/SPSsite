@@ -17,6 +17,8 @@ type = "docs"       # Do not modify.
 +++
 ## Introduction
 
+An introduction on probability is given in the following video, which discusses fundamental concepts of probability theory and gives  examples on probability axioms, conditional probability, the law of total probability and Bayes' theorem.
+
 ### Screencast video [⯈]
 
 <div class="video-container">

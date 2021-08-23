@@ -63,7 +63,7 @@ The **input-output correlation** can also be calculated without knowing the exac
 The **output correlation** can be calculated by multiplying with $y^\ast[n-l]$ and taking the expectation.
 \begin{equation}
 \begin{split}
-    r_{yy}[l] &= E\\{y[n]y^\ast[n-l]\\} = \sum_{k=-\infty}^{\infty} h[k]E\\{x[n-l] y^\ast[n-l]\\}\newline
+    r_{yy}[l] &= E\\{y[n]y^\ast[n-l]\\} = \sum_{k=-\infty}^{\infty} h[k]E\\{x[n-k] y^\ast[n-l]\\}\newline
     r_{yy}[l] &= \sum_{k=-\infty}^{\infty} h[k] r_{xy}[l-k] = h[l]\star r_{xy}[l].
 \end{split}
 \end{equation}
@@ -204,7 +204,7 @@ where
 \begin{equation}
 \begin{split}
     A(e^{j\omega}) = 1 + a_1e^{-j\omega} + ... + a_p e^{-j \omega p},  \newline
-    B(e^{j\omega}) = 1 + b_1e^{-j\omega} + ... + b_q e^{-j \omega p}.
+    B(e^{j\omega}) = 1 + b_1e^{-j\omega} + ... + b_q e^{-j \omega q}.
 \end{split}
 \end{equation}
 
@@ -292,7 +292,7 @@ In the example above, we therefore need to choose $H(z) = 1-\frac{1}{2}z^{-1}$ b
 ### Pencast video [⯈]
 In the following pencast, you may see how to find the spectral factorization of a random signal by the root method.
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/PBrSxJHZ3es" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/S4B46eDWPAY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br></br>

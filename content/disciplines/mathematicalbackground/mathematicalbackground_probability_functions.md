@@ -104,7 +104,11 @@ This function allows us to put a known probability density function $p\_X(x)$ to
 where $c$ is a constant that is required to satisfy the total probability axiom ($\int\_{-\infty}^{\infty} p\_{X1}(x)\mathrm{d}x = 1$).
 
 ### Mixed random variables
-When the probability density function of a random variable consists of a combination of both delta pulses as probability density functions, it can be regarded as a mixed random variable. An example of a random variable is given in the following example.
+When the probability density function of a random variable consists of a combination of both delta pulses and probability density functions, it can be regarded as a mixed random variable. An example of a random variable is given in the following example. The definition is of mixed random variable is
+{{% alert note %}}
+$X$ is a mixed random variable if and only if $p\_{X}(x)$ consists of both impulses and non-zero, finite values.
+{{% /alert %}}
+
 
 #### Example
 Suppose we are monitoring the duration of phone calls. The measured duration $x$ in minutes can be regarded as a continuous random variable $X$, which is distributed as an exponential random variable with rate parameter $\lambda=1$. This can be written as $X\sim \text{Exp}(\lambda=1)$ with probability density function
@@ -294,7 +298,7 @@ From this follows that $C=\frac{1}{2}$.
 [^2]: Growth property of exponentials: $$ \lim_{x\to \infty} x^ae^{-x} = 0 $$
 [^3]: Proof that $\mathrm{Var}[X+Y] = \mathrm{Var}[X] + \mathrm{Var}[Y] + 2 \mathrm{E}[(X-\mu_X)(Y-\mu_Y)]$: \begin{equation}
     \begin{split}
-        \mathrm{Var}[Y] &= \mathrm{E}[(X+Y-(\mu_X+\mu_Y))^2]\newline
+        \mathrm{Var}[X+Y] &= \mathrm{E}[(X+Y-(\mu_X+\mu_Y))^2]\newline
         &= \mathrm{E}[((X-\mu_X)+(Y-\mu_Y))^2]\newline
         &= \mathrm{E}[(X-\mu_X)^2+2(X-\mu_X)(Y-\mu_Y)+(Y-\mu_Y))^2]
     \end{split}

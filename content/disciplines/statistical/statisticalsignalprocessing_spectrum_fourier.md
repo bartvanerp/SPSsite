@@ -11,7 +11,7 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 [menu.statistical]                       # name of menu section (main module)
   name = "Recap: Fourier transforms"        # name of this item in that menu
-  weight = 1                          # location in that menu
+  weight = 2                          # location in that menu
   parent = "Spectral estimation"
 +++
 

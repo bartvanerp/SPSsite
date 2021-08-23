@@ -78,7 +78,7 @@ and secondly we use the fact that the signal is real, meaning that $x[n] = x^\as
     \begin{split}
         r_{ix}[l]
         &= \mathrm{E}\left\\{i[n]x^\ast[n-l]\right\\}, \newline
-        &= \mathrm{E}\left\\{i[n]^\ast\left(i[n-l] - a_1 x^\ast[n-1-l]  - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
+        &= \mathrm{E}\left\\{i[n]^\ast\left(i^\ast[n-l] - a_1 x^\ast[n-1-l]  - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
         &= \mathrm{E}\left\\{i[n]i^\ast[n-l]\right\\} + \mathrm{E}\left\\{i[n]\left(- a_1 x^\ast[n-1-l] - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
         &= \sigma_i^2\delta[l] -a_1\mathrm{E}\left\\{i[n] x^\ast[n-1-l]\right\\} - \ldots - a_p\mathrm{E}\left\\{i[n]x^\ast[n-p-l]\right\\}, \newline
         &= \sigma_i^2\delta[l]
@@ -226,7 +226,7 @@ The name moving average can be somewhat misleading. In fact, to actually perform
 
 The difference equation of a $q^\text{th}$-order MA filter is given by
 \begin{equation}
-    x[n] = i[n] + b_1 i[n-1] + b_2 i[n-2] - \ldots - b_q i[n-q].
+    x[n] = i[n] + b_1 i[n-1] + b_2 i[n-2] + \ldots + b_q i[n-q].
 \end{equation}
 where $i[n]$ is the input white noise and $b_i$ are the filter coefficients. The filter order determines how many noise samples are combined to form a new sample.
 
