@@ -24,12 +24,12 @@ Many different estimators can be formulated, as shown in the introduction. We al
 
 
 <div class="video-container">
-<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/g1HX0nNL9E8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/zCr_1j0VeAg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
 
 
-## The Cramer-Rao Lower Bound - Single Parameter
-Given an unbiased estimator $g(\mathbf{x})$, the CRLB states that the variance of any unbiased estimator is lower bounded by
+## CRLB for Single Parameter
+The CRLB states that the variance of any unbiased estimator $g(\mathbf{x})$ is lower bounded by
 \begin{equation}
   \mathrm{Var}[g(\mathbf{x})] \geq \\left(\mathbb{E}\\left[\\left(\frac{\partial \ln(p(\mathbf{x};\theta))}{\partial \\theta}\\right)^2\\right]\\right)^{-1}
   \label{eq:CR_1}
@@ -60,7 +60,7 @@ is the so-called Fisher information and tells how much information random variab
 
 Since we assume that our estimator is unbiased, we have that
 \begin{equation}
-  \mathbb{E}\left[g(\mathbf{x}-\theta)\right] = \int g(\mathbf{x}-\theta) p(\mathbf{x};\theta)d\mathbf{x} = 0.
+  \mathbb{E}\left[g(\mathbf{x})-\theta\right] = \int (g(\mathbf{x})-\theta) p(\mathbf{x};\theta)d\mathbf{x} = 0.
 \end{equation}
 Differentiating both sides with respect to $\theta$ and using the regularity conditions, we obtain
 \begin{equation}
@@ -85,7 +85,7 @@ We can rewrite the left-hand side of \eqref{eq:CRLB_2} as
 \begin{equation}
     \int \left[(g(\mathbf{x})-\theta)\sqrt{p(\mathbf{x};\theta)}\right]\left[\frac{\partial}{\partial\theta} \ln p(\mathbf{x};\theta)\sqrt{p(\mathbf{x};\theta)}\right]d\mathbf{x},
 \end{equation}
-which is an inner product between the two expression in the square brackets. The inner product is lower bounded by the Cauchy-Schwarz inequality given as
+which is an inner product between the two expression in the square brackets. The inner product is upper bounded by the Cauchy-Schwarz inequality given as
 \begin{multline}
     \left(\int \left[(g(\mathbf{x})-\theta)\sqrt{p(\mathbf{x};\theta)}\right]\left[\frac{\partial}{\partial\theta} \ln p(\mathbf{x};\theta)\sqrt{p(\mathbf{x};\theta)}\right]d\mathbf{x}\right)^2\\\\\\ \leq \int (g(\mathbf{x})-\theta)^2p(\mathbf{x};\theta)d\mathbf{x}  \int \left(\frac{\partial}{\partial\theta} \ln p(\mathbf{x};\theta)\right)^2p(\mathbf{x};\theta)d\mathbf{x}. \qquad
     \label{eq:CSineq}
@@ -106,7 +106,7 @@ To obtain the equivalent expression \eqref{eq:CR_Fisher}, we integrate \eqref{eq
 \begin{equation}
   \int p(\mathbf{x};\theta)\frac{\partial}{\partial\theta}\ln p(\mathbf{x};\theta)d\mathbf{x} = \int \frac{\partial}{\partial\theta} p(\mathbf{x};\theta)d\mathbf{x}=\frac{d}{d\theta} \int p(\mathbf{x};\theta)d\mathbf{x} = 0.
 \end{equation}
-Differentiting again with respect to $\theta$, we get
+Differentiating again with respect to $\theta$, we get
 \begin{equation}
   \int \frac{\partial}{\partial\theta}p(\mathbf{x};\theta)\frac{\partial}{\partial\theta}\ln p(\mathbf{x};\theta)d\mathbf{x}+\int p(\mathbf{x};\theta)\frac{\partial^2}{\partial\theta^2}\ln p(\mathbf{x};\theta)d\mathbf{x} = 0,
 \end{equation}
@@ -138,9 +138,9 @@ we can directly determine the expression to find the efficient estimator.
     \end{equation}
     where $a(\theta)$ is an arbitrary function solely depending on $\theta$ and not on $\mathbf{x}$. To determine the function $a(\theta)$, we note that
     \begin{equation}
-        \frac{\partial^2}{\partial\theta^2} \ln p(\mathbf{x};\theta) = \frac{\partial}{\partial\theta}\left(a(\theta)\right)(g(\mathbf{x})-\theta) - a(\theta),
+        \frac{\partial^2}{\partial\theta^2} \ln p(\mathbf{x};\theta) = \frac{\partial}{\partial\theta}\left(a(\theta)\right)(g(\mathbf{x})-\theta) - a(\theta).
     \end{equation}
-    and thus,
+    Taking the expectation and considering the unbiasedness assumption, we obtain
     \begin{equation}
       -\mathbb{E}\left[\frac{\partial^2}{\partial\theta^2}\ln p(\mathbf{x};\theta)\right] = a(\theta),
     \end{equation}
@@ -153,13 +153,13 @@ we can directly determine the expression to find the efficient estimator.
 ---
 <b>Example:</b>
 
-Let us return to the example of estimating the DC voltage embedded in noise presented in the introduction module. We want to find the lowest attainable variance. Therefore, we start with the probability density function of our observations which is
+Let us return to the example of estimating the DC voltage embedded in noise presented in the introduction module. We want to find the lowest attainable variance. Therefore, we start with the PDF of our observations given as
 \begin{equation}
  p(\mathbf{x};A) = \frac{1}{(2\pi\sigma^2)^{N/2}}\exp\\left[-\frac{1}{2\sigma^2}\sum_{n=0}^{N-1}(x[n]-A)^2\\right].
 \end{equation}
 Taking the logarithm yields
 \begin{equation}
-  \ln p(\mathbf{x};A) = -\frac{N}{2}\ln(2\pi\sigma^2) -\frac{1}{2\sigma^2}\sum_{n=0}^{N-1}(x[n]-A)^2
+  \ln p(\mathbf{x};A) = -\frac{N}{2}\ln(2\pi\sigma^2) -\frac{1}{2\sigma^2}\sum_{n=0}^{N-1}(x[n]-A)^2,
 \end{equation}
 and after differentiating with respect to $\theta$, we obtain
 \begin{equation}
@@ -189,7 +189,7 @@ Note that this is the variance of the sample mean estimator presented in the int
 \begin{equation}
 \frac{\partial}{\partial A} \ln p(\mathbf{x};A) = \frac{1}{\sigma^2} \\left(\sum_{n=0}^{N-1}x[n]-NA \\right),
 \end{equation}
-which after factoring the out the Fisher information becomes
+or, equivalently,
 \begin{equation}
 \frac{\partial}{\partial A} \ln p(\mathbf{x};A) =\underbrace{\frac{N}{\sigma^2}}\_{\mathcal{I}(\theta)}\\left(\underbrace{\frac{1}{N}\sum_{n=0}^{N-1}x[n]}\_{g(\mathbf{x})}-\underbrace{A}\_{\theta} \\right).
 \label{eq:log_ll_eff}
@@ -203,7 +203,7 @@ as the efficient estimator for estimating the DC level embedded in white Gaussia
 ---
 
 ### CRLB for IID Observations
-The previous example highlighted another property of the CRLB in the case of independent and identical distributed (IID) observations. Thus, for IID observations, we have that the joint probability density function factorizes as
+The previous example highlighted another property of the CRLB in the case of IID observations. For IID observations, we have that the joint PDF factorizes as
 \begin{equation}
   p(\mathbf{x};\theta) = \prod_{n=0}^{N-1} p(x[n];\theta),
 \end{equation}
@@ -222,7 +222,7 @@ For the particular, and in many enigneering problems, interesting case of a sign
 \begin{equation}
     x[n] = s[n;\theta] + w[n] \qquad n = 0,1,\dots,N-1,
 \end{equation}
-and the corresponding probability density function as
+and the corresponding PDF as
 \begin{equation}
  p(\mathbf{x};\theta) = \frac{1}{(2\pi\sigma^2)^{N/2}}\exp\\left[-\frac{1}{2\sigma^2}\sum_{n=0}^{N-1}(x[n]-s[n;\theta])^2\\right].
 \end{equation}
@@ -242,7 +242,7 @@ and the CRLB can be expressed as
 
 
 ## CRLB for Vector Parameter
-Let $\boldsymbol\theta = [\theta_0,\theta_1,\dots,\theta_{p-1}]^T$ be the vector holding the unknown parameters and let $\hat{\boldsymbol\theta}=g(\mathbf{x})$ be the estimate of the parameter vector. Then, for any unbiased estimator we have that
+Let $\boldsymbol\theta = [\theta_0,\theta_1,\dots,\theta_{P-1}]^T$ be the vector holding the unknown parameters and let $\hat{\boldsymbol\theta}=g(\mathbf{x})$ be the estimate of the parameter vector. Then, for any unbiased estimator we have that
 \begin{equation}
 \mathbf{C}_{\hat{\boldsymbol\theta}} \geq \mathbf{I}^{-1}(\boldsymbol\theta),
 \label{eq:CRLB_vector}
@@ -264,6 +264,7 @@ Similar to the scalar case, equality holds if and only if
 
 ---
 <b>Example:</b>
+
 Suppose we want to estimate in addition to the DC voltage level of the previous example also the variance $\sigma^2$ of the noise. The required expressions are:
 \begin{align}
 \frac{\partial}{\partial A} \ln p(\mathbf{x};\boldsymbol\theta) &= \frac{1}{\sigma^2}\sum_{n=0}^{N-1}(x[n]-A)\\\\\\
@@ -295,3 +296,6 @@ and
 \end{equation}
 
 ---
+
+## Summary and Conclusion
+In this module, we derived the CRLB for unbiased estimator. The CRLB provides a lower bound on the variance for any unbiased estimator. The derivation of the CRLB is based on the Cauchy-Schwarz inequality which provides a constraint for equality. This equality constraint can be used to find an efficient estimator, if it exists. If this constraint is not fulfilled, we have to find other tools ways to find a MVUE. A popular estimator which is closely related to the CRLB is the maximu likelihood estimator which will be subject of the next module.
