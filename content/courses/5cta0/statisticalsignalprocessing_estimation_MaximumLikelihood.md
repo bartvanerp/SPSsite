@@ -32,7 +32,7 @@ Finding the maximum can be achieved for simple problems analytically. However, f
 ## Maximum Likelihood Estimation
 
 Before defining the MLE, we define the likelihood function. The likelihood function is the PDF $p(\mathbf{x},\theta)$ for a given observation $\mathbf{x}$. Since we fix the observation $\mathbf{x}$, the PDF $p(\mathbf{x},\theta)$ depends only on the unknown parameter. The value of \theta that maximizes the likelihood function is the maximum likelihood estimate $\hat{\theta}\_{\text{ML}}$, i.e., \begin{equation}
-	\hat\theta_{\text{ML}} = \underset{\theta}{\operatorname{argmax}} p(\mathbf{x};\theta).
+	\hat\theta_{\text{ML}} = \underset{\theta}{\operatorname{arg max}} p(\mathbf{x};\theta).
 \end{equation}
 In other words, the maximum likelihood estimate is the value of theta that most likely caused the observation $\mathbf{x}$. Note that depending on the estimation problem, no maximum or multiple maxima exist.
 
