@@ -186,7 +186,7 @@ where
 \mathbf{c}\_{k_p} = \begin{bmatrix}
  \cos\\left(2\pi\frac{k_p}{N}0\\right) &
 \cos\\left(2\pi\frac{k_p}{N}1\\right) &
-\vdots &
+\dots &
 \cos\\left(2\pi\frac{k_p}{N}(N-1)\\right)
 \end{bmatrix}^{T}
 \end{equation}
@@ -195,7 +195,7 @@ and
 \mathbf{s}\_{k_p} = \begin{bmatrix}
  \sin\\left(2\pi\frac{k_p}{N}0\\right) &
 \sin\\left(2\pi\frac{k_p}{N}1\\right) &
-\vdots &
+\dots &
 \sin\\left(2\pi\frac{k_p}{N}(N-1)\\right)
 \end{bmatrix}^{T},
 \end{equation}
