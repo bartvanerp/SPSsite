@@ -26,93 +26,115 @@ For each estimator we investigate in this course, we introduce the formal descri
 <iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/kf0seqVj_5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
 
-
-## The Gauss-Newton Method
-
-In <a href="../estimation_leastsquares">the least-squares estimation module</a>, we consider the grid search to find the minimum of the squared error term. The tricky part of the grid search is the inability to determine the exact parameter value that corresponds to the minimum. Increasing the density of the grid points reduces the error in the parameter estimate asymptotically. Numerical methods that search for the extremum are utilized to obtain estimates with smaller error. The Gauss-Newton method is a numerical method that follows the gradient to reach the extremum.
-
-The Gauss-Newton method is based on approximating a function by the first two terms of its Taylor series around a particular point. In other words, at a particular parameter value of interest, we replace the non-linear function by a line that has the same slope (i.e. the value for the first derivative) as the original function.
-
-We demonstrate the Gauss-Newton method for the LSE by starting with the approximation of the non-linear signal model:
-\begin{equation}
-s[n,\theta]\approx s[n,\theta_0]+\frac{\partial s[n,\theta]}{\partial \theta}\Bigg|_{\theta=\theta_0}(\theta-\theta_0),
-\end{equation}
-where $s[n,\theta]$ is the signal model and $\theta_0$ is the parameter value for which we are calculating the approximation. This approximation for the scalar parameter $\theta$ is extended to vector parameter $\boldsymbol\theta$:
-\begin{equation}
-\mathbf{s}(\boldsymbol\theta)\approx \mathbf{s}(\boldsymbol\theta_0)+\mathbf{H}(\boldsymbol\theta_0)(\boldsymbol\theta-\boldsymbol\theta_0),
-\end{equation}
-where the observation matrix $\mathbf{H}(\boldsymbol\theta_0)$ consists of columns $\mathbf{h}_k$, i.e., $\mathbf{H}(\boldsymbol\theta_0)=[\mathbf{h}_1~ \mathbf{h}_2~...~\mathbf{h}_K]$,
-\begin{equation}
-\mathbf{h}_k=\frac{\partial \mathbf{s}(\boldsymbol\theta)}{\partial\theta_k}.
-\end{equation}
-Thus, the partial derivative of the signal model $\mathbf{s}(\boldsymbol\theta)$ with respect to an element $\theta_k$ of the parameter vector $\boldsymbol\theta$ is evaluated at $\boldsymbol\theta=\boldsymbol\theta_0$ and the values constitute the $k^{th}$ column of the observation matrix.
-
-The approximation by Taylor series allows us to write the data as
-\begin{equation}
-\mathbf{x}\approx\mathbf{s}(\boldsymbol\theta_0)-\mathbf{H}(\boldsymbol\theta_0)\boldsymbol\theta_0+\mathbf{H}(\boldsymbol\theta_0)\boldsymbol\theta+\mathbf{w}.
-\end{equation}
-We can write the squared error term according to the linear data model given above, which allows deriving a closed form solution. Consider the squared error term:
-\begin{equation}
-J(\boldsymbol\theta) = \big(\mathbf{x}-\mathbf{s}(\boldsymbol\theta_0)+\mathbf{H}(\boldsymbol\theta_0)\boldsymbol\theta_0-\mathbf{H}(\boldsymbol\theta_0)\boldsymbol\theta\big)^T\big(\mathbf{x}-\mathbf{s}(\boldsymbol\theta_0)+\mathbf{H}(\boldsymbol\theta_0)\boldsymbol\theta_0-\mathbf{H}(\boldsymbol\theta_0)\boldsymbol\theta\big)
-\end{equation}
-To minimize this term, we take the partial derivative with respect to the parameter vector $\boldsymbol\theta$, which follows the derivative operation in linear algebraic form that is described in <a href="../estimation_leastsquares/#least-squares-estimator-for-vector-parameters">the least squares estimation (LSE)</a> module:
-\begin{equation}
-\frac{\partial J(\boldsymbol\theta)}{\partial\boldsymbol\theta}\Bigg|_{\boldsymbol\theta=\hat{\boldsymbol\theta}}=-2\mathbf{H}(\boldsymbol\theta_0)^T(\mathbf{x}-\mathbf{s}(\boldsymbol\theta_0)+\mathbf{H}(\boldsymbol\theta_0)\boldsymbol\theta_0)+2\mathbf{H}(\boldsymbol\theta_0)^T\mathbf{H}(\boldsymbol\theta_0)\hat{\boldsymbol\theta}=\mathbf{0}
-\end{equation}
-The estimate $\hat{\boldsymbol\theta}$ is
-\begin{equation}
-\hat{\boldsymbol\theta}=\boldsymbol\theta_0+\big(\mathbf{H}(\boldsymbol\theta_0)^T \mathbf{H}(\boldsymbol\theta_0)\big)^{-1}\mathbf{H}(\boldsymbol\theta_0)^T\big(\mathbf{x}-\mathbf{s}(\boldsymbol\theta_0)\big)
-\end{equation}
-
-We must note that the estimate $\hat{\boldsymbol\theta}$ depends on our choice of initial value $\boldsymbol\theta_0$. We can cast this approximate estimation into an iterative form, where the $m+1^{st}$ iteration step is:
-\begin{equation}
-\boldsymbol\theta_{m+1}=\boldsymbol\theta_m+\big(\mathbf{H}(\boldsymbol\theta_m)^T \mathbf{H}(\boldsymbol\theta_m)\big)^{-1}\mathbf{H}(\boldsymbol\theta_m)^T\big(\mathbf{x}-\mathbf{s}(\boldsymbol\theta_m)\big)
-\end{equation}
-Starting from an initial value $\boldsymbol\theta_0$, the LSE can be iteratively calculated to converge to a minimum value. Of course, there has to be <i>criteria to stop the iterations</i>, such as limited change in the parameter estimate, i.e., $(\boldsymbol\theta_{m+1}-\boldsymbol\theta_m)^T(\boldsymbol\theta_{m+1}-\boldsymbol\theta_m)<\epsilon$, and reaching a maximum number of iterations. Selection of the initial parameter vector $\boldsymbol\theta_0$ can be based on a grid search over the squared error function to make sure the numerical solution begins close to the global maximum.
-
+## Grid Search
+Closed-form solutions for estimators like the MLE or the LSE only exist for particular cases such as linear signal models. For all other cases, we have to resort to other methods to find the estimate. For the MSE, for example, we can evaluate the likelihood function numerically at equally spaced points for the parameter vector $\boldsymbol\theta$. If we choose the spacing between the points sufficiently small, we can find a value very close to the real solution. This method is referred to as grid search. The application of the gird search, however, is restricted to simple problems. For example, if the range of possible values for the parameter is unbounded, the grid search becomes infeasible.
 
 ## The Newton-Raphson Method
-
-The Newton-Raphson method searches for the zero of a function by measuring the gradient of that function. The idea is to approximate the behavior of the function at a particular point by a tangential line passing through that point. In other words, on a specific parameter value, the function is approximated by a line with the same slope as the function on that specific parameter value. For a generic function $f[n,\theta]$, the parameter value where the line approximating the function intercepts the parameter axis is found by
+The Newton-Raphson method is a method to approximate a function at a given point or to solve an equation. In maximum likelihood estimation, we want to solve the likelihood equation, and thus, we are interested in particular in the latter case application. The idea is to approximate the function's behavior at a particular point by a linear function. The slope of the linear function is determined by the derivative of the function at this point. Thus, the function is approximated as
 \begin{equation}
-f(\theta_0)=(\theta_0-\theta)\frac{\partial f(\theta)}{\partial\theta}\Bigg|\_{\theta=\theta_0}
+f(x)=f(a)+f'(a)(x-a),
+\label{eq:approx}
 \end{equation}
-Solving this equation, we obtain the parameter as
+where $f'(a)$ denotes the derivative of $f(x)$ evaluated at point $a$. In the particular case of solving the equation $f(x)=0$, we obtain
 \begin{equation}
-\theta=\theta_0-f(\theta_0)\Bigg(\frac{\partial f(\theta)}{\partial\theta}\Bigg|_{\theta=\theta_0}\Bigg)^{-1}
+x = a - \frac{f(a)}{f'(a)}
 \end{equation}
 
 While the solution to the equation above is closer to the actual zero of the function, there is still room for improvement. The approximation can be utilized again, this time the first derivative is evaluated on the new estimate. The iterative formulation is
 \begin{equation}
-\theta_{m+1}=\theta_m-f(\theta_m)\Bigg(\frac{\partial f(\theta)}{\partial\theta}\Bigg|_{\theta=\theta_m}\Bigg)^{-1}
+x_{m+1}=x_m-\frac{f(x_m)}{f'(x_m)}
 \end{equation}
+A solution is found if $x_{m+1}=x_m$. Note that, depending on the starting point, the method may converge to a local minimum. Thus, to find a global minimum, the method should be initialized at different values.
 
-Same as the Gauss-Newton method, there has to be a criteria to stop the iterations and selection of the initial parameter value should allow converging to the global extremum.
+### Newton-Raphson Method for Maximum Likelihood Estimation
 
-We consider the Newton-Raphson method for <a href="../estimation_maximumlikelihood">the maximum likelihood estimation (MLE)</a>, where set the first derivative of the likelihood function to zero and solve it for the parameter vector $\boldsymbol\theta$. The Newton-Raphson method is used to numerically calculate the parameter value at which the derivative of the log-likelihood function is zero. Thus, we will be dealing with both the first and the second derivative of the log-likelihood function. The iterative MLE for the parameter vector $\boldsymbol\theta$ is
+We consider the Newton-Raphson method for the MLE, where it is used to numerically calculate the parameter value at which the derivative of the log-likelihood function is zero. Thus, we will be dealing with both the first and the second derivative of the log-likelihood function. The iterative MLE for the parameter vector $\theta$ is
 \begin{equation}
-\boldsymbol\theta_{m+1}=\boldsymbol\theta_m-\frac{\partial \ln p(\mathbf{x};\boldsymbol\theta)}{\partial\boldsymbol\theta}\Bigg|_{\theta=\theta_m}\Bigg(\frac{\partial^2 \ln p(\mathbf{x};\boldsymbol\theta)}{\partial\boldsymbol\theta^2}\Bigg|_{\theta=\theta_m}\Bigg)^{-1}.
+\theta_{m+1}=\theta_m-\\left(\frac{\partial^2 \ln p(\mathbf{x};\theta)}{\partial\theta^2}\Bigg|_{\theta=\theta_m}\\right)^{-1}\frac{\partial \ln p(\mathbf{x};\theta)}{\partial\theta}\Bigg|_{\theta=\theta_m}.
 \end{equation}
 
 ### The Method of Scoring
 
 An extension to the Newton-Raphson method for the MLE is the method of scoring. The idea is to replace the second derivative of the log-likelihood function with its expected value, negative of which is the Fisher information matrix. Thus, the method of scoring yields the iterative estimator
 \begin{equation}
-\boldsymbol\theta_{m+1}=\boldsymbol\theta_m+\mathcal{I}^{-1}(\boldsymbol\theta_m)\frac{\partial \ln p(\mathbf{x};\boldsymbol\theta)}{\partial\boldsymbol\theta}\Bigg|_{\theta=\theta_m}.
+\theta_{m+1}=\theta_m+\mathcal{I}^{-1}(\theta_m)\frac{\partial \ln p(\mathbf{x};\theta)}{\partial\theta}\Bigg|_{\theta=\theta_m}.
 \end{equation}
 The Fisher information does not depend on the data, while the second derivative of the log-likelihood function is data-dependent. It is possible to end up with an ill-conditioned second derivative expression that is almost singular. The iteration can become very unstable and unable to converge. The Fisher information alleviates this problem by eliminating the dependence on the data.
+
+
+### Extension to Vector Parameter
+The Newton-Raphson method can be generalized to vector parameter $\boldsymbol\theta$ which gives following general iteration rule for the MLE:
+\begin{equation}
+  \boldsymbol\theta_{m+1} = \boldsymbol\theta_{m} - \\left(\mathbf{H}^{-1}(\boldsymbol\theta) \frac{\partial}{\partial\boldsymbol\theta}\ln p(\mathbf{x};\boldsymbol\theta)\\right)\bigg|_{\boldsymbol\theta = \boldsymbol\theta_m}
+\end{equation}
+where $\mathbf{H}$ is the Hessian matrix with elements
+\begin{equation}
+\mathbf{H}(\boldsymbol\theta)_{i,j} = \frac{\partial \ln(p(\mathbf{x};\boldsymbol\theta))}{\partial\theta_i\theta_j}.
+\end{equation}
+
+Equivalently, the scoring method becomes
+
+\begin{equation}
+  \boldsymbol\theta_{m+1} = \boldsymbol\theta_{m} - \mathbf{I}^{-1}(\boldsymbol\theta)\frac{\partial}{\partial\boldsymbol\theta}\ln p(\mathbf{x};\boldsymbol\theta)\bigg|_{\boldsymbol\theta = \boldsymbol\theta_m},
+\end{equation}
+where $\mathbf{I}(\boldsymbol\theta)$ is the Fisher information matrix.
+
+
+
+## The Gauss-Newton Method for Least Squares
+The above introduced Newton-Raphson method can also be applied to nonlinear least-squares problems. However, we can derive another method by using the linear approximation of a function. The cost function of the LSE is given as
+\begin{equation}
+J(\theta) = \sum_{n=0}^{N-1}(x[n]-s[n;\theta])^2.
+\end{equation}
+Using the approximation \eqref{eq:approx}, we obtain the following approximation of the cost function
+\begin{align}
+J(\theta) &\approx \sum_{n=0}^{N-1}\\left(x[n]-s[n;\theta_0]+\\left.\frac{\partial s[n;\theta]}{\theta}\\right|_{\theta=\theta_0}(\theta-\theta_0)\\right)^2\\\\\\
+          &= \sum_{n=0}^{N-1}\\left(x[n]-s[n;\theta_0]+\\left.\frac{\partial s[n;\theta]}{\theta}\\right|_{\theta=\theta_0}\theta_0-\\left.\frac{\partial s[n;\theta]}{\theta}\\right|_{\theta=\theta_0}\theta\\right)^2\\\\\\
+          &=\\left(\mathbf{x}-\mathbf{s}(\theta_0)+\mathbf{h}(\theta_0)\theta_0-\mathbf{h}(\theta_0)\theta\\right)^T\\left(\mathbf{x}-\mathbf{s}(\theta_0)+\mathbf{h}(\theta_0)\theta_0-\mathbf{h}(\theta_0)\theta\\right),\label{eq:Gauss-Newton}
+\end{align}
+with
+\begin{equation}
+\mathbf{h}(\theta_0)= \\left.\begin{bmatrix}\frac{\partial s[0;\theta]}{\partial\theta} & \frac{\partial s[1;\theta]}{\partial\theta} &\dots & \frac{\partial s[N-1;\theta]}{\partial\theta} \end{bmatrix}^T\\right|_{\theta=\theta_0}.
+\end{equation}
+Note that the expression $\mathbf{x}-\mathbf{s}(\theta_0)+\mathbf{h}(\theta_0)\theta_0$ is known. To find the minimum, we equate the derivative of \eqref{eq:Gauss-Newton} with zero and solve for $\theta$ which yields
+\begin{equation}
+\hat\theta = \\left(\mathbf{h}^T(\theta_0)\mathbf{h}(\theta_0)\\right)^{-1}\mathbf{h}^T(\theta_0)\\left(\mathbf{x}-\mathbf{s}(\theta_0)+\mathbf{h}(\theta_0)\theta_0\\right).
+\end{equation}
+or, equivalently,
+\begin{equation}
+\hat\theta =\theta_0+ \\left(\mathbf{h}^T(\theta_0)\mathbf{h}(\theta_0)\\right)^{-1}\mathbf{h}^T(\theta_0)\\left(\mathbf{x}-\mathbf{s}(\theta_0)\\right).
+\end{equation}
+This method is the Gauss-Newton method.
+
+
+To obtain a more accurate result, this procedure can be carried out iteratively using following iteration steps
+\begin{equation}
+\theta_{m+1} =\theta_{m}+ \\left(\mathbf{h}^T(\theta_m)\mathbf{h}(\theta_m)\\right)^{-1}\mathbf{h}^T(\theta_m)\\left(\mathbf{x}-\mathbf{s}(\theta_m)\\right).
+\end{equation}
+
+
+The presented method can be generalized for vector parameter. The corresponding iteration rule is
+\begin{equation}
+\boldsymbol\theta_{m+1} =\boldsymbol\theta_{m}+ \\left(\mathbf{H}^T(\boldsymbol\theta_m)\mathbf{H}(\boldsymbol\theta_m)\\right)^{-1}\mathbf{H}^T(\boldsymbol\theta_m)\\left(\mathbf{x}-\mathbf{s}(\boldsymbol\theta_m)\\right),
+\end{equation}
+where $\mathbf{H}(\boldsymbol\theta)$ is the Jacobian matrix with elements
+\begin{equation}
+    \mathbf{H}(\boldsymbol\theta)_{i,j} = \frac{\partial s[i;\boldsymbol\theta]}{\partial \theta_j }.
+\end{equation}
+
+Starting from an initial value $\boldsymbol\theta_0$, the LSE can be iteratively calculated to converge to a minimum value. Of course, there have to be <i>criteria to stop the iterations</i>, such as a limited change in the parameter estimate, i.e., $(\boldsymbol\theta_{m+1}-\boldsymbol\theta_m)^T(\boldsymbol\theta_{m+1}-\boldsymbol\theta_m)<\epsilon$, and reaching a maximum number of iterations. The selection of the initial parameter vector $\boldsymbol\theta_0$ can be based on a grid search over the squared error function to ensure the numerical solution begins close to the global maximum.
 
 
 ## Sequential Least Squares and Best Linear Unbiased Estimators
 
 
-In some applications the data is streaming and parameter estimation needs to be updated in real time. Instead of running the estimator repeatedly with ever-increasing data size, it is useful to have an estimator that allows updating the estimate by using the latest data samples only. It is possible to formulate the LSE and BLUE in this manner. For LSE, we look for a relation between the estimates $\hat{\boldsymbol\theta}\_{N-1}$ and $\hat{\boldsymbol\theta}_{N}$, which represent the estimate with $N$ data points and $N+1$ data points, respectively. In LSE we do not have a noise model, however, if we know that the noise has zero mean with some known covariance, we can formulate a BLUE estimator that updates both the estimate and covariance for the estimate sequentially.
+In some applications, the data is sampled and processed in real-time. Instead of running the estimator repeatedly with ever-increasing data size, it is useful to have an estimator that allows updating the estimate using the latest data samples only. It is possible to formulate the LSE and the BLUE in this manner. For LSE, we look for a relation between the estimates $\hat{\boldsymbol\theta}\_{N-1}$ and $\hat{\boldsymbol\theta}_{N}$, which represent the estimate with $N-1$ data points and $N$ data points, respectively. In least-squares estimation, we do not have a noise model; however, if we know that the noise has zero mean with some known covariance, we can formulate a BLUE estimator that updates both the estimate and covariance for the estimate sequentially.
 
 The starting point is the squared error function:
 \begin{equation}
 J(\boldsymbol\theta)=(\mathbf{x}-\mathbf{H}\boldsymbol\theta)^T\mathbf{C}^{-1}(\mathbf{x}-\mathbf{H}\boldsymbol\theta),
 \end{equation}
-where $\mathbf{C}$ is the noise covariance matrix. In this case, the inverse of the noise covariance matrix is used as the weight matrix in the weighted LSE. This means that when the noise variance is known for each data sample, those samples with higher variance can be assigned less weight to reduce their influence on the estimation. The LSE is found to be
+where $\mathbf{C}$ is the noise covariance matrix. The inverse of the noise covariance matrix is used as the weight matrix in the weighted LSE, i.e., when the noise variance is known for each data sample, those samples with higher variance can be assigned less weight to reduce their influence on the estimation. The LSE is found to be
 \begin{equation}
 \hat{\boldsymbol\theta}=(\mathbf{H}^T\mathbf{C}^{-1}\mathbf{H})^{-1}\mathbf{H}^T\mathbf{C}^{-1}\mathbf{x}.
 \end{equation}
@@ -125,19 +147,15 @@ The important condition to compute both the estimate $\hat{\boldsymbol\theta}$ a
 \begin{equation}
 \hat{\boldsymbol\theta}\_{N}=\hat{\boldsymbol\theta}\_{N-1}+\mathbf{K}\_{N}\big(x[N]-\mathbf{h}^T[N]\hat{\boldsymbol\theta}\_{N-1}\big)
 \end{equation}
-where $\mathbf{h}^T[N]$ is the $N^\text{th}$ row of the observation matrix $\mathbf{H}$ when the corresponding data sample $x[N]$ is acquired. The term $x[N]-\mathbf{h}^T[N]\hat\Theta_{N-1}$ is the innovation, which is the difference between the data sample $x[N]$ and the estimate we have for that data sample, which is $\mathbf{h}^T[N]\hat{\boldsymbol\theta}\_{N-1}$. Based on our estimated parameter $\hat\Theta_{N-1}$ after the $N^\text{th}$ data sample, we come up with an estimate for the $N+1^\text{th}$ sample we acquire. For BLUE, the estimate is updated according to the innovation and a gain term $\mathbf{K}_{N}$, which is calculated as
+where $\mathbf{h}^T[N]$ is the $N^\text{th}$ row of the observation matrix $\mathbf{H}$ when the corresponding data sample $x[N]$ is acquired. The term $x[N]-\mathbf{h}^T[N]\hat{\boldsymbol\theta}\_{N-1}$ is the innovation, which is the difference between the data sample $x[N]$ and the estimate we have for that data sample, which is $\mathbf{h}^T[N]\hat{\boldsymbol\theta}\_{N-1}$. Based on our estimated parameter $\hat{\boldsymbol\theta}\_{N-1}$ after the $N^\text{th}$ data sample, we come up with an estimate for the $N+1^\text{th}$ sample we acquire. For BLUE, the estimate is updated according to the innovation and a gain term $\mathbf{K}\_{N}$, which is calculated as
 \begin{equation}
-\mathbf{K}_{N}=\frac{C_{N-1}\mathbf{h}[N]}{\sigma_{N}^2+\mathbf{h}^T[N]C_{N-1}\mathbf{h}[N]}
+\mathbf{K}\_{N}=\frac{\mathbf{C}\_{\hat{\theta},N-1}\mathbf{h}[N]}{\sigma_{N}^2+\mathbf{h}^T[N]C_{\hat{\theta},N-1}\mathbf{h}[N]}
 \end{equation}
 For LSE, it is possible to lack information on the noise variance altogether. Thus, we need a gain term that does not depend on the noise covariance. It is obtained by replacing the noise covariance matrix $\mathbf{C}$ in the gain expression with the term $(\mathbf{H}^T\mathbf{H})^{-1}$ and replacing the sample variance term $\sigma_N^2$ by 1. The observation matrix $\mathbf{H}$ belongs to the signal model for the $N$ data samples preceding the current data sample $x[N]$.
 
 Finally, for BLUE the covariance is updated as
 \begin{eqnarray*}
-\mathbf{C}_N=(\mathbf{I}-\mathbf{K}_N \mathbf{h}^T[N])\mathbf{C}_{N-1}
+\mathbf{C}\_{\hat{\theta},N}=(\mathbf{I}-\mathbf{K}\_N \mathbf{h}^T[N])\mathbf{C}_{\hat{\theta},N-1}
 \end{eqnarray*}
 
-The concepts of innovation, gain and sequential update for the estimate form the core of other recursive filtering techniques such as the Kalman filter. The gain term is actually quite intuitive: The weight of the innovation depends on the relation between the sample variance and the estimator variance. If the sample variance is higher than the estimator variance, then the denominator of the gain term is dominated by the noise variance and the gain is lower. For lower noise variance, the innovation term is considered more reliable and the gain is higher.
-
-## Conclusion
-
-When an estimation problem has no closed form, numerical solution methods are necessary to solve the estimator. There are many different iterative solution methods for various estimators and signal models. In this module, we saw two numerical solution methods that solve minimization/maximization problems by approximating the gradient of the functions. We also explored a sequential solution method, which updates the estimation as new data is obtained.
+The concepts of innovation, gain, and sequential update for the estimate form the core of other recursive filtering techniques such as the Kalman filter. The gain term is quite intuitive: The weight of the innovation depends on the relation between the sample variance and the estimator variance. If the sample variance is higher than the estimator variance, then the denominator of the gain term is dominated by the noise variance and the gain  $\mathbf{K}\_{N}$ is lower. Conversely, for lower noise variance, the innovation term is considered more reliable, and thus, the gain $\mathbf{K}\_{N}$ is larger. 

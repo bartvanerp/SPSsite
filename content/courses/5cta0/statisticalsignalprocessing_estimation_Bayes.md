@@ -86,22 +86,22 @@ To maximize the aposteriori, the first derivative of the aposteriori has to be s
 
 The minimum mean square error is a powerful concept that allows us to analyze the error we make in our estimations. We consider the variation of the estimates for $\theta$ by stating that the squared estimation error is $(\hat\theta-\theta)^2$. The squared error is considered, because the deviation of $\hat\theta$ from $\theta$ is important rather than the sign of the deviation. The minimum mean squared error is the starting point to describe the minimum variance unbiased estimators (MVUE). **The classical mean squared error (MSE)** accounts for the randomness of the estimation by
 \begin{equation}
-\mathrm{mse}\\left(\hat\theta\\right)=\mathbb{E}\\left[\\left(\hat\theta-\theta\\right)^2\\right]=\int(\hat\theta-\theta)^2p(\mathbf{x};\theta)d\mathbf{x}.
+\mathrm{mse}\\left(\hat\theta\\right)=\mathbb{E}\\left[\\left(\hat\theta-\theta\\right)^2\\right]=\int\\left(\hat\theta-\theta\\right)^2p(\mathbf{x};\theta)d\mathbf{x}.
 \end{equation}
 where $\theta$ is considered a *deterministic* unknown variable.
 
 **The Bayesian mean squared error** considers the parameter $\theta$ also as a random variable, and the joint probability $p(x,\theta)$ of the observed data $\mathbf{x}$ and parameter $\theta$ is considered:
 \begin{equation}
-\mathrm{bmse}\\left(\hat\theta\\right)=\int\int(\hat\theta-\theta)^2p(\mathbf{x},\theta)d\mathbf{x}d\theta.
+\mathrm{bmse}\\left(\hat\theta\\right)=\int\int\\left(\hat\theta-\theta\\right)^2p(\mathbf{x},\theta)d\mathbf{x}d\theta.
 \end{equation}
 
-Just as the MVUE is defined through the attempt to minimize the classical MSE term for the estimate $\hat\theta$, the Bayesian MSE is based on minimizing the Bayesian MSE. The parameter value that minimizes a function is found by setting its first derivative equal to zero and solving for $\hat\theta$. Towards this goal, the first step is to simplify the expression that needs to be minimized. The joint probability is written as
+Just as the MVUE is defined through the attempt to minimize the classical MSE term for the estimate $\hat\theta,$ the Bayesian MSE is based on minimizing the Bayesian MSE. The parameter value that minimizes a function is found by setting its first derivative equal to zero and solving for $\hat\theta$. Towards this goal, the first step is to simplify the expression that needs to be minimized. The joint probability is written as
 \begin{equation}
 p(\mathbf{x},\theta)=p(\theta|\mathbf{x})p(\mathbf{x}).
 \end{equation}
 This trick allows us to write the integral such that
 \begin{equation}
-\frac{\partial}{\partial\hat\theta}\int\Bigg[\int(\hat\theta-\theta)^2p(\theta|\mathbf{x})d\theta\Bigg]p(\mathbf{x})d\mathbf{x}
+\frac{\partial}{\partial\hat\theta}\int\\left[\int(\hat\theta-\theta)^2p(\theta|\mathbf{x})d\theta\\right]p(\mathbf{x})d\mathbf{x}
 \end{equation}
 
 There are two reasons why this expression leads to a simpler solution. First, the integrals are grouped such that the outer integral is only about the parameter $\mathbf{x}$. The derivative with respect to $\hat\theta$ acts only on the inner integral. Second, the function $p(\mathbf{x})$ is a probability density function, which is strictly positive. So, no value of $p(\mathbf{x})$ can make the derivative equal to zero. We have to focus on the derivative of the inner integral and set that as equal to zero.
