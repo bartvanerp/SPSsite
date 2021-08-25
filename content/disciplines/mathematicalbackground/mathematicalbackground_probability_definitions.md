@@ -124,7 +124,7 @@ Solution to the exercise in the form of a Venn diagram.
 ## Definition of probability
 
 
-### Classsic, frequentist and Bayesian perspective
+### Classic, frequentist and Bayesian perspective
 The concept of probability is related to randomness, or chance. Often we relate probability to what we do not know. Taking the example of flipping a coin, if we had all possible information about this experiment, such as the position of the coin, the force applied to the coin, the wind condition, the weight of the coin, the angle between the coin and our finger, the distance between the hand and the landing surface, the smoothness of the landing surface, the turbulence of the air etc., we might be able to predict the outcome of the coin flip. When we talk about a random experiment, we mean that our knowledge about the experiment is limited and therefore we cannot predict with absolute certainty its outcome. Probability theory provides us with a framework to describe and analyze random phenomena.
 
 The <i>classic</i> definition of probability results from the works of Bernoulli and Laplace. The latter defined the probability by stating *"the probability of an event is the ratio of the number of cases favorable to it, to the number of all cases possible when nothing leads us to expect that any one of these cases should occur more than any other, which renders them, for us, equally possible"*.
@@ -135,7 +135,7 @@ Formally, if a random experiment can result in $N$ mutually exclusive and equall
     Pr[A] =  \frac{N_A}{N}.
 \end{equation}
 
-This definition of probability is strictly related to the *principle of indifference*, which states that in absence of relevant evidence, all possible outcomes are equally likely.
+This definition of probability is closely related to the *principle of indifference*, which states that, in absence of relevant evidence, all possible outcomes are equally likely.
 
 In contrast, the <i>frequentist</i> definition of probability, also known as <i>relative probability</i>, calculates the probability based on how often an event occurs. The relative frequency of an event is given by
 
@@ -143,12 +143,13 @@ In contrast, the <i>frequentist</i> definition of probability, also known as <i>
     f_A = \frac{\text{number of occurrences of event }A}{\text{total number of observations}} = \frac{N(A)}{N},
 \end{equation}
 
-where $N(\cdot)$ denotes the number of occurrences of a certain event and $N$ the total number of observations. The relative frequency can be understood as how often event $A$ occurs relative to all observations. One can see that a low number of total observations does not give a good estimate of the true underlying probability of an event occurring. This is shown in the animation in Fig. 2, where we simulate the experiment of flipping two coins and we observe the number of times that each of the possible outcomes occurs. If we think about the probability of getting twice a head, we can already intuitively guess that it should be $1/4$. However, as shown in the right plot, we need about 500 trials to get an accurate estimation of this probability. Theoretically, an infinitely large number of observations is needed to obtain the true probability. This leads to the frequentist definition of probability, given by
+where $N(\cdot)$ denotes the number of occurrences of a certain event and $N$ the total number of observations. The relative frequency can be understood as how often event $A$ occurs relative to all observations.  Theoretically, an infinitely large number of observations is needed to obtain the true probability. This leads to the frequentist definition of probability, given by
 
 \begin{equation}
     \Pr [A] = \lim\_{N\to\infty}f_A =\lim\_{N\to\infty}\frac{N(A)}{N}.
 \end{equation}
 
+On the other hand, a low number of total observations does not give a good estimate of the true underlying probability of an event occurring. This is shown in the animation in Fig. 2, where we simulate the experiment of flipping two coins and we observe the number of times that each of the possible outcomes occurs. If we think about the probability of getting twice a head, we can already intuitively guess that it should be $1/4$. However, as shown in the right plot, we need about 500 trials to get an accurate estimation of this probability.
 
 <div style="max-width: 700px; margin: auto">
   <figure>

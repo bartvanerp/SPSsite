@@ -151,12 +151,16 @@ Here $\gamma_1[q]$ and $\gamma_2[p]$ are two series with even symmetry, similarl
     x[n] = \sum_{k=0}^{\infty}h[k]w[n-k] + y[n],
 \end{equation}
 
-where $h[k]$ represents a infinite-length sequence of weights; $w[n]$ is a white noise sequence, often referred to as *innovations*; $y[n]$ is deterministic, thus exactly predictable from the past values. The deterministic part can be subtracted from this signal since it is exactly predictable. This will result in a purely random zero-mean WSS signal as
+where $h[k]$ represents a infinite-length sequence of weights; $w[n]$ is a signal of uncorrelated samples, often referred to as *innovations*; $y[n]$ is deterministic, thus exactly predictable from the past values. The deterministic part can be subtracted from this signal since it is exactly predictable.
+
+Let us know consider a purely zero-mean WSS signal, from which any deterministic component has already been subtracted. We take a white noise sequence, $i[n]$, as the uncorrelated samples. Then Wold's decomposition theorem becomes
+
 \begin{equation}\label{eq:reversesum}
     x[n] = \sum_{k=0}^{\infty}h[k] i[n-k] = \sum_{k=-\infty}^{n}h[n-k] i[k].
 \end{equation}
 
-From here it becomes clear that $x[n]$ can be considered as the outcome of filtering white noise by a stable LTI system, with a rational transfer function in the form of
+The sequence of weights $h[k]$ can now be seen as the samples of the impulse response of a causal LTI filter, which we require to be stable. We also assume this filter to have a rational transfer function of the form
+
 \begin{equation}
 \begin{split}
     H(z) = \frac{B(z)}{A(z)},
@@ -168,15 +172,16 @@ with
     B(z) &=& 1 + b_1z^{-1}+ ... + b_qz^{-q} \nonumber.
 \end{eqnarray}
 In equation (\ref{#eq:AB}), we assume that $a_0 =  1$  and  $b_0 = 1$.
+Note that this is not too restrictive. In fact, according to the rational approximation of function, we can always approximate any continuous function by a rational polynomial as closely as we want by increasing the degree of the numerator and denominator in (\ref{#eq:AB}). However, the poles of the transfer function must be inside the unit circle for the filter to be stable.
 
-Combining equation (\ref{eq:xnlti}) with the right-end side of equation (\ref{eq:reversesum}), where we have reversed the summation, we can also rewrite (\ref{eq:reversesum}) to obtain a "new" sample of the random signal $x[n]$ as
+<!-- Combining equation (\ref{eq:xnlti}) with the right-end side of equation (\ref{eq:reversesum}), where we have reversed the summation, we can also rewrite (\ref{eq:reversesum}) to obtain a "new" sample of the random signal $x[n]$ as
 
 \begin{equation}\label{eq:innovation}
     x[n+1] =  \underbrace{\sum_{k=-\infty}^{n}h[n+1-k] x[k]}\_{\color{red}{\begin{subarray}{c}\text{Predictable part: linear}\newline
     \text{combination of past information}\end{subarray}}} + \underbrace{i[n+1]}\_{\color{blue}{\begin{subarray}{c}\text{New information}\newline
     \text{(innovation)}\end{subarray}}}.
-\end{equation}
-The interpretation of equation (\ref{eq:innovation}) is that any new sample of the random signal $x[n]$ is composed of a predictable part obtained by a linear combination of previous samples of $x[n]$ (filtering by LTI), and of an unpredictable  part, which is called innovation (Figure 2).
+\end{equation} -->
+<!-- The interpretation of equation (\ref{eq:innovation}) is that any new sample of the random signal $x[n]$ is composed of a predictable part obtained by a linear combination of previous samples of $x[n]$ (filtering by LTI), and of an unpredictable  part, which is called innovation (Figure 2).
 
 <div style="max-width: 750px; margin: auto">
   <figure>
@@ -188,15 +193,15 @@ The interpretation of equation (\ref{eq:innovation}) is that any new sample of t
     A random signal $x[n]$ can be described by the combination of a predictable part obtained by filtering previous samples and an unpredictable part, which is called innovation.
     </figcaption>
   </figure>
-</div>
+</div> -->
 
-In summary, the power spectrum of a WSS random signal can be approximated by a rational polynomial; this is equivalent to describing the signal as the output of a LTI filter, whose input is a zero-mean white noise sequence. If the filter has transfer function $H(z) = B(z)/A(z)$, then the signal can be rewritten as
+In summary, Wold's decomposition theorem allows us to represent any WSS random signal as the output of an LTI filter driven by white noise. If the filter has transfer function $H(z) = B(z)/A(z)$, then the signal can be rewritten as
 \begin{equation}
 \begin{split}
     x[n] = -\sum_{p=1}^{p}a_p x[n-p] + \sum_{q=0}^{Q}b_q i[n-q].
 \end{split}
 \end{equation}
-From the rational transfer function, the power spectrum of the random signal can be calculated as
+Since the input is given by a white-noise sequence, the input autocorrelation is of the form $r_i[l] = \sigma_i^2 \delta[l]$. Given that the transfer function is rational, also the power spectrum of the output random signal is rational, and can be calculated as 
 \begin{equation}\label{eq:psdlti}
     P_{x}(e^{j\omega}) = \sigma_i \frac{|B(e^{j\omega})|^2}{|A(e^{j\omega})|^2} = \sigma_i |H(e^{j\omega})|^2,
 \end{equation}
