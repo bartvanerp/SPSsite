@@ -135,7 +135,7 @@ Formally, if a random experiment can result in $N$ mutually exclusive and equall
     Pr[A] =  \frac{N_A}{N}.
 \end{equation}
 
-This definition of probability is strictly related to the *principle of indifference*, which states that in absence of relevant evidence, all possible outcomes are equally likely.
+This definition of probability is closely related to the *principle of indifference*, which states that in absence of relevant evidence, all possible outcomes are equally likely.
 
 In contrast, the <i>frequentist</i> definition of probability, also known as <i>relative probability</i>, calculates the probability based on how often an event occurs. The relative frequency of an event is given by
 
