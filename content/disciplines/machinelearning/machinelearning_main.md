@@ -2,7 +2,7 @@
 title = "Machine learning"
 
 # date = {{ .Date }}
-lastmod = 2019-05-06
+lastmod = 2021-02-02
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
