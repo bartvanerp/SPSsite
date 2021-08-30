@@ -37,6 +37,8 @@ We are interested in modern AI methods that support automated design of signal p
 
 In short, we work on (Bayesian) machine learning methods with applications to automated design of signal processing algorithms. Our methods are just as easily applicable though to design problems in related fields such as control, biomedical and communications engineering.
 
+{{< youtube DoMe6MZKRqA >}}
+
 <br>
 
 ## Courses
