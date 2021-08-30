@@ -123,18 +123,18 @@ This notion of independence can be extended to probability functions. The random
     p_{X_1,X_2,\ldots,X_N}(x_1,x_2,\ldots,x_N) = p_{X_1}(x_1)p_{X_2}(x_2)\ldots p_{X_N}(x_N).
 \end{equation}
 This equation represents that the total probability can be written a multiplication of the individual probabilities of the random variables. From a probability point of view (not a physical one) we can conclude that the random variables are independent, because the total probability solely depends on all the individual contributions of the random variables.
-Random variables that satisfy the independence equation and are distributed under the same probability density function are regarded as <i>independent and identically distributed</i> (IID) random variables. This notion will become important later on when discussing random signals.
+Random variables that satisfy the independence equation and are distributed under the same probability density function are regarded as <i>independent and identically distributed</i> (IID or iid) random variables. This notion will become important later on when discussing random signals.
 
 ### Independent random vectors
-As discussed previously, it is possible to split the random vector of all random variables into multiple random vectors, which each contain a subset of all random variables. Where the independence between individual random variables has already been discussed, it is also possible to extend this definition to random vectors. Two random vectors $\bf{X}$ and $\bf{Y}$ can be regarded as independent if and only if the probability function can be written as
+It is also possible to extend the definition of independence to random vectors. Two random vectors $\bf{X}$ and $\bf{Y}$ can be regarded as independent if and only if the probability function can be written as
 \begin{equation}
     p_{{\bf{X}},{\bf{Y}}}({\bf{x}}, {\bf{y}}) = p_{\bf{X}}({\bf{x}})\ p_{\bf{Y}}({\bf{y}}) .
 \end{equation}
 
 <br></br>
 
-## Statistical characteristics of random vectors
-In the previous reader on random variables, several characteristics were discussed for probability distributions depending on a single random variable, such as the mean, the variance and the moments of a random variable. This section will extend these characteristics to random vectors.
+## Statistical characterization of random vectors
+In the previous reader on random variables, several characteristics were discussed for probability distributions depending on a single random variable, such as the mean, the variance and the moments of a random variable. This section will extend these characterization to random vectors.
 
 ### Expected value
 The expected value of a random vector $\bf{X}$ is defined as the vector containing the expected values of the individual random variables $X_1, X_2, \ldots, X_N$ as
@@ -154,7 +154,7 @@ and for a continuous random vector as
 \end{equation}
 
 ### Covariance
-Previously, we have introduced the variance of a univariate random variable as the variance. While the variance denotes the spread in the univariate case, it has a different meaning in the multivariate case. Have a look at Fig. 1, where two contour plots are shown for two distinct multivariate Gaussian probability density functions. The exact mathematical description of a multivariate Gaussian probability density function is introduced <a href="../mathematicalbackground_probability_families/#the-normal-or-gaussian-mathcalnmu-sigma2-distribution">here</a>.
+Previously, we have introduced the second centralized moment of a univariate random variable as the variance. While the variance denotes the spread in the univariate case, it has a different meaning in the multivariate case. Have a look at Fig. 1, where two contour plots are shown for two distinct multivariate Gaussian probability density functions. The exact mathematical description of a multivariate Gaussian probability density function is introduced <a href="../mathematicalbackground_probability_families/#the-normal-or-gaussian-mathcalnmu-sigma2-distribution">here</a>.
 
 <div style="max-width: 900px; margin: auto">
   <figure>
@@ -168,7 +168,7 @@ Previously, we have introduced the variance of a univariate random variable as t
   </figure>
 </div>
 
-It can be noted that both distributions in Fig. 1 are different, since the first contour plot shows clear circles and the second contour plot shows tilted ellipses. For both distributions, 10000 random realizations ${\bf{x}} = [x_1, x_2]^\top$ are generated and the marginal distributions of both $X_1$ and $X_2$ are shown using a histogram and a fitted Gaussian distribution. It can be seen that the individual distributions of $X_1$ and $X_2$ are exactly equal for both multivariate distributions, but still the multivariate distributions are different. This difference can be explained by the <i>covariance</i> between the random variables $X_1$ and $X_2$ of the random vector $\bf{X}$.
+It can be noted that the distributions in Fig. 1 are different, since the first contour plot shows clear circles and the second contour plot shows tilted ellipses. For both distributions, 10000 random realizations ${\bf{x}} = [x_1, x_2]^\top$ are generated and the marginal distributions of both $X_1$ and $X_2$ are shown using a histogram and a fitted Gaussian distribution. It can be seen that the individual distributions of $X_1$ and $X_2$ are exactly equal for both multivariate distributions, but still the multivariate distributions are different. This difference can be explained by the <i>covariance</i> between the random variables $X_1$ and $X_2$ of the random vector $\bf{X}$.
 
 The covariance is a measure of the relationship between 2 random variables. The second distribution in Fig. 1 has a negative covariance between $X_1$ and $X_2$, because if $X_1$ increases $X_2$ decreases. No such thing can be said about the first distribution in Fig. 1, where $X_1$ and $X_2$ seem to have no relationship and behave independently from each other.
 
