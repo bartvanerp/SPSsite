@@ -29,55 +29,66 @@ weight = 1
 
 ## Introduction
 
-As variability and noise affect all measurements, all signals are inherently a stochastic variable. Deterministic approaches to signal  processing are thus inadequate for many real-world applications. Be it a radar signal to detect a airplane, an electrocardiogram to diagnose hearth conditions, or a GPS signal to guide an autonomous car, virtually every engineer deals with real-world signals, affected by several sources of noise and interference. Understanding how to handle and process signals in the presence of uncertainty, e.g., “random” signals, is thus fundamental for every student aiming at becoming an engineer. This course provides the basic tools necessary for accurate and reliable processing of random signals.
+As variability and noise affect all measurements, all signals are inherently stochastic variables. Deterministic approaches to signal processing are thus inadequate for many real-world applications.  Be it a radar signal to detect a plane, an electrocardiogram to diagnose hearth conditions, or a GPS signal to guide an autonomous car, virtually every engineer deals with real-world signals affected by several sources of noise and interference. Understanding how to handle and process signals in the presence of uncertainty, e.g., “random” signals, is thus fundamental for every student aiming at becoming an engineer. This course provides the basic tools necessary for understanding and processing random signals. 
 
-The course is divided in three modules and it includes a blend of reading and video materials, quizzes, and assignments. The first module cover topics of probability, random variables and random processes and is a pre-requisite for the following modules. The second modules dives into estimation theory and estimation methods including least-square, maximum likelihood and Bayesian estimation; the application of estimation  theory in the context of spectral analysis is also discussed. The final module covers hypothesis testing and detection theory, with applications for detecting a deterministic signal in noise.
+The course is divided into four parts, and it includes a blend of reading and video materials, quizzes, and assignments. The first part covers topics of probability, random variables, and random processes and is a prerequisite for the following parts. The second part dives into estimation theory and methods, including least-square, maximum likelihood, and Bayesian estimation. The third part explains the application of estimation theory in the context of spectral analysis. The final part covers hypothesis testing and detection theory, with applications for detecting a deterministic signal in noise. 
 
 ## Learning goals
 
-At the end of the course, you will be able to:
+At the end of Part 1, students will be able to:   
+<ul> <li> Understand the basic principles of probability, including probability axioms, independence, conditional probability, Bayes theorem, and use these principles in solving problems.  </li>
 
-<ul>
-<li>Understand the basic principles of probability including probability axioms, independence, conditional probability, Bayes theorem and use these principles in solving problems.  </li>
+<li> Understand and reflect on the implications of the central limit theorem in the context of signal acquisition and analysis.   </li>
 
-<li>Explain the difference between deterministic and stochastic signals providing examples in the context of signal processing.  </li>
+<li>Characterize random variables using probability distributions, expected value, variance, and moments.   </li>
 
-<li>Understand and reflect on the implications of the central limit theorem in the context of signal acquisition and analysis.  </li>
-
-<li>Characterize random variables using probability distributions, expected value, variance, and moments.  </li>
-
-<li>Characterize random signals by computing first and second order statistics.  </li>
-
-<li>Calculate the Cramer-Rao lower bound for the variance of an estimator, given the noise statistics.  </li>
-
-<li>Calculate the bias and variance of an estimator, given the noise statistics.  </li>
-
-<li>Apply the least squares, maximum likelihood and Bayesian estimations methods to solve problems concerning the estimation of signal model parameters.  </li>
-
-<li>Decide which estimation method to use to solve an estimation problem based on the signal model and availability of noise statistics.  </li>
-
-<li>Apply numerical solution methods to obtain the least squares and maximum likelihood estimates for problems with nonlinear signal models.  </li>
-
-<li>Calculate the threshold to achieve a desired false alarm probability and the resulting detection probability based on Neyman-Pearson theorem when given signal statistics for two different hypotheses. </li>
-
-<li>Plot receiver operating characteristic curves to show the performance of a Neyman-Pearson detector, given signal statistics for two different hypotheses. </li>
-
-<li>Explain how the Student’s t test is applied to hypothesis testing.</li>
+<li> Characterize random signals by computing first and second order statistics.  </li>
 </ul>
 
-<br></br>
+At the end of Part 2, students will be able to:  
+<ul>
+<li>Calculate the Cramer-Rao lower bound for the variance of an estimator, given the noise statistics.   </li>
+
+<li>Calculate the bias and variance of an estimator, given the noise statistics.   </li>
+
+<li>Apply the least squares, maximum likelihood, and Bayesian estimations methods to solve problems concerning the estimation of signal model parameters.   </li>
+
+<li>Decide which estimation method to use to solve an estimation problem based on the signal model and availability of noise statistics.   </li>
+
+<li>Apply numerical solution methods to obtain the least-squares and maximum likelihood estimates for problems with nonlinear signal models.</li> 
+</ul>
+
+At the end of Part 3, students will be able to:
+<ul>
+<li> Explain the difference between energy and power signals and the implications in the context of real-world signals. </li>
+
+<li> Describe how windowing and zero-padding affect spectral estimation </li>
+
+<li> Estimate and analyze the power spectrum of a random signal by applying parametric and non-parametric methods for spectral estimation.  </li>
+</ul>
+
+At the end of Part 4, students will be able to:  
+<ul> <li>Calculate the threshold to achieve a desired false alarm probability and the resulting detection probability based on Neyman-Pearson theorem when given signal statistics for two different hypotheses.  </li>
+
+<li>Plot receiver operating characteristic curves to show the performance of a Neyman-Pearson detector, given signal statistics for two different hypotheses.  </li>
+
+<li>Explain how the Student’s t-test is applied to hypothesis testing.  </li>
+</ul>
 
 ## Study material
 
 The available material consists of:
 
 <ul>
-  <li> <b>Reading material</b> - This includes all study material for the course and is available under the below specified modules on this platform. </li>
-  <li> <b>Screencast videos</b> - Besides the extensive reading material, short informative videos are provided to explain the subject material. </li>
+  <li> <b>Reading material</b> - All required reading material for the course, organized in four different parts, each of which divided in sections. </li>
+  <li> <b>Screencast videos</b> - Short informative videos to further explain the subject material. Some of these are addittional, while other are complementary to the reading material. </li>
+  <li> <b>Pencast videos</b> - Videos that walk through the solution of selected exercises. </li>
+</ul>
+The above can be found on this website. Additionally, we provide on Canvas:
+<ul>
   <li> <b>Quizzes</b> - Short quizzes to test whether you have fully understood the subject matter as explained in the screencast videos. </li>
-  <li> <b>Exercises</b> - Homework exercises to help you fully understand the subject matter. Some exercises are mandatory for the tutorial sessions. </li>
-  <li> <b>Pencast videos</b> - Of some homework exercises, pencast videos are available that walk through the entire exercise. </li>
-  <li> <b>MATLAB labs</b> - Mandatory labs are available to apply the learned material using MATLAB. </li>
+  <li> <b>Exercises</b> - Homework exercises to help you fully understand the subject matter. Some exercises are part of the student-led tutorial sessions. </li>
+  <li> <b>MATLAB labs</b> - Mandatory labs to apply the learned material using MATLAB. </li>
   <li> <b>MATLAB demos</b> - Matlab live scripts to put theoretical knowledge into practice and further enhance your learning experience</li>
 </ul>
 For the final examination only knowledge of the reading material and a good understanding of the homework exercises is required. However, all the other material will complement the learning process significantly.
@@ -99,14 +110,9 @@ We also suggest the following websites:
 <li><a href=https://seeing-theory.brown.edu/#firstPage >Seeing theory by Brown University</a> </li>
 </ul>
 
-<br></br>
-
 ## Planning
 
-A detailed planning for tha academic year 2021-22 is available on <a href=https://canvas.tue.nl/courses/15713/assignments/syllabus >Canvas.</a>
-
-
-
+A detailed planning for tha academic year 2021-22 is available on <a href=https://canvas.tue.nl/courses/18619/assignments/syllabus >Canvas.</a>
 <!-- | Week   |         Lectures         |                        Instruction/Labs                         | Topics                                                                   |                                     |
 |:------:|:-----------------------:|:---------------------------------------------------------------:|--------------------------------------------------------------------------|-----------------------------------------------|
 |   1    | 31/08/2020<br>08.45-9.30  |         No instructions<br><p style="color:#4E5480">Labs 03/09/2020<br>15.30 - 17.20</p>         | 1.1 Probability and random variables                                   | Quiz Week 1<br>Survey Week 1<br>MATLAB Demo 1  |
