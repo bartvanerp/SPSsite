@@ -79,7 +79,7 @@ Random variables are described by probability distributions. Two distinct catego
 <iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/t_sS2ycKrdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
 
-
+<br>
 The probability that a discrete random variable $X$ takes on the value $x$ can be expressed by the <i>probability mass function</i> (PMF) as
 
 \begin{equation}
@@ -92,7 +92,7 @@ Besides the probability mass function, the <i>cumulative distribution function</
 \begin{equation}
     P_X(x) = \Pr[X\leq x] = \sum_{x_i\in \{X\leq x\} } \Pr[X=x_i].
 \end{equation}
-This function equals the sum of the probabilities of all values in the range of $X$ smaller than or equal to $x$.
+This function equals the sum of the probabilities of all values in the range of $X$ smaller than or equal to $x.$
 
 ### Continuous random variables
 
@@ -113,7 +113,7 @@ The latter term differentiating the CDF of a continuous random variable from the
     p_X(x) = \frac{\mathrm{d}P_X(x)}{\mathrm{d}x}.
 \end{equation}
 
-Please note the difference in meaning between the probability mass function and the probability density function. Where the probability mass function returns a true probability, the probability density function returns a probability density. This probability density can be integrated over an interval in order to find the total probability. Suppose a continuous random variable $X$ is uniformly distributed between 0 and 1 and we want to find the probability of $X$ being a single value (e.g. 0.5) on this interval. This probability equals 0, although this might seem counter-intuitive. The interval from 0 to 1 contains an infinite amount of distinct values. Although they have an infinitely small spacing between them, they are still distinct. If the probability would have been larger than 0, then all these values would have had this probability. Still it is required by the probability axioms to have a total probability of 1. Therefore it is not possible with an infinite amount of non-zero probabilities to satisfy the probability axiom, unless the probability is infinitely close to 0.
+Please note the difference in meaning between the probability mass function and the probability density function. Where the probability mass function returns a true probability, the probability density function returns a probability density. This probability density can be integrated over an interval in order to find the total probability. Suppose a continuous random variable $X$ is uniformly distributed between 0 and 1 and we want to find the probability of $X$ being a single value (e.g. 0.5) on this interval. This probability equals 0, although this might seem counter-intuitive. The interval from 0 to 1 contains an infinite number of distinct values. Although they have an infinitely small spacing between them, they are still distinct. If the probability would have been larger than 0, then all these values would have had this probability. Still it is required by the probability axioms to have a total probability of 1. Therefore it is not possible with an infinite number of non-zero probabilities to satisfy the probability axiom, unless the probability is infinitely close to 0.
 
 ### Properties
 From the definitions of the probability functions and the probability axioms, several consequences can be determined.
@@ -139,7 +139,7 @@ The first property states that the probability of observing an outcome that cann
 
 
 #### Probability density function
-Similarly to the probability mass function, properties of the probability density function can be determined as
+Similarly to the probability mass function, properties of the probability density function are
 <ol>
     <li style="margin-top:10px;"> It holds that $p_X(x) \geq 0$ for all $x$. </li>
     <li style="margin-top:10px;"> By definition $P_X(x) = \int_{-\infty}^x p_X(x)\mathrm{d}x$. </li>
@@ -156,6 +156,7 @@ The first and last properties are direct consequences of the probability axioms.
 <iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/Lz3REvSebmc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
 
+<br>
 
 
 A distribution of a random variable can be characterized in multiple ways. In order to explain these characteristics, an analogy is drawn with statistical properties.
@@ -166,12 +167,12 @@ The statistics of a dataset are the characteristics of a set of observations, us
     \mathcal{X} = \\{x_1, x_2, \ldots, x_m\\}.
 \end{equation}
 
-The <i>average</i> of this set can be determined by summing over all values and dividing by the amount of values through
+The <i>average</i> of this set can be determined by summing over all values and dividing by the number of observations through
 \begin{equation}
     \text{average}(\mathcal{X}) = \frac{\sum\_{i=1}^{m}x_i}{m}.
 \end{equation}
 
-The <i>median</i> is another statistic to characterize a set of observations. The median is defined as the value in the middle of the ordered data set. After ordering the data set, left and right of the median there should be an equal amount of observation. In case that the data set has an even number of observations, usually the average of the two observations in the middle is taken.
+The <i>median</i> is another statistic to characterize a set of observations. The median is defined as the value in the middle of the ordered data set. After ordering the data set, at the left and right of the median there should be an equal number of observations. In case that the data set has an even number of observations, usually the average of the two observations in the middle is taken.
 
 The <i>mode</i> of a data set is the observation with the highest number of occurrences. If multiple observations occur both as often, then both observations are the mode of data set and the data set is then called multimodal.
 
@@ -185,12 +186,12 @@ From this set the average value can be computed as 6.17. The median can be deter
 \begin{equation}
     \\{ 2, 2, 5, 5, 6, \textbf{6}, \textbf{7}, 7, 7, 8, 9, 10\\}.
 \end{equation}
-The middle values are 6 and 7, because there are an even amount of observations. Therefore the median can be determined as 6.5. From this set the mode can be determined as 7, since this observation occurs 3 times, whereas all other grades occur only once or twice.
+The middle values are 6 and 7, because there are an even number of observations. Therefore the median can be determined as 6.5. From this set the mode can be determined as 7, since this observation occurs 3 times, whereas all other grades occur only once or twice.
 
 ### Expected value
 From this statistical approach, the summary statistics are determined from a set of realizations (observed data). Suppose now that the realizations are unknown, but the underlying distribution is known. From this it is still possible to determine its characteristics. However, they are called differently and require a different method to calculate them.
 
-The <i>expected value</i> (or expectation) of a distribution can be regarded as the average value of the distribution for an infinite amount of observations, or as the center of gravity of a distribution. The expected value of a random variable is denoted by the $\mathbb{E}[\cdot]$ operator or by $\mu\_{\cdot}$ and is given for a discrete random variable $X$ as
+The <i>expected value</i> (or expectation) of a distribution can be regarded as the average value of the distribution for an infinite number of observations, or as the center of gravity of a distribution. The expected value of a random variable is denoted by the $\mathbb{E}[\cdot]$ operator or by $\mu\_{\cdot}$ and is given for a discrete random variable $X$ as
 \begin{equation}
     \mathbb{E}[X] = \mu\_{X} = \sum\_{x\in S\_X}x \cdot p\_{X}(x)
 \end{equation}
@@ -237,7 +238,7 @@ The standard deviation is also a commonly used characteristic of a probability d
 \end{equation}
 
 ### Moments
-As said before the expected value defines the center of gravity of a distribution and the variance is a measure of its spread. Besides these characteristics there are other characteristics such as the skewness (degree of asymmetry) and the kurtosis (how the tails of the distribution are shaped). The characteristics are represented in Fig. 2. The characteristics are a specific case of a more generalized concept called <i>moments</i>. The $m^{th}$ moment of a discrete and continuous random variable is defined as
+As said before the expected value defines the center of gravity of a distribution and the variance is a measure of its spread. Besides these, there are other statistics such as the skewness (degree of asymmetry) and the kurtosis (how the tails of the distribution are shaped). These statistics are represented in Fig. 2, and they are a specific case of a more generalized concept called <i>moments</i>. The $m^{th}$ moment of a discrete and continuous random variable is defined as
 \begin{equation}
     \mathbb{E}[X^m] =
     \begin{cases}
