@@ -16,7 +16,7 @@ type = "docs"  # Do not modify.
 
 +++
 
-Stationarity and ergodicity are characterizations of random signals. They allow for the simplification of calculations and provide powerful tools in signal processing.
+Stationarity and ergodicity are properties of random processes. They allow for the simplification of calculations and provide powerful tools in signal processing.
 
 ## Stationarity
 
@@ -63,16 +63,16 @@ and similarly
 
 ### Stationarity and second orders statistics
 
-It is also important to consider the consequences of (wide-sense) stationarity for the covariance and correlation functions. From the definitions in the above table these properties depend on the two time indices $n_1$ and $n_2$. From the definition of the stationarity it can be concluded that for the example of the auto-covariance $\gamma_X[n_1,n_2] = \gamma_X[n_1+k, n_2+k]$ holds. This leads to the observation that the value of the covariance and correlation only depend on the difference between the two time indices. This time difference is called the <i>lag</i> and is defined as
+It is also important to consider the consequences of (wide-sense) stationarity for the covariance and correlation functions. From the definitions of covariance and correlation, these properties depend on the two time indices $n_1$ and $n_2$. Taking for example the covariance, stationarity implies that $\gamma_X[n_1,n_2] = \gamma_X[n_1+k, n_2+k]$ holds. This leads to the observation that the value of the covariance and correlation only depend on the difference between the two time indices. This time difference is called <i>lag</i> and is defined as
 \begin{equation}
     l = n_1-n_2.
 \end{equation}
-So for wide-sense stationary signals the notation of the correlation (and the covariance) may be simplified as
+Therefore, for wide-sense stationary signals the notation of the correlation (and the covariance) may be simplified as
 \begin{equation}
     r_X[n_1,n_2] = r_X[n_1-n_2] = r_X[l] = \mathrm{E}\Big[X[n_1]X^\ast[n_2]\Big] = \mathrm{E}\Big[X[n]X^\ast[n-l]\Big].
 \end{equation}
 Using this definition, the value of the auto-correlation function can be determined for $l=0$ as
-\begin{equation}
+\begin{equation}\label{eq:lag0}
     r_X[0]= \sigma_X^2 + |\mu_X|^2 \geq 0
 \end{equation}
 and it can be shown that this correlation value is (one of) the largest auto-correlation values since $r_X[0] \geq r_X[l] \ \ \forall \ \ l$. Furthermore it can be found that the auto-correlation function is a complex conjugate symmetric function of its lag
@@ -119,15 +119,12 @@ $X(t)$ and $Y(t)$ are independent wide sense stationary processes with expected 
 
 ## Ergodicity
 
-When a signal is stationary, the exact calculation of the expected value operators is usually still cumbersome, because it requires knowledge of the entire random process. In practice we usually only have a limited amount of sample of one realization of the random process. If a random process is ergodic then this means that the statistical properties of the entire random process can be inferred from just a limited amount of samples of a single realization. In order for a signal to be ergodic it has to be stationary. Ergodicity is usually a big assumption that cannot always be confirmed, however, without this assumption the signal statistics could not be approximated.
+When a signal is stationary, the exact calculation of the expected value operators is usually still cumbersome, because it requires knowledge of the entire random process. In practice we usually only have a limited number of samples of a single realization of the random process. If a random process is ergodic, it means that the statistical properties of the entire random process can be inferred from just a limited number of samples of a single realization. In order for a signal to be ergodic it has to be stationary. Ergodicity is usually a big assumption that cannot always be confirmed, however, without this assumption the signal statistics could not be approximated.
 
-
-<br></br>
 
 ## Special case: zero-mean white noise
 
-There is one really important case of the auto-correlation function that is often used in the field of signal processing. Namely the auto-correlation function of zero-mean white noise.
-The auto-correlation function of a zero-mean white noise process can be determined as
+Given the implications of the central limit theorem, noise is often assumed to be zero-mean additive Gaussian white noise; for simplicity it is often simply called zero-mean white noise. Thus, it is useful to know auto-correlation function of such process, which is determined as
 \begin{equation} \label{eq:corr_white}
     r_X[l] = \mathrm{E}\Big[X[n]X^\ast[n-l]\Big] = \sigma_X^2\delta[l] =
     \begin{cases}
@@ -136,9 +133,11 @@ The auto-correlation function of a zero-mean white noise process can be determin
     \end{cases}
 \end{equation}
 
-Let us break this definition down. So for a lag of $0$, the auto-correlation function reduces to the variance minus the squared mean. Since the mean is $0$, only the variance remains. Intuitively one could also regard the zero lag as multiplying each signal sample with itself, leading always to positive contributions, since the multiplication of equal signs always returns a positive number.
+Let us take a close look at equation (\ref{eq:corr_white}). At lag of $0$, the auto-correlation function is given by reduces to the variance plus the squared mean (see equation (\ref{eq:lag0})). Since the mean is $0$, only the variance remains. Intuitively one could also regard the zero lag as multiplying each signal sample with itself, leading always to positive contributions, since the multiplication of equal signs always returns a positive number.
 
 Now for all the other cases, we actually need to make use of the fact that the signal is white. However, the power spectrum is not yet introduced. Therefore an intuitive explanation is given, where the assumption is made that the noise is symmetrically distributed with zero-mean and is completely random. This means that each sample only depends on itself and has no dependence on the samples before or after it. If we were to introduce a certain lag $l$, each sample would be multiplied with another completely random sample at a distance $l$. This sample has a random sign and magnitude. Because of the zero-mean property we are half as likely to get a random number with a positive sign as a negative sign. The result of the multiplication therefore is equally likely to result in a positive or a negative contribution. Because of the random magnitudes that are symmetrically distributed around zero, in general we may intuitively understand that in total the total positive and negative contributions for the auto-correlation will cancel each other out, leading to a zero auto-correlation.
+
+In summary, the autocorrelation of zero-mean white noise is a delta pulse at lag 0, with amplitude given by the variance of $X[n]$.
 
 <div class="example">
 <h4> Exercise </h4>
@@ -184,9 +183,9 @@ For ergodic random processes the signal statistics that are defined in the table
 \end{equation}
 Please note that the averaging takes place over the individual realizations $x[n]$ and not over the random variables $X[n]$. Furthermore it would be better to denote the sequences of random numbers (bold capital letters) instead of the random processes itself (normal capital letters) in the subscripts of the signal statistics, because the approximation takes place over a finite length sequence and not the entire random process. However, because the processes are assumed to be stationary and ergodic these finite length sequences actually give a good approximation of the entire process. Therefore we can simplify our notation as for example $r_{\bf{XY}}[l] = r_{XY}[l]$.
 
-By applying this time-averaging care should be taken for the calculation of the covariance and correlation functions. These functions need to be calculated for a certain lag $l$. When this lag $l$ reaches the length of the sequences $N$, then there is a very limited number of samples to average over. Therefore in the calculation of the covariance and correlation functions the lag $l$ is limited by a certain upper-lag $L$, which is significantly smaller than $N$.
+When applying the time-averaging, care should be taken for the calculation of the covariance and correlation functions. These functions need to be calculated at different lags $l$. When the lag $l$ approaches the length of the sequences $N$, then there is a very limited number of samples to average over, reducing to 1 only for $l=N$. Therefore in the calculation of the covariance and correlation functions the lag $l$ is limited by a certain upper-lag $L$, which should be significantly smaller than $N$.
 
-The approximated signal statistics are denoted by a $\hat{\cdot}$ identifier. These approximate signal statistics are defined in the following table. It should be noted that the definitions of $\hat{r}$ and $\hat{\gamma}$ are biased, meaning that they are calculated by normalizing for $N$ values, whereas not always $N$ values are summed over, because of the effect of the lags.
+The approximated signal statistics are denoted by a $\hat{\cdot}$ identifier (hat). These approximate signal statistics are defined in the following table. It should be noted that the definitions of $\hat{r}$ and $\hat{\gamma}$ are biased, meaning that they are calculated by normalizing for $N$ values, whereas not always $N$ values are used in the summation, because of the effect of shifting the signal to calculate the different lags. The unbiased estimate would be obtained by normalizing by $N-|l|$ instead of $N$. However, as we shall see later, the unbiased estimate becomes problematic when estimating the power spectrum from the autocorrelation function (see <a href="../statisticalsignalprocessing_spectrum_nonparametric/#biased-and-unbiased-estimator-of-the-autocorrelation-function">here</a>); this is the reason why we normally use the biased estimate.
 
 <table>
     <tr>
