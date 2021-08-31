@@ -40,7 +40,7 @@ The noise $n(t)$ can be regarded as a random signal, whose statistics are known 
 </div>
 
 ### Additive white Gaussian noise
-The random noise $n(t)$ that is part of the random signal $s(t)$ can be described by a probability density function. For simplicity it is often assumed that this noise is <i>additive white Gaussian noise</i> or AWGN noise. All adjectives correspond to certain characteristics of the noise. The noise is additive, meaning that it is added to the deterministic part of the signal. Noise can be regarded as white if it has an uniform power distribution over the relevant frequency spectrum. As an analogy, white light emits all frequencies uniformly across the visible spectrum. Furthermore it is assumed that the noise is Gaussian distributed as was a fair assumption given the central limit theorem. Oftentimes this Gaussian noise distribution has a zero mean and even if this is not the case and the noise actually has a DC-term, then this DC-term is often regarded as part of the deterministic signal. We may therefore write that $n(t) \sim \mathcal{N}(n(t) \mid 0,\sigma_n^2)$, or similarly that $x(t) \sim \mathcal{N}(x(t) \mid s(t), \sigma_n^2)$, meaning that the probability distribution is centered around the deterministic signal.
+The random noise $n(t)$ that is part of the random signal $x(t)$ can be described by a probability density function. For simplicity it is often assumed that this noise is <i>additive white Gaussian noise</i> or AWGN noise. All adjectives correspond to certain characteristics of the noise. The noise is additive, meaning that it is added to the deterministic part of the signal. Noise can be regarded as white if it has an uniform power distribution over the relevant frequency spectrum. As an analogy, white light emits all frequencies uniformly across the visible spectrum. Furthermore it is assumed that the noise is Gaussian distributed as was a fair assumption given the central limit theorem. Oftentimes this Gaussian noise distribution has a zero mean and even if this is not the case and the noise actually has a DC-term, then this DC-term is often regarded as part of the deterministic signal. We may therefore write that $n(t) \sim \mathcal{N}(n(t) \mid 0,\sigma_n^2)$, or similarly that $x(t) \sim \mathcal{N}(x(t) \mid s(t), \sigma_n^2)$, meaning that the probability distribution is centered around the deterministic signal.
 
 <br></br>
 ## Discrete-time stochastic processes
@@ -76,15 +76,13 @@ Because of the way that these column vectors are constructed, it is relatively e
 
 Please note the notation with respect to the other modules. Random variables for time series are accompanied with a time index (e.g. $X[n]$). The random processes that generate all these random variables are referred to by a single capital letter $X$. Time series sequences of these random variables displayed as random vectors are distinguished by bold capital letters, such as $\bf{X}$.
 
-<br></br>
-## Correlation in a time series
-The random signals can be written as random vectors and therefore it is also possible to determine relationships between the individual random variables through its covariance and the correlation.
+## Correlation in time series
+The random signals can be written as random vectors and therefore it is also possible to determine relationships between the individual random variables through the covariance and correlation.
 
-Two different types of relationships should be distinguished between. First there is the degree of dependence between individual signal samples, where relationships between the signal samples can be determined. These relationships are referred to as the auto-covariance and auto-correlation. Secondly there is the degree of dependence between two entire signal sequences, where similarities between the two can be determined. These relationships are referred to as the cross-covariance and cross-correlation.
+We distinguish between auto-correlation and auto-covariance, which describe the degree of dependence of the samples in the same signal, and cross-correlation and cross-covariance, which describe the degree of depence between the samples of two different signals.
 
-<br></br>
 ## Ideal signal statistics
-Given the random variables $X[n]$ and $Y[n]$ corresponding to individual samples of the random processes $X$ and $Y$, the statistical properties can be determined. An overview of all statistical properties is given in the following table. The random process is referred to by the subscript and the sample(s) at which the property is determined is given in between the square brackets $[\cdot]$.
+Given the random variables $X[n]$ and $Y[n]$ corresponding to individual samples of the random processes $X$ and $Y$, the statistical properties can be determined. An overview of all statistical properties is given in the following table. The random process is referred to by the subscript and the sample(s) at which the property is determined is given in between the square brackets $[\cdot]$. Note that for real signals that conjugate (*) can be omitted.
 
 <table>
     <tr>
