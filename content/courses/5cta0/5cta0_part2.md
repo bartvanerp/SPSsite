@@ -19,7 +19,7 @@ weight = 200
 
 ## Introduction
 
-Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter from some observation. Consider the following a example.
+Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter from some observation. Consider the following example.
 
 ---
 <b>Example:</b>
@@ -44,55 +44,53 @@ Typically, the base station sends a fixed and known training sequence of length 
 ---
 
 
-The above example can be generalized as follows. An estimator is a function that determines a parameter $\theta$ from an N-point dataset $\\{x[0],x[1],...,x[N-1]\\}$, i.e.,
-\begin{equation}
-\hat{\theta} = g(x[0],x[1],...,x[N-1])
-\end{equation}
-where $g$ is some function termed the estimator and $\hat{\theta}$ is the estimate. The focus of estimation theory is to find "good" estimators. In this context, good means optimal under certain conditions, which we will address later.
+In general, we wish to determine an unknown parameter $\theta$. However, this parameter is not directly observable; instead, some observations are available, represented by a vector $\mathbf{x}$. These observations are random variables whose PDF depends on the unknown parameter. Thus, we denote the PDF as $p(\mathbf{x}; \boldsymbol\theta)$ to emphasize its dependency on the parameter $\theta$.
 
-To find estimators, we need to model our observations. In general, the parameters of interest are not observed directly. Instead, the observations are related to these parameters through a known function. For instance, measuring non-electrical quantities is typically carried out by converting them to electrical quantities like voltage or current using physical relations between these quantities. The voltage or the current can then be determined by using volt- or amperemeters. In most cases, noise or model inaccuracies impair our observations. Thus, each experiment will result in different observations. Hence, we need to describe our observations by a probability density function.  The unknown parameters parametrize the probability density function (PDF), and thus, we denote the PDF as
-$p(\mathbf{x}; \boldsymbol\theta)$, where $\mathbf{x}$ is the vector of observation and $\boldsymbol\theta$ is the vector of parameters that we wish to determine.
 
 ---
 <b>Example:</b>
 
-Suppose we want to estimate the DC voltage embedded in noise. Our observation can be modeled as
+Suppose we want to estimate a DC voltage $A$ which is embedded in noise. Our observation can be modeled as
 \begin{equation}
-x[n] = A + w[n]
+x[n] = A + w[n],
 \end{equation}
-where $A$ is the unknown DC level, and w[n] is i.i.d. Gaussian noise with zero mean and known variance $\sigma^2$. The parametrized PDF of our observation is then
+where $A$ is the unknown DC level, and w[n] is independent and identically distributed Gaussian noise with zero mean and known variance $\sigma^2$. The parametrized PDF of our observation is then
 \begin{equation}
-p(\mathbf{x},\theta) = \frac{1}{(2\pi\sigma^2)^{\frac{N}{2}}} \exp \\left[-\frac{1}{2\sigma^2}\sum_{0}^{N-1}(x[n]-A)^2\\right].
+p(\mathbf{x};A) = \frac{1}{(2\pi\sigma^2)^{\frac{N}{2}}} \exp \\left[-\frac{1}{2\sigma^2}\sum_{0}^{N-1}(x[n]-A)^2\\right].
 \end{equation}
 
 ---
 
-For the previous example, we can define different estimators. Consider the following three estimators:
+ An estimator is now a function $g(\mathbf{x})$ that maps from the observations $\mathbf{x}$ to an estimate $\hat\theta$ of the unknown parameter, i.e.,
+\begin{equation}
+\hat{\theta} = g(\mathbf{x}).
+\end{equation}
+Note that different estimators can be defined. For the previous example, we can define, for example, the following three estimators:
 \begin{align}
 	\hat{A} &= \frac{1}{N} \sum_{n=0}^{N-1} x[n], \\\\\\
 	\check{A} &= x[0], \\\\\\
 	\tilde{A} &= \frac{1}{N-2}\\left( 2x[0]+\sum_{n=1}^{N-2}x[n]+2x[N-1]\\right).
 \end{align}
-The first estimator is the sample mean of the observation, while the second estimator considers only the first observation. The third estimator puts a higher weight on the first and the last observation. At this point, the question arises as to which of the estimators is the best. Furthermore, is there a better estimator? To answer these questions, we need first to define what we mean by best.
+The first estimator is the sample mean of the observation. The second estimator considers only the first observation, and the third estimator puts a higher weight on the first and the last observation. At this point, the question arises as to which of the estimators is the best. Furthermore, is there a better estimator? To answer these questions, we need first to define what we mean by best.
 
-The estimator is a function with random variables as an input. Thus, also the estimate is a random variable. Thus, we describe the estimator by its statistic. First of all, it is desirable that an estimator produced the true parameter on average, i.e.,
+Since the observations $\mathbf{x}$ is a  random vector, the estimate $\hat\theta$ is also a random variable. Thus, we need to evaluate an estimator by its statistic. First of all, it is desirable that an estimator produced the true parameter on average, i.e.,
 \begin{equation}
   \mathbb{E}\\left[\hat\theta\\right] = \theta
 \end{equation}
 for all $\theta$.
 
-An estimator with this property is said to be **unbiased**. Estimators for which the expected value approaches the true value as the sample size increases are called **consitent** estimators. All three presented estimators possess this property. Even unbiasedness is a preferred property; it does not help us answer which presented estimator is better. A more suitable criterion for the performance evaluation of an estimator is the variance of the estimate. The variance of a random variable reflects its variability. Thus, an estimator whose estimate is small is desirable.
+An estimator with this property is said to be **unbiased**. Estimators for which the expected value approaches the true value as the sample size increases are called **consistent** estimators. All three presented estimators possess this property. Although unbiasedness is a preferred property, it does not help us answer which presented estimator is better. A more suitable criterion for the performance evaluation of an estimator is the variance of the estimate. The variance of a random variable reflects its variability. Thus, an estimator whose variance is small is desirable.
 
-Returning to the three estimators. It can be shown that the individual variances of the estimates are:
+Returning to the three estimators. The individual variances of the estimates are:
 \begin{align}
 \mathrm{Var}\\left[\hat{A}\\right] &= \frac{\sigma^2}{N},\\\\\\
 \mathrm{Var}\\left[\check{A}\\right] &= \sigma^2,\\\\\\
 \mathrm{Var}\\left[\tilde{A}\\right] &= \frac{(N+6)}{(N+2)^2}\sigma^2.
 \end{align}
 
-When comparing the different variances, we see that the first estimator has the lowest variance. When compared to the second estimator, we see that the variance is $N$-times smaller due to the noise averaging effect of the estimator.
+When comparing the different variances, we see that the first estimator has the lowest variance. When compared to the second estimator, we see that the variance is $N$-times smaller due to the noise averaging effect of the estimator. The variance of the last estimator converges to the variance of the first estimator as the sample size increases.
 
-So far we have seen that we can formulate different estimators and that we can compare their performance by means of their variance. It is logical now to ask if there exists other estimators which can have a lower variance or even a variance equal to zero. In this part of the lecture, we will answer this question and show that there is a lower bound on the variance for unbiased estimators. Moreover, the bound provides an equality constraint which allows us to find an estimator with a variance equivalent to this bound. Such estimators are referred to as **efficient** estimators. In fact, the sample mean $\hat{A}$ in the above example is such an estimator. In general, efficient estimators only exist for special cases. Thus, we are interested in finding an estimator which has the lowest variance of all unbiased estimators. An estimator whose variance is lower then the variance of all other unbiased estimators for all values of $\theta$ is termed **minimum variance unbiased estimator**, or short MVUE. It should be noted that such an estimator must not necessarily exist and if it exits, it is unique.
+So far, we have seen that we can formulate different estimators, and we can compare their performance by means of their variance. It is logical now to ask if other estimators can have a lower variance or even a variance equal to zero. In this part of the lecture, we will answer this question and show that there exists a lower bound on the variance for unbiased estimators. Moreover, the bound provides an equality constraint which allows us to find an estimator with a variance equivalent to this bound. Such estimators are referred to as **efficient** estimators. In fact, the sample mean $\hat{A}$ in the above example is such an estimator. In general, efficient estimators only exist for special cases. Thus, we are interested in finding an estimator which has the lowest variance of all unbiased estimators. An estimator whose variance is lower then the variance of all other unbiased estimators for all values of $\theta$ is termed **minimum variance unbiased estimator**, or short MVUE. It should be noted that such an estimator must not necessarily exist and if it exits, it is unique.
 
 
 ## Outline
