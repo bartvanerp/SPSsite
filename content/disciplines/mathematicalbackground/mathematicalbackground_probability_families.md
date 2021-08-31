@@ -35,8 +35,6 @@ In order to indicate that a random variable $X$ is distributed according to a ce
 <iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/v-ElE7vsXHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
 
-
-/v-ElE7vsXHU
 ### The Bernoulli(p) distribution
 The Bernoulli distribution is a discrete probability distribution that models an experiment where only 2 outcomes are possible. The probability distribution of flipping a coin is an example of a Bernoulli distribution. These outcomes are mapped to 0 and 1, whose probabilities are $1-p$ and $p$ respectively. The distribution is fully characterized by the parameter $p$, which is the probability of success ($\Pr[X = 1]$).
 
@@ -333,7 +331,7 @@ The Geometric distribution is a discrete probability distribution that models an
 <br></br>
 
 ### Binomial(n,p) distribution
-The Binomial distribution is a discrete probability distribution that models an experiment with probability of success $p$. The Binomial distribution gives the probability of observing $x$ successes in $n$ independent trials. The distribution is fully characterized by the parameters $n$ and $p$. The parameter $n$ denotes the amount of independent trials and the parameter $p$ denotes the probability of observing a success per trial.
+The Binomial distribution is a discrete probability distribution that models an experiment with probability of success $p$. The Binomial distribution gives the probability of observing $x$ successes in $n$ independent trials. The distribution is fully characterized by the parameters $n$ and $p$. The parameter $n$ denotes the number of independent trials and the parameter $p$ denotes the probability of observing a success per trial.
 
 <figure>
 <div class="rowimg2">
@@ -364,7 +362,7 @@ The Binomial distribution is a discrete probability distribution that models an 
 </div>
 
 [^4]
-[^4]: The binomial coefficient, which returns the total amount of possible unsorted combinations of $k$ distinct elements from a set of $n$ distinct elements, defined as: $$ \begin{pmatrix} n \\ k\end{pmatrix} = \frac{n!}{k!(n-k)!}, $$ where $!$ is the factorial operator (e.g. $4!=4\cdot 3\cdot 2\cdot 1$), which denotes the total amount of sorted permutations.
+[^4]: The binomial coefficient, which returns the total number of possible unsorted combinations of $k$ distinct elements from a set of $n$ distinct elements, defined as: $$ \begin{pmatrix} n \\ k\end{pmatrix} = \frac{n!}{k!(n-k)!}, $$ where $!$ is the factorial operator (e.g. $4!=4\cdot 3\cdot 2\cdot 1$), which denotes the total number of sorted permutations.
 
 
 <div class="example">
@@ -476,7 +474,7 @@ The Binomial distribution is a discrete probability distribution that models an 
 
 
 ### The Pascal(k,p) distribution
-The Pascal distribution is a probability distribution that is also known as the negative Binomial distribution. The Pascal distribution gives the probability of observing the $k^{th}$ success at the $x^{th}$ trial. The distribution is fully characterized by the parameters $k$ and $p$. The parameter $k$ denotes the desired amount of successes and the parameter $p$ denotes the chance of success in an individual trial.
+The Pascal distribution is a probability distribution that is also known as the negative Binomial distribution. The Pascal distribution gives the probability of observing the $k^{th}$ success at the $x^{th}$ trial. The distribution is fully characterized by the parameters $k$ and $p$. The parameter $k$ denotes the desired number of successes and the parameter $p$ denotes the chance of success in an individual trial.
 
 <figure>
 <div class="rowimg2">
@@ -1098,226 +1096,6 @@ The exponential distribution is a continuous probability distribution that follo
 </div>
 
 <br></br>
-
-### The Normal or Gaussian $\mathcal{N}(\mu, \sigma^2)$ distribution
-The Normal or Gaussian distribution is probably the most commonly used continuous probability distribution. The distribution is bell-shaped and symmetric. The function is characterized by its mean $\mu$ and its variance $\sigma^2$.
-
-<figure>
-<div class="rowimg2">
-  <div class="columnimg2">
-    <img src="/../files/7.Images/math/probability/continuous_gaussian_pdf.svg"
-    style="width:100%">
-  </div>
-  <div class="columnimg2">
-    <img src="/../files/7.Images/math/probability/continuous_gaussian_cdf.svg"
-    style="width:100%">
-  </div>
-</div>
-<figcaption>
-  Example plot of the (a) probability density function and (b) cumulative density function of the Gaussian($\mu$, $\sigma^2$) distribution.
-</figcaption>
-</figure>
-
-#### The Standard normal $\mathcal{N}(0,1)$ distribution
-The Standard normal distribution is a specific case of the Normal or Gaussian distribution, where the mean equals $\mu = 0$ and the variance equals $\sigma^2=1$. This function can be regarded as the normalized Gaussian distribution. Any random variable $Y \sim \mathcal{N}(\mu_Y, \sigma_Y^2)$ can be transformed to a random variable $X$ under the Standard normal distribution by subtracting its mean and dividing by the standard deviation as $X = \frac{Y-\mu_Y}{\sigma_Y}$
-
-#### The $Q$-function
-The $Q$-function is a commonly used function in statistics, which calculates the probability of a Standard normal distributed random variable $X$ exceeding a certain threshold $x$. It is also known as the right-tail probability of the Gaussian distribution, since it is calculated by integrating the right side of the Gaussian PDF from the threshold $x$ up to $\infty$. The $Q$-function is defined as
-\begin{equation}
-    Q(x) = \Pr[X>x] = \frac{1}{\sqrt{2\pi}} \int_x^\infty e^{-\frac{u^2}{2}}\mathrm{d}u.
-\end{equation}
-The function can be used for all Gaussian distributed random variables, however, the random variable and the corresponding threshold should be normalized first. Additionally, through symmetry follows that $Q(x) = 1-Q(-x)$, where $Q(-x)$ is equal to the cumulative  density function $P_X(x)$.
-
-<div class="example">
-  <!---->
-  <h4> Probability density function </h4>
-    <!---->
-    The probability density function of the continuous Gaussian $\mathcal{N}$($\mu, \sigma^2$) distribution is given as
-    \begin{equation}
-        p_X(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}},
-    \end{equation}
-    where $\sigma > 0$.
-    <!---->
-</div>
-
-
-<div class="example">
-  <!---->
-  <h4> Cumulative distribution function </h4>
-    <!---->
-    The cumulative distribution function of the continuous Gaussian $\mathcal{N}$($\mu, \sigma^2$) distribution can be determined as
-    \begin{equation}
-        \begin{split}
-            P_X(x)
-            &= Q(-\frac{x-\mu}{\sigma})
-        \end{split}
-    \end{equation}
-    <!---->
-  <button class="collapsible">Show proof</button>
-  <!---->
-  <div class="content">
-    <!---->
-    \begin{equation}
-        \begin{split}
-            P_X(x)
-            &= \int_{-\infty}^{x} p_X(n) \mathrm{d}n, \\
-            &= \frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{x} e^{-\frac{(n-\mu)^2}{2\sigma^2}} \mathrm{d}n, \\
-            &= Q(-\frac{x-\mu}{\sigma})
-        \end{split}
-    \end{equation}
-    <!---->
-  </div>
-</div>
-
-
-<div class="example">
-  <!---->
-  <h4> Expected value </h4>
-    <!---->
-    The expected value of the continuous Gaussian $\mathcal{N}$($\mu, \sigma^2$) distribution can be determined as
-    \begin{equation}
-        \begin{split}
-            \mathbb{E}[X] = \mu.
-        \end{split}
-    \end{equation}
-    <!---->
-  <button class="collapsible">Show proof</button>
-  <!---->
-  <div class="content">
-    <!---->
-    The expected value of the continuous Gaussian $\mathcal{N}$($\mu, \sigma^2$) distribution can be determined as
-    \begin{equation}
-        \begin{split}
-            \mathbb{E}[X]
-            &= \int_{-\infty}^{\infty} x \cdot p_X(x) \mathrm{d}x, \\
-            &= \frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} xe^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x, \\
-            &=\frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} ((x-\mu)+\mu)e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x, \\
-            &=\frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} (x-\mu)e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x + \mu\int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x, \\
-            &= \frac{-\sigma^2}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} \frac{-2(x-\mu)}{2\sigma^2}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x + \mu, \\
-            &= \frac{-\sigma^2}{\sqrt{2\pi\sigma^2}} \left[ e^{-\frac{(x-\mu)^2}{2\sigma^2}}\right]_{-\infty}^\infty + \mu, \\
-            &= \frac{-\sigma^2}{\sqrt{2\pi\sigma^2}}(0-0) + \mu = \mu.
-        \end{split}
-    \end{equation}
-    <!---->
-  </div>
-</div>
-
-
-<div class="example">
-  <!---->
-  <h4> Variance </h4>
-    <!---->
-    The variance of the continuous Gaussian $\mathcal{N}$($\mu, \sigma^2$) distribution can be determined as
-    \begin{equation}
-        \begin{split}
-            \text{Var}[X] = \sigma^2.
-        \end{split}
-    \end{equation}
-    <!---->
-  <button class="collapsible">Show proof</button>
-  <!---->
-  <div class="content">
-    <!---->
-    \begin{equation}
-        \begin{split}
-            \text{Var}[X]
-            &= \mathbb{E}[(X-\mu)^2], \\
-            &=  \frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} (x-\mu)^2e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x, \\
-            &\overset{\href{./#fn:17}{17}}{=} \frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} (x-\mu)^2e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x, \\
-            &= \frac{\sigma^2}{\sqrt{\pi}}\int_{-\infty}^{\infty} w\cdot 2we^{-w^2} \mathrm{d}w, \\
-            &\overset{\href{./#fn:15}{15}}{=} \frac{\sigma^2}{\sqrt{\pi}} \left[ -we^{-w^2}\right]_{-\infty}^\infty - \frac{\sigma^2}{\sqrt{\pi}} \int_{-\infty}^{\infty} -e^{-w^2} \mathrm{d}w, \\
-            &\overset{\href{./#fn:16}{16}\ \href{./#fn:18}{18}}{=} \frac{\sigma^2}{\sqrt{\pi}} (0-0) + \frac{\sigma^2}{\sqrt{\pi}} \sqrt{\pi} = \sigma^2. \\
-        \end{split}
-    \end{equation}
-    <!---->
-  </div>
-</div>
-
-[^17][^18]
-[^17]: Substitute $w=\frac{x-\mu}{\sqrt{2\sigma^2}}$.
-[^18]: Gaussian integral: $$ \int_{-\infty}^\infty e^{-x^2} \mathrm{d}x =\sqrt{\pi} $$
-
-
-As is implicated by the <a href="../mathematicalbackground_probability_functions/#central-limit-theorem">central limit theorem</a>, the Gaussian distribution is extremely important. The Gaussian distribution is often used to model measurements in practice and, thanks to the CLT, its use can often be extended to other distributions. A Gaussian distribution is also often used to model the thermal noise of a band-limited system. This section will generalize the definition of the Gaussian distribution given in the previous reader and extend it to the multivariate case.
-
-#### Univariate distribution
-In the case of a single random variable $X$ that is generated according to a Gaussian distribution, defined by its mean $\mu$ and variance $\sigma^2$ where the subscript $\cdot_X$ is now omitted for simplification, the probability density function is defined as
-\begin{equation}
-    p_X(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
-\end{equation}
-The left side of the figure below shows an example of an univariate Gaussian distribution.
-
-<div style="max-width: 900px; margin: auto">
-  <figure>
-    <img
-      src="/../files/7.Images/math/probability/gaussian.svg"
-      alt="Example of an univariate and a multivariate Gaussian probability density function."
-    />
-    <figcaption>
-      Example of an univariate and a multivariate Gaussian probability density function.
-    </figcaption>
-  </figure>
-</div>
-
-#### Multivariate distribution
-The definition of the univariate Gaussian distribution can be extended to a multivariate distribution. In order to define the Gaussian distribution the position and its spread are required. These quantities are represented by the mean vector $\bf\mu$ and the covariance matrix $\bf\Sigma$. Whereas the covariance matrix is defined as $\bf\Gamma$ <a href="../mathematicalbackground_probability_vectors/#cross-covariance-matrix">in this section</a>, literature has adopted the $\bf\Sigma$ notation when discussing multivariate Gaussian distributions, as $\Sigma$ is the Greek capital letter of $\sigma$.
-
-To indicate that a $k$-dimensional random vector $\bf{X}$ is Gaussian distributed, we can write ${\bf{X}} \sim \mathcal{N}\_k(\bf{\mu},\bf{\Sigma})$. The probability density function of such a multivariate Gaussian distribution is defined as
-\begin{equation}
-    p_{\bf{X}}({\bf{x}}) = \frac{1}{\sqrt{(2\pi)^k|\bf{\Sigma}|}}\exp \left\\{-\frac{1}{2} ({\bf{x}}-\bf{\mu})^\top \bf{\Sigma}^{-1}({\bf{x}}-\bf{\mu})\right\\},
-\end{equation}
-where $|\bf{\Sigma}|$ is the determinant of the covariance matrix. Please note the similarities between the univariate Gaussian distribution and the multivariate distribution. The inverse covariance matrix $\bf{\Sigma}^{-1}$ is often also called the <i>precision matrix</i> and is denoted by $\bf{\Lambda}$, because a low variance (i.e. low spread) relates to high precision and vice versa.
-
-#### The covariance matrix of a multivariate Gaussian distribution
-The probability density function of a Gaussian distribution is fully determined by its mean $\bf{\mu}$ and its covariance matrix $\bf{\Sigma}$. In order to give some intuition on how the mean and covariance matrix structure influence the final distribution, we jump forward to Fig. 2 in <a href="../mathematicalbackground_probability_vectors/#correlation-coefficient">the next section</a> where three multivariate distributions have been plotted. The covariance matrices that were used to plot these distributions in the figure are from left to right:
-\begin{equation}
-    \bf{\Sigma}\_1 = \begin{bmatrix}1 & -0.5 \newline -0.5 & 1\end{bmatrix} \qquad \bf{\Sigma}\_2 = \begin{bmatrix}1 & 0 \newline 0 & 1\end{bmatrix} \qquad \bf{\Sigma}\_3 = \begin{bmatrix}1 & 0.5 \newline 0.5 & 1\end{bmatrix}
-\end{equation}
-Please note how the off-diagonal entries, referring to Cov$[X_1,X_2]$ and Cov$[X_2,X_1]$ influence the shape of the distribution.
-
-In order to understand how the covariance matrix is related to the tilt and the shape of the distribution, we need to first introduce the so-called rotation matrix and the eigenvalue decomposition. The rotation matrix $R_\theta$ rotates a coordinate counter-clockwise over an angle $\theta$ with respect to the origin. This rotation matrix is defined as
-\begin{equation}\label{eq:rot_mat}
-    R_\theta = \begin{bmatrix} \cos(\theta) & -\sin(\theta) \newline \sin(\theta) & \cos(\theta) \end{bmatrix}
-\end{equation}
-and a rotation of $\theta$ from the coordinates $(x,y)$ to the coordinates $(x', y')$ can be represented by
-\begin{equation}
-    \begin{bmatrix} x' \newline y' \end{bmatrix} = R_\theta \begin{bmatrix} x \newline y \end{bmatrix} = \begin{bmatrix} x\cos(\theta) - y\sin(\theta) \newline x\sin(\theta) + y\cos(\theta) \end{bmatrix}.
-\end{equation}
-One of the properties of a rotation matrix is that it is orthogonal. This means that $R_\theta R_\theta^\top = I$, where $I$ is the identity matrix. Using the fact that $R_\theta^{-1}= R_{-\theta} = R_\theta^\top$ from its definition, the orthogonality property makes complete sense, because rotating a coordinate with the angle $-\theta$ and $\theta$ respectively does not change anything.
-
-Besides the rotation matrices, we need to introduce the eigenvalue decomposition in order to better understand the covariance matrix structure. The eigenvalue decomposition states that a square invertible symmetric matrix $A$ can be written as
-\begin{equation}
-    A = Q\Lambda Q^{-1},
-\end{equation}
-where the orthogonal matrix $Q$ contains the eigenvectors of $A$ and $\Lambda$ is a diagonal matrix containing the eigenvalues of $A$.
-
-Now the general representation of the rotation matrix has been defined as well as the eigenvalue decomposition, we can show that <i>any covariance matrix can be written as the rotations of a diagonal covariance matrix</i>. This point is very important to understand. To start off, a diagonal covariance matrix can be represented as
-\begin{equation}
-    \bf{\Sigma}\_d = \begin{bmatrix} a & 0 \newline 0 & b \end{bmatrix}.
-\end{equation}
-The entries $a$ and $b$ correspond to the individual variances of $X_1$ and $X_2$ according to the definitions and are at the same time the eigenvalues of $\bf{\Sigma}\_d$. An example of a Gaussian distribution that corresponds to a diagonal covariance matrix where $a = 25$ and $b=4$ is shown on the left in the figure below. Please note that the ratio of $\sqrt{a}$ and $\sqrt{b}$ also represents the ratio of the length (the major axis) and the width (the minor axis) of the distribution.
-\par
-If we were to apply the eigenvalue decomposition to a covariance matrix $\bf{\Sigma}$, we would interestingly enough find that
-\begin{equation}
-    \bf{\Sigma} = R_\theta \bf{\Sigma}_d R_\theta^\top.
-\end{equation}
-The right of the figure below shows an example of a multivariate Gaussian distribution whose covariance matrix is a rotated version of the diagonal covariance matrix corresponding to the left side of the same figure. From this we can see that the ratio of eigenvalues of $\bf{\Sigma}$ corresponds to the ratio of the lengths of the major and minor axes. Furthermore, we can conclude that the matrix containing the eigenvectors of $\bf{\Sigma}$ is at the same time a rotation matrix, implicitly defining the rotation angle.
-
-<div style="max-width: 900px; margin: auto">
-  <figure>
-    <img
-      src="/../files/7.Images/math/probability/gaussiandiag.svg"
-      alt="Two multivariate Gaussian distribution, whose covariance matrices are related through the rotation matrices corresponding to a counter-clockwise rotation of $\pi/4$ radians."
-    />
-    <figcaption>
-      Two multivariate Gaussian distribution, whose covariance matrices are related through the rotation matrices corresponding to a counter-clockwise rotation of $\pi/4$ radians.
-    </figcaption>
-  </figure>
-</div>
-
-
-<br></br>
-
 ### The continuous Uniform(a,b) distribution
 The continuous Uniform distribution is a continuous probability distribution that models an experiment where the outcomes are mapped only to the interval from $a$ up to and including $b$, with the same probability all over this range. The distribution is fully characterized by the parameters $a$ and $b$, which are the continuous lower and upper bound of the interval respectively.
 
@@ -1459,3 +1237,222 @@ The continuous Uniform distribution is a continuous probability distribution tha
     <!---->
   </div>
 </div>
+
+### The Normal or Gaussian $\mathcal{N}(\mu, \sigma^2)$ distribution
+The Normal or Gaussian distribution is probably the most commonly used continuous probability distribution. The distribution is bell-shaped and symmetric. The function is characterized by its mean $\mu$ and its variance $\sigma^2$.
+
+<figure>
+<div class="rowimg2">
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/continuous_gaussian_pdf.svg"
+    style="width:100%">
+  </div>
+  <div class="columnimg2">
+    <img src="/../files/7.Images/math/probability/continuous_gaussian_cdf.svg"
+    style="width:100%">
+  </div>
+</div>
+<figcaption>
+  Example plot of the (a) probability density function and (b) cumulative density function of the Gaussian($\mu$, $\sigma^2$) distribution.
+</figcaption>
+</figure>
+
+#### The Standard normal $\mathcal{N}(0,1)$ distribution
+The Standard normal distribution is a specific case of the Normal or Gaussian distribution, where the mean equals $\mu = 0$ and the variance equals $\sigma^2=1$. This function can be regarded as the normalized Gaussian distribution. Any random variable $Y \sim \mathcal{N}(\mu_Y, \sigma_Y^2)$ can be transformed to a random variable $X$ under the Standard normal distribution by subtracting its mean and dividing by the standard deviation as $X = \frac{Y-\mu_Y}{\sigma_Y}$
+
+#### The $Q$-function
+The $Q$-function is a commonly used function in statistics, which calculates the probability of a Standard normal distributed random variable $X$ exceeding a certain threshold $x$. It is also known as the right-tail probability of the Gaussian distribution, since it is calculated by integrating the right side of the Gaussian PDF from the threshold $x$ up to $\infty$. The $Q$-function is defined as
+\begin{equation}
+    Q(x) = \Pr[X>x] = \frac{1}{\sqrt{2\pi}} \int_x^\infty e^{-\frac{u^2}{2}}\mathrm{d}u.
+\end{equation}
+The function can be used for all Gaussian distributed random variables, however, the random variable and the corresponding threshold should be normalized first. Additionally, through symmetry follows that $Q(x) = 1-Q(-x)$, where $Q(-x)$ is equal to the cumulative  density function $P_X(x)$.
+
+<div class="example">
+  <!---->
+  <h4> Probability density function </h4>
+    <!---->
+    The probability density function of the continuous Gaussian $\mathcal{N}$($\mu, \sigma^2$) distribution is given as
+    \begin{equation}
+        p_X(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}},
+    \end{equation}
+    where $\sigma > 0$.
+    <!---->
+</div>
+
+
+<div class="example">
+  <!---->
+  <h4> Cumulative distribution function </h4>
+    <!---->
+    The cumulative distribution function of the continuous Gaussian $\mathcal{N}$($\mu, \sigma^2$) distribution can be determined as
+    \begin{equation}
+        \begin{split}
+            P_X(x)
+            &= Q(-\frac{x-\mu}{\sigma})
+        \end{split}
+    \end{equation}
+    <!---->
+  <button class="collapsible">Show proof</button>
+  <!---->
+  <div class="content">
+    <!---->
+    \begin{equation}
+        \begin{split}
+            P_X(x)
+            &= \int_{-\infty}^{x} p_X(n) \mathrm{d}n, \\
+            &= \frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{x} e^{-\frac{(n-\mu)^2}{2\sigma^2}} \mathrm{d}n, \\
+            &= Q(-\frac{x-\mu}{\sigma})
+        \end{split}
+    \end{equation}
+    <!---->
+  </div>
+</div>
+
+
+<div class="example">
+  <!---->
+  <h4> Expected value </h4>
+    <!---->
+    The expected value of the continuous Gaussian $\mathcal{N}$($\mu, \sigma^2$) distribution can be determined as
+    \begin{equation}
+        \begin{split}
+            \mathbb{E}[X] = \mu.
+        \end{split}
+    \end{equation}
+    <!---->
+  <button class="collapsible">Show proof</button>
+  <!---->
+  <div class="content">
+    <!---->
+    The expected value of the continuous Gaussian $\mathcal{N}$($\mu, \sigma^2$) distribution can be determined as
+    \begin{equation}
+        \begin{split}
+            \mathbb{E}[X]
+            &= \int_{-\infty}^{\infty} x \cdot p_X(x) \mathrm{d}x, \\
+            &= \frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} xe^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x, \\
+            &=\frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} ((x-\mu)+\mu)e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x, \\
+            &=\frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} (x-\mu)e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x + \mu\int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x, \\
+            &= \frac{-\sigma^2}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} \frac{-2(x-\mu)}{2\sigma^2}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x + \mu, \\
+            &= \frac{-\sigma^2}{\sqrt{2\pi\sigma^2}} \left[ e^{-\frac{(x-\mu)^2}{2\sigma^2}}\right]_{-\infty}^\infty + \mu, \\
+            &= \frac{-\sigma^2}{\sqrt{2\pi\sigma^2}}(0-0) + \mu = \mu.
+        \end{split}
+    \end{equation}
+    <!---->
+  </div>
+</div>
+
+
+<div class="example">
+  <!---->
+  <h4> Variance </h4>
+    <!---->
+    The variance of the continuous Gaussian $\mathcal{N}$($\mu, \sigma^2$) distribution can be determined as
+    \begin{equation}
+        \begin{split}
+            \text{Var}[X] = \sigma^2.
+        \end{split}
+    \end{equation}
+    <!---->
+  <button class="collapsible">Show proof</button>
+  <!---->
+  <div class="content">
+    <!---->
+    \begin{equation}
+        \begin{split}
+            \text{Var}[X]
+            &= \mathbb{E}[(X-\mu)^2], \\
+            &=  \frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} (x-\mu)^2e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x, \\
+            &\overset{\href{./#fn:17}{17}}{=} \frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} (x-\mu)^2e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x, \\
+            &= \frac{\sigma^2}{\sqrt{\pi}}\int_{-\infty}^{\infty} w\cdot 2we^{-w^2} \mathrm{d}w, \\
+            &\overset{\href{./#fn:15}{15}}{=} \frac{\sigma^2}{\sqrt{\pi}} \left[ -we^{-w^2}\right]_{-\infty}^\infty - \frac{\sigma^2}{\sqrt{\pi}} \int_{-\infty}^{\infty} -e^{-w^2} \mathrm{d}w, \\
+            &\overset{\href{./#fn:16}{16}\ \href{./#fn:18}{18}}{=} \frac{\sigma^2}{\sqrt{\pi}} (0-0) + \frac{\sigma^2}{\sqrt{\pi}} \sqrt{\pi} = \sigma^2. \\
+        \end{split}
+    \end{equation}
+    <!---->
+  </div>
+</div>
+
+[^17][^18]
+[^17]: Substitute $w=\frac{x-\mu}{\sqrt{2\sigma^2}}$.
+[^18]: Gaussian integral: $$ \int_{-\infty}^\infty e^{-x^2} \mathrm{d}x =\sqrt{\pi} $$
+
+
+As is implicated by the central limit theorem (explained in the section <a href="../mathematicalbackground_probability_functions/#central-limit-theorem">Funciton and pairs of random variables</a>), the Gaussian distribution is extremely important. The Gaussian distribution is often used to model measurements in practice and, thanks to the CLT, its use can often be extended to other distributions. A Gaussian distribution is also often used to model the thermal noise of a band-limited system. This section will generalize the definition of the Gaussian distribution given in the previous reader and extend it to the multivariate case.
+
+#### Univariate distribution
+In the case of a single random variable $X$ that is generated according to a Gaussian distribution, defined by its mean $\mu$ and variance $\sigma^2$ where the subscript $\cdot_X$ is now omitted for simplification, the probability density function is defined as
+\begin{equation}
+    p_X(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
+\end{equation}
+The left side of the figure below shows an example of an univariate Gaussian distribution.
+
+<div style="max-width: 900px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/math/probability/gaussian.svg"
+      alt="Example of an univariate and a multivariate Gaussian probability density function."
+    />
+    <figcaption>
+      Example of an univariate and a multivariate Gaussian probability density function.
+    </figcaption>
+  </figure>
+</div>
+
+#### Multivariate distribution
+The definition of the univariate Gaussian distribution can be extended to a multivariate distribution. To better understand the multivariate gaussian distribution, it might be useful to first read the sections <a href="../mathematicalbackground_probability_functions">Funciton and pairs of random variables</a> and <a href="../mathematicalbackground_probability_vectors">Random vectors</a>. To define the Gaussian distribution the position and its spread are required. These quantities are represented by the mean vector $\bf\mu$ and the covariance matrix $\bf\Sigma$. Whereas the covariance matrix is defined as $\bf\Gamma$ <a href="../mathematicalbackground_probability_vectors/#cross-covariance-matrix">here</a>, literature has adopted the $\bf\Sigma$ notation when discussing multivariate Gaussian distributions, as $\Sigma$ is the Greek capital letter of $\sigma$.
+
+To indicate that a $k$-dimensional random vector $\bf{X}$ is Gaussian distributed, we can write ${\bf{X}} \sim \mathcal{N}\_k(\bf{\mu},\bf{\Sigma})$. The probability density function of such a multivariate Gaussian distribution is defined as
+\begin{equation}
+    p_{\bf{X}}({\bf{x}}) = \frac{1}{\sqrt{(2\pi)^k|\bf{\Sigma}|}}\exp \left\\{-\frac{1}{2} ({\bf{x}}-\bf{\mu})^\top \bf{\Sigma}^{-1}({\bf{x}}-\bf{\mu})\right\\},
+\end{equation}
+where $|\bf{\Sigma}|$ is the determinant of the covariance matrix. Please note the similarities between the univariate Gaussian distribution and the multivariate distribution. The inverse covariance matrix $\bf{\Sigma}^{-1}$ is often also called the <i>precision matrix</i> and is denoted by $\bf{\Lambda}$, because a low variance (i.e. low spread) relates to high precision and vice versa.
+
+#### The covariance matrix of a multivariate Gaussian distribution
+The probability density function of a Gaussian distribution is fully determined by its mean $\bf{\mu}$ and its covariance matrix $\bf{\Sigma}$. In order to give some intuition on how the mean and covariance matrix structure influence the final distribution, we jump forward to Fig. 2 in <a href="../mathematicalbackground_probability_vectors/#correlation-coefficient">the next section</a> where three multivariate distributions have been plotted. The covariance matrices that were used to plot these distributions in the figure are from left to right:
+\begin{equation}
+    \bf{\Sigma}\_1 = \begin{bmatrix}1 & -0.5 \newline -0.5 & 1\end{bmatrix} \qquad \bf{\Sigma}\_2 = \begin{bmatrix}1 & 0 \newline 0 & 1\end{bmatrix} \qquad \bf{\Sigma}\_3 = \begin{bmatrix}1 & 0.5 \newline 0.5 & 1\end{bmatrix}
+\end{equation}
+Please note how the off-diagonal entries, referring to Cov$[X_1,X_2]$ and Cov$[X_2,X_1]$ influence the shape of the distribution.
+
+In order to understand how the covariance matrix is related to the tilt and the shape of the distribution, we need to first introduce the so-called rotation matrix and the eigenvalue decomposition. The rotation matrix $R_\theta$ rotates a coordinate counter-clockwise over an angle $\theta$ with respect to the origin. This rotation matrix is defined as
+\begin{equation}\label{eq:rot_mat}
+    R_\theta = \begin{bmatrix} \cos(\theta) & -\sin(\theta) \newline \sin(\theta) & \cos(\theta) \end{bmatrix}
+\end{equation}
+and a rotation of $\theta$ from the coordinates $(x,y)$ to the coordinates $(x', y')$ can be represented by
+\begin{equation}
+    \begin{bmatrix} x' \newline y' \end{bmatrix} = R_\theta \begin{bmatrix} x \newline y \end{bmatrix} = \begin{bmatrix} x\cos(\theta) - y\sin(\theta) \newline x\sin(\theta) + y\cos(\theta) \end{bmatrix}.
+\end{equation}
+One of the properties of a rotation matrix is that it is orthogonal. This means that $R_\theta R_\theta^\top = I$, where $I$ is the identity matrix. Using the fact that $R_\theta^{-1}= R_{-\theta} = R_\theta^\top$ from its definition, the orthogonality property makes complete sense, because rotating a coordinate with the angle $-\theta$ and $\theta$ respectively does not change anything.
+
+Besides the rotation matrices, we need to introduce the eigenvalue decomposition in order to better understand the covariance matrix structure. The eigenvalue decomposition states that a square invertible symmetric matrix $A$ can be written as
+\begin{equation}
+    A = Q\Lambda Q^{-1},
+\end{equation}
+where the orthogonal matrix $Q$ contains the eigenvectors of $A$ and $\Lambda$ is a diagonal matrix containing the eigenvalues of $A$.
+
+Now the general representation of the rotation matrix has been defined as well as the eigenvalue decomposition, we can show that <i>any covariance matrix can be written as the rotations of a diagonal covariance matrix</i>. This point is very important to understand. To start off, a diagonal covariance matrix can be represented as
+\begin{equation}
+    \bf{\Sigma}\_d = \begin{bmatrix} a & 0 \newline 0 & b \end{bmatrix}.
+\end{equation}
+The entries $a$ and $b$ correspond to the individual variances of $X_1$ and $X_2$ according to the definitions and are at the same time the eigenvalues of $\bf{\Sigma}\_d$. An example of a Gaussian distribution that corresponds to a diagonal covariance matrix where $a = 25$ and $b=4$ is shown on the left in the figure below. Please note that the ratio of $\sqrt{a}$ and $\sqrt{b}$ also represents the ratio of the length (the major axis) and the width (the minor axis) of the distribution.
+\par
+If we were to apply the eigenvalue decomposition to a covariance matrix $\bf{\Sigma}$, we would interestingly enough find that
+\begin{equation}
+    \bf{\Sigma} = R_\theta \bf{\Sigma}_d R_\theta^\top.
+\end{equation}
+The right of the figure below shows an example of a multivariate Gaussian distribution whose covariance matrix is a rotated version of the diagonal covariance matrix corresponding to the left side of the same figure. From this we can see that the ratio of eigenvalues of $\bf{\Sigma}$ corresponds to the ratio of the lengths of the major and minor axes. Furthermore, we can conclude that the matrix containing the eigenvectors of $\bf{\Sigma}$ is at the same time a rotation matrix, implicitly defining the rotation angle.
+
+<div style="max-width: 900px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/math/probability/gaussiandiag.svg"
+      alt="Two multivariate Gaussian distribution, whose covariance matrices are related through the rotation matrices corresponding to a counter-clockwise rotation of $\pi/4$ radians."
+    />
+    <figcaption>
+      Two multivariate Gaussian distribution, whose covariance matrices are related through the rotation matrices corresponding to a counter-clockwise rotation of $\pi/4$ radians.
+    </figcaption>
+  </figure>
+</div>
+
+
+<br></br>

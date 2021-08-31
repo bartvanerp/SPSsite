@@ -37,6 +37,8 @@ At the ICT Lab, we investigate fascinating mechanisms at the foundations of info
 
 Our research connects information and communication theory to different research areas, including fiber optical communications, next-generation wireless systems, radar processing, and information security. We investigate these fields through the use of digital signal processing, source coding, and channel coding. The scenarios that we focus on ideally result from close interaction with the industry.
 
+{{< youtube Lmy1bUZnVP0 >}}
+
 <br>
 
 ## Courses

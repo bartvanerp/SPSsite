@@ -23,14 +23,14 @@ type = "docs"       # Do not modify.
 </style>
 
 ## Functions of random variables
-It can be possible that a signal is generated under a certain probability distribution, after which the signal is manipulated. The probability distribution that follows from this transformation is usually difficult to determine, however, the expected value and variance are usually easier to compute.
+When a signal generated under a certain probability distribution is manipulated, the probability distribution that follows from this transformation is usually difficult to determine; however, the expected value and variance are usually easier to compute.
 
 ### Linear combinations of random variables
 One common category of these transformation consists of the linear combinations of a continuous random variable $X$, with mean $\mu_X$ and variance $\sigma_X^2$. Suppose that the random variable $Y$ is a linear combination of $X$ defined by
 \begin{equation}
-    Y = aX+b.
+    Y = aX+b,
 \end{equation}
-The mean of the random variable $Y$ can be determined as
+with $a$ and $b$ deterministic constants. The mean of the random variable $Y$ can be determined as
 \begin{equation}
     \begin{split}
         \mathbb{E}[Y]
@@ -53,11 +53,11 @@ Similarly the variance of $Y$ can be determined using the previous result as
         &= a^2 \text{Var}[X]
     \end{split}
 \end{equation}
-A very similar derivation also holds for discrete random variables. Please note that the variable $b$ did not have an effect on the variance of $Y$. Intuitively this makes sense since the variance is a measure of the spread of a variable. By adding a constant the spread of the probability distribution will not change.
+A very similar derivation also holds for discrete random variables. Please note that the constant $b$ did not have an effect on the variance of $Y$. Intuitively this makes sense since the variance is a measure of the spread of a variable. By adding a constant the spread of the probability distribution will not change.
 
 
 ### Continuous elementary functions
-Sometimes it can be useful to more flexibly define probability distributions in the continuous domain. Up until now we were limited by the given families of distributions, but one might for example want to alter these distributions slightly according to the situation. Suppose there is a random variable $X$ that behaves as a uniform distribution for $X<0$ and an exponential distribution for $X\geq0$. How can we describe this distribution mathematically? For this the delta pulse function and the unit step function need to be introduced.  
+Sometimes it can be useful to define probability distributions in the continuous domain more flexibly. Up until now we were limited by the given families of distributions, but one might for example want to alter these distributions slightly according to the situation. Suppose there is a random variable $X$ that behaves as a uniform distribution for $X<0$ and an exponential distribution for $X\geq0$. How can we describe this distribution mathematically? For this the delta pulse function and the unit step function need to be introduced.  
 
 #### Dirac delta pulse function
 The Dirac delta pulse function is a function that only exists for one single value on its domain. The value at this point is undefined, but it guarantees that the integral over its domain equals 1. The dirac delta pulse is therefore defined as
@@ -104,7 +104,7 @@ This function allows us to put a known probability density function $p\_X(x)$ to
 where $c$ is a constant that is required to satisfy the total probability axiom ($\int\_{-\infty}^{\infty} p\_{X1}(x)\mathrm{d}x = 1$).
 
 ### Mixed random variables
-When the probability density function of a random variable consists of a combination of both delta pulses and probability density functions, it can be regarded as a mixed random variable. An example of a random variable is given in the following example. The definition is of mixed random variable is
+When the probability density function of a random variable consists of a combination of both delta pulses and probability density functions, it can be regarded as a mixed random variable. An example of a random variable is given in the following example. The definition of mixed random variable is
 {{% alert note %}}
 $X$ is a mixed random variable if and only if $p\_{X}(x)$ consists of both impulses and non-zero, finite values.
 {{% /alert %}}
@@ -160,10 +160,10 @@ So far this module has only focused on events that produce a single outcome and 
 
 
 #### Example
-Suppose we have an experiment in which we throw 2 dices consecutively and we collect the total amount of eyes after the first and second dice are thrown. Assuming normal dices, the total amount of eyes observed after the first throw should be an integer between 1 and 6. But how can we now describe the total amount of eyes after throwing the second dice? It will be clear that this second observation will be between 2 and 12 eyes. However, we do need to keep in mind that the second observation depends greatly on the first observation. It is for example impossible to first observe a total of 5 eyes after throwing the first dice and then to observe a total of 4 eyes after throwing the second dice.
+Suppose we have an experiment in which we throw 2 dice consecutively and we collect the total amount of eyes after the first and second dice are thrown. Assuming normal dice, the total amount of eyes observed after the first throw should be an integer between 1 and 6. But how can we now describe the total amount of eyes after throwing the second dice? It will be clear that this second observation will be between 2 and 12 eyes. However, we do need to keep in mind that the second observation depends greatly on the first observation. It is for example impossible to first observe a total of 5 eyes after throwing the first dice and then to observe a total of 4 eyes after throwing the second dice.
 
 ### Joint random variables
-Through the previous example it is clear that there is a need to combine multiple random variables into a single function in order to draw conclusions about observations and their probabilities. Multiple random variables that are all associated with an event are called <i>joint random variables</i>. These random variables are usually denoted with different capital letters (e.g. $X$ and $Y$). The theory that follows, holds for every number of joint random variables, however, for simplicity this reader will only discuss events that produce 2 joint random variables.
+Through the previous example it is clear that there is a need to combine multiple random variables into a single function in order to draw conclusions about observations and their probabilities. Multiple random variables that are all associated with an event are called <i>joint random variables</i>. These random variables are usually denoted with different capital letters (e.g. $X$ and $Y$). The theory that follows, holds for every number of joint random variables, however, for simplicity this reader will only discuss random processes described by 2 joint random variables.
 
 #### Joint cumulative distribution function
 In order to describe the probabilities that are associated with the observations ($x$, $y$), we will introduce the <i>joint cumulative distribution function</i>, which is a variant of the cumulative distribution function. This joint cumulative distribution function is defined for the random variables $X$ and $Y$ as
@@ -240,7 +240,7 @@ This operation can be understood when viewing the summation or integration as "t
 A similar proof can be found for the marginalization of discrete random variables.
 
 ### Conditional probabilities
-When considering events with multiple outcomes we might be able to deduce one outcome from another. Take the example of the two dices. If we know that the first dice rolls 5 eyes then we automatically know that the total amount of eyes after the second throw is 6 up to 11 with equal probability. Similarly we may deduce with 100% certainty that the first throw should have given 6 eyes, when 12 eyes are observed after the second throw.
+When considering events with multiple outcomes we might be able to deduce one outcome from another. Take the example of the two dice. If we know that the first die rolls 5 eyes then we automatically know that the total amount of eyes after the second throw is 6 up to 11 with equal probability. Similarly we may deduce with 100% certainty that the first throw should have given 6 eyes, when 12 eyes are observed after the second throw.
 
 This line of reasoning is an example of <i>conditional probability</i>. Conditional probability involves the probability of some event when another event is observed. In the reader on probability theory, the definition of conditional probability was given and explained. If this definition is combined with random variables, two separate cases can be identified.
 

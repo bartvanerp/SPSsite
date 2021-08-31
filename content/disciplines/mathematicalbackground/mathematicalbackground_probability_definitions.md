@@ -125,14 +125,14 @@ Solution to the exercise in the form of a Venn diagram.
 
 
 ### Classic, frequentist and Bayesian perspective
-The concept of probability is related to randomness, or chance. Often we relate probability to what we do not know. Taking the example of flipping a coin, if we had all possible information about this experiment, such as the position of the coin, the force applied to the coin, the wind condition, the weight of the coin, the angle between the coin and our finger, the distance between the hand and the landing surface, the smoothness of the landing surface, the turbulence of the air etc., we might be able to predict the outcome of the coin flip. When we talk about a random experiment, we mean that our knowledge about the experiment is limited and therefore we cannot predict with absolute certainty its outcome. Probability theory provides us with a framework to describe and analyze random phenomena.
+The concept of probability is related to randomness, or chance. Often we relate probability to what we do not know. Taking the example of flipping a coin, if we had all possible information about this experiment, such as the position of the coin, the force applied to the coin, the wind condition, the weight of the coin, the angle between the coin and our finger, the distance between the hand and the landing surface, the smoothness of the landing surface, the turbulence of the air etc., we might be able to predict the outcome of the coin flip. However, the laws governing this experiment might be so complex and the number of variables so large, that in practice is not useful; we thus prefer we to deal with the uncertainty. When we talk about a random experiment, we mean that our knowledge about the experiment is limited and therefore we cannot predict with absolute certainty its outcome. Probability theory provides us with a framework to describe and analyze random phenomena.
 
 The <i>classic</i> definition of probability results from the works of Bernoulli and Laplace. The latter defined the probability by stating *"the probability of an event is the ratio of the number of cases favorable to it, to the number of all cases possible when nothing leads us to expect that any one of these cases should occur more than any other, which renders them, for us, equally possible"*.
 
 Formally, if a random experiment can result in $N$ mutually exclusive and equally likely outcomes, and if event $A$ results from the occurence of $N_A$ of these outcomes, then the probability of $A$ is defined as
 
 \begin{equation}
-    Pr[A] =  \frac{N_A}{N}.
+    \text{Pr[A]} =  \frac{N_A}{N}.
 \end{equation}
 
 This definition of probability is closely related to the *principle of indifference*, which states that, in absence of relevant evidence, all possible outcomes are equally likely.
@@ -170,7 +170,7 @@ As we will shall see, the *Bayesian* probability requires the calculation of pri
 
 Let us consider an extravagant example by calculating the probability of finding extraterrestrial life (aliens). From a frequentist perspective the probability of finding extraterrestrial life equals 0, because extraterrestrial life has not (yet) been observed. This provides us with a simple but limited answer to our question.
 
-Now consider the Bayesian perspective. From scientific research we may conclude that extraterrestrial life is possible under the right circumstances. Combining this information with the immense number of planets, we could definitely argue for a non-zero probability of finding extraterrestrial life. This probability is regarded as the prior probability as it is determined without performing any observations. Even after performing many unsuccessful attempts at finding extraterrestrial life, there still is a (very small) probability of finding extraterrestrial life. The discrepancy in the probabilities is an example of the difference between both definitions.
+Now consider the Bayesian perspective. From scientific research we may conclude that extraterrestrial life is possible under the right circumstances. Combining this information with the immense number of planets, we could definitely argue for a non-zero probability of finding extraterrestrial life. This probability is regarded as the prior probability as it is determined without performing any observations. Even after performing many unsuccessful attempts at finding extraterrestrial life, there still is a (very small) probability of finding extraterrestrial life. The discrepancy in the probabilities is an example of the difference between the two definitions.
 
 ### Probability axioms
 
@@ -181,7 +181,7 @@ From the definition of probability, three important probability axioms can be de
     <li style="margin-top:10px;"> For any countable collection of $M$ <i>disjoint</i> events it holds that  $\Pr[A_1\cup A_2\cup \ldots \cup A_M] = \Pr[A_1] + \Pr[A_2] + \ldots + \Pr[A_M]$ . </li>
 </ol>
 
-Let us now discuss these axioms one by one. The first axiom states that a probability of an event is always between 0 and 1, where 0 means that there is no chance that the event will take place and 1 means that it will certainly happen, and negative probabilities do not exist. Taking the frequentist definition of probability as a means to understand this, it is in fact not possible for an event to occur a negative number of times and therefore a negative probability cannot exist. Similarly, a probability larger than 1 would mean that a certain event would occur more often than all events together. Again this is not physically possible and therefore we are restricted to the probability bounds set by the first axiom.
+Let us now discuss these axioms one by one. The first axiom states that a probability of an event is always between 0 and 1, where 0 means that there is no chance that the event will take place and 1 means that it will certainly happen; negative probabilities do not exist. Taking the frequentist definition of probability as a means to understand this, it is in fact not possible for an event to occur a negative number of times and therefore a negative probability cannot exist. Similarly, a probability larger than 1 would mean that a certain event would occur more often than all events together. Again this is not physically possible and therefore we are restricted to the probability bounds set by the first axiom.
 
 The second axiom states that the probability of observing an outcome that is in the sample space $\mathcal{S}$ is always equal to 1. This axiom arises from the definition of the sample space. The sample space was defined previously as the set of <i>all</i> possible outcomes. Therefore we can conclude that an observation is always part of this set and thus the probability of observing an outcome that is part of the sample space equals 1.
 
@@ -198,7 +198,7 @@ From the previous axioms, several consequences can be determined. These include:
     <li style="margin-top:10px;"> For any event $A$ and event space $\{B_1, B_2, \ldots, B_m\}$ it holds that  $\Pr[A] = \sum_{i=1}^{m}\Pr[A\cap B_i] = \sum_{i=1}^{m}\Pr[AB_i]$. </li>
 </ol>
 
-In 5., $\Pr[AB_i]$ indicates the probability of both events $A$ and $B_i$ occurring, that is the intersection.
+In 5., $\Pr[AB_i]$ indicates the probability of both events $A$ and $B_i$ occurring, that is the intersection. This also often indicated as $\Pr[A, B_i]$. So $\Pr[A \cap B_i] = \Pr[AB_i] = \Pr[A, B_i]$
 
 The first consequence is rather straightforward. The probability of observing an outcome that is in the null event equals 0, because it reflects the chance that we observe nothing. This is not the case, since our observations are inevitably in the sample space.
 
@@ -215,7 +215,7 @@ The last consequence can be explained with the help of Fig. 3. The event $A$ can
   <figure>
     <img
       src="/../files/7.Images/math/probability/event_space.svg"
-      alt="Visualization of a sample space, separated in an event space $\{B_1, B_2, B_3, B_4\}$, with an event $A$ that can be split up in different segments."
+      alt="Visualization of a sample space"
     />
     <figcaption class="numbered">
       Visualization of a sample space, separated in an event space $\{B_1, B_2, B_3, B_4\}$, with an event $A$ that can be split up in different segments.
@@ -226,7 +226,8 @@ The last consequence can be explained with the help of Fig. 3. The event $A$ can
 
 <div class="example">
 <h4> Exercise </h4>
-A company has a model of telephone usage. It classifies all calls as either long ($\textit{l}$), if they last more than three minutes, or brief $\textit{b}$). It also observes whether calls carry voice ($\textit{v}$), data ($\textit{d}$), or fax ($\textit{f}$). This model implies an experiment in which the procedure is to monitor a call and the observation consists of the type of call, $\textit{v, d}$, or $\textit{f}$ , and the length, $\textit{l}$ or $\textit{b}$. The sample space has six outcomes S = $\{lv, bv, ld, bd, lf, bf\}$. In this problem, each call is classifed in two ways: by length and by type. Using L for the event that a call is long and B for the event that a call is brief, ${L, B}$ is an event space. Similarly, the voice (V), data (D) and fax (F) classification is an event space ${V, D, F}$. The sample space can be represented by a table in which the rows and columns are labeled by events and the intersection of each row and column event contains a single outcome. The corresponding table entry is the probability of that outcome. Given the sample space representade by the table below,
+
+A company has a model of telephone usage. It classifies all calls as either long ($\textit{l}$), if they last more than three minutes, or brief ($\textit{b}$). It also observes whether calls carry voice ($\textit{v}$), data ($\textit{d}$), or fax ($\textit{f}$). This model implies an experiment in which the procedure is to monitor a call and the observation consists of the type of call, $\textit{v, d}$, or $\textit{f}$ , and the length, $\textit{l}$ or $\textit{b}$. The sample space has six outcomes S = $\\{lv, bv, ld, bd, lf, bf\\}$. In this problem, each call is classifed in two ways: by length and by type. Using L for the event that a call is long and B for the event that a call is brief, $\\{L, B\\}$ is an event space. Similarly, the voice (V), data (D) and fax (F) classification is an event space $\\{V, D, F\\}$. The sample space can be represented by a table in which the rows and columns are labeled by events and the intersection of each row and column event contains a single outcome. The corresponding table entry is the probability of that outcome. Given the sample space representade by the table below,
 
 <table
 style="width:100px"
@@ -365,7 +366,7 @@ Why is this particular notation so useful? The answer requires you to think in a
 Bayes' theorem originates from a thought experiment, in which Bayes imagines to be sitting with his back at a perfectly flat, square table and he asks his assistant to throw a ball onto the table. The ball can land anywhere on the table, but Bayes wanted to guess where the ball was without looking at it. Then, he would ask the assistant to throw another ball on the table, and asked him whether the second ball fell to the left, right, up or down compared to the first one; he would note this down. Then, he would repeat this a number of times, and by doing so he could keep updating his belief on where the first ball was. Although he could never be completely certain, with each piece of evidence, he would a more accurate answer on the position of the first ball.
 Bayes' theorem was in fact never meant as a static formula to be used once and put aside, but rather as a tool to keep updating our estimate as our knowledge about the experiment grows.
 
-For a better undestanding of Bayes' rule, you may take a look at the example below and try to solve the following exercise.
+For a better undestanding of Bayes' rule, you may take a look at the video and example below and try to solve the following exercise.
 
 <div class="video-container">
 <iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/OqmJhPQYRc8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
@@ -421,11 +422,11 @@ Now the probability is more than 65%. This example shows how through Bayes' thor
 
 
 ### Independence
-Besides the definitions encountered throughout the reader, there is one other important definition in the field of probability theory called independence. Two events $A$ and $B$ are independent <i>if and only if</i> the following holds
-\begin{equation}
+Another important definition in the field of probability theory is called independence. Two events $A$ and $B$ are independent <i>if and only if</i> the following holds
+\begin{equation}\label{eq:ind}
     \Pr[AB] = \Pr[A]\Pr[B],
 \end{equation}
-which is equivalent to $\Pr[A|B] = \Pr[A]$ and $\Pr[B|A] = \Pr[B]$. These equalities simply mean that the probability of an event $A$ remains exactly the same after observing an event $B$, or vice versa. In other words, we do not get additional information through the occurrence of event $B$. Combining the previous two equations with the conditional probabilities gives rise to this independence condition.
+which is equivalent to $\Pr[A|B] = \Pr[A]$ and $\Pr[B|A] = \Pr[B]$. These equalities simply mean that the probability of an event $A$ remains exactly the same after observing an event $B$, or vice versa. In other words, we do not get additional information through the occurrence of event $B$. Combining the previous two equations with the conditional probabilities gives equation (\ref{eq:ind}).
 
 Note that independent is not the same as disjoint! It is possible that events are both disjoint as independent, but this does not have to be the case. For example, if we chose randomly people aged between 20 to 30 years, the event of choosing a male person and the event of choosing a person aged 22 are independent but not disjoint.
 
@@ -444,7 +445,7 @@ From this we may automatically conclude that pairwise independence (constraint 1
 Let us come back once more to the example of tossing a coin twice and the event $A_2=\\{hh\\}$. How can we use the notion of independence to come to calculate $\Pr[A_2]$?
 
 We know that the probability of flipping one head in a single coin toss is $\Pr[A_1=\\{h\\}] = 0.5$.
-Then, assuming that the two coin tosses are independent (no reason to think otherwise) we can use Eq. (9) to calculate
+Then, assuming that the two coin tosses are independent (no reason to think otherwise) we can use Eq. (\ref{eq:ind}) to calculate
 
 \begin{equation*}
 \Pr[A_2] = \Pr[A_1] \Pr[A_1] = 0.5 \cdot 0.5 = 0.25.
