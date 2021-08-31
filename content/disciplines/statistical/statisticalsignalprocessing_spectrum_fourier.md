@@ -29,7 +29,7 @@ The Fourier series expansion is a method in which a continuous-time signal is de
 
 \begin{equation}\label{eq:FS}
     \alpha_k = \frac{1}{T_0}\int_0^{T_0} x(t)e^{-j2\pi F_0 kt}\mathrm{d}t
-    \ \circ  \hspace{-1.5mm} - \hspace{-1.5mm} \circ \
+  \Longleftrightarrow
     x(t) = \sum_{k=-\infty}^\infty \alpha_k e^{j2\pi F_0 kt }
 \end{equation}
 
@@ -41,7 +41,7 @@ Whereas the Fourier series only calculates the coefficients of the sinusoidal si
 
 \begin{equation}\label{eq:FTC}
     X(f)=\int_{-\infty}^{\infty} x(t) e^{-j2 \pi f t}  \mathrm{d} t
-    \ \circ  \hspace{-1.5mm} - \hspace{-1.5mm} \circ \
+  \Longleftrightarrow
     x(t) = \int_{-\infty}^{\infty} X(f) e^{j2 \pi f t} \mathrm{d} f
 \end{equation}
 
@@ -54,7 +54,7 @@ The application of the Fourier Series for continuous-time signals is usually lim
 \begin{equation}
     X(e^{j\theta}) =
     \sum_{n=- \infty}^{\infty} x[n] e^{-jn\theta}
-     \ \circ  \hspace{-1.5mm} - \hspace{-1.5mm}  \circ \
+     \Longleftrightarrow
 x[n] = \frac{1}{2 \pi} \int_{-\pi}^{\pi} X(e^{j\theta}) e^{jn\theta} \mathrm{d} \theta
 \end{equation}
 
@@ -66,7 +66,7 @@ Although the Fourier transform for discrete-time signals gives a very good repre
 
 \begin{equation}
     X_p[k] = \sum_{n=0}^{N-1} x_p[n] e^{-j\frac{2 \pi}{N} k n}
-\ \circ  \hspace{-1.5mm} - \hspace{-1.5mm}  \circ \
+\Longleftrightarrow
 x_p[n] = \frac{1}{N} \sum_{k=0}^{N-1} X_p[k] e^{j\frac{2 \pi}{N} k n}  
 \end{equation}
 
