@@ -19,7 +19,6 @@ type = "docs"  # Do not modify.
 
 We previously saw that the auto-correlation function of a zero-mean white noise process was a Dirac delta pulse. The existence of the delta pulse can be proven by the fact that the noise is white, meaning that is uniformly distributed over its power spectrum. In order to make the link between the auto-correlation function and the power spectrum, first the Fourier transform for discrete-time signals needs to be introduced.
 
-<br></br>
 ## The Fourier transform for discrete-time signals
 First it is important to give a quick recap of the Fourier transform for discrete-time signals. A more detailed description of this transform can be found <a href="..\..\..\disciplines\discrete\discretesignalprocessing_transforms_ftd_main">here</a>.
 
@@ -52,11 +51,11 @@ The average signal power $P_s$ is the average signal energy per sample and is si
 where a total of $N$ samples are averaged over.
 
 If an infinitely long signal has finite signal energy it is called an <i>energy signal</i>. Since the energy is finite and the time duration infinite, the average signal power is zero. An example of an energy signal is a short pulse that is transmitted only once.
-An infinitely long signal that has a finite average signal power is called a <i>power signal</i>. Because of the finite power that the signal carries over an infinitely long time, the total signal energy is also infinity. Any non-zero bounded signal that is infinitely-long can be regarded as a power signal.
+An infinitely long signal that has a finite average signal power is called a <i>power signal</i>. Because of the finite power that the signal carries over an infinitely long time, the total signal energy is infinite. Any non-zero bounded signal that is infinitely-long can be regarded as a power signal.
 
 <br></br>
 ## Power spectral density
-The average signal power yields a limited amount of information, because it is just a single number. Oftentimes it is desirable to know what frequencies are contributing the most to this signal power. This would for example allow for the detection of unwanted signals that cause interference. It is possible to calculate the <i>power spectral density</i> (PSD) of a signal from its Fourier transform of discrete-time signals, which represents the distribution of the signal power of the frequency spectrum. The power spectral density $P_X(e^{j\theta})$ is defined as the expected value of the squared Fourier transform of $x[n]$, normalized with the number of signal samples as
+The average signal power yields a limited amount of information, because it is just a single number. Oftentimes it is desirable to know how the signal power is distributed over frequencies, and which frequencies are contributing the most to this signal power. This would for example allow for the detection of unwanted signals that cause interference. It is possible to calculate the <i>power spectral density</i> (PSD) of a signal from its Fourier transform of discrete-time signals, which represents the distribution of the signal power of the frequency spectrum. The power spectral density $P_X(e^{j\theta})$ is defined as the expected value of the squared Fourier transform of $x[n]$, normalized with the number of signal samples as
 \begin{equation}\label{eq:psd}
     P_X(e^{j\theta}) = \lim_{N\rightarrow \infty} \frac{1}{2N+1} \mathrm{E}\left[\Big| \sum_{n=-N}^N x[n]e^{-jn\theta}\Big|^2\right].
 \end{equation}
@@ -75,6 +74,23 @@ Similarly holds the opposite
 \begin{equation}\label{eq:corrpsd}
     r_X[l] = \frac{1}{2\pi} \int_{-\pi}^\pi P_X(e^{j\theta})e^{jl\theta} \mathrm{d}\theta.
 \end{equation}
+
+Some important properties of the PSD are:
+<ul>
+<li> The PSD is real-valued periodic funtion of frequency $2\pi$</li>
+<li> if the random signal $x[n]$ is real valued, then $P_X(e^{j\theta})$ is even, that is $P_X(e^{j\theta}) =P_X(e^{-j\theta})$ </li>
+<li> The area under the PSD is non-negative and it equals the average power of $x[n]$:</li>
+\begin{equation}
+\frac{1}{2\pi} \int_{-\pi}^\pi P_X(e^{j\theta}) \mathrm{d}\theta = r_x[0] = E\{|x[n]|^2\} \geq 0.
+\end{equation}
+</ul>
+
+For the special case of zero-mean white noise, it follows that the power spectral density is the same over all frequencies, with constant value given by the variance of $x[n]$:
+\begin{equation}
+r_n[l] = \sigma_n^2\delta[l] \Longleftrightarrow  P_X(e^{j\theta}) = \sigma_n^2 \hspace{0.5cm} \forall \theta
+\end{equation}
+</ul>
+
 
 ### Example
 Suppose we would like to calculate the power spectral density of a zero-mean wide-sense stationary random process $x[n]$, whose auto-correlation function is given as $r_X[l] = \alpha^{|l|}$ with $-1 <\alpha <1$.
@@ -135,15 +151,15 @@ Both functions of (a) and (b) are indeed real and $\geq 0$.</li>
 ## Cross-power spectral density
 The power spectral density as discussed up until now was just the auto power spectral density, since it corresponded with the auto-correlation function. Similarly the cross-power spectral density of two random processes can be defined, showing the relationship between two random processes in the frequency domain as
 \begin{equation}
-    P_{XY}(e^{j\theta}) = \sum_{l=-\infty}^\infty r_{XY}[l]e^{-jl\theta}\ \ \circ\hspace{-1.3mm} - \hspace{-1.3mm}\circ \ \ r_{XY}[l] = \frac{1}{2\pi}\int_{-\pi}^{\pi} P_{XY}(e^{j\theta})e^{jl\theta}\mathrm{d}\theta.
+    P_{XY}(e^{j\theta}) = \sum_{l=-\infty}^\infty r_{XY}[l]e^{-jl\theta}\ \ \Longleftrightarrow r_{XY}[l] = \frac{1}{2\pi}\int_{-\pi}^{\pi} P_{XY}(e^{j\theta})e^{jl\theta}\mathrm{d}\theta.
 \end{equation}
 Because of the complex conjugate symmetry property of the correlation function we may at the same time conclude that
 \begin{equation}
-    r_{XY}[l] = r_{YX}^\ast [-l] \ \ \circ\hspace{-1.3mm} - \hspace{-1.3mm}\circ \ \  P_{XY}(e^{j\theta}) = P_{YX}^\ast (e^{j\theta}).
+    r_{XY}[l] = r_{YX}^\ast [-l] \Longleftrightarrow  P_{XY}(e^{j\theta}) = P_{YX}^\ast (e^{j\theta}).
 \end{equation}
 
 <br></br>
-## Coherence functions
+## Coherence function
 As was already discussed in the section on the correlation coefficient, the cross-correlation function depends a lot on the individual signal amplitudes. This is also the case for the cross-power spectral density function. In order to generalize the cross-power spectral density function for all types of signals, the coherence function is introduced as
 \begin{equation}
     C_{XY}(e^{j\theta}) = \frac{P_{XY}(e^{j\theta})}{\sqrt{P_{X}(e^{j\theta})}\sqrt{P_{Y}(e^{j\theta})}}
