@@ -261,13 +261,7 @@ The signal-to-noise ratio of this output signal can be calculated as the squared
 \end{equation}
 Here we used the fact that the noise was distributed with zero mean in determining the covariance matrix as $\bf{\Sigma}=\mathrm{E}\left[\bf{\epsilon\epsilon}^\top\right]$.
 
-In order to show how we can maximize the SNR, we need to make use of the Cauchy-Schwarz inequality. The theory of this inequality is beyond the scope of this reader, however, in order to provide some intuition on how it works, an example is provided. An application of this inequality is the triangle inequality, which states that for an triangle with sides that are spanned by the vectors $x$, $y$, and $x+y$ the following holds:
-\begin{equation}
-    \|x+y\| \leq \|x\| + \|y\|,
-\end{equation}
-where $\|\cdot\|$ denotes the length of the vector. This inequality simply means that the length of the longest side of the triangle is always less or equal than the combined length of the two minor sides. Equality only occurs if the vectors $x$ and $y$ point in the exact same direction.
-
-The application of the Cauchy-Schwarz inequality for our case states that
+In order to show how we can maximize the SNR, we need to make use of the Cauchy-Schwarz inequality. The application of the Cauchy-Schwarz inequality for our case states that
 \begin{equation}
     \left(\bf{h}^\top\bf{s}\right)^2 \leq \left(\bf{h}^\top \bf{h}\right)\left(\bf{s}^\top\bf{s}\right)
 \end{equation}

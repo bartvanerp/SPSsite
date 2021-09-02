@@ -72,47 +72,48 @@ To find the MVUE for linear signals in Gaussian noise, we will take advantage of
 see module on the CRLB. To obtain the derivative of the log-likelihood function, we need first to determine the probability density function of the observations. For the linear signal model embedded in additive Gaussian noise, our observations are modeled as
 \begin{equation}
  \mathbf{x} = \mathbf{H}\boldsymbol\theta  + \mathbf{w},
+ \label{eq:linear_model}
 \end{equation}
-where $\mathbf{w}$ is zero mean noise with covariance matrix $\mathbf{\Sigma}$, i.e.,
-$\mathbf{w} \sim \mathcal{N}(\mathbf{0},\mathbf{\Sigma})$. Thus, the PDF of the observation vector is
+where $\mathbf{w}$ is zero mean noise with covariance matrix $\mathbf{C}$, i.e.,
+$\mathbf{w} \sim \mathcal{N}(\mathbf{0},\mathbf{C})$. Thus, the PDF of the observation vector is
 \begin{equation}
-p(\mathbf{x},\boldsymbol\theta) = \frac{1}{|2\pi\mathbf{\Sigma}|^{\frac{1}{2}}}\exp\\left(-\frac{1}{2}(\mathbf{x-\mathbf{H}\boldsymbol\theta})^T\mathbf{\Sigma}^{-1}(\mathbf{x-\mathbf{H}\boldsymbol\theta})\\right).
+p(\mathbf{x},\boldsymbol\theta) = \frac{1}{|2\pi\mathbf{C}|^{\frac{1}{2}}}\exp\\left(-\frac{1}{2}(\mathbf{x-\mathbf{H}\boldsymbol\theta})^T\mathbf{C}^{-1}(\mathbf{x-\mathbf{H}\boldsymbol\theta})\\right).
 \end{equation}
 
 The corresponding log-likelihood function is
 \begin{equation}
-  l(\mathbf{x};\boldsymbol\theta) = -\frac{1}{2}\ln|2\pi \mathbf{\Sigma}|-\frac{1}{2}(\mathbf{x-\mathbf{H}\boldsymbol\theta})^T\mathbf{\Sigma}^{-1}(\mathbf{x-\mathbf{H}\boldsymbol\theta}),
+  l(\mathbf{x};\boldsymbol\theta) = -\frac{1}{2}\ln|2\pi \mathbf{C}|-\frac{1}{2}(\mathbf{x-\mathbf{H}\boldsymbol\theta})^T\mathbf{C}^{-1}(\mathbf{x-\mathbf{H}\boldsymbol\theta}),
 \end{equation}
 which after expanding the second term becomes
 \begin{equation}
-  l(\mathbf{x};\boldsymbol\theta)= -\frac{1}{2}\ln|2\pi \mathbf{\Sigma}|-\frac{1}{2}\\left(\mathbf{x}^T\mathbf{\Sigma}^{-1}\mathbf{x}-\mathbf{x}^T\mathbf{\Sigma}^{-1}\mathbf{H}\boldsymbol\theta -\boldsymbol\theta^T \mathbf{H}^T \mathbf{\Sigma}^{-1}\mathbf{x} + \boldsymbol\theta^T \mathbf{H}^T \mathbf{\Sigma}^{-1}\mathbf{H}\boldsymbol\theta\\right).
+  l(\mathbf{x};\boldsymbol\theta)= -\frac{1}{2}\ln|2\pi \mathbf{C}|-\frac{1}{2}\\left(\mathbf{x}^T\mathbf{C}^{-1}\mathbf{x}-\mathbf{x}^T\mathbf{C}^{-1}\mathbf{H}\boldsymbol\theta -\boldsymbol\theta^T \mathbf{H}^T \mathbf{C}^{-1}\mathbf{x} + \boldsymbol\theta^T \mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}\boldsymbol\theta\\right).
 \end{equation}
 
 The gradient of the log-likelihood function is
 \begin{equation}
-\frac{\partial}{\partial\boldsymbol\theta}l(\mathbf{x};\boldsymbol\theta)=\mathbf{H}^T\mathbf{\Sigma}^{-1}\mathbf{x}-\mathbf{H}^T \mathbf{\Sigma}^{-1}\mathbf{H}\boldsymbol\theta,
+\frac{\partial}{\partial\boldsymbol\theta}l(\mathbf{x};\boldsymbol\theta)=\mathbf{H}^T\mathbf{C}^{-1}\mathbf{x}-\mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}\boldsymbol\theta,
 \label{eq:part_ll}
 \end{equation}
-and if $\mathbf{H}^T \mathbf{\Sigma}^{-1}\mathbf{H}$ is invertible, we further have
+and if $\mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}$ is invertible, we further have
 \begin{equation}
-\frac{\partial}{\partial\boldsymbol\theta}l(\mathbf{x};\boldsymbol\theta) =\mathbf{H}^T \mathbf{\Sigma}^{-1}\mathbf{H}\\left(\\left(\mathbf{H}^T \mathbf{\Sigma}^{-1}\mathbf{H}\\right)^{-1}\mathbf{H}^T\mathbf{\Sigma}^{-1}\mathbf{x}-\boldsymbol\theta\\right).
+\frac{\partial}{\partial\boldsymbol\theta}l(\mathbf{x};\boldsymbol\theta) =\mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}\\left(\\left(\mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}\\right)^{-1}\mathbf{H}^T\mathbf{C}^{-1}\mathbf{x}-\boldsymbol\theta\\right).
 \label{eq:MLE_lin_col}
 \end{equation}
 By comparing \eqref{eq:MLE_lin_col} with \eqref{eq:equality}, we recognize the Fisher information matrix
 \begin{equation}
-\mathbf{I}(\boldsymbol\theta) = \mathbf{H}^T \mathbf{\Sigma}^{-1}\mathbf{H}
+\mathbf{I}(\boldsymbol\theta) = \mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}
 \end{equation}
 and the estimator
 \begin{equation}
-g(\mathbf{x})= \\left(\mathbf{H}^T \mathbf{\Sigma}^{-1}\mathbf{H}\\right)^{-1}\mathbf{H}^T\mathbf{\Sigma}^{-1}\mathbf{x}.
+g(\mathbf{x})= \\left(\mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}\\right)^{-1}\mathbf{H}^T\mathbf{C}^{-1}\mathbf{x}.
 \end{equation}
 We found an efficient estimator, and thus, an MVUE. In the module on the MLE, we also stated that if an efficient estimator exits, it is the MLE, which is easily verified by equating \eqref{eq:part_ll} with zero and solving for $\boldsymbol\theta$.
 
 ## MVUE for Linear Models in White Additive Gaussian Noise
 
-So far, we have assumed that our noise is colored, i.e., that our noise sample are correlated. For the case of additive white Gaussian noise we can reuse the above result. Therefore, we assume that our individual noise samples are IID with zero mean and variance $\sigma^2$. In this case, the covariance matrix $\mathbf{\Sigma}$ is a diagonal matrix with elements $\sigma^2$ on the main diagonal, i.e.,
+So far, we have assumed that our noise is colored, i.e., that our noise sample are correlated. For the case of additive white Gaussian noise we can reuse the above result. Therefore, we assume that our individual noise samples are IID with zero mean and variance $\sigma^2$. In this case, the covariance matrix $\mathbf{C}$ is a diagonal matrix with elements $\sigma^2$ on the main diagonal, i.e.,
 \begin{equation}
-\mathbf{\Sigma} = \sigma^{2}\mathbf{I}
+\mathbf{C} = \sigma^{2}\mathbf{I}
 \label{eq:covariance}
 \end{equation}
 Substitung \eqref{eq:covariance} in \eqref{eq:MLE_lin_col} yields
@@ -223,7 +224,7 @@ So far, we have derived the MVUE for linear signal models with AWGN. In many app
 \begin{equation}
 \hat{\boldsymbol\theta} =\mathbf{Ax}.
 \end{equation}
-Depending on the choice of the $\mathbf{A}$'s coefficients, different estimators can be obtained. Among all linear estimators, we seek an estimator that is unbiased and has minimum variance. The estimator which fulfills these properties is called the <b>best linear unbiased estimator (BLUE)</b>.
+Here, we assume that $N$ observations are available and that we seek to estimate $K$ unknown parameter with $N>P$. Thus, $\mathbf{A}$ is of size $K\times N$. Depending on the choice of the $\mathbf{A}$'s coefficients, different estimators can be obtained. Among all linear estimators, we seek an estimator that is unbiased and has minimum variance. The estimator which fulfills these properties is called the <b>best linear unbiased estimator (BLUE)</b>. The BLUE, as we will see, is also applicable, if limited knowledge about the PDF of the observation is available.
 
 To find the BLUE, we have to start from the assumptions at hand; that the estimator has zero bias and minimum variance. The zero bias condition is formulated as
 \begin{equation}
@@ -271,4 +272,8 @@ The covariance matrix for the estimate $\hat{\boldsymbol\theta}$ is
 \begin{equation}
 \\mathbf{C}_{\hat{\boldsymbol\theta}}=(\mathbf{H}^T\mathbf{C}^{-1}\mathbf{H})^{-1}.
 \end{equation}
-Note that the BLUE indeed refers only to the covariance matrix of the noise, and it is actually the same expression as the MVUE for linear models and additive Gaussian noise.
+
+Note that the BLUE is the MVUE for the linear model in \eqref{eq:linear_model}. This follows directly from the unbiased constraint
+\begin{equation}
+ \mathbb{E}[\mathbf{x}] = \mathbb{E}[\mathbf{H}\boldsymbol\theta  + \mathbf{w}] = \mathbf{H}\boldsymbol\theta.
+\end{equation}

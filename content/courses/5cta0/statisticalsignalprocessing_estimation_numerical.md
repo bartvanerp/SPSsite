@@ -27,20 +27,20 @@ For each estimator we investigate in this course, we introduce the formal descri
 </div>
 
 ## Grid Search
-Closed-form solutions for estimators like the MLE or the LSE only exist for particular cases such as linear signal models. For all other cases, we have to resort to other methods to find the estimate. For the MSE, for example, we can evaluate the likelihood function numerically at equally spaced points for the parameter vector $\boldsymbol\theta$. If we choose the spacing between the points sufficiently small, we can find a value very close to the real solution. This method is referred to as grid search. The application of the gird search, however, is restricted to simple problems. For example, if the range of possible values for the parameter is unbounded, the grid search becomes infeasible.
+Closed-form solutions for estimators like the MLE or the LSE only exist for particular cases such as linear signal models. For all other cases, we have to resort to other methods to find the estimate. For the MSE, for example, we can evaluate the likelihood function numerically at equally spaced points for the parameter vector $\boldsymbol\theta$. If we choose the spacing between the points sufficiently small, we can find a value close to the real solution. This method is referred to as grid search. The application of the gird search, however, is restricted to simple problems. For example, if the range of possible values for the parameter is unbounded, the grid search becomes infeasible.
 
 ## The Newton-Raphson Method
-The Newton-Raphson method is a method to approximate a function at a given point or to solve an equation. In maximum likelihood estimation, we want to solve the likelihood equation, and thus, we are interested in particular in the latter case application. The idea is to approximate the function's behavior at a particular point by a linear function. The slope of the linear function is determined by the derivative of the function at this point. Thus, the function is approximated as
+The Newton-Raphson method is a method to approximate a function at a given point or to solve an equation. In maximum likelihood estimation, we want to solve the likelihood equation, and thus, we are interested in particular in the latter case application. The idea is to approximate the function's behavior at a particular point by a linear function. The derivative of the function determines the slope of the linear function at this point. Thus, the function is approximated as
 \begin{equation}
 f(x)=f(a)+f'(a)(x-a),
 \label{eq:approx}
 \end{equation}
 where $f'(a)$ denotes the derivative of $f(x)$ evaluated at point $a$. In the particular case of solving the equation $f(x)=0$, we obtain
 \begin{equation}
-x = a - \frac{f(a)}{f'(a)}
+x = a - \frac{f(a)}{f'(a)}.
 \end{equation}
 
-While the solution to the equation above is closer to the actual zero of the function, there is still room for improvement. The approximation can be utilized again, this time the first derivative is evaluated on the new estimate. The iterative formulation is
+While the solution to the equation above is closer to the actual zero of the function, there is still room for improvement. The approximation can be utilized again. This time the first derivative is evaluated on the new estimate. The iterative formulation is
 \begin{equation}
 x_{m+1}=x_m-\frac{f(x_m)}{f'(x_m)}
 \end{equation}
@@ -48,7 +48,7 @@ A solution is found if $x_{m+1}=x_m$. Note that, depending on the starting point
 
 ### Newton-Raphson Method for Maximum Likelihood Estimation
 
-We consider the Newton-Raphson method for the MLE, where it is used to numerically calculate the parameter value at which the derivative of the log-likelihood function is zero. Thus, we will be dealing with both the first and the second derivative of the log-likelihood function. The iterative MLE for the parameter vector $\theta$ is
+We consider the Newton-Raphson method for the MLE, where it is used to numerically calculate the parameter value at which the derivative of the log-likelihood function is zero. Thus, we will be dealing with both the first and the second derivatives of the log-likelihood function. The iterative MLE for the parameter vector $\theta$ is
 \begin{equation}
 \theta_{m+1}=\theta_m-\\left(\frac{\partial^2 \ln p(\mathbf{x};\theta)}{\partial\theta^2}\Bigg|_{\theta=\theta_m}\\right)^{-1}\frac{\partial \ln p(\mathbf{x};\theta)}{\partial\theta}\Bigg|_{\theta=\theta_m}.
 \end{equation}
@@ -125,37 +125,30 @@ where $\mathbf{H}(\boldsymbol\theta)$ is the Jacobian matrix with elements
 Starting from an initial value $\boldsymbol\theta_0$, the LSE can be iteratively calculated to converge to a minimum value. Of course, there have to be <i>criteria to stop the iterations</i>, such as a limited change in the parameter estimate, i.e., $(\boldsymbol\theta_{m+1}-\boldsymbol\theta_m)^T(\boldsymbol\theta_{m+1}-\boldsymbol\theta_m)<\epsilon$, and reaching a maximum number of iterations. The selection of the initial parameter vector $\boldsymbol\theta_0$ can be based on a grid search over the squared error function to ensure the numerical solution begins close to the global maximum.
 
 
-## Sequential Least Squares and Best Linear Unbiased Estimators
+## Sequential Least Squares
 
+In some applications, the data is sampled and processed in real-time. Instead of running the estimator repeatedly with ever-increasing data size, it is useful to have an estimator that allows updating the estimate using the latest data samples only. It is possible to formulate the LSE in this manner. For LSE, we look for a relation between estimates $\hat{\boldsymbol\theta}\_{N-1}$ and $\hat{\boldsymbol\theta}_{N}$, representing the estimate with $N-1$ data points and $N$ data points, respectively. If the noise has zero mean with some known covariance, we can formulate an estimator that sequentially updates both the estimate and covariance.
 
-In some applications, the data is sampled and processed in real-time. Instead of running the estimator repeatedly with ever-increasing data size, it is useful to have an estimator that allows updating the estimate using the latest data samples only. It is possible to formulate the LSE and the BLUE in this manner. For LSE, we look for a relation between the estimates $\hat{\boldsymbol\theta}\_{N-1}$ and $\hat{\boldsymbol\theta}_{N}$, which represent the estimate with $N-1$ data points and $N$ data points, respectively. In least-squares estimation, we do not have a noise model; however, if we know that the noise has zero mean with some known covariance, we can formulate a BLUE estimator that updates both the estimate and covariance for the estimate sequentially.
-
-The starting point is the squared error function:
-\begin{equation}
-J(\boldsymbol\theta)=(\mathbf{x}-\mathbf{H}\boldsymbol\theta)^T\mathbf{C}^{-1}(\mathbf{x}-\mathbf{H}\boldsymbol\theta),
-\end{equation}
-where $\mathbf{C}$ is the noise covariance matrix. The inverse of the noise covariance matrix is used as the weight matrix in the weighted LSE, i.e., when the noise variance is known for each data sample, those samples with higher variance can be assigned less weight to reduce their influence on the estimation. The LSE is found to be
+We consider the WLSE  with weights $\mathbf{C}^{-1}$, which is
 \begin{equation}
 \hat{\boldsymbol\theta}=(\mathbf{H}^T\mathbf{C}^{-1}\mathbf{H})^{-1}\mathbf{H}^T\mathbf{C}^{-1}\mathbf{x}.
 \end{equation}
-Note that the LSE is actually the BLUE, so we can use the Gauss-Markov theorem to calculate the covariance for our estimate:
+From the Gauss-Markov theorem, we can calculate the covariance for our estimate:
 \begin{equation}
 \mathbf{C}_{\hat{\boldsymbol\theta}}=(\mathbf{H}^T\mathbf{C}^{-1}\mathbf{H})^{-1}.
 \end{equation}
 
-The important condition to compute both the estimate $\hat{\boldsymbol\theta}$ and its covariance is the noise being uncorrelated, which corresponds to a diagonal noise covariance matrix. Under this condition, the sequential LSE/BLUE is
+The important condition to compute the estimate $\hat{\boldsymbol\theta}$ and its covariance is uncorrelated noise, which corresponds to a diagonal noise covariance matrix. Under this condition, the sequential LSE is
 \begin{equation}
 \hat{\boldsymbol\theta}\_{N}=\hat{\boldsymbol\theta}\_{N-1}+\mathbf{K}\_{N}\big(x[N]-\mathbf{h}^T[N]\hat{\boldsymbol\theta}\_{N-1}\big)
 \end{equation}
-where $\mathbf{h}^T[N]$ is the $N^\text{th}$ row of the observation matrix $\mathbf{H}$ when the corresponding data sample $x[N]$ is acquired. The term $x[N]-\mathbf{h}^T[N]\hat{\boldsymbol\theta}\_{N-1}$ is the innovation, which is the difference between the data sample $x[N]$ and the estimate we have for that data sample, which is $\mathbf{h}^T[N]\hat{\boldsymbol\theta}\_{N-1}$. Based on our estimated parameter $\hat{\boldsymbol\theta}\_{N-1}$ after the $N^\text{th}$ data sample, we come up with an estimate for the $N+1^\text{th}$ sample we acquire. For BLUE, the estimate is updated according to the innovation and a gain term $\mathbf{K}\_{N}$, which is calculated as
+where $\mathbf{h}^T[N]$ is the $N^\text{th}$ row of the observation matrix $\mathbf{H}$ when the corresponding data sample $x[N]$ is acquired. The term $x[N]-\mathbf{h}^T[N]\hat{\boldsymbol\theta}\_{N-1}$ is the innovation, which is the difference between the data sample $x[N]$ and the estimate we have for that data sample, which is $\mathbf{h}^T[N]\hat{\boldsymbol\theta}\_{N-1}$. Based on our estimated parameter $\hat{\boldsymbol\theta}\_{N-1}$ after the $N^\text{th}$ data sample, we come up with an estimate for the $N+1^\text{th}$ sample we acquire. The estimate is updated according to the innovation and a gain term $\mathbf{K}\_{N}$, which is calculated as
 \begin{equation}
 \mathbf{K}\_{N}=\frac{\mathbf{C}\_{\hat{\theta},N-1}\mathbf{h}[N]}{\sigma_{N}^2+\mathbf{h}^T[N]C_{\hat{\theta},N-1}\mathbf{h}[N]}
 \end{equation}
-For LSE, it is possible to lack information on the noise variance altogether. Thus, we need a gain term that does not depend on the noise covariance. It is obtained by replacing the noise covariance matrix $\mathbf{C}$ in the gain expression with the term $(\mathbf{H}^T\mathbf{H})^{-1}$ and replacing the sample variance term $\sigma_N^2$ by 1. The observation matrix $\mathbf{H}$ belongs to the signal model for the $N$ data samples preceding the current data sample $x[N]$.
 
-Finally, for BLUE the covariance is updated as
-\begin{eqnarray*}
-\mathbf{C}\_{\hat{\theta},N}=(\mathbf{I}-\mathbf{K}\_N \mathbf{h}^T[N])\mathbf{C}_{\hat{\theta},N-1}
-\end{eqnarray*}
 
-The concepts of innovation, gain, and sequential update for the estimate form the core of other recursive filtering techniques such as the Kalman filter. The gain term is quite intuitive: The weight of the innovation depends on the relation between the sample variance and the estimator variance. If the sample variance is higher than the estimator variance, then the denominator of the gain term is dominated by the noise variance and the gain  $\mathbf{K}\_{N}$ is lower. Conversely, for lower noise variance, the innovation term is considered more reliable, and thus, the gain $\mathbf{K}\_{N}$ is larger. 
+Finally, the covariance matrix is updated as
+\begin{equation}
+\mathbf{C}\_{\hat{\theta},N}=(\mathbf{I}-\mathbf{K}\_N \mathbf{h}^T[N])\mathbf{C}_{\hat{\theta},N-1}.
+\end{equation}

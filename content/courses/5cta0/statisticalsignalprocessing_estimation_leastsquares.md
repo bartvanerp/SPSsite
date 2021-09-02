@@ -29,7 +29,7 @@ The concept of the least-squares estimation can be described as follows. A signa
 
 The least-squares estimate $\hat{\theta}\_{\text{LSE}}$ is the value of the parameter $\theta$ that minimizes \eqref{eq:ls_criterion}, i.e.,
 \begin{equation}
-	\hat{\theta}_{\text{LSE}} = \underset{\theta}{\operatorname{argmin}}J(\theta).
+	\hat{\theta}_{\text{LSE}} = \underset{\theta}{\operatorname{arg\\,min}}J(\theta).
 \end{equation}
 From this perspective, the least-squares estimator can be considered as an optimization problem of fitting a model to some available data.
 
@@ -148,6 +148,7 @@ The corresponding gradient is
 The minimum can be found by setting the gradient to zeros and solving for $\boldsymbol\theta$. The linear least-squares estimator is then
 \begin{equation}
     \hat{\boldsymbol\theta}\_{\text{LSE}} = (\mathbf{H}^T\mathbf{H})^{-1}  \mathbf{H}^T \mathbf{x},
+		\label{eq:LSE}
 \end{equation}
 which is referred to as <i>normal equation</i>. Returning to the electric car example, we have the special case of a single parameter $\theta$. In this case, the observation matrix becomes a vector with the distances $D[n]$ as its entries. The expression $\mathbf{H}^T\mathbf{H} = \sum_{n=0}^{N-1}D^2[n]$. Note that $\sum_{n=0}^{N-1}D^2[n]$ is a scalar and its inverse is $1/(\sum_{n=0}^{N-1}D^2[n])$. On the other hand, the expression $\mathbf{H}^T\mathbf{x}$ is $\sum_{n=0}^{N-1}x[n]D[n]$. Combining these two expressions we obtain the least-squares estimate in \eqref{eq:electric_car}.
 
@@ -196,7 +197,7 @@ with $\mathbf{0}$ denoting the zero vector.
 
 ### Weighted Least Squares Estimation
 
-For some estimation problems, we might want to reduce the influence of a portion of the data on our final estimate. For example, the data of the can be provided by different sensors. Moreover, some sensors may have a higher accuracy than others, and thus, we have more confidence in their measurement result. However, even though the other sensor measurement results are less accurate, they still provide some information. The different confidence in the measurement result can be incooperated in least-squares estimator by assigning them different weights, which leads to the weighted least-squares estimator. In general, we can express the weighted least-squares error criterion as
+For some estimation problems, we might want to reduce the influence of a portion of the data on our final estimate. For example, the data of the can be provided by different sensors. Moreover, some sensors may have a higher accuracy than others, and thus, we have more confidence in their measurement result. However, even though the other sensor measurement results are less accurate, they still provide some information. The different confidence in the measurement result can be incooperated in least-squares estimator by assigning them different weights, which leads to the weighted least-squares estimator (WLSE). In general, we can express the weighted least-squares error criterion as
 \begin{equation}
 J(\boldsymbol\theta) = (\mathbf{x}-\mathbf{H}\boldsymbol\theta)^T\mathbf{W}(\mathbf{x}-\mathbf{H}\boldsymbol\theta)
 \end{equation}
@@ -210,6 +211,23 @@ The weighted LSE is obtained by setting the gradient to zero, which yields
 \begin{equation}
 \hat{\boldsymbol\theta}_{\text{LSE}}=(\mathbf{H}^T\mathbf{W}\mathbf{H})^{-1}\mathbf{H}^T\mathbf{W}\mathbf{x}.
 \end{equation}
+
+### Gauss-Markov Theorem
+The Gauss-Markov theorem states that if the signal model is linear with additive noise, i.e.,
+\begin{equation}
+	\mathbf{x} = \mathbf{H}\boldsymbol\theta + \mathbf{w},
+\end{equation}
+where $\mathbf{w}$ has zero mean and covariance matrix $\mathbf{C}$, then the WLSE with weights $\mathbf{W} = \mathbf{C}^{-1}$ is the BLUE. The BLUE is then
+\begin{equation}
+\hat{\boldsymbol\theta}_{\text{LSE}}=(\mathbf{H}^T\mathbf{C}^{-1}\mathbf{H})^{-1}\mathbf{H}^T\mathbf{C}^{-1}\mathbf{x},
+\label{eq:GM}
+\end{equation}
+and the covariance matrix is
+\begin{equation}
+	\mathbf{C}\_{\hat{\boldsymbol\theta}} = \\left( \mathbf{H}^T\mathbf{C}^{-1}  \mathbf{H} \\right) ^{-1}.
+\end{equation}
+The variance of the individual estimates is given by the diagonal elements of the covariance matrix. Note that the theorem does not specify the actually distribution of the noise. Furthermore, if $\mathbf{C} = \sigma^2\mathbf{I}$, i.e., the noise is uncorrelated and has variance $\sigma^2$, then \eqref{eq:GM} simply is the LSE in \eqref{eq:LSE}
+
 
 
 

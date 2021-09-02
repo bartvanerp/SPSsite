@@ -20,7 +20,7 @@ type = "docs"  # Do not modify.
 We have seen that detection theory answers the question to whether something is there or not. This "something" can range from bits to aircrafts to malignant tissue. Detection theory gives us in the most simple case two options: there is no signal and there is a signal. This section will formalize this notion and will apply it to make decisions.
 
 <div class="video-container">
-<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/NzbTv7K27Xw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/bRZeH2GcwjE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
 
 <br></br>

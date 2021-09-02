@@ -48,7 +48,7 @@ where $\bar{x}$ is the sample mean, $\mu_0$ is the expected true mean under the 
 When observing $N$ new samples, the value calculated as $t$ provides us with information on how significantly the approximated mean value of the new samples deviates from the expected mean value under the null hypothesis.
 
 <div class="video-container">
-<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/sFd5d3j_3oo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
+<iframe width="100%"; height="100%"; src="https://www.youtube.com/embed/vwE8hC6Ok6k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
 </div>
 
 ### Derivation of the t-statistic
