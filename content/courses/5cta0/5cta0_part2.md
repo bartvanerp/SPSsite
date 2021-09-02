@@ -44,7 +44,7 @@ Typically, the base station sends a fixed and known training sequence of length 
 ---
 
 
-In general, we wish to determine an unknown parameter $\theta$. However, this parameter is not directly observable; instead, some observations are available, represented by a vector $\mathbf{x}$. These observations are random variables whose PDF depends on the unknown parameter. Thus, we denote the PDF as $p(\mathbf{x}; \boldsymbol\theta)$ to emphasize its dependency on the parameter $\theta$.
+In general, we wish to determine an unknown parameter $\theta$. However, this parameter is not directly observable; instead, some observations are available, represented by a vector $\mathbf{x}$. These observations are random variables whose PDF depends on the unknown parameter. Thus, we denote the PDF as $p(\mathbf{x}; \theta)$ to emphasize its dependency on the parameter $\theta$.
 
 
 ---

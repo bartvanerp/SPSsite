@@ -31,23 +31,23 @@ Finding the maximum can be achieved for simple problems analytically. However, f
 
 ## Maximum Likelihood Estimation
 
-Before defining the MLE, we define the likelihood function. The likelihood function is the PDF $p(\mathbf{x},\theta)$ for a given observation $\mathbf{x}$. Since we fix the observation $\mathbf{x}$, the PDF $p(\mathbf{x},\theta)$ depends only on the unknown parameter. The value of \theta that maximizes the likelihood function is the maximum likelihood estimate $\hat{\theta}\_{\text{ML}}$, i.e., \begin{equation}
+Before defining the MLE, we define the likelihood function. The likelihood function is the PDF $p(\mathbf{x},\theta)$ for a given observation $\mathbf{x}$. Since we fix the observation $\mathbf{x}$, the PDF $p(\mathbf{x};\theta)$ depends only on the unknown parameter. The value of $\theta$ that maximizes the likelihood function is the maximum likelihood estimate $\hat{\theta}\_{\text{ML}}$, i.e., \begin{equation}
 	\hat\theta_{\text{ML}} = \underset{\theta}{\operatorname{arg max}} p(\mathbf{x};\theta).
 \end{equation}
-In other words, the maximum likelihood estimate is the value of theta that most likely caused the observation $\mathbf{x}$. Note that depending on the estimation problem, no maximum or multiple maxima exist.
+In other words, the maximum likelihood estimate is the value of $\theta$ that most likely caused the observation $\mathbf{x}$. Note that depending on the estimation problem, no maximum or multiple maxima exist.
 
 
 ---
 <b>Example: </b>
 
-Let $x[0],x[1],\dots,x[N-1]$ be iid and uniformly distributed random variables with PDF
+Let $x[0],x[1],\dots,x[N-1]$ be IID random variables with PDF
 \begin{equation}
   p(x[i];\theta)  = \begin{cases}
         \theta^{-1}, & 0 \leq x[i] \leq \theta,\\\\\\
         0 & \text{else}.
   \end{cases}
 \end{equation}
-The unknown parameter $\theta>0$ determines the length of the interval. Due to the iid assumption, we further have that
+The unknown parameter $\theta>0$ determines the length of the interval. Due to the IID assumption, we further have that
 \begin{equation}
   p(\mathbf{x};\theta)  = \begin{cases}
         \theta^{-N}, & \text{if } 0 < x[i] < \theta \text{ for } 0\leq i \leq N-1 \\\\\\
@@ -62,7 +62,7 @@ The value of $\theta$ must be larger than or equal to the largest value in our o
         0 & \text{else}.
   \end{cases}
 \end{equation}
-The likelihood function is strictly monotonically decreasing function and is maximized by minimizing the value of $\theta$. However, since $\theta \geq \max(x[0],x[1],\dots,x[N-1]) $, we get
+The likelihood function is a strictly monotonically decreasing function and is maximized by minimizing the value of $\theta$. However, since $\theta \geq \max(x[0],x[1],\dots,x[N-1]) $, we get
 \begin{equation}
 \hat\theta_{\text{ML}} = \max(x[0],x[1],\dots,x[N-1]).
 \end{equation}
@@ -73,7 +73,7 @@ Instead of maximizing the likelihood function, we can also maximize the so-calle
 \begin{equation}
   l(\mathbf{x};\theta) = \ln p(\mathbf{x};\theta).
 \end{equation}
-Since the logarithm is a monotonically increasing function, $\ln p(\mathbf{x};\theta)$ and $p(\mathbf{x};\theta)$ have their maxima for the same value of $\theta$. If the log-likelihood function is differentiable and the maximum is at an interior point, we further have that the derivative is equal to zero a its maxima, i.e.,
+Since the logarithm is a monotonically increasing function, $\ln p(\mathbf{x};\theta)$ and $p(\mathbf{x};\theta)$ have their maxima for the same value of $\theta$. If the log-likelihood function is differentiable and the maximum is at an interior point, we further have that the derivative is equal to zero at its maxima, i.e.,
 \begin{equation}
 \\left.\frac{\partial}{\partial \theta} l(\mathbf{x};\theta) \\right\rvert_{\theta = \hat\theta_{\text{ML}}} = 0.
 \label{eq:log_ll_max}
@@ -124,7 +124,7 @@ Moreover, $\hat\theta_{\text{ML}}$ is asymptotically normal. Combining these pro
 \end{equation}
 i.e., the MLE is asymptotically consistent and the maximum likelihood estimate is normal distributed.
 
-For some specific problems, we are interest in finding a transformed parameter $\psi(\theta)$, i.e., a parameter which depends on $\theta$. If $\psi$ is a one-to-one mapping, then the maximum likelihood estimate of $\psi$ is
+For some specific problems, we are interested in finding a transformed parameter $\psi(\theta)$, i.e., a parameter which depends on $\theta$. If $\psi$ is a one-to-one mapping, then the maximum likelihood estimate of $\psi$ is
 \begin{equation}
 	\hat\psi_{\text{ML}} = \psi\\left(\hat\theta_{\text{ML}}\\right)
 \end{equation}

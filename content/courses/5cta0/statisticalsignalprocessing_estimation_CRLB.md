@@ -167,7 +167,7 @@ and after differentiating with respect to $\theta$, we obtain
 \label{eq:log_ll}
 \end{equation}
 
-The CRLB can now be found by either evaluating \eqref{eq:CR_1} or \eqref{eq:CR_Fisher}. For the sake of completness, let us evaluate both expressions starting with\eqref{eq:CR_1} which is
+The CRLB can now be found by either evaluating \eqref{eq:CR_1} or \eqref{eq:CR_Fisher}. For the sake of completeness, let us evaluate both expressions starting with\eqref{eq:CR_1}, which is
 \begin{align}
   \mathbb{E}\\left[ \\left(\frac{\partial}{\partial A} \ln p(\mathbf{x};A) \\right)^2 \\right] &=  \frac{1}{\sigma^4} \mathbb{E}\\left[ \\left(\sum_{n=0}^{N-1}(x[n]-A)\\right) \\left(\sum_{m=0}^{N-1}(x[m]-A)\\right) \right] \\\\\\
   &=\frac{1}{\sigma^4} \mathbb{E}\\left[ \\left(\sum_{n=0}^{N-1}x[n]-NA\\right) \\left(\sum_{m=0}^{N-1}x[m]-NA\\right) \right]\\\\\\
@@ -187,14 +187,10 @@ which is equivalent to \eqref{eq:CR_mean}, and thus, we have that
 \end{equation}
 Note that this is the variance of the sample mean estimator presented in the introduction module. This result can also be verified by checking if we can express \eqref{eq:log_ll} in the form of \eqref{eq:efficient_est}. Rewriting \eqref{eq:log_ll} as
 \begin{equation}
-\frac{\partial}{\partial A} \ln p(\mathbf{x};A) = \frac{1}{\sigma^2} \\left(\sum_{n=0}^{N-1}x[n]-NA \\right),
-\end{equation}
-or, equivalently,
-\begin{equation}
-\frac{\partial}{\partial A} \ln p(\mathbf{x};A) =\underbrace{\frac{N}{\sigma^2}}\_{\mathcal{I}(\theta)}\\left(\underbrace{\frac{1}{N}\sum_{n=0}^{N-1}x[n]}\_{g(\mathbf{x})}-\underbrace{A}\_{\theta} \\right).
+\frac{\partial}{\partial A} \ln p(\mathbf{x};A) =\underbrace{\frac{N}{\sigma^2}}\_{\mathcal{I}(\theta)}\\left(\underbrace{\frac{1}{N}\sum_{n=0}^{N-1}x[n]}\_{g(\mathbf{x})}-\underbrace{A}\_{\theta} \\right)
 \label{eq:log_ll_eff}
 \end{equation}
-Comparing the single quantities in \eqref{eq:log_ll_eff} with \eqref{eq:efficient_est}, we recognize the expression
+and comparing the single quantities in \eqref{eq:log_ll_eff} with \eqref{eq:efficient_est}, we recognize the expression
 \begin{equation}
   g(\mathbf{x}) = \frac{1}{N} \sum_{n=0}^{N-1}x[n]
 \end{equation}
@@ -211,52 +207,64 @@ and since the logarithm of a product is the sum of the individual logarithms, we
 \begin{equation}
   \ln p(\mathbf{x};\theta) = \sum_{n=0}^{N-1}  \ln p(x[n];\theta).
 \end{equation}
-Taking the second derivative and the negative expectation over the observations $\mathbf{x}$ we get
+Taking the second derivative and the negative expectation over the observations $\mathbf{x}$, we get
 \begin{equation}
 -\mathbb{E} \\left[\frac{\partial^2}{\partial\theta^2}\ln p(\mathbf{x};\theta)\\right] = -\sum_{n=0}^{N-1}\mathbb{E}\\left[\frac{\partial^2}{\partial\theta^2}\ln p(x[n];\theta)\\right] = -N\mathbb{E}\\left[\frac{\partial^2}{\partial\theta^2}\ln p(x[n];\theta)\\right].
 \end{equation}
 Thus, the Fisher information for all $N$ observations is $N$-times the Fisher information of a single observation given as $-\mathbb{E}\\left[\ln p(x[n];\theta)\\right]$. Consequently, the CRLB decreases as the number of observations increases.
 
 ### General CRLB for Signals in White Gaussian Noise
-For the particular, and in many enigneering problems, interesting case of a signal embedded in additive white Gaussian noise. In this particular case, we can model the observations as a  
+In many engineering applications, we are confronted with signals corrupted by additive white Gaussian noise. In this case, we can model the observations as  
 \begin{equation}
-    x[n] = s[n;\theta] + w[n] \qquad n = 0,1,\dots,N-1,
+    x[n] = s[n;\theta] + w[n], \qquad n = 0,1,\dots,N-1,
 \end{equation}
 and the corresponding PDF as
 \begin{equation}
  p(\mathbf{x};\theta) = \frac{1}{(2\pi\sigma^2)^{N/2}}\exp\\left[-\frac{1}{2\sigma^2}\sum_{n=0}^{N-1}(x[n]-s[n;\theta])^2\\right].
 \end{equation}
 
-Differentiating twice yields
+Differentiating the logarithm of the PDF twice yields
 \begin{equation}
       \frac{\partial^2}{\partial \theta^2} \ln  p(\mathbf{x};\theta) = \frac{1}{\sigma^2} \sum_{n=0}^{N-1} \\left\\{(x[n]-s[n;\theta])\frac{\partial^2}{\partial \theta^2}s[n;\theta]-\\left(\frac{\partial}{\partial \theta}s[n;\theta]\\right)^2\right\\}
 \end{equation}
-Calulating the negative expectation with respect to the observation results in
+Calculating the negative expectation with respect to the observation $\mathbf{x}$ results in
 \begin{equation}
   -\mathbb{E}\\left[ \frac{\partial^2}{\partial \theta^2} \ln  p(\mathbf{x};\theta) \\right] = \frac{1}{\sigma^2} \sum_{n=0}^{N-1}\\left(\frac{\partial}{\partial \theta}s[n;\theta]\\right)^2
 \end{equation}
 and the CRLB can be expressed as
 \begin{equation}
-  \mathrm{Var}\\left[g(\mathbf{x})\\right] \geq \frac{1}{\frac{1}{\sigma^2} \sum_{n=0}^{N-1}\\left(\frac{\partial}{\partial \theta}s[n;\theta]\\right)^2}
+  \mathrm{Var}\\left[g(\mathbf{x})\\right] \geq \frac{1}{\frac{1}{\sigma^2} \sum_{n=0}^{N-1}\\left(\frac{\partial}{\partial \theta}s[n;\theta]\\right)^2}.
+  \label{eq:crlb_awgn}
+\end{equation}
+We can directly apply these result to the DC voltage estimation problem. The signal model is given by
+\begin{equation}
+ s[n;A] = A,
+\end{equation}
+and the partial derivative is simply
+\begin{equation}
+  \frac{\partial s[n,A]}{\partial A} = 1.
+\end{equation}
+Thus, \eqref{eq:crlb_awgn} becomes in this particular case
+\begin{equation}
+  \mathrm{Var}\\left[g(\mathbf{x})\\right] \geq \frac{1}{\frac{1}{\sigma^2} \sum_{n=0}^{N-1}1 }= \frac{\sigma^2}{N}.
 \end{equation}
 
-
 ## CRLB for Vector Parameter
-Let $\boldsymbol\theta = [\theta_0,\theta_1,\dots,\theta_{P-1}]^T$ be the vector holding the unknown parameters and let $\hat{\boldsymbol\theta}=g(\mathbf{x})$ be the estimate of the parameter vector. Then, for any unbiased estimator we have that
+Let $\boldsymbol\theta = [\theta_0,\theta_1,\dots,\theta_{P-1}]^T$ be the vector holding the unknown parameters and let $\hat{\boldsymbol\theta}=g(\mathbf{x})$ be the estimate of the parameter vector. Then, for any unbiased estimator, the covariance matrix  $\mathbf{C}_{\hat{\boldsymbol\theta}}$ given as
+\begin{equation}
+\mathbf{C}_{\hat{\boldsymbol\theta}} = \mathbb{E}\begin{bmatrix}(g(\mathbf{x})-\boldsymbol\theta)(g(\mathbf{x})-\boldsymbol\theta)^T\end{bmatrix},
+\end{equation}
+is lower bounded by
 \begin{equation}
 \mathbf{C}_{\hat{\boldsymbol\theta}} \geq \mathbf{I}^{-1}(\boldsymbol\theta),
 \label{eq:CRLB_vector}
 \end{equation}
-where $\mathbf{C}_{\hat{\boldsymbol\theta}}$ is the covariance matrix given as
-\begin{equation}
-\mathbf{C}_{\hat{\boldsymbol\theta}} = \mathbb{E}\begin{bmatrix}(g(\mathbf{x})-\boldsymbol\theta)(g(\mathbf{x})-\boldsymbol\theta)^T\end{bmatrix},
-\end{equation}
-and $\mathbf{I}(\boldsymbol\theta)$ is the so-called Fisher information matrix
+where $\mathbf{I}(\boldsymbol\theta)$ is the so-called Fisher information matrix
 with entries
 \begin{equation}
-  \\left[\mathbf{I}(\boldsymbol\theta)\\right]_{i,j} = \mathbb{E}\\left[\frac{\partial}{\partial\theta_i}\ln p(\mathbf{x};\boldsymbol\theta) \frac{\partial}{\partial\theta_j}p(\mathbf{x};\boldsymbol\theta)\\right] = - \mathbb{E}\\left[\frac{\partial^2}{\partial\theta_i\partial\theta_j}\ln p( \mathbf{x};\boldsymbol\theta)\\right]
+  \\left[\mathbf{I}(\boldsymbol\theta)\\right]_{i,j} = \mathbb{E}\\left[\\left(\frac{\partial}{\partial\theta_i}\ln p(\mathbf{x};\boldsymbol\theta) \\right)\\left(\frac{\partial}{\partial\theta_j}p(\mathbf{x};\boldsymbol\theta)\\right)\\right] = - \mathbb{E}\\left[\frac{\partial^2}{\partial\theta_i\partial\theta_j}\ln p( \mathbf{x};\boldsymbol\theta)\\right].
 \end{equation}
-The notation $\mathbf{C}_{\hat{\boldsymbol\theta}} \geq \mathbf{I}^{-1}(\boldsymbol\theta)$ in \eqref{eq:CRLB_vector} refers to the condition that the difference of the matrices is positive semi-definiteness, i.e., $\mathbf{a}^T(\mathbf{C}\_{\hat{\boldsymbol\theta}}-\mathbf{I}^{-1}(\boldsymbol\theta))\mathbf{a}\geq 0$ for arbitrary $\mathbf{a}\neq \mathbf{0}$.
+The notation $\mathbf{C}_{\hat{\boldsymbol\theta}} \geq \mathbf{I}^{-1}(\boldsymbol\theta)$ in \eqref{eq:CRLB_vector} refers to the condition that the difference of the matrices is positive semi-definite, i.e., $\mathbf{a}^T(\mathbf{C}\_{\hat{\boldsymbol\theta}}-\mathbf{I}^{-1}(\boldsymbol\theta))\mathbf{a}\geq 0$ for arbitrary $\mathbf{a}\neq \mathbf{0}$.
 Similar to the scalar case, equality holds if and only if
 \begin{equation}
   \frac{\partial}{\partial\boldsymbol\theta} \ln p(\mathbf{x},\boldsymbol\theta) = \mathbf{I}(\boldsymbol\theta)(g(\mathbf{x})-\boldsymbol\theta).
@@ -278,13 +286,13 @@ The corresponding Fisher information matrix is
 \begin{equation}
   \mathbf{I}(\boldsymbol\theta) = \begin{bmatrix} \frac{N}{\sigma^2} & 0, \\\\\\
   0 & \frac{N}{2\sigma^4}
-  \end{bmatrix}
+  \end{bmatrix},
 \end{equation}
 and since it is a diagonal matrix we have that its inverse is simply the inverse of the main diagonal entries
 \begin{equation}
   \mathbf{I}^{-1}(\boldsymbol\theta) = \begin{bmatrix} \frac{\sigma^2}{N} & 0 \\\\\\
-  0 & \frac{2\sigma^4}{N}.
-  \end{bmatrix}
+  0 & \frac{2\sigma^4}{N}
+  \end{bmatrix}.
 \end{equation}
 The individual variances are lower bounded by
 \begin{equation}
@@ -298,4 +306,4 @@ and
 ---
 
 ## Summary and Conclusion
-In this module, we derived the CRLB for unbiased estimator. The CRLB provides a lower bound on the variance for any unbiased estimator. The derivation of the CRLB is based on the Cauchy-Schwarz inequality which provides a constraint for equality. This equality constraint can be used to find an efficient estimator, if it exists. If this constraint is not fulfilled, we have to find other tools ways to find a MVUE. A popular estimator which is closely related to the CRLB is the maximu likelihood estimator which will be subject of the next module.
+In this module, we derived the CRLB for unbiased estimators. The CRLB provides a lower bound on the variance for any unbiased estimator. The derivation of the CRLB is based on the Cauchy-Schwarz inequality, which provides a constraint for equality. This equality constraint can be used to find an efficient estimator. If this constraint is not fulfilled, we have to find other tools ways to find an MVUE. A popular estimator closely related to the CRLB is the maximum likelihood estimator, the subject of the next module.
