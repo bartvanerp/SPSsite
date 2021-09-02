@@ -31,12 +31,12 @@ A system is regarded to be linear if it is both additive and homogeneous. Suppos
     x_1[n] \rightarrow y_1[n] \quad \text{and} \quad x_2[n] \rightarrow y_2[n].
 \end{equation}
 
-This system is called additive if and only if the output of this system equals the sum of the individual outputs when driven by the sum of the two distinct inputs. In other words, when the individual input signals are simultaneously applied to the system, the respective outputs are also observed simultaneously. This can be represented as
+This system is called additive if and only if the output of the system driven by the sum of the distinct inputs equals the sum of the individual outputs. In other words, when the individual input signals are simultaneously applied to the system, the respective outputs are also observed simultaneously. This can be represented as
 \begin{equation}
     \text{Additive:} \quad x_1[n] + x_2[n] \rightarrow y_1[n] + y_2[n].
 \end{equation}
 
-Furthermore, this system can be called homogeneous if and only if the output of this system contains a identically scaled output when driven by a scaled input. In other words, when the input signal is scaled with some scaling coefficient $c$, the output is also scaled with the same scaling coefficient. This can be represented as
+Furthermore, this system is called homogeneous if and only if the output of this system produces a identically scaled output when driven by a scaled input. In other words, when the input signal is scaled with some scaling coefficient $c$, the output is also scaled with the same scaling coefficient. This can be represented as
 \begin{equation}
     \text{Homogeneous:} \quad c \cdot x_1[n] \rightarrow c \cdot y_1[n].
 \end{equation}
@@ -77,13 +77,11 @@ A general LTI system can be represented using a so-called signal flow diagram as
 
 ## Difference equation
 
-The operations of the system can be represented mathematically by the weighted sum of the current input and delayed versions of the input and delayed outputs. This mathematical description is called the difference equation. The output $y[n]$ at sample index $n$ can be calculated as
+The operations of the system can be represented mathematically by the weighted sum of the current input and delayed versions of the input and  outputs. This mathematical description is called the difference equation. The output $y[n]$ at sample index $n$ can be calculated as
 \begin{equation}\label{eq:DE}
     y[n] = \underbrace{\sum_{k=0}^{M-1} b_k x[n-k]}_\text{moving-average}  + \underbrace{\sum_{k=1}^{N-1} a_k y[n-k]}_\text{auto-regressive},
 \end{equation}
-where two distinct terms can be distinguished between. First is the moving-average part, which represents the upper branch of Fig. 1, and secondly follows the auto-regressive part, which represents the lower branch of Fig. 1. The weights are represented by the coefficients $a_k$ and $b_k$.
-
-<br></br>
+where two distinct terms can be distinguished. First is the moving-average part, which represents the upper branch of Fig. 1, and then follows the auto-regressive part, which represents the lower branch of Fig. 1. The weights are represented by the coefficients $a_k$ and $b_k$, respectively.
 
 ## Impulse response
 
@@ -107,13 +105,12 @@ which simply states that the impulse response is the output of a system when the
 
 The impulse response can be metaphorically compared with a tuning fork. A tuning fork is used to tune an instrument. The fork is hit against another object, after which it will resonate at a specific frequency. This frequency is used as a guideline for the tuning of an instrument. This can be compared to the discussion of the impulse response. The system (the tuning fork) is excited with an impulse (hitting it against a solid object) and will output a signal, also called the impulse response (the sound signal at the resonant frequency).
 
-<br></br>
 
 ## FIR and IIR filters
 
-From the representation of the general LTI system, two different types of systems can be distinguished between. These two types are finite impulse response (FIR) filters and infinite impulse response (IIR) filters. As the name indicates, the distinction is based on the length of the impulse response.
+From the representation of the general LTI system, two different types of systems can be distinguished. These two types are finite impulse response (FIR) filters and infinite impulse response (IIR) filters. As the name indicates, the distinction is based on the length of the impulse response.
 
-FIR filters are discussed in more detail <a href="..\..\..\disciplines\discrete\discretesignalprocessing_analysis_fir_main">here</a>. FIR filters are the class of filters in which all auto-regressive coefficients $a_k$ are equal to zero. These filters effectively only contain the upper branch of the signal flow diagram in Fig. 1. If this class of filters is excited by an impulse, this signal will pass through the upper branch and is delayed a total of $M-1$ times. Besides that, a weighted version of the signal is also directed to the output of the system. Mathematically, the impulse response of an FIR filter can be determined by substituting $\delta[n]$ for $x[n]$ in \eqref{eq:DE} and by setting all auto-regressive coefficients $a_k$ to zero as
+FIR filters are discussed in more detail <a href="..\..\..\disciplines\discrete\discretesignalprocessing_analysis_fir_main">here</a>. FIR filters are the class of filters in which all auto-regressive coefficients $a_k$ are equal to zero. These filters effectively only contain the upper branch of the signal flow diagram in Fig. 1. When a FIR filter is excited by an impulse, this passes through the upper branch and is delayed a total of $M-1$ times; the delayed samples are weighted and summed to produced the output of the system. Mathematically, the impulse response of an FIR filter can be determined by substituting $\delta[n]$ for $x[n]$ in \eqref{eq:DE} and by setting all auto-regressive coefficients $a_k$ to zero as
 \begin{equation}
     \begin{split}
         h[n]
