@@ -115,7 +115,7 @@ FIR filters are discussed in more detail <a href="..\..\..\disciplines\discrete\
     \begin{split}
         h[n]
         &=  \sum_{k=0}^{M-1} b_k \cdot \delta[n-k]  + \sum_{k=1}^{N-1} 0 \cdot y[n-k], \newline
-        &= \sum_{k=0}^{M-1} b_k \cdot \delta[n-k] = b_n.
+        &= \sum_{k=0}^{M-1} b_k \cdot \delta[n-k] = b_0\delta[n]+b_1\delta[n-1]+ ...+ b_n\delta[n-M].
     \end{split}\label{eq:impulse_FIR}
 \end{equation}
 The last step in this equation can be understood by noting that $\delta[n-k]$ only equals $1$ when $n=k$ holds. From this it can be noted that the length of the impulse response depends on the number of moving-average weights $b_k$. The number of moving-average weights $b_k$ depends on the length of the upper branch of the filter, which should be finite to allow for a practical implementation. Therefore the number of moving-average weights is also finite, leading to finite impulse response given by \eqref{eq:impulse_FIR}.
