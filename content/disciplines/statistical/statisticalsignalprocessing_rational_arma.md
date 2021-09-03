@@ -192,7 +192,7 @@ which is similar to the system of equations determined above.
 It can be observed that the auto-correlation function of the AR process is recursive. This is caused by the fact that a noise signal that enters the filter will appear at the output and will in this way always be somehow involved in the filter. Because the filter also processes previous outputs, every noise input signal will always be present in this feedback loop.
 
 ### Power spectral density of an AR($p$) process
-Suppose that we have succeeded in determining the most optimal parameters for the AR process and we want to find the power spectral density estimate of our signal. Filtering an input signal with a filter with transfer function $H(e^{j\theta})$ relates the input and output power spectral densities ($P_I(e^{j\theta})$ and $P_X(e^{j\theta})$, respectively) through
+Suppose that we have succeeded in determining the most optimal parameters for the AR process and we want to find an estimate of the power spectral density of our signal. Filtering an input signal with a filter with transfer function $H(e^{j\theta})$ relates the input and output power spectral densities ($P_I(e^{j\theta})$ and $P_X(e^{j\theta})$, respectively) through
 \begin{equation}\label{eq:psd_inout}
     P_X(e^{j\theta}) = |H(e^{j\theta})|^2 P_I(e^{j\theta}) = H(e^{j\theta})H^\ast(e^{j\theta}) P_I(e^{j\theta}).
 \end{equation}

@@ -146,7 +146,7 @@ A rational spectrum is a ratio of two rational functions containing $e^{j\theta}
 \end{split}
 \end{equation}
 
-Here $\gamma_1[q]$ and $\gamma_2[p]$ are two series with even symmetry, similarly to the auto-correlation sequences of  real signals. The rational spectrum is actually derived from the *Wold's decomposition* or *representation theorem*, a very general signal decomposition theorem, which states that every wide sense stationary (WSS) signal can be written as the sum of two components, one deterministic and one stochastic, as given below
+Here $\gamma_1[q]$ and $\gamma_2[p]$ are two series with even symmetry, similarly to the auto-correlation sequences of  real signals. The rational spectrum is actually derived from the *Wold's decomposition* or *representation theorem*, a very general signal decomposition theorem, which states that every WSS signal can be written as the sum of two components, one deterministic and one stochastic, as given below
 \begin{equation}\label{eq:xnlti}
     x[n] = \sum_{k=0}^{\infty}h[k]w[n-k] + y[n],
 \end{equation}
@@ -168,7 +168,7 @@ The sequence of weights $h[k]$ can now be seen as the samples of the impulse res
 \end{equation}
 with
 \begin{eqnarray}\label{#eq:AB}
-    A(z) &=& 1 + a_1z^{-1}+ ... + a_pz^{-p}x,\newline
+    A(z) &=& 1 + a_1z^{-1}+ ... + a_pz^{-p},\newline
     B(z) &=& 1 + b_1z^{-1}+ ... + b_qz^{-q} \nonumber.
 \end{eqnarray}
 In equation (\ref{#eq:AB}), we assume that $a_0 =  1$  and  $b_0 = 1$.
@@ -201,7 +201,7 @@ In summary, Wold's decomposition theorem allows us to represent any WSS random s
     x[n] = -\sum_{p=1}^{p}a_p x[n-p] + \sum_{q=0}^{Q}b_q i[n-q].
 \end{split}
 \end{equation}
-Since the input is given by a white-noise sequence, the input autocorrelation is of the form $r_i[l] = \sigma_i^2 \delta[l]$. Given that the transfer function is rational, also the power spectrum of the output random signal is rational, and can be calculated as 
+Since the input is given by a white-noise sequence, the input autocorrelation is of the form $r_i[l] = \sigma_i^2 \delta[l]$. Given that the transfer function is rational, also the power spectrum of the output random signal is rational, and can be calculated as
 \begin{equation}\label{eq:psdlti}
     P_{x}(e^{j\omega}) = \sigma_i \frac{|B(e^{j\omega})|^2}{|A(e^{j\omega})|^2} = \sigma_i |H(e^{j\omega})|^2,
 \end{equation}
@@ -220,7 +220,7 @@ As we shall see in the section <a href="../statisticalsignalprocessing_rational_
 ### Screencast video [⯈]
 
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HXeT5WexXPs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HeBpBb7ZM0U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br></br>

@@ -31,12 +31,12 @@ A system is regarded to be linear if it is both additive and homogeneous. Suppos
     x_1[n] \rightarrow y_1[n] \quad \text{and} \quad x_2[n] \rightarrow y_2[n].
 \end{equation}
 
-This system is called additive if and only if the output of this system equals the sum of the individual outputs when driven by the sum of the two distinct inputs. In other words, when the individual input signals are simultaneously applied to the system, the respective outputs are also observed simultaneously. This can be represented as
+This system is called additive if and only if the output of the system driven by the sum of the distinct inputs equals the sum of the individual outputs. In other words, when the individual input signals are simultaneously applied to the system, the respective outputs are also observed simultaneously. This can be represented as
 \begin{equation}
     \text{Additive:} \quad x_1[n] + x_2[n] \rightarrow y_1[n] + y_2[n].
 \end{equation}
 
-Furthermore, this system can be called homogeneous if and only if the output of this system contains a identically scaled output when driven by a scaled input. In other words, when the input signal is scaled with some scaling coefficient $c$, the output is also scaled with the same scaling coefficient. This can be represented as
+Furthermore, this system is called homogeneous if and only if the output of this system produces a identically scaled output when driven by a scaled input. In other words, when the input signal is scaled with some scaling coefficient $c$, the output is also scaled with the same scaling coefficient. This can be represented as
 \begin{equation}
     \text{Homogeneous:} \quad c \cdot x_1[n] \rightarrow c \cdot y_1[n].
 \end{equation}
@@ -77,13 +77,11 @@ A general LTI system can be represented using a so-called signal flow diagram as
 
 ## Difference equation
 
-The operations of the system can be represented mathematically by the weighted sum of the current input and delayed versions of the input and delayed outputs. This mathematical description is called the difference equation. The output $y[n]$ at sample index $n$ can be calculated as
+The operations of the system can be represented mathematically by the weighted sum of the current input and delayed versions of the input and  outputs. This mathematical description is called the difference equation. The output $y[n]$ at sample index $n$ can be calculated as
 \begin{equation}\label{eq:DE}
     y[n] = \underbrace{\sum_{k=0}^{M-1} b_k x[n-k]}_\text{moving-average}  + \underbrace{\sum_{k=1}^{N-1} a_k y[n-k]}_\text{auto-regressive},
 \end{equation}
-where two distinct terms can be distinguished between. First is the moving-average part, which represents the upper branch of Fig. 1, and secondly follows the auto-regressive part, which represents the lower branch of Fig. 1. The weights are represented by the coefficients $a_k$ and $b_k$.
-
-<br></br>
+where two distinct terms can be distinguished. First is the moving-average part, which represents the upper branch of Fig. 1, and then follows the auto-regressive part, which represents the lower branch of Fig. 1. The weights are represented by the coefficients $a_k$ and $b_k$, respectively.
 
 ## Impulse response
 
@@ -107,18 +105,17 @@ which simply states that the impulse response is the output of a system when the
 
 The impulse response can be metaphorically compared with a tuning fork. A tuning fork is used to tune an instrument. The fork is hit against another object, after which it will resonate at a specific frequency. This frequency is used as a guideline for the tuning of an instrument. This can be compared to the discussion of the impulse response. The system (the tuning fork) is excited with an impulse (hitting it against a solid object) and will output a signal, also called the impulse response (the sound signal at the resonant frequency).
 
-<br></br>
 
 ## FIR and IIR filters
 
-From the representation of the general LTI system, two different types of systems can be distinguished between. These two types are finite impulse response (FIR) filters and infinite impulse response (IIR) filters. As the name indicates, the distinction is based on the length of the impulse response.
+From the representation of the general LTI system, two different types of systems can be distinguished. These two types are finite impulse response (FIR) filters and infinite impulse response (IIR) filters. As the name indicates, the distinction is based on the length of the impulse response.
 
-FIR filters are discussed in more detail <a href="..\..\..\disciplines\discrete\discretesignalprocessing_analysis_fir_main">here</a>. FIR filters are the class of filters in which all auto-regressive coefficients $a_k$ are equal to zero. These filters effectively only contain the upper branch of the signal flow diagram in Fig. 1. If this class of filters is excited by an impulse, this signal will pass through the upper branch and is delayed a total of $M-1$ times. Besides that, a weighted version of the signal is also directed to the output of the system. Mathematically, the impulse response of an FIR filter can be determined by substituting $\delta[n]$ for $x[n]$ in \eqref{eq:DE} and by setting all auto-regressive coefficients $a_k$ to zero as
+FIR filters are discussed in more detail <a href="..\..\..\disciplines\discrete\discretesignalprocessing_analysis_fir_main">here</a>. FIR filters are the class of filters in which all auto-regressive coefficients $a_k$ are equal to zero. These filters effectively only contain the upper branch of the signal flow diagram in Fig. 1. When a FIR filter is excited by an impulse, this passes through the upper branch and is delayed a total of $M-1$ times; the delayed samples are weighted and summed to produced the output of the system. Mathematically, the impulse response of an FIR filter can be determined by substituting $\delta[n]$ for $x[n]$ in \eqref{eq:DE} and by setting all auto-regressive coefficients $a_k$ to zero as
 \begin{equation}
     \begin{split}
         h[n]
         &=  \sum_{k=0}^{M-1} b_k \cdot \delta[n-k]  + \sum_{k=1}^{N-1} 0 \cdot y[n-k], \newline
-        &= \sum_{k=0}^{M-1} b_k \cdot \delta[n-k] = b_n.
+        &= \sum_{k=0}^{M-1} b_k \cdot \delta[n-k] = b_0\delta[n]+b_1\delta[n-1]+ ...+ b_n\delta[n-M-1].
     \end{split}\label{eq:impulse_FIR}
 \end{equation}
 The last step in this equation can be understood by noting that $\delta[n-k]$ only equals $1$ when $n=k$ holds. From this it can be noted that the length of the impulse response depends on the number of moving-average weights $b_k$. The number of moving-average weights $b_k$ depends on the length of the upper branch of the filter, which should be finite to allow for a practical implementation. Therefore the number of moving-average weights is also finite, leading to finite impulse response given by \eqref{eq:impulse_FIR}.
@@ -246,18 +243,18 @@ However, if we choose the ROC as $|z| < \frac{1}{4}$, the inverse system is nonc
 </div>
 
 ## All-pass filter
-An all-pass filter passes all frequency with the same magnification factor, that is the magnitude of the frequency response is  constant
+An all-pass filter let's through all frequencies with the same magnification factor, that is the magnitude of the frequency response is constant
 $$
 | H_{ap}(e^{j\theta})| = 1 \hspace{3mm} \forall \theta
 $$
-This unit magnitude constraint constrains poles and zeros of a rational system function to occur in mirrored pairs. Thus if $H(z)$ has a pole $z=\alpha_k$, $H(z)$ must also have a zero at the mirrored location $z=1/\alpha^\ast_k$.
+Constraining the system gain to be unitary implies that the poles and zeros of a rational system function to occur in mirrored pairs. Thus if $H(z)$ has a pole $z=\alpha_k$, $H(z)$ must also have a zero at the mirrored location $z=1/\alpha^\ast_k$.
 \begin{eqnarray*}
 \text{Complex } h[n] &:& H_{ap}(z) = \prod_{k=1}^{p} \frac{z^{-1}-\alpha_k^\ast}{1 - \alpha_k z^{-1}} \newline
 \text{Real } h[n] &:& H_{ap}(z) = \prod_{k=1}^{N_s}
 \frac{|\alpha_{k}|^2 - 2 \Re e \\{ \alpha_k \\} z^{-1}+  z^{-2}}{1 - 2 \Re e \\{ \alpha_k \\} z^{-1}+ |\alpha_{k}|^2 z^{-2}}
 \end{eqnarray*}
-The poles of a stable and causal all pass filter $H(z)$ lie inside the unit circle, that is all $|\alpha_k|<1$.
-If the impulse response $h[n]$ is real-valued, the complex roots occur in conjugate pairs, and these conjugate pairs can be combined to form second-order factors from which all coefficients are real, as shown in the equation.
+The poles of a stable and causal all-pass filter $H(z)$ lie inside the unit circle, that is all $|\alpha_k|<1$.
+If the impulse response $h[n]$ is real-valued, the complex roots occur in conjugate pairs, and these conjugate pairs can be combined to form second-order factors from which all coefficients are real, as shown in the equation above.
 
 <div class="example">
 <h4> Example </h4>
@@ -362,7 +359,7 @@ When mirroring all zeros and poles of a stable and causal minimum phase system w
 </div>
 </figure>
 
-Fig. 3. shows the magnitude and phase response of a maximum phase system with three zeros outside the unit circle as depicted in the pole zero plot. These zeros are obtained by mirroring all three zeros of the previous minimum phase system.
+Fig. 3. shows the magnitude and phase response of a maximum phase system with three zeros outside the unit circle as depicted in the pole-zero plot. These zeros are obtained by mirroring all three zeros of the previous minimum phase system.
 
 {{% alert note %}}
 <ul>
@@ -378,7 +375,7 @@ Fig. 3. shows the magnitude and phase response of a maximum phase system with th
 
 ### Minimum phase and all-pass decomposition
 
-With the knowledge that we have about minimum phase and all-pass systems, we are able to show that any causal poles and zeros system with system function $H(z)$ (without poles or zeros on the unit circle) can be decomposed as the product of an all-pass and a minimum phase system.  
+With the knowledge that we have about minimum phase and all-pass systems, we are able to show that any causal pole-zero system with system function $H(z)$ (without poles or zeros on the unit circle) can be decomposed as the product of an all-pass and a minimum phase system.  
 
 Let $H(z)$ be a non-minimum phase system with one zero $z=\frac{1}{a}, |a|<1$, outside the unit circle and all other poles and zeros on the inside of the unit circle. To decompose the system the steps to follow are:
 
@@ -459,7 +456,7 @@ H(z) &=& \frac{1 - \color{green}{2} z^{-1}}{1 - 0.9 z^{-1}}
 \frac{1 - \color{green}{2} z^{-1}}{1 - \color{blue}{\frac{1}{2}} z^{-1}} \newline
 &=& H_{min}(z) \cdot H_{ap}(z)
 \end{eqnarray*}
-First create a zero by we mirroring the zero, which results in a new zero at $z=0.5$. This new zero has to be compensated by a new pole at the same position $z=0.5$. Then rearrange all old and new poles and zeros of $H(z)$ into two factors. The first factor contains the old pole and the new zero, which are both inside the unit circle and so this factor is minimum phase. The second factor contains the old zero and new pole which are each others mirrored versions and so this factor is all pass.
+First create a zero by mirroring the zero, which results in a new zero at $z=0.5$. This new zero has to be compensated by a new pole at the same position $z=0.5$. Then rearrange all old and new poles and zeros of $H(z)$ into two factors. The first factor contains the old pole and the new zero, which are both inside the unit circle and so this factor is minimum phase. The second factor contains the old zero and new pole which are each others mirrored versions and so this factor is all pass.
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
