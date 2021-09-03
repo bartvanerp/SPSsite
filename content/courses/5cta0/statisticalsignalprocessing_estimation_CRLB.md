@@ -208,10 +208,12 @@ and since the logarithm of a product is the sum of the individual logarithms, we
   \ln p(\mathbf{x};\theta) = \sum_{n=0}^{N-1}  \ln p(x[n];\theta).
 \end{equation}
 Taking the second derivative and the negative expectation over the observations $\mathbf{x}$, we get
-\begin{equation}
--\mathbb{E} \\left[\frac{\partial^2}{\partial\theta^2}\ln p(\mathbf{x};\theta)\\right] = -\sum_{n=0}^{N-1}\mathbb{E}\\left[\frac{\partial^2}{\partial\theta^2}\ln p(x[n];\theta)\\right] = -N\mathbb{E}\\left[\frac{\partial^2}{\partial\theta^2}\ln p(x[n];\theta)\\right].
-\end{equation}
-Thus, the Fisher information for all $N$ observations is $N$-times the Fisher information of a single observation given as $-\mathbb{E}\\left[\ln p(x[n];\theta)\\right]$. Consequently, the CRLB decreases as the number of observations increases.
+\begin{align}
+-\mathbb{E} \\left[\frac{\partial^2}{\partial\theta^2}\ln p(\mathbf{x};\theta)\\right] &= -\sum_{n=0}^{N-1}\mathbb{E}\\left[\frac{\partial^2}{\partial\theta^2}\ln p(x[n];\theta)\\right] \\\\\\
+&= -N\mathbb{E}\\left[\frac{\partial^2}{\partial\theta^2}\ln p(x[n];\theta)\\right] \\\\\\
+&= N i(\theta).
+\end{align}
+Thus, the Fisher information for all $N$ observations is $N$-times the Fisher information of a single observation $i(\theta)=-\mathbb{E}\\left[\ln p(x[n];\theta)\\right]$. Consequently, the CRLB decreases as the number of observations increases.
 
 ### General CRLB for Signals in White Gaussian Noise
 In many engineering applications, we are confronted with signals corrupted by additive white Gaussian noise. In this case, we can model the observations as  

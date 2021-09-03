@@ -91,10 +91,81 @@ which after expanding the second term becomes
 
 The gradient of the log-likelihood function is
 \begin{equation}
-\frac{\partial}{\partial\boldsymbol\theta}l(\mathbf{x};\boldsymbol\theta)=\mathbf{H}^T\mathbf{C}^{-1}\mathbf{x}-\mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}\boldsymbol\theta,
+\frac{\partial}{\partial\boldsymbol\theta}l(\mathbf{x};\boldsymbol\theta)=\mathbf{H}^T\mathbf{C}^{-1}\mathbf{x}-\mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}\boldsymbol\theta.
 \label{eq:part_ll}
 \end{equation}
-and if $\mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}$ is invertible, we further have
+
+<div class="example", style="background-color:LightGray;">
+<details>
+<summary>How to compute the gradient.</summary>
+
+
+The gradient of the log-likelihood function is
+\begin{equation*}
+\frac{\partial}{\partial\boldsymbol\theta}l(\mathbf{x};\boldsymbol\theta) = \begin{bmatrix}
+\frac{\partial}{\partial\theta_0}l(\mathbf{x};\boldsymbol\theta) \\\\\\
+\frac{\partial}{\partial\theta_1}l(\mathbf{x};\boldsymbol\theta) \\\\\\
+\vdots\\\\\
+\frac{\partial}{\partial\theta_{K-1}}l(\mathbf{x};\boldsymbol\theta)
+\end{bmatrix},
+\end{equation*}
+i.e., it is a vector containing all the partial derivatives of the log-likelihood function. To evaluate the partial derivatives, we first use the linearity property of the differential operator. The single expressions in the log-likelihood function are of the form $\mathbf{a}^T\mathbf{x}$, $\mathbf{x}^T\mathbf{a}$, and $\mathbf{x}^T\mathbf{A}\mathbf{x}$. The partial derivatives and the gradient of these expressions can be obtained as follows:
+1. The expression $\mathbf{a}^T\mathbf{x}$ is
+\begin{equation*}
+\mathbf{a}^T\mathbf{x} = \sum_{n=0}^{N-1} a_n x_n = a_0 x_0 + a_1 x_1 + \dots + a_{N-1} x_{N-1}.
+\end{equation*}
+Taking the derivative with respect to one specific element $x_i$ is
+\begin{equation*}
+\frac{\partial \mathbf{a}^T\mathbf{x}}{\partial x_i}  = a_i,
+\end{equation*}
+since only the addend $a_ix_i$ is a function of $x_i$ with derivative $a_i$. All other addends of the sum are constants and vanish.
+2. Since $\mathbf{x}^T\mathbf{a}=\mathbf{a}^T\mathbf{x}$ is true for real-valued vectors, we also have
+\begin{equation*}
+\frac{\partial \mathbf{x}^T\mathbf{a}}{\partial x_i} = a_i.
+\end{equation*}
+3. The expression $\mathbf{x}^T\mathbf{A}\mathbf{x}$ can also be expressed as
+\begin{equation*}
+  \mathbf{x}^T\mathbf{A}\mathbf{x} = \sum_{n=0}^{N-1}\sum_{m=0}^{N-1} x_n A_{n,m} x_m,
+\end{equation*}
+which after rearranging the summations is
+\begin{equation*}
+  \sum_{n=0}^{N-1}\sum_{m=0}^{N-1} x_n A_{n,m} x_m = A_{i,i}x_i^2 + x_i\sum_{\underset{m\neq i}{m=0}}^{N-1}  A_{i,m} x_m +  x_i\sum_{\underset{n\neq i}{n=0}}^{N-1}  x_n A_{n,i}   +  \sum_{\underset{n\neq i}{n=0}}^{N-1}\sum_{\underset{m\neq i}{m=0}}^{N-1} x_n A_{n,m} x_m.
+\end{equation*}
+Taking the derivative with respect to $x_i$, we obtain
+\begin{equation*}
+\frac{\partial \mathbf{x}^T\mathbf{A}\mathbf{x}}{\partial x_i} =  2A_{i,i}x_i + \sum_{\underset{m\neq i}{m=0}}^{N-1}  A_{i,m} x_m +  \sum_{\underset{n\neq i}{n=0}}^{N-1}  x_n A_{n,i}
+\end{equation*}
+Note that the two summations miss the summation index $m=i$ and $n=i$, respectively. However, we have additionally to the two sums the expression $2A_{i,i}x_i$ which is exactly the missing addend in the sums. Thus, we can add distribute $2A_{i,i}x_i$ over the two sums and get
+\begin{equation*}
+  \frac{\partial \mathbf{x}^T\mathbf{A}\mathbf{x}}{\partial x_i} =  \sum_{m=0}^{N-1}  A_{i,m} x_m +  \sum_{n=0}^{N-1}  x_n A_{n,i}.
+\end{equation*}
+The above expression can equivalently be expressed as an inner product between the $i$th row of $\mathbf{A}$, denoted by $\mathbf{a}\_i$, and $\mathbf{x}$ and the inner product between the $i$th column of $\mathbf{A}$, denoted by $\mathbf{a}\_i^T$, and $\mathbf{x}$, i.e.,
+\begin{equation*}
+  \frac{\partial \mathbf{x}^T\mathbf{A}\mathbf{x}}{\partial x_i} =    \mathbf{a}\_i \mathbf{x} +  \mathbf{a}\_i^T \mathbf{x}
+\end{equation*}
+
+Combining the above results, we obtain
+\begin{equation}
+\frac{\mathbf{a}^T\mathbf{x}}{\partial \mathbf{x}} = \frac{\mathbf{x}^T\mathbf{a}}{\partial \mathbf{x}} = \mathbf{a},
+\end{equation}
+and
+\begin{equation}
+\frac{\mathbf{x}^T\mathbf{A}\mathbf{x}}{\partial \mathbf{x}} = (\mathbf{A} + \mathbf{A}^T)\mathbf{x}.
+\end{equation}
+For symmetric matrices, i.e., $\mathbf{A}=\mathbf{A}^T$, the latter expression simplifies to
+\begin{equation}
+\frac{\mathbf{x}^T\mathbf{A}\mathbf{x}}{\partial \mathbf{x}} = 2\mathbf{A}\mathbf{x}.
+\end{equation}
+
+Note that the covariance matrix $\mathbf{C}$ is symmetric and so is its inverse. Using $\mathbf{a} = \mathbf{H}^T\mathbf{C}^{−1}\mathbf{x}
+$, $\mathbf{a}^T = \mathbf{x}^T\mathbf{C}^{−1}\mathbf{H}$, and $\mathbf{A} = \mathbf{A}^T = \mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}$, we obtain \eqref{eq:part_ll}
+
+</details>
+</div>
+
+
+
+If $\mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}$ is invertible, we further have
 \begin{equation}
 \frac{\partial}{\partial\boldsymbol\theta}l(\mathbf{x};\boldsymbol\theta) =\mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}\\left(\\left(\mathbf{H}^T \mathbf{C}^{-1}\mathbf{H}\\right)^{-1}\mathbf{H}^T\mathbf{C}^{-1}\mathbf{x}-\boldsymbol\theta\\right).
 \label{eq:MLE_lin_col}
