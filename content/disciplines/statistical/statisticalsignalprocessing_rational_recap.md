@@ -359,7 +359,7 @@ When mirroring all zeros and poles of a stable and causal minimum phase system w
 </div>
 </figure>
 
-Fig. 3. shows the magnitude and phase response of a maximum phase system with three zeros outside the unit circle as depicted in the pole zero plot. These zeros are obtained by mirroring all three zeros of the previous minimum phase system.
+Fig. 3. shows the magnitude and phase response of a maximum phase system with three zeros outside the unit circle as depicted in the pole-zero plot. These zeros are obtained by mirroring all three zeros of the previous minimum phase system.
 
 {{% alert note %}}
 <ul>
@@ -375,7 +375,7 @@ Fig. 3. shows the magnitude and phase response of a maximum phase system with th
 
 ### Minimum phase and all-pass decomposition
 
-With the knowledge that we have about minimum phase and all-pass systems, we are able to show that any causal poles and zeros system with system function $H(z)$ (without poles or zeros on the unit circle) can be decomposed as the product of an all-pass and a minimum phase system.  
+With the knowledge that we have about minimum phase and all-pass systems, we are able to show that any causal pole-zero system with system function $H(z)$ (without poles or zeros on the unit circle) can be decomposed as the product of an all-pass and a minimum phase system.  
 
 Let $H(z)$ be a non-minimum phase system with one zero $z=\frac{1}{a}, |a|<1$, outside the unit circle and all other poles and zeros on the inside of the unit circle. To decompose the system the steps to follow are:
 
@@ -456,7 +456,7 @@ H(z) &=& \frac{1 - \color{green}{2} z^{-1}}{1 - 0.9 z^{-1}}
 \frac{1 - \color{green}{2} z^{-1}}{1 - \color{blue}{\frac{1}{2}} z^{-1}} \newline
 &=& H_{min}(z) \cdot H_{ap}(z)
 \end{eqnarray*}
-First create a zero by we mirroring the zero, which results in a new zero at $z=0.5$. This new zero has to be compensated by a new pole at the same position $z=0.5$. Then rearrange all old and new poles and zeros of $H(z)$ into two factors. The first factor contains the old pole and the new zero, which are both inside the unit circle and so this factor is minimum phase. The second factor contains the old zero and new pole which are each others mirrored versions and so this factor is all pass.
+First create a zero by mirroring the zero, which results in a new zero at $z=0.5$. This new zero has to be compensated by a new pole at the same position $z=0.5$. Then rearrange all old and new poles and zeros of $H(z)$ into two factors. The first factor contains the old pole and the new zero, which are both inside the unit circle and so this factor is minimum phase. The second factor contains the old zero and new pole which are each others mirrored versions and so this factor is all pass.
 <div style="max-width: 600px; margin: auto">
   <figure>
     <img
