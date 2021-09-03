@@ -115,7 +115,7 @@ FIR filters are discussed in more detail <a href="..\..\..\disciplines\discrete\
     \begin{split}
         h[n]
         &=  \sum_{k=0}^{M-1} b_k \cdot \delta[n-k]  + \sum_{k=1}^{N-1} 0 \cdot y[n-k], \newline
-        &= \sum_{k=0}^{M-1} b_k \cdot \delta[n-k] = b_0\delta[n]+b_1\delta[n-1]+ ...+ b_n\delta[n-M].
+        &= \sum_{k=0}^{M-1} b_k \cdot \delta[n-k] = b_0\delta[n]+b_1\delta[n-1]+ ...+ b_n\delta[n-M-1].
     \end{split}\label{eq:impulse_FIR}
 \end{equation}
 The last step in this equation can be understood by noting that $\delta[n-k]$ only equals $1$ when $n=k$ holds. From this it can be noted that the length of the impulse response depends on the number of moving-average weights $b_k$. The number of moving-average weights $b_k$ depends on the length of the upper branch of the filter, which should be finite to allow for a practical implementation. Therefore the number of moving-average weights is also finite, leading to finite impulse response given by \eqref{eq:impulse_FIR}.
@@ -243,18 +243,18 @@ However, if we choose the ROC as $|z| < \frac{1}{4}$, the inverse system is nonc
 </div>
 
 ## All-pass filter
-An all-pass filter passes all frequency with the same magnification factor, that is the magnitude of the frequency response is  constant
+An all-pass filter let's through all frequencies with the same magnification factor, that is the magnitude of the frequency response is constant
 $$
 | H_{ap}(e^{j\theta})| = 1 \hspace{3mm} \forall \theta
 $$
-This unit magnitude constraint constrains poles and zeros of a rational system function to occur in mirrored pairs. Thus if $H(z)$ has a pole $z=\alpha_k$, $H(z)$ must also have a zero at the mirrored location $z=1/\alpha^\ast_k$.
+Constraining the system gain to be unitary implies that the poles and zeros of a rational system function to occur in mirrored pairs. Thus if $H(z)$ has a pole $z=\alpha_k$, $H(z)$ must also have a zero at the mirrored location $z=1/\alpha^\ast_k$.
 \begin{eqnarray*}
 \text{Complex } h[n] &:& H_{ap}(z) = \prod_{k=1}^{p} \frac{z^{-1}-\alpha_k^\ast}{1 - \alpha_k z^{-1}} \newline
 \text{Real } h[n] &:& H_{ap}(z) = \prod_{k=1}^{N_s}
 \frac{|\alpha_{k}|^2 - 2 \Re e \\{ \alpha_k \\} z^{-1}+  z^{-2}}{1 - 2 \Re e \\{ \alpha_k \\} z^{-1}+ |\alpha_{k}|^2 z^{-2}}
 \end{eqnarray*}
-The poles of a stable and causal all pass filter $H(z)$ lie inside the unit circle, that is all $|\alpha_k|<1$.
-If the impulse response $h[n]$ is real-valued, the complex roots occur in conjugate pairs, and these conjugate pairs can be combined to form second-order factors from which all coefficients are real, as shown in the equation.
+The poles of a stable and causal all-pass filter $H(z)$ lie inside the unit circle, that is all $|\alpha_k|<1$.
+If the impulse response $h[n]$ is real-valued, the complex roots occur in conjugate pairs, and these conjugate pairs can be combined to form second-order factors from which all coefficients are real, as shown in the equation above.
 
 <div class="example">
 <h4> Example </h4>
