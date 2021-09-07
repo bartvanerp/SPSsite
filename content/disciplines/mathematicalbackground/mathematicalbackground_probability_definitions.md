@@ -391,6 +391,23 @@ Please note that the order of $A$ and $B$ is the opposite of in the above equati
 Suppose that for the general population, 1 in 5000 people carries the human immunodeficiency virus (HIV). A test for the presence of HIV yields either a positive (+) or negative (-) response. Suppose the test gives the correct answer 99% of the time. (a) What is $\text{Pr}[H|+]$, the conditional probability that a person has the HIV virus, given that the person tests positive? (b) What is $\text{Pr}[H|++]$, the conditional probability that the same person he/she has the HIV virus, if he/she repeats the test and tests positive a second time?
 <button class="collapsible">Show solution</button>
 <div class="content">
+
+Let us first define all the involved probabilities as:
+<ul>
+<li> $\text{Pr}[H]$, the probability of having HIV; </li>
+<li> $\text{Pr}[H^c]$, the probability of not having HIV; </li>
+<li> $\text{Pr}[+]$, the probability of testing positive for HIV; </li>
+<li> $\text{Pr}[+, H]$, the probability of testing positive for HIV and having HIV; </li>
+<li> $\text{Pr}[+, H^c]$, the probability of testing positive for HIV and not having HIV; </li>
+<li> $\text{Pr}[H|+]$, the probability of having HIV given having tested positive for HIV;</li>
+<li> $\text{Pr}[+|H]$, the probability of testing positive for HIV given having HIV;</li>
+<li> $\text{Pr}[+|H^c]$, the probability of testing positive for HIV given not having HIV;</li>
+<li> $\text{Pr}[++]$, the probability of testing positive two times for HIV;</li>
+<li> $\text{Pr}[H|++]$, the probability of having HIV given testing positive two times</li>
+<li> $\text{Pr}[++|H]$, the probability of testing positive two times for HIV given having HIV</li>
+<li> $\text{Pr}[++|H^c]$, the probability of testing positive two times for HIV given not having HIV</li>
+</ul>
+
 (a) The probability that a person who has tested positive for HIV actually has the disease is
 \begin{equation*}
 	\text{Pr}[H|+] = \frac{\text{Pr}[+,H]}{\text{Pr}[+]}=\frac{\text{Pr}[+,H]}{\text{Pr}[+,H]+\text{Pr}[+,H^c]},
