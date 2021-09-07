@@ -402,10 +402,10 @@ Let us first define all the involved probabilities as:
 <li> $\text{Pr}[H|+]$, the probability of having HIV given having tested positive for HIV;</li>
 <li> $\text{Pr}[+|H]$, the probability of testing positive for HIV given having HIV;</li>
 <li> $\text{Pr}[+|H^c]$, the probability of testing positive for HIV given not having HIV;</li>
-<li> $\text{Pr}[++]$, the probability of testing positive two times for HIV;</li>
-<li> $\text{Pr}[H|++]$, the probability of having HIV given testing positive two times;</li>
-<li> $\text{Pr}[++|H]$, the probability of testing positive two times for HIV given having HIV;</li>
-<li> $\text{Pr}[++|H^c]$, the probability of testing positive two times for HIV given not having HIV.</li>
+<li> $\text{Pr}[++]$, the probability of testing positive in a second test for HIV;</li>
+<li> $\text{Pr}[H|++]$, the probability of having HIV given testing positive at the second test;</li>
+<li> $\text{Pr}[++|H]$, the probability of testing positive at the second test for HIV given having HIV;</li>
+<li> $\text{Pr}[++|H^c]$, the probability of testing positive at the second test for HIV given not having HIV.</li>
 </ul>
 
 (a) The probability that a person who has tested positive for HIV actually has the disease is
