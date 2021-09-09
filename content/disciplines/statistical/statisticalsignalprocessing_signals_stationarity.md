@@ -38,7 +38,7 @@ When a random signal is fully stationary and absolutely none of its signals char
 
 ### Wide-sense stationarity
 
-<i>Wide-sense stationarity</i> (WSS) is a subset of strict-sense stationarity. Only signals that are both first- as second-order stationary are regarded as wide-sense stationary. The left plot in Fig. 2 can for example be regarded as wide-sense stationary. Because of the first- and second-order stationarity we may simplify the notation of its signal statistics as
+<i>Wide-sense stationarity</i> (WSS) is a weaker criterion than strict-sense stationarity. Instead of requiring that all $N$-th order statistics be constant, only the first- as second-order stationary must be constant. The left plot in Fig. 2 can for example be regarded as wide-sense stationary. Because of the first- and second-order stationarity we may simplify the notation of its signal statistics as
 \begin{equation}
     \mathrm{E}\Big[X[n]\Big] = \mu_X[n] = \mu_X
 \end{equation}
