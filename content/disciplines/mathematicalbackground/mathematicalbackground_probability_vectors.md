@@ -330,9 +330,8 @@ such that $\mathbf{X}$ and $\mathbf{Y}$ are independent Gaussian random vectors.
 <button class="collapsible">Show solution</button>
 <div class="content">
 As given in the problem statement, we define the $m$-dimensional vector $\mathbf{X}$, the $n$-dimensional vector $\mathbf{Y}$ and $\mathbf{W} = \begin{bmatrix}
-                    \mathbf{X'} \newline
-                    \mathbf{Y'}
-              \end{bmatrix}'
+                    \mathbf{X}^\top,  &  \mathbf{Y}^\top
+              \end{bmatrix}^\top
 $. Note that $\mathbf{W}$ has expected value
 \begin{equation*}
    \overline{\mu_W} = \mathrm{E}[\mathbf{W}] = \mathrm{E} \begin{bmatrix}
