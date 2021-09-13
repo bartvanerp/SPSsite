@@ -16,6 +16,11 @@ type = "docs"                       # Do not modify.
 
 +++
 
+<style>
+  a.footnote-ref {display: none;}
+  a.footnote-backref {display: none;}
+</style>
+
 ## Introduction
 Previously we saw how we could grasp this notion of uncertainty in probability functions and we saw what happened when our outcome was conditioned. Finally, a brief discussion was provided for the case when multiple random variables were involved. In these examples, only the situation where we had 2 random variables was discussed. This module will generalize this theory for multiple random variables. In this case an outcome of an experiment comprises $N$ observed quantities. An example of such an observation is a noisy electroencephalography (EEG) measurement, which resembles the electrical activity of the brain and is measured over several channels.
 
@@ -177,6 +182,49 @@ The formal definition of the covariance between two random variables $X_1$ and $
     \text{Cov}[X_1, X_2] = \mathrm{E}[(X_1-\mu_{X_1})(X_2-\mu_{X_2})],
 \end{equation}
 which is very similar to the definition of the variance, even to such an extent that it actually represents the variance if $X_1=X_2$. Intuitively, one might regard the covariance as the expected value of the multiplication of $X_1$ and $X_2$ from which the means are subtracted. If both the normalized $X_1$ and $X_2$ have the same sign, then their multiplication would be positive and if $X_1$ and $X_2$ have different signs, then their multiplication would be negative. The covariance may therefore be regarded as a measure to indicate how $X_2$ behaves if $X_1$ increases or decreases.
+
+<br></br>
+<div class="example">
+<h4> Exercise </h4>
+<hr>
+Recalling the exercise from previous <a href="../mathematicalbackground_prbability_functions/#conditional-probabilities">section</a>, let random variables $X$ and $Y$ have joint PDF
+\begin{equation*}
+    f_{X,Y}(x,y) =
+	\begin{cases}
+			5x^2/2 & -1 \leq x \leq 1; 0 \leq y \leq x^2, \\
+			0 & \text{otherwise.}
+	\end{cases}
+\end{equation*}
+In the previous section, we found that:
+<ul>
+<li> $\mathrm{E}[X] = 0$ and $\mathrm{Var}[X] = \frac{10}{14}$ </li>
+<li> $\mathrm{E}[X] = \frac{5}{14}$ and $\mathrm{Var}[X] = 5/27 - (5/14)^2 = .0576$>.</li>
+</ul>
+With this knowledge, can you compute Var[$X+Y$]?
+
+</ol>
+<button class="collapsible">Show solution</button>
+<div class="content">
+
+The variance of $X + Y$ is
+\begin{equation*}
+    \begin{split}
+        \mathrm{Var}[X+Y] &\overset{\href{./#fn:1}{1}}{=}  \mathrm{Var}[X] + \mathrm{Var}[Y] + 2 \mathrm{E}[(X-\mu_X)(Y-\mu_Y)]\\
+        &= 5/7 + 0.0576 = 0.7719
+    \end{split}
+\end{equation*}</li>
+
+</div>
+</div>
+
+[^1]
+[^1]: Proof that $\mathrm{Var}[X+Y] = \mathrm{Var}[X] + \mathrm{Var}[Y] + 2 \mathrm{E}[(X-\mu_X)(Y-\mu_Y)]$: \begin{equation}
+    \begin{split}
+        \mathrm{Var}[X+Y] &= \mathrm{E}[(X+Y-(\mu_X+\mu_Y))^2]\newline
+        &= \mathrm{E}[((X-\mu_X)+(Y-\mu_Y))^2]\newline
+        &= \mathrm{E}[(X-\mu_X)^2+2(X-\mu_X)(Y-\mu_Y)+(Y-\mu_Y))^2]
+    \end{split}
+\end{equation}
 
 ### Correlation
 The definition of the covariance can be rewritten as
