@@ -129,9 +129,9 @@ As for stationarity, we can define ergodicity at different orders. A process is 
 \end{equation}
 where the equality above only holds if the variance of the time-average tends to zero for $T \rightarrow \infty.$
 
-Similarly, a process can be **ergodic in the autocorrelation** if the autocorrelation can be calculated by time-averaging over one single realization of the process:
+Similarly, a process can be **ergodic in the autocorrelation** if the autocorrelation can be calculated by time-averaging over one single realization of the process. Assuming a zero-mean process, this can be written:
 \begin{equation}\label{ergauto}
-\lim_{T \to +\infty} \frac{1}{2T} \int_{-T}^T (x(t)-\mu_{x})(x(t+\tau)-\mu_{x}) = R_X(\tau) = E[X(t+\tau)X(t)].
+\lim_{T \to +\infty} \frac{1}{2T} \int_{-T}^T x(t)x(t+\tau) = R_X(\tau) = E[X(t+\tau)X(t)].
 \end{equation}
 Also for the eqaution above the equality only holds if the variance of the time-average tends to zero for $T \rightarrow \infty.$
 ## Special case: zero-mean white noise
