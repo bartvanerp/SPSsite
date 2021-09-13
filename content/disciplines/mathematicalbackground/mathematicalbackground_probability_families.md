@@ -1456,3 +1456,55 @@ The right of the figure below shows an example of a multivariate Gaussian distri
 
 
 <br></br>
+## Sampling random variables
+
+Most statistical packages in computing softwares provide a so-called *pseudorandom number generator*, which is an algorithm to randomly sample a number between 0 and 1 with equal probability. Basically, this means generating random samples from a continuos random variable U which follows a uniform distribution,  $U\sim\mathcal{U}(0,1)$.
+More in general, sampling a random variable means generating values $x \in X$ in such a way that the
+probability of generating $x$ is in accordance with the proability density function $p_X(x)$, or equivalently the cumulative distribution function $P_X(x)$, associated with $X$.
+
+Assuming that we have a *pseudorandom number generator*, how can we generate samples of any random variable $X$ if we know its probability distribution?
+We need to find a transformation $T:[0,1]\rightarrow \mathbb{R}$ such that $T(U)=X$.
+
+For continous random variable, the following theorem can help us with this task.
+
+{{% alert note %}}
+**Theorem**
+
+Let $X$ be a continuous random variable with CDF $P_X(x)$ which possesses an inverse $P_X^{-1}$. Let $U\sim\mathcal{U}(0,1)$ and $Y = P_X^{-1}(U)$, then $P_X(x)$ is the CDF for $Y$. In other words, $Y$ has the same distribution as $X$.
+{{% /alert %}}
+
+According to this theorem, the transformation $T$ we were looking for is simply given by  $P_X^{-1}$. Then, to sample $x$, it is sufficient to follow these steps:
+<ol>
+<li>Generate a random number $u$ from uniform distribution $U\sim\mathcal{U}(0,1)$; </li>
+<li>Find the inverse of the CDF of $X$, $P_X^{-1}$; </li>
+<li>Compute $x$ as $x = P_X^{-1}(u)$. </li>
+
+</ol>
+
+This method of sampling a random variable is known as the **inverse transform technique**.
+
+For discrete random variables, however, this technique cannot apply directly, because when $X$ is discrete, the relationshipe between $X$ and $P_X^{-1}(U)$ .
+
+More formally, Let $X = \\{x_1, ...,  x_n\\}$ be a discrete random variable with probability mass function $p_X(x)$, and where $x_1 \leq...\leq x_n$. Let us define each value of the CDF of $X$ as
+
+\begin{equation}
+q_i = \text{Pr}[X \leq x_i] = \sum_{j=1}^{i} P_X(x_j).
+\end{equation}
+
+The sampling formula for $X$ becomes:
+<div class="example">
+  <!---->
+  \begin{equation*}
+      \begin{split}
+          P_X(x)
+          &=
+          \begin{cases}
+              x_1                  &\text{if } U < q_1 \\
+              x_2                 &\text{if}  q_1 \leq U < q_2 \\
+              \vdots                  &\vdots \\
+              x_{n-1}                  &\text{if }  q_{n-2} \leq U < q_{n-1}  \\
+              x_{n}                  &\text{otherwise}  \\
+          \end{cases}
+      \end{split}
+  \end{equation*}
+  <!---->
