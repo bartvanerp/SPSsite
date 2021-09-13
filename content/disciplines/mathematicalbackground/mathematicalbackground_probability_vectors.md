@@ -187,7 +187,7 @@ which is very similar to the definition of the variance, even to such an extent 
 <div class="example">
 <h4> Exercise </h4>
 <hr>
-Recalling the exercise from previous <a href="../mathematicalbackground_prbability_functions/#conditional-probabilities">section</a>, let random variables $X$ and $Y$ have joint PDF
+Recalling the exercise from previous <a href="../mathematicalbackground_probability_functions/#conditional-probabilities">section</a>, let random variables $X$ and $Y$ have joint PDF
 \begin{equation*}
     f_{X,Y}(x,y) =
 	\begin{cases}
@@ -198,7 +198,7 @@ Recalling the exercise from previous <a href="../mathematicalbackground_prbabili
 In the previous section, we found that:
 <ul>
 <li> $\mathrm{E}[X] = 0$ and $\mathrm{Var}[X] = \frac{10}{14}$ </li>
-<li> $\mathrm{E}[X] = \frac{5}{14}$ and $\mathrm{Var}[X] = 5/27 - (5/14)^2 = .0576$>.</li>
+<li> $\mathrm{E}[X] = \frac{5}{14}$ and $\mathrm{Var}[X] = 5/27 - (5/14)^2 = .0576$.</li>
 </ul>
 With this knowledge, can you compute Var[$X+Y$]?
 
