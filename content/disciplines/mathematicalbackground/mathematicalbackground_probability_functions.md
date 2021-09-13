@@ -293,16 +293,10 @@ for the joint random variables case. If we substitute the given joint probabilit
 From this follows that $C=\frac{1}{2}$.
 
 
-[^1][^2][^3]
+[^1][^2]
 [^1]: Integration by parts: $$ \int_a^b f(x)g'(x) \mathrm{d}x = \left[ f(x)g(x)\right]\_a^b - \int\_a^b f'(x)g(x) \mathrm{d}x$$
 [^2]: Growth property of exponentials: $$ \lim_{x\to \infty} x^ae^{-x} = 0 $$
-[^3]: Proof that $\mathrm{Var}[X+Y] = \mathrm{Var}[X] + \mathrm{Var}[Y] + 2 \mathrm{E}[(X-\mu_X)(Y-\mu_Y)]$: \begin{equation}
-    \begin{split}
-        \mathrm{Var}[X+Y] &= \mathrm{E}[(X+Y-(\mu_X+\mu_Y))^2]\newline
-        &= \mathrm{E}[((X-\mu_X)+(Y-\mu_Y))^2]\newline
-        &= \mathrm{E}[(X-\mu_X)^2+2(X-\mu_X)(Y-\mu_Y)+(Y-\mu_Y))^2]
-    \end{split}
-\end{equation}
+
 
 In order to calculate $p\_X(x)$ we will marginalize $p\_{X,Y}(x,y)$ over $Y$ as
 \begin{equation}
@@ -367,7 +361,6 @@ Answer the following questions:
 <li> What are E[$X$] and Var[$X$]? </li>
 <li> What are E[$Y$] and Var[$Y$]?</li>
 <li> What is E[$X+Y$]?</li>
-<li> What is Var[$X+Y$]?</li>
 </ol>
 <button class="collapsible">Show solution</button>
 <div class="content">
@@ -392,13 +385,7 @@ Therefore, $\mathrm{Var}[Y] = 5/27 - (5/14)^2 = .0576$.</li>
 \begin{equation*}
     \mathrm{E}[X + Y] = \mathrm{E}[X] + \mathrm{E}[Y] = \frac{5}{14}.
 \end{equation*}</li>
-<li> The variance of $X + Y$ is
-\begin{equation*}
-    \begin{split}
-        \mathrm{Var}[X+Y] &\overset{\href{./#fn:3}{3}}{=}  \mathrm{Var}[X] + \mathrm{Var}[Y] + 2 \mathrm{E}[(X-\mu_X)(Y-\mu_Y)]\\
-        &= 5/7 + 0.0576 = 0.7719
-    \end{split}
-\end{equation*}</li>
+
 </ol>
 </div>
 </div>

@@ -121,7 +121,19 @@ $X(t)$ and $Y(t)$ are independent wide sense stationary processes with expected 
 
 When a signal is stationary, the exact calculation of the expected value operators is usually still cumbersome, because it requires knowledge of the entire random process. In practice we usually only have a limited number of samples of a single realization of the random process. If a random process is ergodic, it means that the statistical properties of the entire random process can be inferred from just a limited number of samples of a single realization. In order for a signal to be ergodic it has to be stationary. Ergodicity is usually a big assumption that cannot always be confirmed, however, without this assumption the signal statistics could not be approximated.
 
+The formal definition of ergodicity states that a strict-sense stationary process $X(t)$ is **strict-sense ergodic** if time average equals the ensemble average. This means that any of the statistical properties of $X(t)$ of any order can be obtained by any of its single realizations $x(t)$, known during an infinite time interval.
 
+As for stationarity, we can define ergodicity at different orders. A process is **ergodic in the mean** if
+\begin{equation}\label{ergmean}
+\lim_{T \to +\infty} \frac{1}{2T} \int_{-T}^T x(t) =\mu_x =  E[X(t)] =  \int_{-\infty}^{+\infty} xp_X(x;t) dx,
+\end{equation}
+where the equality above only holds if the variance of the time-average tends to zero for $T \rightarrow \infty.$
+
+Similarly, a process can be **ergodic in the autocorrelation** if the autocorrelation can be calculated by time-averaging over one single realization of the process:
+\begin{equation}\label{ergauto}
+\lim_{T \to +\infty} \frac{1}{2T} \int_{-T}^T (x(t)-\mu_{x})(x(t+\tau)-\mu_{x}) = R_X(\tau) = E[X(t+\tau)X(t)].
+\end{equation}
+Also for the eqaution above the equality only holds if the variance of the time-average tends to zero for $T \rightarrow \infty.$
 ## Special case: zero-mean white noise
 
 Given the implications of the central limit theorem, noise is often assumed to be zero-mean additive Gaussian white noise; for simplicity it is often simply called zero-mean white noise. Thus, it is useful to know auto-correlation function of such process, which is determined as
@@ -177,7 +189,7 @@ Therefore, $x[n]$ is a WSS sequence. However, it is not an independent random se
 
 ## Approximate statistics
 
-For ergodic random processes the signal statistics that are defined in the table of <a href="../statisticalsignalprocessing_signals_signals/#ideal-signal-statistics">the previous section</a> can be approximated by time-averaging. The expected value operator will then be replaced by time-averaging over a sequence of length $N$ according to
+For ergodic random processes the signal statistics that are defined in the table of <a href="../statisticalsignalprocessing_signals_signals/#ideal-signal-statistics">the previous section</a> can be approximated by time-averaging. In the following, we focus on discrete-time signal. The expected value operator will then be replaced by time-averaging over a sequence of length $N$ according to
 \begin{equation}
     \mathrm{E}[\cdot] \quad \rightarrow \quad \frac{1}{N}\sum_{n=0}^{N-1}[\cdot].
 \end{equation}
@@ -286,3 +298,18 @@ and the approximated auto-correlation matrix by
 \end{equation}
 
 Especially the approximated auto-correlation matrix is in practice often used. When dealing with real-valued signals, this leads to a symmetric auto-correlation matrix (i.e. $\hat{\bf{R}}_X = \hat{\bf{R}}_X^\top$) and it turns out that this matrix is at the same time positive semi-definite (i.e. $\hat{\bf{R}} \succeq 0$).
+
+#### Ergodicity and approximate statistics
+
+In practice, we cannot observe the signal for an infinite interval. For ergodic random processes, we need to replace the time-averaging over the infinetely-long single realization of the random processes with averaging over a limited number of samples. For a  discrete-time signal of length $N$, the conditions for ergodicity of the mean stated in (\ref{ergmean}) then become
+
+\begin{equation}
+\text{E}\left\\{\frac{1}{N}\sum^{N}_{0}x[n]\right\\}=\text{E}[\hat{\mu}_X]=\mu_X,
+\end{equation}
+
+and
+\begin{equation}
+\text{Var} \left\\{\frac{1}{N}\sum^{N}_{0}x[n]\right\\} \xrightarrow{N\xrightarrow{} \infty} 0
+\end{equation}
+
+Note that the second condition does not look at the variance of $X[n]$, but rather at the variance of our estimator for the mean $\hat{\mu}_X$, as given in the table above. By veryfing the second condition, we are veryfing the consistency of our mean estimator. This concept will be further explained in the module on <a href="../../statisical/statisticalsignalprocessing_estimation_main">Estimation theory</a>.
