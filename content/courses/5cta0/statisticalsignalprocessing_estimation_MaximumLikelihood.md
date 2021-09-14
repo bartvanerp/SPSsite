@@ -224,7 +224,7 @@ where $\mathbf{I}(\boldsymbol\theta)$ is the Fisher information matrix evaluated
 Consider the example of estimating the DC level and the noise variance presented in the module on the CRLB. There we already evaluated the expressions we need to evaluate the gradient given as
 \begin{align}
 \frac{\partial}{\partial A}   \mathcal{L}(\mathbf{x};\boldsymbol\theta) &= \frac{1}{\sigma^2}\sum_{n=0}^{N-1}(x[n]-A)\\\\\\
-\frac{\partial}{\partial \sigma^2}   \mathcal{L}(\mathbf{x};\boldsymbol\theta) &= -\frac{N}{2\sigma^2}+\frac{1}{2\sigma^4}\sum_{n=0}^{N-1}(x[n]-A)^2 \label{eq:variance} \\\\\\
+\frac{\partial}{\partial \sigma^2}   \mathcal{L}(\mathbf{x};\boldsymbol\theta) &= -\frac{N}{2\sigma^2}+\frac{1}{2\sigma^4}\sum_{n=0}^{N-1}(x[n]-A)^2 \label{eq:variance} 
 \end{align}
 
 We already obtained the maximum likelihood estimate for the DC level which is the sample mean
@@ -234,7 +234,7 @@ We already obtained the maximum likelihood estimate for the DC level which is th
 \end{equation}
 Equating \eqref{eq:variance} to zero and solving for $\sigma^2$ using $\bar{x}$ yields
 \begin{equation}
-  \hat\sigma^2 = \frac{1}{N}\sum_{n=0}^{N-1}(x[n]-\bar{x})^2
+  \hat{\sigma^2} = \frac{1}{N}\sum_{n=0}^{N-1}(x[n]-\bar{x})^2
 \end{equation}
 
 The sample mean $\bar{x}$ is a scaled sum of IID Gaussian random variables, and thus, Gaussian again with mean $A$ and variance $\sigma^2/N$, i.e.,
