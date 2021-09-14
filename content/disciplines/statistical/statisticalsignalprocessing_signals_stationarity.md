@@ -138,6 +138,7 @@ Similarly, a process can be **ergodic in the autocorrelation** if the autocorrel
 >>>>>>> Simona_20200519
 \end{equation}
 Also for the eqaution above the equality only holds if the variance of the time-average tends to zero for $T \rightarrow \infty.$
+
 ## Special case: zero-mean white noise
 
 Given the implications of the central limit theorem, noise is often assumed to be zero-mean additive Gaussian white noise; for simplicity it is often simply called zero-mean white noise. Thus, it is useful to know auto-correlation function of such process, which is determined as
