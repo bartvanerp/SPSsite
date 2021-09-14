@@ -121,15 +121,15 @@ $X(t)$ and $Y(t)$ are independent wide sense stationary processes with expected 
 
 When a signal is stationary, the exact calculation of the expected value operators is usually still cumbersome, because it requires knowledge of the entire random process. In practice we usually only have a limited number of samples of a single realization of the random process. If a random process is ergodic, it means that the statistical properties of the entire random process can be inferred from just a limited number of samples of a single realization. In order for a signal to be ergodic it has to be stationary. Ergodicity is usually a big assumption that cannot always be confirmed, however, without this assumption the signal statistics could not be approximated.
 
-The formal definition of ergodicity states that a strict-sense stationary process $X(t)$ is **strict-sense ergodic** if time average equals the ensemble average. This means that any of the statistical properties of $X(t)$ of any order can be obtained by any of its single realizations $x(t)$, known during an infinite time interval.
+The formal definition of ergodicity states that a strict-sense stationary process $X(t)$ is <b>strict-sense ergodic</b> if time average equals the ensemble average. This means that any of the statistical properties of $X(t)$ of any order can be obtained by any of its single realizations $x(t)$, known during an infinite time interval.
 
-As for stationarity, we can define ergodicity at different orders. A process is **ergodic in the mean** if
+As for stationarity, we can define ergodicity at different orders. A process is <b>ergodic in the mean</b> if
 \begin{equation}\label{ergmean}
 \lim_{T \to +\infty} \frac{1}{2T} \int_{-T}^T x(t) =\mu_x =  E[X(t)] =  \int_{-\infty}^{+\infty} xp_X(x;t) dx,
 \end{equation}
 where the equality above only holds if the variance of the time-average tends to zero for $T \rightarrow \infty.$
 
-Similarly, a process can be **ergodic in the autocorrelation** if the autocorrelation can be calculated by time-averaging over one single realization of the process. Assuming a zero-mean process, this can be written:
+Similarly, a process can be <b>ergodic in the autocorrelation</b> if the autocorrelation can be calculated by time-averaging over one single realization of the process. Assuming a zero-mean process, this can be written:
 \begin{equation}\label{ergauto}
 \lim_{T \to +\infty} \frac{1}{2T} \int_{-T}^T x(t)x(t+\tau) = R_X(\tau) = E[X(t+\tau)X(t)].
 \end{equation}
