@@ -229,15 +229,15 @@ Consider the example of estimating the DC level and the noise variance presented
 
 We already obtained the maximum likelihood estimate for the DC level which is the sample mean
 \begin{equation}
-\hat{A} = \bar{x} = \frac{1}{N}\sum_{n=0}^{N-1}.
+\hat{A} = \bar{x} = \frac{1}{N}\sum_{n=0}^{N-1}x[n].
 \label{eq:samplemean}
 \end{equation}
 Equating \eqref{eq:variance} to zero and solving for $\sigma^2$ using $\bar{x}$ yields
 \begin{equation}
-  \frac{1}{N}\sum_{n=0}^{N-1}(x[n]-\bar{x})^2
+  \hat\sigma^2 = \frac{1}{N}\sum_{n=0}^{N-1}(x[n]-\bar{x})^2
 \end{equation}
 
-The sample mean $\bar{x}$ is a scaled sum of iid Gaussian random variables, and thus, Gaussian again with mean $A$ and variance $\sigma^2/N$, i.e.,
+The sample mean $\bar{x}$ is a scaled sum of IID Gaussian random variables, and thus, Gaussian again with mean $A$ and variance $\sigma^2/N$, i.e.,
 \begin{equation}
   \bar{x} \sim \mathcal{N}\\left(A,\frac{\sigma^2}{N}\\right)
 \end{equation}
