@@ -203,7 +203,7 @@ In summary, Wold's decomposition theorem allows us to represent any WSS random s
 \end{equation}
 Since the input is given by a white-noise sequence, the input autocorrelation is of the form $r_i[l] = \sigma_i^2 \delta[l]$. Given that the transfer function is rational, also the power spectrum of the output random signal is rational, and can be calculated as
 \begin{equation}\label{eq:psdlti}
-    P_{x}(e^{j\omega}) = \sigma_i \frac{|B(e^{j\omega})|^2}{|A(e^{j\omega})|^2} = \sigma_i |H(e^{j\omega})|^2,
+    P_{x}(e^{j\omega}) = \sigma_i^2 \frac{|B(e^{j\omega})|^2}{|A(e^{j\omega})|^2} = \sigma_i |H(e^{j\omega})|^2,
 \end{equation}
 where
 \begin{equation}
