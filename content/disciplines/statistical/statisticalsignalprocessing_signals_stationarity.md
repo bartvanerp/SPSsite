@@ -132,13 +132,6 @@ where the equality above only holds if the variance of the time-average tends to
 
 Similarly, a process can be <b>ergodic in the autocorrelation</b> if the autocorrelation can be calculated by time-averaging over one single realization of the process. Assuming a zero-mean process, this can be written:
 
-\begin{equation}\label{ergauto}
-
-\lim_{T \to +\infty} \frac{1}{2T} \int_{-T}^T (x(t)-\mu_{x})(x(t+\tau)-\mu_{x})dt = R_X(\tau) = E[X(t+\tau)X(t)].
-end{equation}
-
-and
-
 begin{equation}
 \lim_{T \to +\infty} \frac{1}{2T} \int_{-T}^T x(t)x(t+\tau) = R_X(\tau) = E[X(t+\tau)X(t)].
 \end{equation}
