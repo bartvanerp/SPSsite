@@ -136,7 +136,7 @@ Similarly, a process can be <b>ergodic in the autocorrelation</b> if the autocor
 \lim_{T \to +\infty} \frac{1}{2T} \int_{-T}^T x(t)x(t+\tau) = R_X(\tau) = E[X(t+\tau)X(t)].
 \end{equation}
 
-Also for the eqaution above the equality only holds if the variance of the time-average tends to zero for $T \rightarrow \infty.$
+Also for the equation above the equality only holds if the variance of the time-average tends to zero for $T \rightarrow \infty.$
 
 ## Special case: zero-mean white noise
 
@@ -312,6 +312,7 @@ In practice, we cannot observe the signal for an infinite interval. For ergodic 
 \end{equation}
 
 and
+
 \begin{equation}
 \text{Var} \left\\{\frac{1}{N}\sum^{N-1}_{n=0}x[n]\right\\} \xrightarrow{N\xrightarrow{} \infty} 0
 \end{equation}
