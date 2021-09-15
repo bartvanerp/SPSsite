@@ -39,7 +39,7 @@ or, equivalently, by
   \mathrm{Var}[g(\mathbf{x})] \geq \\left(-\mathbb{E}\\left[\frac{\partial^2 \ln(p(\mathbf{x};\theta))}{\partial \\theta^2}\\right]\\right)^{-1}.
   \label{eq:CR_Fisher}
 \end{equation}
-The quantities $\ln(p(\mathbf{x};\theta))$ and $\frac{\partial \ln(p(\mathbf{x};\theta))}{\partial \theta}$ are referred to as **log-likelihood** and **score**, respectively. The log-likelihood is typically denoted by $\mathcal{L}(\mathbf{x};\theta)$ and plays a central role in the next module on maximum likelihood estimation. 
+The quantities $\ln(p(\mathbf{x};\theta))$ and $\frac{\partial \ln(p(\mathbf{x};\theta))}{\partial \theta}$ are referred to as **log-likelihood** and **score**, respectively. The log-likelihood is typically denoted by $\mathcal{L}(\mathbf{x};\theta)$ and plays a central role in the next module on maximum likelihood estimation.
 
 The inequalities are valid if the following regularity conditions hold:
 \begin{equation}
@@ -281,7 +281,7 @@ Suppose we want to estimate in addition to the DC voltage level of the previous 
 \begin{align}
 \frac{\partial}{\partial A} \ln p(\mathbf{x};\boldsymbol\theta) &= \frac{1}{\sigma^2}\sum_{n=0}^{N-1}(x[n]-A)\\\\\\
 \frac{\partial}{\partial \sigma^2} \ln p(\mathbf{x};\boldsymbol\theta) &= -\frac{N}{2\sigma^2}+\frac{1}{2\sigma^4}\sum_{n=0}^{N-1}(x[n]-A)^2\\\\\\
-\frac{\partial^2}{\partial A^2} \ln p(\mathbf{x};\boldsymbol\theta) &= \frac{N}{\sigma^2}\\\\\\
+\frac{\partial^2}{\partial A^2} \ln p(\mathbf{x};\boldsymbol\theta) &= -\frac{N}{\sigma^2}\\\\\\
 \frac{\partial^2}{\partial (\sigma^2)^2} \ln p(\mathbf{x};\boldsymbol\theta) &= \frac{N}{2\sigma^4}-\frac{1}{\sigma^6}\sum_{n=0}^{N-1}(x[n]-A)^2\\\\\\
 \frac{\partial^2}{\partial A \partial\sigma^2} \ln p(\mathbf{x};\boldsymbol\theta)&= \frac{\partial^2}{ \partial\sigma^2 \partial A} \ln p(\mathbf{x};A) = -\frac{1}{\sigma^4}\sum_{n=0}^{N-1}(x[n]-A)^2
 \end{align}
