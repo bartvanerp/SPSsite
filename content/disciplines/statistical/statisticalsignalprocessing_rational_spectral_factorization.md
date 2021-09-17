@@ -297,7 +297,7 @@ In the example above, we therefore need to choose $H(z) = 1-\frac{1}{2}z^{-1}$ b
 ### Pencast video [⯈]
 In the following pencast, you may see how to find the spectral factorization of a random signal by the root method.
 <div class="video-container">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/S4B46eDWPAY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HeBpBb7ZM0U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br></br>
