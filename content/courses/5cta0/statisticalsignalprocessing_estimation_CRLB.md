@@ -53,7 +53,7 @@ The regularity conditions ensure that we can interchange the order of differenti
 \begin{equation}
   \mathcal{I}(\theta) =\mathbb{E}\\left[\\left(\frac{\partial \ln(p(\mathbf{x};\theta))}{\partial \\theta}\\right)^2\\right]= -\mathbb{E}\\left[\frac{\partial^2 \ln(p(\mathbf{x};\theta))}{\partial \\theta^2}\\right]
 \end{equation}
-is the so-called Fisher information and tells how much information random variables carrier about an unknown parameter $\theta$.
+is the so-called Fisher information and tells how much information random variables carries about an unknown parameter $\theta$.
 
 
 <div class="example", style="background-color:LightGray;">
