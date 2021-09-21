@@ -19,9 +19,9 @@ weight = 200
 
 ## Introduction
 
-Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter from some observation. Consider the following example.
+<!-- Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter from some observation. Consider the following example. -->
 
----
+<!-- ---
 <b>Example:</b>
 
 A mobile phone connects via a wireless link to a base station. The base station transmits information for a user on a specific carrier frequency.  Both the base station and mobile phone use local oscillators for modulation and demodulation. However, due to imperfection, the local oscillator frequencies do not match exactly. The frequency mismatch, if not compensated, results in an increased error rate. In the worst case, it can even lead to an interrupted connection. Thus, to maintain a good connection to a base station, a mobile phone must compensate for the frequency mismatch. We can model the impact of the frequency mismatch on the data as
@@ -41,10 +41,9 @@ where $x[n]$ is the received complex symbol, $c[n]$ is the transmitted complex s
 
 Typically, the base station sends a fixed and known training sequence of length $N$ at the beginning of a transmission. The task of a frequency offset estimator is now to determine the frequency mismatch based on the first N symbols. Note that noise impairs the signal. The noise itself is a random variable, and thus, each new observation of the training sequence will result in a different estimate.
 
----
+--- -->
 
-
-In general, we wish to determine an unknown parameter $\theta$. However, this parameter is not directly observable; instead, some observations are available, represented by a vector $\mathbf{x}$. These observations are random variables whose PDF depends on the unknown parameter. Thus, we denote the PDF as $p(\mathbf{x}; \theta)$ to emphasize its dependency on the parameter $\theta$.
+Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter $\theta$. from some observations, which are represented by a vector $\mathbf{x}$ . These observations are random variables whose PDF depends on the unknown parameter. Thus, we denote the PDF as $p(\mathbf{x}; \theta)$ to emphasize its dependency on the parameter $\theta$.
 
 
 ---
