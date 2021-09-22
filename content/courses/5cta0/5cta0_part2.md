@@ -19,7 +19,15 @@ weight = 200
 
 ## Introduction
 
+<<<<<<< HEAD
 <!-- Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter from some observation. Consider the following example. -->
+=======
+<<<<<<< Updated upstream
+Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter from some observation.
+=======
+Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter from some observation. Consider the following example.
+>>>>>>> Stashed changes
+>>>>>>> Simona_20200519
 
 <!-- ---
 <b>Example:</b>
@@ -41,9 +49,20 @@ where $x[n]$ is the received complex symbol, $c[n]$ is the transmitted complex s
 
 Typically, the base station sends a fixed and known training sequence of length $N$ at the beginning of a transmission. The task of a frequency offset estimator is now to determine the frequency mismatch based on the first N symbols. Note that noise impairs the signal. The noise itself is a random variable, and thus, each new observation of the training sequence will result in a different estimate.
 
+<<<<<<< HEAD
 --- -->
 
 Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter $\theta$. from some observations, which are represented by a vector $\mathbf{x}$ . These observations are random variables whose PDF depends on the unknown parameter. Thus, we denote the PDF as $p(\mathbf{x}; \theta)$ to emphasize its dependency on the parameter $\theta$.
+=======
+---
+<<<<<<< Updated upstream
+
+=======
+
+
+In general, we wish to determine an unknown parameter $\theta$. However, this parameter is not directly observable; instead, some observations are available, represented by a vector $\mathbf{x}$. These observations are random variables whose PDF depends on the unknown parameter. Thus, we denote the PDF as $p(\mathbf{x}; \theta)$ to emphasize its dependency on the parameter $\theta$.
+>>>>>>> Stashed changes
+>>>>>>> Simona_20200519
 
 
 ---
@@ -96,9 +115,19 @@ So far, we have seen that we can formulate different estimators, and we can comp
 The topics covered in this part are
 
 <ul>
+<<<<<<< HEAD
 <li><a href="../statisticalsignalprocessing_estimation_crlb/">The Cramer-Rao Lower Bound:</a> Just as the data is stochastic, so are the parameter estimations. When the noise properties are known, the lowest possible variance for the parameter estimations can be calculated for unbiased estimators.
 <li><a href="../statisticalsignalprocessing_estimation_maximumlikelihood/">Maximum Likelihood Estimator:</a> The stochastic nature of the data due to the noise is modeled in terms of the probability density function of the noise. The parameter value that maximizes the probability of observing the data at hand is the maximum likelihood estimate.
 <li><a href="../statisticalsignalprocessing_estimation_mvue_linear/">Minimum Variance Unbiased Estimator and Best Linear Unbiased Estimator:</a> The minimum variance unbiased estimator can be found for linear problems with Gaussian noise.
+=======
+<li><a href="../statisticalsignalprocessing_estimation_CRLB">The Cramer-Rao Lower Bound:</a> Just as the data is stochastic, so are the parameter estimations. When the noise properties are known, the lowest possible variance for the parameter estimations can be calculated for unbiased estimators.
+<<<<<<< Updated upstream
+<li><a href="../statisticalsignalprocessing_estimation_MaximumLikelihood">Maximum Likelihood Estimator:</a> The stochastic nature of the data due to the noise is be modeled in terms of the probability density function of the noise. The parameter value that maximizes the probability of observing the data at hand is the maximum likelihood estimate.
+=======
+<li><a href="../statisticalsignalprocessing_estimation_MaximumLikelihood">Maximum Likelihood Estimator:</a> The stochastic nature of the data due to the noise is modeled in terms of the probability density function of the noise. The parameter value that maximizes the probability of observing the data at hand is the maximum likelihood estimate.
+>>>>>>> Stashed changes
+<li><a href="../statisticalsignalprocessing_estimation_MVUE_linear">Minimum Variance Unbiased Estimator and Best Linear Unbiased Estimator:</a> The minimum variance unbiased estimator can be found for linear problems with Gaussian noise.
+>>>>>>> Simona_20200519
 <li><a href="../statisticalsignalprocessing_estimation_leastsquares">Least Squares Estimator:</a> This method fits the model to data by minimizing the sum of squared difference between the data and the model.
 <li><a href="../statisticalsignalprocessing_estimation_bayes">Bayesian Estimators:</a> For all estimation techniques so far, the parameter to be estimated is assumed to be deterministic but unknown. Bayesian estimators consider the parameter also as a random variable and utilize the Bayes' Theorem to estimate it.
 <li><a href="../statisticalsignalprocessing_estimation_numerical/">Numerical Solution Methods:</a> Not all estimators have closed forms; numerical methods that iteratively estimate the parameters are indispensable tools for implementing estimators.

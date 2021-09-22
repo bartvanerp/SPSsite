@@ -65,41 +65,41 @@ which is a 2$^{nd}$ order AR model.
 
 ### Autocorrelation of a AR($p$) process
 
-The auto-correlation function of an AR process can be determined by the definition of the auto-correlation function
+The auto-correlation function of an AR process can be determined by starting from the definition of autocorrelation. This is a conjugate symmetric function defined as:
 \begin{equation}
-    r_x[l] = \mathrm{E}\left\\{x[n]x^\ast[n-l]\right\\},
+    r_x[l] =r_x^\ast[-l] =\mathrm{E}\left\\{x[n]x^\ast[n+l]\right\\},
 \end{equation}
 where we will make use of two properties. First the auto-correlation function of the independent white Gaussian input noise is defined as
 \begin{equation}
-    r_i[l] = \mathrm{E}\left\\{i[n]i^\ast[n-l]\right\\} = \sigma^2_i\delta[l]
+    r_i[l] = \mathrm{E}\left\\{i[n]i^\ast[n+l]\right\\} = \sigma^2_i\delta[l]
 \end{equation}
 and secondly we use the fact that the signal is real, meaning that $x[n] = x^\ast[n]$. Before the auto-correlation function of $x[n]$ can be calculated, first the cross-correlation function between the white Gaussian noise input $i[n]$ and the AR-process $x[n]$ has to be determined as
 \begin{equation}
     \begin{split}
         r_{ix}[l]
-        &= \mathrm{E}\left\\{i[n]x^\ast[n-l]\right\\}, \newline
-        &= \mathrm{E}\left\\{i[n]^\ast\left(i^\ast[n-l] - a_1 x^\ast[n-1-l]  - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
-        &= \mathrm{E}\left\\{i[n]i^\ast[n-l]\right\\} + \mathrm{E}\left\\{i[n]\left(- a_1 x^\ast[n-1-l] - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
-        &= \sigma_i^2\delta[l] -a_1\mathrm{E}\left\\{i[n] x^\ast[n-1-l]\right\\} - \ldots - a_p\mathrm{E}\left\\{i[n]x^\ast[n-p-l]\right\\}, \newline
+        &= \mathrm{E}\left\\{i[n]x^\ast[n+l]\right\\}, \newline
+        &= \mathrm{E}\left\\{i[n]^\ast\left(i^\ast[n+l] - a_1 x^\ast[n-1+l]  - \ldots - a_p x^\ast[n-p+l]\right)\right\\}, \newline
+        &= \mathrm{E}\left\\{i[n]i^\ast[n+l]\right\\} + \mathrm{E}\left\\{i[n]\left(- a_1 x^\ast[n-1+l] - \ldots - a_p x^\ast[n-p+l]\right)\right\\}, \newline
+        &= \sigma_i^2\delta[l] -a_1\mathrm{E}\left\\{i[n] x^\ast[n-1+l]\right\\} - \ldots - a_p\mathrm{E}\left\\{i[n]x^\ast[n-p+l]\right\\}, \newline
         &= \sigma_i^2\delta[l]
     \end{split}
 \end{equation}
-where the simplification in the last line requires further clarification. Because the noise is independently distributed, only the expected value of two identically lagged signals $i[n]$ is non-zero. In the latter terms in the equation, the lagged signals $x[n-1-l],\ldots ,x[n-p-l]$ only depend on lagged values of the noise $i[n-1-l],\ldots ,i[n-p-l]$, which means that this always returns zero, because the white Gaussian noise signals are not calculated at the same lag.
+where the simplification in the last line requires further clarification. Because the noise is independently distributed, only the expected value of two identically lagged signals $i[n]$ is non-zero. In the latter terms in the equation, the lagged signals $x[n-1+l],\ldots ,x[n-p+l]$ only depend on lagged values of the noise $i[n-1+l],\ldots ,i[n-p+l]$, which means that this always returns zero, because the white Gaussian noise signals are not calculated at the same lag.
 
 Calculation of the auto-correlation function of the output $x[n]$ now gives
 \begin{equation}
     \begin{split}
         r_x[l]
-        &= \mathrm{E}\left\\{x[n]x^\ast[n-l]\right\\}, \newline
-        &= \mathrm{E}\left\\{x[n]\left(i^\ast[n-l] - a_1 x^\ast[n-1-l] - \ldots - a_p x^\ast[n-p-l]\right)\right\\}, \newline
-        &= \mathrm{E}\left\\{x[n]i^\ast[n-l]\right\\} - a_1 \mathrm{E}\left\\{x[n]x^\ast[n-1-l]\right\\} - \ldots - a_p \mathrm{E}\left\\{x[n]x^\ast[n-p-l]\right\\}, \newline
+        &= \mathrm{E}\left\\{x[n]x^\ast[n+l]\right\\}, \newline
+        &= \mathrm{E}\left\\{x[n]\left(i^\ast[n+l] - a_1 x^\ast[n-1+l] - \ldots - a_p x^\ast[n-p+l]\right)\right\\}, \newline
+        &= \mathrm{E}\left\\{x[n]i^\ast[n+l]\right\\} - a_1 \mathrm{E}\left\\{x[n]x^\ast[n-1+l]\right\\} - \ldots - a_p \mathrm{E}\left\\{x[n]x^\ast[n-p+l]\right\\}, \newline
         &= r_{i,x}[l] - a_1 r_{x}[l-1] - \ldots - a_p r_{x}[l-p], \newline
         &= \sigma_i^2\delta[l] - a_1 r_{x}[l-1] - \ldots - a_p r_{x}[l-p],
     \end{split}
 \end{equation}
 which can rewritten as
 \begin{equation}
-    \sigma_i^2\delta[l] = \sum_{k=0}^p a_k r_x[l-k],
+    \sigma_i^2\delta[l] = \sum_{k=1}^p a_k r_x[l-k],
 \end{equation}
 where the newly introduced coefficient $a_0$ equals 1.
 
@@ -109,7 +109,7 @@ It is now possible to estimate the desired AR coefficients. When a windowed sign
 \end{equation}
 In the equation above, we assume to know the correlation samples $  \hat{r}_x[l], ...,\hat{r}_x[l-p]$ (estimated from the observed signal), while the parameters $\hat{a}_1$,..., $\hat{a}_p$ and $\hat{\sigma}_i^2$ need to be estimated. This equality has $p+1$ unknowns, and thus we require $p+1$ equations to solve it. These $p+1$ equations can be obtained by evaluating the auto-correlation for different lags. The system of equations that follows from this approach is called the *Yule-Walker equations*, which can be written in matrix notation as
 \begin{equation}
-    \begin{bmatrix}
+    \begin{bmatrix}\label{ywmatrix}
         \hat{r}_x[0]    & \hat{r}_x[1]      & \hat{r}_x[2]  & \cdots    & \hat{r}_x[p]      \newline
         \hat{r}_x[1]    & \hat{r}_x[0]      & \hat{r}_x[1]  & \cdots    & \hat{r}_x[p-1]    \newline
         \hat{r}_x[2]    & \hat{r}_x[1]      & \hat{r}_x[0]  & \cdots    & \hat{r}_x[p-2]    \newline
@@ -124,8 +124,7 @@ In the equation above, we assume to know the correlation samples $  \hat{r}_x[l]
         \hat{\sigma}_i^2      \newline 0                \newline 0            \newline \vdots    \newline 0
     \end{bmatrix}
 \end{equation}
-
-where the signal $x[n]$ is real, leading to a symmetric auto-correlation function which is shown as $\hat{r}_x[l] = \hat{r}_x[-l]$. Solving this system of equations, the unknown filter coefficient $\hat{a}_1, ..., \hat{a}_p$, and unknown variance of the input noise in the model,  $\hat{\sigma}_i^2$, can be estimated by least-square linear estimation.
+In (\ref{ywmatrix}) we have assumed the signal $x[n]$ to be real, leading to a symmetric auto-correlation function for which $\hat{r}_x[l] = \hat{r}_x[-l]$. Solving this system of equations, the unknown filter coefficient $\hat{a}_1, ..., \hat{a}_p$, and unknown variance of the input noise in the model,  $\hat{\sigma}_i^2$, can be estimated by least-square linear estimation.
 
 <div class="example">
 <h3> Example: AR(1) process </h3>
@@ -140,15 +139,15 @@ The corresponding auto-correlation function can be found as
 \begin{equation*}
     \begin{split}
         r_x[l]
-        &= \mathrm{E}\left\{x[n]x^\ast[n-l]\right\}, \newline
-        &= \mathrm{E}\left\{x[n]\left(i[n-l] - a_1 x[n-1-l]\right)\right\}, \newline
-        &= \mathrm{E}\left\{ x[n]i[n-l]\right\} - a_1\mathrm{E}\left\{x[n]x[n-1-l]\right\}, \newline
-        &= \sigma_i^2 \delta[l] - a_1 r_x[l+1].
+        &= \mathrm{E}\left\{x[n]x^\ast[n+l]\right\}, \newline
+        &= \mathrm{E}\left\{x[n]\left(i[n+l] - a_1 x[n-1+l]\right)\right\}, \newline
+        &= \mathrm{E}\left\{ x[n]i[n+l]\right\} - a_1\mathrm{E}\left\{x[n]x[n-1+l]\right\}, \newline
+        &= \sigma_i^2 \delta[l] - a_1 r_x[l-1].
     \end{split}
 \end{equation*}
 Evaluating the equation for the lags $0$ and $1$ gives
 \begin{equation*}
-    r_x[0] = \sigma_i^2 - a_1 r_x[1]
+    r_x[0] = \sigma_i^2 - a_1 r_x[-1] = \sigma_i^2 - a_1 r_x[1]
 \end{equation*}
 and
 \begin{equation*}

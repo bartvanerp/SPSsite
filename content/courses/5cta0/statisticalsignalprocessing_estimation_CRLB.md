@@ -39,8 +39,16 @@ or, equivalently, by
   \mathrm{Var}[g(\mathbf{x})] \geq \\left(-\mathbb{E}\\left[\frac{\partial^2 \ln(p(\mathbf{x};\theta))}{\partial \\theta^2}\\right]\\right)^{-1}.
   \label{eq:CR_Fisher}
 \end{equation}
+<<<<<<< HEAD
 The quantities $\ln(p(\mathbf{x};\theta))$ and $\frac{\partial \ln(p(\mathbf{x};\theta))}{\partial \theta}$ are referred to as **log-likelihood** and **score**, respectively. The log-likelihood is typically denoted by $\mathcal{L}(\mathbf{x};\theta)$ and plays a central role in the next module on maximum likelihood estimation.
 
+=======
+<<<<<<< Updated upstream
+=======
+The quantities $\ln(p(\mathbf{x};\theta))$ and $\frac{\partial \ln(p(\mathbf{x};\theta))}{\partial \theta}$ are referred to as **log-likelihood** and **score**, respectively. The log-likelihood is typically denoted by $\mathcal{L}(\mathbf{x};\theta)$ and plays a central role in the next module on maximum likelihood estimation. 
+
+>>>>>>> Stashed changes
+>>>>>>> Simona_20200519
 The inequalities are valid if the following regularity conditions hold:
 \begin{equation}
  \frac{d}{d \theta}\int p(\mathbf{x};\theta) d\mathbf{x} = \int\frac{\partial}{\partial \theta} p(\mathbf{x};\theta)d\mathbf{x} = 0
