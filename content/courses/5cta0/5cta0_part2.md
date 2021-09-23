@@ -19,15 +19,8 @@ weight = 200
 
 ## Introduction
 
-<<<<<<< HEAD
+
 <!-- Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter from some observation. Consider the following example. -->
-=======
-<<<<<<< Updated upstream
-Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter from some observation.
-=======
-Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter from some observation. Consider the following example.
->>>>>>> Stashed changes
->>>>>>> Simona_20200519
 
 <!-- ---
 <b>Example:</b>
@@ -53,16 +46,10 @@ Typically, the base station sends a fixed and known training sequence of length 
 --- -->
 
 Estimation theory is ubiquitous in our daily life and plays a fundamental role in many applications. The main objective of estimation theory is to infer the value of a parameter $\theta$. from some observations, which are represented by a vector $\mathbf{x}$ . These observations are random variables whose PDF depends on the unknown parameter. Thus, we denote the PDF as $p(\mathbf{x}; \theta)$ to emphasize its dependency on the parameter $\theta$.
-=======
----
-<<<<<<< Updated upstream
-
-=======
 
 
-In general, we wish to determine an unknown parameter $\theta$. However, this parameter is not directly observable; instead, some observations are available, represented by a vector $\mathbf{x}$. These observations are random variables whose PDF depends on the unknown parameter. Thus, we denote the PDF as $p(\mathbf{x}; \theta)$ to emphasize its dependency on the parameter $\theta$.
->>>>>>> Stashed changes
->>>>>>> Simona_20200519
+
+<!-- In general, we wish to determine an unknown parameter $\theta$. However, this parameter is not directly observable; instead, some observations are available, represented by a vector $\mathbf{x}$. These observations are random variables whose PDF depends on the unknown parameter. Thus, we denote the PDF as $p(\mathbf{x}; \theta)$ to emphasize its dependency on the parameter $\theta$. -->
 
 
 ---
