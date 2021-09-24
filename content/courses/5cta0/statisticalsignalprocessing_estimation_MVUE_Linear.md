@@ -295,7 +295,7 @@ So far, we have derived the MVUE for linear signal models with AWGN. In many app
 \begin{equation}
 \hat{\boldsymbol\theta} =\mathbf{Ax}.
 \end{equation}
-Here, we assume that $N$ observations are available and that we seek to estimate $K$ unknown parameter with $N>P$. Thus, $\mathbf{A}$ is of size $K\times N$. Depending on the choice of the $\mathbf{A}$'s coefficients, different estimators can be obtained. Among all linear estimators, we seek an estimator that is unbiased and has minimum variance. The estimator which fulfills these properties is called the <b>best linear unbiased estimator (BLUE)</b>. The BLUE, as we will see, is also applicable, if limited knowledge about the PDF of the observation is available.
+Here, we assume that $N$ observations are available and that we seek to estimate $K$ unknown parameter with $N>K$. Thus, $\mathbf{A}$ is of size $K\times N$. Depending on the choice of the $\mathbf{A}$'s coefficients, different estimators can be obtained. Among all linear estimators, we seek an estimator that is unbiased and has minimum variance. The estimator which fulfills these properties is called the <b>best linear unbiased estimator (BLUE)</b>. The BLUE, as we will see, is also applicable, if limited knowledge about the PDF of the observation is available.
 
 To find the BLUE, we have to start from the assumptions at hand; that the estimator has zero bias and minimum variance. The zero bias condition is formulated as
 \begin{equation}
