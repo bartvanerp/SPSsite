@@ -139,13 +139,14 @@ Using the above properties, we can easily calculate the input-output relationshi
 
 ## Innovation representation of a random signal
 
-A rational spectrum is a ratio of two rational functions containing $e^{j\theta}$.
+A rational spectrum is obtained as the ratio of two functions in $e^{j\theta}$.
 \begin{equation}
 \begin{split}
     P(e^{j\theta}) = P(z) = \frac{\sum_{q=-Q}^{Q} \gamma_1[q] e^{-j\theta q}}{\sum_{p=-P}^{P} \gamma_2[p] e^{-j\theta p}}
 \end{split}
 \end{equation}
 
+<<<<<<< Updated upstream
 Here $\gamma_1[q]$ and $\gamma_2[p]$ are two series with even symmetry, similarly to the auto-correlation sequences of  real signals. The rational spectrum is actually derived from the *Wold's decomposition* or *representation theorem*, a very general signal decomposition theorem, which states that every WSS signal can be written as the sum of two components, one deterministic and one stochastic, as given below
 \begin{equation}\label{eq:xnlti}
     x[n] = \sum_{k=0}^{\infty}h[k]w[n-k] + y[n],
@@ -161,6 +162,17 @@ Let us know consider a purely zero-mean WSS signal, from which any deterministic
 
 The sequence of weights $h[k]$ can now be seen as the samples of the impulse response of a causal LTI filter, which we require to be stable. We also assume this filter to have a rational transfer function of the form
 
+=======
+Here $\gamma_1[q]$ and $\gamma_2[p]$ are two series with even symmetry, similarly to the auto-correlation sequences of real signals. The rational spectrum is actually derived from the *Wold's decomposition* or *representation theorem*. This is a very general signal decomposition theorem, which states that every wide sense stationary (WSS) signal can be written as the sum of two components, one deterministic and one stochastic.
+
+To show this, let us consider the output of a minimum-phase LTI, for which both the impulse response $h[n]$ and its inverse $h_I[n]$ are causal and stable. Then the output is obtained equivalently as
+\begin{equation}\label{eq:outputsum}
+    x[n] = \sum_{k=0}^{\infty}h[k] i[n-k] =\sum_{k=-\infty}^{n}h[n-k] i[k]
+\end{equation}
+
+ where $i[n]$ is a white noise sequence given as input, often referred to as *innovations*, and $x[n]$ is the output random signal. This is know as *non-recursive* system representation, as the output is computed by summing linearly-weighted input samples.
+From equation (\ref{eq:outputsum}) it becomes clear that $x[n]$ can be considered as the outcome of filtering white noise by a stable LTI system, with a rational transfer function in the form of
+>>>>>>> Stashed changes
 \begin{equation}
 \begin{split}
     H(z) = \frac{B(z)}{A(z)},
@@ -174,14 +186,37 @@ with
 In equation (\ref{#eq:AB}), we assume that $a_0 =  1$  and  $b_0 = 1$.
 Note that this is not too restrictive. In fact, according to the rational approximation of function, we can always approximate any continuous function by a rational polynomial as closely as we want by increasing the degree of the numerator and denominator in (\ref{#eq:AB}). However, the poles of the transfer function must be inside the unit circle for the filter to be stable.
 
+<<<<<<< Updated upstream
 <!-- Combining equation (\ref{eq:xnlti}) with the right-end side of equation (\ref{eq:reversesum}), where we have reversed the summation, we can also rewrite (\ref{eq:reversesum}) to obtain a "new" sample of the random signal $x[n]$ as
+=======
+Similarly, knowing the inverse system, we can obtain the input given the output as
+\begin{equation}\label{eq:inputsum}
+    i[n] =x[n] + \sum_{k=1}^{\infty}h_I[k] x[n-k] ,
+\end{equation}
+where $h_I[n]$ is the impulse response of the inverse system, and we assume that the inverse system is causal and stable. If we now solve for $x[n]$ from equations (\ref{eq:outputsum}) and (\ref{eq:inputsum}), we obtain
+\begin{equation}\label{eq:inputsum_rec}
+    x[n] = -\sum_{k=1}^{\infty} h_I[k] x[n-k] + i[n].
+\end{equation}
 
+This representation is called *recursive* because the present value of the output is obtained as a linear combination of the past output values plus the present value of the input. The *recursive* and *non-recursive* representation of a signal are equivalent, that is they produce the same output given the same input. From equation (\ref{eq:outputsum}), each "new" sample can be obtained as
+>>>>>>> Stashed changes
+
+\begin{equation}\label{eq:outputsum_new}
+    x[n+1] = \sum_{k=-\infty}^{n+1} h[n+1-k] i[k] = \sum_{k=-\infty}^{n} h[n+1-k] i[k] + i[n+1].
+\end{equation}
+Finally, by using (\ref{eq:inputsum}) we obtain
 \begin{equation}\label{eq:innovation}
     x[n+1] =  \underbrace{\sum_{k=-\infty}^{n}h[n+1-k] x[k]}\_{\color{red}{\begin{subarray}{c}\text{Predictable part: linear}\newline
     \text{combination of past information}\end{subarray}}} + \underbrace{i[n+1]}\_{\color{blue}{\begin{subarray}{c}\text{New information}\newline
     \text{(innovation)}\end{subarray}}}.
+<<<<<<< Updated upstream
 \end{equation} -->
 <!-- The interpretation of equation (\ref{eq:innovation}) is that any new sample of the random signal $x[n]$ is composed of a predictable part obtained by a linear combination of previous samples of $x[n]$ (filtering by LTI), and of an unpredictable  part, which is called innovation (Figure 2).
+=======
+\end{equation}
+
+The interpretation of equation (\ref{eq:innovation}) is that any new sample of the random signal $x[n]$ is composed of a predictable part obtained by a linear combination of previous samples of $x[n]$ (filtering by LTI), and of an unpredictable part, which is called innovation (Figure 2).
+>>>>>>> Stashed changes
 
 <div style="max-width: 750px; margin: auto">
   <figure>
