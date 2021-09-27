@@ -364,3 +364,9 @@ Using a similar approach as in the derivation of the AR(p) and MA(q) power spect
 \begin{equation}\label{eq:psd_ARMA}
     P_x(e^{j\theta}) = P_I(e^{j\theta})H(e^{j\theta})H^\ast(e^{j\theta}) = \sigma_i^2 \frac{|1 + b_1 e^{-j\theta} + \ldots + b_q e^{-jq\theta}|^2}{|1 + a_1e^{-j\theta}  + \ldots + a_p e^{-jp\theta}|^2}.
 \end{equation}
+
+### Pencast video [⯈]
+In the following pencast, you can learn how to calculate the autocorrelation function and power spectral density for an ARMA process in practice.
+<div class="video-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/qcZqYwVbxuU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
