@@ -17,7 +17,7 @@ weight = 305                          # location in that menu
 
 ## Introduction
 
-One of the most common operation in statistical signal processing systems is the calculation, either implicitly or explicitly, of the signal's Fourier spectrum. Thus, a good understanding of the Fourier transform is a necessary prerequisite for spectral estimation. Distinguishing between (discrete-time) energy and power signals, we will see how the spectrum can be obtained directly from the Fourier transform of the signal, or indirectly from the autocorrelation function. In practice, real-world signals have a finite duration and thus are not ideal, infinetely-long signals; this implicit signal windowing has consequences on the maximum attainable spectral resolution, which is the the degree to which a spectral estimate can express spectral details.
+One of the most common operation in statistical signal processing systems is the calculation, either implicitly or explicitly, of the signal's Fourier spectrum. Thus, a good understanding of the Fourier transform is a necessary prerequisite for spectral estimation. Distinguishing between (discrete-time) energy and power signals, we will see how the spectrum can be obtained directly from the Fourier transform of the signal, or indirectly from the autocorrelation function. In practice, real-world signals have a finite duration and thus are not ideal, infinitely-long signals; this implicit signal windowing has consequences on the maximum attainable spectral resolution, which is the the degree to which a spectral estimate can express spectral details.
 
 ## Module overview
 This module covers the following topics:
