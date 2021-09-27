@@ -245,18 +245,18 @@ Optimization problems have the property that they can be carried out in a transf
 \begin{equation}
 \boldsymbol\alpha = g(\boldsymbol\theta)
 \end{equation}
-be a functions whose inverse exists. If we can find a function $g(\boldsymbol\theta)$ for which the
-
-
-The first method of dealing with nonlinear problems can be described as finding our way back to the linear LS problem by applying an invertible transformation to the parameters to be estimated. If we can find a transformation
+be a functions whose inverse exists. If we can find a function $g(\boldsymbol\theta)$ such that
 \begin{equation}
-\alpha=f(\theta)
+\mathbf{s}(\boldsymbol\theta(\boldsymbol{\alpha}))=\mathbf{s}(g^{-1}(\boldsymbol{\alpha}))=\mathbf{H}\boldsymbol\alpha
 \end{equation}
-such that
+then the signal model will be linear in $\boldsymbol{\alpha}$. We can use the linear LS formulations we derived so far and find the parameter $\theta$ through the inverse transform by
 \begin{equation}
-\mathbf{s}(\theta)=\mathbf{s}(f^{-1}(\alpha))=\mathbf{H}\alpha
+\hat{\boldsymbol\theta} = g^{-1}(\hat{\boldsymbol{\alpha}}),
 \end{equation}
-then we can simply use the linear LS formulations we derived so far and find the parameter $\theta$ through the inverse transform.
+where
+\begin{equation}
+\boldsymbol\alpha = (\mathbf{H}^T\mathbf{H})^{-1}\mathbf{H}^T\mathbf{x}.
+\end{equation}
 
 ---
 <b>Example:</b>
