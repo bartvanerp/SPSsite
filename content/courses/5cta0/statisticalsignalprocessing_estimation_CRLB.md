@@ -40,10 +40,7 @@ or, equivalently, by
   \label{eq:CR_Fisher}
 \end{equation}
 
-The quantities $\ln(p(\mathbf{x};\theta))$ and $\frac{\partial \ln(p(\mathbf{x};\theta))}{\partial \theta}$ are referred to as **log-likelihood** and **score**, respectively. The log-likelihood is typically denoted by $\mathcal{L}(\mathbf{x};\theta)$ and plays a central role in the next module on maximum likelihood estimation.
-
-
-The quantities $\ln(p(\mathbf{x};\theta))$ and $\frac{\partial \ln(p(\mathbf{x};\theta))}{\partial \theta}$ are referred to as **log-likelihood** and **score**, respectively. The log-likelihood is typically denoted by $\mathcal{L}(\mathbf{x};\theta)$ and plays a central role in the next module on maximum likelihood estimation.
+The quantities $\ln(p(\mathbf{x};\theta))$ and $\frac{\partial \ln(p(\mathbf{x};\theta))}{\partial \theta}$ are referred to as **log-likelihood** and **score**, respectively. The log-likelihood plays a central role in the next module on maximum likelihood estimation.
 
 
 The inequalities are valid if the following regularity conditions hold:

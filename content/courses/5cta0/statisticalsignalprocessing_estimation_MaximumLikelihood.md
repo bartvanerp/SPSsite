@@ -31,7 +31,7 @@ Finding the maximum can be achieved for simple problems analytically. However, f
 
 ## Maximum Likelihood Estimation
 
-Before defining the MLE, we define the likelihood function. The likelihood function is the PDF $p(\mathbf{x},\theta)$ for a given observation $\mathbf{x}$. Since we fix the observation $\mathbf{x}$, the PDF $p(\mathbf{x};\theta)$ depends only on the unknown parameter. The value of $\theta$ that maximizes the likelihood function is the maximum likelihood estimate $\hat{\theta}\_{\text{ML}}$, i.e., \begin{equation}
+Before defining the MLE, we define the likelihood function $\mathcal{L}(\mathbf{x};\theta)$. The likelihood function is the PDF $\mathcal{L}(\mathbf{x};\theta)=p(\mathbf{x};\theta)$ for a given observation $\mathbf{x}$. Since we fix the observation $\mathbf{x}$, the PDF $p(\mathbf{x};\theta)$ depends only on the unknown parameter. The value of $\theta$ that maximizes the likelihood function is the maximum likelihood estimate $\hat{\theta}\_{\text{ML}}$, i.e., \begin{equation}
 	\hat\theta_{\text{ML}} = \underset{\theta}{\operatorname{arg max}} p(\mathbf{x};\theta).
 \end{equation}
 In other words, the maximum likelihood estimate is the value of $\theta$ that most likely caused the observation $\mathbf{x}$. Note that depending on the estimation problem, no maximum or multiple maxima exist.
@@ -71,18 +71,18 @@ The likelihood function is a strictly monotonically decreasing function and is m
 
 Instead of maximizing the likelihood function, we can also maximize the so-called **log-likelihood** function defined as
 \begin{equation}
-  \mathcal{L}(\mathbf{x};\theta) = \ln p(\mathbf{x};\theta).
+  \mathcal{l}(\mathbf{x};\theta) = \ln \mathcal{L}(\mathbf{x};\theta).
 \end{equation}
 Since the logarithm is a monotonically increasing function, $\ln p(\mathbf{x};\theta)$ and $p(\mathbf{x};\theta)$ have their maxima for the same value of $\theta$. If the log-likelihood function is differentiable and the maximum is at an interior point, we further have that the derivative is equal to zero at its maxima, i.e.,
 \begin{equation}
-\\left.\frac{\partial}{\partial \theta}   \mathcal{L}(\mathbf{x};\theta) \\right\rvert_{\theta = \hat\theta_{\text{ML}}} = 0.
+\\left.\frac{\partial}{\partial \theta}   \mathcal{l}(\mathbf{x};\theta) \\right\rvert_{\theta = \hat\theta_{\text{ML}}} = 0.
 \label{eq:log_ll_max}
 \end{equation}
 The above equation is referred to as the likelihood equation. We already encountered the log-likelihood function in the module on the CRLB, which indicates its fundamental importance in estimation theory. If the log-likelihood function is not differentiable, other techniques have to be applied.
 
 We have shown that an efficient estimator can be obtained if the log-likelihood function can be expressed as
 \begin{equation}
- \frac{\partial}{\partial\theta}  \mathcal{L}(\mathbf{x};\theta)=\mathcal{I}(\theta)(g(\mathbf{x})-\theta).
+ \frac{\partial}{\partial\theta}  \mathcal{l}(\mathbf{x};\theta)=\mathcal{I}(\theta)(g(\mathbf{x})-\theta).
  \label{eq:efficient}
 \end{equation}
 Combining \eqref{eq:log_ll_max} and \eqref{eq:efficient} yields
@@ -101,7 +101,7 @@ Consequently, if an efficient estimator exists, then it is the MLE.
 
 We have already seen that the sample mean is an efficient estimator for estimating the DC level in the presence of additive white Gaussian noise. Moreover, we have just shown that if an efficient estimator exists, it is the MLE, and thus the sample mean is also the MLE. We can verify this by looking at the partial derivative of the log-likelihood function, which is
 \begin{equation}
-  \frac{\partial}{\partial \theta}   \mathcal{L}(\mathbf{x};\theta) = \frac{1}{\sigma^2} \sum_{n=0}^{N-1}(x[n]-A).
+  \frac{\partial}{\partial \theta}   \mathcal{l}(\mathbf{x};\theta) = \frac{1}{\sigma^2} \sum_{n=0}^{N-1}(x[n]-A).
 \end{equation}
 After equating with zero and solving for $A$, we have that
 \begin{equation}
@@ -205,7 +205,7 @@ and thus,
 ## Maximum Likelihood Estimator for Vector Parameter
 The concept of the MLE can also in estimating multiple parameters. If the maximum is interior and if the partial derivative with respect to all parameters exists, then a necessary condition for the maximum is
 \begin{equation}
-  \frac{\partial}{\partial\boldsymbol\theta}   \mathcal{L}(\mathbf{x};\boldsymbol\theta) = \mathbf{0}.
+  \frac{\partial}{\partial\boldsymbol\theta}   \mathcal{l}(\mathbf{x};\boldsymbol\theta) = \mathbf{0}.
 \end{equation}
 Thus, the maximum can be found by equating the gradient of the log-likelihood function with zero.
 
@@ -223,8 +223,8 @@ where $\mathbf{I}(\boldsymbol\theta)$ is the Fisher information matrix evaluated
 
 Consider the example of estimating the DC level and the noise variance presented in the module on the CRLB. There we already evaluated the expressions we need to evaluate the gradient given as
 \begin{align}
-\frac{\partial}{\partial A}   \mathcal{L}(\mathbf{x};\boldsymbol\theta) &= \frac{1}{\sigma^2}\sum_{n=0}^{N-1}(x[n]-A)\\\\\\
-\frac{\partial}{\partial \sigma^2}   \mathcal{L}(\mathbf{x};\boldsymbol\theta) &= -\frac{N}{2\sigma^2}+\frac{1}{2\sigma^4}\sum_{n=0}^{N-1}(x[n]-A)^2 \label{eq:variance} 
+\frac{\partial}{\partial A}   \mathcal{l}(\mathbf{x};\boldsymbol\theta) &= \frac{1}{\sigma^2}\sum_{n=0}^{N-1}(x[n]-A)\\\\\\
+\frac{\partial}{\partial \sigma^2} \mathcal{l}(\mathbf{x};\boldsymbol\theta) &= -\frac{N}{2\sigma^2}+\frac{1}{2\sigma^4}\sum_{n=0}^{N-1}(x[n]-A)^2 \label{eq:variance}
 \end{align}
 
 We already obtained the maximum likelihood estimate for the DC level which is the sample mean
