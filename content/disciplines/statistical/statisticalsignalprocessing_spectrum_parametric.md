@@ -314,7 +314,7 @@ The most basic model selection criterion is the residual error $\hat{\sigma}_r^2
 
 A performance metric which is commonly used in the field of statistics and which uses the residual error is the coefficient of determination, denoted by $R^2$. This coefficient is defined as
 \begin{equation}
-    R^2 = 1-\frac{\sum_i(x_i - \mu_x)^2}{\sum_i (x_i - \hat{x}_i)^2}.
+    R^2 = 1-\frac{\sum_i(x_i - \hat{x}_i)^2}{\sum_i(x_i - \mu_x)^2}.
 \end{equation}
 The coefficient can be understood as one minus the ratio between the variance of the data and the variance of the residual error. This coefficient is upper-bounded by the value of $1$ since the variance cannot be negative. For perfect models the variance of the error equals $0$ and therefore the coefficient of determination attains its upper bound. A lower value of $R^2$ denotes a more worse model fit. Although the coefficient of determination is denoted using the square operator, it should be noted that its value can actually be negative, denoting a very poor fit of the model.
 
