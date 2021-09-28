@@ -17,7 +17,7 @@ duplicated_page = "disciplines/statistical/statisticalsignalprocessing_spectrum_
 [menu.5cta0]                       # name of menu section (main module)
  name = "Recap: Fourier transforms"        # name of this item in that menu
  weight = 310                           # location in that menu
- parent = "3.1 Spectral distributions and windowing"
+ parent = "3.1 Introduction to spectral estimation"
 
 
 
