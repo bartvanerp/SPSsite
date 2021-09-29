@@ -111,7 +111,7 @@ As the integral and the derivative are acting on different variables, assuming t
 \frac{\partial}{\partial\hat\theta}\int(\hat\theta-\theta)^2p(\theta|
 \mathbf{x})d\theta=2\int(\hat\theta-\theta)p(\theta|\mathbf{x})d\theta=0
 \end{equation}
-As the integral is commutative over summation, we get
+As the integral is distributive over summation, we get
 \begin{equation}
 \hat\theta\int p(\theta|\mathbf{x})d\theta=\int\theta p(\theta|\mathbf{x})d\theta.
 \end{equation}
