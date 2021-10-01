@@ -24,6 +24,6 @@ One of the most common operation in statistical signal processing systems is the
 ## Module overview
 This module covers the following topics:
 
-1. <a href="../statisticalsignalprocessing_spectrum_fourier">Recap: Fourier transforms</a> - A good understanding of the Fourier transform and its variants is a necessary pre-requisite for spectral estimation. Here, a recap from previous courses is offered.
-2. <a href="../statisticalsignalprocessing_spectrum_psd">Spectral distributions</a> - The spectrum of discrete-time energy and power signals can be calculated directly from the signal samples in time, or inderictely from the autocorrelation function.
-3. <a href="../statisticalsignalprocessing_spectrum_window">Windowing</a> - All real-world signals are windowed in time, either implicitly or explicitly. Different types of windows have different trade-offs in terms of spectral resolution and spectral leakage.
+1. <a href="../../../courses/5cta0/statisticalsignalprocessing_spectrum_fourier">Recap: Fourier transforms</a> - A good understanding of the Fourier transform and its variants is a necessary pre-requisite for spectral estimation. Here, a recap from previous courses is offered.
+2. <a href="../../../courses/5cta0/statisticalsignalprocessing_spectrum_psd">Spectral distributions</a> - The spectrum of discrete-time energy and power signals can be calculated directly from the signal samples in time, or inderictely from the autocorrelation function.
+3. <a href="../../../courses/5cta0/statisticalsignalprocessing_spectrum_window">Windowing</a> - All real-world signals are windowed in time, either implicitly or explicitly. Different types of windows have different trade-offs in terms of spectral resolution and spectral leakage.
