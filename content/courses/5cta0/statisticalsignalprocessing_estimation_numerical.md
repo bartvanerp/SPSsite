@@ -75,7 +75,7 @@ where $\mathbf{H}$ is the Hessian matrix with elements
 Equivalently, the scoring method becomes
 
 \begin{equation}
-  \boldsymbol\theta_{m+1} = \boldsymbol\theta_{m} - \mathbf{I}^{-1}(\boldsymbol\theta)\frac{\partial}{\partial\boldsymbol\theta}\ln p(\mathbf{x};\boldsymbol\theta)\bigg|_{\boldsymbol\theta = \boldsymbol\theta_m},
+  \boldsymbol\theta_{m+1} = \boldsymbol\theta_{m} + \mathbf{I}^{-1}(\boldsymbol\theta)\frac{\partial}{\partial\boldsymbol\theta}\ln p(\mathbf{x};\boldsymbol\theta)\bigg|_{\boldsymbol\theta = \boldsymbol\theta_m},
 \end{equation}
 where $\mathbf{I}(\boldsymbol\theta)$ is the Fisher information matrix.
 
