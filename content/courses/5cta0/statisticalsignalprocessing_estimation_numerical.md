@@ -88,8 +88,8 @@ J(\theta) = \sum_{n=0}^{N-1}(x[n]-s[n;\theta])^2.
 \end{equation}
 Using the approximation \eqref{eq:approx}, we obtain the following approximation of the cost function
 \begin{align}
-J(\theta) &\approx \sum_{n=0}^{N-1}\\left(x[n]-s[n;\theta_0]+\\left.\frac{\partial s[n;\theta]}{\theta}\\right|_{\theta=\theta_0}(\theta-\theta_0)\\right)^2\\\\\\
-          &= \sum_{n=0}^{N-1}\\left(x[n]-s[n;\theta_0]+\\left.\frac{\partial s[n;\theta]}{\theta}\\right|_{\theta=\theta_0}\theta_0-\\left.\frac{\partial s[n;\theta]}{\theta}\\right|_{\theta=\theta_0}\theta\\right)^2\\\\\\
+J(\theta) &\approx \sum_{n=0}^{N-1}\\left(x[n]-s[n;\theta_0]-\\left.\frac{\partial s[n;\theta]}{\partial\theta}\\right|_{\theta=\theta_0}(\theta-\theta_0)\\right)^2\\\\\\
+          &= \sum_{n=0}^{N-1}\\left(x[n]-s[n;\theta_0]+\\left.\frac{\partial s[n;\theta]}{\partial\theta}\\right|_{\theta=\theta_0}\theta_0-\\left.\frac{\partial s[n;\theta]}{\partial\theta}\\right|_{\theta=\theta_0}\theta\\right)^2\\\\\\
           &=\\left(\mathbf{x}-\mathbf{s}(\theta_0)+\mathbf{h}(\theta_0)\theta_0-\mathbf{h}(\theta_0)\theta\\right)^T\\left(\mathbf{x}-\mathbf{s}(\theta_0)+\mathbf{h}(\theta_0)\theta_0-\mathbf{h}(\theta_0)\theta\\right),\label{eq:Gauss-Newton}
 \end{align}
 with
