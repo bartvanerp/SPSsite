@@ -246,14 +246,14 @@ A third approach is aimed more specifically at the practical implementation of t
 
 <h4> Exercise </h4>
 <hr>
-We want to estimate the power spectrum of a random signal $x[n]$ given an estimate of its autcorrelation function for lags $0, \pm 1, \pm 2$, as given below
+Suppose we have an estimate of the autocorrelation function of a random signal $x[n]$ at lags $0, \pm 1, \pm 2$, as given below
 \begin{equation*}
-    r_x[0] =\frac{49}{36}, \text{   } r_x[\pm 1] =\frac{1}{3}, \text{   } r_x[\pm 2] =-\frac{1}{3}
+    r_x[0] =\frac{49}{36}, \text{   } r_x[\pm 1] =\frac{1}{3}, \text{   } r_x[\pm 2] =-\frac{1}{3}.
 \end{equation*}
 <ol type="a">
-<li> Assuming a MA(1) model, find the parameters $\sigma_i^2$, and  $b_1$, calculate the spectrum $P(e^{j\theta})$ and plot it. </li>
-<li> Assuming a MA(2) model, and knowing that $\sigma_i^2=1$, find the parameters $b_1$ and $b_2$, calculate the spectrum $P(e^{j\theta})$ and plot it. </li>
-<li> Now use the correlagram method, assuming that $r_x[0]$ is zero for $l \geq 3$. How does the obtained spectrum compare with the previous ones? </li>
+<li> Assuming a MA(1) model, find the parameters $\sigma_i^2$, and  $b_1$, calculate the spectrum $P_{MA1}(e^{j\theta})$ and plot it. </li>
+<li> Assuming a MA(2) model, and knowing that $\sigma_i^2=1$, find the parameters $b_1$ and $b_2$, calculate the spectrum $P_{MA2}(e^{j\theta})$ and plot it. </li>
+<li> Now use the correlagram method, assuming that $r_x[l]$ is zero for $l \geq 3$. How does the obtained spectrum $P_{corr}(e^{j\theta})$ compare with the previous ones? </li>
 </ol>
 <button class="collapsible">Show solution</button>
 <div class="content">
@@ -269,36 +269,38 @@ Solving the above system of equations, we obtained two possible solutions for $b
 
 \begin{equation}
 \begin{split}
-    P_{MA1}(e^{j\theta}) &= 1.28 |1 + 0.26 e^{-j\theta}|^2 = 1.48 |1 + 0.23\cos(\theta)-j\cdot0.23\sin(\theta)|^2 \newline
-    & = 1.48\sqrt((1+0.23\cos(\theta))^2 + 0.23^2\sin(theta))^2= 1.48(1.46+0.23\cos(\theta))
+    P_{MA1}(e^{j\theta}) &= 1.28 |1 + 0.26 e^{-j\theta}|^2 = \newline
+    &1.28 |1 + 0.26\cos(\theta)-j\cdot0.26\sin(\theta)|^2 \newline
+    & = 1.28\sqrt{(1+0.26\cos(\theta))^2 + 0.26^2\sin\theta)}^2= \newline
+    & 1.28(1.07+0.52\cos(\theta))
 \end{split}
 \end{equation}
 
 </li>
-<li> Similar to above, we obtain:
+<li> For an MA(2) model, we need to estimate 3 parameters and thus we need 3 equations. Similar to above, we can write:
 \begin{equation*}
 \begin{cases}
      &r_x[0] = \frac{14}{9} = \sigma_i^2 + \sigma_i^2b_1^2 + \sigma_i^2b_2^2 \newline
-     &r_x[\pm 1] = \frac{1}{3} = \sigma_i^2 (b1 + b_2b_b1 ) \newline
+     &r_x[\pm 1] = \frac{1}{3} = \sigma_i^2 (b_1 + b_2b_1 ) \newline
      &r_x[\pm 2] = -\frac{1}{3} = \sigma_i^2 b_2 \newline
 \end{cases}
 \end{equation*}
-Solving the above equations with \sigma_i^2=1, gives $b2= -\frac{1}{3}$ and $b2= \frac{1}{2}$. The resulting power spectral density is:
+Solving the above equations with $\sigma_i^2=1$, gives $b_1= \frac{1}{2}$ and $b_2= -\frac{1}{3}$. The resulting power spectral density is:
 \begin{equation}
 \begin{split}
-    P_{MA2}(e^{j\theta}) &= \left|1 +\frac{1}{2} e^{-j\theta}-\frac{1}{2} e^{-j2\theta}\right|^2
+    P_{MA2}(e^{j\theta}) &= \left|1 +\frac{1}{2} e^{-j\theta}-\frac{1}{3} e^{-j2\theta}\right|^2
 \end{split}
 \end{equation}
 </li>
 <li> Using the correlagram, we need to take the Fourier transform of the autocorrelation function :
 \begin{equation}
 \begin{split}
-    P_{corr}(e^{j\theta}) &=\sum_{\l=-\infty}^{\infty}r_x[l] e^{-jl\theta}=&=\sum_{\l=-2}^{2}r_x[l] e^{-jl\theta}=\newline
+    P_{corr}(e^{j\theta}) &=\sum_{l=-\infty}^{\infty}r_x[l] e^{-jl\theta}=\sum_{l=-2}^{2}r_x[l] e^{-jl\theta}=\newline
     &= -\frac{1}{3} e^{j2\theta}+\frac{1}{3} e^{j\theta}+\frac{14}{9}+\frac{1}{3} e^{-j\theta}-\frac{1}{3} e^{-j2\theta}=\newline
     &=\frac{14}{9}+\frac{2}{3}\cos(\theta)-\frac{2}{3} \cos(2\theta)
 \end{split}
 \end{equation}</li>
-In the following figure, the estimated power spectral densities are plotted in the fundamental interval. Not surprisingly, the obtained power spectral density by an MA(2) model or by the correlogram are the same. In fact, for an MA(2) process, the autocorrelation function is only non zero for $|l|\leq2$. Thus, assuming that the autocorrelation is zero for $|l|\geq 3$, as we did when using the correlogram method, is equivalent to assuming a MA(2) generating process for $x[n]$. 
+In the following figure, the estimated power spectral densities are plotted in the fundamental interval. Not surprisingly, the obtained power spectral density by an MA(2) model or by the correlogram are the same. In fact, for an MA(2) process, the autocorrelation function is only non zero for $|l|\leq2$. When calculating the correlogram, we assumed that the autocorrelation was zero for $|l|\geq 3$. This assumption is equivalent to assuming a MA(2) generating process for $x[n]$. When we model $x[n]$ as a MA(1) process, the peak of the obtained power spectral density is quite different, but the valley gets close to the other estimates.
 <div style="max-width: 900px; margin: auto">
   <figure>
     <img
