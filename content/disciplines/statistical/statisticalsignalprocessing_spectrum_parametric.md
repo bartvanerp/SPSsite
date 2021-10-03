@@ -215,7 +215,7 @@ The transfer function can be found as
 \end{equation}
 
 The auto-correlation function is given by
-\begin{equation}
+\begin{equation}\label{yw_ma}
     r_x[l] =
     \begin{cases}
         \sigma_i^2 \sum\_{k=|l|}^q b_{k}b_{k-|l|},       & \text{for } 0\leq |l|  \leq q \newline
@@ -243,6 +243,78 @@ This description can be compared with the Blackman-Tukey method of the previous 
 Secondly, from the estimated auto-correlation function of the signal, it is also possible to estimate the model parameters $\hat{b}_i$ and the innovation variance $\hat{\sigma}_i^2$. This estimation is a non-linear estimation problem. However, once the parameters have been obtained and the power spectral density is calculated using (\ref{eq:psd_MA}), the power spectral density is guaranteed to be non-negative.
 
 A third approach is aimed more specifically at the practical implementation of the above mentioned methods. Here the analytical description of the power spectral density is approximated using (a zero-padded version of) the DFT or FFT.
+
+<h4> Exercise </h4>
+<hr>
+Suppose we have an estimate of the autocorrelation function of a random signal $x[n]$ at lags $0, \pm 1, \pm 2$, as given below
+\begin{equation*}
+    r_x[0] =\frac{49}{36}, \text{   } r_x[\pm 1] =\frac{1}{3}, \text{   } r_x[\pm 2] =-\frac{1}{3}.
+\end{equation*}
+<ol type="a">
+<li> Assuming a MA(1) model, find the parameters $\sigma_i^2$, and  $b_1$, calculate the spectrum $P_{MA1}(e^{j\theta})$ and plot it. </li>
+<li> Assuming a MA(2) model, and knowing that $\sigma_i^2=1$, find the parameters $b_1$ and $b_2$, calculate the spectrum $P_{MA2}(e^{j\theta})$ and plot it. </li>
+<li> Now use the correlagram method, assuming that $r_x[l]$ is zero for $l \geq 3$. How does the obtained spectrum $P_{corr}(e^{j\theta})$ compare with the previous ones? </li>
+</ol>
+<button class="collapsible">Show solution</button>
+<div class="content">
+<ol type="a">
+<li> Assuming a MA(1) model, we can find the parameters $\sigma_i^2$, and  $b_1$ by using the Yule-Walker equations in (\ref{yw_ma}). Since we have 2 parameters, we only need 2 equations, and thus we only need to use the autocorrelation values at 0 and 1. Because of the constraints on the innovation filter, we assume $b_0=1$, thus obtaining
+\begin{equation*}
+\begin{cases}
+     &r_x[0] = \frac{49}{36} = \sigma_i^2 + \sigma_i^2b_1^2  \newline
+     &r_x[\pm 1] = \frac{1}{3} = \sigma_i^2 b_1
+\end{cases}
+\end{equation*}
+Solving the above system of equations, we obtained two possible solutions for $b_1$, which are is $b_1\approx0.26$ or $b_1\approx3.82$. Since we want the innovation filter to be minimum phase, we choose $b_1=0.26$, for which the zero of the system is within the unit circle. With this choice, we obtain $\sigma_i^2\approx 1.28$. Using (\ref{eq:psd_MA}), we can now find the power spectral density as
+
+\begin{equation}
+\begin{split}
+    P_{MA1}(e^{j\theta}) &= 1.28 |1 + 0.26 e^{-j\theta}|^2 = \newline
+    &1.28 |1 + 0.26\cos(\theta)-j\cdot0.26\sin(\theta)|^2 \newline
+    & = 1.28\sqrt{(1+0.26\cos(\theta))^2 + 0.26^2\sin\theta)}^2= \newline
+    & 1.28(1.07+0.52\cos(\theta))
+\end{split}
+\end{equation}
+
+</li>
+<li> For an MA(2) model, we need to estimate 3 parameters and thus we need 3 equations. Similar to above, we can write:
+\begin{equation*}
+\begin{cases}
+     &r_x[0] = \frac{14}{9} = \sigma_i^2 + \sigma_i^2b_1^2 + \sigma_i^2b_2^2 \newline
+     &r_x[\pm 1] = \frac{1}{3} = \sigma_i^2 (b_1 + b_2b_1 ) \newline
+     &r_x[\pm 2] = -\frac{1}{3} = \sigma_i^2 b_2 \newline
+\end{cases}
+\end{equation*}
+Solving the above equations with $\sigma_i^2=1$, gives $b_1= \frac{1}{2}$ and $b_2= -\frac{1}{3}$. The resulting power spectral density is:
+\begin{equation}
+\begin{split}
+    P_{MA2}(e^{j\theta}) &= \left|1 +\frac{1}{2} e^{-j\theta}-\frac{1}{3} e^{-j2\theta}\right|^2
+\end{split}
+\end{equation}
+</li>
+<li> Using the correlagram, we need to take the Fourier transform of the autocorrelation function :
+\begin{equation}
+\begin{split}
+    P_{corr}(e^{j\theta}) &=\sum_{l=-\infty}^{\infty}r_x[l] e^{-jl\theta}=\sum_{l=-2}^{2}r_x[l] e^{-jl\theta}=\newline
+    &= -\frac{1}{3} e^{j2\theta}+\frac{1}{3} e^{j\theta}+\frac{14}{9}+\frac{1}{3} e^{-j\theta}-\frac{1}{3} e^{-j2\theta}=\newline
+    &=\frac{14}{9}+\frac{2}{3}\cos(\theta)-\frac{2}{3} \cos(2\theta)
+\end{split}
+\end{equation}</li>
+In the following figure, the estimated power spectral densities are plotted in the fundamental interval. Not surprisingly, the obtained power spectral density by an MA(2) model or by the correlogram are the same. In fact, for an MA(2) process, the autocorrelation function is only non zero for $|l|\leq2$. When calculating the correlogram, we assumed that the autocorrelation was zero for $|l|\geq 3$. This assumption is equivalent to assuming a MA(2) generating process for $x[n]$. When we model $x[n]$ as a MA(1) process, the peak of the obtained power spectral density is quite different, but the valley gets close to the other estimates.
+<div style="max-width: 900px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/statistical/spectrum/psds_ma_modeling.svg"
+      alt="Estimates of the power spectral density of random signal $x[n]$ by assuming a MA(1) or MA(2) generating process, and by using the correlogram method."
+    />
+    <figcaption class="numbered">
+      Estimates of the power spectral density of random signal $x[n]$ by assuming a MA(1) or MA(2) generating process, and by using the correlogram method.
+    </figcaption>
+  </figure>
+</div>
+</ol>
+</div>
+</div>
 
 <br></br>
 ## ARMA(p,q) spectral estimation
@@ -288,6 +360,59 @@ Secondly, the goal is to remove the influence of the AR(p) process such that onl
 
 Once the MA(q) process has been separated, the MA parameters can be determined using the methods described earlier. After this, both the AR and MA parameters have been estimated and the analytical power spectral density can be determined using (\ref{eq:psd_ARMA}) or by approximating it with the DFT or FFT.
 
+<!-- In the following exercise, you can try to achieve parametric spectral estimation with the method we just described.
+<div class="example">
+<h4> Exercise </h4>
+<hr>
+Random signal $x[n]$ is generated by an ARMA(1,1) process and has the following autocorrelation function
+\begin{equation*}
+    r_x[l] =
+    \begin{cases}
+        \frac{28}{27},  &\text{for } l=0 \newline
+        \frac{5}{27}\left(\frac{1}{2}\right)^{|l|-1},  &\text{for } |l|\geq 1 \newline \\
+    \end{cases}
+\end{equation*}
+We want to estimate the parameters of the ARMA model $\sigma_i^2$, $b_1$, $a_1$. To do so:
+<ol type="a">
+<li>Focusing on lags $|l|\geq 1$, find the AR parameter $a_1$</li>
+<li> Imagine now to filter the signal by the inverse of the AR filter obtained in a., as shown in Figure. What is the impulse response of this system $h_{AR}[n]$?</li>
+<li> How would you obtain the autocorrelation of signal $y[n]$, which is the output of this filtering operation? </li>
+<li> Calculate the autocorrelation $r_y[n]$ and use it to estimate the MA parameter $b_1$ and $\sigma_i^2$. In case you are not able to calculate $r_y[n]$, suppose that the values at lags 0 and 1 are: $r_y[0]= \frac{5}{9}$ and $r_y[0]= -\frac{1}{6}$.</li>
+</ol>
+<button class="collapsible">Show solution</button>
+<div class="content">
+\begin{equation*}
+P(z) = \frac{5 - 2(z^{-1} + z)}{10 - 3(z^{-1} + z)}=
+\frac{c_n}{c_d} \cdot \frac{1 - a z^{-1}}{1-bz^{-1}} \cdot \frac{1 - a z}{1-bz}
+= \sigma_{i}^{2} \cdot L(z) \cdot L(z^{-1})
+\end{equation*}
+with constants $c_n, c_d, a$ and $b$; mind that $|a|<1$ and $|b|<1$. In this way the innovation filter $L(z)$ is always minimum phase and the first coefficient of the innovation filter ($l_0$) equals one, thus $L(z)= 1 + \cdot  z^{-1} + \cdots $.
+
+From above, we obtain the following set of equation:
+\begin{equation*}
+\begin{split}
+c_n (1-a z^{-1}) (1-az) &=& 5 -2(z^{-1}+z) \mbox{ } \newline
+&\Rightarrow &
+(a=\frac{1}{2} \mbox{ and } c_n =4) \mbox{ or } (a=2 \mbox{ and } c_n =1) \newline
+c_d (1-b z^{-1}) (1-b z) &=& 10 -3(z^{-1}+z) \mbox{ } \newline
+&\Rightarrow &
+(b=\frac{1}{3} \mbox{ and } c_d =9) \mbox{ or } (b=3 \mbox{ and } c_d =1)
+\end{split}
+\end{equation*}
+Since we need to choose that solution which results in a minimum phase innovation filter, this results in:
+\begin{equation*}
+P(z) = \frac{4}{9} \cdot
+\left (
+\frac{1- \frac{1}{2} z^{-1}}{1- \frac{1}{3} z^{-1}}
+\right )
+\cdot
+\left (
+\frac{1- \frac{1}{2} z}{1- \frac{1}{3} z}
+\right ) = \sigma_{i}^{2} \cdot L(z) \cdot L(z^{-1})
+\end{equation*}
+Thus $L(z) = (1- \frac{1}{2} z^{-1})/(1- \frac{1}{3} z^{-1})$ and $\sigma_{i}^{2} = 4/9$.
+</div>
+</div> -->
 
 <br></br>
 ## Model selection
