@@ -25,8 +25,8 @@ Students can explore our different fields of research by checking the areas each
 - [Biomedical Diagnostics Lab](../master_bmd) (BM/d)
 - [Information and Communication Theory Lab](../master_ictlab) (ICT Lab)
 - [Lighting and IoT Lab](../master_lighting) (L&IoT Lab)
-- [NeuroPlatform](../master_neu3ca)
-- [Mobile Perception Systems Lab](../mpslab) (MPS)
+- [NeuroPlatform](../master_neuroplatform)
+- [Mobile Perception Systems Lab](../master_mpslab) (MPS)
 - [Video Coding and Architectures](../master_vca) (VCA)
 
 If you find yourself on this page, you have probably already decided that you want to graduate within the SPS group. Perfect!
