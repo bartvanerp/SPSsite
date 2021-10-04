@@ -226,7 +226,7 @@ The transfer function can be found as
 \end{equation}
 
 The auto-correlation function is given by
-\begin{equation}
+\begin{equation}\label{yw_ma}
     r_x[l] =
     \begin{cases}
         \sigma_i^2 \sum\_{k=|l|}^q b_{k}b_{k-|l|},       & \text{for } 0\leq |l|  \leq q \newline
@@ -254,6 +254,78 @@ This description can be compared with the Blackman-Tukey method of the previous 
 The second approach involves estimating the MA model parameters $\hat{b}_i$ and the innovation variance $\hat{\sigma}_i^2$ from the estimated auto-correlation function of the signal. This estimation is a non-linear estimation problem. However, once the parameters have been obtained and the power spectral density is calculated using (\ref{eq:psd_MA}), the power spectral density is guaranteed to be non-negative.
 
 A third approach is aimed more specifically at the practical implementation of the above mentioned methods. Here the analytical description of the power spectral density is approximated using (a zero-padded version of) the DFT or FFT.
+
+<h4> Exercise </h4>
+<hr>
+Suppose we have an estimate of the autocorrelation function of a random signal $x[n]$ at lags $0, \pm 1, \pm 2$, as given below
+\begin{equation*}
+    r_x[0] =\frac{49}{36}, \text{   } r_x[\pm 1] =\frac{1}{3}, \text{   } r_x[\pm 2] =-\frac{1}{3}.
+\end{equation*}
+<ol type="a">
+<li> Assuming a MA(1) model, find the parameters $\sigma_i^2$, and  $b_1$, calculate the spectrum $P_{MA1}(e^{j\theta})$ and plot it. </li>
+<li> Assuming a MA(2) model, and knowing that $\sigma_i^2=1$, find the parameters $b_1$ and $b_2$, calculate the spectrum $P_{MA2}(e^{j\theta})$ and plot it. </li>
+<li> Now use the correlagram method, assuming that $r_x[l]$ is zero for $l \geq 3$. How does the obtained spectrum $P_{corr}(e^{j\theta})$ compare with the previous ones? </li>
+</ol>
+<button class="collapsible">Show solution</button>
+<div class="content">
+<ol type="a">
+<li> Assuming a MA(1) model, we can find the parameters $\sigma_i^2$, and  $b_1$ by using the Yule-Walker equations in (\ref{yw_ma}). Since we have 2 parameters, we only need 2 equations, and thus we only need to use the autocorrelation values at 0 and 1. Because of the constraints on the innovation filter, we assume $b_0=1$, thus obtaining
+\begin{equation*}
+\begin{cases}
+     &r_x[0] = \frac{49}{36} = \sigma_i^2 + \sigma_i^2b_1^2  \newline
+     &r_x[\pm 1] = \frac{1}{3} = \sigma_i^2 b_1
+\end{cases}
+\end{equation*}
+Solving the above system of equations, we obtained two possible solutions for $b_1$, which are is $b_1\approx0.26$ or $b_1\approx3.82$. Since we want the innovation filter to be minimum phase, we choose $b_1=0.26$, for which the zero of the system is within the unit circle. With this choice, we obtain $\sigma_i^2\approx 1.28$. Using (\ref{eq:psd_MA}), we can now find the power spectral density as
+
+\begin{equation}
+\begin{split}
+    P_{MA1}(e^{j\theta}) &= 1.28 |1 + 0.26 e^{-j\theta}|^2 = \newline
+    &1.28 |1 + 0.26\cos(\theta)-j\cdot0.26\sin(\theta)|^2 \newline
+    & = 1.28\sqrt{(1+0.26\cos(\theta))^2 + 0.26^2\sin\theta)}^2= \newline
+    & 1.28(1.07+0.52\cos(\theta))
+\end{split}
+\end{equation}
+
+</li>
+<li> For an MA(2) model, we need to estimate 3 parameters and thus we need 3 equations. Similar to above, we can write:
+\begin{equation*}
+\begin{cases}
+     &r_x[0] = \frac{14}{9} = \sigma_i^2 + \sigma_i^2b_1^2 + \sigma_i^2b_2^2 \newline
+     &r_x[\pm 1] = \frac{1}{3} = \sigma_i^2 (b_1 + b_2b_1 ) \newline
+     &r_x[\pm 2] = -\frac{1}{3} = \sigma_i^2 b_2 \newline
+\end{cases}
+\end{equation*}
+Solving the above equations with $\sigma_i^2=1$, gives $b_1= \frac{1}{2}$ and $b_2= -\frac{1}{3}$. The resulting power spectral density is:
+\begin{equation}
+\begin{split}
+    P_{MA2}(e^{j\theta}) &= \left|1 +\frac{1}{2} e^{-j\theta}-\frac{1}{3} e^{-j2\theta}\right|^2
+\end{split}
+\end{equation}
+</li>
+<li> Using the correlagram, we need to take the Fourier transform of the autocorrelation function :
+\begin{equation}
+\begin{split}
+    P_{corr}(e^{j\theta}) &=\sum_{l=-\infty}^{\infty}r_x[l] e^{-jl\theta}=\sum_{l=-2}^{2}r_x[l] e^{-jl\theta}=\newline
+    &= -\frac{1}{3} e^{j2\theta}+\frac{1}{3} e^{j\theta}+\frac{14}{9}+\frac{1}{3} e^{-j\theta}-\frac{1}{3} e^{-j2\theta}=\newline
+    &=\frac{14}{9}+\frac{2}{3}\cos(\theta)-\frac{2}{3} \cos(2\theta)
+\end{split}
+\end{equation}</li>
+In the following figure, the estimated power spectral densities are plotted in the fundamental interval. Not surprisingly, the obtained power spectral density by an MA(2) model or by the correlogram are the same. In fact, for an MA(2) process, the autocorrelation function is only non zero for $|l|\leq2$. When calculating the correlogram, we assumed that the autocorrelation was zero for $|l|\geq 3$. This assumption is equivalent to assuming a MA(2) generating process for $x[n]$. When we model $x[n]$ as a MA(1) process, the peak of the obtained power spectral density is quite different, but the valley gets close to the other estimates.
+<div style="max-width: 900px; margin: auto">
+  <figure>
+    <img
+      src="/../files/7.Images/statistical/spectrum/psds_ma_modeling.svg"
+      alt="Estimates of the power spectral density of random signal $x[n]$ by assuming a MA(1) or MA(2) generating process, and by using the correlogram method."
+    />
+    <figcaption class="numbered">
+      Estimates of the power spectral density of random signal $x[n]$ by assuming a MA(1) or MA(2) generating process, and by using the correlogram method.
+    </figcaption>
+  </figure>
+</div>
+</ol>
+</div>
+</div>
 
 <br></br>
 ## ARMA(p,q) spectral estimation

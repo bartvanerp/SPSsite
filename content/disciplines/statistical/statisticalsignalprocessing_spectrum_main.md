@@ -54,9 +54,9 @@ From this we can conclude that just calculating the spectrum of a signal, especi
 ## Module overview
 This module covers the following topics:
 
-1. <a href="../../../disciplines/statistical/statisticalsignalprocessing_spectrum_intro_distributions">Introduction to spectral estimation</a> In order to cover the topic of spectral estimation, it is important that to review topics such as the Fourier transform and calculation of the power spectrum for energy and power signals. In practice, however, all real-world signals are windowed, which leads to several consequences when calculating the power spectrum.
-2. <a href="../../../disciplines/statistical/statisticalsignalprocessing_spectrum_nonparametric">Non-parametric methods</a> - In order to improve the estimation of the spectral representation, several methods can be applied, such as combining several estimates of the spectrum.
-3. <a href="../../../disciplines/statistical/statisticalsignalprocessing_spectrum_parametric">Parametric methods</a> - Another methodology involves the modelling of the frequency spectrum through the use of several parameters. The parameters define the shape of the spectrum and by learning these parameters, the true spectrum can be estimated.
+1. <a href="../../../courses/5cta0/statisticalsignalprocessing_spectrum_intro_distributions">Introduction to spectral estimation</a> In order to cover the topic of spectral estimation, it is important that to review topics such as the Fourier transform and calculation of the power spectrum for energy and power signals. In practice, however, all real-world signals are windowed, which leads to several consequences when calculating the power spectrum.
+2. <a href="../../../courses/5cta0/statisticalsignalprocessing_spectrum_nonparametric">Non-parametric methods</a> - In order to improve the estimation of the spectral representation, several methods can be applied, such as combining several estimates of the spectrum.
+3. <a href="../../../courses/5cta0/statisticalsignalprocessing_spectrum_parametric">Parametric methods</a> - Another methodology involves the modelling of the frequency spectrum through the use of several parameters. The parameters define the shape of the spectrum and by learning these parameters, the true spectrum can be estimated.
 
 
 <br></br>
