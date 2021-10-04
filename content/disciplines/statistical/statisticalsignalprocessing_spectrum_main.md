@@ -17,6 +17,12 @@ type = "docs"  # Do not modify.
 
 ## Introduction
 
+{{% alert note %}}
+**Reading&Watching guide**
+
+The reader introduces the topic of spectral estimation. The video "Spectral estimation: introduction" discusses some practical real-world examples for which spectral estimation is useful and provides the outline of this module. There is little overlap between the video and the reader.
+{{% /alert %}}
+
 Spectral estimation is concerned with estimating the power spectrum of a stochastic signal from a limited set of observations. The power spectrum describes how the power is distributed across frequencies and can thus provide important information about the signal itself. The distribution of the power of the signal across its frequency range can help in characterizing unwanted noise sources. Other purposes of spectral estimation include the detection of periodicities, signal compression and signal classification. Manipulation of the spectrum through filtering allows for the denoising, analysis, and classification of signals. The key underlying aspect of all these signal processing techniques in the frequency domain is a good understanding of the spectrum of a signal.
 
 The simplest and most straightforward method for estimation of the signal spectrum is via the Fourier transform, which is often applied by using the Fast Fourier Transform (FFT) implementation, typically available in many computing environments, including MATLAB. However, careful understanding of the FFT operation and the analyzed signal are necessary in order to avoid inaccurate estimation and/or misinterpretation of the obtained results. An example of such a situation is represented in Fig. 1. Here a single discrete-time sinusoidal signal is plotted over time. Suppose that an ambitious student tries to determine the frequency of this sinusoid by simply applying the `fft()`-function. He or she would expect to find only 2 peaks at the positive and negative frequency of the sinusoid, but instead the right-hand plot in Fig. 1 is obtained. Here, there are multiple frequency components present, which seems to be unrelated to the original sinusoidal signal; moreover, the frequency axis does not immediately correspond to the actual frequency, but to some index $k$.
