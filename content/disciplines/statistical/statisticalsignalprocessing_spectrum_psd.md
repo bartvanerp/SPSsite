@@ -17,6 +17,12 @@ type = "docs"  # Do not modify.
 
 This section will describe the main methods used to calculate the energy and power spectrum of a discrete-time signal. Initially, we will assume that the signal is infinitely long, has zero-mean and is stationary. However, since this is usually not the case, we will later analyze the consequences of these non-ideal conditions.
 
+{{% alert note %}}
+**Reading&Watching guide**
+
+The reader provides all the necessary information. The video "Energy and power spectral distribution" gives additional guidance on some derivations and provides a couple of examples of energy and power signals. The content in the video and the reader partially overlaps.
+{{% /alert %}}
+
 <br></br>
 
 ### Screencast video [⯈]

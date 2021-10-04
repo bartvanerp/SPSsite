@@ -14,12 +14,18 @@ type = "docs"  # Do not modify.
   weight = 4                      # location in that menu
   parent = "Spectral estimation"
 +++
+{{% alert note %}}
+**Reading&Watching guide**
 
+The reader contains all the necessary information. The video "Spectral analysis: windowing and zero padding" gives additional guidance on some derivations, provides a more intuitve, graphical interpretation of some of the concepts, and discusses the examples a bit more in detail.
+{{% /alert %}}
 
 ## Causes and issues of windowing
 The methods presented in the previous section for the calculation of the power spectrum ideally require an infinitely-long signal for the most accurate estimation. However, in practice, all real-world signals are <i>windowed</i>, which means that only a finite portion of the signal is considered, instead of the entire signal. Windowing can result from many different causes. First, it is highly unlikely that an infinite number of signal samples are available for analysis and therefore it is inherently windowed by the limited observation time. Secondly, windowing makes an algorithm less computationally expensive. There are operations, such as matrix inversion, whose computational costs do not scale linearly with the number of samples. Therefore it is important to use a limited number of samples. Finally, there are cases in which the signal is not stationary, but most analysis methods assume stationarity. In these cases, the signal is windowed such that it can be assumed to be locally stationary.
 
 Calculating the spectrum of signal $x[n]$ when only the windowed signal $\tilde{x}[n]$ is available leads to several issues. First of all, in most practical cases the spectrum will be calculated through the N-point discrete-time Fourier transform (DFT), which is actually a sampled version of the Fourier transform for discrete-time signals (FTD). Therefore, it is possible that important signal characteristics will get lost. Secondly, windowing causes <i>spectral leakage</i>, which means that single frequency components will be spread throughout the frequency spectrum. Finally, windowing leads to loss of <i>resolution</i>, which relates to the ability of distinguishing between different spectral components.
+
+
 
 ### Screencast video [⯈]
 
