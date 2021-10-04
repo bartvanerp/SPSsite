@@ -23,7 +23,7 @@ The summary below should point out the main differences between the different Fo
 
 <br></br>
 ## Fourier series (FS)
-> A full review of the Fourier series can be found <a href="../../continuous/continuoussignalprocessing_transforms_fourier_main">here</a>.
+> A full review of the Fourier series can be found <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_fourier_main">here</a>.
 
 The Fourier series expansion is a method in which a continuous-time signal is decomposed in sinusoidal signals with harmonically related frequencies. The signal is split into complex phasors with frequency $f=kF_0$, where $k$ is an integer and $F_0$ is the fundamental frequency. The Fourier series coefficients $\alpha_k$ contain the amplitude and phase information of the $k^\text{th}$ harmonic. The Fourier series and the inverse operation are defined as:
 
@@ -35,7 +35,7 @@ The Fourier series expansion is a method in which a continuous-time signal is de
 
 <br></br>
 ## Fourier transform for continuous-time signals (FTC)
-> A full review of the Fourier transform for continuous-time signals can be found <a href="../../continuous/continuoussignalprocessing_transforms_ftc_main">here</a>.
+> A full review of the Fourier transform for continuous-time signals can be found <a href="../../../disciplines/continuous/continuoussignalprocessing_transforms_ftc_main">here</a>.
 
 Whereas the Fourier series only calculates the coefficients of the sinusoidal signals at specific harmonically related frequencies, the Fourier transform for continuous-time signals (FTC) converts a continuous-time signal to a spectrum over all frequencies. The Fourier transform for continuous-time signals is defined as:
 
@@ -47,7 +47,7 @@ Whereas the Fourier series only calculates the coefficients of the sinusoidal si
 
 <br></br>
 ## Fourier transform for discrete-time signals (FTD)
-> A full review of the Fourier transform for discrete-time signals can be found <a href="../../discrete/discretesignalprocessing_transforms_ftc_main">here</a>.
+> A full review of the Fourier transform for discrete-time signals can be found <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_ftd_main">here</a>.
 
 The application of the Fourier Series for continuous-time signals is usually limited, since continuous-time signals cannot be directly recorded on a computer. Instead, these signals are sampled to the discrete-time domain. The Fourier transform that is capable of dealing with discrete-time signals is called the Fourier transform for discrete-time signals (FTD) and is defined as:
 
@@ -60,7 +60,7 @@ x[n] = \frac{1}{2 \pi} \int_{-\pi}^{\pi} X(e^{j\theta}) e^{jn\theta} \mathrm{d} 
 
 <br></br>
 ## Discrete-time Fourier transform (DFT)
-> A full review of the discrete-time Fourier transform can be found <a href="../../discrete/discretesignalprocessing_transforms_dft_main">here</a>.
+> A full review of the discrete-time Fourier transform can be found <a href="../../../disciplines/discrete/discretesignalprocessing_transforms_dft_main">here</a>.
 
 Although the Fourier transform for discrete-time signals gives a very good representation of the frequency distribution of a signal, the continuous frequency domain variable $\theta$ is still impractical for computer-based operations. The discrete-time Fourier transform (DFT) calculates an equidistantly sampled version of the Fourier transform for discrete-time signals, based on a windowed signal. The discrete-time Fourier transform is defined as:
 
