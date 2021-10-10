@@ -213,7 +213,7 @@ Fig. 2 graphically shows the direct and indirect methods for calculating the pow
 
 <div class="example">
 <h4> Example </h4>
-Consider the power signal $x[n] = u[n]$. Calculate the frequency spectrum, auto-correlation function, power spectral density and average power of the windowed signal $x[n]$ for $0\leq n < N$.
+Consider the power signal $x[n] = u[n]$. Calculate the frequency spectrum, auto-correlation function, power spectral density and average power of the windowed signal $x[n]$ for $0\leq n < N-1$.
 <button class="collapsible">Show solution</button>
 <div class="content">
 The frequency spectrum can be calculated as
