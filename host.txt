@@ -1,0 +1,3 @@
+~/bin/hugo --cacheDir ~/hugo_cache || true
+rm -r ~/httpdocs/* || true
+cp -r ~/origin/public/* ~/httpdocs/
