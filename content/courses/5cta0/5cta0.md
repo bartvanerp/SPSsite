@@ -112,7 +112,7 @@ We also suggest the following websites:
 
 ## Planning
 
-A detailed planning for tha academic year 2021-22 is available on <a href=https://canvas.tue.nl/courses/18619/assignments/syllabus >Canvas.</a>
+A detailed planning for the academic year 2021-22 is available on <a href=https://canvas.tue.nl/courses/18619/assignments/syllabus >Canvas.</a>
 <!-- | Week   |         Lectures         |                        Instruction/Labs                         | Topics                                                                   |                                     |
 |:------:|:-----------------------:|:---------------------------------------------------------------:|--------------------------------------------------------------------------|-----------------------------------------------|
 |   1    | 31/08/2020<br>08.45-9.30  |         No instructions<br><p style="color:#4E5480">Labs 03/09/2020<br>15.30 - 17.20</p>         | 1.1 Probability and random variables                                   | Quiz Week 1<br>Survey Week 1<br>MATLAB Demo 1  |
