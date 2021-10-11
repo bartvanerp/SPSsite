@@ -224,7 +224,8 @@ The frequency spectrum can be calculated as
         &= \sum_{n=0}^{N-1} e^{-jn\theta}, \\
         &= \frac{1-e^{-jN\theta}}{1-e^{-j\theta}}, \\
         &= \frac{(e^{j\frac{N}{2}\theta} - e^{-j\frac{N}{2}\theta})e^{-j\frac{N}{2}\theta}}{(e^{j\frac{1}{2}\theta} - e^{-j\frac{1}{2}\theta})e^{-j\frac{1}{2}\theta}}, \\
-        &= \frac{2j}{2j}\frac{\sin(\frac{N}{2}\theta)}{\sin(\frac{1}{2}\theta)}e^{-j\frac{N-1}{2}\theta}.
+        &= \frac{2j}{2j}\frac{\sin(\frac{N}{2}\theta)}{\sin(\frac{1}{2}\theta)}e^{-j\frac{N-1}{2}\theta\\
+        &= \frac{\sin(\frac{N}{2}\theta)}{\sin(\frac{1}{2}\theta)}e^{-j\frac{N-1}{2}\theta}.      
     \end{split}
 \end{equation*}
 The auto-correlation function for $|l| < N$ can be estimated as
@@ -238,7 +239,7 @@ The auto-correlation function for $|l| < N$ can be estimated as
 \end{equation*}
 The power spectral density can be calculated as
 \begin{equation*}
-    \hat{P}_N(e^{j\theta}) = \frac{1}{N} | X_N(e^{j\theta})|^2 = \frac{1}{N}\frac{\sin^2(\frac{N}{2}\theta)}{2\sin^2(\frac{1}{2}\theta)}.
+    \hat{P}_N(e^{j\theta}) = \frac{1}{N} | X_N(e^{j\theta})|^2 = \frac{1}{N}\frac{\sin^2(\frac{N}{2}\theta)}{sin^2(\frac{1}{2}\theta)}.
 \end{equation*}
 The average signal power can be determined as
 \begin{equation*}
