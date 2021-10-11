@@ -61,7 +61,7 @@ where $W(e^{j\theta})$ is the frequency response of the window. So the frequency
         W(e^{j\theta})
         &= \sum_{n=- \infty}^{\infty} w[n] e^{-jn\theta} , \newline
         &= \sum_{n=0}^{N-1} e^{-jn\theta}, \newline
-        &= \frac{1-e^{-jN\theta}}{1-e^{j\theta}}, \newline
+        &= \frac{1-e^{-jN\theta}}{1-e^{-j\theta}}, \newline
         &= \frac{\left(e^{j\frac{N}{2}\theta} - e^{-j\frac{N}{2}\theta}\right)e^{-j\frac{N}{2}\theta}}{\left(e^{j\frac{1}{2}\theta} - e^{-j\frac{1}{2}\theta}\right)e^{-j\frac{1}{2}\theta}}, \newline
         &= \frac{\frac{1}{2j}\left(e^{j\frac{N}{2}\theta} - e^{-j\frac{N}{2}\theta}\right)}{\frac{1}{2j}\left(e^{j\frac{1}{2}\theta} - e^{-j\frac{1}{2}\theta}\right)}e^{-j\frac{N-1}{2}\theta}, \newline
         &= \frac{\sin(N\theta/2)}{\sin(\theta/2)}e^{-j\frac{N-1}{2}\theta},
