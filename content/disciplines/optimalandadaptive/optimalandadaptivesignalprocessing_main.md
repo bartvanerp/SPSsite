@@ -2,7 +2,7 @@
 title = "Optimal and adaptive signal processing"         # name of webpage
 
 # date = {{ .Date }}
-lastmod = 2019-05-28
+lastmod = 2019-05-29
 
 draft = false  # Is this a draft? true/false
 toc = false  # Show table of contents? true/false
