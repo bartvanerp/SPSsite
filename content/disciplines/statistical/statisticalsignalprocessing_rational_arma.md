@@ -97,9 +97,9 @@ Calculation of the auto-correlation function of the output $x[n]$ now gives
         &= \sigma_i^2\delta[l] - a_1 r_{x}[l-1] - \ldots - a_p r_{x}[l-p],
     \end{split}
 \end{equation}
-which can rewritten as
+which can be rewritten as
 \begin{equation}
-    \sigma_i^2\delta[l] = \sum_{k=1}^p a_k r_x[l-k],
+    \sigma_i^2\delta[l] = \sum_{k=0}^p a_k r_x[l-k],
 \end{equation}
 where the newly introduced coefficient $a_0$ equals 1.
 

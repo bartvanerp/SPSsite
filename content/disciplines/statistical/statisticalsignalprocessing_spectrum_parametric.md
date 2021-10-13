@@ -66,7 +66,7 @@ The auto-correlation function is given by
 \end{equation}
 or equivalently
 \begin{equation}
-r[l] = - \sum_{k=1}^p \alpha_k r_x[|l|-k].
+r[l] = - \sum_{k=1}^p a_k r_x[|l|-k].
 \end{equation}
 
 When a windowed signal is observed and the auto-correlation function is estimated as $\hat{r}_x[l]$, the Yule-Walker equations can be used to estimate parameters $\hat{a}_1$,..., $\hat{a}_p$ and $\hat{\sigma}_i^2$. Since there are $p+1$ unknowns, we require $p+1$ equations to solve the Yule-walker equations, which is equivalent to using $p+1$ estimated correlation lags. The Yule-Walker equations for an AR process are linear, and thus can be written in a matrix form as
