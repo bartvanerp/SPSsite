@@ -308,7 +308,7 @@ Solving the above equations with $\sigma_i^2=1$, gives $b_1= \frac{1}{2}$ and $b
 \begin{split}
     P_{corr}(e^{j\theta}) &=\sum_{l=-\infty}^{\infty}r_x[l] e^{-jl\theta}=\sum_{l=-2}^{2}r_x[l] e^{-jl\theta}=\newline
     &= -\frac{1}{3} e^{j2\theta}+\frac{1}{3} e^{j\theta}+\frac{14}{9}+\frac{1}{3} e^{-j\theta}-\frac{1}{3} e^{-j2\theta}=\newline
-    &=\frac{14}{9}+\frac{2}{3}\cos(\theta)-\frac{2}{3} \cos(2\theta)
+    &=\frac{49}{36}+\frac{2}{3}\cos(\theta)-\frac{2}{3} \cos(2\theta)
 \end{split}
 \end{equation}</li>
 In the following figure, the estimated power spectral densities are plotted in the fundamental interval. Not surprisingly, the obtained power spectral density by an MA(2) model or by the correlogram are the same. In fact, for an MA(2) process, the autocorrelation function is only non zero for $|l|\leq2$. When calculating the correlogram, we assumed that the autocorrelation was zero for $|l|\geq 3$. This assumption is equivalent to assuming a MA(2) generating process for $x[n]$. When we model $x[n]$ as a MA(1) process, the peak of the obtained power spectral density is quite different, but the valley gets close to the other estimates.
