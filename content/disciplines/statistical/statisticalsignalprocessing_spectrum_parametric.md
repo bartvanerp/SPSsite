@@ -291,7 +291,7 @@ Solving the above system of equations, we obtained two possible solutions for $b
 <li> For an MA(2) model, we need to estimate 3 parameters and thus we need 3 equations. Similar to above, we can write:
 \begin{equation*}
 \begin{cases}
-     &r_x[0] = \frac{14}{9} = \sigma_i^2 + \sigma_i^2b_1^2 + \sigma_i^2b_2^2 \newline
+     &r_x[0] = \frac{49}{36} = \sigma_i^2 + \sigma_i^2b_1^2 + \sigma_i^2b_2^2 \newline
      &r_x[\pm 1] = \frac{1}{3} = \sigma_i^2 (b_1 + b_2b_1 ) \newline
      &r_x[\pm 2] = -\frac{1}{3} = \sigma_i^2 b_2 \newline
 \end{cases}
