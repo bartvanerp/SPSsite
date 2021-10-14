@@ -197,7 +197,7 @@ Then, we can rewrite equation (\ref{eq:exp_p}) as
 From equation (\ref{res_leakage}), we can easily separate the contribution of the main lobe, which causes loss in spectral resolution, from the contribution of the side lobes, which cause spectral leakage, that is the appearance of spurious spectral peaks at the location of the side lobes.
 
 
-#### Calculation of the biased auto-correlation function using the DFT
+#### Calculation of the biased auto-correlation function using the DFT (out of scope)
 When dealing with windowed signals longer than 100 samples, the auto-correlation function is oftentimes more efficiently calculated using the Discrete Fourier Transform (DFT) or Fast Fourier Transform (FFT). Fig. 2 shows a schematic overview of the calculation procedure. Normally the signal is windowed using a window of length $N$. From this windowed signal the auto-correlation function of length $2N-1$ can be calculated through the definition of the auto-correlation function.
 Another way of performing this calculation is as follows. First, the signal is windowed with length $N$ and zero-padded to length $M$. The windowed signal should be at least $2N-1$ samples long. From this signal the DFT or FFT is calculated and its magnitude is squared and normalized, after which the inverse DFT (IDFT) or IFFT is calculated. From the obtained signal, the auto-correlation function can be determined by shifting the signal segments as indicated in Fig. 2.
 
