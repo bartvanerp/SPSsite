@@ -282,7 +282,7 @@ Solving the above system of equations, we obtained two possible solutions for $b
 \begin{split}
     P_{MA1}(e^{j\theta}) &= 1.28 |1 + 0.26 e^{-j\theta}|^2 = \newline
     &1.28 |1 + 0.26\cos(\theta)-j\cdot0.26\sin(\theta)|^2 \newline
-    & = 1.28\sqrt{(1+0.26\cos(\theta))^2 + 0.26^2\sin\theta)}^2= \newline
+    & = 1.28\sqrt{(1+0.26\cos(\theta))^2 + 0.26^2\sin^2(\theta)}^2= \newline
     & 1.28(1.07+0.52\cos(\theta))
 \end{split}
 \end{equation}
