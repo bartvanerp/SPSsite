@@ -256,13 +256,13 @@ The signal-to-noise ratio of this output signal can be calculated as the squared
         &= \frac{\mathrm{E}\left[{\bf{h}}^T({\mathbf{s}}+{\mathbf{\epsilon}})\right]^2}{\text{Var}\left[{\mathbf{h}}^T{\mathbf{\epsilon}}\right]} \newline
         &= \frac{\left({\mathbf{h}}^T{\mathbf{s}} + {\mathbf{h}}^T\mathrm{E}\left[{\mathbf{\epsilon}}\right]\right)^2}{\mathrm{E}\left[\left({\mathbf{h}}^T{\mathbf{\epsilon}}\right)^2\right]-\mathrm{E}\left[{\mathbf{h}}^T{\mathbf{\epsilon}}\right]^2} \newline
         &= \frac{\left({\bf{h}}^T{\bf{s}} + {\mathbf{h}}^T{\mathbf{0}}\right)^2}{{\mathbf{h}}^T\mathrm{E}\left[{\mathbf{\epsilon}}{\mathbf{\epsilon}}^T\right]{\mathbf{h}}-\left({\mathbf{h}}^T\mathrm{E}\left[{\mathbf{\epsilon}}\right]\right)^2}, \newline
-        &= \frac{\left({\bf{h}}^T{\bf{s}}\right)^2}{{\bf{h}}^T\bf{\Sigma}{\bf{h}}-\left({\mathbf{h}}^T{\mathbf{0}}\right)^2} = \frac{\left({\mathbf{h}}^T{\mathbf{s}}\right)^2}{{\mathbf{h}}^T{\mathbf{\Sigma}\bf{h}}}.
+        &= \frac{\left({\bf{h}}^T{\mathbf{s}}\right)^2}{{\mathbf{h}}^T\mathbf{\Sigma}{\mathbf{h}}-\left({\mathbf{h}}^T{\mathbf{0}}\right)^2} = \frac{\left({\mathbf{h}}^T{\mathbf{s}}\right)^2}{{\mathbf{h}}^T{\mathbf{\Sigma}\mathbf{h}}}.
     \end{split}
 \end{equation}
 Here we used the fact that the noise was distributed with zero mean in determining the covariance matrix as $\bf{\Sigma}=\mathrm{E}\left[\bf{\epsilon\epsilon}^T\right]$.
 
 In order to show how we can maximize the SNR, we need to make use of the Cauchy-Schwarz inequality. The application of the Cauchy-Schwarz inequality for our case states that
 \begin{equation}
-    \left(\bf{h}^T\bf{s}\right)^2 \leq \left(\bf{h}^T \bf{h}\right)\left(\bf{s}^T\bf{s}\right)
+    \left(\mathbf{h}^T\mathbf{s}\right)^2 \leq \left(\mathbf{h}^T \mathbf{h}\right)\left(\mathbf{s}^T\mathbf{s}\right)
 \end{equation}
-holds. Since this term is in the numerator of the SNR, equality of the Cauchy-Schwarz inequality would maximize it. This equality only occurs if $\bf{h}=c\bf{s}$, where $c$ is a constant. Because of the definition of $y$, which calculated the unnormalized correlation, this results is expected.
+holds. Since this term is in the numerator of the SNR, equality of the Cauchy-Schwarz inequality would maximize it. This equality only occurs if $\mathbf{h}=c\mathbf{s}$, where $c$ is a constant. Because of the definition of $y$, which calculated the unnormalized correlation, this results is expected.
