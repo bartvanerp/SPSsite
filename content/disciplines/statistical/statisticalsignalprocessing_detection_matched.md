@@ -259,7 +259,7 @@ The signal-to-noise ratio of this output signal can be calculated as the squared
         &= \frac{\left({\bf{h}}^T{\mathbf{s}}\right)^2}{{\mathbf{h}}^T\mathbf{\Sigma}{\mathbf{h}}-\left({\mathbf{h}}^T{\mathbf{0}}\right)^2} = \frac{\left({\mathbf{h}}^T{\mathbf{s}}\right)^2}{{\mathbf{h}}^T{\mathbf{\Sigma}\mathbf{h}}}.
     \end{split}
 \end{equation}
-Here we used the fact that the noise was distributed with zero mean in determining the covariance matrix as $\bf{\Sigma}=\mathrm{E}\left[\bf{\epsilon\epsilon}^T\right]$.
+Here we used the fact that the noise was distributed with zero mean in determining the covariance matrix as $\mathbf{\Sigma}=\mathrm{E}\left[\mathbf{\epsilon\epsilon}^T\right]$.
 
 In order to show how we can maximize the SNR, we need to make use of the Cauchy-Schwarz inequality. The application of the Cauchy-Schwarz inequality for our case states that
 \begin{equation}
