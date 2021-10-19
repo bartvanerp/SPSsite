@@ -155,12 +155,12 @@ As an example we have the same two-sided hypothesis test as described in the beg
 ## Extension to multivariate case
 The $t$ test can be extended to the case where we are dealing with linear models. Linear models are defined as
 \begin{equation}
-    {\bf{x}} = {\bf{H}}{\bf{\theta}} + {\bf{\epsilon}},
+    {\bf{x}} = {\mathbf{H}}{\boldsymbol{\theta}} + {\mathbf{\epsilon}},
 \end{equation}
 where ${\bf{x}}$ are the observation samples, ${\bf{H}}$ is the deterministic observation matrix, which tells us what the original process might have been, ${\bf{\theta}}$ are the linear parameters of the model and where ${\bf{\epsilon}}$ are the noise samples.
 
-For the null hypothesis it can be assumed that there is no correlation between ${\bf{H}}$ and ${\bf{x}}$ and that ${\bf{x}}$ therefore purely consist out of noise. This can be represented by the hypothesis ${\bf{\theta}} = {\bf{0}}$. For each of the individual parameters of the estimated $\hat{{\bf{\theta}}}$ we can calculate the $t$-statistic to verify whether there actually is no correlation present. In order to calculate this statistic the covariance matrix ${\bf{\Sigma}}$ of $\hat{{\bf{\theta}}}$ is required. The $t$ value for the $k^\text{th}$ element can be determined by
+For the null hypothesis it can be assumed that there is no correlation between ${\bf{H}}$ and ${\bf{x}}$ and that ${\bf{x}}$ therefore purely consist out of noise. This can be represented by the hypothesis ${\bf{\theta}} = {\bf{0}}$. For each of the individual parameters of the estimated $\hat{{\bf{\theta}}}$ we can calculate the $t$-statistic to verify whether there actually is no correlation present. In order to calculate this statistic the covariance matrix ${\bf{\Sigma}}$ of $\hat{{\boldsymbol{\theta}}}$ is required. The $t$ value for the $k^\text{th}$ element can be determined by
 \begin{equation}
-    t_k = \frac{{\bf{c}}\_k^\top \hat{{\bf{\theta}}}}{\sqrt{{\bf{c}}\_k^\top {\bf{\Sigma}}^{-1}_{\hat{{\bf{\theta}}}}{\bf{c}}_k^\top}},
+    t_k = \frac{{\mathbf{c}}\_k^T \hat{{\boldsymbol{\theta}}}}{\sqrt{{\mathbf{c}}\_k^T {\mathbf{\Sigma}}^{-1}_{\hat{{\boldsymbol{\theta}}}}{\mathbf{c}}_k^T}},
 \end{equation}
 where ${\bf{c}}_k$ is a vector that can is used to select a single element of $\hat{{\bf{\theta}}}$. The vector only consists of zeros, except for a single 1 at the location of the desired element.

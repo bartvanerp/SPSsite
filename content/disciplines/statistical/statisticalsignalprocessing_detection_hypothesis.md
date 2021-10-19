@@ -105,7 +105,6 @@ The answer is that we cannot know this. However, we can determine the probabilit
 
 In many cases, direct comparisons between the two signal sample probabilities might not be desired. In radar, for example, we would like to be especially certain about a detection in order to prevent the consequences of making a false detection. In this case, we could decide to use a different <i>decision criterion</i>, which tells us when we should decide that one hypothesis is true over another. An example is to decide for $\mathcal{H}_1$ when it is at least $\gamma$ times more likely than $\mathcal{H}_0$. So we can decide that we have detected a deterministic signal ($\mathcal{H}_1[n]$) when it holds that $p(x[n]\mid\mathcal{H}_1[n])>\gamma \cdot p(x[n]\mid\mathcal{H}_0[n])$.
 
-
 Rearranging the above condition leads to the condition in terms of a likelihood ratio test as
 
 \begin{equation} \label{eq:prob_ratio}

@@ -22,15 +22,15 @@ So previously the main concepts discussed were about the detection of a signal s
 
 This section discusses a more realistic situation, where we would like to know whether we have received a deterministic signal consisting of multiple samples. The deterministic signal of length $N$ is denoted using a bold identifier as the vector
 \begin{equation}
-    {\bf{s}} = \left[s[0], s[1], \ldots, s[N-1]\right]^\top,
+    {\bf{s}} = \left[s[0], s[1], \ldots, s[N-1]\right]^T,
 \end{equation}
 where it would be more suitable to also index $\bf{s}$, but where it is omitted for simplicity. Similarly the received signal and the noise signal can be described as
 \begin{equation}
-    {\bf{x}} = \left[x[0], x[1], \ldots, x[N-1]\right]^\top,
+    {\bf{x}} = \left[x[0], x[1], \ldots, x[N-1]\right]^T,
 \end{equation}
 and
 \begin{equation}
-    {\bf{\epsilon}} = \left[\epsilon[0], \epsilon[1], \ldots, \epsilon[N-1]\right]^\top.
+    {\bf{\epsilon}} = \left[\epsilon[0], \epsilon[1], \ldots, \epsilon[N-1]\right]^T.
 \end{equation}
 It is now also assumed that the hypotheses are valid for the entire signal duration instead of for just a single sample. This is denoted by the boldface ${\bf{\mathcal{H}}}_i$. So as an example this notation allows us to write the probability of receiving the signal $\bf{x}$ when a deterministic signal is actually present as $p(\bf{x}\mid\bf{\mathcal{H}}_1)$.
 
@@ -39,11 +39,11 @@ It is now also assumed that the hypotheses are valid for the entire signal durat
 ## Likelihood ratio model
 The extension from random samples to random signals is a rather straightforward step for real world applications. So now the question arises how we can perform the hypothesis testing for random vectors, where the probability density functions are now multivariate?
 
-The answer to this question has already been presented in the section on <a href="../../information/informationandcommunication_detection_hypothesis/">hypotesis testing</a>, where this likelihood ratio for binary hypothesis testing can be extended to multivariate probability density functions. Deciding for a detection, meaning that $\bf{\mathcal{H}}_1$ is regarded to be true, occurs when
+The answer to this question has already been presented in the section on <a href="../statisticalsignalprocessing_detection_hypothesis">hypothesis testing</a>, where this likelihood ratio for binary hypothesis testing can be extended to multivariate probability density functions. Deciding for a detection, meaning that $\bf{\mathcal{H}}_1$ is regarded to be true, occurs when
 \begin{equation}\label{eq:prob_ratio_multi}
-    L(\bf{x}) = \frac{p(\bf{x}\mid\bf{\mathcal{H}}_1)}{p(\bf{x}\mid\bf{\mathcal{H}}_0)} > \gamma
+    L(\mathbf{x}) = \frac{p(\mathbf{x}\mid\mathcal{H}_1)}{p(\mathbf{x}\mid\mathcal{H}_0)} > \gamma
 \end{equation}
-holds. The corresponding decision boundary can be represented by a line for the bivariate case as shown in Fig. 4 of <a href="../../information/informationandcommunication_detection_hypothesis/">the previous section</a> or an $N$-dimensional surface for random vectors of length $N$.
+holds. The corresponding decision boundary can be represented by a line for the bivariate case as shown in Fig. 4 of <a href="../statisticalsignalprocessing_detection_hypothesis">the previous section</a> or an $N$-dimensional surface for random vectors of length $N$.
 
 Let us now model these multivariate probability density functions. In order to do so, multiple assumptions about the noise components have to be made.
 
@@ -63,10 +63,10 @@ Before determining $p(\bf{x}|\bf{\mathcal{H}}_i)$ formally, the chain rule of pr
 \begin{equation}\label{eq:cond_prob}
     \Pr[A,B] = \Pr[A \mid B] \cdot \Pr[B].
 \end{equation}
-The chain rule of probability allows for the factorization of multivariate probability density functions. An example will demonstrate its use. Consider the received signal $\bf{x} = [x_1, x_2, x_3, x_4]^\top$. Using the previous equation the multivariate probability density function $p(\bf{x})$ can be factored as
+The chain rule of probability allows for the factorization of multivariate probability density functions. An example will demonstrate its use. Consider the received signal $\mathbf{x} = [x_1, x_2, x_3, x_4]^T$. Using the previous equation the multivariate probability density function $p(\mathbf{x})$ can be factored as
 \begin{equation}
     \begin{split}
-        p(\bf{x})
+        p(\mathbf{x})
         &= p(x_1,x_2,x_3,x_4), \newline
         &= p(x_1\mid x_2,x_3,x_4)p(x_2,x_3,x_4), \newline
         &= p(x_1\mid x_2,x_3,x_4)p(x_2\mid x_3,x_4)p(x_3,x_4), \newline
@@ -95,17 +95,17 @@ Using this assumption, the joint multivariate probability density function $p(\b
 where $\prod\cdot$ denotes the product operator, which is the multiplication variant of the summation operator $\sum\cdot$.
 
 ### Multivariate probability density function
-Now that assumptions have been made about the signal, it is time to define $p(\bf{x}\mid\bf{\mathcal{H}}\_0)$ and $p(\bf{x}\mid\bf{\mathcal{H}}\_1)$. Using the probability density function of the signal samples and the factorization above the probability density function $p(\bf{x}\mid\bf{\mathcal{H}}\_0)$ can be written as
+Now that assumptions have been made about the signal, it is time to define $p(\bf{x}\mid\bf{\mathcal{H}}\_0)$ and $p(\mathbf{x}\mid \mathcal{H}\_1)$. Using the probability density function of the signal samples and the factorization above the probability density function $p(\mathbf{x}\mid\mathcal{H}\_0)$ can be written as
 \begin{equation}
-    p({\bf{x}}\mid{\bf{\mathcal{H}}}\_0) = \prod_{k=0}^{N-1} \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x[k])^2}{2\sigma^2}} = (2\pi\sigma^2)^{-\frac{N}{2}}\prod_{k=0}^{N-1} e^{-\frac{(x[k])^2}{2\sigma^2}}.
+    p({\mathbf{x}}\mid{\mathcal{H}}\_0) = \prod_{k=0}^{N-1} \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x[k])^2}{2\sigma^2}} = (2\pi\sigma^2)^{-\frac{N}{2}}\prod_{k=0}^{N-1} e^{-\frac{(x[k])^2}{2\sigma^2}}.
 \end{equation}
-Using the mathematical identity $e^a\cdot e^b = e^{a+b}$, the final probability density functions of $p({\bf{x}}\mid{\bf{\mathcal{H}}}\_0)$ and $p({\bf{x}}\mid{\bf{\mathcal{H}}}\_1)$ can be written as
+Using the mathematical identity $e^a\cdot e^b = e^{a+b}$, the final probability density functions of $p({\mathbf{x}}\mid{\mathcal{H}}\_0)$ and $p({\mathbf{x}}\mid{\mathcal{H}}\_1)$ can be written as
 \begin{equation}\label{eq:pdf_final1}
-    p({\bf{x}}\mid{\bf{\mathcal{H}}}\_0) = (2\pi\sigma^2)^{-\frac{N}{2}} \exp\left\\{-\frac{1}{2\sigma^2}\sum_{k=0}^{N-1}(x[k])^2\right\\}
+    p({\mathbf{x}}\mid{\mathcal{H}}\_0) = (2\pi\sigma^2)^{-\frac{N}{2}} \exp\left\\{-\frac{1}{2\sigma^2}\sum_{k=0}^{N-1}(x[k])^2\right\\}
 \end{equation}
 and
 \begin{equation}\label{eq:pdf_final2}
-    p({\bf{x}}\mid{\bf{\mathcal{H}}}\_1) = (2\pi\sigma^2)^{-\frac{N}{2}} \exp\left\\{-\frac{1}{2\sigma^2}\sum_{k=0}^{N-1}(x[k]-s[k])^2\right\\}
+    p({\mathbf{x}}\mid{\mathcal{H}}\_1) = (2\pi\sigma^2)^{-\frac{N}{2}} \exp\left\\{-\frac{1}{2\sigma^2}\sum_{k=0}^{N-1}(x[k]-s[k])^2\right\\}
 \end{equation}
 respectively.
 
@@ -113,15 +113,15 @@ respectively.
 Now finally the probability density functions have been defined we can return to the previously defined likelihood ratio. Using above equations this ratio now simplifies to
 \begin{equation}\label{eq:prob_ratio_match}
     \begin{split}
-        L({\bf{x}})
-        &= \frac{p({\bf{x}}\mid{\bf{\mathcal{H}}}\_1)}{p({\bf{x}}\mid{\bf{\mathcal{H}}}\_0)}, \newline
+        L({\mathbf{x}})
+        &= \frac{p({\mathbf{x}}\mid{\mathcal{H}}\_1)}{p({\mathbf{x}}\mid{\mathcal{H}}\_0)}, \newline
         &= \frac{\exp\left\\{-\frac{1}{2\sigma^2}\sum_{k=0}^{N-1}(x[k]-s[k])^2\right\\}}{\exp\left\\{-\frac{1}{2\sigma^2}\sum_{k=0}^{N-1}(x[k])^2\right\\}}, \newline
         &= \exp\left\\{-\frac{1}{2\sigma^2}\left(\sum_{k=0}^{N-1}(x[k]-s[k])^2-\sum_{k=0}^{N-1}(x[k])^2\right)\right\\} > \gamma.
     \end{split}
 \end{equation}
-In order to simplify the notation, we introduce $l({\bf{x}})$ which is the natural logarithm of $L({\bf{x}})$ and we decide for $\bf{\mathcal{H}}\_1$ if
+In order to simplify the notation, we introduce $l({\mathbf{x}})$ which is the natural logarithm of $L({\mathbf{x}})$ and we decide for $\mathcal{H}\_1$ if
 \begin{equation}
-    l({\bf{x}}) = \ln\left(L({\bf{x}})\right) = -\frac{1}{2\sigma^2}\left(\sum_{k=0}^{N-1}(x[k]-s[k])^2-\sum_{k=0}^{N-1}(x[k])^2\right) > \ln(\gamma)
+    l({\mathbf{x}}) = \ln\left(L({\mathbf{x}})\right) = -\frac{1}{2\sigma^2}\left(\sum_{k=0}^{N-1}(x[k]-s[k])^2-\sum_{k=0}^{N-1}(x[k])^2\right) > \ln(\gamma)
 \end{equation}
 holds. After getting rid of the brackets, the following expression can be obtained as
 \begin{equation}
@@ -148,7 +148,7 @@ which corresponds to an impulse response that is the temporally mirrored determi
 <br></br>
 
 ## Performance of matched filters
-So previously we have extended the probability ratio as described by the Neyman-Pearson theorem to the multivariate case and after several assumptions, we derived the decision criterion of a matched filter. This matched filter convolves the received signal $\bf{x}$ with a temporally mirrored version of the known deterministic signal $\bf{s}$ in order to determine how well they match and compares it with a modified threshold. This threshold consists of half the deterministic signal power $E_s$ and a user-determined constant.
+So previously we have extended the probability ratio as described by the Neyman-Pearson theorem to the multivariate case and after several assumptions, we derived the decision criterion of a matched filter. This matched filter convolves the received signal $\mathbf{x}$ with a temporally mirrored version of the known deterministic signal $\mathbf{s}$ in order to determine how well they match and compares it with a modified threshold. This threshold consists of half the deterministic signal power $E_s$ and a user-determined constant.
 
 The perceived optimality of the matched filter requires further analysis in order to determine its performance. Suppose we have a filter creating the output of the unnormalized correlation between the received signal and the expected deterministic signal, then this filter its output can be described as
 \begin{equation}
@@ -158,26 +158,26 @@ The perceived optimality of the matched filter requires further analysis in orde
         \displaystyle \sum_{k=0}^{N-1} (s[k]+\epsilon[k])s[k],    &\text{under }{\bf{\mathcal{H}}}_1
     \end{cases}
 \end{equation}
-where a distinction is made for both hypotheses. From this expression it can be noted that the output is a sum of modulated Gaussian distributed samples. Therefore $y(\bf{x})$ must also be Gaussian distributed. So because $y(\bf{x})$ follows two Gaussian distributions depending on which hypothesis is true and because this term is consecutively compared with $\gamma'$, its performance can be evaluated similarly as here.
+where a distinction is made for both hypotheses. From this expression it can be noted that the output is a sum of modulated Gaussian distributed samples. Therefore $y(\mathbf{x})$ must also be Gaussian distributed. So because $y(\bf{x})$ follows two Gaussian distributions depending on which hypothesis is true and because this term is consecutively compared with $\gamma'$, its performance can be evaluated similarly as here.
 
-In order to relate the value of $\gamma'$ with the performance probabilities, the Gaussian probability density functions of $y(\bf{x})$ need to be determined. Using the zero-mean assumption of the noise, the expected value of the output can be determined under both hypotheses as
+In order to relate the value of $\gamma'$ with the performance probabilities, the Gaussian probability density functions of $y(\mathbf{x})$ need to be determined. Using the zero-mean assumption of the noise, the expected value of the output can be determined under both hypotheses as
 \begin{equation}
-    \mathrm{E}\left[y({\bf{x}})\mid {\bf{\mathcal{H}}}\_0\right] = \mathrm{E}\left[\sum_{k=0}^{N-1} \epsilon[k]s[k]\right] = \sum_{k=0}^{N-1} s[k]\mathrm{E}\left[\epsilon[k]\right] = 0
+    \mathrm{E}\left[y({\mathbf{x}})\mid {\mathcal{H}}\_0\right] = \mathrm{E}\left[\sum_{k=0}^{N-1} \epsilon[k]s[k]\right] = \sum_{k=0}^{N-1} s[k]\mathrm{E}\left[\epsilon[k]\right] = 0
 \end{equation}
 and as
 \begin{equation}
     \begin{split}
-        \mathrm{E}\left[y({\bf{x}})\mid {\bf{\mathcal{H}}}_1\right]
+        \mathrm{E}\left[y({\mathbf{x}})\mid {\mathcal{H}}_1\right]
         &= \mathrm{E}\left[\sum_{k=0}^{N-1} \left(\epsilon[k]+s[k]\right)s[k]\right], \newline
         &= \sum_{k=0}^{N-1}\left(s[k]\right)^2 + \sum_{k=0}^{N-1} s[k]\mathrm{E}\left[\epsilon[k]\right], \newline
         &= \sum_{k=0}^{N-1}\left(s[k]\right)^2 = E_s,
     \end{split}
 \end{equation}
-where $E_s$ is the signal energy. Now let us determine the variance of $y(\bf{x})$ in a similar fashion as
+where $E_s$ is the signal energy. Now let us determine the variance of $y(\mathbf{x})$ in a similar fashion as
 \begin{equation}
     \begin{split}
-        \text{Var}\left[y({\bf{x}})\mid{\bf{\mathcal{H}}}_0\right]
-        &= \mathrm{E}\left[\left(y({\bf{x}})\right)^2\mid{\bf{\mathcal{H}}}_0\right] - \left(\mathrm{E}\left[y({\bf{x}})\mid{\bf{\mathcal{H}}}_0\right]\right)^2, \newline
+        \text{Var}\left[y({\mathbf{x}})\mid{\mathcal{H}}_0\right]
+        &= \mathrm{E}\left[\left(y({\mathbf{x}})\right)^2\mid{\mathcal{H}}_0\right] - \left(\mathrm{E}\left[y({\mathbf{x}})\mid{\mathcal{H}}_0\right]\right)^2, \newline
         &= \mathrm{E}\left[\left(\sum_{k=0}^{N-1} \epsilon[k]s[k]\right)^2 \right], \newline
         &=\mathrm{E}\left[\left(\sum_{k=0}^{N-1} \epsilon[k]s[k]\right)\left(\sum_{l=0}^{N-1} \epsilon[l]s[l]\right) \right], \newline
         &=\mathrm{E}\left[\sum_{k=0}^{N-1} \sum_{l=0}^{N-1}\epsilon[k]\epsilon[l] s[k]s[l] \right], \newline
@@ -186,7 +186,7 @@ where $E_s$ is the signal energy. Now let us determine the variance of $y(\bf{x}
         &= \sigma^2 \sum_{k=0}^{N-1} s[k]s[k] = \sigma^2 E_s
     \end{split}
 \end{equation}
-and by noting that the variance of $y({\bf{x}})$ under $\bf{\mathcal{H}}_1$ has in the calculation just an extra deterministic constant, the variance under $\bf{\mathcal{H}}_1$ can be calculated as
+and by noting that the variance of $y({\mathbf{x}})$ under $\mathcal{H}_1$ has in the calculation just an extra deterministic constant, the variance under $\mathcal{H}_1$ can be calculated as
 \begin{equation}
 \begin{split}
     \text{Var}\left[y({\bf{x}})\mid{\bf{\mathcal{H}}}_1\right]
@@ -200,8 +200,8 @@ The probability density functions of the output of the filter $y({\bf{x}})$ can 
 \begin{equation}
     p(y({\bf{x}})) =
     \begin{cases}
-        \mathcal{N}(0, \sigma^2E_s), &\text{under }{\bf{\mathcal{H}}}_0 \newline
-        \mathcal{N}(E_s, \sigma^2E_s). &\text{under }{\bf{\mathcal{H}}}_1
+        \mathcal{N}(0, \sigma^2E_s), &\text{under }{\mathcal{H}}_0 \newline
+        \mathcal{N}(E_s, \sigma^2E_s). &\text{under }{\mathcal{H}}_1
     \end{cases}
 \end{equation}
 
@@ -225,44 +225,44 @@ The first assumption can be supported by the central limit theorem and the third
 
 In this generalized case the likelihood ratio can be determined as
 \begin{equation}
-    L({\bf{x}}) = \frac{p({\bf{x}}\mid {\bf{\mathcal{H}}}_1)}{p({\bf{x}}\mid {\bf{\mathcal{H}}}_0)} = \frac{\exp\left\\{-\frac{1}{2}\left[\left({\bf{x}}-{\bf{s}}\right)^\top{\bf{\Sigma}}^{-1}\left({\bf{x}}-{\bf{s}}\right)\right]\right\\}}{\exp\left\\{-\frac{1}{2}\left[{\bf{x}}^\top{\bf{\Sigma}}^{-1}{\bf{x}}\right]\right\\}} > \gamma
+    L({\mathbf{x}}) = \frac{p({\mathbf{x}}\mid {\mathcal{H}}_1)}{p({\mathbf{x}}\mid {\mathcal{H}}_0)} = \frac{\exp\left\\{-\frac{1}{2}\left[\left({\mathbf{x}}-{\mathbf{s}}\right)^T{\mathbf{\Sigma}}^{-1}\left({\mathbf{x}}-{\mathbf{s}}\right)\right]\right\\}}{\exp\left\\{-\frac{1}{2}\left[{\mathbf{x}}^T{\mathbf{\Sigma}}^{-1}{\mathbf{x}}\right]\right\\}} > \gamma
 \end{equation}
 and the natural logarithm of the likelihood ratio then becomes
 \begin{equation}
     \begin{split}
-        l({\bf{x}})
-        &= \ln(L({\bf{x}})), \newline
-        &= -\frac{1}{2}\left[\left({\bf{x}}-{\bf{s}}\right)^\top{\bf{\Sigma}}^{-1}\left({\bf{x}}-{\bf{s}}\right)\right] + \frac{1}{2}\left[{\bf{x}}^\top{\bf{\Sigma}}^{-1}\bf{x}\right], \newline
-        &= -\frac{1}{2}\left[ {\bf{x}}^\top{\bf{\Sigma}}^{-1}{\bf{x}} -2{\bf{x}}^\top{\bf{\Sigma}}^{-1}{\bf{s}}  + {\bf{s}}^\top{\bf{\Sigma}}^{-1}{\bf{s}}- {\bf{x}}^\top{\bf{\Sigma}}^{-1}{\bf{x}}\right], \newline
-        &={\bf{x}}^\top{\bf{\Sigma}}^{-1}{\bf{s}} - \frac{1}{2}{\bf{s}}^\top{\bf{\Sigma}}^{-1}{\bf{s}}>\ln(\gamma).
+        l({\mathbf{x}})
+        &= \ln(L({\mathbf{x}})), \newline
+        &= -\frac{1}{2}\left[\left({\mathbf{x}}-{\mathbf{s}}\right)^T{\mathbf{\Sigma}}^{-1}\left({\mathbf{x}}-{\mathbf{s}}\right)\right] + \frac{1}{2}\left[{\mathbf{x}}^T{\mathbf{\Sigma}}^{-1}\mathbf{x}\right], \newline
+        &= -\frac{1}{2}\left[ {\mathbf{x}}^T{\mathbf{\Sigma}}^{-1}{\mathbf{x}} -2{\mathbf{x}}^T{\mathbf{\Sigma}}^{-1}{\mathbf{s}}  + {\mathbf{s}}^T{\mathbf{\Sigma}}^{-1}{\mathbf{s}}- {\mathbf{x}}^T{\mathbf{\Sigma}}^{-1}{\mathbf{x}}\right], \newline
+        &={\mathbf{x}}^T{\mathbf{\Sigma}}^{-1}{\mathbf{s}} - \frac{1}{2}{\mathbf{s}}^T{\mathbf{\Sigma}}^{-1}{\mathbf{s}}>\ln(\gamma).
     \end{split}
 \end{equation}
 So now we can decide for ${\bf{\mathcal{H}}}_1$ if
 \begin{equation}
-    y({\bf{x}}) = {\bf{x}}^\top{\bf{\Sigma}}^{-1}{\bf{s}} > \ln(\gamma) + \frac{1}{2}{\bf{s}}^\top{\bf{\Sigma}}^{-1}{\bf{s}} = \gamma'
+    y({\bf{x}}) = {\bf{x}}^T{\bf{\Sigma}}^{-1}{\bf{s}} > \ln(\gamma) + \frac{1}{2}{\bf{s}}^T{\bf{\Sigma}}^{-1}{\bf{s}} = \gamma'
 \end{equation}
 holds. Keep in mind that $\gamma'$ is not the same as the one defined previously.
 
 ### Signal-to-noise ratio maximization behaviour
 Suppose that a signal is again passed through an FIR-filter with filter coefficients $\bf{h}$ where for simplicity the convolution operation on the input signal $\bf{x}$ is performed by calculating the scalar output $y(\bf{x})$ as
 \begin{equation}\label{eq:vec_y}
-    y({\bf{x}}) = {\bf{h}}^\top {\bf{x}}.
+    y({\bf{x}}) = {\bf{h}}^T {\bf{x}}.
 \end{equation}
 The signal-to-noise ratio of this output signal can be calculated as the squared expected amplitude of the output signal divided by the variance left on the signal due to noise as
 \begin{equation}
     \begin{split}
         \text{SNR}
-        &= \frac{\mathrm{E}\left[y({\bf{x}})\mid {\bf{\mathcal{H}}}_1\right]^2}{\text{Var}\left[y({\bf{x}})\mid {\bf{\mathcal{H}}}_0\right]}, \newline
-        &= \frac{\mathrm{E}\left[{\bf{h}}^\top({\bf{s}}+{\bf{\epsilon}})\right]^2}{\text{Var}\left[{\bf{h}}^\top{\bf{\epsilon}}\right]}, \newline
-        &= \frac{\left({\bf{h}}^\top{\bf{s}} + {\bf{h}}^\top\mathrm{E}\left[{\bf{\epsilon}}\right]\right)^2}{\mathrm{E}\left[\left({\bf{h}}^\top{\bf{\epsilon}}\right)^2\right]-\mathrm{E}\left[{\bf{h}}^\top{\bf{\epsilon}}\right]^2}, \newline
-        &= \frac{\left({\bf{h}}^\top{\bf{s}} + {\bf{h}}^\top{\bf{0}}\right)^2}{{\bf{h}}^\top\mathrm{E}\left[{\bf{\epsilon}}{\bf{\epsilon}}^\top\right]{\bf{h}}-\left({\bf{h}}^\top\mathrm{E}\left[{\bf{\epsilon}}\right]\right)^2}, \newline
-        &= \frac{\left({\bf{h}}^\top{\bf{s}}\right)^2}{{\bf{h}}^\top\bf{\Sigma}{\bf{h}}-\left({\bf{h}}^\top{\bf{0}}\right)^2} = \frac{\left({\bf{h}}^\top{\bf{s}}\right)^2}{{\bf{h}}^\top{\bf{\Sigma}\bf{h}}}.
+        &= \frac{\mathrm{E}\left[y({\mathbf{x}})\mid {\mathcal{H}}_1\right]^2}{\text{Var}\left[y({\mathbf{x}})\mid {\mathcal{H}}_0\right]} \newline
+        &= \frac{\mathrm{E}\left[{\bf{h}}^T({\mathbf{s}}+{\mathbf{\epsilon}})\right]^2}{\text{Var}\left[{\mathbf{h}}^T{\mathbf{\epsilon}}\right]} \newline
+        &= \frac{\left({\mathbf{h}}^T{\mathbf{s}} + {\mathbf{h}}^T\mathrm{E}\left[{\mathbf{\epsilon}}\right]\right)^2}{\mathrm{E}\left[\left({\mathbf{h}}^T{\mathbf{\epsilon}}\right)^2\right]-\mathrm{E}\left[{\mathbf{h}}^T{\mathbf{\epsilon}}\right]^2} \newline
+        &= \frac{\left({\bf{h}}^T{\bf{s}} + {\mathbf{h}}^T{\mathbf{0}}\right)^2}{{\mathbf{h}}^T\mathrm{E}\left[{\mathbf{\epsilon}}{\mathbf{\epsilon}}^T\right]{\mathbf{h}}-\left({\mathbf{h}}^T\mathrm{E}\left[{\mathbf{\epsilon}}\right]\right)^2}, \newline
+        &= \frac{\left({\bf{h}}^T{\mathbf{s}}\right)^2}{{\mathbf{h}}^T\mathbf{\Sigma}{\mathbf{h}}-\left({\mathbf{h}}^T{\mathbf{0}}\right)^2} = \frac{\left({\mathbf{h}}^T{\mathbf{s}}\right)^2}{{\mathbf{h}}^T{\mathbf{\Sigma}\mathbf{h}}}.
     \end{split}
 \end{equation}
-Here we used the fact that the noise was distributed with zero mean in determining the covariance matrix as $\bf{\Sigma}=\mathrm{E}\left[\bf{\epsilon\epsilon}^\top\right]$.
+Here we used the fact that the noise was distributed with zero mean in determining the covariance matrix as $\mathbf{\Sigma}=\mathrm{E}\left[\mathbf{\epsilon\epsilon}^T\right]$.
 
 In order to show how we can maximize the SNR, we need to make use of the Cauchy-Schwarz inequality. The application of the Cauchy-Schwarz inequality for our case states that
 \begin{equation}
-    \left(\bf{h}^\top\bf{s}\right)^2 \leq \left(\bf{h}^\top \bf{h}\right)\left(\bf{s}^\top\bf{s}\right)
+    \left(\mathbf{h}^T\mathbf{s}\right)^2 \leq \left(\mathbf{h}^T \mathbf{h}\right)\left(\mathbf{s}^T\mathbf{s}\right)
 \end{equation}
-holds. Since this term is in the numerator of the SNR, equality of the Cauchy-Schwarz inequality would maximize it. This equality only occurs if $\bf{h}=c\bf{s}$, where $c$ is a constant. Because of the definition of $y$, which calculated the unnormalized correlation, this results is expected.
+holds. Since this term is in the numerator of the SNR, equality of the Cauchy-Schwarz inequality would maximize it. This equality only occurs if $\mathbf{h}=c\mathbf{s}$, where $c$ is a constant. Because of the definition of $y$, which calculated the unnormalized correlation, this results is expected.
