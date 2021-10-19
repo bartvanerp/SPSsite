@@ -53,9 +53,9 @@ For a rectangular window this operation can be regarded as taking only a finite 
 
 Suppose that we know that the Fourier transform of discrete-time signals of $x[n]$ is ideally $X(e^{j\theta})$ and we would like to see the effect of windowing on the estimated spectrum. Recall that a convolution in the time-domain results in a multiplication in the frequency domain. It can be shown that the opposite relation holds as well: a multiplication in the time domain will result in a periodic convolution in the frequency domain. This relationship leads to the following frequency response of the windowed signal $\tilde{X}(e^{j\theta})$ as
 \begin{equation}
-    \tilde{X}(e^{j\theta}) = X(e^{j\theta}) \ast W(e^{j\theta}),
+    \tilde{X}(e^{j\theta}) = X(e^{j\theta}) \ast_{2\pi} W(e^{j\theta}),
 \end{equation}
-where $W(e^{j\theta})$ is the frequency response of the window. So the frequency response of the window determines how the original spectrum is influenced by windowing. From the definition of the Fourier transform for discrete-time signals, the spectrum of the rectangular window can be determined as
+where $W(e^{j\theta})$ is the frequency response of the window, and $\ast_{2\pi}$ represents the periodic convolution. So the frequency response of the window determines how the original spectrum is influenced by windowing. From the definition of the Fourier transform for discrete-time signals, the spectrum of the rectangular window can be determined as
 \begin{equation}
     \begin{split}
         W(e^{j\theta})
