@@ -59,7 +59,7 @@ p(\theta|\mathbf{x})=\frac{p(\mathbf{x}|\theta)p(\theta)}{p(\mathbf{x})},
 
 ## The Maximum Aposteriori (MAP) Estimation
 
-In the Bayesian setting, the parameter $\theta$ to be estimated has apriori PDF $p(\theta)$, which is updated based on the data $\mathbf{x}$ to obtain aposteriori PDF $p(\theta,\mathbf{x})$. An intuitive approach is to choose the argument $\hat\theta$ that maximizes the aposteriori PDF:
+In the Bayesian setting, the parameter $\theta$ to be estimated has apriori PDF $p(\theta)$, which is updated based on the data $\mathbf{x}$ to obtain aposteriori PDF $p(\theta|\mathbf{x})$. An intuitive approach is to choose the argument $\hat\theta$ that maximizes the aposteriori PDF:
 \begin{equation}
 \hat\theta=\underset{\theta}{\operatorname{arg max}}p(\theta|\mathbf{x}).
 \end{equation}
@@ -126,6 +126,6 @@ In other words, **Bayesian MMSE is the mean value of the aposteriori PDF.** Obvi
 
 ## Conclusion
 
-Bayesian estimators are founded on a major paradigm shift from the other estimators: The parameter to be estimated is also a random variable. We can consider the Bayesian approach as the formalization of our assumptions regarding the parameters to be estimated. 
+Bayesian estimators are founded on a major paradigm shift from the other estimators: The parameter to be estimated is also a random variable. We can consider the Bayesian approach as the formalization of our assumptions regarding the parameters to be estimated.
 
 Bayesian estimators are powerful tools, however, constructing Bayesian estimators to allow closed form or sequential solutions is possible only for a limited number of cases. For example, Gaussian distribution for the noise and parameters is commonly assumed in many applications to allow a tractable implementation of the Bayesian estimators. It should also be noted that the primary function of Bayesian estimators is to update the probability density function for the parameters. There are different methods to extract a value for the estimate from the probability density function; we covered two such methods. The utility of each method depends on the underlying probability distributions for the parameters.
