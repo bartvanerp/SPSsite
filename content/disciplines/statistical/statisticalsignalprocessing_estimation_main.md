@@ -17,7 +17,6 @@ type = "docs"  # Do not modify.
 
 ## Introduction
 
-Intro
 
 <br></br>
 
